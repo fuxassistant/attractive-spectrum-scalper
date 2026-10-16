@@ -1,0 +1,38 @@
+{
+  "tests": 61,
+  "tests_failed": 0,
+  "frozen_source_verified": true,
+  "cpu_gpu_greedy_repeat": [
+    {
+      "date": "2026-05-04",
+      "decisions_equal": true,
+      "trades_equal": true,
+      "quote_equity_equal": true
+    },
+    {
+      "date": "2026-05-05",
+      "decisions_equal": true,
+      "trades_equal": true,
+      "quote_equity_equal": true
+    },
+    {
+      "date": "2026-05-06",
+      "decisions_equal": true,
+      "trades_equal": true,
+      "quote_equity_equal": true
+    },
+    {
+      "date": "2026-05-07",
+      "decisions_equal": true,
+      "trades_equal": true,
+      "quote_equity_equal": true
+    },
+    {
+      "date": "2026-05-08",
+      "decisions_equal": true,
+      "trades_equal": true,
+      "quote_equity_equal": true
+    }
+  ],
+  "independent_receipt_sha256": "f7fcdf23345ebee72cbded6cf09d82fd0ab0753e87b9fcdac3dcc9d93dd83bb0"
+}

@@ -1,0 +1,65 @@
+{
+  "contract": {
+    "version": "HIERARCHICAL_LSTM_V2",
+    "size_oz": 1.0,
+    "fee_roundtrip": 0.3,
+    "initial_capital": 1000.0,
+    "latency_ns": 100000000,
+    "pending_timeout_ns": 2000000000,
+    "support_gap_ns": 5000000000,
+    "daily_drawdown_stop": 30.0,
+    "london_open_hour": 8,
+    "new_york_close_hour": 17,
+    "terminal_reserve_seconds": 30,
+    "hidden_size": 48,
+    "epochs": 60,
+    "ppo_passes": 3,
+    "learning_rate": 0.0003,
+    "reward_scale": 5.0,
+    "gamma": 1.0,
+    "gae_lambda": 0.95,
+    "clip_ratio": 0.2,
+    "entropy_weight": 0.01,
+    "gradient_clip": 0.5,
+    "seed": 61015
+  },
+  "seeds": [
+    61015,
+    61016,
+    61017
+  ],
+  "train_dates": [
+    "2026-05-04",
+    "2026-05-05",
+    "2026-05-06",
+    "2026-05-07"
+  ],
+  "validation_date": "2026-05-08",
+  "evaluation_dates": [
+    "2026-05-11",
+    "2026-05-12",
+    "2026-05-13",
+    "2026-05-14",
+    "2026-05-15"
+  ],
+  "hierarchy": "Binary participation >0.5, then argmax direction, then argmax conditional plan; stochastic policy samples exact product.",
+  "selection": "Per seed: maximum complete Friday greedy net, earliest tie; no selection across seeds from evaluation.",
+  "censor": "Skip entire censored training episodes; censored validation excluded; evaluation censor retained and blocks economic admission.",
+  "exposure": "Week2 is development-exposed by v1. This is a controlled development comparison, NOT fresh OOS confirmation.",
+  "diagnostics": "Frozen stochastic replay seeds 101,202,303 on each week2 day; fixed intention bins [0,.2,.4,.6,.8,1]. No threshold fitting.",
+  "attribution": "Signed gradient times standardized market input for gate log-odds; local sensitivity, not causal market explanation or calibrated profit probability.",
+  "created_utc": "2026-10-15T17:10:12.316871+00:00",
+  "code_sha256": {
+    "spectrum/player/__init__.py": "598d4431a70dca4f6b41bfddb26266f392535d358ce0d0a145949473d689ad55",
+    "spectrum/player/__main__.py": "05cb2e90efcc26c4887e96686ac33c268ae9c66f80fac41993131f2b075e7baa",
+    "spectrum/player/contract.py": "1db5a1a3160f99f1908b40a3e2634345a2d7b8087b899e90400866a93bf7a3e6",
+    "spectrum/player/data.py": "e766788737b0b5d837c43262f639d18989f42d37fcd11cb3ec10888e30b6029c",
+    "spectrum/player/experiment.py": "db79236fc3c8321d9d873ad781e1e940085a4fc4ee51e97ec24cfeec486e7304",
+    "spectrum/player/gym.py": "2bb0a3b23e8330d1a09db6c28293e3d1536e8409d23d2151d294bb53d2cb5a8c",
+    "spectrum/player/model.py": "d6cf817f690cffd2ec52adb31c5ed5e9859276eda64eed12500a1e6a58cf75b9",
+    "spectrum/player_v2/__init__.py": "d69eca0b6ddb15b33dad2d665a3c2d98a7f26386279bcb8774a29460cddab39b",
+    "spectrum/player_v2/__main__.py": "d661f4e2fe82e74f93bb9bca43bc34f4ec0847be2e338c909590a75c1da35676",
+    "spectrum/player_v2/experiment.py": "ccdf2ab542455bd75dee54964c507b89239649a15d7f7df9d141be5ce0015f10",
+    "spectrum/player_v2/policy.py": "4490b422cb925ae56726e76e4fb96df1fc52e5c5321492e2013e6c865b551ec3"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "contract": {
+    "version": "LSTM_PLAYER_V1",
+    "size_oz": 1.0,
+    "fee_roundtrip": 0.3,
+    "initial_capital": 1000.0,
+    "latency_ns": 100000000,
+    "pending_timeout_ns": 2000000000,
+    "support_gap_ns": 5000000000,
+    "daily_drawdown_stop": 30.0,
+    "london_open_hour": 8,
+    "new_york_close_hour": 17,
+    "terminal_reserve_seconds": 30,
+    "hidden_size": 48,
+    "epochs": 30,
+    "ppo_passes": 3,
+    "learning_rate": 0.0003,
+    "reward_scale": 5.0,
+    "gamma": 1.0,
+    "gae_lambda": 0.95,
+    "clip_ratio": 0.2,
+    "entropy_weight": 0.01,
+    "gradient_clip": 0.5,
+    "seed": 61015
+  },
+  "code_sha256": {
+    "__init__.py": "598d4431a70dca4f6b41bfddb26266f392535d358ce0d0a145949473d689ad55",
+    "__main__.py": "05cb2e90efcc26c4887e96686ac33c268ae9c66f80fac41993131f2b075e7baa",
+    "contract.py": "1db5a1a3160f99f1908b40a3e2634345a2d7b8087b899e90400866a93bf7a3e6",
+    "data.py": "e766788737b0b5d837c43262f639d18989f42d37fcd11cb3ec10888e30b6029c",
+    "experiment.py": "db79236fc3c8321d9d873ad781e1e940085a4fc4ee51e97ec24cfeec486e7304",
+    "gym.py": "2bb0a3b23e8330d1a09db6c28293e3d1536e8409d23d2151d294bb53d2cb5a8c",
+    "model.py": "d6cf817f690cffd2ec52adb31c5ed5e9859276eda64eed12500a1e6a58cf75b9"
+  },
+  "train_days": [
+    "2026-05-04",
+    "2026-05-05",
+    "2026-05-06",
+    "2026-05-07"
+  ],
+  "selection_day": "2026-05-08",
+  "test_days": [
+    "2026-05-11",
+    "2026-05-12",
+    "2026-05-13",
+    "2026-05-14",
+    "2026-05-15"
+  ],
+  "selection": "Highest deterministic Friday net among uncensored epochs; earliest tie. All-flat separately reported.",
+  "reward": "Unclipped change of liquidation equity / 5; gamma=1, GAE=.95; no inactivity penalty.",
+  "censor_policy": "Support-loss trades close at next valid quote. Observed proxy return may train; any censor excludes selection and invalidates economic admission.",
+  "prior_exposure": "Week two was visible in foundation QA, but not used by this model or checkpoint selection. This is not pristine blind research.",
+  "created_utc": "2026-10-15T16:40:51.997757+00:00",
+  "device": "cuda",
+  "torch": "2.11.0+cu128"
+}

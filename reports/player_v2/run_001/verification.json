@@ -1,0 +1,8 @@
+{
+  "python_tests_passed": 66,
+  "source_and_checkpoint_hashes_verified": true,
+  "ui_unit_receipt_sha256": "dc4eb316cf787b0e61e21ddfac945b6a7bc1b7d4a240f077949fad155756f26c",
+  "independent_audit_sha256": "7681a55d30f13dae48499f466d8d5bbcc42fcbe8a2d13688c15712c35bdbc890",
+  "actual_browser_qa": false,
+  "browser_reason": "file URL blocked by browser automation security policy; no workaround used"
+}

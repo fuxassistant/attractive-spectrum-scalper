@@ -1,0 +1,533 @@
+{
+  "freeze": {
+    "selected_epoch": 28,
+    "selection_net": 0.0,
+    "flat_validation_net": 0.0,
+    "selected_sha256": "21e6783d087849ba09d4e96d896681a288c94533dd3e7d7a4b69b042252ed1dc",
+    "scaler_sha256": "b2fac165a434a30859ba1e99b4accc3adeae6fe0eabda9abc54bcaabf1eadcfe",
+    "protocol_sha256": "352d81f80267cf919265fc9ad0aabaa3044326f049cde0307138f520c39b2b6e",
+    "code_sha256": {
+      "__init__.py": "598d4431a70dca4f6b41bfddb26266f392535d358ce0d0a145949473d689ad55",
+      "__main__.py": "05cb2e90efcc26c4887e96686ac33c268ae9c66f80fac41993131f2b075e7baa",
+      "contract.py": "1db5a1a3160f99f1908b40a3e2634345a2d7b8087b899e90400866a93bf7a3e6",
+      "data.py": "e766788737b0b5d837c43262f639d18989f42d37fcd11cb3ec10888e30b6029c",
+      "experiment.py": "db79236fc3c8321d9d873ad781e1e940085a4fc4ee51e97ec24cfeec486e7304",
+      "gym.py": "2bb0a3b23e8330d1a09db6c28293e3d1536e8409d23d2151d294bb53d2cb5a8c",
+      "model.py": "d6cf817f690cffd2ec52adb31c5ed5e9859276eda64eed12500a1e6a58cf75b9"
+    },
+    "frozen_utc": "2026-10-15T16:41:14.520243+00:00",
+    "training_seconds": 20.22354770032689,
+    "lstm_weight_change_l2": 1.8697313070297241,
+    "deployment_selection": "WAIT baseline; LSTM evaluated as experiment"
+  },
+  "results": {
+    "selected_train": {
+      "days": [
+        {
+          "net": -8.500000000000004,
+          "realized": -8.500000000000004,
+          "max_drawdown": 11.700000000000003,
+          "trades": 17,
+          "censored": 13,
+          "complete": false,
+          "cancelled": 0,
+          "risk_halted": false,
+          "open_terminal": false,
+          "wins": 6,
+          "action_counts": [
+            1362,
+            0,
+            0,
+            17,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-04",
+          "seconds": 0.08508410025388002,
+          "reward_sum": -8.500000000000004
+        },
+        {
+          "net": -1.6,
+          "realized": -1.6,
+          "max_drawdown": 1.8,
+          "trades": 2,
+          "censored": 2,
+          "complete": false,
+          "cancelled": 0,
+          "risk_halted": false,
+          "open_terminal": false,
+          "wins": 0,
+          "action_counts": [
+            1377,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-05",
+          "seconds": 0.06980129983276129,
+          "reward_sum": -1.6
+        },
+        {
+          "net": 0.0,
+          "realized": 0.0,
+          "max_drawdown": 0.0,
+          "trades": 0,
+          "censored": 0,
+          "complete": true,
+          "cancelled": 0,
+          "risk_halted": false,
+          "open_terminal": false,
+          "wins": 0,
+          "action_counts": [
+            1379,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-06",
+          "seconds": 0.08428469998762012,
+          "reward_sum": 0.0
+        },
+        {
+          "net": 0.0,
+          "realized": 0.0,
+          "max_drawdown": 0.0,
+          "trades": 0,
+          "censored": 0,
+          "complete": true,
+          "cancelled": 0,
+          "risk_halted": false,
+          "open_terminal": false,
+          "wins": 0,
+          "action_counts": [
+            1379,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-07",
+          "seconds": 0.07940439973026514,
+          "reward_sum": 0.0
+        },
+        {
+          "net": 0.0,
+          "realized": 0.0,
+          "max_drawdown": 0.0,
+          "trades": 0,
+          "censored": 0,
+          "complete": true,
+          "cancelled": 0,
+          "risk_halted": false,
+          "open_terminal": false,
+          "wins": 0,
+          "action_counts": [
+            1379,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-08",
+          "seconds": 0.08514489978551865,
+          "reward_sum": 0.0
+        }
+      ],
+      "net": -10.100000000000003,
+      "trades": 19,
+      "censored": 15
+    },
+    "selected_test": {
+      "days": [
+        {
+          "net": -4.199999999999999,
+          "realized": -4.199999999999999,
+          "max_drawdown": 4.199999999999999,
+          "trades": 4,
+          "censored": 3,
+          "complete": false,
+          "cancelled": 0,
+          "risk_halted": false,
+          "open_terminal": false,
+          "wins": 0,
+          "action_counts": [
+            1375,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-11",
+          "seconds": 0.11274519981816411,
+          "reward_sum": -4.199999999999999
+        },
+        {
+          "net": -4.4,
+          "realized": -4.4,
+          "max_drawdown": 6.199999999999999,
+          "trades": 8,
+          "censored": 6,
+          "complete": false,
+          "cancelled": 0,
+          "risk_halted": false,
+          "open_terminal": false,
+          "wins": 2,
+          "action_counts": [
+            1371,
+            0,
+            0,
+            8,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-12",
+          "seconds": 0.10794460028409958,
+          "reward_sum": -4.4
+        },
+        {
+          "net": -7.799999999999998,
+          "realized": -7.799999999999998,
+          "max_drawdown": 7.799999999999998,
+          "trades": 8,
+          "censored": 8,
+          "complete": false,
+          "cancelled": 0,
+          "risk_halted": false,
+          "open_terminal": false,
+          "wins": 0,
+          "action_counts": [
+            1371,
+            0,
+            0,
+            8,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-13",
+          "seconds": 0.09516599960625172,
+          "reward_sum": -7.799999999999998
+        },
+        {
+          "net": 0.0,
+          "realized": 0.0,
+          "max_drawdown": 0.0,
+          "trades": 0,
+          "censored": 0,
+          "complete": true,
+          "cancelled": 0,
+          "risk_halted": false,
+          "open_terminal": false,
+          "wins": 0,
+          "action_counts": [
+            1379,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-14",
+          "seconds": 0.10761249996721745,
+          "reward_sum": 0.0
+        },
+        {
+          "net": -30.00000000000001,
+          "realized": -30.00000000000001,
+          "max_drawdown": 30.00000000000001,
+          "trades": 17,
+          "censored": 0,
+          "complete": true,
+          "cancelled": 0,
+          "risk_halted": true,
+          "open_terminal": false,
+          "wins": 1,
+          "action_counts": [
+            1362,
+            0,
+            0,
+            17,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-15",
+          "seconds": 0.13553210021927953,
+          "reward_sum": -30.000000000000007
+        }
+      ],
+      "net": -46.400000000000006,
+      "trades": 37,
+      "censored": 17
+    },
+    "untrained_test": {
+      "days": [
+        {
+          "net": -24.600000000000005,
+          "realized": -24.600000000000005,
+          "max_drawdown": 30.000000000000007,
+          "trades": 22,
+          "censored": 1,
+          "complete": false,
+          "cancelled": 0,
+          "risk_halted": true,
+          "open_terminal": false,
+          "wins": 5,
+          "action_counts": [
+            1357,
+            0,
+            0,
+            7,
+            0,
+            0,
+            15
+          ],
+          "date": "2026-05-11",
+          "seconds": 0.07779240002855659,
+          "reward_sum": -24.600000000000005
+        },
+        {
+          "net": -23.8,
+          "realized": -23.8,
+          "max_drawdown": 30.200000000000003,
+          "trades": 16,
+          "censored": 0,
+          "complete": true,
+          "cancelled": 0,
+          "risk_halted": true,
+          "open_terminal": false,
+          "wins": 2,
+          "action_counts": [
+            1363,
+            0,
+            0,
+            6,
+            0,
+            0,
+            10
+          ],
+          "date": "2026-05-12",
+          "seconds": 0.08407660014927387,
+          "reward_sum": -23.799999999999997
+        },
+        {
+          "net": -26.200000000000006,
+          "realized": -26.200000000000006,
+          "max_drawdown": 30.000000000000007,
+          "trades": 21,
+          "censored": 4,
+          "complete": false,
+          "cancelled": 0,
+          "risk_halted": true,
+          "open_terminal": false,
+          "wins": 4,
+          "action_counts": [
+            1358,
+            0,
+            0,
+            13,
+            0,
+            0,
+            8
+          ],
+          "date": "2026-05-13",
+          "seconds": 0.08266550023108721,
+          "reward_sum": -26.20000000000001
+        },
+        {
+          "net": -26.400000000000027,
+          "realized": -26.400000000000027,
+          "max_drawdown": 30.00000000000003,
+          "trades": 48,
+          "censored": 3,
+          "complete": false,
+          "cancelled": 0,
+          "risk_halted": true,
+          "open_terminal": false,
+          "wins": 14,
+          "action_counts": [
+            1331,
+            0,
+            0,
+            14,
+            4,
+            0,
+            30
+          ],
+          "date": "2026-05-14",
+          "seconds": 0.0911027998663485,
+          "reward_sum": -26.400000000000034
+        },
+        {
+          "net": -26.20000000000001,
+          "realized": -26.20000000000001,
+          "max_drawdown": 30.00000000000001,
+          "trades": 18,
+          "censored": 0,
+          "complete": true,
+          "cancelled": 0,
+          "risk_halted": true,
+          "open_terminal": false,
+          "wins": 1,
+          "action_counts": [
+            1361,
+            0,
+            0,
+            2,
+            7,
+            0,
+            9
+          ],
+          "date": "2026-05-15",
+          "seconds": 0.09899859968572855,
+          "reward_sum": -26.20000000000001
+        }
+      ],
+      "net": -127.20000000000005,
+      "trades": 125,
+      "censored": 8
+    },
+    "wait_test": {
+      "days": [
+        {
+          "net": 0.0,
+          "realized": 0.0,
+          "max_drawdown": 0.0,
+          "trades": 0,
+          "censored": 0,
+          "complete": true,
+          "cancelled": 0,
+          "risk_halted": false,
+          "open_terminal": false,
+          "wins": 0,
+          "action_counts": [
+            1379,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-11",
+          "seconds": 0.08092840015888214,
+          "reward_sum": 0.0
+        },
+        {
+          "net": 0.0,
+          "realized": 0.0,
+          "max_drawdown": 0.0,
+          "trades": 0,
+          "censored": 0,
+          "complete": true,
+          "cancelled": 0,
+          "risk_halted": false,
+          "open_terminal": false,
+          "wins": 0,
+          "action_counts": [
+            1379,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-12",
+          "seconds": 0.0748503003269434,
+          "reward_sum": 0.0
+        },
+        {
+          "net": 0.0,
+          "realized": 0.0,
+          "max_drawdown": 0.0,
+          "trades": 0,
+          "censored": 0,
+          "complete": true,
+          "cancelled": 0,
+          "risk_halted": false,
+          "open_terminal": false,
+          "wins": 0,
+          "action_counts": [
+            1379,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-13",
+          "seconds": 0.0692969998344779,
+          "reward_sum": 0.0
+        },
+        {
+          "net": 0.0,
+          "realized": 0.0,
+          "max_drawdown": 0.0,
+          "trades": 0,
+          "censored": 0,
+          "complete": true,
+          "cancelled": 0,
+          "risk_halted": false,
+          "open_terminal": false,
+          "wins": 0,
+          "action_counts": [
+            1379,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-14",
+          "seconds": 0.08561279997229576,
+          "reward_sum": 0.0
+        },
+        {
+          "net": 0.0,
+          "realized": 0.0,
+          "max_drawdown": 0.0,
+          "trades": 0,
+          "censored": 0,
+          "complete": true,
+          "cancelled": 0,
+          "risk_halted": false,
+          "open_terminal": false,
+          "wins": 0,
+          "action_counts": [
+            1379,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "date": "2026-05-15",
+          "seconds": 0.10061980038881302,
+          "reward_sum": 0.0
+        }
+      ],
+      "net": 0.0,
+      "trades": 0,
+      "censored": 0
+    }
+  }
+}

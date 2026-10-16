@@ -1,0 +1,35 @@
+[
+  {
+    "policy": "selected_test",
+    "observed_net": -46.39999999999998,
+    "ending_observed_equity": 953.6,
+    "week_drawdown": 46.39999999999998,
+    "trades": 37,
+    "censored": 17,
+    "gross": -35.300000000000004,
+    "fees": 11.1,
+    "uncensored_trade_net": -36.9
+  },
+  {
+    "policy": "untrained_test",
+    "observed_net": -127.20000000000005,
+    "ending_observed_equity": 872.8,
+    "week_drawdown": 132.60000000000002,
+    "trades": 125,
+    "censored": 8,
+    "gross": -89.7,
+    "fees": 37.5,
+    "uncensored_trade_net": -130.00000000000003
+  },
+  {
+    "policy": "wait_test",
+    "observed_net": 0.0,
+    "ending_observed_equity": 1000.0,
+    "week_drawdown": 0.0,
+    "trades": 0,
+    "censored": 0,
+    "gross": 0.0,
+    "fees": 0.0,
+    "uncensored_trade_net": 0.0
+  }
+]
