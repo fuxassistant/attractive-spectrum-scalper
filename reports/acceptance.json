@@ -1,0 +1,19 @@
+{
+  "status": "PASS_DECLARED_ENGINEERING_SCOPE",
+  "date": "2026-10-15",
+  "scope": "two-week GCM6 reconstruction, market replay and pluggable feature lab",
+  "independent_reviewer": "gpt-6.1-sol",
+  "unresolved_blocking_findings": 0,
+  "evidence_sha256": {
+    "reports/source_lineage.json": "797559f439c823a6dbf76e76a95f6fbae85396369dddae91e4a70f6cca529002",
+    "reports/foundation_verification.json": "808026396b819bef5d1d9fd107ecef674c41c7d19a161827b45c0bc7c78dcebe",
+    "reports/feature_performance.json": "b55ffbb342e4982c07b296511678562f6f56cdd7ab1ea70562c167ab63b32c73",
+    "reports/audit_v2/audit.json": "ba08389e47a20cfa0243dd0112f8181a69da634d4fb598f14e6238c851f57e24",
+    "reports/independent_sol61_saved_checks.json": "29d568f67c96f4a389ad92d0c8b0c71bd38ce959434d6aaf1895efd28c170c0a",
+    "reports/independent_sol61_coverage.json": "f578aa96fc11e557e6240ee386edbb6e4a30895e417e71c2f84fecb1eea842aa",
+    "reports/INDEPENDENT_AUDIT_SOL61_RU.md": "855ba7122a17d726b3ba0ec34e3e2d36f9a48942801433b4d702e5370284e3a7",
+    "reports/tests_final_v2.xml": "bffca333e68653627c4760af32ae93172dc353ff193a6fb3b9573a62f1aead69",
+    "data/derived/market_v1/manifest.json": "cd6f82b15d2914a23008901fb509b0ffa190ce758c9b6ab05cdf58cbe61ceae3",
+    "data/derived/features_v1/manifest.json": "94cdfbfb80d78b72a57e4acc094b497a4b7072e01fcec81758bf587d08ef9efb"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "contract": "MBO_VENDOR_PROVENANCE_V1",
+  "date": "2026-09-26",
+  "files": {
+    "l3.py": {
+      "source_path": "D:\\scalper-mini\\mbo-vwap-scalper\\src\\mbo_strategy\\book\\l3.py",
+      "source_sha256": "767b69b2aa09f17169fd90e77f8372c0cafdc7f16a53bd200251b1afef9fa2d5",
+      "vendored_sha256": "767b69b2aa09f17169fd90e77f8372c0cafdc7f16a53bd200251b1afef9fa2d5",
+      "modifications": "NONE; byte-identical copy"
+    },
+    "l3_v2.py": {
+      "source_path": "D:\\scalper-mini\\mbo-vwap-scalper\\src\\mbo_strategy\\book\\l3_v2.py",
+      "source_sha256": "31695365bfe333fd77e84c9c9f67fd7da9cb4775fd7255536525b04ce9ad4066",
+      "vendored_sha256": "31695365bfe333fd77e84c9c9f67fd7da9cb4775fd7255536525b04ce9ad4066",
+      "modifications": "NONE; byte-identical copy"
+    },
+    "glbx_dbn.py": {
+      "source_path": "D:\\scalper-mini\\mbo-vwap-scalper\\src\\mbo_strategy\\source\\glbx_dbn.py",
+      "source_sha256": "cacd2f190b09adc62cd7a4b9272e1f2ffa876deb473c8bf2ccef7138461ac692",
+      "vendored_sha256": "cacd2f190b09adc62cd7a4b9272e1f2ffa876deb473c8bf2ccef7138461ac692",
+      "modifications": "NONE; byte-identical copy"
+    }
+  },
+  "admitted_entrypoint": "l3_v2.L3EventEngineV2",
+  "legacy_l3_note": "l3.L3EventEngine supplies arithmetic only; use V2 snapshot lifecycle.",
+  "source_reader_scope": "Fixed-width 56-byte MBO-only DBN stream; validates rtype and record length. Metadata mapping and source manifest verification belong to caller."
+}

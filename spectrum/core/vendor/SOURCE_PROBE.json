@@ -1,0 +1,124 @@
+{
+  "contract": "MBO_SOURCE_ADMISSION_PROBE_V1",
+  "source": "D:\\scalper-mini\\poi-scalper\\data\\raw\\GLBX-20260902-AHVTK4GAWB-Aug-1-Sep-2_2026.zip",
+  "member": "glbx-mdp3-20260802.mbo.dbn.zst",
+  "metadata_sha256": "926d62fc3afcb415b176ac30d6651681ee1c2c73676f145fcd050f2c82f21559",
+  "day_rows": 527888,
+  "source_seconds": 0.08621979993768036,
+  "full_member_compressed_sha256": "435e6c624f0090da01700445b7b29f5b869a91323a6a89679ab4778fe995ea32",
+  "past_day_selection": [
+    {
+      "symbol": "GCZ6",
+      "route": [
+        1,
+        41271,
+        22
+      ],
+      "T_volume": 5612,
+      "T_rows": 4208
+    },
+    {
+      "symbol": "GCV6",
+      "route": [
+        1,
+        42063221,
+        22
+      ],
+      "T_volume": 730,
+      "T_rows": 495
+    },
+    {
+      "symbol": "GCF7",
+      "route": [
+        1,
+        42024763,
+        22
+      ],
+      "T_volume": 169,
+      "T_rows": 75
+    },
+    {
+      "symbol": "GCU6",
+      "route": [
+        1,
+        42027353,
+        22
+      ],
+      "T_volume": 75,
+      "T_rows": 62
+    },
+    {
+      "symbol": "GCX6",
+      "route": [
+        1,
+        42024734,
+        22
+      ],
+      "T_volume": 36,
+      "T_rows": 23
+    },
+    {
+      "symbol": "GCG7",
+      "route": [
+        1,
+        42005245,
+        22
+      ],
+      "T_volume": 33,
+      "T_rows": 30
+    },
+    {
+      "symbol": "GCH7",
+      "route": [
+        1,
+        42002254,
+        22
+      ],
+      "T_volume": 10,
+      "T_rows": 10
+    },
+    {
+      "symbol": "GCQ6",
+      "route": [
+        1,
+        42011464,
+        22
+      ],
+      "T_volume": 2,
+      "T_rows": 2
+    },
+    {
+      "symbol": "GCM7",
+      "route": [
+        1,
+        27459,
+        22
+      ],
+      "T_volume": 1,
+      "T_rows": 1
+    }
+  ],
+  "selected_route": [
+    1,
+    41271,
+    22
+  ],
+  "selection_available_from": "2026-08-03T00:00:00Z",
+  "benchmark": {
+    "selected_records": 100000,
+    "published_events": 61506,
+    "valid_events": 61052,
+    "elapsed_seconds": 2.5393749999348074,
+    "selected_records_per_second": 39379.7686448702,
+    "first_receive_ns": 1785670754727693396,
+    "last_receive_ns": 1785708035105817243,
+    "pending_deltas": 0,
+    "active_orders": 554,
+    "levels": 390
+  },
+  "limitations": [
+    "Microbenchmark includes initial snapshot and I/O; not full-day throughput guarantee.",
+    "Contract selected by completed Aug2 T-volume only; no later day used.",
+    "No economic/model result."
+  ]
+}

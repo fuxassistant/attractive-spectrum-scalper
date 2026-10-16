@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "workloads": [
+    {
+      "workers": 1,
+      "seconds": 27.69626270001754,
+      "rows": 161999,
+      "pids": [
+        47864,
+        47864
+      ],
+      "rss_samples": [
+        531329024,
+        620892160
+      ]
+    },
+    {
+      "workers": 2,
+      "seconds": 17.749019500333816,
+      "rows": 161999,
+      "pids": [
+        9416,
+        40308
+      ],
+      "rss_samples": [
+        535617536,
+        482889728
+      ]
+    }
+  ],
+  "speedup": 1.5604390259133267,
+  "parity": [
+    {
+      "capture": "capture_001",
+      "sha256": "5fd9d6b4e38ba0230d1cfebcfe2f748343092bfd2293d1419efbfb1b7d911add"
+    },
+    {
+      "capture": "capture_005",
+      "sha256": "4ffe1d2475a38d81c074d48ab34759b244a9008547df5d88b6d5487c4b4c3da7"
+    }
+  ],
+  "platform": "Windows-11-10.0.22621-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "cpu_logical": 12,
+  "ram_bytes": 42675761152,
+  "caveat": "single matched pair while raw generation is running; includes process startup, read, FFT, Parquet write and readback; not isolated scaling benchmark"
+}

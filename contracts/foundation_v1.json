@@ -1,0 +1,21 @@
+{
+  "version": "SPECTRUM_FOUNDATION_V1",
+  "scope": "MBO reconstruction, market replay, independently pluggable feature generation",
+  "route": [1, 19181, 22],
+  "route_selection": "most frequent instrument in initial 500000 records; fixed before full reconstruction; no outcome selection",
+  "weeks_utc": [["2026-05-03T22:00:00Z", "2026-05-08T21:00:00Z"], ["2026-05-10T22:00:00Z", "2026-05-15T21:00:00Z"]],
+  "calendar": {"daily_break": "21:00-22:00 UTC", "weekend": "Friday 21:00 to Sunday 22:00 UTC", "basis": "observed May OHLC and user confirmation; bounded historical calendar, no holiday generalization"},
+  "publication": "F_LAST atomic; original source order; exact integer quote prices and nanosecond clocks",
+  "clock": "provider receive as research availability; processing wall time is separately measured",
+  "ohlc": "M1 midpoint from all committed MBO events; close-labelled; not trade OHLC or cTrader OHLC",
+  "parallelism": "independent source-reset captures; one book owner per capture; native NumPy/Arrow kernels for feature materialization",
+  "history": "raw source resets remain epoch boundaries, no invented cross-capture history",
+  "feature_families": ["motion", "flow", "spectral"],
+  "spectral": {"windows_seconds": [32, 64, 128], "sample_hz": 1, "window": "periodic Hann", "detrend": "unweighted sample mean retained separately", "padding": false, "min_cycles": 4, "bands_seconds": [[4, 8], [8, 16], [16, 32]]},
+  "support": "supported history and fresh origin are separate; current origin age budget 1s; book quote age budget 30s; no cross-gap or closed-session rolling windows",
+  "expected_open_minutes_per_week": 6900,
+  "engineering_coverage_gate": {"minimum_valid_open_minute_fraction": 0.95, "minimum_admitted_open_second_fraction": 0.8, "minimum_independent_ohlc_checks": 100, "every_scene_needs_checks": true, "scope": "representation sufficiency; not predictive or economic admission"},
+  "visual_selection": "seed 20261015, one random admissible origin per reset capture, plus fixed break controls; no future-outcome filter",
+  "acceptance": ["source-lineage verification", "independent raw-prefix book oracle", "batch and incomplete-F_LAST checkpoint parity", "future-suffix feature invariance", "FFT independent DFT", "Parquet roundtrip", "two real week coverage", "independent visual and performance audit"],
+  "not_claimed": ["predictive feature value", "policy", "economic edge", "broker execution", "live latency", "universal exchange calendar"]
+}

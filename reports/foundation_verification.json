@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "source_manifest_sha256": "fe286914c81e361e665a6bd3cf8956079facd707f242c305180aa21e3728c38e",
+  "records": 20000,
+  "publications": 16979,
+  "independent_oracle": "dictionary orders and full recomputation of levels; clean raw prefix",
+  "decoder_equal_records": 30000,
+  "decoder_seconds": {
+    "scalar": [
+      1.574410800356418,
+      1.5378568000160158,
+      1.5781525000929832,
+      1.5979731995612383,
+      1.582938099745661
+    ],
+    "columnar": [
+      0.4330780999734998,
+      0.5454478999599814,
+      0.4309354997240007,
+      0.492644099984318,
+      0.511374699883163
+    ]
+  },
+  "median_decoder_speedup": 3.2034332698660544,
+  "restart_cut": 1001,
+  "restart_inside_F_LAST": true,
+  "batch_size": 137,
+  "quote_snapshot_bar_parity": "PASS",
+  "timing_scope": "decoder only; interleaved repeats; machine may be generating full captures concurrently"
+}

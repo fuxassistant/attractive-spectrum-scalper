@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "selected_parent_records": 45103379,
+  "subset_records": 45103379,
+  "parent_records": 93756430,
+  "original_member_sha256": "6672bb8e3683a2a8302ff88dfeae88029bcc3d4e6735a2bc51f2f12bb06dc0d8",
+  "declared_original_sha256": "6672bb8e3683a2a8302ff88dfeae88029bcc3d4e6735a2bc51f2f12bb06dc0d8",
+  "subset_compressed_sha256": "dcb30f587485284d7ceda4ed1c70cfcee2fd2473a86051559c831205c05214b2",
+  "parent_selected_wire_sha256": "80bd109f10300a79d1ae0edab35f994904e1cdda58914ade859d85a0a7f170d8",
+  "subset_wire_sha256": "80bd109f10300a79d1ae0edab35f994904e1cdda58914ade859d85a0a7f170d8",
+  "seconds": 108.5381905999966,
+  "boundary": "ts_recv in declared [start,end); exact 56-byte rows in original order"
+}

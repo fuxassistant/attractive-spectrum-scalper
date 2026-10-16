@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "attractive-spectrum-scalper"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["numpy", "pyarrow", "zstandard", "databento-dbn>=0.69,<0.70", "pandas", "matplotlib", "psutil", "tzdata"]
+
+[project.optional-dependencies]
+player = ["torch>=2.2", "numba>=0.61", "tzdata"]
+dev = ["pytest>=9,<10"]
+
+[project.scripts]
+spectrum = "spectrum.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["spectrum*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
