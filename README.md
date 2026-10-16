@@ -20,11 +20,12 @@ Python 3.11+. Из корня репозитория:
 python -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements-foundation.txt
 .venv\Scripts\python.exe -m pip install -e ".[player,dev]"
+New-Item -ItemType Directory -Force .tmp | Out-Null
 .venv\Scripts\python.exe -m pytest -q --basetemp .tmp/pytest_local
 .venv\Scripts\python.exe -m spectrum --help
 ```
 
-На Linux/macOS используйте `.venv/bin/python`. Для ядра без торгового игрока достаточно `pip install -e ".[dev]"`. Тесты используют синтетические данные и не требуют частных архивов. GitHub Actions запускает Python-тесты с CPU PyTorch.
+На Linux/macOS используйте `.venv/bin/python`, а каталог создайте командой `mkdir -p .tmp`. Для ядра без торгового игрока достаточно `pip install -e ".[dev]"`. Тесты используют синтетические данные и не требуют частных архивов. GitHub Actions запускает Python-тесты с CPU PyTorch.
 
 ## Структура и правила Git
 
