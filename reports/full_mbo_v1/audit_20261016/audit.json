@@ -1,0 +1,2333 @@
+{
+  "status": "PASS_WITH_LIMITATIONS",
+  "utc": "2026-10-16T09:25:03.010203+00:00",
+  "issues": [],
+  "owner_alive": false,
+  "complete_utc": "2026-10-16T01:45:35.663337+00:00",
+  "members": 37,
+  "captures": 291,
+  "feature_captures": 288,
+  "empty_captures": [
+    {
+      "key": "member_006/capture_016002",
+      "date": "2026-04-03",
+      "symbol": "GCM6",
+      "rows": 0,
+      "entries": 0,
+      "eligible": false,
+      "reasons": [
+        "NO_FINALIZED_SECONDS",
+        "NO_ADMISSIBLE_ENTRY_ROWS",
+        "NO_OHLC_REFERENCE_SUPPORT"
+      ]
+    },
+    {
+      "key": "member_007/capture_017025",
+      "date": "2026-05-31",
+      "symbol": "GCQ6",
+      "rows": 0,
+      "entries": 0,
+      "eligible": false,
+      "reasons": [
+        "NO_FINALIZED_SECONDS",
+        "CONTEXT_ONLY_CONTRACT_SELECTION",
+        "NO_ADMISSIBLE_ENTRY_ROWS",
+        "NO_OHLC_REFERENCE_SUPPORT"
+      ]
+    },
+    {
+      "key": "member_008/capture_018018",
+      "date": "2026-06-21",
+      "symbol": "GCQ6",
+      "rows": 0,
+      "entries": 0,
+      "eligible": false,
+      "reasons": [
+        "NO_FINALIZED_SECONDS",
+        "CONTEXT_ONLY_CONTRACT_SELECTION",
+        "NO_ADMISSIBLE_ENTRY_ROWS",
+        "NO_OHLC_REFERENCE_SUPPORT"
+      ]
+    }
+  ],
+  "eligible": 231,
+  "excluded": 60,
+  "exclusion_reasons": {
+    "CONTEXT_ONLY_CONTRACT_SELECTION": 50,
+    "NO_ADMISSIBLE_ENTRY_ROWS": 57,
+    "ADMISSIBLE_REFERENCE_COVERAGE_BELOW_80_PERCENT": 17,
+    "SOURCE_DAY_NOT_AVAILABLE": 6,
+    "NO_OHLC_REFERENCE_SUPPORT": 4,
+    "OHLC_QA_NOT_VERIFIED": 4,
+    "NO_FINALIZED_SECONDS": 3
+  },
+  "bytes": 34988220336,
+  "free_bytes": 37078806528,
+  "rows": 21937619,
+  "entry_rows": 10803255,
+  "eligible_entry_rows": 10734127,
+  "hashes_checked": 2034,
+  "feature_sample_rows": 302038,
+  "ohlc_samples": [
+    {
+      "key": "member_001/capture_011023",
+      "checks": 8,
+      "max_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "member_002/capture_012020",
+      "checks": 8,
+      "max_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "member_003/capture_013015",
+      "checks": 8,
+      "max_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "member_004/capture_014009",
+      "checks": 8,
+      "max_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "member_005/capture_015010",
+      "checks": 8,
+      "max_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "member_005/capture_015024",
+      "checks": 0,
+      "max_error": 0.0,
+      "status": "NO_VALID_BARS"
+    },
+    {
+      "key": "member_006/capture_016025",
+      "checks": 8,
+      "max_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "member_007/capture_017011",
+      "checks": 8,
+      "max_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "member_007/capture_017020",
+      "checks": 8,
+      "max_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "member_008/capture_018007",
+      "checks": 8,
+      "max_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "member_011/capture_021000",
+      "checks": 8,
+      "max_error": 0.0,
+      "status": "PASS"
+    },
+    {
+      "key": "member_019/capture_029000",
+      "checks": 8,
+      "max_error": 0.0,
+      "status": "PASS"
+    }
+  ],
+  "members_detail": [
+    {
+      "key": "member_000",
+      "member": "glbx-mdp3-20251001-20251031.mbo.dbn.zst",
+      "raw_records": 154621613,
+      "selected_records": 133101738,
+      "captures": 27
+    },
+    {
+      "key": "member_001",
+      "member": "glbx-mdp3-20251101-20251130.mbo.dbn.zst",
+      "raw_records": 101956175,
+      "selected_records": 78173717,
+      "captures": 26
+    },
+    {
+      "key": "member_002",
+      "member": "glbx-mdp3-20251201-20251231.mbo.dbn.zst",
+      "raw_records": 115842575,
+      "selected_records": 91578094,
+      "captures": 27
+    },
+    {
+      "key": "member_003",
+      "member": "glbx-mdp3-20260101-20260131.mbo.dbn.zst",
+      "raw_records": 176786591,
+      "selected_records": 127474310,
+      "captures": 26
+    },
+    {
+      "key": "member_004",
+      "member": "glbx-mdp3-20260201-20260228.mbo.dbn.zst",
+      "raw_records": 144070482,
+      "selected_records": 100493939,
+      "captures": 25
+    },
+    {
+      "key": "member_005",
+      "member": "glbx-mdp3-20260301-20260331.mbo.dbn.zst",
+      "raw_records": 177487926,
+      "selected_records": 137135538,
+      "captures": 27
+    },
+    {
+      "key": "member_006",
+      "member": "glbx-mdp3-20260401-20260430.mbo.dbn.zst",
+      "raw_records": 105588053,
+      "selected_records": 84086401,
+      "captures": 26
+    },
+    {
+      "key": "member_007",
+      "member": "glbx-mdp3-20260501-20260531.mbo.dbn.zst",
+      "raw_records": 93756430,
+      "selected_records": 72766348,
+      "captures": 27
+    },
+    {
+      "key": "member_008",
+      "member": "glbx-mdp3-20260601-20260630.mbo.dbn.zst",
+      "raw_records": 141008609,
+      "selected_records": 111740473,
+      "captures": 27
+    },
+    {
+      "key": "member_009",
+      "member": "glbx-mdp3-20260701-20260730.mbo.dbn.zst",
+      "raw_records": 115858437,
+      "selected_records": 91196022,
+      "captures": 26
+    },
+    {
+      "key": "member_010",
+      "member": "glbx-mdp3-20260802.mbo.dbn.zst",
+      "raw_records": 527888,
+      "selected_records": 468066,
+      "captures": 1
+    },
+    {
+      "key": "member_011",
+      "member": "glbx-mdp3-20260803.mbo.dbn.zst",
+      "raw_records": 5215251,
+      "selected_records": 4401650,
+      "captures": 1
+    },
+    {
+      "key": "member_012",
+      "member": "glbx-mdp3-20260804.mbo.dbn.zst",
+      "raw_records": 6016411,
+      "selected_records": 5010879,
+      "captures": 1
+    },
+    {
+      "key": "member_013",
+      "member": "glbx-mdp3-20260805.mbo.dbn.zst",
+      "raw_records": 8442244,
+      "selected_records": 6644869,
+      "captures": 1
+    },
+    {
+      "key": "member_014",
+      "member": "glbx-mdp3-20260806.mbo.dbn.zst",
+      "raw_records": 7847990,
+      "selected_records": 6323097,
+      "captures": 1
+    },
+    {
+      "key": "member_015",
+      "member": "glbx-mdp3-20260807.mbo.dbn.zst",
+      "raw_records": 8656848,
+      "selected_records": 6863445,
+      "captures": 1
+    },
+    {
+      "key": "member_016",
+      "member": "glbx-mdp3-20260809.mbo.dbn.zst",
+      "raw_records": 266849,
+      "selected_records": 207469,
+      "captures": 1
+    },
+    {
+      "key": "member_017",
+      "member": "glbx-mdp3-20260810.mbo.dbn.zst",
+      "raw_records": 5529714,
+      "selected_records": 4476623,
+      "captures": 1
+    },
+    {
+      "key": "member_018",
+      "member": "glbx-mdp3-20260811.mbo.dbn.zst",
+      "raw_records": 6912247,
+      "selected_records": 5629521,
+      "captures": 1
+    },
+    {
+      "key": "member_019",
+      "member": "glbx-mdp3-20260812.mbo.dbn.zst",
+      "raw_records": 7407499,
+      "selected_records": 6107035,
+      "captures": 1
+    },
+    {
+      "key": "member_020",
+      "member": "glbx-mdp3-20260813.mbo.dbn.zst",
+      "raw_records": 7273587,
+      "selected_records": 5999496,
+      "captures": 1
+    },
+    {
+      "key": "member_021",
+      "member": "glbx-mdp3-20260814.mbo.dbn.zst",
+      "raw_records": 5761593,
+      "selected_records": 4765982,
+      "captures": 1
+    },
+    {
+      "key": "member_022",
+      "member": "glbx-mdp3-20260816.mbo.dbn.zst",
+      "raw_records": 289539,
+      "selected_records": 244862,
+      "captures": 1
+    },
+    {
+      "key": "member_023",
+      "member": "glbx-mdp3-20260817.mbo.dbn.zst",
+      "raw_records": 6176757,
+      "selected_records": 5252905,
+      "captures": 1
+    },
+    {
+      "key": "member_024",
+      "member": "glbx-mdp3-20260818.mbo.dbn.zst",
+      "raw_records": 7680798,
+      "selected_records": 6405056,
+      "captures": 1
+    },
+    {
+      "key": "member_025",
+      "member": "glbx-mdp3-20260819.mbo.dbn.zst",
+      "raw_records": 10528392,
+      "selected_records": 8755846,
+      "captures": 1
+    },
+    {
+      "key": "member_026",
+      "member": "glbx-mdp3-20260820.mbo.dbn.zst",
+      "raw_records": 9754221,
+      "selected_records": 8075372,
+      "captures": 1
+    },
+    {
+      "key": "member_027",
+      "member": "glbx-mdp3-20260821.mbo.dbn.zst",
+      "raw_records": 8614896,
+      "selected_records": 7016290,
+      "captures": 1
+    },
+    {
+      "key": "member_028",
+      "member": "glbx-mdp3-20260823.mbo.dbn.zst",
+      "raw_records": 429687,
+      "selected_records": 371227,
+      "captures": 1
+    },
+    {
+      "key": "member_029",
+      "member": "glbx-mdp3-20260824.mbo.dbn.zst",
+      "raw_records": 11287690,
+      "selected_records": 9386023,
+      "captures": 1
+    },
+    {
+      "key": "member_030",
+      "member": "glbx-mdp3-20260825.mbo.dbn.zst",
+      "raw_records": 9476401,
+      "selected_records": 8010197,
+      "captures": 1
+    },
+    {
+      "key": "member_031",
+      "member": "glbx-mdp3-20260826.mbo.dbn.zst",
+      "raw_records": 9003748,
+      "selected_records": 7489366,
+      "captures": 1
+    },
+    {
+      "key": "member_032",
+      "member": "glbx-mdp3-20260827.mbo.dbn.zst",
+      "raw_records": 7891525,
+      "selected_records": 6485798,
+      "captures": 1
+    },
+    {
+      "key": "member_033",
+      "member": "glbx-mdp3-20260828.mbo.dbn.zst",
+      "raw_records": 14057108,
+      "selected_records": 12230303,
+      "captures": 1
+    },
+    {
+      "key": "member_034",
+      "member": "glbx-mdp3-20260830.mbo.dbn.zst",
+      "raw_records": 552795,
+      "selected_records": 489581,
+      "captures": 1
+    },
+    {
+      "key": "member_035",
+      "member": "glbx-mdp3-20260831.mbo.dbn.zst",
+      "raw_records": 9711653,
+      "selected_records": 8300098,
+      "captures": 1
+    },
+    {
+      "key": "member_036",
+      "member": "glbx-mdp3-20260901.mbo.dbn.zst",
+      "raw_records": 11348001,
+      "selected_records": 9792289,
+      "captures": 1
+    }
+  ],
+  "daily_coverage": [
+    {
+      "date": "2025-10-01",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47744,
+      "eligible_entry_rows": 47744,
+      "coverage": 0.9473015873015873
+    },
+    {
+      "date": "2025-10-02",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46319,
+      "eligible_entry_rows": 46319,
+      "coverage": 0.9190277777777778
+    },
+    {
+      "date": "2025-10-03",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45878,
+      "eligible_entry_rows": 45878,
+      "coverage": 0.9102777777777777
+    },
+    {
+      "date": "2025-10-06",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46407,
+      "eligible_entry_rows": 46407,
+      "coverage": 0.9207738095238095
+    },
+    {
+      "date": "2025-10-07",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46694,
+      "eligible_entry_rows": 46694,
+      "coverage": 0.9264682539682539
+    },
+    {
+      "date": "2025-10-08",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47877,
+      "eligible_entry_rows": 47877,
+      "coverage": 0.9499404761904762
+    },
+    {
+      "date": "2025-10-09",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46835,
+      "eligible_entry_rows": 46835,
+      "coverage": 0.929265873015873
+    },
+    {
+      "date": "2025-10-10",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48892,
+      "eligible_entry_rows": 48892,
+      "coverage": 0.9700793650793651
+    },
+    {
+      "date": "2025-10-13",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47817,
+      "eligible_entry_rows": 47817,
+      "coverage": 0.94875
+    },
+    {
+      "date": "2025-10-14",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48211,
+      "eligible_entry_rows": 48211,
+      "coverage": 0.9565674603174603
+    },
+    {
+      "date": "2025-10-15",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47721,
+      "eligible_entry_rows": 47721,
+      "coverage": 0.9468452380952381
+    },
+    {
+      "date": "2025-10-16",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48253,
+      "eligible_entry_rows": 48253,
+      "coverage": 0.9574007936507937
+    },
+    {
+      "date": "2025-10-17",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 49515,
+      "eligible_entry_rows": 49515,
+      "coverage": 0.9824404761904761
+    },
+    {
+      "date": "2025-10-20",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48439,
+      "eligible_entry_rows": 48439,
+      "coverage": 0.9610912698412698
+    },
+    {
+      "date": "2025-10-21",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 49616,
+      "eligible_entry_rows": 49616,
+      "coverage": 0.9844444444444445
+    },
+    {
+      "date": "2025-10-22",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 49568,
+      "eligible_entry_rows": 49568,
+      "coverage": 0.9834920634920635
+    },
+    {
+      "date": "2025-10-23",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48518,
+      "eligible_entry_rows": 48518,
+      "coverage": 0.9626587301587302
+    },
+    {
+      "date": "2025-10-24",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48068,
+      "eligible_entry_rows": 48068,
+      "coverage": 0.9537301587301588
+    },
+    {
+      "date": "2025-10-27",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 45395,
+      "eligible_entry_rows": 45395,
+      "coverage": 0.9699786324786325
+    },
+    {
+      "date": "2025-10-28",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 45041,
+      "eligible_entry_rows": 45041,
+      "coverage": 0.9624145299145299
+    },
+    {
+      "date": "2025-10-29",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 45199,
+      "eligible_entry_rows": 45199,
+      "coverage": 0.9657905982905983
+    },
+    {
+      "date": "2025-10-30",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 44858,
+      "eligible_entry_rows": 44858,
+      "coverage": 0.9585042735042735
+    },
+    {
+      "date": "2025-10-31",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 43255,
+      "eligible_entry_rows": 43255,
+      "coverage": 0.9242521367521368
+    },
+    {
+      "date": "2025-11-03",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46469,
+      "eligible_entry_rows": 46469,
+      "coverage": 0.9220039682539682
+    },
+    {
+      "date": "2025-11-04",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46499,
+      "eligible_entry_rows": 46499,
+      "coverage": 0.9225992063492063
+    },
+    {
+      "date": "2025-11-05",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 43983,
+      "eligible_entry_rows": 43983,
+      "coverage": 0.8726785714285714
+    },
+    {
+      "date": "2025-11-06",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45228,
+      "eligible_entry_rows": 45228,
+      "coverage": 0.8973809523809524
+    },
+    {
+      "date": "2025-11-07",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 44577,
+      "eligible_entry_rows": 44577,
+      "coverage": 0.8844642857142857
+    },
+    {
+      "date": "2025-11-10",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45992,
+      "eligible_entry_rows": 45992,
+      "coverage": 0.9125396825396825
+    },
+    {
+      "date": "2025-11-11",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45839,
+      "eligible_entry_rows": 45839,
+      "coverage": 0.9095039682539683
+    },
+    {
+      "date": "2025-11-12",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47329,
+      "eligible_entry_rows": 47329,
+      "coverage": 0.9390674603174604
+    },
+    {
+      "date": "2025-11-13",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47607,
+      "eligible_entry_rows": 47607,
+      "coverage": 0.9445833333333333
+    },
+    {
+      "date": "2025-11-14",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48006,
+      "eligible_entry_rows": 48006,
+      "coverage": 0.9525
+    },
+    {
+      "date": "2025-11-17",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46951,
+      "eligible_entry_rows": 46951,
+      "coverage": 0.9315674603174603
+    },
+    {
+      "date": "2025-11-18",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46699,
+      "eligible_entry_rows": 46699,
+      "coverage": 0.9265674603174603
+    },
+    {
+      "date": "2025-11-19",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47420,
+      "eligible_entry_rows": 47420,
+      "coverage": 0.9408730158730159
+    },
+    {
+      "date": "2025-11-20",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46793,
+      "eligible_entry_rows": 46793,
+      "coverage": 0.9284325396825397
+    },
+    {
+      "date": "2025-11-21",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48985,
+      "eligible_entry_rows": 48985,
+      "coverage": 0.9719246031746032
+    },
+    {
+      "date": "2025-11-24",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45209,
+      "eligible_entry_rows": 45209,
+      "coverage": 0.8970039682539682
+    },
+    {
+      "date": "2025-11-25",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45420,
+      "eligible_entry_rows": 45420,
+      "coverage": 0.9011904761904762
+    },
+    {
+      "date": "2025-11-26",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45009,
+      "eligible_entry_rows": 45009,
+      "coverage": 0.8930357142857143
+    },
+    {
+      "date": "2025-11-27",
+      "expected_reference_seconds": 41100,
+      "entry_rows": 30783,
+      "eligible_entry_rows": 0,
+      "coverage": 0.748978102189781
+    },
+    {
+      "date": "2025-11-28",
+      "expected_reference_seconds": 41400,
+      "entry_rows": 0,
+      "eligible_entry_rows": 0,
+      "coverage": 0.0
+    },
+    {
+      "date": "2025-12-01",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46663,
+      "eligible_entry_rows": 46663,
+      "coverage": 0.9258531746031746
+    },
+    {
+      "date": "2025-12-02",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46971,
+      "eligible_entry_rows": 46971,
+      "coverage": 0.9319642857142857
+    },
+    {
+      "date": "2025-12-03",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45103,
+      "eligible_entry_rows": 45103,
+      "coverage": 0.8949007936507937
+    },
+    {
+      "date": "2025-12-04",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45204,
+      "eligible_entry_rows": 45204,
+      "coverage": 0.8969047619047619
+    },
+    {
+      "date": "2025-12-05",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 44921,
+      "eligible_entry_rows": 44921,
+      "coverage": 0.8912896825396825
+    },
+    {
+      "date": "2025-12-08",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 44214,
+      "eligible_entry_rows": 44214,
+      "coverage": 0.8772619047619048
+    },
+    {
+      "date": "2025-12-09",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45122,
+      "eligible_entry_rows": 45122,
+      "coverage": 0.8952777777777777
+    },
+    {
+      "date": "2025-12-10",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46413,
+      "eligible_entry_rows": 46413,
+      "coverage": 0.9208928571428572
+    },
+    {
+      "date": "2025-12-11",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46798,
+      "eligible_entry_rows": 46798,
+      "coverage": 0.928531746031746
+    },
+    {
+      "date": "2025-12-12",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48071,
+      "eligible_entry_rows": 48071,
+      "coverage": 0.9537896825396825
+    },
+    {
+      "date": "2025-12-15",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46417,
+      "eligible_entry_rows": 46417,
+      "coverage": 0.9209722222222222
+    },
+    {
+      "date": "2025-12-16",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46550,
+      "eligible_entry_rows": 46550,
+      "coverage": 0.9236111111111112
+    },
+    {
+      "date": "2025-12-17",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47108,
+      "eligible_entry_rows": 47108,
+      "coverage": 0.9346825396825397
+    },
+    {
+      "date": "2025-12-18",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45275,
+      "eligible_entry_rows": 45275,
+      "coverage": 0.8983134920634921
+    },
+    {
+      "date": "2025-12-19",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45677,
+      "eligible_entry_rows": 45677,
+      "coverage": 0.9062896825396826
+    },
+    {
+      "date": "2025-12-22",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45324,
+      "eligible_entry_rows": 45324,
+      "coverage": 0.8992857142857142
+    },
+    {
+      "date": "2025-12-23",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45832,
+      "eligible_entry_rows": 45832,
+      "coverage": 0.9093650793650794
+    },
+    {
+      "date": "2025-12-24",
+      "expected_reference_seconds": 38400,
+      "entry_rows": 34913,
+      "eligible_entry_rows": 34913,
+      "coverage": 0.9091927083333333
+    },
+    {
+      "date": "2025-12-26",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47254,
+      "eligible_entry_rows": 47254,
+      "coverage": 0.9375793650793651
+    },
+    {
+      "date": "2025-12-29",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47825,
+      "eligible_entry_rows": 47825,
+      "coverage": 0.9489087301587301
+    },
+    {
+      "date": "2025-12-30",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47032,
+      "eligible_entry_rows": 47032,
+      "coverage": 0.9331746031746032
+    },
+    {
+      "date": "2025-12-31",
+      "expected_reference_seconds": 39600,
+      "entry_rows": 36712,
+      "eligible_entry_rows": 36712,
+      "coverage": 0.927070707070707
+    },
+    {
+      "date": "2026-01-02",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 44111,
+      "eligible_entry_rows": 44111,
+      "coverage": 0.8752182539682539
+    },
+    {
+      "date": "2026-01-05",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46626,
+      "eligible_entry_rows": 46626,
+      "coverage": 0.9251190476190476
+    },
+    {
+      "date": "2026-01-06",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45608,
+      "eligible_entry_rows": 45608,
+      "coverage": 0.9049206349206349
+    },
+    {
+      "date": "2026-01-07",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46104,
+      "eligible_entry_rows": 46104,
+      "coverage": 0.9147619047619048
+    },
+    {
+      "date": "2026-01-08",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46118,
+      "eligible_entry_rows": 46118,
+      "coverage": 0.9150396825396825
+    },
+    {
+      "date": "2026-01-09",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 44847,
+      "eligible_entry_rows": 44847,
+      "coverage": 0.8898214285714285
+    },
+    {
+      "date": "2026-01-12",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46143,
+      "eligible_entry_rows": 46143,
+      "coverage": 0.9155357142857142
+    },
+    {
+      "date": "2026-01-13",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46523,
+      "eligible_entry_rows": 46523,
+      "coverage": 0.9230753968253969
+    },
+    {
+      "date": "2026-01-14",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47980,
+      "eligible_entry_rows": 47980,
+      "coverage": 0.9519841269841269
+    },
+    {
+      "date": "2026-01-15",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47096,
+      "eligible_entry_rows": 47096,
+      "coverage": 0.9344444444444444
+    },
+    {
+      "date": "2026-01-16",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47239,
+      "eligible_entry_rows": 47239,
+      "coverage": 0.9372817460317461
+    },
+    {
+      "date": "2026-01-19",
+      "expected_reference_seconds": 40200,
+      "entry_rows": 33563,
+      "eligible_entry_rows": 33563,
+      "coverage": 0.8349004975124378
+    },
+    {
+      "date": "2026-01-20",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47312,
+      "eligible_entry_rows": 47312,
+      "coverage": 0.9387301587301587
+    },
+    {
+      "date": "2026-01-21",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48155,
+      "eligible_entry_rows": 48155,
+      "coverage": 0.9554563492063493
+    },
+    {
+      "date": "2026-01-22",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46456,
+      "eligible_entry_rows": 46456,
+      "coverage": 0.9217460317460318
+    },
+    {
+      "date": "2026-01-23",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47269,
+      "eligible_entry_rows": 47269,
+      "coverage": 0.9378769841269842
+    },
+    {
+      "date": "2026-01-26",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48867,
+      "eligible_entry_rows": 48867,
+      "coverage": 0.9695833333333334
+    },
+    {
+      "date": "2026-01-27",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48566,
+      "eligible_entry_rows": 48566,
+      "coverage": 0.9636111111111111
+    },
+    {
+      "date": "2026-01-28",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48990,
+      "eligible_entry_rows": 48990,
+      "coverage": 0.9720238095238095
+    },
+    {
+      "date": "2026-01-29",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 49634,
+      "eligible_entry_rows": 49634,
+      "coverage": 0.9848015873015873
+    },
+    {
+      "date": "2026-01-30",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 50115,
+      "eligible_entry_rows": 50115,
+      "coverage": 0.9943452380952381
+    },
+    {
+      "date": "2026-02-02",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 49619,
+      "eligible_entry_rows": 49619,
+      "coverage": 0.9845039682539682
+    },
+    {
+      "date": "2026-02-03",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48930,
+      "eligible_entry_rows": 48930,
+      "coverage": 0.9708333333333333
+    },
+    {
+      "date": "2026-02-04",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47542,
+      "eligible_entry_rows": 47542,
+      "coverage": 0.9432936507936508
+    },
+    {
+      "date": "2026-02-05",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48944,
+      "eligible_entry_rows": 48944,
+      "coverage": 0.9711111111111111
+    },
+    {
+      "date": "2026-02-06",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46425,
+      "eligible_entry_rows": 46425,
+      "coverage": 0.9211309523809523
+    },
+    {
+      "date": "2026-02-09",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46148,
+      "eligible_entry_rows": 46148,
+      "coverage": 0.9156349206349207
+    },
+    {
+      "date": "2026-02-10",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45730,
+      "eligible_entry_rows": 45730,
+      "coverage": 0.9073412698412698
+    },
+    {
+      "date": "2026-02-11",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46243,
+      "eligible_entry_rows": 46243,
+      "coverage": 0.9175198412698413
+    },
+    {
+      "date": "2026-02-12",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46158,
+      "eligible_entry_rows": 46158,
+      "coverage": 0.9158333333333334
+    },
+    {
+      "date": "2026-02-13",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46750,
+      "eligible_entry_rows": 46750,
+      "coverage": 0.9275793650793651
+    },
+    {
+      "date": "2026-02-16",
+      "expected_reference_seconds": 40200,
+      "entry_rows": 30548,
+      "eligible_entry_rows": 0,
+      "coverage": 0.7599004975124378
+    },
+    {
+      "date": "2026-02-17",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45593,
+      "eligible_entry_rows": 45593,
+      "coverage": 0.9046230158730159
+    },
+    {
+      "date": "2026-02-18",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 44079,
+      "eligible_entry_rows": 44079,
+      "coverage": 0.8745833333333334
+    },
+    {
+      "date": "2026-02-19",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 44519,
+      "eligible_entry_rows": 44519,
+      "coverage": 0.8833134920634921
+    },
+    {
+      "date": "2026-02-20",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47562,
+      "eligible_entry_rows": 47562,
+      "coverage": 0.9436904761904762
+    },
+    {
+      "date": "2026-02-23",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47077,
+      "eligible_entry_rows": 47077,
+      "coverage": 0.9340674603174604
+    },
+    {
+      "date": "2026-02-24",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46227,
+      "eligible_entry_rows": 46227,
+      "coverage": 0.9172023809523809
+    },
+    {
+      "date": "2026-02-25",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 41669,
+      "eligible_entry_rows": 33872,
+      "coverage": 0.826765873015873
+    },
+    {
+      "date": "2026-02-26",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46448,
+      "eligible_entry_rows": 46448,
+      "coverage": 0.9215873015873016
+    },
+    {
+      "date": "2026-02-27",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46345,
+      "eligible_entry_rows": 46345,
+      "coverage": 0.9195436507936507
+    },
+    {
+      "date": "2026-03-02",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48001,
+      "eligible_entry_rows": 48001,
+      "coverage": 0.9524007936507937
+    },
+    {
+      "date": "2026-03-03",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 49635,
+      "eligible_entry_rows": 49635,
+      "coverage": 0.9848214285714286
+    },
+    {
+      "date": "2026-03-04",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47792,
+      "eligible_entry_rows": 47792,
+      "coverage": 0.9482539682539682
+    },
+    {
+      "date": "2026-03-05",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47842,
+      "eligible_entry_rows": 47842,
+      "coverage": 0.9492460317460317
+    },
+    {
+      "date": "2026-03-06",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47977,
+      "eligible_entry_rows": 47977,
+      "coverage": 0.9519246031746031
+    },
+    {
+      "date": "2026-03-09",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 45209,
+      "eligible_entry_rows": 45209,
+      "coverage": 0.9660042735042735
+    },
+    {
+      "date": "2026-03-10",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 45021,
+      "eligible_entry_rows": 45021,
+      "coverage": 0.9619871794871795
+    },
+    {
+      "date": "2026-03-11",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 43554,
+      "eligible_entry_rows": 43554,
+      "coverage": 0.9306410256410257
+    },
+    {
+      "date": "2026-03-12",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 44592,
+      "eligible_entry_rows": 44592,
+      "coverage": 0.9528205128205128
+    },
+    {
+      "date": "2026-03-13",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 45266,
+      "eligible_entry_rows": 45266,
+      "coverage": 0.9672222222222222
+    },
+    {
+      "date": "2026-03-16",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 0,
+      "eligible_entry_rows": 0,
+      "coverage": 0.0
+    },
+    {
+      "date": "2026-03-17",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 43076,
+      "eligible_entry_rows": 43076,
+      "coverage": 0.9204273504273505
+    },
+    {
+      "date": "2026-03-18",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 45469,
+      "eligible_entry_rows": 45469,
+      "coverage": 0.9715598290598291
+    },
+    {
+      "date": "2026-03-19",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 46464,
+      "eligible_entry_rows": 46464,
+      "coverage": 0.9928205128205129
+    },
+    {
+      "date": "2026-03-20",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 46567,
+      "eligible_entry_rows": 46567,
+      "coverage": 0.9950213675213675
+    },
+    {
+      "date": "2026-03-23",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 46331,
+      "eligible_entry_rows": 46331,
+      "coverage": 0.9899786324786325
+    },
+    {
+      "date": "2026-03-24",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 46419,
+      "eligible_entry_rows": 46419,
+      "coverage": 0.9918589743589744
+    },
+    {
+      "date": "2026-03-25",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 45807,
+      "eligible_entry_rows": 45807,
+      "coverage": 0.9787820512820513
+    },
+    {
+      "date": "2026-03-26",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 46240,
+      "eligible_entry_rows": 46240,
+      "coverage": 0.9880341880341881
+    },
+    {
+      "date": "2026-03-27",
+      "expected_reference_seconds": 46800,
+      "entry_rows": 45611,
+      "eligible_entry_rows": 45611,
+      "coverage": 0.974594017094017
+    },
+    {
+      "date": "2026-03-30",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48462,
+      "eligible_entry_rows": 48462,
+      "coverage": 0.9615476190476191
+    },
+    {
+      "date": "2026-03-31",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 49219,
+      "eligible_entry_rows": 49219,
+      "coverage": 0.9765674603174603
+    },
+    {
+      "date": "2026-04-01",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48835,
+      "eligible_entry_rows": 48835,
+      "coverage": 0.9689484126984127
+    },
+    {
+      "date": "2026-04-02",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48974,
+      "eligible_entry_rows": 48974,
+      "coverage": 0.9717063492063492
+    },
+    {
+      "date": "2026-04-06",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46728,
+      "eligible_entry_rows": 46728,
+      "coverage": 0.9271428571428572
+    },
+    {
+      "date": "2026-04-07",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 49484,
+      "eligible_entry_rows": 49484,
+      "coverage": 0.9818253968253968
+    },
+    {
+      "date": "2026-04-08",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48873,
+      "eligible_entry_rows": 48873,
+      "coverage": 0.9697023809523809
+    },
+    {
+      "date": "2026-04-09",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47963,
+      "eligible_entry_rows": 47963,
+      "coverage": 0.9516468253968254
+    },
+    {
+      "date": "2026-04-10",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 0,
+      "eligible_entry_rows": 0,
+      "coverage": 0.0
+    },
+    {
+      "date": "2026-04-13",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46586,
+      "eligible_entry_rows": 46586,
+      "coverage": 0.9243253968253968
+    },
+    {
+      "date": "2026-04-14",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46395,
+      "eligible_entry_rows": 46395,
+      "coverage": 0.9205357142857142
+    },
+    {
+      "date": "2026-04-15",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46895,
+      "eligible_entry_rows": 46895,
+      "coverage": 0.9304563492063492
+    },
+    {
+      "date": "2026-04-16",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45403,
+      "eligible_entry_rows": 45403,
+      "coverage": 0.9008531746031746
+    },
+    {
+      "date": "2026-04-17",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46474,
+      "eligible_entry_rows": 46474,
+      "coverage": 0.9221031746031746
+    },
+    {
+      "date": "2026-04-20",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45930,
+      "eligible_entry_rows": 45930,
+      "coverage": 0.9113095238095238
+    },
+    {
+      "date": "2026-04-21",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48015,
+      "eligible_entry_rows": 48015,
+      "coverage": 0.9526785714285714
+    },
+    {
+      "date": "2026-04-22",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46258,
+      "eligible_entry_rows": 46258,
+      "coverage": 0.9178174603174604
+    },
+    {
+      "date": "2026-04-23",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48625,
+      "eligible_entry_rows": 48625,
+      "coverage": 0.964781746031746
+    },
+    {
+      "date": "2026-04-24",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47530,
+      "eligible_entry_rows": 47530,
+      "coverage": 0.9430555555555555
+    },
+    {
+      "date": "2026-04-27",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45286,
+      "eligible_entry_rows": 45286,
+      "coverage": 0.898531746031746
+    },
+    {
+      "date": "2026-04-28",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48031,
+      "eligible_entry_rows": 48031,
+      "coverage": 0.9529960317460318
+    },
+    {
+      "date": "2026-04-29",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 49413,
+      "eligible_entry_rows": 49413,
+      "coverage": 0.9804166666666667
+    },
+    {
+      "date": "2026-04-30",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48693,
+      "eligible_entry_rows": 48693,
+      "coverage": 0.9661309523809524
+    },
+    {
+      "date": "2026-05-01",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46440,
+      "eligible_entry_rows": 46440,
+      "coverage": 0.9214285714285714
+    },
+    {
+      "date": "2026-05-04",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47389,
+      "eligible_entry_rows": 47389,
+      "coverage": 0.9402579365079365
+    },
+    {
+      "date": "2026-05-05",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45430,
+      "eligible_entry_rows": 45430,
+      "coverage": 0.9013888888888889
+    },
+    {
+      "date": "2026-05-06",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48293,
+      "eligible_entry_rows": 48293,
+      "coverage": 0.9581944444444445
+    },
+    {
+      "date": "2026-05-07",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48819,
+      "eligible_entry_rows": 48819,
+      "coverage": 0.9686309523809524
+    },
+    {
+      "date": "2026-05-08",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46901,
+      "eligible_entry_rows": 46901,
+      "coverage": 0.9305753968253968
+    },
+    {
+      "date": "2026-05-11",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46082,
+      "eligible_entry_rows": 46082,
+      "coverage": 0.9143253968253968
+    },
+    {
+      "date": "2026-05-12",
+      "expected_reference_seconds": 49800,
+      "entry_rows": 47206,
+      "eligible_entry_rows": 47206,
+      "coverage": 0.9479116465863454
+    },
+    {
+      "date": "2026-05-13",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46033,
+      "eligible_entry_rows": 46033,
+      "coverage": 0.9133531746031746
+    },
+    {
+      "date": "2026-05-14",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46481,
+      "eligible_entry_rows": 46481,
+      "coverage": 0.9222420634920635
+    },
+    {
+      "date": "2026-05-15",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 49156,
+      "eligible_entry_rows": 49156,
+      "coverage": 0.9753174603174604
+    },
+    {
+      "date": "2026-05-18",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47491,
+      "eligible_entry_rows": 47491,
+      "coverage": 0.9422817460317461
+    },
+    {
+      "date": "2026-05-19",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47652,
+      "eligible_entry_rows": 47652,
+      "coverage": 0.9454761904761905
+    },
+    {
+      "date": "2026-05-20",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46763,
+      "eligible_entry_rows": 46763,
+      "coverage": 0.9278373015873016
+    },
+    {
+      "date": "2026-05-21",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47708,
+      "eligible_entry_rows": 47708,
+      "coverage": 0.9465873015873015
+    },
+    {
+      "date": "2026-05-22",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46741,
+      "eligible_entry_rows": 46741,
+      "coverage": 0.9274007936507936
+    },
+    {
+      "date": "2026-05-25",
+      "expected_reference_seconds": 40200,
+      "entry_rows": 31764,
+      "eligible_entry_rows": 31764,
+      "coverage": 0.7901492537313433
+    },
+    {
+      "date": "2026-05-26",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46032,
+      "eligible_entry_rows": 46032,
+      "coverage": 0.9133333333333333
+    },
+    {
+      "date": "2026-05-27",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45248,
+      "eligible_entry_rows": 45248,
+      "coverage": 0.8977777777777778
+    },
+    {
+      "date": "2026-05-28",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46148,
+      "eligible_entry_rows": 46148,
+      "coverage": 0.9156349206349207
+    },
+    {
+      "date": "2026-05-29",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46520,
+      "eligible_entry_rows": 46520,
+      "coverage": 0.9230158730158731
+    },
+    {
+      "date": "2026-06-01",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 44872,
+      "eligible_entry_rows": 44872,
+      "coverage": 0.8903174603174603
+    },
+    {
+      "date": "2026-06-02",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 43777,
+      "eligible_entry_rows": 43777,
+      "coverage": 0.8685912698412699
+    },
+    {
+      "date": "2026-06-03",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46855,
+      "eligible_entry_rows": 46855,
+      "coverage": 0.9296626984126984
+    },
+    {
+      "date": "2026-06-04",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45730,
+      "eligible_entry_rows": 45730,
+      "coverage": 0.9073412698412698
+    },
+    {
+      "date": "2026-06-05",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48075,
+      "eligible_entry_rows": 48075,
+      "coverage": 0.9538690476190477
+    },
+    {
+      "date": "2026-06-08",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48179,
+      "eligible_entry_rows": 48179,
+      "coverage": 0.9559325396825397
+    },
+    {
+      "date": "2026-06-09",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47570,
+      "eligible_entry_rows": 47570,
+      "coverage": 0.9438492063492063
+    },
+    {
+      "date": "2026-06-10",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 49682,
+      "eligible_entry_rows": 49682,
+      "coverage": 0.9857539682539682
+    },
+    {
+      "date": "2026-06-11",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48848,
+      "eligible_entry_rows": 48848,
+      "coverage": 0.9692063492063492
+    },
+    {
+      "date": "2026-06-12",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48546,
+      "eligible_entry_rows": 48546,
+      "coverage": 0.9632142857142857
+    },
+    {
+      "date": "2026-06-15",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47606,
+      "eligible_entry_rows": 47606,
+      "coverage": 0.9445634920634921
+    },
+    {
+      "date": "2026-06-16",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45949,
+      "eligible_entry_rows": 45949,
+      "coverage": 0.911686507936508
+    },
+    {
+      "date": "2026-06-17",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47425,
+      "eligible_entry_rows": 47425,
+      "coverage": 0.9409722222222222
+    },
+    {
+      "date": "2026-06-18",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48345,
+      "eligible_entry_rows": 48345,
+      "coverage": 0.9592261904761905
+    },
+    {
+      "date": "2026-06-19",
+      "expected_reference_seconds": 35700,
+      "entry_rows": 33042,
+      "eligible_entry_rows": 33042,
+      "coverage": 0.9255462184873949
+    },
+    {
+      "date": "2026-06-22",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46268,
+      "eligible_entry_rows": 46268,
+      "coverage": 0.9180158730158731
+    },
+    {
+      "date": "2026-06-23",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48218,
+      "eligible_entry_rows": 48218,
+      "coverage": 0.9567063492063492
+    },
+    {
+      "date": "2026-06-24",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 49410,
+      "eligible_entry_rows": 49410,
+      "coverage": 0.9803571428571428
+    },
+    {
+      "date": "2026-06-25",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47911,
+      "eligible_entry_rows": 47911,
+      "coverage": 0.9506150793650794
+    },
+    {
+      "date": "2026-06-26",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47944,
+      "eligible_entry_rows": 47944,
+      "coverage": 0.9512698412698413
+    },
+    {
+      "date": "2026-06-29",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45659,
+      "eligible_entry_rows": 45659,
+      "coverage": 0.9059325396825397
+    },
+    {
+      "date": "2026-06-30",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46245,
+      "eligible_entry_rows": 46245,
+      "coverage": 0.9175595238095238
+    },
+    {
+      "date": "2026-07-01",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47569,
+      "eligible_entry_rows": 47569,
+      "coverage": 0.9438293650793651
+    },
+    {
+      "date": "2026-07-02",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48062,
+      "eligible_entry_rows": 48062,
+      "coverage": 0.9536111111111111
+    },
+    {
+      "date": "2026-07-03",
+      "expected_reference_seconds": 35700,
+      "entry_rows": 30520,
+      "eligible_entry_rows": 30520,
+      "coverage": 0.8549019607843137
+    },
+    {
+      "date": "2026-07-06",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45304,
+      "eligible_entry_rows": 45304,
+      "coverage": 0.8988888888888888
+    },
+    {
+      "date": "2026-07-07",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46768,
+      "eligible_entry_rows": 46768,
+      "coverage": 0.927936507936508
+    },
+    {
+      "date": "2026-07-08",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48983,
+      "eligible_entry_rows": 48983,
+      "coverage": 0.9718849206349206
+    },
+    {
+      "date": "2026-07-09",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45035,
+      "eligible_entry_rows": 45035,
+      "coverage": 0.8935515873015873
+    },
+    {
+      "date": "2026-07-10",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 44507,
+      "eligible_entry_rows": 44507,
+      "coverage": 0.8830753968253968
+    },
+    {
+      "date": "2026-07-13",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47393,
+      "eligible_entry_rows": 47393,
+      "coverage": 0.9403373015873016
+    },
+    {
+      "date": "2026-07-14",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46319,
+      "eligible_entry_rows": 46319,
+      "coverage": 0.9190277777777778
+    },
+    {
+      "date": "2026-07-15",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46452,
+      "eligible_entry_rows": 46452,
+      "coverage": 0.9216666666666666
+    },
+    {
+      "date": "2026-07-16",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46919,
+      "eligible_entry_rows": 46919,
+      "coverage": 0.9309325396825396
+    },
+    {
+      "date": "2026-07-17",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46694,
+      "eligible_entry_rows": 46694,
+      "coverage": 0.9264682539682539
+    },
+    {
+      "date": "2026-07-20",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 44237,
+      "eligible_entry_rows": 44237,
+      "coverage": 0.877718253968254
+    },
+    {
+      "date": "2026-07-21",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 44375,
+      "eligible_entry_rows": 44375,
+      "coverage": 0.8804563492063492
+    },
+    {
+      "date": "2026-07-22",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45907,
+      "eligible_entry_rows": 45907,
+      "coverage": 0.9108531746031746
+    },
+    {
+      "date": "2026-07-23",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46596,
+      "eligible_entry_rows": 46596,
+      "coverage": 0.9245238095238095
+    },
+    {
+      "date": "2026-07-24",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 44837,
+      "eligible_entry_rows": 44837,
+      "coverage": 0.8896230158730158
+    },
+    {
+      "date": "2026-07-27",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45415,
+      "eligible_entry_rows": 45415,
+      "coverage": 0.9010912698412699
+    },
+    {
+      "date": "2026-07-28",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45777,
+      "eligible_entry_rows": 45777,
+      "coverage": 0.9082738095238095
+    },
+    {
+      "date": "2026-07-29",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46848,
+      "eligible_entry_rows": 46848,
+      "coverage": 0.9295238095238095
+    },
+    {
+      "date": "2026-07-30",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47944,
+      "eligible_entry_rows": 47944,
+      "coverage": 0.9512698412698413
+    },
+    {
+      "date": "2026-07-31",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 0,
+      "eligible_entry_rows": 0,
+      "coverage": 0.0
+    },
+    {
+      "date": "2026-08-03",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45146,
+      "eligible_entry_rows": 45146,
+      "coverage": 0.8957539682539682
+    },
+    {
+      "date": "2026-08-04",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45867,
+      "eligible_entry_rows": 45867,
+      "coverage": 0.9100595238095238
+    },
+    {
+      "date": "2026-08-05",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46916,
+      "eligible_entry_rows": 46916,
+      "coverage": 0.9308730158730159
+    },
+    {
+      "date": "2026-08-06",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47044,
+      "eligible_entry_rows": 47044,
+      "coverage": 0.9334126984126984
+    },
+    {
+      "date": "2026-08-07",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47548,
+      "eligible_entry_rows": 47548,
+      "coverage": 0.9434126984126984
+    },
+    {
+      "date": "2026-08-10",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 45840,
+      "eligible_entry_rows": 45840,
+      "coverage": 0.9095238095238095
+    },
+    {
+      "date": "2026-08-11",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46084,
+      "eligible_entry_rows": 46084,
+      "coverage": 0.9143650793650794
+    },
+    {
+      "date": "2026-08-12",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46237,
+      "eligible_entry_rows": 46237,
+      "coverage": 0.9174007936507936
+    },
+    {
+      "date": "2026-08-13",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46765,
+      "eligible_entry_rows": 46765,
+      "coverage": 0.9278769841269842
+    },
+    {
+      "date": "2026-08-14",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46247,
+      "eligible_entry_rows": 46247,
+      "coverage": 0.9175992063492063
+    },
+    {
+      "date": "2026-08-17",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 46575,
+      "eligible_entry_rows": 46575,
+      "coverage": 0.9241071428571429
+    },
+    {
+      "date": "2026-08-18",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47673,
+      "eligible_entry_rows": 47673,
+      "coverage": 0.9458928571428571
+    },
+    {
+      "date": "2026-08-19",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48270,
+      "eligible_entry_rows": 48270,
+      "coverage": 0.9577380952380953
+    },
+    {
+      "date": "2026-08-20",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48583,
+      "eligible_entry_rows": 48583,
+      "coverage": 0.9639484126984127
+    },
+    {
+      "date": "2026-08-21",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48842,
+      "eligible_entry_rows": 48842,
+      "coverage": 0.9690873015873016
+    },
+    {
+      "date": "2026-08-24",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48368,
+      "eligible_entry_rows": 48368,
+      "coverage": 0.9596825396825397
+    },
+    {
+      "date": "2026-08-25",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48688,
+      "eligible_entry_rows": 48688,
+      "coverage": 0.966031746031746
+    },
+    {
+      "date": "2026-08-26",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48274,
+      "eligible_entry_rows": 48274,
+      "coverage": 0.9578174603174603
+    },
+    {
+      "date": "2026-08-27",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48281,
+      "eligible_entry_rows": 48281,
+      "coverage": 0.9579563492063492
+    },
+    {
+      "date": "2026-08-28",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 48609,
+      "eligible_entry_rows": 48609,
+      "coverage": 0.9644642857142857
+    },
+    {
+      "date": "2026-08-31",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 47846,
+      "eligible_entry_rows": 47846,
+      "coverage": 0.9493253968253968
+    },
+    {
+      "date": "2026-09-01",
+      "expected_reference_seconds": 50400,
+      "entry_rows": 49498,
+      "eligible_entry_rows": 49498,
+      "coverage": 0.9821031746031746
+    }
+  ],
+  "august": [
+    {
+      "key": "member_010/capture_020000",
+      "date": "2026-08-02",
+      "symbol": "GCZ6",
+      "rows": 43192,
+      "entries": 0,
+      "eligible": false,
+      "reasons": [
+        "CONTEXT_ONLY_CONTRACT_SELECTION",
+        "NO_ADMISSIBLE_ENTRY_ROWS"
+      ]
+    },
+    {
+      "key": "member_016/capture_026000",
+      "date": "2026-08-09",
+      "symbol": "GCZ6",
+      "rows": 43193,
+      "entries": 0,
+      "eligible": false,
+      "reasons": [
+        "CONTEXT_ONLY_CONTRACT_SELECTION",
+        "NO_ADMISSIBLE_ENTRY_ROWS",
+        "ADMISSIBLE_REFERENCE_COVERAGE_BELOW_80_PERCENT"
+      ]
+    },
+    {
+      "key": "member_011/capture_021000",
+      "date": "2026-08-03",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 45146,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_012/capture_022000",
+      "date": "2026-08-04",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 45867,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_017/capture_027000",
+      "date": "2026-08-10",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 45840,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_013/capture_023000",
+      "date": "2026-08-05",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 46916,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_022/capture_032000",
+      "date": "2026-08-16",
+      "symbol": "GCZ6",
+      "rows": 43189,
+      "entries": 0,
+      "eligible": false,
+      "reasons": [
+        "CONTEXT_ONLY_CONTRACT_SELECTION",
+        "NO_ADMISSIBLE_ENTRY_ROWS"
+      ]
+    },
+    {
+      "key": "member_014/capture_024000",
+      "date": "2026-08-06",
+      "symbol": "GCZ6",
+      "rows": 86397,
+      "entries": 47044,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_015/capture_025000",
+      "date": "2026-08-07",
+      "symbol": "GCZ6",
+      "rows": 75600,
+      "entries": 47548,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_018/capture_028000",
+      "date": "2026-08-11",
+      "symbol": "GCZ6",
+      "rows": 86396,
+      "entries": 46084,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_019/capture_029000",
+      "date": "2026-08-12",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 46237,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_021/capture_031000",
+      "date": "2026-08-14",
+      "symbol": "GCZ6",
+      "rows": 75600,
+      "entries": 46247,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_020/capture_030000",
+      "date": "2026-08-13",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 46765,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_028/capture_038000",
+      "date": "2026-08-23",
+      "symbol": "GCZ6",
+      "rows": 43192,
+      "entries": 0,
+      "eligible": false,
+      "reasons": [
+        "CONTEXT_ONLY_CONTRACT_SELECTION",
+        "NO_ADMISSIBLE_ENTRY_ROWS"
+      ]
+    },
+    {
+      "key": "member_023/capture_033000",
+      "date": "2026-08-17",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 46575,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_024/capture_034000",
+      "date": "2026-08-18",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 47673,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_025/capture_035000",
+      "date": "2026-08-19",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 48270,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_026/capture_036000",
+      "date": "2026-08-20",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 48583,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_027/capture_037000",
+      "date": "2026-08-21",
+      "symbol": "GCZ6",
+      "rows": 75600,
+      "entries": 48842,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_034/capture_044000",
+      "date": "2026-08-30",
+      "symbol": "GCZ6",
+      "rows": 43192,
+      "entries": 0,
+      "eligible": false,
+      "reasons": [
+        "CONTEXT_ONLY_CONTRACT_SELECTION",
+        "NO_ADMISSIBLE_ENTRY_ROWS"
+      ]
+    },
+    {
+      "key": "member_030/capture_040000",
+      "date": "2026-08-25",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 48688,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_029/capture_039000",
+      "date": "2026-08-24",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 48368,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_031/capture_041000",
+      "date": "2026-08-26",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 48274,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_032/capture_042000",
+      "date": "2026-08-27",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 48281,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_035/capture_045000",
+      "date": "2026-08-31",
+      "symbol": "GCZ6",
+      "rows": 86399,
+      "entries": 47846,
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "key": "member_033/capture_043000",
+      "date": "2026-08-28",
+      "symbol": "GCZ6",
+      "rows": 75600,
+      "entries": 48609,
+      "eligible": true,
+      "reasons": []
+    }
+  ],
+  "source_gaps": [
+    {
+      "start_utc": "2026-07-31 00:00:00+00:00",
+      "end_utc": "2026-08-01 00:00:00+00:00"
+    }
+  ],
+  "staging_bins_remaining": 0,
+  "duration_seconds": 41.961086799856275,
+  "limitations": [
+    "Full masks and hashes scanned; feature numeric validation sampled across 12 captures.",
+    "OHLC checks reuse reconstruction-derived quotes; not independent exchange truth.",
+    "Reference is spot XAUUSD and may differ from GC sessions.",
+    "Training admission is per capture and does not certify full-day coverage, labels or economic performance."
+  ]
+}

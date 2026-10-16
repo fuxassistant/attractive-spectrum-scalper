@@ -1,0 +1,31 @@
+{
+  "verdict": "GENERATION_COMPLETE_OUTPUT_INTEGRITY_PASS_TRAINING_INTEGRATION_PENDING",
+  "findings": [
+    {
+      "priority": "P1",
+      "topic": "Training consumer still hardcodes two May weeks",
+      "source": "spectrum/player/data.py:29",
+      "action": "Implement full catalog loader with contract/epoch/gap boundaries and chronological splits before full-history training"
+    },
+    {
+      "priority": "P2",
+      "topic": "Per-capture admission misses full-session shortfall on 2026-05-25",
+      "coverage": 0.7901492537313433,
+      "action": "Use audit overlay with 230 eligible captures for conservative full-session admission; production catalog unchanged"
+    },
+    {
+      "priority": "P2",
+      "topic": "OHLC support is spot XAUUSD, not authoritative GC calendar",
+      "action": "Keep absence and exchange closure distinct; retain source gap July 31"
+    }
+  ],
+  "visual_review": {
+    "file": "price_feature_samples.png",
+    "dates": [
+      "2025-10-15",
+      "2026-05-27",
+      "2026-08-17"
+    ],
+    "observation": "Price and displacement changes are temporally consistent in these three hour-long views; this does not verify all 182 feature semantics."
+  }
+}
