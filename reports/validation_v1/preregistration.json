@@ -12,7 +12,7 @@
     "schemas.py": "3c966b7244ff02de8d9b78f258a52d25f6d44be68ba78daaa577390c012004b4",
     "schema_run.py": "f8ac82a5ac9ff6ed6be5b3f45e3fc12cd8f96a9635f79538dfa142919f0f055e",
     "queue.py": "cd3abfba4e86fb6a1c62040edce5e518edc7426d6098c2e458ebb6957ed0d45d",
-    "passive.py": "e7392916c22ec3a5a2667c6ec2071f0cc2c00ae4e6efd404c101db5620aeed5e",
+    "passive.py": "8314ec4f37e5e6678bf0352bc75da2d393fb41ebcb0e703c1f0d9e864fa8f934",
     "queue_state.py": "1baf88d636e6a0c251efede7b45e02d7912ab68429e6d90105e1b890d05f72e4",
     "passive_learn.py": "a18602a78e9eac2a3698d99dfa078e4085bff6d9591fd586153310110e708d8a",
     "passive_report.py": "5e2e6ce42626ca102a4b81bbc20c25b935b87d7d49249ffaf1f7db7e55f12a4b",
@@ -100,5 +100,16 @@
     "python -m spectrum.cognition.passive --signatures data/derived/opportunity_signatures_validation_v1 --months 2026-03 2026-04 --output data/derived/passive_execution_validation_v1",
     "python -m spectrum.cognition.queue_state --signatures data/derived/opportunity_signatures_validation_v1 --months 2026-03 2026-04 --output data/derived/queue_state_validation_v1",
     "python -m spectrum.cognition.validation"
+  ],
+  "amendments": [
+    {
+      "utc": "2026-10-19T18:53:49.780225+00:00",
+      "file": "passive.py",
+      "old_sha256": "e7392916c22ec3a5a2667c6ec2071f0cc2c00ae4e6efd404c101db5620aeed5e",
+      "new_sha256": "8314ec4f37e5e6678bf0352bc75da2d393fb41ebcb0e703c1f0d9e864fa8f934",
+      "change": "day_tapes: captures_by_date restricted to the months of the requested dates instead of the train-months default",
+      "reason": "Routing bug: validation dates found no captures, so passive execution and queue state produced zero days. No effect on train outputs, decision rules, execution semantics or criteria.",
+      "state_at_amendment": "Block-V signatures and representation were generated (only completion counts printed); no V outcome, fill or queue state has been inspected; passive and queue_state produced nothing."
+    }
   ]
 }

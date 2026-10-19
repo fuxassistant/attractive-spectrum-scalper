@@ -235,7 +235,7 @@ def day_tapes(member_key, dates, market=MARKET):
     one date are concatenated in ordinal order; each starts with its own reset."""
     config = json.loads((Path(market) / 'run_config.json').read_text(encoding='utf8'))
     item = next(i for i in config['members'] if i['key'] == member_key)
-    by = captures_by_date(market); wanted = {d: by[d] for d in dates}
+    by = captures_by_date(market, months=tuple(sorted({d[:7] for d in dates}))); wanted = {d: by[d] for d in dates}
     pending = {d: {c['key'] for c in cs} for d, cs in wanted.items()}
     collected = defaultdict(dict)
     key_date = {c['key']: d for d, cs in wanted.items() for c in cs}

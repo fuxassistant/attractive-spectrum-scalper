@@ -43,3 +43,7 @@
     python -m spectrum.cognition.passive --signatures data/derived/opportunity_signatures_validation_v1 --months 2026-03 2026-04 --output data/derived/passive_execution_validation_v1
     python -m spectrum.cognition.queue_state --signatures data/derived/opportunity_signatures_validation_v1 --months 2026-03 2026-04 --output data/derived/queue_state_validation_v1
     python -m spectrum.cognition.validation
+
+## Поправка 1
+
+`passive.py`: `e7392916c22ec3a5a2667c6ec2071f0cc2c00ae4e6efd404c101db5620aeed5e` → `8314ec4f37e5e6678bf0352bc75da2d393fb41ebcb0e703c1f0d9e864fa8f934`. В `day_tapes` поиск captures ограничен месяцами запрошенных дат вместо месяцев train по умолчанию. Это ошибка маршрутизации: для дат валидации captures не находились, и пассивное исполнение и состояние очереди дали 0 дней. Правила решений, исполнение, критерии и train-результаты не меняются. На момент поправки сгенерированы сигнатуры и представление блока V (выведены только счётчики завершения); ни один исход, исполнение или состояние очереди V не просматривались.
