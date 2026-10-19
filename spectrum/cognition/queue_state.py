@@ -120,5 +120,6 @@ def prepare(sig_dir=SIGNATURES, data=DEFAULT_DATA, output=DEFAULT_OUTPUT, worker
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser(); p.add_argument('--output', default=DEFAULT_OUTPUT)
-    p.add_argument('--workers', type=int, default=5)
-    a = p.parse_args(); prepare(output=a.output, workers=a.workers)
+    p.add_argument('--signatures', default=SIGNATURES)
+    p.add_argument('--workers', type=int, default=5); p.add_argument('--months', nargs='+', default=list(TRAIN_MONTHS))
+    a = p.parse_args(); prepare(sig_dir=a.signatures, output=a.output, workers=a.workers, months=a.months)

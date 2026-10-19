@@ -100,7 +100,7 @@ def block_metrics(trades, frame, block):
     dates = sorted(frame.date[frame.block == block].unique())
     t = trades[trades.block == block] if len(trades) else trades
     done = t[t.net.notna()] if len(t) else t
-    daily = pd.DataFrame(dict(date=dates)).merge(
+    daily = pd.DataFrame(dict(date=pd.Series(dates, dtype=object))).merge(
         done.groupby('date', as_index=False).net.sum() if len(done) else pd.DataFrame(columns=['date', 'net']),
         on='date', how='left')
     daily['net'] = pd.to_numeric(daily.net, errors='coerce').fillna(0.)

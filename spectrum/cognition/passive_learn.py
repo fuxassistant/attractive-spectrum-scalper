@@ -55,14 +55,16 @@ def side_features(x):
     return pd.DataFrame(q, index=x.index), pd.DataFrame(r, index=x.index)
 
 
-def dataset(variant='PQ_30'):
-    f = load_passive()
+def dataset(variant='PQ_30', passive=None, queue=QUEUE_STATE, representation=REPRESENTATION,
+            signatures='data/derived/opportunity_signatures_v1'):
+    f = load_passive() if passive is None else load_passive(passive)
     f = f[(f.variant == variant) & f.status.isin(['COMPLETE', 'NOT_FILLED'])]
-    q = pd.concat([pd.read_parquet(p) for p in glob.glob(str(Path(QUEUE_STATE) / '2*.parquet'))])
-    rep = pd.concat([pd.read_parquet(p) for p in glob.glob(str(Path(REPRESENTATION) / '*.parquet'))])
+    q = pd.concat([pd.read_parquet(p) for p in glob.glob(str(Path(queue) / '2*.parquet'))])
+    rep = pd.concat([pd.read_parquet(p) for p in glob.glob(str(Path(representation) / '*.parquet'))])
     sig = pd.concat([pd.read_parquet(p, columns=['origin_id', 'sigma600_ticks_per_sqrt_s', 'sigma3600_ticks_per_sqrt_s',
-                                                 'minutes_since_london'])
-                     for p in glob.glob('data/derived/opportunity_signatures_v1/*/x.parquet')])
+                                                 'minutes_since_london', 'block'])
+                     for p in glob.glob(str(Path(signatures) / '*' / 'x.parquet'))])
+    f = f.drop(columns='block')  # the signature block is authoritative (A, B or V)
     x = f.merge(q, on='origin_id').merge(rep, on='origin_id').merge(sig, on='origin_id')
     x = x[x.state_known == 1].reset_index(drop=True)
     qf, rf = side_features(x)

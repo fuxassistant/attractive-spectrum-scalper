@@ -32,6 +32,10 @@ DEFAULT_OUTPUT = 'data/derived/opportunity_signatures_v1'
 DEFAULT_MARKET = 'data/derived/full_mbo_v1'
 TRAIN_MONTHS = ('2025-10', '2025-11', '2025-12', '2026-01', '2026-02')
 BLOCKS = dict(A=('2025-10', '2025-11', '2025-12'), B=('2026-01', '2026-02'))
+# Validation is a separate, later block with its own output directory; train semantics are unchanged.
+VALIDATION_MONTHS = ('2026-03', '2026-04')
+VALIDATION_BLOCKS = dict(V=VALIDATION_MONTHS)
+VALIDATION_OUTPUT = 'data/derived/opportunity_signatures_validation_v1'
 MENU_PLANS = tuple(PLANS) + ((80, 40, 1800),)
 CLOCK_SECONDS = 300
 EVENT_LOOKBACK_SECONDS = 300
@@ -40,7 +44,7 @@ STATUSES = ('COMPLETE', 'CENSORED', 'NOT_FILLED', 'NOT_ELIGIBLE', 'EXCLUDED_SESS
 
 
 def block_for(date):
-    for name, months in BLOCKS.items():
+    for name, months in {**BLOCKS, **VALIDATION_BLOCKS}.items():
         if date[:7] in months:
             return name
     raise ValueError('Date outside declared train blocks: ' + date)
@@ -196,10 +200,14 @@ def day_paths(data, months):
 def prepare(data=DEFAULT_DATA, events_dir=DEFAULT_EVENTS, output=DEFAULT_OUTPUT, months=TRAIN_MONTHS,
             workers=4, limit=None, market=DEFAULT_MARKET):
     output = Path(output); output.mkdir(parents=True, exist_ok=True)
-    if any(m not in TRAIN_MONTHS for m in months):
-        raise ValueError('This protocol reads train months only; later blocks stay untouched')
+    validation = all(m in VALIDATION_MONTHS for m in months)
+    if not validation and any(m not in TRAIN_MONTHS for m in months):
+        raise ValueError('Months must be all train or all validation; evaluation blocks stay untouched')
+    if validation and Path(output).resolve() == Path(DEFAULT_OUTPUT).resolve():
+        raise ValueError('Validation needs its own output directory')
     code = {p.name: sha(p) for p in (Path(__file__), Path(op.__file__), Path(__file__).with_name('execution.py'))}
-    protocol = dict(version=VERSION, months=list(months), blocks={k: list(v) for k, v in BLOCKS.items()},
+    protocol = dict(version=VERSION, months=list(months),
+        blocks={k: list(v) for k, v in (VALIDATION_BLOCKS if validation else BLOCKS).items()},
         config=asdict(ExecutionConfig(plans=MENU_PLANS)), plans=[list(p) for p in MENU_PLANS],
         horizons=list(op.HORIZONS), sigma_windows=list(op.SIGMA_WINDOWS), baseline_window=op.BASELINE_WINDOW,
         clock_seconds=CLOCK_SECONDS, events_sha256=sha(Path(events_dir) / 'causal_events.parquet'),
@@ -212,7 +220,9 @@ def prepare(data=DEFAULT_DATA, events_dir=DEFAULT_EVENTS, output=DEFAULT_OUTPUT,
             event_bank='Known for a date iff every capture selected for it was in the event job; otherwise no event origins and masked event context.',
             exclusions='Plan duration + 5s must end before the liquidation deadline, else EXCLUDED_SESSION_TIME (explicit, not dropped).',
             opportunity='Y only: one-second as-of mid; mature iff every horizon step supported in one segment. Baseline sigma over trailing 600s.',
-            economics='Independent fresh-account experiments; sums are not an equity curve. Train months only; validation/evaluation untouched.'))
+            economics='Independent fresh-account experiments; sums are not an equity curve. ' +
+                      ('Validation months under a frozen, preregistered procedure.' if validation
+                       else 'Train months only; validation/evaluation untouched.')))
     if (output / 'protocol.json').exists():
         old = json.loads((output / 'protocol.json').read_text(encoding='utf8'))
         if json.dumps(old, sort_keys=True) != json.dumps(protocol, sort_keys=True):
