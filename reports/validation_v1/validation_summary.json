@@ -1,0 +1,1354 @@
+{
+  "version": "FROZEN_VALIDATION_V1",
+  "preregistration_sha256": "b790f153678ddf75e90e8d3e330fc7cead1aa8931cbdabecef071093726cc4f0",
+  "days_V": 43,
+  "origins_V": 10273,
+  "schemas": {
+    "prequential": {
+      "A": {
+        "days": 66,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 66
+        },
+        "active_days": 0
+      },
+      "B": {
+        "days": 42,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 42
+        },
+        "active_days": 0
+      },
+      "V": {
+        "days": 43,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 43
+        },
+        "active_days": 0
+      },
+      "events_train": 3,
+      "events_V": [
+        {
+          "kind": "spawn",
+          "ns": "1772525100000000000",
+          "day": 110,
+          "schema": 26,
+          "parent": 0,
+          "describe": "#26 [range=low] -> with_trend/P2",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.1373911495576566,
+          "t": -4.035012322199492,
+          "n": 4948,
+          "days": 107,
+          "parent_mean": -0.5199740430539965
+        },
+        {
+          "kind": "active",
+          "ns": "1773046800000000000",
+          "schema": 25,
+          "describe": "#25 [range=low] -> short/P2",
+          "confirm_t": -3.739982574171861,
+          "n": 808,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1773129625209538309",
+          "day": 115,
+          "schema": 27,
+          "parent": 0,
+          "describe": "#27 [trend=down] -> with_trend/P2",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.1039540541115519,
+          "t": -4.283685355913024,
+          "n": 7600,
+          "days": 112,
+          "parent_mean": -0.5440063172125001
+        },
+        {
+          "kind": "spawn",
+          "ns": "1773129625209538309",
+          "day": 115,
+          "schema": 28,
+          "parent": 1,
+          "describe": "#28 [phase=overlap] -> against_trend/P2",
+          "cell": [
+            "phase",
+            "overlap"
+          ],
+          "mean_residual": -0.19489023647675272,
+          "t": -4.010785655986329,
+          "n": 2985,
+          "days": 112,
+          "parent_mean": -0.5074840905979354
+        },
+        {
+          "kind": "spawn",
+          "ns": "1773129625209538309",
+          "day": 115,
+          "schema": 29,
+          "parent": 5,
+          "describe": "#29 [trend=down] -> range_break/P2",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.13919725521358062,
+          "t": -4.066288350453785,
+          "n": 5194,
+          "days": 112,
+          "parent_mean": -0.5545083771692383
+        },
+        {
+          "kind": "retired",
+          "ns": "1774263935011843617",
+          "schema": 26,
+          "describe": "#26 [range=low] -> with_trend/P2",
+          "confirm_t": -1.9055873964899035,
+          "n": 806,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1774339205001942091",
+          "day": 125,
+          "schema": 30,
+          "parent": 7,
+          "describe": "#30 [vol=expanding] -> short/P2",
+          "cell": [
+            "vol",
+            "expanding"
+          ],
+          "mean_residual": -0.17204533462733304,
+          "t": -4.114384124386429,
+          "n": 2817,
+          "days": 122,
+          "parent_mean": -0.501681593385726
+        },
+        {
+          "kind": "retired",
+          "ns": "1774858800000000000",
+          "schema": 27,
+          "describe": "#27 [trend=down] -> with_trend/P2",
+          "confirm_t": -1.0112002924037737,
+          "n": 1096,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1774858800000000000",
+          "schema": 29,
+          "describe": "#29 [trend=down] -> range_break/P2",
+          "confirm_t": -1.695261395321425,
+          "n": 801,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1774873800000000000",
+          "schema": 28,
+          "describe": "#28 [phase=overlap] -> against_trend/P2",
+          "confirm_t": 0.3204172792476328,
+          "n": 373,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1774940435000005811",
+          "day": 130,
+          "schema": 31,
+          "parent": 1,
+          "describe": "#31 [vol=normal] -> against_trend/P2",
+          "cell": [
+            "vol",
+            "normal"
+          ],
+          "mean_residual": -0.10036657670853709,
+          "t": -4.022600541565145,
+          "n": 12396,
+          "days": 127,
+          "parent_mean": -0.5330918438319927
+        },
+        {
+          "kind": "spawn",
+          "ns": "1774940435000005811",
+          "day": 130,
+          "schema": 32,
+          "parent": 5,
+          "describe": "#32 [range=low] -> range_break/P2",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.12286194743127368,
+          "t": -4.228135237354436,
+          "n": 7348,
+          "days": 127,
+          "parent_mean": -0.5833156535693773
+        },
+        {
+          "kind": "spawn",
+          "ns": "1775631900000000000",
+          "day": 135,
+          "schema": 33,
+          "parent": 1,
+          "describe": "#33 [l1=balanced] -> against_trend/P2",
+          "cell": [
+            "l1",
+            "balanced"
+          ],
+          "mean_residual": -0.09138502098719871,
+          "t": -4.045962474925293,
+          "n": 14278,
+          "days": 132,
+          "parent_mean": -0.5450377944795424
+        },
+        {
+          "kind": "spawn",
+          "ns": "1775631900000000000",
+          "day": 135,
+          "schema": 34,
+          "parent": 6,
+          "describe": "#34 [vol=normal] -> long/P2",
+          "cell": [
+            "vol",
+            "normal"
+          ],
+          "mean_residual": -0.10021816430175993,
+          "t": -4.200398753820923,
+          "n": 21652,
+          "days": 132,
+          "parent_mean": -0.5671764747155162
+        },
+        {
+          "kind": "active",
+          "ns": "1776154310013120155",
+          "schema": 30,
+          "describe": "#30 [vol=expanding] -> short/P2",
+          "confirm_t": -2.894547981698031,
+          "n": 363,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "retired",
+          "ns": "1776760200000000000",
+          "schema": 31,
+          "describe": "#31 [vol=normal] -> against_trend/P2",
+          "confirm_t": 0.09027398576852401,
+          "n": 1322,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1776760200000000000",
+          "schema": 32,
+          "describe": "#32 [range=low] -> range_break/P2",
+          "confirm_t": 0.9334670647247993,
+          "n": 801,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1777364700000000000",
+          "schema": 33,
+          "describe": "#33 [l1=balanced] -> against_trend/P2",
+          "confirm_t": 2.620973298035869,
+          "n": 1644,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1777364700000000000",
+          "schema": 34,
+          "describe": "#34 [vol=normal] -> long/P2",
+          "confirm_t": 0.7993137781774217,
+          "n": 2308,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1777446190253734359",
+          "day": 150,
+          "schema": 35,
+          "parent": 18,
+          "describe": "#35 [trend=up] -> long/P3",
+          "cell": [
+            "trend",
+            "up"
+          ],
+          "mean_residual": -0.21322414707667658,
+          "t": -4.077573347104712,
+          "n": 10586,
+          "days": 147,
+          "parent_mean": -0.664291866758803
+        }
+      ],
+      "promoted_V": 2,
+      "statuses": {
+        "ACTIVE": 27,
+        "RETIRED": 8,
+        "QUARANTINE": 1
+      },
+      "monthly": {}
+    },
+    "frozen": {
+      "A": {
+        "days": 66,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 66
+        },
+        "active_days": 0
+      },
+      "B": {
+        "days": 42,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 42
+        },
+        "active_days": 0
+      },
+      "V": {
+        "days": 43,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 43
+        },
+        "active_days": 0
+      },
+      "events_train": 3,
+      "events_V": [],
+      "promoted_V": 0,
+      "statuses": {
+        "ACTIVE": 25,
+        "QUARANTINE": 1
+      },
+      "monthly": {}
+    },
+    "assimilate_only": {
+      "A": {
+        "days": 66,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 66
+        },
+        "active_days": 0
+      },
+      "B": {
+        "days": 42,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 42
+        },
+        "active_days": 0
+      },
+      "V": {
+        "days": 43,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 43
+        },
+        "active_days": 0
+      },
+      "events_train": 0,
+      "events_V": [],
+      "promoted_V": 0,
+      "statuses": {
+        "ACTIVE": 24
+      },
+      "monthly": {}
+    },
+    "shuffled_context": {
+      "A": {
+        "days": 66,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 66
+        },
+        "active_days": 0
+      },
+      "B": {
+        "days": 42,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 42
+        },
+        "active_days": 0
+      },
+      "V": {
+        "days": 43,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 43
+        },
+        "active_days": 0
+      },
+      "events_train": 4,
+      "events_V": [
+        {
+          "kind": "spawn",
+          "ns": "1774339205001942091",
+          "day": 125,
+          "schema": 26,
+          "parent": 2,
+          "describe": "#26 [book=balanced] -> with_flow/P2",
+          "cell": [
+            "book",
+            "balanced"
+          ],
+          "mean_residual": -0.08216369563348903,
+          "t": -4.035837972742061,
+          "n": 5523,
+          "days": 121,
+          "parent_mean": -0.4970625140315654
+        },
+        {
+          "kind": "spawn",
+          "ns": "1775631900000000000",
+          "day": 135,
+          "schema": 27,
+          "parent": 1,
+          "describe": "#27 [range=low] -> against_trend/P2",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.13526347700213212,
+          "t": -4.093852678196368,
+          "n": 4629,
+          "days": 132,
+          "parent_mean": -0.550054946078646
+        },
+        {
+          "kind": "retired",
+          "ns": "1776243600000000000",
+          "schema": 26,
+          "describe": "#26 [book=balanced] -> with_flow/P2",
+          "confirm_t": 0.12915750660295328,
+          "n": 489,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "active",
+          "ns": "1777364700000000000",
+          "schema": 27,
+          "describe": "#27 [range=low] -> against_trend/P2",
+          "confirm_t": -2.3687264627633158,
+          "n": 552,
+          "days": 15,
+          "reason": "confirmed"
+        }
+      ],
+      "promoted_V": 1,
+      "statuses": {
+        "ACTIVE": 25,
+        "RETIRED": 3
+      },
+      "monthly": {}
+    },
+    "taker_prequential": {
+      "A": {
+        "days": 66,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 66
+        },
+        "active_days": 0
+      },
+      "B": {
+        "days": 42,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 42
+        },
+        "active_days": 0
+      },
+      "V": {
+        "days": 43,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 43
+        },
+        "active_days": 0
+      },
+      "events_train": 10,
+      "events_V": [
+        {
+          "kind": "active",
+          "ns": "1772442300000000000",
+          "schema": 25,
+          "describe": "#25 [trend=down] -> short/P2",
+          "confirm_t": -4.3194247191860375,
+          "n": 904,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1772525100000000000",
+          "day": 110,
+          "schema": 33,
+          "parent": 0,
+          "describe": "#33 [trend=down] -> with_trend/P2",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.13422279114894076,
+          "t": -4.295655796011856,
+          "n": 7207,
+          "days": 107,
+          "parent_mean": -0.7905382973393944
+        },
+        {
+          "kind": "spawn",
+          "ns": "1772525100000000000",
+          "day": 110,
+          "schema": 34,
+          "parent": 7,
+          "describe": "#34 [vol=expanding] -> short/P2",
+          "cell": [
+            "vol",
+            "expanding"
+          ],
+          "mean_residual": -0.22605809298227258,
+          "t": -4.424410587715564,
+          "n": 2494,
+          "days": 107,
+          "parent_mean": -0.7793351790366894
+        },
+        {
+          "kind": "retired",
+          "ns": "1773046800000000000",
+          "schema": 26,
+          "describe": "#26 [vol=normal] -> against_trend/P2",
+          "confirm_t": -1.8522729504839812,
+          "n": 1309,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "active",
+          "ns": "1773046800000000000",
+          "schema": 27,
+          "describe": "#27 [range=low] -> short/P2",
+          "confirm_t": -2.780145351737789,
+          "n": 808,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "retired",
+          "ns": "1773046800000000000",
+          "schema": 28,
+          "describe": "#28 [trend=up] -> long/P3",
+          "confirm_t": -1.566231729878038,
+          "n": 1038,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1773129625209538309",
+          "day": 115,
+          "schema": 35,
+          "parent": 1,
+          "describe": "#35 [tape=neutral] -> against_trend/P2",
+          "cell": [
+            "tape",
+            "neutral"
+          ],
+          "mean_residual": -0.13035813894020437,
+          "t": -4.014500620111279,
+          "n": 6707,
+          "days": 112,
+          "parent_mean": -0.7777019965151739
+        },
+        {
+          "kind": "spawn",
+          "ns": "1773129625209538309",
+          "day": 115,
+          "schema": 36,
+          "parent": 4,
+          "describe": "#36 [tape=neutral] -> range_revert/P2",
+          "cell": [
+            "tape",
+            "neutral"
+          ],
+          "mean_residual": -0.162668590540669,
+          "t": -4.029590718315221,
+          "n": 6178,
+          "days": 112,
+          "parent_mean": -0.8014822117499945
+        },
+        {
+          "kind": "spawn",
+          "ns": "1773129625209538309",
+          "day": 115,
+          "schema": 37,
+          "parent": 5,
+          "describe": "#37 [range=low] -> range_break/P2",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.15061367320856517,
+          "t": -4.163381949547322,
+          "n": 6312,
+          "days": 112,
+          "parent_mean": -0.8067890431148499
+        },
+        {
+          "kind": "active",
+          "ns": "1773648600000000000",
+          "schema": 32,
+          "describe": "#32 [vol=normal] -> long/P2",
+          "confirm_t": -2.1143359233220216,
+          "n": 2215,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "retired",
+          "ns": "1773656100000000000",
+          "schema": 29,
+          "describe": "#29 [l1=balanced] -> against_trend/P2",
+          "confirm_t": -0.8080396540380248,
+          "n": 1659,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "active",
+          "ns": "1773671100000000000",
+          "schema": 30,
+          "describe": "#30 [phase=overlap] -> against_trend/P2",
+          "confirm_t": -3.6205517410189803,
+          "n": 386,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "retired",
+          "ns": "1773671100000000000",
+          "schema": 31,
+          "describe": "#31 [phase=overlap] -> range_revert/P2",
+          "confirm_t": -1.619109351688175,
+          "n": 347,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1773734700000000000",
+          "day": 120,
+          "schema": 38,
+          "parent": 6,
+          "describe": "#38 [event=active] -> long/P2",
+          "cell": [
+            "event",
+            "active"
+          ],
+          "mean_residual": -0.12395191845970524,
+          "t": -4.073545085044255,
+          "n": 14841,
+          "days": 112,
+          "parent_mean": -0.8066266176698529
+        },
+        {
+          "kind": "spawn",
+          "ns": "1773734700000000000",
+          "day": 120,
+          "schema": 39,
+          "parent": 9,
+          "describe": "#39 [thickness=normal] -> against_l1/P2",
+          "cell": [
+            "thickness",
+            "normal"
+          ],
+          "mean_residual": -0.1379757072226204,
+          "t": -4.160705523550963,
+          "n": 4960,
+          "days": 117,
+          "parent_mean": -0.8089941718230044
+        },
+        {
+          "kind": "retired",
+          "ns": "1774258800000000000",
+          "schema": 33,
+          "describe": "#33 [trend=down] -> with_trend/P2",
+          "confirm_t": -0.6836227281072922,
+          "n": 1112,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1774263935011843617",
+          "schema": 34,
+          "describe": "#34 [vol=expanding] -> short/P2",
+          "confirm_t": -1.4710920316014873,
+          "n": 306,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1774339205001942091",
+          "day": 125,
+          "schema": 40,
+          "parent": 4,
+          "describe": "#40 [vol=normal] -> range_revert/P2",
+          "cell": [
+            "vol",
+            "normal"
+          ],
+          "mean_residual": -0.12983160361429097,
+          "t": -4.242235803723257,
+          "n": 10974,
+          "days": 122,
+          "parent_mean": -0.8270397682998787
+        },
+        {
+          "kind": "spawn",
+          "ns": "1774339205001942091",
+          "day": 125,
+          "schema": 41,
+          "parent": 4,
+          "describe": "#41 [l1=balanced] -> range_revert/P2",
+          "cell": [
+            "l1",
+            "balanced"
+          ],
+          "mean_residual": -0.13446127442352995,
+          "t": -4.017776817895859,
+          "n": 11790,
+          "days": 122,
+          "parent_mean": -0.8270397682998787
+        },
+        {
+          "kind": "active",
+          "ns": "1774858800000000000",
+          "schema": 35,
+          "describe": "#35 [tape=neutral] -> against_trend/P2",
+          "confirm_t": -3.1367386600151965,
+          "n": 869,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1774858800000000000",
+          "schema": 36,
+          "describe": "#36 [tape=neutral] -> range_revert/P2",
+          "confirm_t": -2.62030272999244,
+          "n": 766,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "retired",
+          "ns": "1774858800000000000",
+          "schema": 37,
+          "describe": "#37 [range=low] -> range_break/P2",
+          "confirm_t": -1.4682986219503273,
+          "n": 932,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1774940435000005811",
+          "day": 130,
+          "schema": 42,
+          "parent": 6,
+          "describe": "#42 [book=balanced] -> long/P2",
+          "cell": [
+            "book",
+            "balanced"
+          ],
+          "mean_residual": -0.07498004289185135,
+          "t": -4.034458365184282,
+          "n": 15451,
+          "days": 127,
+          "parent_mean": -0.8411721202842691
+        },
+        {
+          "kind": "spawn",
+          "ns": "1774940435000005811",
+          "day": 130,
+          "schema": 43,
+          "parent": 6,
+          "describe": "#43 [range=mid] -> long/P2",
+          "cell": [
+            "range",
+            "mid"
+          ],
+          "mean_residual": -0.12408260674052642,
+          "t": -4.348502861584057,
+          "n": 12939,
+          "days": 127,
+          "parent_mean": -0.8411721202842691
+        },
+        {
+          "kind": "spawn",
+          "ns": "1774940435000005811",
+          "day": 130,
+          "schema": 44,
+          "parent": 10,
+          "describe": "#44 [range=low] -> with_tape/P2",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.1697616990279385,
+          "t": -4.011830594666368,
+          "n": 4279,
+          "days": 127,
+          "parent_mean": -0.8529263521400011
+        },
+        {
+          "kind": "retired",
+          "ns": "1775548925013356174",
+          "schema": 38,
+          "describe": "#38 [event=active] -> long/P2",
+          "confirm_t": -1.9462532233422987,
+          "n": 1764,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1775548925013356174",
+          "schema": 39,
+          "describe": "#39 [thickness=normal] -> against_l1/P2",
+          "confirm_t": -0.7231358143562232,
+          "n": 339,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1776154310013120155",
+          "schema": 40,
+          "describe": "#40 [vol=normal] -> range_revert/P2",
+          "confirm_t": 1.5123995179557843,
+          "n": 1237,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1776154310013120155",
+          "schema": 41,
+          "describe": "#41 [l1=balanced] -> range_revert/P2",
+          "confirm_t": 0.4482008741634753,
+          "n": 1488,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1776236485006504109",
+          "day": 140,
+          "schema": 45,
+          "parent": 0,
+          "describe": "#45 [range=low] -> with_trend/P2",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.1415515559981778,
+          "t": -4.2914649813176124,
+          "n": 6469,
+          "days": 137,
+          "parent_mean": -0.854909563693642
+        },
+        {
+          "kind": "spawn",
+          "ns": "1776236485006504109",
+          "day": 140,
+          "schema": 46,
+          "parent": 5,
+          "describe": "#46 [trend=down] -> range_break/P2",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.13833911124327372,
+          "t": -4.187213463340069,
+          "n": 6471,
+          "days": 137,
+          "parent_mean": -0.8474290073982694
+        },
+        {
+          "kind": "spawn",
+          "ns": "1776236485006504109",
+          "day": 140,
+          "schema": 47,
+          "parent": 10,
+          "describe": "#47 [l1=balanced] -> with_tape/P2",
+          "cell": [
+            "l1",
+            "balanced"
+          ],
+          "mean_residual": -0.11765001766662042,
+          "t": -4.151108286243493,
+          "n": 13783,
+          "days": 137,
+          "parent_mean": -0.8767158650647412
+        },
+        {
+          "kind": "spawn",
+          "ns": "1776236485006504109",
+          "day": 140,
+          "schema": 48,
+          "parent": 18,
+          "describe": "#48 [range=high] -> long/P3",
+          "cell": [
+            "range",
+            "high"
+          ],
+          "mean_residual": -0.2612889009418619,
+          "t": -4.025272125271231,
+          "n": 9734,
+          "days": 137,
+          "parent_mean": -0.9777162090359084
+        },
+        {
+          "kind": "retired",
+          "ns": "1776760200000000000",
+          "schema": 42,
+          "describe": "#42 [book=balanced] -> long/P2",
+          "confirm_t": 1.0404585564314142,
+          "n": 1411,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1776760200000000000",
+          "schema": 43,
+          "describe": "#43 [range=mid] -> long/P2",
+          "confirm_t": 1.0950784183899829,
+          "n": 1588,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1776760200000000000",
+          "schema": 44,
+          "describe": "#44 [range=low] -> with_tape/P2",
+          "confirm_t": 0.7387100632503776,
+          "n": 521,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1777446190253734359",
+          "day": 150,
+          "schema": 49,
+          "parent": 8,
+          "describe": "#49 [flow=neutral] -> with_l1/P2",
+          "cell": [
+            "flow",
+            "neutral"
+          ],
+          "mean_residual": -0.13412957701996392,
+          "t": -4.108216238313631,
+          "n": 5144,
+          "days": 147,
+          "parent_mean": -0.8071783130200183
+        }
+      ],
+      "promoted_V": 6,
+      "statuses": {
+        "ACTIVE": 30,
+        "RETIRED": 15,
+        "QUARANTINE": 5
+      },
+      "monthly": {}
+    }
+  },
+  "reproducibility": {
+    "prequential": {
+      "A_equal": true,
+      "B_equal": true,
+      "train_events": 3,
+      "reference_events": 3
+    },
+    "assimilate_only": {
+      "A_equal": true,
+      "B_equal": true,
+      "train_events": 0,
+      "reference_events": 0
+    },
+    "shuffled_context": {
+      "A_equal": true,
+      "B_equal": true,
+      "train_events": 4,
+      "reference_events": 16
+    }
+  },
+  "knowledge": {
+    "n_child": 3188,
+    "n_parent": 10147,
+    "child_mean": -0.6101631116687578,
+    "parent_mean": -0.5379028284221937,
+    "residual": {
+      "mean": -0.09842252087487845,
+      "lower": -0.17136889101344335,
+      "upper": -0.03281591100483726,
+      "days": 43
+    }
+  },
+  "execution": {
+    "per_plan": {
+      "(12, 8, 120)": {
+        "tt": -0.8318483135114055,
+        "pq": -0.5801764476506142,
+        "improvement": {
+          "mean": 0.2516636140101033,
+          "lower": 0.2337398279522832,
+          "upper": 0.2689858427632262,
+          "days": 43
+        }
+      },
+      "(24, 12, 300)": {
+        "tt": -0.8521044637169876,
+        "pq": -0.5892057425645549,
+        "improvement": {
+          "mean": 0.2606245490632999,
+          "lower": 0.23990268006028267,
+          "upper": 0.28196914016688107,
+          "days": 43
+        }
+      },
+      "(40, 20, 600)": {
+        "tt": -0.8667767210368107,
+        "pq": -0.5757798255556102,
+        "improvement": {
+          "mean": 0.2894514216635083,
+          "lower": 0.2594912639889855,
+          "upper": 0.32090929356812986,
+          "days": 43
+        }
+      },
+      "(80, 40, 1800)": {
+        "tt": -0.9359040534385911,
+        "pq": -0.6166793178482869,
+        "improvement": {
+          "mean": 0.31157987514123686,
+          "lower": 0.24034320108424967,
+          "upper": 0.38547500576691135,
+          "days": 43
+        }
+      }
+    },
+    "taker_where_unfilled": 0.28863636363636364,
+    "taker_where_filled": -1.1952440412214704,
+    "selection_gap": {
+      "mean": 1.5475245892263483,
+      "lower": 1.4041793509762102,
+      "upper": 1.710763456212633,
+      "days": 43
+    }
+  },
+  "resting": {
+    "(12, 8, 120)": {
+      "r2_vs_train_mean": 0.03972674270606347,
+      "top10": -0.2885650224215247,
+      "bottom50": -0.6124512713097108,
+      "top_fill": 0.5762331838565022,
+      "gap": {
+        "mean": 0.33871292555735544,
+        "lower": 0.23115998515733663,
+        "upper": 0.4656699431698276,
+        "days": 29
+      }
+    },
+    "(24, 12, 300)": {
+      "r2_vs_train_mean": 0.01323248525692533,
+      "top10": -0.4002721088435375,
+      "bottom50": -0.6125054986489034,
+      "top_fill": 0.6299319727891156,
+      "gap": {
+        "mean": 0.11753872070946621,
+        "lower": -0.09359990380981005,
+        "upper": 0.3477249784812294,
+        "days": 34
+      }
+    },
+    "(40, 20, 600)": {
+      "r2_vs_train_mean": 0.0029907562380450115,
+      "top10": -0.319926873857404,
+      "bottom50": -0.6114166721755799,
+      "top_fill": 0.6179159049360147,
+      "gap": {
+        "mean": 0.24272400900573002,
+        "lower": -0.03308878027420602,
+        "upper": 0.5303421801505362,
+        "days": 27
+      }
+    },
+    "(80, 40, 1800)": {
+      "r2_vs_train_mean": -1.940708520775658e-06,
+      "top10": -0.4405904059040589,
+      "bottom50": -0.648064970580923,
+      "top_fill": 0.7592250922509225,
+      "gap": {
+        "mean": 0.09231829460146851,
+        "lower": -0.39278871658952896,
+        "upper": 0.5627826979885514,
+        "days": 41
+      }
+    }
+  },
+  "opportunity": {
+    "30": {
+      "2026-03": {
+        "n": 5080,
+        "skill_vs_scaled": 0.026004854054830995,
+        "slope": 1.150100169565395,
+        "cost_over_move": 0.46311833100077826
+      },
+      "2026-04": {
+        "n": 5187,
+        "skill_vs_scaled": 0.037734833134884904,
+        "slope": 0.8639468543456469,
+        "cost_over_move": 0.642454317826718
+      }
+    },
+    "120": {
+      "2026-03": {
+        "n": 5070,
+        "skill_vs_scaled": 0.022526603025565528,
+        "slope": 1.2324754765115928,
+        "cost_over_move": 0.23851597385880804
+      },
+      "2026-04": {
+        "n": 5183,
+        "skill_vs_scaled": 0.030751555884220405,
+        "slope": 0.8776847025282227,
+        "cost_over_move": 0.35277520555367453
+      }
+    },
+    "600": {
+      "2026-03": {
+        "n": 4991,
+        "skill_vs_scaled": 0.01821954498335221,
+        "slope": 0.9235654840831399,
+        "cost_over_move": 0.1190388843441136
+      },
+      "2026-04": {
+        "n": 5127,
+        "skill_vs_scaled": 0.03016070522784331,
+        "slope": 0.7588867260395235,
+        "cost_over_move": 0.17186187325431296
+      }
+    },
+    "1800": {
+      "2026-03": {
+        "n": 4821,
+        "skill_vs_scaled": 0.03569221724295968,
+        "slope": 0.9487575782436799,
+        "cost_over_move": 0.06946424161922038
+      },
+      "2026-04": {
+        "n": 4987,
+        "skill_vs_scaled": 0.034837980263728974,
+        "slope": 0.8203992968185834,
+        "cost_over_move": 0.10062470614661119
+      }
+    }
+  },
+  "verdicts": {
+    "H1_prequential": "NO_TRADE",
+    "H1_frozen": "NO_TRADE",
+    "H2": "FAIL",
+    "H3_cost": "PASS",
+    "H3_selection": "PASS",
+    "H4": "PASS",
+    "H5": {
+      "30": "PASS",
+      "120": "PASS",
+      "600": "PASS",
+      "1800": "PASS"
+    },
+    "H6": "PASS",
+    "R0": "PASS"
+  },
+  "seconds": 127.95047949999571
+}
