@@ -101,7 +101,7 @@ def load_seconds(parts):
     return s.drop_duplicates('t_ns', keep='last').reset_index(drop=True)
 
 
-def flow_family(s, intents):
+def flow_family(s, intents, windows=WINDOWS, rate=(300, 3600)):
     """Counters at the latest available row; window start must share its epoch."""
     t = s.t_ns.to_numpy(np.int64); avail = np.maximum.accumulate(s.available_ns.to_numpy(np.int64))
     epoch = s.epoch.to_numpy(np.int64) * 16 + s.part.to_numpy(np.int64)
@@ -109,7 +109,7 @@ def flow_family(s, intents):
     i = np.searchsorted(avail, intents, side='right') - 1
     here = i >= 0; ic = np.clip(i, 0, None)
     out = {}
-    for w in WINDOWS:
+    for w in windows:
         j = np.searchsorted(t, t[ic] - w * NS, side='left')
         jc = np.clip(j, 0, len(t) - 1)
         ok = here & (j < len(t)) & (t[jc] == t[ic] - w * NS) & (epoch[jc] == epoch[ic])
@@ -127,9 +127,10 @@ def flow_family(s, intents):
                                                      (d['c_add_ask'] - d['c_remove_ask'])) / np.maximum(book, 1), 0.)
         out[f'flow_book{w}_known'] = bk
         out[f'flow_volume{w}_known'] = ok
-    v300, v3600 = out['flow_log_volume300'], out['flow_log_volume3600']
-    rk = out['flow_volume300_known'] & out['flow_volume3600_known'] & (v3600 > 0)
-    out['flow_volume_rate_ratio'] = np.where(rk, (np.expm1(v300) / 300) / np.maximum(np.expm1(v3600) / 3600, 1e-9), 0.)
+    short, long_ = rate
+    v300, v3600 = out[f'flow_log_volume{short}'], out[f'flow_log_volume{long_}']
+    rk = out[f'flow_volume{short}_known'] & out[f'flow_volume{long_}_known'] & (v3600 > 0)
+    out['flow_volume_rate_ratio'] = np.where(rk, (np.expm1(v300) / short) / np.maximum(np.expm1(v3600) / long_, 1e-9), 0.)
     out['flow_volume_rate_known'] = rk
     valid = here & s.book_valid.to_numpy(bool)[ic]
     for lvl in (1, 4, 12):

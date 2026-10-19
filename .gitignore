@@ -94,3 +94,7 @@ credentials.json
 !/reports/validation_v1/VALIDATION_RU.md
 !/reports/validation_v1/validation_summary.json
 !/reports/cognition_audit_20261019/
+!/reports/scalper_v1/
+/reports/scalper_v1/*
+!/reports/scalper_v1/SCALPER_RU.md
+!/reports/scalper_v1/scalper_summary.json
