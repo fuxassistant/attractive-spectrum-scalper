@@ -109,3 +109,20 @@ def test_cancel_ahead_moves_probe_forward():
     rows = BOOK + [(12, 'A', 'B', 100, 1, 3), (20, 'C', 'B', 100, 3, 1), (21, 'C', 'B', 100, 2, 2),
                    (30, 'F', 'B', 100, 1, 3)]
     assert one(rows)[:3] == (FILLED, 30, 1)
+
+
+def test_queue_state_uses_only_records_strictly_before_decision():
+    from spectrum.cognition.queue_state import window_flows, level_sizes
+    NS = 10**9
+    rows = [(1, 'R', 'N', 0, 0, 0), (2, 'A', 'B', 100, 3, 1), (3, 'A', 'A', 101, 4, 2), (4, 'A', 'B', 99, 7, 3),
+            (6 * NS, 'A', 'B', 100, 2, 4), (7 * NS, 'C', 'B', 100, 1, 1), (8 * NS, 'T', 'A', 100, 1, 50),
+            (8 * NS, 'F', 'B', 100, 1, 1), (10 * NS, 'A', 'B', 100, 9, 5), (11 * NS, 'A', 'B', 50, 1, 6)]
+    tp = tape(rows); t = np.array([10 * NS], np.int64)
+    bid, ask = np.array([100 * P]), np.array([101 * P])
+    sizes, placed = level_sizes(tp, t, bid, ask)
+    assert placed[0] and sizes['bid1'][0] == 3 + 2 - 1 and sizes['ask1'][0] == 4
+    assert sizes['bid2'][0] == 0  # one tick ($0.10) below 100 is empty; the order at 99 is ten ticks away
+    f = window_flows(tp, t, bid, ask)
+    assert f['bid_add_5'][0] == 2 and f['bid_cancel_5'][0] == 1 and f['bid_fill_5'][0] == 1   # 9 lots at t excluded
+    assert f['tsell_5'][0] == 1 and f['tbuy_5'][0] == 0
+    assert f['ask_add_30'][0] == 4 and f['ask_add_5'][0] == 0  # added at 3 ns: inside 30 s, outside 5 s

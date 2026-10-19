@@ -24,6 +24,9 @@ import pandas as pd
 
 COORDINATES = ('trend', 'flow', 'range', 'vol', 'event', 'phase', 'book')
 PROGRAMS = ('with_trend', 'against_trend', 'with_flow', 'against_flow', 'range_revert', 'range_break', 'long', 'short')
+# Optional queue-state language (needs queue_state columns): L1 imbalance, L1 thickness, aggressor tape.
+QUEUE_COORDINATES = ('l1', 'thickness', 'tape')
+QUEUE_PROGRAMS = ('with_l1', 'against_l1', 'with_tape', 'against_tape')
 PLANS = (2, 3)
 UNKNOWN = ''
 
@@ -73,12 +76,26 @@ def coordinates(frame):
     phase = pick([m < 300, m < 450, True], ['london', 'overlap', 'late'], np.ones(len(f), bool))
     imb = f.flow_depth12_imbalance.to_numpy()
     book = pick([imb > .1, imb < -.1, True], ['bid_heavy', 'ask_heavy', 'balanced'], f.flow_depth12_known.to_numpy(bool))
-    return dict(trend=trend, flow=flow, range=rng, vol=vol, event=event, phase=phase, book=book)
+    out = dict(trend=trend, flow=flow, range=rng, vol=vol, event=event, phase=phase, book=book)
+    if 'bid1' in f:  # decision-time queue state, masked where unknown
+        known = f.state_known.to_numpy() > 0
+        b1, a1 = f.bid1.to_numpy(float), f.ask1.to_numpy(float)
+        imb = (b1 - a1) / np.maximum(b1 + a1, 1)
+        out['l1'] = pick([imb > 1 / 3, imb < -1 / 3, True], ['bid_heavy', 'ask_heavy', 'balanced'], known)
+        out['thickness'] = pick([b1 + a1 <= 3, b1 + a1 >= 7, True], ['thin', 'thick', 'normal'], known)
+        tb, ts = f.tbuy_30.to_numpy(float), f.tsell_30.to_numpy(float)
+        tape = (tb - ts) / np.maximum(tb + ts, 1)
+        out['tape'] = pick([tape > .2, tape < -.2, True], ['buy', 'sell', 'neutral'], known & (tb + ts > 0))
+    return out
 
 
 def program_side(program, c):
     """c: dict coordinate -> value for one origin. None when undefined."""
     t, f, r = c['trend'], c['flow'], c['range']
+    if program in QUEUE_PROGRAMS:
+        l1, tape = c.get('l1', UNKNOWN), c.get('tape', UNKNOWN)
+        return {'with_l1': {'bid_heavy': 1, 'ask_heavy': -1}.get(l1), 'against_l1': {'bid_heavy': -1, 'ask_heavy': 1}.get(l1),
+                'with_tape': {'buy': 1, 'sell': -1}.get(tape), 'against_tape': {'buy': -1, 'sell': 1}.get(tape)}[program]
     return {'with_trend': {'up': 1, 'down': -1}.get(t), 'against_trend': {'up': -1, 'down': 1}.get(t),
             'with_flow': {'buy': 1, 'sell': -1}.get(f), 'against_flow': {'buy': -1, 'sell': 1}.get(f),
             'range_revert': {'low': 1, 'high': -1}.get(r), 'range_break': {'high': 1, 'low': -1}.get(r),
@@ -166,11 +183,12 @@ class Schema:
 
 
 class Library:
-    def __init__(self, params=Params()):
+    def __init__(self, params=Params(), programs=PROGRAMS, coordinate_names=COORDINATES):
         self.p = params; self.schemas = []; self.events = []
+        self.programs = tuple(programs); self.coordinate_names = tuple(coordinate_names)
         self.global_stat = {plan: Stat() for plan in PLANS}
         for plan in PLANS:
-            for program in PROGRAMS:
+            for program in self.programs:
                 self.schemas.append(Schema(len(self.schemas), program, plan))
 
     # ---- assimilation -------------------------------------------------
@@ -200,7 +218,7 @@ class Library:
                 k.remainder.add(y, day, p.half_life_days)
             if ready and p.accommodation:
                 r = y - mu
-                for coord in COORDINATES:
+                for coord in self.coordinate_names:
                     if c[coord] == UNKNOWN or any(coord == ck for ck, _ in k.context):
                         continue
                     k.cells.setdefault((coord, c[coord]), Stat()).add(r, day, float('inf'))
@@ -280,18 +298,18 @@ class Library:
         return best
 
 
-def run(frame, outcomes, params=Params(), shuffle_seed=None):
+def run(frame, outcomes, params=Params(), shuffle_seed=None, programs=PROGRAMS, coordinate_names=COORDINATES):
     """frame: origins (index origin_id) sorted by intent.
     outcomes: (origin_id, plan, side) -> (status, net or None, known_ns).
     COMPLETE outcomes are learned after known_ns. EMPTY (a passive attempt that
     never filled) is a real $0 consequence of the program: learned and acted as
     flat cash until its cancel time. NOT_FILLED acts as flat cash; CENSORED
     blocks the account without an invented fill."""
-    lib = Library(params)
+    lib = Library(params, programs, coordinate_names)
     coords = coordinates(frame)
     if shuffle_seed is not None:  # destroy the context-outcome link within each day
         rng = np.random.default_rng(shuffle_seed)
-        for name in COORDINATES:
+        for name in coordinate_names:
             values = coords[name].copy()
             for idx in frame.groupby('date').indices.values():
                 values[idx] = values[rng.permutation(idx)]
@@ -310,11 +328,11 @@ def run(frame, outcomes, params=Params(), shuffle_seed=None):
     for i in range(len(ids)):
         now = intents[i]
         frozen = bool(params.freeze_at_block) and blocks[i] >= params.freeze_at_block
-        c = {name: coords[name][i] for name in COORDINATES}
+        c = {name: coords[name][i] for name in coordinate_names}
         while qi < len(queue) and queue[qi][0] < now:
             known, j, plan, side, net = queue[qi]; qi += 1
             if params.learning and not frozen:
-                cj = {name: coords[name][j] for name in COORDINATES}
+                cj = {name: coords[name][j] for name in coordinate_names}
                 lib.learn(cj, intents[j], days[j], months[j], plan, side, net)
         if params.learning and not frozen and (i == 0 or days[i] != days[i - 1] or i % 25 == 0):
             lib.review(now, days[i], checkpoint=i > 0 and days[i] != days[i - 1] and days[i] % params.checkpoint_days == 0)

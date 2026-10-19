@@ -229,12 +229,15 @@ def captures_by_date(market=MARKET, months=TRAIN_MONTHS):
     return by
 
 
-def run_member(member_key, dates, sig_dir, data, output, market=MARKET):
+def day_tapes(member_key, dates, market=MARKET):
+    """Stream one month member once; yield (date, merged MBO tape, capture keys)
+    as soon as every capture selected for that date has been read. Captures of
+    one date are concatenated in ordinal order; each starts with its own reset."""
     config = json.loads((Path(market) / 'run_config.json').read_text(encoding='utf8'))
     item = next(i for i in config['members'] if i['key'] == member_key)
     by = captures_by_date(market); wanted = {d: by[d] for d in dates}
     pending = {d: {c['key'] for c in cs} for d, cs in wanted.items()}
-    collected = defaultdict(dict); receipts = []
+    collected = defaultdict(dict)
     key_date = {c['key']: d for d, cs in wanted.items() for c in cs}
     caps = [c for cs in wanted.values() for c in cs]
     for key, tape in qu.capture_tapes(item['archive'], item['member'], caps):
@@ -244,6 +247,12 @@ def run_member(member_key, dates, sig_dir, data, output, market=MARKET):
         order = sorted(collected[d], key=lambda k: next(c['first_ordinal'] for c in wanted[d] if c['key'] == k))
         merged = {n: np.concatenate([collected[d][k][n] for k in order]) for n in collected[d][order[0]]}
         del collected[d]
+        yield d, merged, order
+
+
+def run_member(member_key, dates, sig_dir, data, output, market=MARKET):
+    receipts = []
+    for d, merged, order in day_tapes(member_key, dates, market):
         dest = Path(output) / f'{d}.parquet'
         frame, r = process_day(d, merged, sig_dir, data)
         frame.to_parquet(dest, index=False)

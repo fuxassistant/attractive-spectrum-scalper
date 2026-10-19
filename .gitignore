@@ -83,3 +83,7 @@ credentials.json
 /reports/schemas_passive_v1/*
 !/reports/schemas_passive_v1/PASSIVE_RU.md
 !/reports/schemas_passive_v1/passive_summary.json
+!/reports/passive_learn_v1/
+/reports/passive_learn_v1/*
+!/reports/passive_learn_v1/QUEUE_RU.md
+!/reports/passive_learn_v1/queue_summary.json

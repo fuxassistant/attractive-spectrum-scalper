@@ -153,10 +153,20 @@ def fingerprint(trades):
 
 
 def experiment(signatures=SIGNATURES, representation=REPRESENTATION, output=REPORT, execution='taker',
-               variants=None, planted=True):
-    """execution: 'taker' (signature kernel) or a passive variant such as 'PQ_30'."""
+               variants=None, planted=True, queue=False):
+    """execution: 'taker' (signature kernel) or a passive variant such as 'PQ_30'.
+    queue: add decision-time queue coordinates (l1, thickness, tape) and programs."""
     started = time.perf_counter(); out = Path(output); out.mkdir(parents=True, exist_ok=True)
     frame, _, _ = dataset(signatures, representation)
+    programs, coordinate_names = sm.PROGRAMS, sm.COORDINATES
+    if queue:
+        import glob
+        from .queue_state import DEFAULT_OUTPUT as QUEUE_STATE
+        qs = pd.concat([pd.read_parquet(p) for p in glob.glob(str(Path(QUEUE_STATE) / '2*.parquet'))])
+        frame = frame.join(qs.set_index('origin_id').drop(columns=['intent_ns', 'spread_ticks']), how='left')
+        frame['state_known'] = frame.state_known.fillna(0)
+        frame = frame.fillna({c: 0 for c in qs.columns if c not in ('origin_id', 'intent_ns', 'spread_ticks')})
+        programs, coordinate_names = sm.PROGRAMS + sm.QUEUE_PROGRAMS, sm.COORDINATES + sm.QUEUE_COORDINATES
     frame = frame.sort_values('intent_ns', kind='stable')
     frame['day_index'] = frame.date.rank(method='dense').astype(int)
     source = outcome_table(signatures) if execution == 'taker' else passive_outcomes(execution)
@@ -170,7 +180,8 @@ def experiment(signatures=SIGNATURES, representation=REPRESENTATION, output=REPO
     results = {}
     for name, overrides, stream in runs:
         t0 = time.perf_counter(); params = replace(sm.Params(), **overrides)
-        lib, trades = sm.run(frame, stream, params, shuffle_seed=61051 if name == 'shuffled_context' else None)
+        lib, trades = sm.run(frame, stream, params, shuffle_seed=61051 if name == 'shuffled_context' else None,
+                             programs=programs, coordinate_names=coordinate_names)
         statuses = pd.Series([k.status for k in lib.schemas]).value_counts().to_dict()
         results[name] = dict(params={k: (str(v) if isinstance(v, float) and not np.isfinite(v) else v)
                                      for k, v in asdict(params).items()},
@@ -193,7 +204,7 @@ def experiment(signatures=SIGNATURES, representation=REPRESENTATION, output=REPO
                    signatures_manifest_sha256=sha(Path(signatures) / 'manifest.json'),
                    representation_manifest_sha256=sha(Path(representation) / 'manifest.json'),
                    code_sha256={p: sha(Path(__file__).with_name(p)) for p in ('schemas.py', 'schema_run.py')},
-                   coordinates=list(sm.COORDINATES), programs=list(sm.PROGRAMS),
+                   coordinates=list(coordinate_names), programs=list(programs),
                    plans=[list(MENU_PLANS[p]) for p in sm.PLANS], variants=results,
                    planted_control=dict(PLANTED, coordinate=list(PLANTED['coordinate']), origins=planted_origins,
                                         meaning='Synthetic positive control on the real stream; never economic evidence'),
@@ -205,5 +216,6 @@ def experiment(signatures=SIGNATURES, representation=REPRESENTATION, output=REPO
 if __name__ == '__main__':
     p = argparse.ArgumentParser(); p.add_argument('--output', default=REPORT)
     p.add_argument('--execution', default='taker'); p.add_argument('--variants', nargs='*')
-    p.add_argument('--no-planted', action='store_true')
-    a = p.parse_args(); experiment(output=a.output, execution=a.execution, variants=a.variants, planted=not a.no_planted)
+    p.add_argument('--no-planted', action='store_true'); p.add_argument('--queue', action='store_true')
+    a = p.parse_args(); experiment(output=a.output, execution=a.execution, variants=a.variants, planted=not a.no_planted,
+                                   queue=a.queue)
