@@ -1,11 +1,12 @@
 {
   "version": "SCHEMA_LIBRARY_V1",
-  "seconds": 66.8671363000758,
+  "execution": "taker",
+  "seconds": 67.88555730041116,
   "signatures_manifest_sha256": "fd9cadb52625b0ea526a21377827572c1bbb92234c935029f282e011e5387a22",
   "representation_manifest_sha256": "e3a2a43b8ce6bfd0fcb718c980f3fac6c6fbf12755f905eb1c585a70b10295cc",
   "code_sha256": {
-    "schemas.py": "8063ec6acbc24cba5a8e94b75a0654159790ca5d9f2cf9cc37e9e3591a075839",
-    "schema_run.py": "244dca516f6653b2352ce6996208a8847f6cc474fccdfe204bf15f7333797c02"
+    "schemas.py": "ddfb3de9aac2e5980f63ccc6e49631d88dd4741f0da993e0da30f1efaa0a7e92",
+    "schema_run.py": "2b6e8e2c37a387765d953acd7924cca3caba9cefad2717f14c41a06adab8db2e"
   },
   "coordinates": [
     "trend",
@@ -287,7 +288,7 @@
           "parent_mean": -0.7640059060380755
         }
       ],
-      "seconds": 7.673335500061512
+      "seconds": 7.702682300005108
     },
     "assimilate_only": {
       "params": {
@@ -388,7 +389,7 @@
       "fingerprint": {},
       "monthly": {},
       "events": [],
-      "seconds": 3.6879034996964037
+      "seconds": 3.781080400105566
     },
     "frozen_after_A": {
       "params": {
@@ -506,7 +507,7 @@
           "reason": "refuted"
         }
       ],
-      "seconds": 4.7339885998517275
+      "seconds": 4.967248599976301
     },
     "no_forgetting": {
       "params": {
@@ -790,7 +791,7 @@
           "parent_mean": -0.7022037422035489
         }
       ],
-      "seconds": 7.710520999971777
+      "seconds": 7.561334999743849
     },
     "shuffled_context": {
       "params": {
@@ -1161,7 +1162,7 @@
           "parent_mean": -0.7701908973519015
         }
       ],
-      "seconds": 7.898802100215107
+      "seconds": 7.9724484998732805
     },
     "planted_full": {
       "params": {
@@ -1895,7 +1896,7 @@
           "reason": "confirmed"
         }
       ],
-      "seconds": 9.847732299938798
+      "seconds": 9.941062700003386
     },
     "planted_assimilate_only": {
       "params": {
@@ -1996,7 +1997,7 @@
       "fingerprint": {},
       "monthly": {},
       "events": [],
-      "seconds": 3.6242873002775013
+      "seconds": 4.1240100003778934
     },
     "planted_frozen_after_A": {
       "params": {
@@ -2336,7 +2337,7 @@
           "parent_mean": -1.1228577642450734
         }
       ],
-      "seconds": 4.968495999928564
+      "seconds": 5.126337700057775
     },
     "planted_no_forgetting": {
       "params": {
@@ -3070,7 +3071,7 @@
           "reason": "confirmed"
         }
       ],
-      "seconds": 10.034508800134063
+      "seconds": 10.000745200086385
     }
   },
   "planted_control": {
