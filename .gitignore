@@ -69,3 +69,7 @@ credentials.json
 !/reports/full_mbo_v1/audit_20261016/findings.json
 /.pytest_tmp_series_release
 /.pytest_tmp_series_final
+!/reports/opportunity_signatures_v1/
+/reports/opportunity_signatures_v1/*
+!/reports/opportunity_signatures_v1/SUMMARY_RU.md
+!/reports/opportunity_signatures_v1/summary.json
