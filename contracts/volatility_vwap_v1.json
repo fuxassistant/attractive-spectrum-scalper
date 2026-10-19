@@ -1,0 +1,58 @@
+{
+  "version": "VOLATILITY_VWAP_V1",
+  "status": "ROLLING_PLUGINS_IMPLEMENTED_PROXY_PILOT_VERIFIED",
+  "modules": {
+    "proxy": "spectrum.plugins.volatility_vwap:PROXY",
+    "exact": "spectrum.plugins.volatility_vwap:EXACT"
+  },
+  "time": {
+    "sample_seconds": 1,
+    "rolling_seconds": [60, 300, 900, 3600],
+    "kernel": "rectangular",
+    "interval": "last L complete 1s volume buckets, with L+1 source endpoints",
+    "derivative_seconds": 5,
+    "lookback_seconds": 3605,
+    "actual_adapter_tail_rows": 3606,
+    "available_at": "current available_ns after maximum availability of every dependency",
+    "reset": "each full window requires uninterrupted support, same epoch, contiguous seconds; missing OHLC reference masks support",
+    "contract_boundary": "process one selected contract capture independently, never concatenate contracts into one window"
+  },
+  "bands": {
+    "center": "sum(volume * price) / sum(volume)",
+    "variance": "sum(volume * (price - current_center)^2) / sum(volume)",
+    "ddof": 0,
+    "sigma_meaning": "population price dispersion, not return volatility",
+    "multipliers": [1, 2],
+    "probability_coverage_claim": false,
+    "trading_signal_claim": false
+  },
+  "proxy": {
+    "price": "midpoint at second endpoint",
+    "weight": "delta(c_trade_buy + c_trade_sell + c_trade_unknown)",
+    "prefix": "vwap_proxy",
+    "limits": "Trades inside a second assigned endpoint midpoint; no reconstruction of trade-price covariance or within-bucket variance. Approximation error not measured against real exact VWAP."
+  },
+  "exact": {
+    "prefix": "vwap_exact",
+    "requires": ["trade_volume", "trade_price_mean", "trade_price_m2", "trade_moments_valid", "trade_moments_available_ns"],
+    "trade_price_m2": "sum(q_j * (p_j - bucket_volume_weighted_mean)^2), unnormalized",
+    "total_m2": "sum(bucket_M2 + bucket_volume * (bucket_mean - window_mean)^2)",
+    "accepted_source": "accepted T prints once, including unknown aggressor; never passive F duplicates",
+    "alignment": "same t_ns / epoch / route as seconds; volume equals corresponding reconstructed counter difference",
+    "missing_columns": "raise, no proxy fallback",
+    "current_real_dataset": "required moments absent; synthetic oracle only",
+    "sidecar_next_step": "extract aligned moments with source lineage and publication completeness, without rebuilding the entire order book; validate against raw T records before admission"
+  },
+  "quality": {
+    "zero_volume": "center and weighted geometry unknown; supported return variation remains known",
+    "zero_sigma": "center and zero width known; z and sigma ratios unknown",
+    "zero_rms": "variation known zero; normalized-return denominator unknown",
+    "unknown_side": "retained in total volume with explicit fraction",
+    "effective_seconds": "(sum bucket_volume)^2 / sum(bucket_volume^2); concentration proxy, not independent trade count",
+    "false_mask": "technical zero, never observed inactivity"
+  },
+  "implemented_features": 113,
+  "families": ["weighted_price_geometry", "return_variation_1s_and_5s", "volume_clock_diagnostics", "moving_center_width_decomposition", "cross_scale_ratios"],
+  "proposed_not_implemented": ["session_anchor_with_support_certificate", "event_anchor_after_recognition", "infinite_history_EW_VWAP_with_stateful_checkpoint", "volume_budget_window", "new_spectral_channels_and_learner_ablation"],
+  "training": "causal X only; no labels or policy fitting in this module"
+}

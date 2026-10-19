@@ -25,11 +25,13 @@ def rolling_valid(valid,n):
 
 class Context:
     def __init__(self,frame,calendar):
-        self.df=frame;self.t=frame.t_ns.to_numpy();self.closed=calendar.closed(self.t)
+        self.df=frame;self.t=frame.t_ns.to_numpy()
+        self.closed=frame.scheduled_closed.to_numpy(bool) if 'scheduled_closed' in frame else calendar.closed(self.t)
         self.supported=frame.valid.to_numpy()&~self.closed
         self.admitted=(self.supported&
                        ((frame.available_ns-frame.t_ns).to_numpy()<=10**9))
-        self.same=np.r_[False,(np.diff(self.t)==10**9)&(np.diff(frame.epoch.to_numpy())==0)]
+        continuity=frame.segment_id.to_numpy() if 'segment_id' in frame else frame.epoch.to_numpy()
+        self.same=np.r_[False,(np.diff(self.t)==10**9)&(np.diff(continuity)==0)]
         # A late publication can prove supported PAST without being a fresh
         # decision origin. Once known, that past remains usable by later windows.
         self.edge=self.supported&np.r_[False,self.supported[:-1]]&self.same

@@ -15,8 +15,23 @@ def main():
     x=sub.add_parser('status');x.add_argument('root')
     x=sub.add_parser('replay');x.add_argument('capture');x.add_argument('--limit',type=int,default=5)
     x=sub.add_parser('audit');x.add_argument('--market',required=True);x.add_argument('--features',required=True);x.add_argument('--output',required=True)
+    x=sub.add_parser('finalize');x.add_argument('--config',default='data/derived/full_mbo_v1/run_config.json')
+    x.add_argument('--output',default='data/derived/finalized_market_v2');x.add_argument('--members',nargs='+');x.add_argument('--workers',type=int,default=6)
+    x=sub.add_parser('verify-finalized');x.add_argument('capture')
+    x=sub.add_parser('replay-finalized');x.add_argument('capture');x.add_argument('--rows',type=int,default=5)
     a=p.parse_args()
-    if a.command=='ingest':
+    if a.command=='finalize':
+        from .finalize_market import run
+        r=run(a.config,a.output,a.members,a.workers)
+    elif a.command=='verify-finalized':
+        from .finalized import verify
+        r=verify(a.capture)
+    elif a.command=='replay-finalized':
+        from .finalized import FinalizedReplay
+        stream=FinalizedReplay(a.capture)
+        table=stream.read_batch(a.rows)
+        r=dict(rows=[] if table is None else table.to_pylist(),cursor=stream.checkpoint())
+    elif a.command=='ingest':
         from .ingest import partition
         r=partition(a.source,a.output,a.route,a.member)
     elif a.command=='build':

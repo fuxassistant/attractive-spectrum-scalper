@@ -67,3 +67,5 @@ credentials.json
 /reports/full_mbo_v1/audit_20261016/*
 !/reports/full_mbo_v1/audit_20261016/audit.json
 !/reports/full_mbo_v1/audit_20261016/findings.json
+/.pytest_tmp_series_release
+/.pytest_tmp_series_final
