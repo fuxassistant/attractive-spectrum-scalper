@@ -73,3 +73,9 @@ credentials.json
 /reports/opportunity_signatures_v1/*
 !/reports/opportunity_signatures_v1/SUMMARY_RU.md
 !/reports/opportunity_signatures_v1/summary.json
+!/reports/schemas_v1/
+/reports/schemas_v1/*
+!/reports/schemas_v1/SCHEMAS_RU.md
+!/reports/schemas_v1/schema_summary.json
+!/reports/schemas_v1/qmodel_ablation.json
+!/reports/schemas_v1/library_full.json

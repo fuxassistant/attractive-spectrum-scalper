@@ -1,0 +1,3089 @@
+{
+  "version": "SCHEMA_LIBRARY_V1",
+  "seconds": 66.8671363000758,
+  "signatures_manifest_sha256": "fd9cadb52625b0ea526a21377827572c1bbb92234c935029f282e011e5387a22",
+  "representation_manifest_sha256": "e3a2a43b8ce6bfd0fcb718c980f3fac6c6fbf12755f905eb1c585a70b10295cc",
+  "code_sha256": {
+    "schemas.py": "8063ec6acbc24cba5a8e94b75a0654159790ca5d9f2cf9cc37e9e3591a075839",
+    "schema_run.py": "244dca516f6653b2352ce6996208a8847f6cc474fccdfe204bf15f7333797c02"
+  },
+  "coordinates": [
+    "trend",
+    "flow",
+    "range",
+    "vol",
+    "event",
+    "phase",
+    "book"
+  ],
+  "programs": [
+    "with_trend",
+    "against_trend",
+    "with_flow",
+    "against_flow",
+    "range_revert",
+    "range_break",
+    "long",
+    "short"
+  ],
+  "plans": [
+    [
+      40,
+      20,
+      600
+    ],
+    [
+      80,
+      40,
+      1800
+    ]
+  ],
+  "variants": {
+    "full": {
+      "params": {
+        "half_life_days": 40.0,
+        "min_n": 40.0,
+        "min_days": 8,
+        "kappa": 2.5,
+        "surprise_z": 2.0,
+        "spawn_n": 80,
+        "spawn_days": 10,
+        "spawn_t": 4.0,
+        "checkpoint_days": 5,
+        "max_children": 4,
+        "max_depth": 2,
+        "max_schemas": 96,
+        "quarantine_days": 15,
+        "confirm_t": 2.0,
+        "recent_days": 5,
+        "accommodation": true,
+        "learning": true,
+        "freeze_at_block": ""
+      },
+      "A": {
+        "days": 66,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 66
+        },
+        "active_days": 0
+      },
+      "B": {
+        "days": 42,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 42
+        },
+        "active_days": 0
+      },
+      "schemas": 24,
+      "statuses": {
+        "ACTIVE": 16,
+        "QUARANTINE": 7,
+        "RETIRED": 1
+      },
+      "spawned": 8,
+      "promoted": 0,
+      "refuted": 1,
+      "expectation_error": {
+        "2025-10": {
+          "n": 54060,
+          "mse": 16.44615359680996,
+          "mse_context_free": 16.425853822542198,
+          "skill": -0.0012358428661956022
+        },
+        "2025-11": {
+          "n": 44549,
+          "mse": 14.733985870624622,
+          "mse_context_free": 14.732967821581685,
+          "skill": -6.910006559879278e-05
+        },
+        "2025-12": {
+          "n": 54036,
+          "mse": 13.878705151796076,
+          "mse_context_free": 13.89226097361459,
+          "skill": 0.0009757822606600852
+        },
+        "2026-01": {
+          "n": 48812,
+          "mse": 15.899710036667331,
+          "mse_context_free": 15.906288768766174,
+          "skill": 0.00041359315139311015
+        },
+        "2026-02": {
+          "n": 50436,
+          "mse": 16.90318324844879,
+          "mse_context_free": 16.926932811241514,
+          "skill": 0.0014030635707934502
+        }
+      },
+      "fingerprint": {},
+      "monthly": {},
+      "events": [
+        {
+          "kind": "spawn",
+          "ns": "1763453035071507267",
+          "day": 35,
+          "schema": 16,
+          "parent": 7,
+          "describe": "#16 [trend=up] -> short/P2",
+          "cell": [
+            "trend",
+            "up"
+          ],
+          "mean_residual": 0.2112428369739419,
+          "t": 4.0297612707238315,
+          "n": 2502,
+          "days": 34,
+          "parent_mean": -0.5683919028693283
+        },
+        {
+          "kind": "retired",
+          "ns": "1765184100000000000",
+          "schema": 16,
+          "describe": "#16 [trend=up] -> short/P2",
+          "confirm_t": -0.24985728511960845,
+          "n": 1010,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1770710435103213073",
+          "day": 95,
+          "schema": 17,
+          "parent": 7,
+          "describe": "#17 [trend=down] -> short/P2",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.14583291653550287,
+          "t": -4.076255829351879,
+          "n": 6241,
+          "days": 92,
+          "parent_mean": -0.7190808586950346
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771315300025489589",
+          "day": 100,
+          "schema": 18,
+          "parent": 1,
+          "describe": "#18 [vol=normal] -> against_trend/P2",
+          "cell": [
+            "vol",
+            "normal"
+          ],
+          "mean_residual": -0.12222131581966278,
+          "t": -4.0006854388778414,
+          "n": 9451,
+          "days": 97,
+          "parent_mean": -0.7194957832086907
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771315300025489589",
+          "day": 100,
+          "schema": 19,
+          "parent": 7,
+          "describe": "#19 [range=low] -> short/P2",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.16636390534182458,
+          "t": -4.353270868346512,
+          "n": 5472,
+          "days": 97,
+          "parent_mean": -0.7637183266815052
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771315300025489589",
+          "day": 100,
+          "schema": 20,
+          "parent": 14,
+          "describe": "#20 [trend=up] -> long/P3",
+          "cell": [
+            "trend",
+            "up"
+          ],
+          "mean_residual": -0.3465347877112782,
+          "t": -4.180808285932626,
+          "n": 7064,
+          "days": 97,
+          "parent_mean": -0.7643674231467932
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771920005090116944",
+          "day": 105,
+          "schema": 21,
+          "parent": 1,
+          "describe": "#21 [phase=overlap] -> against_trend/P2",
+          "cell": [
+            "phase",
+            "overlap"
+          ],
+          "mean_residual": -0.24946490065353005,
+          "t": -4.10707887043503,
+          "n": 2726,
+          "days": 102,
+          "parent_mean": -0.7393776936382109
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771920005090116944",
+          "day": 105,
+          "schema": 22,
+          "parent": 4,
+          "describe": "#22 [phase=overlap] -> range_revert/P2",
+          "cell": [
+            "phase",
+            "overlap"
+          ],
+          "mean_residual": -0.25382162073045506,
+          "t": -4.0734577114206045,
+          "n": 2614,
+          "days": 102,
+          "parent_mean": -0.7716190327600276
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771920005090116944",
+          "day": 105,
+          "schema": 23,
+          "parent": 6,
+          "describe": "#23 [vol=normal] -> long/P2",
+          "cell": [
+            "vol",
+            "normal"
+          ],
+          "mean_residual": -0.11813585176858414,
+          "t": -4.01462549242406,
+          "n": 16782,
+          "days": 102,
+          "parent_mean": -0.7640059060380755
+        }
+      ],
+      "seconds": 7.673335500061512
+    },
+    "assimilate_only": {
+      "params": {
+        "half_life_days": 40.0,
+        "min_n": 40.0,
+        "min_days": 8,
+        "kappa": 2.5,
+        "surprise_z": 2.0,
+        "spawn_n": 80,
+        "spawn_days": 10,
+        "spawn_t": 4.0,
+        "checkpoint_days": 5,
+        "max_children": 4,
+        "max_depth": 2,
+        "max_schemas": 96,
+        "quarantine_days": 15,
+        "confirm_t": 2.0,
+        "recent_days": 5,
+        "accommodation": false,
+        "learning": true,
+        "freeze_at_block": ""
+      },
+      "A": {
+        "days": 66,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 66
+        },
+        "active_days": 0
+      },
+      "B": {
+        "days": 42,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 42
+        },
+        "active_days": 0
+      },
+      "schemas": 16,
+      "statuses": {
+        "ACTIVE": 16
+      },
+      "spawned": 0,
+      "promoted": 0,
+      "refuted": 0,
+      "expectation_error": {
+        "2025-10": {
+          "n": 54060,
+          "mse": 16.44615359680996,
+          "mse_context_free": 16.425853822542198,
+          "skill": -0.0012358428661956022
+        },
+        "2025-11": {
+          "n": 43952,
+          "mse": 14.850217738969635,
+          "mse_context_free": 14.849596869610313,
+          "skill": -4.1810519489038356e-05
+        },
+        "2025-12": {
+          "n": 53663,
+          "mse": 13.931373202449027,
+          "mse_context_free": 13.94509065770749,
+          "skill": 0.0009836763055306452
+        },
+        "2026-01": {
+          "n": 48812,
+          "mse": 15.899710036667331,
+          "mse_context_free": 15.906288768766174,
+          "skill": 0.00041359315139311015
+        },
+        "2026-02": {
+          "n": 47092,
+          "mse": 17.338738226935263,
+          "mse_context_free": 17.367961350716485,
+          "skill": 0.0016825880246456038
+        }
+      },
+      "fingerprint": {},
+      "monthly": {},
+      "events": [],
+      "seconds": 3.6879034996964037
+    },
+    "frozen_after_A": {
+      "params": {
+        "half_life_days": 40.0,
+        "min_n": 40.0,
+        "min_days": 8,
+        "kappa": 2.5,
+        "surprise_z": 2.0,
+        "spawn_n": 80,
+        "spawn_days": 10,
+        "spawn_t": 4.0,
+        "checkpoint_days": 5,
+        "max_children": 4,
+        "max_depth": 2,
+        "max_schemas": 96,
+        "quarantine_days": 15,
+        "confirm_t": 2.0,
+        "recent_days": 5,
+        "accommodation": true,
+        "learning": true,
+        "freeze_at_block": "B"
+      },
+      "A": {
+        "days": 66,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 66
+        },
+        "active_days": 0
+      },
+      "B": {
+        "days": 42,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 42
+        },
+        "active_days": 0
+      },
+      "schemas": 17,
+      "statuses": {
+        "ACTIVE": 16,
+        "RETIRED": 1
+      },
+      "spawned": 1,
+      "promoted": 0,
+      "refuted": 1,
+      "expectation_error": {
+        "2025-10": {
+          "n": 54060,
+          "mse": 16.44615359680996,
+          "mse_context_free": 16.425853822542198,
+          "skill": -0.0012358428661956022
+        },
+        "2025-11": {
+          "n": 44549,
+          "mse": 14.733985870624622,
+          "mse_context_free": 14.732967821581685,
+          "skill": -6.910006559879278e-05
+        },
+        "2025-12": {
+          "n": 54033,
+          "mse": 13.878968282107204,
+          "mse_context_free": 13.892532807779029,
+          "skill": 0.0009763896806656014
+        }
+      },
+      "fingerprint": {},
+      "monthly": {},
+      "events": [
+        {
+          "kind": "spawn",
+          "ns": "1763453035071507267",
+          "day": 35,
+          "schema": 16,
+          "parent": 7,
+          "describe": "#16 [trend=up] -> short/P2",
+          "cell": [
+            "trend",
+            "up"
+          ],
+          "mean_residual": 0.2112428369739419,
+          "t": 4.0297612707238315,
+          "n": 2502,
+          "days": 34,
+          "parent_mean": -0.5683919028693283
+        },
+        {
+          "kind": "retired",
+          "ns": "1765184100000000000",
+          "schema": 16,
+          "describe": "#16 [trend=up] -> short/P2",
+          "confirm_t": -0.24985728511960845,
+          "n": 1010,
+          "days": 15,
+          "reason": "refuted"
+        }
+      ],
+      "seconds": 4.7339885998517275
+    },
+    "no_forgetting": {
+      "params": {
+        "half_life_days": "inf",
+        "min_n": 40.0,
+        "min_days": 8,
+        "kappa": 2.5,
+        "surprise_z": 2.0,
+        "spawn_n": 80,
+        "spawn_days": 10,
+        "spawn_t": 4.0,
+        "checkpoint_days": 5,
+        "max_children": 4,
+        "max_depth": 2,
+        "max_schemas": 96,
+        "quarantine_days": 15,
+        "confirm_t": 2.0,
+        "recent_days": 5,
+        "accommodation": true,
+        "learning": true,
+        "freeze_at_block": ""
+      },
+      "A": {
+        "days": 66,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 66
+        },
+        "active_days": 0
+      },
+      "B": {
+        "days": 42,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 42
+        },
+        "active_days": 0
+      },
+      "schemas": 26,
+      "statuses": {
+        "ACTIVE": 16,
+        "QUARANTINE": 9,
+        "RETIRED": 1
+      },
+      "spawned": 10,
+      "promoted": 0,
+      "refuted": 1,
+      "expectation_error": {
+        "2025-10": {
+          "n": 54060,
+          "mse": 16.448812627151586,
+          "mse_context_free": 16.425853822542198,
+          "skill": -0.0013977236652307212
+        },
+        "2025-11": {
+          "n": 44549,
+          "mse": 14.734517753623258,
+          "mse_context_free": 14.732967821581685,
+          "skill": -0.00010520161723981403
+        },
+        "2025-12": {
+          "n": 54036,
+          "mse": 13.87885344767197,
+          "mse_context_free": 13.89226097361459,
+          "skill": 0.000965107549310007
+        },
+        "2026-01": {
+          "n": 48812,
+          "mse": 15.901619746196522,
+          "mse_context_free": 15.906288768766174,
+          "skill": 0.00029353311998336906
+        },
+        "2026-02": {
+          "n": 52137,
+          "mse": 16.5983224454859,
+          "mse_context_free": 16.590626273397252,
+          "skill": -0.00046388677327913186
+        }
+      },
+      "fingerprint": {},
+      "monthly": {},
+      "events": [
+        {
+          "kind": "spawn",
+          "ns": "1763453035071507267",
+          "day": 35,
+          "schema": 16,
+          "parent": 7,
+          "describe": "#16 [trend=up] -> short/P2",
+          "cell": [
+            "trend",
+            "up"
+          ],
+          "mean_residual": 0.21324487277715054,
+          "t": 4.060087485229996,
+          "n": 2502,
+          "days": 34,
+          "parent_mean": -0.5796869129618352
+        },
+        {
+          "kind": "retired",
+          "ns": "1765184100000000000",
+          "schema": 16,
+          "describe": "#16 [trend=up] -> short/P2",
+          "confirm_t": -0.25062123163401245,
+          "n": 1010,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1770710435103213073",
+          "day": 95,
+          "schema": 17,
+          "parent": 1,
+          "describe": "#17 [vol=normal] -> against_trend/P2",
+          "cell": [
+            "vol",
+            "normal"
+          ],
+          "mean_residual": -0.13608480361396155,
+          "t": -4.154502544314445,
+          "n": 9015,
+          "days": 92,
+          "parent_mean": -0.6214383249886504
+        },
+        {
+          "kind": "spawn",
+          "ns": "1770710435103213073",
+          "day": 95,
+          "schema": 18,
+          "parent": 7,
+          "describe": "#18 [trend=down] -> short/P2",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.14762444751759687,
+          "t": -4.101788761929791,
+          "n": 6241,
+          "days": 92,
+          "parent_mean": -0.6698320921410045
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771315300025489589",
+          "day": 100,
+          "schema": 19,
+          "parent": 1,
+          "describe": "#19 [phase=overlap] -> against_trend/P2",
+          "cell": [
+            "phase",
+            "overlap"
+          ],
+          "mean_residual": -0.2458336132108769,
+          "t": -4.060627284251922,
+          "n": 2593,
+          "days": 97,
+          "parent_mean": -0.6363012213630196
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771315300025489589",
+          "day": 100,
+          "schema": 20,
+          "parent": 6,
+          "describe": "#20 [vol=normal] -> long/P2",
+          "cell": [
+            "vol",
+            "normal"
+          ],
+          "mean_residual": -0.12947922403022852,
+          "t": -4.21302342066809,
+          "n": 15941,
+          "days": 97,
+          "parent_mean": -0.6793173131835124
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771315300025489589",
+          "day": 100,
+          "schema": 21,
+          "parent": 7,
+          "describe": "#21 [range=low] -> short/P2",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.17067472181160784,
+          "t": -4.43665328375665,
+          "n": 5472,
+          "days": 97,
+          "parent_mean": -0.6947329116146487
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771315300025489589",
+          "day": 100,
+          "schema": 22,
+          "parent": 14,
+          "describe": "#22 [trend=up] -> long/P3",
+          "cell": [
+            "trend",
+            "up"
+          ],
+          "mean_residual": -0.3655399661867213,
+          "t": -4.367739077021937,
+          "n": 7064,
+          "days": 97,
+          "parent_mean": -0.6793470418469038
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771920005090116944",
+          "day": 105,
+          "schema": 23,
+          "parent": 0,
+          "describe": "#23 [trend=down] -> with_trend/P2",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.1337627691914348,
+          "t": -4.063659733897619,
+          "n": 6880,
+          "days": 102,
+          "parent_mean": -0.7188865301650079
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771920005090116944",
+          "day": 105,
+          "schema": 24,
+          "parent": 4,
+          "describe": "#24 [phase=overlap] -> range_revert/P2",
+          "cell": [
+            "phase",
+            "overlap"
+          ],
+          "mean_residual": -0.275827540082679,
+          "t": -4.351641199913202,
+          "n": 2614,
+          "days": 102,
+          "parent_mean": -0.6783081391019357
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771920005090116944",
+          "day": 105,
+          "schema": 25,
+          "parent": 7,
+          "describe": "#25 [vol=expanding] -> short/P2",
+          "cell": [
+            "vol",
+            "expanding"
+          ],
+          "mean_residual": -0.20971462031664787,
+          "t": -4.059299167585568,
+          "n": 2352,
+          "days": 102,
+          "parent_mean": -0.7022037422035489
+        }
+      ],
+      "seconds": 7.710520999971777
+    },
+    "shuffled_context": {
+      "params": {
+        "half_life_days": 40.0,
+        "min_n": 40.0,
+        "min_days": 8,
+        "kappa": 2.5,
+        "surprise_z": 2.0,
+        "spawn_n": 80,
+        "spawn_days": 10,
+        "spawn_t": 4.0,
+        "checkpoint_days": 5,
+        "max_children": 4,
+        "max_depth": 2,
+        "max_schemas": 96,
+        "quarantine_days": 15,
+        "confirm_t": 2.0,
+        "recent_days": 5,
+        "accommodation": true,
+        "learning": true,
+        "freeze_at_block": ""
+      },
+      "A": {
+        "days": 66,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 66
+        },
+        "active_days": 0
+      },
+      "B": {
+        "days": 42,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 42
+        },
+        "active_days": 0
+      },
+      "schemas": 27,
+      "statuses": {
+        "ACTIVE": 16,
+        "RETIRED": 8,
+        "QUARANTINE": 3
+      },
+      "spawned": 11,
+      "promoted": 0,
+      "refuted": 8,
+      "expectation_error": {
+        "2025-10": {
+          "n": 57077,
+          "mse": 16.87357558791627,
+          "mse_context_free": 16.852890647832343,
+          "skill": -0.0012273823236719217
+        },
+        "2025-11": {
+          "n": 47470,
+          "mse": 14.916288537518781,
+          "mse_context_free": 14.91429880102685,
+          "skill": -0.00013341133354471957
+        },
+        "2025-12": {
+          "n": 53694,
+          "mse": 13.850362697269363,
+          "mse_context_free": 13.846891848744281,
+          "skill": -0.0002506590333049008
+        },
+        "2026-01": {
+          "n": 48761,
+          "mse": 16.05355397888093,
+          "mse_context_free": 16.05417245166811,
+          "skill": 3.8524115088423017e-05
+        },
+        "2026-02": {
+          "n": 48099,
+          "mse": 17.023814539257963,
+          "mse_context_free": 17.05237218692612,
+          "skill": 0.0016747023437626574
+        }
+      },
+      "fingerprint": {},
+      "monthly": {},
+      "events": [
+        {
+          "kind": "spawn",
+          "ns": "1761030130118467761",
+          "day": 15,
+          "schema": 16,
+          "parent": 8,
+          "describe": "#16 [phase=late] -> with_trend/P3",
+          "cell": [
+            "phase",
+            "late"
+          ],
+          "mean_residual": 0.5486599722782067,
+          "t": 4.267408249341153,
+          "n": 927,
+          "days": 14,
+          "parent_mean": -0.43042213157559683
+        },
+        {
+          "kind": "spawn",
+          "ns": "1761030130118467761",
+          "day": 15,
+          "schema": 17,
+          "parent": 12,
+          "describe": "#17 [range=high] -> range_revert/P3",
+          "cell": [
+            "range",
+            "high"
+          ],
+          "mean_residual": -0.6462538758661162,
+          "t": -5.20793227182025,
+          "n": 1227,
+          "days": 14,
+          "parent_mean": -0.7327285887779659
+        },
+        {
+          "kind": "spawn",
+          "ns": "1761030130118467761",
+          "day": 15,
+          "schema": 18,
+          "parent": 12,
+          "describe": "#18 [phase=late] -> range_revert/P3",
+          "cell": [
+            "phase",
+            "late"
+          ],
+          "mean_residual": -0.39516184072144644,
+          "t": -4.300167098250276,
+          "n": 865,
+          "days": 14,
+          "parent_mean": -0.7327285887779659
+        },
+        {
+          "kind": "spawn",
+          "ns": "1761030130118467761",
+          "day": 15,
+          "schema": 19,
+          "parent": 12,
+          "describe": "#19 [vol=normal] -> range_revert/P3",
+          "cell": [
+            "vol",
+            "normal"
+          ],
+          "mean_residual": -0.4310611443037649,
+          "t": -4.009498412322777,
+          "n": 1245,
+          "days": 14,
+          "parent_mean": -0.7327285887779659
+        },
+        {
+          "kind": "spawn",
+          "ns": "1761638405001673675",
+          "day": 20,
+          "schema": 20,
+          "parent": 1,
+          "describe": "#20 [book=balanced] -> against_trend/P2",
+          "cell": [
+            "book",
+            "balanced"
+          ],
+          "mean_residual": -0.15616344474985724,
+          "t": -4.0401384992604,
+          "n": 1476,
+          "days": 19,
+          "parent_mean": -0.603308676378703
+        },
+        {
+          "kind": "spawn",
+          "ns": "1761638405001673675",
+          "day": 20,
+          "schema": 21,
+          "parent": 6,
+          "describe": "#21 [flow=sell] -> long/P2",
+          "cell": [
+            "flow",
+            "sell"
+          ],
+          "mean_residual": -0.320381856102639,
+          "t": -4.652439785228177,
+          "n": 762,
+          "days": 19,
+          "parent_mean": -0.5823659846634007
+        },
+        {
+          "kind": "spawn",
+          "ns": "1761638405001673675",
+          "day": 20,
+          "schema": 22,
+          "parent": 9,
+          "describe": "#22 [phase=late] -> against_trend/P3",
+          "cell": [
+            "phase",
+            "late"
+          ],
+          "mean_residual": -0.4823206350151311,
+          "t": -4.1574046331152035,
+          "n": 1237,
+          "days": 19,
+          "parent_mean": -0.8347952730488115
+        },
+        {
+          "kind": "spawn",
+          "ns": "1761638405001673675",
+          "day": 20,
+          "schema": 23,
+          "parent": 12,
+          "describe": "#23 [flow=sell] -> range_revert/P3",
+          "cell": [
+            "flow",
+            "sell"
+          ],
+          "mean_residual": -0.6316461438357073,
+          "t": -4.762548310737058,
+          "n": 421,
+          "days": 19,
+          "parent_mean": -0.7609014901608768
+        },
+        {
+          "kind": "retired",
+          "ns": "1762763400000000000",
+          "schema": 16,
+          "describe": "#16 [phase=late] -> with_trend/P3",
+          "confirm_t": -0.6555306878352352,
+          "n": 871,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1762767900000000000",
+          "schema": 17,
+          "describe": "#17 [range=high] -> range_revert/P3",
+          "confirm_t": 3.1576684983221477,
+          "n": 823,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1762767900000000000",
+          "schema": 18,
+          "describe": "#18 [phase=late] -> range_revert/P3",
+          "confirm_t": 1.4009018321073916,
+          "n": 792,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1762767900000000000",
+          "schema": 19,
+          "describe": "#19 [vol=normal] -> range_revert/P3",
+          "confirm_t": 0.6665874260088454,
+          "n": 1284,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1763368645167560286",
+          "schema": 20,
+          "describe": "#20 [book=balanced] -> against_trend/P2",
+          "confirm_t": -0.6147215059106556,
+          "n": 1115,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1763368645167560286",
+          "schema": 21,
+          "describe": "#21 [flow=sell] -> long/P2",
+          "confirm_t": 0.5729955289791162,
+          "n": 698,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1763368645167560286",
+          "schema": 22,
+          "describe": "#22 [phase=late] -> against_trend/P3",
+          "confirm_t": -1.262732358764812,
+          "n": 846,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "retired",
+          "ns": "1763368645167560286",
+          "schema": 23,
+          "describe": "#23 [flow=sell] -> range_revert/P3",
+          "confirm_t": 0.4027812441095605,
+          "n": 366,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1770710435103213073",
+          "day": 95,
+          "schema": 24,
+          "parent": 0,
+          "describe": "#24 [book=ask_heavy] -> with_trend/P2",
+          "cell": [
+            "book",
+            "ask_heavy"
+          ],
+          "mean_residual": -0.20157025165258174,
+          "t": -4.114325298907167,
+          "n": 3453,
+          "days": 92,
+          "parent_mean": -0.7128115517920652
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771920005090116944",
+          "day": 105,
+          "schema": 25,
+          "parent": 1,
+          "describe": "#25 [vol=normal] -> against_trend/P2",
+          "cell": [
+            "vol",
+            "normal"
+          ],
+          "mean_residual": -0.10727296869212503,
+          "t": -4.101467892971563,
+          "n": 10044,
+          "days": 102,
+          "parent_mean": -0.7858108444525972
+        },
+        {
+          "kind": "spawn",
+          "ns": "1771920005090116944",
+          "day": 105,
+          "schema": 26,
+          "parent": 4,
+          "describe": "#26 [vol=normal] -> range_revert/P2",
+          "cell": [
+            "vol",
+            "normal"
+          ],
+          "mean_residual": -0.11678573070249475,
+          "t": -4.205686333390439,
+          "n": 9265,
+          "days": 102,
+          "parent_mean": -0.7701908973519015
+        }
+      ],
+      "seconds": 7.898802100215107
+    },
+    "planted_full": {
+      "params": {
+        "half_life_days": 40.0,
+        "min_n": 40.0,
+        "min_days": 8,
+        "kappa": 2.5,
+        "surprise_z": 2.0,
+        "spawn_n": 80,
+        "spawn_days": 10,
+        "spawn_t": 4.0,
+        "checkpoint_days": 5,
+        "max_children": 4,
+        "max_depth": 2,
+        "max_schemas": 96,
+        "quarantine_days": 15,
+        "confirm_t": 2.0,
+        "recent_days": 5,
+        "accommodation": true,
+        "learning": true,
+        "freeze_at_block": ""
+      },
+      "A": {
+        "days": 66,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 66
+        },
+        "active_days": 0
+      },
+      "B": {
+        "days": 42,
+        "trades": 820,
+        "completed": 816,
+        "censored": 1,
+        "not_filled": 3,
+        "net": 789.9000000000397,
+        "net_per_trade": 0.9644688644689129,
+        "win_rate": 0.34798534798534797,
+        "max_drawdown": 200.39999999999327,
+        "daily": {
+          "mean": 18.807142857143802,
+          "lower": 6.963630952381862,
+          "upper": 31.875000000001098,
+          "days": 42
+        },
+        "active_days": 24
+      },
+      "schemas": 70,
+      "statuses": {
+        "ACTIVE": 35,
+        "QUARANTINE": 22,
+        "RETIRED": 13
+      },
+      "spawned": 54,
+      "promoted": 19,
+      "refuted": 13,
+      "expectation_error": {
+        "2025-10": {
+          "n": 54060,
+          "mse": 16.44615359680996,
+          "mse_context_free": 16.425853822542198,
+          "skill": -0.0012358428661956022
+        },
+        "2025-11": {
+          "n": 44549,
+          "mse": 14.733985870624622,
+          "mse_context_free": 14.732967821581685,
+          "skill": -6.910006559879278e-05
+        },
+        "2025-12": {
+          "n": 58353,
+          "mse": 15.992070482882607,
+          "mse_context_free": 16.623605268659514,
+          "skill": 0.03799024192228262
+        },
+        "2026-01": {
+          "n": 65251,
+          "mse": 19.412221634305094,
+          "mse_context_free": 21.073524179233647,
+          "skill": 0.07883363650042174
+        },
+        "2026-02": {
+          "n": 71521,
+          "mse": 21.08013207782086,
+          "mse_context_free": 20.46030560002596,
+          "skill": -0.03029409677019257
+        }
+      },
+      "fingerprint": {
+        "B": {
+          "programs": {
+            "long": 0.755,
+            "against_trend": 0.244,
+            "range_revert": 0.001
+          },
+          "plans": {
+            "(80, 40, 1800)": 1.0
+          },
+          "long_share": 0.998780487804878,
+          "child_share": 1.0,
+          "distinct_schemas": 4,
+          "top": [
+            {
+              "describe": "#18 [range=low] -> long/P3",
+              "size": 619,
+              "sum": 873.5
+            },
+            {
+              "describe": "#21 [trend=down] -> against_trend/P3",
+              "size": 196,
+              "sum": -86.0
+            },
+            {
+              "describe": "#22 [range=low] -> against_trend/P3",
+              "size": 4,
+              "sum": 6.9
+            },
+            {
+              "describe": "#23 [trend=down] -> range_revert/P3",
+              "size": 1,
+              "sum": -4.5
+            }
+          ]
+        }
+      },
+      "monthly": {
+        "2026-01": {
+          "trades": 689,
+          "net": 957.3000000000329,
+          "schemas": {
+            "#18 [range=low] -> long/P3": 530,
+            "#21 [trend=down] -> against_trend/P3": 159
+          }
+        },
+        "2026-02": {
+          "trades": 130,
+          "net": -167.39999999999327,
+          "schemas": {
+            "#18 [range=low] -> long/P3": 88,
+            "#21 [trend=down] -> against_trend/P3": 37,
+            "#22 [range=low] -> against_trend/P3": 4,
+            "#23 [trend=down] -> range_revert/P3": 1
+          }
+        }
+      },
+      "events": [
+        {
+          "kind": "spawn",
+          "ns": "1763453035071507267",
+          "day": 35,
+          "schema": 16,
+          "parent": 7,
+          "describe": "#16 [trend=up] -> short/P2",
+          "cell": [
+            "trend",
+            "up"
+          ],
+          "mean_residual": 0.2112428369739419,
+          "t": 4.0297612707238315,
+          "n": 2502,
+          "days": 34,
+          "parent_mean": -0.5683919028693283
+        },
+        {
+          "kind": "retired",
+          "ns": "1765184100000000000",
+          "schema": 16,
+          "describe": "#16 [trend=up] -> short/P2",
+          "confirm_t": -0.24985728511960845,
+          "n": 1010,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1765872205002539852",
+          "day": 55,
+          "schema": 17,
+          "parent": 13,
+          "describe": "#17 [trend=down] -> range_break/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.6925568280508375,
+          "t": -4.149311906882918,
+          "n": 2453,
+          "days": 54,
+          "parent_mean": -1.0896925404656466
+        },
+        {
+          "kind": "spawn",
+          "ns": "1765872205002539852",
+          "day": 55,
+          "schema": 18,
+          "parent": 14,
+          "describe": "#18 [range=low] -> long/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": 0.606898122560232,
+          "t": 4.037363387962014,
+          "n": 2972,
+          "days": 54,
+          "parent_mean": -0.43007653083365216
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 19,
+          "parent": 8,
+          "describe": "#19 [trend=down] -> with_trend/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.5937065042103433,
+          "t": -4.414934977053825,
+          "n": 3846,
+          "days": 59,
+          "parent_mean": -1.1562432311502289
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 20,
+          "parent": 8,
+          "describe": "#20 [range=low] -> with_trend/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.8580205712591935,
+          "t": -4.684400338416847,
+          "n": 2666,
+          "days": 59,
+          "parent_mean": -1.1562432311502289
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 21,
+          "parent": 9,
+          "describe": "#21 [trend=down] -> against_trend/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": 0.49956381201156386,
+          "t": 4.16775756755509,
+          "n": 3844,
+          "days": 59,
+          "parent_mean": -0.15115233161550465
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 22,
+          "parent": 9,
+          "describe": "#22 [range=low] -> against_trend/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": 0.7631825709380282,
+          "t": 4.440307839260018,
+          "n": 2666,
+          "days": 59,
+          "parent_mean": -0.15115233161550465
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 23,
+          "parent": 12,
+          "describe": "#23 [trend=down] -> range_revert/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": 0.7686134331540971,
+          "t": 4.523630907834672,
+          "n": 2663,
+          "days": 59,
+          "parent_mean": -0.03387612363380019
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 24,
+          "parent": 12,
+          "describe": "#24 [range=low] -> range_revert/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": 0.7597649020813493,
+          "t": 4.78993776406317,
+          "n": 3227,
+          "days": 59,
+          "parent_mean": -0.03387612363380019
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 25,
+          "parent": 13,
+          "describe": "#25 [range=low] -> range_break/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.817092534110071,
+          "t": -4.650332784154126,
+          "n": 3227,
+          "days": 59,
+          "parent_mean": -1.2549677485181205
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 26,
+          "parent": 14,
+          "describe": "#26 [trend=down] -> long/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": 0.5709056661275242,
+          "t": 4.504303594531276,
+          "n": 3848,
+          "days": 59,
+          "parent_mean": -0.34531887308928355
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 27,
+          "parent": 15,
+          "describe": "#27 [trend=down] -> short/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.6401854415771231,
+          "t": -4.518217785075584,
+          "n": 3850,
+          "days": 59,
+          "parent_mean": -0.9649769728319568
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 28,
+          "parent": 15,
+          "describe": "#28 [range=low] -> short/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.821992341489999,
+          "t": -4.393769394293946,
+          "n": 3238,
+          "days": 59,
+          "parent_mean": -0.9649769728319568
+        },
+        {
+          "kind": "spawn",
+          "ns": "1767081825000620428",
+          "day": 65,
+          "schema": 29,
+          "parent": 10,
+          "describe": "#29 [range=low] -> with_flow/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.8795623424500619,
+          "t": -4.114898213824489,
+          "n": 1559,
+          "days": 63,
+          "parent_mean": -1.1228577642450734
+        },
+        {
+          "kind": "spawn",
+          "ns": "1767686700000000000",
+          "day": 70,
+          "schema": 30,
+          "parent": 11,
+          "describe": "#30 [range=low] -> against_flow/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": 0.9169784311187671,
+          "t": 4.308912746608092,
+          "n": 1679,
+          "days": 67,
+          "parent_mean": -0.09738461138546246
+        },
+        {
+          "kind": "active",
+          "ns": "1767777645002147760",
+          "schema": 17,
+          "describe": "#17 [trend=down] -> range_break/P3",
+          "confirm_t": -6.365252477874382,
+          "n": 630,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1767777645002147760",
+          "schema": 18,
+          "describe": "#18 [range=low] -> long/P3",
+          "confirm_t": 6.264976390115753,
+          "n": 797,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768291205000963700",
+          "day": 75,
+          "schema": 31,
+          "parent": 10,
+          "describe": "#31 [trend=down] -> with_flow/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.7574886162828849,
+          "t": -4.144385761103758,
+          "n": 2117,
+          "days": 72,
+          "parent_mean": -1.1592572078505052
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768291205000963700",
+          "day": 75,
+          "schema": 32,
+          "parent": 12,
+          "describe": "#32 [flow=sell] -> range_revert/P3",
+          "cell": [
+            "flow",
+            "sell"
+          ],
+          "mean_residual": 0.9322151612716275,
+          "t": 4.096795021116922,
+          "n": 1924,
+          "days": 72,
+          "parent_mean": 0.17708165018115354
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768291205000963700",
+          "day": 75,
+          "schema": 33,
+          "parent": 13,
+          "describe": "#33 [vol=expanding] -> range_break/P3",
+          "cell": [
+            "vol",
+            "expanding"
+          ],
+          "mean_residual": -0.8394731443691783,
+          "t": -4.26516120494101,
+          "n": 1027,
+          "days": 72,
+          "parent_mean": -1.4648436591223684
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 19,
+          "describe": "#19 [trend=down] -> with_trend/P3",
+          "confirm_t": -4.017969359109128,
+          "n": 1022,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 20,
+          "describe": "#20 [range=low] -> with_trend/P3",
+          "confirm_t": -5.688496998025034,
+          "n": 691,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 21,
+          "describe": "#21 [trend=down] -> against_trend/P3",
+          "confirm_t": 5.533115183360076,
+          "n": 1022,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 22,
+          "describe": "#22 [range=low] -> against_trend/P3",
+          "confirm_t": 5.935535495048078,
+          "n": 691,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 23,
+          "describe": "#23 [trend=down] -> range_revert/P3",
+          "confirm_t": 5.641521116637506,
+          "n": 692,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 24,
+          "describe": "#24 [range=low] -> range_revert/P3",
+          "confirm_t": 5.775818292246241,
+          "n": 864,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 25,
+          "describe": "#25 [range=low] -> range_break/P3",
+          "confirm_t": -5.8257290319509485,
+          "n": 864,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 26,
+          "describe": "#26 [trend=down] -> long/P3",
+          "confirm_t": 6.541894731223932,
+          "n": 1022,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 27,
+          "describe": "#27 [trend=down] -> short/P3",
+          "confirm_t": -4.842860001541521,
+          "n": 1022,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 28,
+          "describe": "#28 [range=low] -> short/P3",
+          "confirm_t": -7.119853021736224,
+          "n": 864,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768896125000693439",
+          "day": 80,
+          "schema": 34,
+          "parent": 13,
+          "describe": "#34 [flow=sell] -> range_break/P3",
+          "cell": [
+            "flow",
+            "sell"
+          ],
+          "mean_residual": -0.9326138064326601,
+          "t": -4.428543451451778,
+          "n": 2040,
+          "days": 77,
+          "parent_mean": -1.5127012308474264
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768896125000693439",
+          "day": 80,
+          "schema": 35,
+          "parent": 19,
+          "describe": "#35 [range=low & trend=down] -> with_trend/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -1.144692643504602,
+          "t": -4.5423275727253785,
+          "n": 832,
+          "days": 18,
+          "parent_mean": -2.2859222168689786
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768896125000693439",
+          "day": 80,
+          "schema": 36,
+          "parent": 19,
+          "describe": "#36 [range=mid & trend=down] -> with_trend/P3",
+          "cell": [
+            "range",
+            "mid"
+          ],
+          "mean_residual": 1.6918080336021786,
+          "t": 6.267684322001928,
+          "n": 383,
+          "days": 18,
+          "parent_mean": -2.2859222168689786
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768896125000693439",
+          "day": 80,
+          "schema": 37,
+          "parent": 21,
+          "describe": "#37 [range=mid & trend=down] -> against_trend/P3",
+          "cell": [
+            "range",
+            "mid"
+          ],
+          "mean_residual": -1.5201693445556372,
+          "t": -5.823534094880271,
+          "n": 384,
+          "days": 18,
+          "parent_mean": 1.2709965937615344
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768896125000693439",
+          "day": 80,
+          "schema": 38,
+          "parent": 26,
+          "describe": "#38 [range=mid & trend=down] -> long/P3",
+          "cell": [
+            "range",
+            "mid"
+          ],
+          "mean_residual": -1.5201693445556372,
+          "t": -5.823534094880271,
+          "n": 384,
+          "days": 18,
+          "parent_mean": 1.2709965937615344
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768896125000693439",
+          "day": 80,
+          "schema": 39,
+          "parent": 27,
+          "describe": "#39 [range=low & trend=down] -> short/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -1.144692643504602,
+          "t": -4.5423275727253785,
+          "n": 832,
+          "days": 18,
+          "parent_mean": -2.2859222168689786
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768896125000693439",
+          "day": 80,
+          "schema": 40,
+          "parent": 27,
+          "describe": "#40 [range=mid & trend=down] -> short/P3",
+          "cell": [
+            "range",
+            "mid"
+          ],
+          "mean_residual": 1.6918080336021786,
+          "t": 6.267684322001928,
+          "n": 383,
+          "days": 18,
+          "parent_mean": -2.2859222168689786
+        },
+        {
+          "kind": "active",
+          "ns": "1768906200000000000",
+          "schema": 29,
+          "describe": "#29 [range=low] -> with_flow/P3",
+          "confirm_t": -3.993821098697891,
+          "n": 368,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1769436900000000000",
+          "schema": 30,
+          "describe": "#30 [range=low] -> against_flow/P3",
+          "confirm_t": 2.9696680926649117,
+          "n": 294,
+          "days": 15,
+          "reason": "confirmed"
+        }
+      ],
+      "seconds": 9.847732299938798
+    },
+    "planted_assimilate_only": {
+      "params": {
+        "half_life_days": 40.0,
+        "min_n": 40.0,
+        "min_days": 8,
+        "kappa": 2.5,
+        "surprise_z": 2.0,
+        "spawn_n": 80,
+        "spawn_days": 10,
+        "spawn_t": 4.0,
+        "checkpoint_days": 5,
+        "max_children": 4,
+        "max_depth": 2,
+        "max_schemas": 96,
+        "quarantine_days": 15,
+        "confirm_t": 2.0,
+        "recent_days": 5,
+        "accommodation": false,
+        "learning": true,
+        "freeze_at_block": ""
+      },
+      "A": {
+        "days": 66,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 66
+        },
+        "active_days": 0
+      },
+      "B": {
+        "days": 42,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 42
+        },
+        "active_days": 0
+      },
+      "schemas": 16,
+      "statuses": {
+        "ACTIVE": 16
+      },
+      "spawned": 0,
+      "promoted": 0,
+      "refuted": 0,
+      "expectation_error": {
+        "2025-10": {
+          "n": 54060,
+          "mse": 16.44615359680996,
+          "mse_context_free": 16.425853822542198,
+          "skill": -0.0012358428661956022
+        },
+        "2025-11": {
+          "n": 43952,
+          "mse": 14.850217738969635,
+          "mse_context_free": 14.849596869610313,
+          "skill": -4.1810519489038356e-05
+        },
+        "2025-12": {
+          "n": 53663,
+          "mse": 14.99366280322817,
+          "mse_context_free": 15.25199609237322,
+          "skill": 0.01693767081898423
+        },
+        "2026-01": {
+          "n": 48812,
+          "mse": 16.62495287854139,
+          "mse_context_free": 16.953153236216167,
+          "skill": 0.01935925152694673
+        },
+        "2026-02": {
+          "n": 47092,
+          "mse": 17.474943837395557,
+          "mse_context_free": 17.36807659982196,
+          "skill": -0.00615308419210292
+        }
+      },
+      "fingerprint": {},
+      "monthly": {},
+      "events": [],
+      "seconds": 3.6242873002775013
+    },
+    "planted_frozen_after_A": {
+      "params": {
+        "half_life_days": 40.0,
+        "min_n": 40.0,
+        "min_days": 8,
+        "kappa": 2.5,
+        "surprise_z": 2.0,
+        "spawn_n": 80,
+        "spawn_days": 10,
+        "spawn_t": 4.0,
+        "checkpoint_days": 5,
+        "max_children": 4,
+        "max_depth": 2,
+        "max_schemas": 96,
+        "quarantine_days": 15,
+        "confirm_t": 2.0,
+        "recent_days": 5,
+        "accommodation": true,
+        "learning": true,
+        "freeze_at_block": "B"
+      },
+      "A": {
+        "days": 66,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 66
+        },
+        "active_days": 0
+      },
+      "B": {
+        "days": 42,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 42
+        },
+        "active_days": 0
+      },
+      "schemas": 30,
+      "statuses": {
+        "ACTIVE": 16,
+        "QUARANTINE": 13,
+        "RETIRED": 1
+      },
+      "spawned": 14,
+      "promoted": 0,
+      "refuted": 1,
+      "expectation_error": {
+        "2025-10": {
+          "n": 54060,
+          "mse": 16.44615359680996,
+          "mse_context_free": 16.425853822542198,
+          "skill": -0.0012358428661956022
+        },
+        "2025-11": {
+          "n": 44549,
+          "mse": 14.733985870624622,
+          "mse_context_free": 14.732967821581685,
+          "skill": -6.910006559879278e-05
+        },
+        "2025-12": {
+          "n": 58350,
+          "mse": 15.9924228019245,
+          "mse_context_free": 16.623997420301198,
+          "skill": 0.037991741842152926
+        }
+      },
+      "fingerprint": {},
+      "monthly": {},
+      "events": [
+        {
+          "kind": "spawn",
+          "ns": "1763453035071507267",
+          "day": 35,
+          "schema": 16,
+          "parent": 7,
+          "describe": "#16 [trend=up] -> short/P2",
+          "cell": [
+            "trend",
+            "up"
+          ],
+          "mean_residual": 0.2112428369739419,
+          "t": 4.0297612707238315,
+          "n": 2502,
+          "days": 34,
+          "parent_mean": -0.5683919028693283
+        },
+        {
+          "kind": "retired",
+          "ns": "1765184100000000000",
+          "schema": 16,
+          "describe": "#16 [trend=up] -> short/P2",
+          "confirm_t": -0.24985728511960845,
+          "n": 1010,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1765872205002539852",
+          "day": 55,
+          "schema": 17,
+          "parent": 13,
+          "describe": "#17 [trend=down] -> range_break/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.6925568280508375,
+          "t": -4.149311906882918,
+          "n": 2453,
+          "days": 54,
+          "parent_mean": -1.0896925404656466
+        },
+        {
+          "kind": "spawn",
+          "ns": "1765872205002539852",
+          "day": 55,
+          "schema": 18,
+          "parent": 14,
+          "describe": "#18 [range=low] -> long/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": 0.606898122560232,
+          "t": 4.037363387962014,
+          "n": 2972,
+          "days": 54,
+          "parent_mean": -0.43007653083365216
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 19,
+          "parent": 8,
+          "describe": "#19 [trend=down] -> with_trend/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.5937065042103433,
+          "t": -4.414934977053825,
+          "n": 3846,
+          "days": 59,
+          "parent_mean": -1.1562432311502289
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 20,
+          "parent": 8,
+          "describe": "#20 [range=low] -> with_trend/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.8580205712591935,
+          "t": -4.684400338416847,
+          "n": 2666,
+          "days": 59,
+          "parent_mean": -1.1562432311502289
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 21,
+          "parent": 9,
+          "describe": "#21 [trend=down] -> against_trend/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": 0.49956381201156386,
+          "t": 4.16775756755509,
+          "n": 3844,
+          "days": 59,
+          "parent_mean": -0.15115233161550465
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 22,
+          "parent": 9,
+          "describe": "#22 [range=low] -> against_trend/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": 0.7631825709380282,
+          "t": 4.440307839260018,
+          "n": 2666,
+          "days": 59,
+          "parent_mean": -0.15115233161550465
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 23,
+          "parent": 12,
+          "describe": "#23 [trend=down] -> range_revert/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": 0.7686134331540971,
+          "t": 4.523630907834672,
+          "n": 2663,
+          "days": 59,
+          "parent_mean": -0.03387612363380019
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 24,
+          "parent": 12,
+          "describe": "#24 [range=low] -> range_revert/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": 0.7597649020813493,
+          "t": 4.78993776406317,
+          "n": 3227,
+          "days": 59,
+          "parent_mean": -0.03387612363380019
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 25,
+          "parent": 13,
+          "describe": "#25 [range=low] -> range_break/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.817092534110071,
+          "t": -4.650332784154126,
+          "n": 3227,
+          "days": 59,
+          "parent_mean": -1.2549677485181205
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 26,
+          "parent": 14,
+          "describe": "#26 [trend=down] -> long/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": 0.5709056661275242,
+          "t": 4.504303594531276,
+          "n": 3848,
+          "days": 59,
+          "parent_mean": -0.34531887308928355
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 27,
+          "parent": 15,
+          "describe": "#27 [trend=down] -> short/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.6401854415771231,
+          "t": -4.518217785075584,
+          "n": 3850,
+          "days": 59,
+          "parent_mean": -0.9649769728319568
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 28,
+          "parent": 15,
+          "describe": "#28 [range=low] -> short/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.821992341489999,
+          "t": -4.393769394293946,
+          "n": 3238,
+          "days": 59,
+          "parent_mean": -0.9649769728319568
+        },
+        {
+          "kind": "spawn",
+          "ns": "1767081825000620428",
+          "day": 65,
+          "schema": 29,
+          "parent": 10,
+          "describe": "#29 [range=low] -> with_flow/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.8795623424500619,
+          "t": -4.114898213824489,
+          "n": 1559,
+          "days": 63,
+          "parent_mean": -1.1228577642450734
+        }
+      ],
+      "seconds": 4.968495999928564
+    },
+    "planted_no_forgetting": {
+      "params": {
+        "half_life_days": "inf",
+        "min_n": 40.0,
+        "min_days": 8,
+        "kappa": 2.5,
+        "surprise_z": 2.0,
+        "spawn_n": 80,
+        "spawn_days": 10,
+        "spawn_t": 4.0,
+        "checkpoint_days": 5,
+        "max_children": 4,
+        "max_depth": 2,
+        "max_schemas": 96,
+        "quarantine_days": 15,
+        "confirm_t": 2.0,
+        "recent_days": 5,
+        "accommodation": true,
+        "learning": true,
+        "freeze_at_block": ""
+      },
+      "A": {
+        "days": 66,
+        "trades": 0,
+        "completed": 0,
+        "censored": 0,
+        "not_filled": 0,
+        "net": 0.0,
+        "net_per_trade": null,
+        "win_rate": null,
+        "max_drawdown": 0.0,
+        "daily": {
+          "mean": 0.0,
+          "lower": 0.0,
+          "upper": 0.0,
+          "days": 66
+        },
+        "active_days": 0
+      },
+      "B": {
+        "days": 42,
+        "trades": 687,
+        "completed": 683,
+        "censored": 1,
+        "not_filled": 3,
+        "net": 578.9000000000337,
+        "net_per_trade": 0.8438775510204574,
+        "win_rate": 0.34402332361516036,
+        "max_drawdown": 200.39999999999327,
+        "daily": {
+          "mean": 13.783333333334136,
+          "lower": 2.1401785714292263,
+          "upper": 26.55744047619138,
+          "days": 42
+        },
+        "active_days": 21
+      },
+      "schemas": 78,
+      "statuses": {
+        "ACTIVE": 35,
+        "QUARANTINE": 26,
+        "RETIRED": 17
+      },
+      "spawned": 62,
+      "promoted": 19,
+      "refuted": 17,
+      "expectation_error": {
+        "2025-10": {
+          "n": 54060,
+          "mse": 16.448812627151586,
+          "mse_context_free": 16.425853822542198,
+          "skill": -0.0013977236652307212
+        },
+        "2025-11": {
+          "n": 44549,
+          "mse": 14.734517753623258,
+          "mse_context_free": 14.732967821581685,
+          "skill": -0.00010520161723981403
+        },
+        "2025-12": {
+          "n": 58091,
+          "mse": 15.996690872469697,
+          "mse_context_free": 16.53851693045485,
+          "skill": 0.03276146587167106
+        },
+        "2026-01": {
+          "n": 65354,
+          "mse": 19.463286205186378,
+          "mse_context_free": 21.095298919846073,
+          "skill": 0.0773638108121012
+        },
+        "2026-02": {
+          "n": 73434,
+          "mse": 20.894262366698854,
+          "mse_context_free": 20.19354893320064,
+          "skill": -0.03469986557668214
+        }
+      },
+      "fingerprint": {
+        "B": {
+          "programs": {
+            "range_revert": 0.691,
+            "against_trend": 0.309
+          },
+          "plans": {
+            "(80, 40, 1800)": 1.0
+          },
+          "long_share": 0.9985443959243085,
+          "child_share": 1.0,
+          "distinct_schemas": 4,
+          "top": [
+            {
+              "describe": "#23 [range=low] -> range_revert/P3",
+              "size": 469,
+              "sum": 660.4
+            },
+            {
+              "describe": "#20 [trend=down] -> against_trend/P3",
+              "size": 202,
+              "sum": -89.2
+            },
+            {
+              "describe": "#21 [range=low] -> against_trend/P3",
+              "size": 10,
+              "sum": 1.3
+            },
+            {
+              "describe": "#22 [trend=down] -> range_revert/P3",
+              "size": 6,
+              "sum": 6.4
+            }
+          ]
+        }
+      },
+      "monthly": {
+        "2026-01": {
+          "trades": 550,
+          "net": 749.6000000000267,
+          "schemas": {
+            "#23 [range=low] -> range_revert/P3": 386,
+            "#20 [trend=down] -> against_trend/P3": 159,
+            "#22 [trend=down] -> range_revert/P3": 5
+          }
+        },
+        "2026-02": {
+          "trades": 136,
+          "net": -170.699999999993,
+          "schemas": {
+            "#23 [range=low] -> range_revert/P3": 82,
+            "#20 [trend=down] -> against_trend/P3": 43,
+            "#21 [range=low] -> against_trend/P3": 10,
+            "#22 [trend=down] -> range_revert/P3": 1
+          }
+        }
+      },
+      "events": [
+        {
+          "kind": "spawn",
+          "ns": "1763453035071507267",
+          "day": 35,
+          "schema": 16,
+          "parent": 7,
+          "describe": "#16 [trend=up] -> short/P2",
+          "cell": [
+            "trend",
+            "up"
+          ],
+          "mean_residual": 0.21324487277715054,
+          "t": 4.060087485229996,
+          "n": 2502,
+          "days": 34,
+          "parent_mean": -0.5796869129618352
+        },
+        {
+          "kind": "retired",
+          "ns": "1765184100000000000",
+          "schema": 16,
+          "describe": "#16 [trend=up] -> short/P2",
+          "confirm_t": -0.25062123163401245,
+          "n": 1010,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1765872205002539852",
+          "day": 55,
+          "schema": 17,
+          "parent": 13,
+          "describe": "#17 [trend=down] -> range_break/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.7080261061298956,
+          "t": -4.171926877852273,
+          "n": 2453,
+          "days": 54,
+          "parent_mean": -0.9854630033435268
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 18,
+          "parent": 8,
+          "describe": "#18 [trend=down] -> with_trend/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.6098267493325917,
+          "t": -4.4432757410432195,
+          "n": 3846,
+          "days": 59,
+          "parent_mean": -1.044187761120685
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 19,
+          "parent": 8,
+          "describe": "#19 [range=low] -> with_trend/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.8734807230073641,
+          "t": -4.6968624731274655,
+          "n": 2666,
+          "days": 59,
+          "parent_mean": -1.044187761120685
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 20,
+          "parent": 9,
+          "describe": "#20 [trend=down] -> against_trend/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": 0.4987695788554323,
+          "t": 4.0949440816384834,
+          "n": 3844,
+          "days": 59,
+          "parent_mean": -0.2462077443146785
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 21,
+          "parent": 9,
+          "describe": "#21 [range=low] -> against_trend/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": 0.7617590839373275,
+          "t": 4.379350538858344,
+          "n": 2666,
+          "days": 59,
+          "parent_mean": -0.2462077443146785
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 22,
+          "parent": 12,
+          "describe": "#22 [trend=down] -> range_revert/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": 0.7764639954717832,
+          "t": 4.489044598931544,
+          "n": 2663,
+          "days": 59,
+          "parent_mean": -0.16269671912506878
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 23,
+          "parent": 12,
+          "describe": "#23 [range=low] -> range_revert/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": 0.7676503579328058,
+          "t": 4.74798454488293,
+          "n": 3227,
+          "days": 59,
+          "parent_mean": -0.16269671912506878
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 24,
+          "parent": 13,
+          "describe": "#24 [range=low] -> range_break/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.8414932014874389,
+          "t": -4.682516675055657,
+          "n": 3227,
+          "days": 59,
+          "parent_mean": -1.1008400000000194
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 25,
+          "parent": 14,
+          "describe": "#25 [trend=down] -> long/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": 0.5604549588468608,
+          "t": 4.382116270457005,
+          "n": 3848,
+          "days": 59,
+          "parent_mean": -0.40880418535128954
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 26,
+          "parent": 14,
+          "describe": "#26 [range=low] -> long/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": 0.8123241263109278,
+          "t": 4.813874853113939,
+          "n": 3238,
+          "days": 59,
+          "parent_mean": -0.40880418535128954
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 27,
+          "parent": 15,
+          "describe": "#27 [trend=down] -> short/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.6367641481088345,
+          "t": -4.435331496069978,
+          "n": 3850,
+          "days": 59,
+          "parent_mean": -0.8805918840146085
+        },
+        {
+          "kind": "spawn",
+          "ns": "1766477100000000000",
+          "day": 60,
+          "schema": 28,
+          "parent": 15,
+          "describe": "#28 [range=low] -> short/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.8178691011913057,
+          "t": -4.3307285389016545,
+          "n": 3238,
+          "days": 59,
+          "parent_mean": -0.8805918840146085
+        },
+        {
+          "kind": "spawn",
+          "ns": "1767081825000620428",
+          "day": 65,
+          "schema": 29,
+          "parent": 10,
+          "describe": "#29 [range=low] -> with_flow/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.9033201234794281,
+          "t": -4.149686241299319,
+          "n": 1559,
+          "days": 63,
+          "parent_mean": -0.9938879456706142
+        },
+        {
+          "kind": "spawn",
+          "ns": "1767686700000000000",
+          "day": 70,
+          "schema": 30,
+          "parent": 11,
+          "describe": "#30 [range=low] -> against_flow/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": 0.9263958948898696,
+          "t": 4.298657814722908,
+          "n": 1679,
+          "days": 67,
+          "parent_mean": -0.1680704845814482
+        },
+        {
+          "kind": "spawn",
+          "ns": "1767686700000000000",
+          "day": 70,
+          "schema": 31,
+          "parent": 13,
+          "describe": "#31 [vol=expanding] -> range_break/P3",
+          "cell": [
+            "vol",
+            "expanding"
+          ],
+          "mean_residual": -0.8425263151845027,
+          "t": -4.109142587358717,
+          "n": 936,
+          "days": 67,
+          "parent_mean": -1.20588786140695
+        },
+        {
+          "kind": "active",
+          "ns": "1767777645002147760",
+          "schema": 17,
+          "describe": "#17 [trend=down] -> range_break/P3",
+          "confirm_t": -6.743283412246865,
+          "n": 630,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768291205000963700",
+          "day": 75,
+          "schema": 32,
+          "parent": 10,
+          "describe": "#32 [trend=down] -> with_flow/P3",
+          "cell": [
+            "trend",
+            "down"
+          ],
+          "mean_residual": -0.7973299318954635,
+          "t": -4.265636914256602,
+          "n": 2117,
+          "days": 72,
+          "parent_mean": -1.0344911937377659
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768291205000963700",
+          "day": 75,
+          "schema": 33,
+          "parent": 12,
+          "describe": "#33 [flow=sell] -> range_revert/P3",
+          "cell": [
+            "flow",
+            "sell"
+          ],
+          "mean_residual": 0.9733930254247307,
+          "t": 4.194653051318237,
+          "n": 1924,
+          "days": 72,
+          "parent_mean": -0.007073223570155688
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 18,
+          "describe": "#18 [trend=down] -> with_trend/P3",
+          "confirm_t": -4.488756656030012,
+          "n": 1022,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 19,
+          "describe": "#19 [range=low] -> with_trend/P3",
+          "confirm_t": -6.0722608129130675,
+          "n": 691,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 20,
+          "describe": "#20 [trend=down] -> against_trend/P3",
+          "confirm_t": 6.059865483390246,
+          "n": 1022,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 21,
+          "describe": "#21 [range=low] -> against_trend/P3",
+          "confirm_t": 6.3075885362018616,
+          "n": 691,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 22,
+          "describe": "#22 [trend=down] -> range_revert/P3",
+          "confirm_t": 6.11880317012374,
+          "n": 692,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 23,
+          "describe": "#23 [range=low] -> range_revert/P3",
+          "confirm_t": 6.293412203739168,
+          "n": 864,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 24,
+          "describe": "#24 [range=low] -> range_break/P3",
+          "confirm_t": -6.454156019743108,
+          "n": 864,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 25,
+          "describe": "#25 [trend=down] -> long/P3",
+          "confirm_t": 6.878002311032766,
+          "n": 1022,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 26,
+          "describe": "#26 [range=low] -> long/P3",
+          "confirm_t": 7.246603652628186,
+          "n": 864,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 27,
+          "describe": "#27 [trend=down] -> short/P3",
+          "confirm_t": -5.1760924288427725,
+          "n": 1022,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1768380900000000000",
+          "schema": 28,
+          "describe": "#28 [range=low] -> short/P3",
+          "confirm_t": -7.426423977280158,
+          "n": 864,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768896125000693439",
+          "day": 80,
+          "schema": 34,
+          "parent": 13,
+          "describe": "#34 [flow=sell] -> range_break/P3",
+          "cell": [
+            "flow",
+            "sell"
+          ],
+          "mean_residual": -0.9999303717128303,
+          "t": -4.636609363786644,
+          "n": 2040,
+          "days": 77,
+          "parent_mean": -1.2998787021124987
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768896125000693439",
+          "day": 80,
+          "schema": 35,
+          "parent": 18,
+          "describe": "#35 [range=low & trend=down] -> with_trend/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -1.1504326054058276,
+          "t": -4.551087022954917,
+          "n": 832,
+          "days": 18,
+          "parent_mean": -2.262977707006348
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768896125000693439",
+          "day": 80,
+          "schema": 36,
+          "parent": 18,
+          "describe": "#36 [range=mid & trend=down] -> with_trend/P3",
+          "cell": [
+            "range",
+            "mid"
+          ],
+          "mean_residual": 1.6861267040042087,
+          "t": 6.244518019256544,
+          "n": 383,
+          "days": 18,
+          "parent_mean": -2.262977707006348
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768896125000693439",
+          "day": 80,
+          "schema": 37,
+          "parent": 20,
+          "describe": "#37 [range=mid & trend=down] -> against_trend/P3",
+          "cell": [
+            "range",
+            "mid"
+          ],
+          "mean_residual": -1.5209660098326045,
+          "t": -5.820256428647258,
+          "n": 384,
+          "days": 18,
+          "parent_mean": 1.2777777777778287
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768896125000693439",
+          "day": 80,
+          "schema": 38,
+          "parent": 25,
+          "describe": "#38 [range=mid & trend=down] -> long/P3",
+          "cell": [
+            "range",
+            "mid"
+          ],
+          "mean_residual": -1.5209660098326045,
+          "t": -5.820256428647258,
+          "n": 384,
+          "days": 18,
+          "parent_mean": 1.2777777777778287
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768896125000693439",
+          "day": 80,
+          "schema": 39,
+          "parent": 27,
+          "describe": "#39 [range=low & trend=down] -> short/P3",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -1.1504326054058276,
+          "t": -4.551087022954917,
+          "n": 832,
+          "days": 18,
+          "parent_mean": -2.262977707006348
+        },
+        {
+          "kind": "spawn",
+          "ns": "1768896125000693439",
+          "day": 80,
+          "schema": 40,
+          "parent": 27,
+          "describe": "#40 [range=mid & trend=down] -> short/P3",
+          "cell": [
+            "range",
+            "mid"
+          ],
+          "mean_residual": 1.6861267040042087,
+          "t": 6.244518019256544,
+          "n": 383,
+          "days": 18,
+          "parent_mean": -2.262977707006348
+        },
+        {
+          "kind": "active",
+          "ns": "1768906200000000000",
+          "schema": 29,
+          "describe": "#29 [range=low] -> with_flow/P3",
+          "confirm_t": -4.313129165237422,
+          "n": 368,
+          "days": 15,
+          "reason": "confirmed"
+        },
+        {
+          "kind": "active",
+          "ns": "1769421600000000000",
+          "schema": 31,
+          "describe": "#31 [vol=expanding] -> range_break/P3",
+          "confirm_t": -4.029140309283673,
+          "n": 220,
+          "days": 15,
+          "reason": "confirmed"
+        }
+      ],
+      "seconds": 10.034508800134063
+    }
+  },
+  "planted_control": {
+    "start": "2025-12-01",
+    "end": "2026-01-31",
+    "coordinate": [
+      "range",
+      "low"
+    ],
+    "plan": 3,
+    "usd": 2.5,
+    "origins": 2515,
+    "meaning": "Synthetic positive control on the real stream; never economic evidence"
+  },
+  "scope": "Train months only (A=Oct-Dec 2025, B=Jan-Feb 2026), prequential; development evidence."
+}
