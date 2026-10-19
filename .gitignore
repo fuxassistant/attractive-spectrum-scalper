@@ -79,3 +79,7 @@ credentials.json
 !/reports/schemas_v1/schema_summary.json
 !/reports/schemas_v1/qmodel_ablation.json
 !/reports/schemas_v1/library_full.json
+!/reports/schemas_passive_v1/
+/reports/schemas_passive_v1/*
+!/reports/schemas_passive_v1/PASSIVE_RU.md
+!/reports/schemas_passive_v1/passive_summary.json

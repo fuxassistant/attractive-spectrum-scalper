@@ -1,0 +1,1755 @@
+{
+  "version": "PASSIVE_EXECUTION_READOUT_V1",
+  "passive_manifest_sha256": "d4f2d9dd6b3d369aeba2d51a983fda237c6120100e91492565cd098809fe9153",
+  "fifo": {
+    "date": "2025-10-01",
+    "fills": 238745,
+    "fifo_first": 233093,
+    "violation_share": 0.023673794215585665
+  },
+  "parity": {
+    "rows": 207880,
+    "status_agreement": 1.0,
+    "max_abs_net_difference": 1.3677947663381929e-13
+  },
+  "variants": [
+    {
+      "variant": "PQ_120",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "A",
+      "attempts": 31156,
+      "fill_rate": 0.8972910514828605,
+      "net_per_trade": -0.5081413650021461,
+      "attempt": {
+        "mean": -0.45456029773675,
+        "lower": -0.4680526934010491,
+        "upper": -0.440837318810033,
+        "days": 65
+      },
+      "censored": 27
+    },
+    {
+      "variant": "PQ_120",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "B",
+      "attempts": 20052,
+      "fill_rate": 0.8842010771992819,
+      "net_per_trade": -0.6874280879864636,
+      "attempt": {
+        "mean": -0.6088479026909432,
+        "lower": -0.662919968377859,
+        "upper": -0.5560124974160305,
+        "days": 41
+      },
+      "censored": 6
+    },
+    {
+      "variant": "PQ_120",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "A",
+      "attempts": 30965,
+      "fill_rate": 0.8978847085419022,
+      "net_per_trade": -0.49806495701902675,
+      "attempt": {
+        "mean": -0.446020819244337,
+        "lower": -0.4613091082044318,
+        "upper": -0.4303070550404435,
+        "days": 65
+      },
+      "censored": 35
+    },
+    {
+      "variant": "PQ_120",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "B",
+      "attempts": 19946,
+      "fill_rate": 0.8842374410909456,
+      "net_per_trade": -0.6944661790553949,
+      "attempt": {
+        "mean": -0.6143507047749778,
+        "lower": -0.6727243986497394,
+        "upper": -0.5589923040663842,
+        "days": 41
+      },
+      "censored": 5
+    },
+    {
+      "variant": "PQ_120",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "A",
+      "attempts": 30716,
+      "fill_rate": 0.8984568303164474,
+      "net_per_trade": -0.49988404536725006,
+      "attempt": {
+        "mean": -0.448264235068715,
+        "lower": -0.47021185780632346,
+        "upper": -0.42556521407736486,
+        "days": 65
+      },
+      "censored": 38
+    },
+    {
+      "variant": "PQ_120",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "B",
+      "attempts": 19818,
+      "fill_rate": 0.8850539913210212,
+      "net_per_trade": -0.6832497149372863,
+      "attempt": {
+        "mean": -0.606732951032156,
+        "lower": -0.6666739824477889,
+        "upper": -0.5511279769831763,
+        "days": 41
+      },
+      "censored": 9
+    },
+    {
+      "variant": "PQ_120",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "A",
+      "attempts": 29927,
+      "fill_rate": 0.9011260734453838,
+      "net_per_trade": -0.5408372886383861,
+      "attempt": {
+        "mean": -0.48634591614547407,
+        "lower": -0.5308529553805857,
+        "upper": -0.44270408615276374,
+        "days": 65
+      },
+      "censored": 54
+    },
+    {
+      "variant": "PQ_120",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "B",
+      "attempts": 19285,
+      "fill_rate": 0.8870624837956962,
+      "net_per_trade": -0.7064944174899163,
+      "attempt": {
+        "mean": -0.630813673834078,
+        "lower": -0.7272665491721376,
+        "upper": -0.5439271372320204,
+        "days": 41
+      },
+      "censored": 26
+    },
+    {
+      "variant": "PQ_30",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "A",
+      "attempts": 31164,
+      "fill_rate": 0.8046463868566295,
+      "net_per_trade": -0.5116605519221565,
+      "attempt": {
+        "mean": -0.41030311310521356,
+        "lower": -0.4241389170368633,
+        "upper": -0.395838840335066,
+        "days": 65
+      },
+      "censored": 21
+    },
+    {
+      "variant": "PQ_30",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "B",
+      "attempts": 20056,
+      "fill_rate": 0.7751794974072597,
+      "net_per_trade": -0.6935743230205185,
+      "attempt": {
+        "mean": -0.5385402051937067,
+        "lower": -0.5895662478521931,
+        "upper": -0.48875251960305066,
+        "days": 41
+      },
+      "censored": 4
+    },
+    {
+      "variant": "PQ_30",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "A",
+      "attempts": 30979,
+      "fill_rate": 0.8052874527906001,
+      "net_per_trade": -0.5004689942678477,
+      "attempt": {
+        "mean": -0.40160350671499195,
+        "lower": -0.4175483268814124,
+        "upper": -0.38555325407812346,
+        "days": 65
+      },
+      "censored": 23
+    },
+    {
+      "variant": "PQ_30",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "B",
+      "attempts": 19948,
+      "fill_rate": 0.7756166031682374,
+      "net_per_trade": -0.7043950361944157,
+      "attempt": {
+        "mean": -0.5470566964865393,
+        "lower": -0.6016959810326684,
+        "upper": -0.49740274026657005,
+        "days": 41
+      },
+      "censored": 4
+    },
+    {
+      "variant": "PQ_30",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "A",
+      "attempts": 30734,
+      "fill_rate": 0.8058501984772565,
+      "net_per_trade": -0.4969031372390681,
+      "attempt": {
+        "mean": -0.39932849143380456,
+        "lower": -0.422513403827628,
+        "upper": -0.3758633289551712,
+        "days": 65
+      },
+      "censored": 23
+    },
+    {
+      "variant": "PQ_30",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "B",
+      "attempts": 19821,
+      "fill_rate": 0.7763483174410978,
+      "net_per_trade": -0.6937353782167923,
+      "attempt": {
+        "mean": -0.5409126152334114,
+        "lower": -0.5931917264599178,
+        "upper": -0.4922197876802556,
+        "days": 41
+      },
+      "censored": 6
+    },
+    {
+      "variant": "PQ_30",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "A",
+      "attempts": 29948,
+      "fill_rate": 0.8096033124081742,
+      "net_per_trade": -0.5106780499876268,
+      "attempt": {
+        "mean": -0.4120786872556047,
+        "lower": -0.453520704416279,
+        "upper": -0.37110810978063774,
+        "days": 65
+      },
+      "censored": 34
+    },
+    {
+      "variant": "PQ_30",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "B",
+      "attempts": 19294,
+      "fill_rate": 0.7805017103762828,
+      "net_per_trade": -0.7067069526528985,
+      "attempt": {
+        "mean": -0.55541336604081,
+        "lower": -0.6345118237136943,
+        "upper": -0.4802555572558406,
+        "days": 41
+      },
+      "censored": 17
+    },
+    {
+      "variant": "PQ_600",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "A",
+      "attempts": 31130,
+      "fill_rate": 0.9487953742370704,
+      "net_per_trade": -0.5052478331527628,
+      "attempt": {
+        "mean": -0.47805415106486904,
+        "lower": -0.4916191990966782,
+        "upper": -0.46461367945802445,
+        "days": 65
+      },
+      "censored": 42
+    },
+    {
+      "variant": "PQ_600",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "B",
+      "attempts": 20046,
+      "fill_rate": 0.9463234560510825,
+      "net_per_trade": -0.6837743806009489,
+      "attempt": {
+        "mean": -0.6483501004629083,
+        "lower": -0.7072230554437458,
+        "upper": -0.5912435372412312,
+        "days": 41
+      },
+      "censored": 10
+    },
+    {
+      "variant": "PQ_600",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "A",
+      "attempts": 30950,
+      "fill_rate": 0.9491760904684976,
+      "net_per_trade": -0.49695339891752055,
+      "attempt": {
+        "mean": -0.4705333707779378,
+        "lower": -0.48587874533462133,
+        "upper": -0.45536795704509053,
+        "days": 65
+      },
+      "censored": 43
+    },
+    {
+      "variant": "PQ_600",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "B",
+      "attempts": 19935,
+      "fill_rate": 0.946526210183095,
+      "net_per_trade": -0.6902273570406487,
+      "attempt": {
+        "mean": -0.6534852833384942,
+        "lower": -0.7185693741013992,
+        "upper": -0.592315503170249,
+        "days": 41
+      },
+      "censored": 10
+    },
+    {
+      "variant": "PQ_600",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "A",
+      "attempts": 30693,
+      "fill_rate": 0.9494021438112925,
+      "net_per_trade": -0.49550446122168834,
+      "attempt": {
+        "mean": -0.4698877148823313,
+        "lower": -0.49232293035152236,
+        "upper": -0.44694580564343955,
+        "days": 65
+      },
+      "censored": 45
+    },
+    {
+      "variant": "PQ_600",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "B",
+      "attempts": 19802,
+      "fill_rate": 0.9469245530754469,
+      "net_per_trade": -0.6764865873820063,
+      "attempt": {
+        "mean": -0.6423525639803568,
+        "lower": -0.7071627036422042,
+        "upper": -0.5812997308068909,
+        "days": 41
+      },
+      "censored": 14
+    },
+    {
+      "variant": "PQ_600",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "A",
+      "attempts": 29909,
+      "fill_rate": 0.9505834364238189,
+      "net_per_trade": -0.5367908269142836,
+      "attempt": {
+        "mean": -0.510271300407214,
+        "lower": -0.5523191060162722,
+        "upper": -0.4661452198343327,
+        "days": 65
+      },
+      "censored": 64
+    },
+    {
+      "variant": "PQ_600",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "B",
+      "attempts": 19266,
+      "fill_rate": 0.9480431848852902,
+      "net_per_trade": -0.6980837667670405,
+      "attempt": {
+        "mean": -0.6654357340374382,
+        "lower": -0.7645406914532196,
+        "upper": -0.5700357620925417,
+        "days": 41
+      },
+      "censored": 36
+    },
+    {
+      "variant": "PT_30",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "A",
+      "attempts": 31164,
+      "fill_rate": 0.8046463868566295,
+      "net_per_trade": -0.5314364332429414,
+      "attempt": {
+        "mean": -0.4261781838048073,
+        "lower": -0.4407975956372629,
+        "upper": -0.41120794801745836,
+        "days": 65
+      },
+      "censored": 21
+    },
+    {
+      "variant": "PT_30",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "B",
+      "attempts": 20055,
+      "fill_rate": 0.7751682872101721,
+      "net_per_trade": -0.713810626527724,
+      "attempt": {
+        "mean": -0.5543140092175934,
+        "lower": -0.6066447083472204,
+        "upper": -0.5030490313685987,
+        "days": 41
+      },
+      "censored": 5
+    },
+    {
+      "variant": "PT_30",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "A",
+      "attempts": 30979,
+      "fill_rate": 0.8052874527906001,
+      "net_per_trade": -0.518459133362729,
+      "attempt": {
+        "mean": -0.4161576270525618,
+        "lower": -0.4323284849001298,
+        "upper": -0.3996137071884317,
+        "days": 65
+      },
+      "censored": 23
+    },
+    {
+      "variant": "PT_30",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "B",
+      "attempts": 19946,
+      "fill_rate": 0.7755941040810187,
+      "net_per_trade": -0.7324822236586942,
+      "attempt": {
+        "mean": -0.569073877553085,
+        "lower": -0.6250538739573019,
+        "upper": -0.517546581364174,
+        "days": 41
+      },
+      "censored": 6
+    },
+    {
+      "variant": "PT_30",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "A",
+      "attempts": 30734,
+      "fill_rate": 0.8058501984772565,
+      "net_per_trade": -0.5167723180037953,
+      "attempt": {
+        "mean": -0.41549850119525306,
+        "lower": -0.43862062269088964,
+        "upper": -0.3919083897676869,
+        "days": 65
+      },
+      "censored": 23
+    },
+    {
+      "variant": "PT_30",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "B",
+      "attempts": 19819,
+      "fill_rate": 0.7763257480195772,
+      "net_per_trade": -0.7263096321331081,
+      "attempt": {
+        "mean": -0.5664615342179653,
+        "lower": -0.6203836772194614,
+        "upper": -0.5142570375376798,
+        "days": 41
+      },
+      "censored": 8
+    },
+    {
+      "variant": "PT_30",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "A",
+      "attempts": 29948,
+      "fill_rate": 0.8096033124081742,
+      "net_per_trade": -0.5324630866947124,
+      "attempt": {
+        "mean": -0.42959605462168415,
+        "lower": -0.4737427511934611,
+        "upper": -0.38636875258967773,
+        "days": 65
+      },
+      "censored": 34
+    },
+    {
+      "variant": "PT_30",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "B",
+      "attempts": 19288,
+      "fill_rate": 0.7804334301119867,
+      "net_per_trade": -0.7574237693483026,
+      "attempt": {
+        "mean": -0.5944610152204167,
+        "lower": -0.6772389881323986,
+        "upper": -0.5162293853179865,
+        "days": 41
+      },
+      "censored": 23
+    },
+    {
+      "variant": "PXQ_120",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "A",
+      "attempts": 31142,
+      "fill_rate": 0.9876693853959283,
+      "net_per_trade": -0.5142759607256648,
+      "attempt": {
+        "mean": -0.5064719091800631,
+        "lower": -0.5207504605715898,
+        "upper": -0.4919379148619338,
+        "days": 65
+      },
+      "censored": 35
+    },
+    {
+      "variant": "PXQ_120",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "B",
+      "attempts": 20051,
+      "fill_rate": 0.9895765797217096,
+      "net_per_trade": -0.7037093034976313,
+      "attempt": {
+        "mean": -0.6982721547290983,
+        "lower": -0.7623033021663626,
+        "upper": -0.6368637131229377,
+        "days": 41
+      },
+      "censored": 6
+    },
+    {
+      "variant": "PXQ_120",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "A",
+      "attempts": 30956,
+      "fill_rate": 0.9878214239565836,
+      "net_per_trade": -0.5080349259295596,
+      "attempt": {
+        "mean": -0.5006793628872264,
+        "lower": -0.5187935623561301,
+        "upper": -0.48299059230699903,
+        "days": 65
+      },
+      "censored": 40
+    },
+    {
+      "variant": "PXQ_120",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "B",
+      "attempts": 19942,
+      "fill_rate": 0.9897201885467857,
+      "net_per_trade": -0.7131174950600395,
+      "attempt": {
+        "mean": -0.7066558832347232,
+        "lower": -0.7746236402853508,
+        "upper": -0.6453128974258044,
+        "days": 41
+      },
+      "censored": 5
+    },
+    {
+      "variant": "PXQ_120",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "A",
+      "attempts": 30707,
+      "fill_rate": 0.9880483277428599,
+      "net_per_trade": -0.5140969017798285,
+      "attempt": {
+        "mean": -0.506783791218176,
+        "lower": -0.5336020266215487,
+        "upper": -0.4800510584912455,
+        "days": 65
+      },
+      "censored": 44
+    },
+    {
+      "variant": "PXQ_120",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "B",
+      "attempts": 19811,
+      "fill_rate": 0.9899550754631266,
+      "net_per_trade": -0.7001784621660209,
+      "attempt": {
+        "mean": -0.6966442193764315,
+        "lower": -0.7652825671240375,
+        "upper": -0.6345338983095138,
+        "days": 41
+      },
+      "censored": 10
+    },
+    {
+      "variant": "PXQ_120",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "A",
+      "attempts": 29911,
+      "fill_rate": 0.9891678646651734,
+      "net_per_trade": -0.5564538479737721,
+      "attempt": {
+        "mean": -0.5494396597340024,
+        "lower": -0.5958093034630763,
+        "upper": -0.5025455123664523,
+        "days": 65
+      },
+      "censored": 70
+    },
+    {
+      "variant": "PXQ_120",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "B",
+      "attempts": 19277,
+      "fill_rate": 0.9909736992270581,
+      "net_per_trade": -0.7223943883159712,
+      "attempt": {
+        "mean": -0.7206500775889327,
+        "lower": -0.8321822991574999,
+        "upper": -0.6185954192695762,
+        "days": 41
+      },
+      "censored": 32
+    },
+    {
+      "variant": "PXQ_30",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "A",
+      "attempts": 31142,
+      "fill_rate": 0.9829811829683386,
+      "net_per_trade": -0.5224160459950346,
+      "attempt": {
+        "mean": -0.5121161703985329,
+        "lower": -0.5264757083632773,
+        "upper": -0.4967315417260052,
+        "days": 65
+      },
+      "censored": 40
+    },
+    {
+      "variant": "PXQ_30",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "B",
+      "attempts": 20051,
+      "fill_rate": 0.9848386614133958,
+      "net_per_trade": -0.723456727604193,
+      "attempt": {
+        "mean": -0.715061238599694,
+        "lower": -0.7800723137308497,
+        "upper": -0.6513851366068116,
+        "days": 41
+      },
+      "censored": 9
+    },
+    {
+      "variant": "PXQ_30",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "A",
+      "attempts": 30967,
+      "fill_rate": 0.9832402234636871,
+      "net_per_trade": -0.5154460063058329,
+      "attempt": {
+        "mean": -0.5053598606896816,
+        "lower": -0.5241243909522456,
+        "upper": -0.4860976864791428,
+        "days": 65
+      },
+      "censored": 34
+    },
+    {
+      "variant": "PXQ_30",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "B",
+      "attempts": 19946,
+      "fill_rate": 0.9851599318159029,
+      "net_per_trade": -0.7392010178117048,
+      "attempt": {
+        "mean": -0.7301633374032447,
+        "lower": -0.797476780315157,
+        "upper": -0.669044627893306,
+        "days": 41
+      },
+      "censored": 5
+    },
+    {
+      "variant": "PXQ_30",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "A",
+      "attempts": 30713,
+      "fill_rate": 0.9834597727346727,
+      "net_per_trade": -0.517344810461844,
+      "attempt": {
+        "mean": -0.5076400360485879,
+        "lower": -0.5316309607755125,
+        "upper": -0.48309480230497137,
+        "days": 65
+      },
+      "censored": 41
+    },
+    {
+      "variant": "PXQ_30",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "B",
+      "attempts": 19813,
+      "fill_rate": 0.9853126734971988,
+      "net_per_trade": -0.722538674316156,
+      "attempt": {
+        "mean": -0.7158026200918405,
+        "lower": -0.7773228949241181,
+        "upper": -0.661228363231633,
+        "days": 41
+      },
+      "censored": 12
+    },
+    {
+      "variant": "PXQ_30",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "A",
+      "attempts": 29921,
+      "fill_rate": 0.9854951371946125,
+      "net_per_trade": -0.5530878014040085,
+      "attempt": {
+        "mean": -0.5447969162018095,
+        "lower": -0.5927927848675567,
+        "upper": -0.49547519569857573,
+        "days": 65
+      },
+      "censored": 60
+    },
+    {
+      "variant": "PXQ_30",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "B",
+      "attempts": 19280,
+      "fill_rate": 0.987240663900415,
+      "net_per_trade": -0.7359462015340967,
+      "attempt": {
+        "mean": -0.7301849645171539,
+        "lower": -0.8250592992686266,
+        "upper": -0.6442447371168694,
+        "days": 41
+      },
+      "censored": 30
+    },
+    {
+      "variant": "PXQ_600",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "A",
+      "attempts": 31130,
+      "fill_rate": 0.988596209444266,
+      "net_per_trade": -0.5079350121852152,
+      "attempt": {
+        "mean": -0.5009329044291445,
+        "lower": -0.5140695156913263,
+        "upper": -0.4875069403747478,
+        "days": 65
+      },
+      "censored": 42
+    },
+    {
+      "variant": "PXQ_600",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "B",
+      "attempts": 20042,
+      "fill_rate": 0.9911186508332501,
+      "net_per_trade": -0.6904953685058397,
+      "attempt": {
+        "mean": -0.6863086454490187,
+        "lower": -0.7498234874664103,
+        "upper": -0.6248974364407733,
+        "days": 41
+      },
+      "censored": 11
+    },
+    {
+      "variant": "PXQ_600",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "A",
+      "attempts": 30937,
+      "fill_rate": 0.9892038659210654,
+      "net_per_trade": -0.49953272554978273,
+      "attempt": {
+        "mean": -0.4930659821648431,
+        "lower": -0.5086846668720787,
+        "upper": -0.4773990525896994,
+        "days": 65
+      },
+      "censored": 43
+    },
+    {
+      "variant": "PXQ_600",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "B",
+      "attempts": 19924,
+      "fill_rate": 0.991567958241317,
+      "net_per_trade": -0.697297023689006,
+      "attempt": {
+        "mean": -0.6920564350521001,
+        "lower": -0.7601551465188084,
+        "upper": -0.6287008333341417,
+        "days": 41
+      },
+      "censored": 11
+    },
+    {
+      "variant": "PXQ_600",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "A",
+      "attempts": 30658,
+      "fill_rate": 0.9897579750799139,
+      "net_per_trade": -0.4994430529923543,
+      "attempt": {
+        "mean": -0.4936405120462179,
+        "lower": -0.5160718294582237,
+        "upper": -0.47131007438371797,
+        "days": 65
+      },
+      "censored": 52
+    },
+    {
+      "variant": "PXQ_600",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "B",
+      "attempts": 19783,
+      "fill_rate": 0.9922660870444321,
+      "net_per_trade": -0.6863779928680591,
+      "attempt": {
+        "mean": -0.6834660130121772,
+        "lower": -0.7529426126347684,
+        "upper": -0.618294815492083,
+        "days": 41
+      },
+      "censored": 15
+    },
+    {
+      "variant": "PXQ_600",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "A",
+      "attempts": 29870,
+      "fill_rate": 0.9903247405423502,
+      "net_per_trade": -0.546242520536831,
+      "attempt": {
+        "mean": -0.5409348211299354,
+        "lower": -0.5869607762831288,
+        "upper": -0.49432266346585546,
+        "days": 65
+      },
+      "censored": 73
+    },
+    {
+      "variant": "PXQ_600",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "B",
+      "attempts": 19242,
+      "fill_rate": 0.9928281883380106,
+      "net_per_trade": -0.7112960636515913,
+      "attempt": {
+        "mean": -0.7100955045497926,
+        "lower": -0.8165940256855456,
+        "upper": -0.6111004343108193,
+        "days": 41
+      },
+      "censored": 41
+    },
+    {
+      "variant": "TQ",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "A",
+      "attempts": 31145,
+      "fill_rate": 0.986322042061326,
+      "net_per_trade": -0.572147530844103,
+      "attempt": {
+        "mean": -0.5629699819241217,
+        "lower": -0.5787755507936913,
+        "upper": -0.5478281986587258,
+        "days": 65
+      },
+      "censored": 21
+    },
+    {
+      "variant": "TQ",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "B",
+      "attempts": 19990,
+      "fill_rate": 0.992496248124062,
+      "net_per_trade": -0.8282157258064515,
+      "attempt": {
+        "mean": -0.8243834303995752,
+        "lower": -0.9123961732621482,
+        "upper": -0.7408445778732538,
+        "days": 41
+      },
+      "censored": 6
+    },
+    {
+      "variant": "TQ",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "A",
+      "attempts": 30968,
+      "fill_rate": 0.9863730302247481,
+      "net_per_trade": -0.5704052903817193,
+      "attempt": {
+        "mean": -0.5614315214853436,
+        "lower": -0.5795256007834921,
+        "upper": -0.5436774477299336,
+        "days": 65
+      },
+      "censored": 16
+    },
+    {
+      "variant": "TQ",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "B",
+      "attempts": 19879,
+      "fill_rate": 0.9925549574928316,
+      "net_per_trade": -0.8209315290659368,
+      "attempt": {
+        "mean": -0.8170267426352041,
+        "lower": -0.898544552383154,
+        "upper": -0.7394141950741661,
+        "days": 41
+      },
+      "censored": 11
+    },
+    {
+      "variant": "TQ",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "A",
+      "attempts": 30704,
+      "fill_rate": 0.9863861386138614,
+      "net_per_trade": -0.58034735521363,
+      "attempt": {
+        "mean": -0.5721951955367698,
+        "lower": -0.5949753516097688,
+        "upper": -0.5498402331836055,
+        "days": 65
+      },
+      "censored": 38
+    },
+    {
+      "variant": "TQ",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "B",
+      "attempts": 19757,
+      "fill_rate": 0.9926102141013312,
+      "net_per_trade": -0.8320687369333538,
+      "attempt": {
+        "mean": -0.8284220699985951,
+        "lower": -0.9102859578990491,
+        "upper": -0.7520610238760382,
+        "days": 41
+      },
+      "censored": 11
+    },
+    {
+      "variant": "TQ",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "A",
+      "attempts": 29907,
+      "fill_rate": 0.9872270705854816,
+      "net_per_trade": -0.6217984758679085,
+      "attempt": {
+        "mean": -0.6132176290454906,
+        "lower": -0.6590605343646891,
+        "upper": -0.5686266835692136,
+        "days": 65
+      },
+      "censored": 63
+    },
+    {
+      "variant": "TQ",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "B",
+      "attempts": 19227,
+      "fill_rate": 0.9929266136162688,
+      "net_per_trade": -0.8181499135718399,
+      "attempt": {
+        "mean": -0.81510981770727,
+        "lower": -0.9092560447104491,
+        "upper": -0.723463519216651,
+        "days": 41
+      },
+      "censored": 33
+    },
+    {
+      "variant": "TT",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "A",
+      "attempts": 31141,
+      "fill_rate": 0.9863202851546193,
+      "net_per_trade": -0.5889663031092298,
+      "attempt": {
+        "mean": -0.5794943307458623,
+        "lower": -0.5958974497334546,
+        "upper": -0.5639125470071071,
+        "days": 65
+      },
+      "censored": 25
+    },
+    {
+      "variant": "TT",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "block": "B",
+      "attempts": 19990,
+      "fill_rate": 0.992496248124062,
+      "net_per_trade": -0.8440272177419355,
+      "attempt": {
+        "mean": -0.8399679278545792,
+        "lower": -0.9267692879973445,
+        "upper": -0.7565932137423724,
+        "days": 41
+      },
+      "censored": 6
+    },
+    {
+      "variant": "TT",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "A",
+      "attempts": 30967,
+      "fill_rate": 0.9863725901766397,
+      "net_per_trade": -0.5876215419872319,
+      "attempt": {
+        "mean": -0.5785586952612874,
+        "lower": -0.5972275590732249,
+        "upper": -0.5607911041831753,
+        "days": 65
+      },
+      "censored": 17
+    },
+    {
+      "variant": "TT",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "block": "B",
+      "attempts": 19878,
+      "fill_rate": 0.9925545829560318,
+      "net_per_trade": -0.8469538773441461,
+      "attempt": {
+        "mean": -0.8424170900743544,
+        "lower": -0.9236827397665628,
+        "upper": -0.7638489326723938,
+        "days": 41
+      },
+      "censored": 12
+    },
+    {
+      "variant": "TT",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "A",
+      "attempts": 30703,
+      "fill_rate": 0.9863856952089373,
+      "net_per_trade": -0.5992768697374937,
+      "attempt": {
+        "mean": -0.5907282677771596,
+        "lower": -0.6138811437778164,
+        "upper": -0.5678830121704525,
+        "days": 65
+      },
+      "censored": 39
+    },
+    {
+      "variant": "TT",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "block": "B",
+      "attempts": 19755,
+      "fill_rate": 0.9926094659579853,
+      "net_per_trade": -0.8633688612371869,
+      "attempt": {
+        "mean": -0.8596236080933409,
+        "lower": -0.9410810000543708,
+        "upper": -0.7814905714634458,
+        "days": 41
+      },
+      "censored": 13
+    },
+    {
+      "variant": "TT",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "A",
+      "attempts": 29906,
+      "fill_rate": 0.9872266434829131,
+      "net_per_trade": -0.6409328004335455,
+      "attempt": {
+        "mean": -0.63189685826576,
+        "lower": -0.6787691400309431,
+        "upper": -0.5864152416145398,
+        "days": 65
+      },
+      "censored": 64
+    },
+    {
+      "variant": "TT",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "block": "B",
+      "attempts": 19218,
+      "fill_rate": 0.9929233010719117,
+      "net_per_trade": -0.8658211927470915,
+      "attempt": {
+        "mean": -0.8612469693662619,
+        "lower": -0.9580764705522207,
+        "upper": -0.7624893919895682,
+        "days": 41
+      },
+      "censored": 42
+    }
+  ],
+  "selection": {
+    "PQ_30/A": {
+      "adverse60_ticks": -0.7160022618037886,
+      "wait_to_fill_median_s": 2.000598072,
+      "fill_kinds": {
+        "through": 0.514,
+        "behind": 0.427,
+        "marketable": 0.06
+      },
+      "queue_ahead_median": 2.0
+    },
+    "PQ_30/B": {
+      "adverse60_ticks": -1.6561676373930303,
+      "wait_to_fill_median_s": 2.298094428,
+      "fill_kinds": {
+        "through": 0.632,
+        "behind": 0.319,
+        "marketable": 0.049
+      },
+      "queue_ahead_median": 1.0
+    },
+    "TT/A": {
+      "adverse60_ticks": -1.4680967051846467,
+      "wait_to_fill_median_s": 0.142464729,
+      "fill_kinds": {
+        "taker": 1.0
+      },
+      "queue_ahead_median": null
+    },
+    "TT/B": {
+      "adverse60_ticks": -2.7442084818747525,
+      "wait_to_fill_median_s": 0.142943626,
+      "fill_kinds": {
+        "taker": 1.0
+      },
+      "queue_ahead_median": null
+    }
+  },
+  "missed": [
+    {
+      "block": "A",
+      "passive": "COMPLETE",
+      "n": 98694,
+      "taker_net": {
+        "mean": -0.7980233919545416,
+        "lower": -0.8251023219823134,
+        "upper": -0.771266441589417,
+        "days": 65
+      }
+    },
+    {
+      "block": "A",
+      "passive": "NOT_FILLED",
+      "n": 22311,
+      "taker_net": {
+        "mean": 0.2831650415144674,
+        "lower": 0.19213748576884196,
+        "upper": 0.3786508020403114,
+        "days": 65
+      }
+    },
+    {
+      "block": "B",
+      "passive": "COMPLETE",
+      "n": 61319,
+      "taker_net": {
+        "mean": -1.1609699745121858,
+        "lower": -1.2644948911306853,
+        "upper": -1.0542205888853988,
+        "days": 41
+      }
+    },
+    {
+      "block": "B",
+      "passive": "NOT_FILLED",
+      "n": 16924,
+      "taker_net": {
+        "mean": 0.28188474455820817,
+        "lower": 0.15234315222457606,
+        "upper": 0.42006393233213196,
+        "days": 41
+      }
+    }
+  ],
+  "hurdle": [
+    {
+      "variant": "TT",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "right": -0.2186812756799061,
+      "wrong": -1.1435687732342008,
+      "breakeven": null
+    },
+    {
+      "variant": "TT",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "right": 0.17381467637222117,
+      "wrong": -1.5366594530788904,
+      "breakeven": 0.8983821658688296
+    },
+    {
+      "variant": "TT",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "right": 0.918674913762341,
+      "wrong": -2.30802505848301,
+      "breakeven": 0.7152896390540251
+    },
+    {
+      "variant": "TT",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "right": 2.7572010592788754,
+      "wrong": -4.195074353228763,
+      "breakeven": 0.6034102656062108
+    },
+    {
+      "variant": "PQ_30",
+      "plan": [
+        12,
+        8,
+        120
+      ],
+      "right": 0.1700390625,
+      "wrong": -1.0922929687499998,
+      "breakeven": 0.8652976726482794
+    },
+    {
+      "variant": "PQ_30",
+      "plan": [
+        24,
+        12,
+        300
+      ],
+      "right": 0.5282924721043533,
+      "wrong": -1.4469550526481223,
+      "breakeven": 0.7325436607391494
+    },
+    {
+      "variant": "PQ_30",
+      "plan": [
+        40,
+        20,
+        600
+      ],
+      "right": 1.1867558581380617,
+      "wrong": -2.095792431918936,
+      "breakeven": 0.6384650724765255
+    },
+    {
+      "variant": "PQ_30",
+      "plan": [
+        80,
+        40,
+        1800
+      ],
+      "right": 2.740560975609757,
+      "wrong": -3.67570731707317,
+      "breakeven": 0.5728730703585017
+    }
+  ],
+  "schemas": {
+    "PQ_30": {
+      "variants": {
+        "full": {
+          "spawned": 2,
+          "promoted": 1,
+          "refuted": 0,
+          "trades_B": 0,
+          "net_B": 0.0
+        },
+        "assimilate_only": {
+          "spawned": 0,
+          "promoted": 0,
+          "refuted": 0,
+          "trades_B": 0,
+          "net_B": 0.0
+        },
+        "frozen_after_A": {
+          "spawned": 0,
+          "promoted": 0,
+          "refuted": 0,
+          "trades_B": 0,
+          "net_B": 0.0
+        },
+        "no_forgetting": {
+          "spawned": 2,
+          "promoted": 1,
+          "refuted": 0,
+          "trades_B": 0,
+          "net_B": 0.0
+        },
+        "shuffled_context": {
+          "spawned": 7,
+          "promoted": 0,
+          "refuted": 7,
+          "trades_B": 0,
+          "net_B": 0.0
+        },
+        "planted_full": {
+          "spawned": 52,
+          "promoted": 20,
+          "refuted": 10,
+          "trades_B": 948,
+          "net_B": 729.6
+        },
+        "planted_assimilate_only": {
+          "spawned": 0,
+          "promoted": 0,
+          "refuted": 0,
+          "trades_B": 1072,
+          "net_B": 294.10000000000014
+        },
+        "planted_frozen_after_A": {
+          "spawned": 13,
+          "promoted": 0,
+          "refuted": 0,
+          "trades_B": 0,
+          "net_B": 0.0
+        },
+        "planted_no_forgetting": {
+          "spawned": 59,
+          "promoted": 21,
+          "refuted": 15,
+          "trades_B": 736,
+          "net_B": 557.3000000000001
+        }
+      },
+      "best_roots": [
+        {
+          "describe": "#11 [*] -> against_flow/P3",
+          "n": 8648,
+          "mean": -0.30197733580018515
+        },
+        {
+          "describe": "#9 [*] -> against_trend/P3",
+          "n": 14785,
+          "mean": -0.3614677037538445
+        },
+        {
+          "describe": "#12 [*] -> range_revert/P3",
+          "n": 13658,
+          "mean": -0.39803778005567897
+        },
+        {
+          "describe": "#3 [*] -> against_flow/P2",
+          "n": 9018,
+          "mean": -0.4105123087159298
+        }
+      ],
+      "active_children": [
+        {
+          "describe": "#16 [trend=down] -> short/P2",
+          "mean": -0.6776629570747085,
+          "n": 1258,
+          "parent_mean": -0.44074666446940663
+        }
+      ]
+    },
+    "PXQ_30": {
+      "variants": {
+        "full": {
+          "spawned": 5,
+          "promoted": 1,
+          "refuted": 1,
+          "trades_B": 0,
+          "net_B": 0.0
+        },
+        "assimilate_only": {
+          "spawned": 0,
+          "promoted": 0,
+          "refuted": 0,
+          "trades_B": 0,
+          "net_B": 0.0
+        },
+        "frozen_after_A": {
+          "spawned": 1,
+          "promoted": 0,
+          "refuted": 1,
+          "trades_B": 0,
+          "net_B": 0.0
+        },
+        "no_forgetting": {
+          "spawned": 8,
+          "promoted": 1,
+          "refuted": 1,
+          "trades_B": 0,
+          "net_B": 0.0
+        },
+        "shuffled_context": {
+          "spawned": 8,
+          "promoted": 0,
+          "refuted": 8,
+          "trades_B": 0,
+          "net_B": 0.0
+        },
+        "planted_full": {
+          "spawned": 60,
+          "promoted": 23,
+          "refuted": 11,
+          "trades_B": 841,
+          "net_B": 735.0999999999999
+        },
+        "planted_assimilate_only": {
+          "spawned": 0,
+          "promoted": 0,
+          "refuted": 0,
+          "trades_B": 750,
+          "net_B": 217.7
+        },
+        "planted_frozen_after_A": {
+          "spawned": 14,
+          "promoted": 0,
+          "refuted": 1,
+          "trades_B": 0,
+          "net_B": 0.0
+        },
+        "planted_no_forgetting": {
+          "spawned": 66,
+          "promoted": 23,
+          "refuted": 14,
+          "trades_B": 708,
+          "net_B": 532.4
+        }
+      },
+      "best_roots": [
+        {
+          "describe": "#11 [*] -> against_flow/P3",
+          "n": 8637,
+          "mean": -0.40464281579254335
+        },
+        {
+          "describe": "#9 [*] -> against_trend/P3",
+          "n": 14769,
+          "mean": -0.48301171372475094
+        },
+        {
+          "describe": "#12 [*] -> range_revert/P3",
+          "n": 13645,
+          "mean": -0.5158812751924301
+        },
+        {
+          "describe": "#3 [*] -> against_flow/P2",
+          "n": 9015,
+          "mean": -0.5454242928453066
+        }
+      ],
+      "active_children": [
+        {
+          "describe": "#17 [trend=down] -> short/P2",
+          "mean": -0.8442766295707289,
+          "n": 1258,
+          "parent_mean": -0.5623555089503531
+        }
+      ]
+    }
+  }
+}

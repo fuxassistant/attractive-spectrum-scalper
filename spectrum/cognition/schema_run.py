@@ -25,6 +25,7 @@ from .representation import DEFAULT_OUTPUT as REPRESENTATION
 from . import schemas as sm
 
 REPORT = 'reports/schemas_v1'
+PASSIVE = 'data/derived/passive_execution_v1'
 VARIANTS = dict(full=dict(), assimilate_only=dict(accommodation=False), frozen_after_A=dict(freeze_at_block='B'),
                 no_forgetting=dict(half_life_days=float('inf')), shuffled_context=dict())
 # Positive control (REGIME_CHANGE_AND_RETURN): a known edge exists only in Dec-Jan.
@@ -66,11 +67,31 @@ def outcome_table(signatures):
     return out
 
 
+def passive_outcomes(variant, passive=PASSIVE):
+    """Outcomes of one passive execution variant; an unfilled attempt is EMPTY ($0)."""
+    import glob
+    out = {}
+    for path in sorted(glob.glob(str(Path(passive) / '2*.parquet'))):
+        f = pd.read_parquet(path, filters=[('variant', '==', variant)])
+        f = f[f.plan_id.isin(sm.PLANS)]
+        for r in f.itertuples():
+            key = (r.origin_id, int(r.plan_id), int(r.side))
+            if r.status == 'COMPLETE':
+                out[key] = ('COMPLETE', float(r.net_usd), int(r.known_ns))
+            elif r.status == 'NOT_FILLED':
+                out[key] = ('EMPTY', 0., int(r.known_ns))
+            elif r.status == 'CENSORED':
+                out[key] = ('CENSORED', None, None)
+    if not out:
+        raise ValueError('No outcomes for execution variant ' + variant)
+    return out
+
+
 def fix_unknown_times(outcomes, frame):
     """Censored/unfilled outcomes resolve at their declared branch horizon."""
     intents = frame.intent_ns.to_dict()
     for key, (status, net, known) in list(outcomes.items()):
-        if status != 'COMPLETE':
+        if status in ('CENSORED', 'NOT_FILLED') and known is None:
             outcomes[key] = (status, net, int(intents[key[0]]) + (MENU_PLANS[key[1]][2] + 5) * NS)
     return outcomes
 
@@ -87,7 +108,7 @@ def block_metrics(trades, frame, block):
     peak = np.maximum.accumulate(np.r_[0., equity]) if len(equity) else np.zeros(1)
     return dict(days=len(dates), trades=int(len(t)), completed=int((t.status == 'COMPLETE').sum()) if len(t) else 0,
                 censored=int((t.status == 'CENSORED').sum()) if len(t) else 0,
-                not_filled=int((t.status == 'NOT_FILLED').sum()) if len(t) else 0,
+                not_filled=int(t.status.isin(['NOT_FILLED', 'EMPTY']).sum()) if len(t) else 0,
                 net=float(done.net.sum()) if len(done) else 0., net_per_trade=float(done.net.mean()) if len(done) else None,
                 win_rate=float((done.net > 0).mean()) if len(done) else None,
                 max_drawdown=float((peak - np.r_[0., equity]).max()) if len(equity) else 0.,
@@ -131,15 +152,21 @@ def fingerprint(trades):
     return out
 
 
-def experiment(signatures=SIGNATURES, representation=REPRESENTATION, output=REPORT):
+def experiment(signatures=SIGNATURES, representation=REPRESENTATION, output=REPORT, execution='taker',
+               variants=None, planted=True):
+    """execution: 'taker' (signature kernel) or a passive variant such as 'PQ_30'."""
     started = time.perf_counter(); out = Path(output); out.mkdir(parents=True, exist_ok=True)
     frame, _, _ = dataset(signatures, representation)
     frame = frame.sort_values('intent_ns', kind='stable')
     frame['day_index'] = frame.date.rank(method='dense').astype(int)
-    outcomes = fix_unknown_times(outcome_table(signatures), frame)
-    planted, planted_origins = plant_edge(outcomes, frame)
-    runs = [(name, overrides, outcomes) for name, overrides in VARIANTS.items()]
-    runs += [('planted_' + name, VARIANTS[name], planted) for name in PLANTED_VARIANTS]
+    source = outcome_table(signatures) if execution == 'taker' else passive_outcomes(execution)
+    outcomes = fix_unknown_times(source, frame)
+    chosen = {k: v for k, v in VARIANTS.items() if variants is None or k in variants}
+    runs = [(name, overrides, outcomes) for name, overrides in chosen.items()]
+    planted_origins = 0
+    if planted:
+        planted_stream, planted_origins = plant_edge(outcomes, frame)
+        runs += [('planted_' + name, VARIANTS[name], planted_stream) for name in PLANTED_VARIANTS]
     results = {}
     for name, overrides, stream in runs:
         t0 = time.perf_counter(); params = replace(sm.Params(), **overrides)
@@ -162,7 +189,7 @@ def experiment(signatures=SIGNATURES, representation=REPRESENTATION, output=REPO
             (out / f'trades_{name}.parquet').unlink(missing_ok=True)  # never leave a stale earlier run
         print(name, json.dumps({b: {k: results[name][b][k] for k in ('trades', 'net', 'net_per_trade')} for b in 'AB'}),
               results[name]['spawned'], results[name]['promoted'], results[name]['refuted'], flush=True)
-    summary = dict(version='SCHEMA_LIBRARY_V1', seconds=time.perf_counter() - started,
+    summary = dict(version='SCHEMA_LIBRARY_V1', execution=execution, seconds=time.perf_counter() - started,
                    signatures_manifest_sha256=sha(Path(signatures) / 'manifest.json'),
                    representation_manifest_sha256=sha(Path(representation) / 'manifest.json'),
                    code_sha256={p: sha(Path(__file__).with_name(p)) for p in ('schemas.py', 'schema_run.py')},
@@ -177,4 +204,6 @@ def experiment(signatures=SIGNATURES, representation=REPRESENTATION, output=REPO
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser(); p.add_argument('--output', default=REPORT)
-    a = p.parse_args(); experiment(output=a.output)
+    p.add_argument('--execution', default='taker'); p.add_argument('--variants', nargs='*')
+    p.add_argument('--no-planted', action='store_true')
+    a = p.parse_args(); experiment(output=a.output, execution=a.execution, variants=a.variants, planted=not a.no_planted)

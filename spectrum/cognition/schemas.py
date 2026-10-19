@@ -283,8 +283,10 @@ class Library:
 def run(frame, outcomes, params=Params(), shuffle_seed=None):
     """frame: origins (index origin_id) sorted by intent.
     outcomes: (origin_id, plan, side) -> (status, net or None, known_ns).
-    Only COMPLETE outcomes are learned, after known_ns. NOT_FILLED acts as flat
-    cash; CENSORED blocks the account without an invented fill."""
+    COMPLETE outcomes are learned after known_ns. EMPTY (a passive attempt that
+    never filled) is a real $0 consequence of the program: learned and acted as
+    flat cash until its cancel time. NOT_FILLED acts as flat cash; CENSORED
+    blocks the account without an invented fill."""
     lib = Library(params)
     coords = coordinates(frame)
     if shuffle_seed is not None:  # destroy the context-outcome link within each day
@@ -301,8 +303,8 @@ def run(frame, outcomes, params=Params(), shuffle_seed=None):
         for plan in PLANS:
             for side in (-1, 1):
                 status, net, known = outcomes.get((oid, plan, side), (None, None, None))
-                if status == 'COMPLETE':
-                    queue.append((known, i, plan, side, net))
+                if status in ('COMPLETE', 'EMPTY'):
+                    queue.append((known, i, plan, side, net if status == 'COMPLETE' else 0.))
     queue.sort(key=lambda q: q[0]); qi = 0
     busy_until = -1; trades = []; frozen = False
     for i in range(len(ids)):
@@ -318,7 +320,8 @@ def run(frame, outcomes, params=Params(), shuffle_seed=None):
             lib.review(now, days[i], checkpoint=i > 0 and days[i] != days[i - 1] and days[i] % params.checkpoint_days == 0)
         if now < busy_until:
             continue
-        legal = {plan for plan in PLANS if outcomes.get((ids[i], plan, 1), ('',))[0] in ('COMPLETE', 'CENSORED', 'NOT_FILLED')}
+        legal = {plan for plan in PLANS
+                 if outcomes.get((ids[i], plan, 1), ('',))[0] in ('COMPLETE', 'CENSORED', 'NOT_FILLED', 'EMPTY')}
         choice = lib.choose(c, legal)
         if choice is None:
             continue
@@ -326,6 +329,8 @@ def run(frame, outcomes, params=Params(), shuffle_seed=None):
         status, net, known = outcomes[(ids[i], k.plan, side)]
         if status == 'NOT_FILLED':
             net, known = 0., now
+        elif status == 'EMPTY':
+            net = 0.
         k.acted += 1
         trade = dict(origin_id=ids[i], date=frame.date.iat[i], block=blocks[i], intent_ns=int(now), schema=k.id,
                      describe=k.describe(), depth=k.depth, program=k.program, plan=k.plan, side=side, lcb=float(lcb),
