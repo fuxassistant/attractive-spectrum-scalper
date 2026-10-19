@@ -32,8 +32,8 @@ from .execution import QuoteTape
 from .signatures import DEFAULT_DATA, DEFAULT_OUTPUT as SIGNATURES, MENU_PLANS, TRAIN_MONTHS
 from . import queue as qu
 
-VERSION = 'PASSIVE_EXECUTION_V2'
-DEFAULT_OUTPUT = 'data/derived/passive_execution_v1'
+VERSION = 'PASSIVE_EXECUTION_V3'
+DEFAULT_OUTPUT = 'data/derived/passive_execution_v5'
 MARKET = 'data/derived/full_mbo_v1'
 LATENCY = 100_000_000
 TIMEOUT = 2 * NS
@@ -140,6 +140,7 @@ def process_day(date, tape_mbo, sig_dir, data):
             p_place.append(intent + LATENCY); p_side.append(side); p_price.append(price)
             p_end.append(intent + LATENCY + max(WAITS) * NS); p_ref.append((oid, intent, side, price))
     st, fill, kind, ahead = qu.probe(tape_mbo, p_place, p_side, p_price, p_end)
+    qu.check_fill_proofs(tape_mbo, p_place, p_side, p_price, st, fill)
     for (oid, intent, side, price), s, f, k, a in zip(p_ref, st, fill, kind, ahead):
         place = intent + LATENCY
         # marketable at placement: the opposite side already at/through our price -> taker at that quote
@@ -180,6 +181,8 @@ def process_day(date, tape_mbo, sig_dir, data):
     tp_st, tp_fill, _, _ = qu.probe(tape_mbo, [k[0] + LATENCY for k in keys], [-k[1] for k in keys],
                                     [k[2] + k[1] * MENU_PLANS[k[3]][0] * TICK for k in keys],
                                     [k[0] + MENU_PLANS[k[3]][2] * NS for k in keys])
+    qu.check_fill_proofs(tape_mbo, [k[0] + LATENCY for k in keys], [-k[1] for k in keys],
+                         [k[2] + k[1] * MENU_PLANS[k[3]][0] * TICK for k in keys], tp_st, tp_fill)
     tp = {k: (int(tp_fill[i]) if tp_st[i] == qu.FILLED else 0) for k, i in tp_key.items()}
     # ---- compose variants ------------------------------------------------
     paths = {}  # identical fills across waits share one exit path

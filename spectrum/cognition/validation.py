@@ -28,10 +28,10 @@ REPORT = Path('reports/validation_v1')
 PREREGISTRATION = REPORT / 'preregistration.json'
 EXECUTION = 'PQ_30'
 TRAIN = dict(signatures='data/derived/opportunity_signatures_v1', representation='data/derived/representation_v1',
-             passive='data/derived/passive_execution_v1', queue='data/derived/queue_state_v1')
+             passive='data/derived/passive_execution_v5', queue='data/derived/queue_state_v1')
 VALID = dict(signatures='data/derived/opportunity_signatures_validation_v1',
              representation='data/derived/representation_validation_v1',
-             passive='data/derived/passive_execution_validation_v1', queue='data/derived/queue_state_validation_v1')
+             passive='data/derived/passive_execution_validation_v5', queue='data/derived/queue_state_validation_v1')
 FROZEN_FILES = ('execution.py', 'opportunity.py', 'signatures.py', 'signature_report.py', 'representation.py',
                 'qmodel.py', 'schemas.py', 'schema_run.py', 'queue.py', 'passive.py', 'queue_state.py',
                 'passive_learn.py', 'passive_report.py', 'validation.py')

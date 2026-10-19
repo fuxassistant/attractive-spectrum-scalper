@@ -25,7 +25,7 @@ from .representation import DEFAULT_OUTPUT as REPRESENTATION
 from . import schemas as sm
 
 REPORT = 'reports/schemas_v1'
-PASSIVE = 'data/derived/passive_execution_v1'
+PASSIVE = 'data/derived/passive_execution_v5'
 VARIANTS = dict(full=dict(), assimilate_only=dict(accommodation=False), frozen_after_A=dict(freeze_at_block='B'),
                 no_forgetting=dict(half_life_days=float('inf')), shuffled_context=dict())
 # Positive control (REGIME_CHANGE_AND_RETURN): a known edge exists only in Dec-Jan.

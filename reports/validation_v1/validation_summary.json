@@ -1,6 +1,6 @@
 {
   "version": "FROZEN_VALIDATION_V1",
-  "preregistration_sha256": "b790f153678ddf75e90e8d3e330fc7cead1aa8931cbdabecef071093726cc4f0",
+  "preregistration_sha256": "3a605c70951d0ee616f704a4f96236ae571831a08135d1f063338d4d04255aa9",
   "days_V": 43,
   "origins_V": 10273,
   "schemas": {
@@ -72,18 +72,18 @@
             "range",
             "low"
           ],
-          "mean_residual": -0.1373911495576566,
-          "t": -4.035012322199492,
+          "mean_residual": -0.13926104785088533,
+          "t": -4.0739791374202055,
           "n": 4948,
           "days": 107,
-          "parent_mean": -0.5199740430539965
+          "parent_mean": -0.5182659840768155
         },
         {
           "kind": "active",
           "ns": "1773046800000000000",
           "schema": 25,
           "describe": "#25 [range=low] -> short/P2",
-          "confirm_t": -3.739982574171861,
+          "confirm_t": -3.7576747278259433,
           "n": 808,
           "days": 15,
           "reason": "confirmed"
@@ -99,52 +99,52 @@
             "trend",
             "down"
           ],
-          "mean_residual": -0.1039540541115519,
-          "t": -4.283685355913024,
+          "mean_residual": -0.10655620850546176,
+          "t": -4.37161147788079,
           "n": 7600,
           "days": 112,
-          "parent_mean": -0.5440063172125001
+          "parent_mean": -0.541954456802589
         },
         {
           "kind": "spawn",
           "ns": "1773129625209538309",
           "day": 115,
           "schema": 28,
-          "parent": 1,
-          "describe": "#28 [phase=overlap] -> against_trend/P2",
-          "cell": [
-            "phase",
-            "overlap"
-          ],
-          "mean_residual": -0.19489023647675272,
-          "t": -4.010785655986329,
-          "n": 2985,
-          "days": 112,
-          "parent_mean": -0.5074840905979354
-        },
-        {
-          "kind": "spawn",
-          "ns": "1773129625209538309",
-          "day": 115,
-          "schema": 29,
           "parent": 5,
-          "describe": "#29 [trend=down] -> range_break/P2",
+          "describe": "#28 [trend=down] -> range_break/P2",
           "cell": [
             "trend",
             "down"
           ],
-          "mean_residual": -0.13919725521358062,
-          "t": -4.066288350453785,
+          "mean_residual": -0.1421642446526376,
+          "t": -4.127439955257266,
           "n": 5194,
           "days": 112,
-          "parent_mean": -0.5545083771692383
+          "parent_mean": -0.5527863532807675
+        },
+        {
+          "kind": "spawn",
+          "ns": "1773734700000000000",
+          "day": 120,
+          "schema": 29,
+          "parent": 1,
+          "describe": "#29 [phase=overlap] -> against_trend/P2",
+          "cell": [
+            "phase",
+            "overlap"
+          ],
+          "mean_residual": -0.19787430299241993,
+          "t": -4.158428430037618,
+          "n": 3122,
+          "days": 117,
+          "parent_mean": -0.5086271034732968
         },
         {
           "kind": "retired",
           "ns": "1774263935011843617",
           "schema": 26,
           "describe": "#26 [range=low] -> with_trend/P2",
-          "confirm_t": -1.9055873964899035,
+          "confirm_t": -1.9182816254231945,
           "n": 806,
           "days": 15,
           "reason": "refuted"
@@ -154,24 +154,41 @@
           "ns": "1774339205001942091",
           "day": 125,
           "schema": 30,
+          "parent": 5,
+          "describe": "#30 [range=low] -> range_break/P2",
+          "cell": [
+            "range",
+            "low"
+          ],
+          "mean_residual": -0.12055282099521615,
+          "t": -4.00837886437217,
+          "n": 7034,
+          "days": 122,
+          "parent_mean": -0.5652102300161749
+        },
+        {
+          "kind": "spawn",
+          "ns": "1774339205001942091",
+          "day": 125,
+          "schema": 31,
           "parent": 7,
-          "describe": "#30 [vol=expanding] -> short/P2",
+          "describe": "#31 [vol=expanding] -> short/P2",
           "cell": [
             "vol",
             "expanding"
           ],
-          "mean_residual": -0.17204533462733304,
-          "t": -4.114384124386429,
+          "mean_residual": -0.17345101691976664,
+          "t": -4.142830966014716,
           "n": 2817,
           "days": 122,
-          "parent_mean": -0.501681593385726
+          "parent_mean": -0.499497724784233
         },
         {
           "kind": "retired",
           "ns": "1774858800000000000",
           "schema": 27,
           "describe": "#27 [trend=down] -> with_trend/P2",
-          "confirm_t": -1.0112002924037737,
+          "confirm_t": -1.0301892234832422,
           "n": 1096,
           "days": 15,
           "reason": "refuted"
@@ -179,118 +196,84 @@
         {
           "kind": "retired",
           "ns": "1774858800000000000",
-          "schema": 29,
-          "describe": "#29 [trend=down] -> range_break/P2",
-          "confirm_t": -1.695261395321425,
+          "schema": 28,
+          "describe": "#28 [trend=down] -> range_break/P2",
+          "confirm_t": -1.7059372762768141,
           "n": 801,
           "days": 15,
           "reason": "refuted"
         },
         {
           "kind": "retired",
-          "ns": "1774873800000000000",
-          "schema": 28,
-          "describe": "#28 [phase=overlap] -> against_trend/P2",
-          "confirm_t": 0.3204172792476328,
-          "n": 373,
+          "ns": "1775567100000000000",
+          "schema": 29,
+          "describe": "#29 [phase=overlap] -> against_trend/P2",
+          "confirm_t": 0.152803863554983,
+          "n": 366,
           "days": 15,
           "reason": "refuted"
         },
         {
           "kind": "spawn",
-          "ns": "1774940435000005811",
-          "day": 130,
-          "schema": 31,
+          "ns": "1775631900000000000",
+          "day": 135,
+          "schema": 32,
           "parent": 1,
-          "describe": "#31 [vol=normal] -> against_trend/P2",
+          "describe": "#32 [vol=normal] -> against_trend/P2",
           "cell": [
             "vol",
             "normal"
           ],
-          "mean_residual": -0.10036657670853709,
-          "t": -4.022600541565145,
-          "n": 12396,
-          "days": 127,
-          "parent_mean": -0.5330918438319927
-        },
-        {
-          "kind": "spawn",
-          "ns": "1774940435000005811",
-          "day": 130,
-          "schema": 32,
-          "parent": 5,
-          "describe": "#32 [range=low] -> range_break/P2",
-          "cell": [
-            "range",
-            "low"
-          ],
-          "mean_residual": -0.12286194743127368,
-          "t": -4.228135237354436,
-          "n": 7348,
-          "days": 127,
-          "parent_mean": -0.5833156535693773
+          "mean_residual": -0.09819018097171013,
+          "t": -4.068693064028809,
+          "n": 12906,
+          "days": 132,
+          "parent_mean": -0.5424759622489811
         },
         {
           "kind": "spawn",
           "ns": "1775631900000000000",
           "day": 135,
           "schema": 33,
-          "parent": 1,
-          "describe": "#33 [l1=balanced] -> against_trend/P2",
-          "cell": [
-            "l1",
-            "balanced"
-          ],
-          "mean_residual": -0.09138502098719871,
-          "t": -4.045962474925293,
-          "n": 14278,
-          "days": 132,
-          "parent_mean": -0.5450377944795424
-        },
-        {
-          "kind": "spawn",
-          "ns": "1775631900000000000",
-          "day": 135,
-          "schema": 34,
           "parent": 6,
-          "describe": "#34 [vol=normal] -> long/P2",
+          "describe": "#33 [vol=normal] -> long/P2",
           "cell": [
             "vol",
             "normal"
           ],
-          "mean_residual": -0.10021816430175993,
-          "t": -4.200398753820923,
+          "mean_residual": -0.09932697939682207,
+          "t": -4.192919670939342,
           "n": 21652,
           "days": 132,
-          "parent_mean": -0.5671764747155162
+          "parent_mean": -0.5658367508368829
+        },
+        {
+          "kind": "retired",
+          "ns": "1776154310013120155",
+          "schema": 30,
+          "describe": "#30 [range=low] -> range_break/P2",
+          "confirm_t": -1.6472824621364686,
+          "n": 834,
+          "days": 15,
+          "reason": "refuted"
         },
         {
           "kind": "active",
           "ns": "1776154310013120155",
-          "schema": 30,
-          "describe": "#30 [vol=expanding] -> short/P2",
-          "confirm_t": -2.894547981698031,
+          "schema": 31,
+          "describe": "#31 [vol=expanding] -> short/P2",
+          "confirm_t": -2.917606932607578,
           "n": 363,
           "days": 15,
           "reason": "confirmed"
         },
         {
           "kind": "retired",
-          "ns": "1776760200000000000",
-          "schema": 31,
-          "describe": "#31 [vol=normal] -> against_trend/P2",
-          "confirm_t": 0.09027398576852401,
-          "n": 1322,
-          "days": 15,
-          "reason": "refuted"
-        },
-        {
-          "kind": "retired",
-          "ns": "1776760200000000000",
+          "ns": "1777364700000000000",
           "schema": 32,
-          "describe": "#32 [range=low] -> range_break/P2",
-          "confirm_t": 0.9334670647247993,
-          "n": 801,
+          "describe": "#32 [vol=normal] -> against_trend/P2",
+          "confirm_t": 1.680381290326896,
+          "n": 1350,
           "days": 15,
           "reason": "refuted"
         },
@@ -298,18 +281,8 @@
           "kind": "retired",
           "ns": "1777364700000000000",
           "schema": 33,
-          "describe": "#33 [l1=balanced] -> against_trend/P2",
-          "confirm_t": 2.620973298035869,
-          "n": 1644,
-          "days": 15,
-          "reason": "refuted"
-        },
-        {
-          "kind": "retired",
-          "ns": "1777364700000000000",
-          "schema": 34,
-          "describe": "#34 [vol=normal] -> long/P2",
-          "confirm_t": 0.7993137781774217,
+          "describe": "#33 [vol=normal] -> long/P2",
+          "confirm_t": 0.7624341677883884,
           "n": 2308,
           "days": 15,
           "reason": "refuted"
@@ -318,24 +291,24 @@
           "kind": "spawn",
           "ns": "1777446190253734359",
           "day": 150,
-          "schema": 35,
+          "schema": 34,
           "parent": 18,
-          "describe": "#35 [trend=up] -> long/P3",
+          "describe": "#34 [trend=up] -> long/P3",
           "cell": [
             "trend",
             "up"
           ],
-          "mean_residual": -0.21322414707667658,
-          "t": -4.077573347104712,
+          "mean_residual": -0.2117114430989471,
+          "t": -4.045866086955611,
           "n": 10586,
           "days": 147,
-          "parent_mean": -0.664291866758803
+          "parent_mean": -0.6659278608805577
         }
       ],
       "promoted_V": 2,
       "statuses": {
         "ACTIVE": 27,
-        "RETIRED": 8,
+        "RETIRED": 7,
         "QUARANTINE": 1
       },
       "monthly": {}
@@ -535,11 +508,11 @@
             "book",
             "balanced"
           ],
-          "mean_residual": -0.08216369563348903,
-          "t": -4.035837972742061,
+          "mean_residual": -0.08231815321691134,
+          "t": -4.062227618029545,
           "n": 5523,
           "days": 121,
-          "parent_mean": -0.4970625140315654
+          "parent_mean": -0.4964837148195752
         },
         {
           "kind": "spawn",
@@ -552,18 +525,35 @@
             "range",
             "low"
           ],
-          "mean_residual": -0.13526347700213212,
-          "t": -4.093852678196368,
+          "mean_residual": -0.1338815479396532,
+          "t": -4.053642823596882,
           "n": 4629,
           "days": 132,
-          "parent_mean": -0.550054946078646
+          "parent_mean": -0.548845118776097
+        },
+        {
+          "kind": "spawn",
+          "ns": "1775631900000000000",
+          "day": 135,
+          "schema": 28,
+          "parent": 13,
+          "describe": "#28 [thickness=thick] -> against_trend/P3",
+          "cell": [
+            "thickness",
+            "thick"
+          ],
+          "mean_residual": -0.3325433342365603,
+          "t": -4.023726782245256,
+          "n": 1791,
+          "days": 129,
+          "parent_mean": -0.6372680061562577
         },
         {
           "kind": "retired",
           "ns": "1776243600000000000",
           "schema": 26,
           "describe": "#26 [book=balanced] -> with_flow/P2",
-          "confirm_t": 0.12915750660295328,
+          "confirm_t": 0.1250100463905047,
           "n": 489,
           "days": 15,
           "reason": "refuted"
@@ -573,16 +563,44 @@
           "ns": "1777364700000000000",
           "schema": 27,
           "describe": "#27 [range=low] -> against_trend/P2",
-          "confirm_t": -2.3687264627633158,
+          "confirm_t": -2.3786528122830024,
           "n": 552,
           "days": 15,
           "reason": "confirmed"
+        },
+        {
+          "kind": "retired",
+          "ns": "1777364700000000000",
+          "schema": 28,
+          "describe": "#28 [thickness=thick] -> against_trend/P3",
+          "confirm_t": -0.5274502048914279,
+          "n": 65,
+          "days": 15,
+          "reason": "refuted"
+        },
+        {
+          "kind": "spawn",
+          "ns": "1777446190253734359",
+          "day": 150,
+          "schema": 29,
+          "parent": 1,
+          "describe": "#29 [phase=london] -> against_trend/P2",
+          "cell": [
+            "phase",
+            "london"
+          ],
+          "mean_residual": -0.10709491184025123,
+          "t": -4.063590410887067,
+          "n": 7661,
+          "days": 147,
+          "parent_mean": -0.5465266782971216
         }
       ],
       "promoted_V": 1,
       "statuses": {
         "ACTIVE": 25,
-        "RETIRED": 3
+        "RETIRED": 4,
+        "QUARANTINE": 1
       },
       "monthly": {}
     },
@@ -1165,12 +1183,12 @@
   "knowledge": {
     "n_child": 3188,
     "n_parent": 10147,
-    "child_mean": -0.6101631116687578,
-    "parent_mean": -0.5379028284221937,
+    "child_mean": -0.6105081555834379,
+    "parent_mean": -0.5352419434315561,
     "residual": {
-      "mean": -0.09842252087487845,
-      "lower": -0.17136889101344335,
-      "upper": -0.03281591100483726,
+      "mean": -0.10127862546910946,
+      "lower": -0.17430966807808687,
+      "upper": -0.035540737019761216,
       "days": 43
     }
   },
@@ -1178,101 +1196,101 @@
     "per_plan": {
       "(12, 8, 120)": {
         "tt": -0.8318483135114055,
-        "pq": -0.5801764476506142,
+        "pq": -0.57847533632287,
         "improvement": {
-          "mean": 0.2516636140101033,
-          "lower": 0.2337398279522832,
-          "upper": 0.2689858427632262,
+          "mean": 0.2533154135656828,
+          "lower": 0.23543209791070657,
+          "upper": 0.27099638953770966,
           "days": 43
         }
       },
       "(24, 12, 300)": {
         "tt": -0.8521044637169876,
-        "pq": -0.5892057425645549,
+        "pq": -0.5865647508452153,
         "improvement": {
-          "mean": 0.2606245490632999,
-          "lower": 0.23990268006028267,
-          "upper": 0.28196914016688107,
+          "mean": 0.2631502856613659,
+          "lower": 0.2424280191607439,
+          "upper": 0.284209198904868,
           "days": 43
         }
       },
       "(40, 20, 600)": {
         "tt": -0.8667767210368107,
-        "pq": -0.5757798255556102,
+        "pq": -0.5740698763120287,
         "improvement": {
-          "mean": 0.2894514216635083,
-          "lower": 0.2594912639889855,
-          "upper": 0.32090929356812986,
+          "mean": 0.2910629741637402,
+          "lower": 0.260814710614489,
+          "upper": 0.3223958633482938,
           "days": 43
         }
       },
       "(80, 40, 1800)": {
         "tt": -0.9359040534385911,
-        "pq": -0.6166793178482869,
+        "pq": -0.6166034107585648,
         "improvement": {
-          "mean": 0.31157987514123686,
-          "lower": 0.24034320108424967,
-          "upper": 0.38547500576691135,
+          "mean": 0.31162261973251215,
+          "lower": 0.24106218929624337,
+          "upper": 0.3856217037395137,
           "days": 43
         }
       }
     },
-    "taker_where_unfilled": 0.28863636363636364,
-    "taker_where_filled": -1.1952440412214704,
+    "taker_where_unfilled": 0.2909896518209365,
+    "taker_where_filled": -1.1933414330119758,
     "selection_gap": {
-      "mean": 1.5475245892263483,
-      "lower": 1.4041793509762102,
-      "upper": 1.710763456212633,
+      "mean": 1.5483265070998862,
+      "lower": 1.404200619587704,
+      "upper": 1.7118280648632367,
       "days": 43
     }
   },
   "resting": {
     "(12, 8, 120)": {
-      "r2_vs_train_mean": 0.03972674270606347,
-      "top10": -0.2885650224215247,
-      "bottom50": -0.6124512713097108,
-      "top_fill": 0.5762331838565022,
+      "r2_vs_train_mean": 0.039230330292521765,
+      "top10": -0.2937046004842615,
+      "bottom50": -0.608980469658219,
+      "top_fill": 0.5907990314769975,
       "gap": {
-        "mean": 0.33871292555735544,
-        "lower": 0.23115998515733663,
-        "upper": 0.4656699431698276,
-        "days": 29
+        "mean": 0.3809903304479788,
+        "lower": 0.25023777090538657,
+        "upper": 0.5336114791142569,
+        "days": 31
       }
     },
     "(24, 12, 300)": {
-      "r2_vs_train_mean": 0.01323248525692533,
-      "top10": -0.4002721088435375,
-      "bottom50": -0.6125054986489034,
-      "top_fill": 0.6299319727891156,
+      "r2_vs_train_mean": 0.01285411557640781,
+      "top10": -0.39061696658097683,
+      "bottom50": -0.6100989100989102,
+      "top_fill": 0.6053984575835476,
       "gap": {
-        "mean": 0.11753872070946621,
-        "lower": -0.09359990380981005,
-        "upper": 0.3477249784812294,
-        "days": 34
+        "mean": 0.08096316457684853,
+        "lower": -0.0658544290809047,
+        "upper": 0.21709329061582808,
+        "days": 30
       }
     },
     "(40, 20, 600)": {
-      "r2_vs_train_mean": 0.0029907562380450115,
-      "top10": -0.319926873857404,
-      "bottom50": -0.6114166721755799,
-      "top_fill": 0.6179159049360147,
+      "r2_vs_train_mean": 0.002691630390457944,
+      "top10": -0.38471337579617826,
+      "bottom50": -0.6073971882801208,
+      "top_fill": 0.6454352441613588,
       "gap": {
-        "mean": 0.24272400900573002,
-        "lower": -0.03308878027420602,
-        "upper": 0.5303421801505362,
-        "days": 27
+        "mean": 0.2595284059383593,
+        "lower": 0.08211669636460775,
+        "upper": 0.4384619163425352,
+        "days": 24
       }
     },
     "(80, 40, 1800)": {
-      "r2_vs_train_mean": -1.940708520775658e-06,
-      "top10": -0.4405904059040589,
-      "bottom50": -0.648064970580923,
-      "top_fill": 0.7592250922509225,
+      "r2_vs_train_mean": 8.422493958015753e-05,
+      "top10": -0.44461391801715905,
+      "bottom50": -0.6455534647795139,
+      "top_fill": 0.7502383222116301,
       "gap": {
-        "mean": 0.09231829460146851,
-        "lower": -0.39278871658952896,
-        "upper": 0.5627826979885514,
-        "days": 41
+        "mean": -0.12047269686410697,
+        "lower": -0.584168998307077,
+        "upper": 0.3507046511395808,
+        "days": 42
       }
     }
   },
@@ -1350,5 +1368,5 @@
     "H6": "PASS",
     "R0": "PASS"
   },
-  "seconds": 127.95047949999571
+  "seconds": 120.95867519965395
 }

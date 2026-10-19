@@ -10,13 +10,13 @@
     "representation.py": "ef76d93d5141ee10acd80f6208b4e5c9d99f8ca8915d674c1a5d0b13c1e18620",
     "qmodel.py": "d4591438587fbc2d56af4ab5e1c24419db79d809c9ff0d2c1412f661cbd75466",
     "schemas.py": "3c966b7244ff02de8d9b78f258a52d25f6d44be68ba78daaa577390c012004b4",
-    "schema_run.py": "f8ac82a5ac9ff6ed6be5b3f45e3fc12cd8f96a9635f79538dfa142919f0f055e",
-    "queue.py": "cd3abfba4e86fb6a1c62040edce5e518edc7426d6098c2e458ebb6957ed0d45d",
-    "passive.py": "8314ec4f37e5e6678bf0352bc75da2d393fb41ebcb0e703c1f0d9e864fa8f934",
+    "schema_run.py": "e2bb1d5ddffaab51bba73c8e65bafef1070a6ec7fb1a1af1e2db6a92e96050d7",
+    "queue.py": "d569680a804a558ad31ea644f6ce649ce8940b9c7f697d8857502947a3366094",
+    "passive.py": "25cae30d19b63fc0378dd06111ca7dad99fe5889364459584969eea710e5cb4c",
     "queue_state.py": "1baf88d636e6a0c251efede7b45e02d7912ab68429e6d90105e1b890d05f72e4",
     "passive_learn.py": "a18602a78e9eac2a3698d99dfa078e4085bff6d9591fd586153310110e708d8a",
     "passive_report.py": "5e2e6ce42626ca102a4b81bbc20c25b935b87d7d49249ffaf1f7db7e55f12a4b",
-    "validation.py": "3dea7fecdc41976a36ca3eb9b66d4673de5f7e7fcdb485740e227bbe3610e86c"
+    "validation.py": "528577e6676890e5818a39013933004658a7c5462ac04a081da5f0ffce8e5245"
   },
   "execution": "PQ_30",
   "schema_params": {
@@ -110,6 +110,31 @@
       "change": "day_tapes: captures_by_date restricted to the months of the requested dates instead of the train-months default",
       "reason": "Routing bug: validation dates found no captures, so passive execution and queue state produced zero days. No effect on train outputs, decision rules, execution semantics or criteria.",
       "state_at_amendment": "Block-V signatures and representation were generated (only completion counts printed); no V outcome, fill or queue state has been inspected; passive and queue_state produced nothing."
+    },
+    {
+      "utc": "2026-10-19T20:37:50.349602+00:00",
+      "post_outcome": true,
+      "files": {
+        "schema_run.py": {
+          "old_sha256": "f8ac82a5ac9ff6ed6be5b3f45e3fc12cd8f96a9635f79538dfa142919f0f055e",
+          "new_sha256": "e2bb1d5ddffaab51bba73c8e65bafef1070a6ec7fb1a1af1e2db6a92e96050d7"
+        },
+        "queue.py": {
+          "old_sha256": "cd3abfba4e86fb6a1c62040edce5e518edc7426d6098c2e458ebb6957ed0d45d",
+          "new_sha256": "d569680a804a558ad31ea644f6ce649ce8940b9c7f697d8857502947a3366094"
+        },
+        "passive.py": {
+          "old_sha256": "8314ec4f37e5e6678bf0352bc75da2d393fb41ebcb0e703c1f0d9e864fa8f934",
+          "new_sha256": "25cae30d19b63fc0378dd06111ca7dad99fe5889364459584969eea710e5cb4c"
+        },
+        "validation.py": {
+          "old_sha256": "3dea7fecdc41976a36ca3eb9b66d4673de5f7e7fcdb485740e227bbe3610e86c",
+          "new_sha256": "528577e6676890e5818a39013933004658a7c5462ac04a081da5f0ffce8e5245"
+        }
+      },
+      "change": "Queue kernel V2 -> V5: fills reported before placement start as consumed; pending capped by displayed size; iceberg refills lose priority; hidden excess on the last order ahead proves the fill; worse-level proofs use the execution price, queue evidence only when the F price matches the current book level. Fill-proof invariant (no fill before a trade at/through the limit) enforced in the pipeline. Passive data regenerated (v5 dirs).",
+      "reason": "Independent audit after the first validation run: explicit FIFO replay disagreed with the kernel on 3 of 200 probes. V5 agrees on 520 of 520 probes over three days and passes the invariant on all 151 days.",
+      "status": "POST-OUTCOME correction: March-April outcomes had been seen. The rerun is a corrected recomputation of the same procedure, not a clean preregistered test."
     }
   ]
 }

@@ -126,3 +126,66 @@ def test_queue_state_uses_only_records_strictly_before_decision():
     assert f['bid_add_5'][0] == 2 and f['bid_cancel_5'][0] == 1 and f['bid_fill_5'][0] == 1   # 9 lots at t excluded
     assert f['tsell_5'][0] == 1 and f['tbuy_5'][0] == 0
     assert f['ask_add_30'][0] == 4 and f['ask_add_5'][0] == 0  # added at 3 ns: inside 30 s, outside 5 s
+
+
+def test_fill_reported_before_placement_counts_as_consumed():
+    # order 2 (ahead) has an F reported before the probe rests; its C arrives later.
+    # Real data case 2025-10-01 3886.6 ask: V2 fell to a negative consumed count.
+    rows = BOOK + [(9, 'T', 'A', 100, 2, 70), (9, 'F', 'B', 100, 2, 2),
+                   (20, 'C', 'B', 100, 3, 1), (21, 'C', 'B', 100, 2, 2),
+                   (25, 'A', 'B', 100, 1, 3), (30, 'F', 'B', 100, 1, 3)]
+    s, f, k, a = probe(tape(rows + TAIL), [10], [1], [100 * P], [1000])
+    assert (s[0], f[0], k[0]) == (FILLED, 30, 1) and probe.violations[0] == 0
+
+
+ICE = [(1, 'R', 'N', 0, 0, 0), (2, 'A', 'B', 100, 1, 1), (3, 'A', 'A', 101, 5, 9)]
+
+
+def test_iceberg_refill_goes_behind_the_probe():
+    # order 1 (1 lot, ahead) fills, then its display is restored by M: new priority, now behind
+    rows = ICE + [(20, 'F', 'B', 100, 1, 1), (21, 'M', 'B', 100, 1, 1), (30, 'F', 'B', 100, 1, 1)]
+    s, f, k, a = probe(tape(rows + TAIL), [10], [1], [100 * P], [1000])
+    assert (s[0], f[0], k[0]) == (FILLED, 30, 1)
+
+
+def test_hidden_excess_on_last_order_ahead_proves_fill():
+    rows = ICE + [(20, 'T', 'A', 100, 3, 77), (20, 'F', 'B', 100, 3, 1)]
+    s, f, k, a = probe(tape(rows + TAIL), [10], [1], [100 * P], [1000])
+    assert (s[0], f[0], k[0]) == (FILLED, 20, 4)
+
+
+def test_hidden_excess_with_queue_still_ahead_is_a_violation():
+    rows = ICE + [(4, 'A', 'B', 100, 2, 2), (20, 'F', 'B', 100, 3, 1)]
+    s, f, k, a = probe(tape(rows + TAIL), [10], [1], [100 * P], [1000])
+    assert s[0] == EXPIRED and probe.violations[0] == 1
+
+
+def test_execution_below_our_bid_proves_fill_even_if_book_level_is_stale():
+    # order 1 still shows 100 in the book but executes at 99: price priority reached our bid first
+    rows = ICE + [(4, 'A', 'B', 100, 2, 2), (20, 'F', 'B', 99, 1, 1)]
+    s, f, k, a = probe(tape(rows + TAIL), [10], [1], [100 * P], [1000])
+    assert (s[0], f[0], k[0]) == (FILLED, 20, 2)
+    # and a stale-level F at our own price is not queue evidence
+    rows = ICE + [(4, 'A', 'B', 100, 2, 2), (5, 'A', 'B', 98, 1, 8), (20, 'F', 'B', 100, 1, 8)]
+    s, f, k, a = probe(tape(rows + TAIL), [10], [1], [100 * P], [1000])
+    assert s[0] == EXPIRED and probe.violations[0] == 0
+
+
+def test_stale_book_level_of_repriced_order_is_not_a_worse_fill():
+    # a sell order rests deep at 105 (worse than our ask 101) and is repriced
+    # aggressively: its F at 100 arrives before its M. No trade reached 101.
+    rows = ICE + [(4, 'A', 'A', 105, 2, 7), (20, 'F', 'A', 100, 2, 7), (21, 'M', 'A', 100, 0, 7)]
+    s, f, k, a = probe(tape(rows + TAIL), [10], [-1], [101 * P], [1000])
+    assert s[0] == EXPIRED
+    # an execution genuinely worse than our ask (at 102) still proves the fill
+    rows = ICE + [(4, 'A', 'A', 102, 2, 7), (20, 'F', 'A', 102, 1, 7)]
+    s, f, k, a = probe(tape(rows + TAIL), [10], [-1], [101 * P], [1000])
+    assert (s[0], f[0], k[0]) == (FILLED, 20, 2)
+
+
+def test_fill_proof_invariant_rejects_fill_without_trade_at_or_through_price():
+    from spectrum.cognition.queue import check_fill_proofs
+    tp = tape(ICE + [(20, 'T', 'B', 101, 1, 70)] + TAIL)
+    assert check_fill_proofs(tp, [10], [-1], [101 * P], [FILLED], [20])
+    with pytest.raises(AssertionError):
+        check_fill_proofs(tp, [10], [-1], [102 * P], [FILLED], [20])  # no trade reached 102

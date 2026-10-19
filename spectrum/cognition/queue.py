@@ -4,18 +4,31 @@ Book mutations follow the repository L3 engine: A adds, C reduces, M modifies,
 R clears; T (aggressor side) and F (resting side) are facts that do not change
 the book. Every resting order carries a priority number; it is renewed on add,
 on a price change and on a size increase (CME FIFO), and kept on a size
-decrease. A probe placed at time t gets the next priority at the first record
-with ts_recv >= t, so every order already resting at its price is ahead.
+decrease. "Size" for that test is the displayed remainder after fills already
+reported for the order: an M that restores displayed size after a fill is an
+iceberg refill and goes to the back of the queue. A probe placed at time t gets
+the next priority at the first record with ts_recv >= t, so every order already
+resting at its price is ahead.
+
+An F counts for queue accounting only when its execution price equals the
+order's level in the book. An order repriced aggressively reports its F before
+its M, so its book level is stale; such an F is a fact about the execution
+price only (V4 attributed it to the stale level and produced false 'worse'
+fills). Reported-but-unremoved fills ("pending") are capped by the displayed
+remainder; the excess of an F over that remainder is hidden quantity refreshed
+behind the queue.
 
 A probe fills, at its own price, on the first record that proves a FIFO match
-would have reached it:
-  1 BEHIND  - F on its side and price for an order with a later priority, and
-              the queue ahead is exhausted: ahead = lots resting ahead at
-              placement minus their cancels/reductions minus fills already
-              reported for them but not yet removed by C/M. A behind-fill while
-              ahead > 0 is a FIFO violation; it is counted and never fills;
-  2 WORSE   - F on its side at a price worse than the probe's;
+would have reached it, with R = lots ahead at placement minus their
+cancels/reductions minus their pending fills (including fills reported before
+placement):
+  1 BEHIND  - F for an order at the probe's level with a later priority and R <= 0;
+  4 REFILL  - F with hidden excess on an order ahead and R <= 0 after its
+              displayed part: the aggressor reached the refreshed tranche, which
+              rests behind the probe;
+  2 WORSE   - F on the probe's side executed at a price worse than the probe's;
   3 THROUGH - T at a price strictly through the probe (below a bid, above an ask).
+A behind/refill proof while R > 0 is a FIFO violation; it is counted and never fills.
 It never consumes liquidity from the replayed market (no-impact assumption)
 and never fills by mere touch. A reset or a bad-book flag censors it; it
 expires when no proof arrives before its cancel time.
@@ -26,9 +39,9 @@ from numba import njit, types
 from numba.typed import Dict
 from spectrum.core.vendor.glbx_dbn import GlbxZipMboSource
 
-VERSION = 'MBO_FIFO_QUEUE_PROBE_V2'
+VERSION = 'MBO_FIFO_QUEUE_PROBE_V5'
 FILLED, EXPIRED, CENSORED, UNPLACED = 1, 2, 3, 4
-KIND = {0: 'none', 1: 'behind', 2: 'worse', 3: 'through'}
+KIND = {0: 'none', 1: 'behind', 2: 'worse', 3: 'through', 4: 'refill'}
 F_MAYBE_BAD_BOOK = 1 << 2
 _A, _C, _M, _R, _T, _F, _B, _S = (ord(c) for c in 'ACMRTFBA')
 
@@ -52,6 +65,10 @@ def _run(ts, action, side, price, size, oid, flags, p_place, p_side, p_price, p_
     ahead = np.zeros(m, np.int64); consumed = np.zeros(m, np.int64)
     bid_lvl = Dict.empty(key_type=types.int64, value_type=types.int64)
     ask_lvl = Dict.empty(key_type=types.int64, value_type=types.int64)
+    # reported-but-unremoved fills per level, so a probe placed inside a fill
+    # group starts with them already consumed (V2 started at zero: too late fills)
+    bid_pend = Dict.empty(key_type=types.int64, value_type=types.int64)
+    ask_pend = Dict.empty(key_type=types.int64, value_type=types.int64)
     free = 0; counter = 0; nxt = 0
     active = np.empty(m, np.int64); n_active = 0; prio = np.zeros(m, np.int64)
     for i in range(n):
@@ -62,6 +79,8 @@ def _run(ts, action, side, price, size, oid, flags, p_place, p_side, p_price, p_
             lvl = bid_lvl if p_side[nxt] > 0 else ask_lvl
             out_ahead[nxt] = lvl[p_price[nxt]] if p_price[nxt] in lvl else 0
             ahead[nxt] = out_ahead[nxt]
+            pend = bid_pend if p_side[nxt] > 0 else ask_pend
+            consumed[nxt] = pend[p_price[nxt]] if p_price[nxt] in pend else 0
             out_status[nxt] = EXPIRED
             active[n_active] = nxt; n_active += 1; nxt += 1
         a = action[i]
@@ -72,11 +91,17 @@ def _run(ts, action, side, price, size, oid, flags, p_place, p_side, p_price, p_
                     out_status[j] = CENSORED; out_fill[j] = t
             n_active = 0
             if a == _R:
-                slot.clear(); bid_lvl.clear(); ask_lvl.clear()
+                slot.clear(); bid_lvl.clear(); ask_lvl.clear(); bid_pend.clear(); ask_pend.clear()
                 continue
             # a flagged mutation still applies to the book, as in the L3 engine
         if a == _T or a == _F:
-            px = price[i]; sd = 1 if side[i] == _B else (-1 if side[i] == _S else 0)
+            px = price[i]; fs = 1 if side[i] == _B else (-1 if side[i] == _S else 0)
+            known = a == _F and oid[i] in slot
+            q = slot[oid[i]] if known else 0
+            known = known and s_price[q] == px and s_side[q] == fs  # book level is current
+            bs = s_side[q] if known else 0; bp = s_price[q] if known else 0
+            disp = min(size[i], max(s_size[q] - s_pend[q], 0)) if known else 0
+            excess = size[i] - disp if known else 0
             k = 0
             while k < n_active:
                 j = active[k]
@@ -86,13 +111,17 @@ def _run(ts, action, side, price, size, oid, flags, p_place, p_side, p_price, p_
                 elif a == _T:
                     if (p_side[j] > 0 and px < p_price[j]) or (p_side[j] < 0 and px > p_price[j]):
                         done = FILLED; out_kind[j] = 3
-                elif sd == p_side[j]:
-                    if (p_side[j] > 0 and px < p_price[j]) or (p_side[j] < 0 and px > p_price[j]):
-                        done = FILLED; out_kind[j] = 2
-                    elif px == p_price[j] and oid[i] in slot:
-                        q = slot[oid[i]]
+                elif fs == p_side[j] and ((fs > 0 and px < p_price[j]) or (fs < 0 and px > p_price[j])):
+                    done = FILLED; out_kind[j] = 2
+                elif known and bs == p_side[j]:
+                    if bp == p_price[j]:
                         if s_prio[q] < prio[j]:
-                            consumed[j] += size[i]
+                            consumed[j] += disp
+                            if excess > 0:
+                                if ahead[j] - consumed[j] <= 0:
+                                    done = FILLED; out_kind[j] = 4
+                                else:
+                                    out_viol[j] += 1
                         elif ahead[j] - consumed[j] <= 0:
                             done = FILLED; out_kind[j] = 1
                         else:
@@ -104,8 +133,10 @@ def _run(ts, action, side, price, size, oid, flags, p_place, p_side, p_price, p_
                     n_active -= 1; active[k] = active[n_active]
                 else:
                     k += 1
-            if a == _F and oid[i] in slot:
-                s_pend[slot[oid[i]]] += size[i]
+            if known and disp:
+                s_pend[q] += disp
+                pend = bid_pend if bs > 0 else ask_pend
+                pend[bp] = (pend[bp] if bp in pend else 0) + disp
             continue
         o = oid[i]
         sd = 1 if side[i] == _B else -1
@@ -118,6 +149,9 @@ def _run(ts, action, side, price, size, oid, flags, p_place, p_side, p_price, p_
             if o in slot:
                 q = slot[o]; removed = min(size[i], s_size[q])
                 settled = min(removed, s_pend[q]); s_pend[q] -= settled
+                if settled:
+                    pend = bid_pend if s_side[q] > 0 else ask_pend
+                    pend[s_price[q]] = pend[s_price[q]] - settled
                 for k in range(n_active):
                     j = active[k]
                     if p_side[j] == s_side[q] and p_price[j] == s_price[q] and s_prio[q] < prio[j]:
@@ -130,13 +164,17 @@ def _run(ts, action, side, price, size, oid, flags, p_place, p_side, p_price, p_
         elif a == _M:
             if o in slot:
                 q = slot[o]
-                keeps = price[i] == s_price[q] and 0 < size[i] <= s_size[q]
+                # a refill after reported fills restores displayed size: new priority
+                keeps = price[i] == s_price[q] and 0 < size[i] <= s_size[q] - s_pend[q]
                 for k in range(n_active):
                     j = active[k]
                     if p_side[j] == s_side[q] and p_price[j] == s_price[q] and s_prio[q] < prio[j]:
                         ahead[j] -= s_size[q]; consumed[j] -= s_pend[q]
                         if keeps:
                             ahead[j] += size[i]
+                if s_pend[q]:
+                    pend = bid_pend if s_side[q] > 0 else ask_pend
+                    pend[s_price[q]] = pend[s_price[q]] - s_pend[q]
                 s_pend[q] = 0
                 lvl = bid_lvl if s_side[q] > 0 else ask_lvl
                 lvl[s_price[q]] = lvl[s_price[q]] - s_size[q]
@@ -171,6 +209,19 @@ def probe(tape, place_ns, side, price_nano, end_ns):
     inv = np.empty(m, np.int64); inv[order] = np.arange(m)
     probe.violations = viol[inv]
     return status[inv], fill[inv], kind[inv], ahead[inv]
+
+
+def check_fill_proofs(tape, place_ns, side, price_nano, status, fill_ns):
+    """Invariant: a resting limit cannot fill before a trade prints at or through
+    its price after it rests. Raises on any violation (V4's false fills broke it)."""
+    trades = np.flatnonzero(tape['action'] == _T)
+    tts, tpx = tape['ts'][trades], tape['price'][trades]
+    for i in np.flatnonzero(np.asarray(status) == FILLED):
+        lo = np.searchsorted(tts, place_ns[i], side='left'); hi = np.searchsorted(tts, fill_ns[i], side='right')
+        px = tpx[lo:hi]
+        if not np.any(px <= price_nano[i] if side[i] > 0 else px >= price_nano[i]):
+            raise AssertionError(f'Fill without a trade at/through the limit: probe {i}, place {place_ns[i]}, fill {fill_ns[i]}')
+    return True
 
 
 def capture_tapes(archive, member, captures, block_records=1_048_576):
