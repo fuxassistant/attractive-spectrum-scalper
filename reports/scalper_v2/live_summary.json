@@ -1,0 +1,158 @@
+{
+  "version": "SCALPER_LIVE_V1",
+  "thresholds": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "selection_A2": {
+    "A2_th0.0": {
+      "trades": 951,
+      "filled": 858,
+      "net": -570.2,
+      "per_trade": -0.6645687645687645,
+      "win_rate": 0.3974358974358974,
+      "per_day": 43.22727272727273,
+      "daily": {
+        "mean": -25.918181818181814,
+        "lower": -40.20056818181818,
+        "upper": -11.260681818181833,
+        "days": 22
+      },
+      "max_drawdown": 610.3999999999996,
+      "median_hold_s": 415.69851954850003
+    },
+    "A2_th0.05": {
+      "trades": 755,
+      "filled": 703,
+      "net": -452.69999999999993,
+      "per_trade": -0.643954480796586,
+      "win_rate": 0.40256045519203415,
+      "per_day": 34.31818181818182,
+      "daily": {
+        "mean": -20.577272727272728,
+        "lower": -31.54772727272727,
+        "upper": -8.395340909090908,
+        "days": 22
+      },
+      "max_drawdown": 501.00000000000006,
+      "median_hold_s": 425.286248589
+    },
+    "A2_th0.1": {
+      "trades": 622,
+      "filled": 582,
+      "net": -339.1,
+      "per_trade": -0.5826460481099656,
+      "win_rate": 0.4175257731958763,
+      "per_day": 28.272727272727273,
+      "daily": {
+        "mean": -15.413636363636359,
+        "lower": -24.215795454545454,
+        "upper": -4.815681818181855,
+        "days": 22
+      },
+      "max_drawdown": 393.1,
+      "median_hold_s": 416.6867221535
+    },
+    "A2_th0.2": {
+      "trades": 425,
+      "filled": 406,
+      "net": -184.59999999999997,
+      "per_trade": -0.454679802955665,
+      "win_rate": 0.43103448275862066,
+      "per_day": 19.318181818181817,
+      "daily": {
+        "mean": -8.39090909090909,
+        "lower": -17.065113636363634,
+        "upper": 1.7093181818181558,
+        "days": 22
+      },
+      "max_drawdown": 265.50000000000006,
+      "median_hold_s": 423.199858641
+    },
+    "A2_th0.3": {
+      "trades": 330,
+      "filled": 317,
+      "net": -137.7,
+      "per_trade": -0.43438485804416416,
+      "win_rate": 0.4384858044164038,
+      "per_day": 15.0,
+      "daily": {
+        "mean": -6.25909090909091,
+        "lower": -12.286818181818182,
+        "upper": 0.9186363636363598,
+        "days": 22
+      },
+      "max_drawdown": 207.30000000000007,
+      "median_hold_s": 430.991866455
+    }
+  },
+  "chosen_threshold": 0.3,
+  "B": {
+    "policy_passive_tp": {
+      "trades": 426,
+      "filled": 406,
+      "net": -69.40000000000005,
+      "per_trade": -0.17093596059113303,
+      "win_rate": 0.4458128078817734,
+      "per_day": 10.390243902439025,
+      "daily": {
+        "mean": -1.6926829268292702,
+        "lower": -9.391036585365853,
+        "upper": 5.949146341463408,
+        "days": 41
+      },
+      "max_drawdown": 164.90000000000006,
+      "median_hold_s": 574.802022586
+    },
+    "policy_taker_tp": {
+      "trades": 426,
+      "filled": 406,
+      "net": -85.30000000000004,
+      "per_trade": -0.2100985221674878,
+      "win_rate": 0.4458128078817734,
+      "per_day": 10.390243902439025,
+      "daily": {
+        "mean": -2.0804878048780497,
+        "lower": -9.814817073170733,
+        "upper": 5.549817073170722,
+        "days": 41
+      },
+      "max_drawdown": 171.3999999999999,
+      "median_hold_s": 574.2515368475
+    },
+    "random_passive_tp": {
+      "trades": 399,
+      "filled": 366,
+      "net": -94.1,
+      "per_trade": -0.2571038251366119,
+      "win_rate": 0.4262295081967213,
+      "per_day": 9.731707317073171,
+      "daily": {
+        "mean": -2.2951219512195116,
+        "lower": -7.141646341463416,
+        "upper": 2.404878048780487,
+        "days": 41
+      },
+      "max_drawdown": 179.29999999999993,
+      "median_hold_s": 120.12359853199999
+    }
+  },
+  "split": {
+    "A1": [
+      "2025-10",
+      "2025-11"
+    ],
+    "A2": [
+      "2025-12"
+    ],
+    "B": [
+      "2026-01",
+      "2026-02"
+    ]
+  },
+  "seconds": 1623.992256599944,
+  "semantics": "Sequential 1 oz scalper account on the MBO tape with a passive take-profit.\n\nFor every trade the policy actually takes, the entry (taker or queued) and a\nresting take-profit limit are simulated on the MBO queue kernel V5 with the\nfill-proof invariant; stop, time limit and session deadline exit as takers\non mid-move triggers (scalper.scan_exits with the take disabled). The take\nlimit rests at the tick-rounded price mid_at_fill +- m_take*u, placed at\nfill+100 ms; if it is already marketable it fills at the executable price.\nWhichever of {take fill, stop/time/deadline} comes first ends the trade; a\nsupport loss before the take fill censors it. A trade's real exit sets when\nthe account is free again, so the whole day is simulated in order.\n\nThresholds are chosen without B: models fit on A1 (Oct-Nov 2025), threshold\nby the A2 (Dec 2025) sequential result; final models fit on all of A and the\nchosen threshold is applied to B (Jan-Feb 2026), with controls."
+}

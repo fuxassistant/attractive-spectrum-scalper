@@ -98,3 +98,7 @@ credentials.json
 /reports/scalper_v1/*
 !/reports/scalper_v1/SCALPER_RU.md
 !/reports/scalper_v1/scalper_summary.json
+!/reports/scalper_v2/
+/reports/scalper_v2/*
+!/reports/scalper_v2/LIVE_RU.md
+!/reports/scalper_v2/live_summary.json
