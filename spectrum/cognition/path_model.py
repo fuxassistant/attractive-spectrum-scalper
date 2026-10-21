@@ -414,7 +414,21 @@ def ledger_summary(t):
                 when_nll=float(filled.when_full.mean()) if len(filled) else None,
                 what_nll=float(filled.what_full.mean()) if len(filled) else None,
                 by_mode={m: dict(trades=int(len(g)), forecast=float(g.eg_full.mean()), realised=float(g.net0.mean()))
-                         for m, g in t.groupby('mode')})
+                         for m, g in t.groupby('mode')},
+                by_outcome=[dict(mode=m, cat=int(c), trades=int(len(g)), net=float(g.net0.mean()),
+                                 v_pred=float(np.select([g.cat == TAKE, g.cat == STOP, g.cat == TIME],
+                                                        [g.v_take_full, g.v_stop_full, g.v_time_full], np.nan).mean()) if c else None,
+                                 err_value=float(g.err_value.mean()))
+                            for (m, c), g in t.groupby(['mode', 'cat'])],
+                plans={ADAPTIVE[k][0]: int(v) for k, v in t.plan.value_counts().items()})
+
+
+def refresh_ledger(output=REPORT, data_out=OUTPUT):
+    """Recompute the ledger summary from the saved ledger (readout change only; trades unchanged)."""
+    path = Path(output) / 'stage1_summary.json'; s = json.loads(path.read_text(encoding='utf8'))
+    led = pd.read_parquet(Path(data_out) / 'ledger_B.parquet')
+    s['ledger_B'] = dict(policy=s['ledger_B']['policy'], **ledger_summary(led)); save_json(path, s)
+    return s['ledger_B']
 
 
 def adverse_selection(leg):
