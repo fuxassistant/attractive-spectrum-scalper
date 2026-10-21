@@ -136,10 +136,10 @@ def features(day, q, grid, ks, t_dec, seconds):
     return out
 
 
-def labels(q, tape_mbo, t_dec, eligible, sigma, spread):
-    """Outcome columns for every mode x side x plan."""
-    n = len(t_dec); cols = {}
-    qt, bid, ask, ok, ep = q.t, q.bid, q.ask, q.ok, q.epoch
+def entry_points(q, tape_mbo, t_dec, eligible):
+    """Per (mode, side): entry quote index (-1 none), entry price, pre-scan status (0 = run), time reference."""
+    n = len(t_dec)
+    qt, bid, ask, ok = q.t, q.bid, q.ask, q.ok
     j_dec = np.searchsorted(q.good_t, t_dec, side='right') - 1
     g = q.good[np.clip(j_dec, 0, None)]
     entries = {}
@@ -174,6 +174,14 @@ def labels(q, tape_mbo, t_dec, eligible, sigma, spread):
                        np.where(start >= 0, 0, EMPTY)))
         ref = np.where(start >= 0, qt[np.clip(start, 0, None)], 0)
         entries[('P', s)] = (start, px.astype(np.int64), st0, ref)
+    return entries
+
+
+def labels(q, tape_mbo, t_dec, eligible, sigma, spread):
+    """Outcome columns for every mode x side x plan."""
+    n = len(t_dec); cols = {}
+    qt, bid, ask, ok, ep = q.t, q.bid, q.ask, q.ok, q.epoch
+    entries = entry_points(q, tape_mbo, t_dec, eligible)
     for name, trig, hold, take, stop in PLANS:
         if trig == 'mid':
             unit = sigma * np.sqrt(hold) * TICK

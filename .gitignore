@@ -102,3 +102,11 @@ credentials.json
 /reports/scalper_v2/*
 !/reports/scalper_v2/LIVE_RU.md
 !/reports/scalper_v2/live_summary.json
+!/reports/scalper_mind_v1/
+/reports/scalper_mind_v1/*
+!/reports/scalper_mind_v1/PREREGISTRATION_RU.md
+!/reports/scalper_mind_v1/STAGE1_RU.md
+!/reports/scalper_mind_v1/stage1_summary.json
+!/reports/scalper_mind_v1/path_direct_check.json
+!/reports/scalper_mind_v1/null_grid.json
+!/reports/scalper_mind_v1/hedge_weights.csv
