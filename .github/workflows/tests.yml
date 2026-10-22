@@ -13,6 +13,6 @@ jobs:
           python-version: '3.11'
           cache: pip
       - run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
-      - run: python -m pip install -r requirements-foundation.txt -e '.[player,dev]'
+      - run: python -m pip install -r requirements-foundation.txt -e '.[player,cognition,dev]'
       - run: mkdir -p .tmp
       - run: python -m pytest -q --basetemp .tmp/pytest_ci
