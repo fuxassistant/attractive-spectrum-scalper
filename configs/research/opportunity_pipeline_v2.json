@@ -1,0 +1,189 @@
+{
+  "schema": "scientific_opportunity_pipeline_v2",
+  "run_id": "tcn_rich_seed17",
+  "seed": 17,
+  "data": {
+    "root": "data/derived/scientific_pipeline_v2/dataset",
+    "market_root": "data/derived/basket_multimonth_v1",
+    "source_root": "data/derived/full_mbo_v1",
+    "admission_overlay": "reports/full_mbo_v1/audit_20261016/training_admission_overlay.json",
+    "source_inventory": "reports\\scientific_pipeline_v2\\source_inventory.json",
+    "source_inventory_sha256": "0f6b1495fb703565db3ab00fd89e312845ec60bed5aae2dd1d0357a195368c45",
+    "dates": [
+      "2026-03-30",
+      "2026-03-31",
+      "2026-04-01",
+      "2026-04-02",
+      "2026-04-07",
+      "2026-04-08",
+      "2026-04-09",
+      "2026-04-14",
+      "2026-04-15",
+      "2026-04-16",
+      "2026-04-17",
+      "2026-04-20",
+      "2026-04-21",
+      "2026-04-22",
+      "2026-04-23",
+      "2026-04-24",
+      "2026-04-27",
+      "2026-04-28",
+      "2026-04-29",
+      "2026-04-30",
+      "2026-05-01",
+      "2026-05-04",
+      "2026-05-05",
+      "2026-05-06",
+      "2026-05-07",
+      "2026-05-08",
+      "2026-05-11",
+      "2026-05-12",
+      "2026-05-13",
+      "2026-05-14",
+      "2026-05-15",
+      "2026-05-18",
+      "2026-05-19",
+      "2026-05-20",
+      "2026-05-21",
+      "2026-05-22"
+    ],
+    "family": "rich",
+    "sequence_length": 64,
+    "cadence_seconds": 5,
+    "max_feature_age_seconds": 2.0
+  },
+  "splits": {
+    "train": [
+      "2026-03-30",
+      "2026-03-31",
+      "2026-04-01",
+      "2026-04-02",
+      "2026-04-07",
+      "2026-04-08",
+      "2026-04-09",
+      "2026-04-14",
+      "2026-04-15",
+      "2026-04-16",
+      "2026-04-17",
+      "2026-04-20",
+      "2026-04-21",
+      "2026-04-22",
+      "2026-04-23",
+      "2026-04-24"
+    ],
+    "validation": [
+      "2026-04-27",
+      "2026-04-28",
+      "2026-04-29",
+      "2026-04-30",
+      "2026-05-01"
+    ],
+    "calibration": [
+      "2026-05-04",
+      "2026-05-05",
+      "2026-05-06",
+      "2026-05-07",
+      "2026-05-08"
+    ],
+    "test": [
+      "2026-05-11",
+      "2026-05-12",
+      "2026-05-13",
+      "2026-05-14",
+      "2026-05-15",
+      "2026-05-18",
+      "2026-05-19",
+      "2026-05-20",
+      "2026-05-21",
+      "2026-05-22"
+    ]
+  },
+  "event_query": {
+    "family": "BB",
+    "scales": [
+      1,
+      3,
+      6
+    ],
+    "deadline_seconds": 300.0,
+    "gain_multiple": 2.0,
+    "reference_fee": 0.3,
+    "risk_cost_multiple": 2.0,
+    "risk_half_multiple": 0.1,
+    "minimum_risk": 0.5
+  },
+  "execution": {
+    "fee_roundtrip": 0.3,
+    "latency_ms": 100.0,
+    "pending_timeout_seconds": 2.0,
+    "max_quote_gap_seconds": 60.0,
+    "exit_mode": "first_qualifying_crossing"
+  },
+  "risk": {
+    "cost_multipliers": [
+      2.0,
+      4.0,
+      6.0
+    ],
+    "half_multiple": 0.1,
+    "minimum_risk": 0.5,
+    "gain_reference": "fixed_event_G_for_all_plans"
+  },
+  "model": {
+    "architecture": "tcn",
+    "hidden": 32,
+    "layers": 4,
+    "kernel_size": 3,
+    "dropout": 0.05
+  },
+  "loss": {
+    "formulation": "factorized",
+    "event_loss": "bce",
+    "gamma": 0.0
+  },
+  "training": {
+    "device": "auto",
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "max_updates": 1500,
+    "validate_every": 150,
+    "patience_checks": 5,
+    "min_delta": 0.0001,
+    "cpu_threads": 4,
+    "weighting": "uniform_roots",
+    "train_metric_probe": 2048,
+    "gradient_probe": 256
+  },
+  "policy": {
+    "threshold_candidates": [
+      0.35,
+      0.5,
+      0.65,
+      0.8,
+      1.01
+    ],
+    "minimum_calibration_trades": 50,
+    "selection": "calibration_after_cost_net_else_wait",
+    "one_position": true
+  },
+  "experiment": {
+    "families": [
+      "geometry",
+      "micro",
+      "rich"
+    ],
+    "architectures": [
+      "mlp",
+      "tcn"
+    ],
+    "development_seed": 17,
+    "confirmation_seed": 29,
+    "selection": "Choose family/architecture by validation joint NLL before interpreting test; rerun selected config at seed29; report all development models without selecting on test",
+    "primary_target": "fixed crossing E/D; risk grid never changes target",
+    "feature_clock": "5s decisions from latest published 1s values; 64 tokens, TCN RF61 = 300s detailed history",
+    "day_context": "current and previous London compressed summaries, M1 spectra; exact new-session trade-VWAP not materialized",
+    "historical_exposure": "New relative to February scientific-v1. Some dates used by historical repository experiments; not never-inspected holdout"
+  }
+}
