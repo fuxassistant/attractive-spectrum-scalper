@@ -1,0 +1,48 @@
+{
+  "date": "2026-01-02",
+  "selection": "first M1 middle cluster of six crossings within 5s after London on first B day",
+  "events": [
+    {
+      "event_id": "19aa403dea7e5b65b957d8d2/650349/1/middle/1",
+      "t_ns": "1767342341628306596",
+      "direction": 1,
+      "mid": 4396.4,
+      "line": 4396.3475
+    },
+    {
+      "event_id": "19aa403dea7e5b65b957d8d2/650357/1/middle/-1",
+      "t_ns": "1767342341628740639",
+      "direction": -1,
+      "mid": 4396.3,
+      "line": 4396.3425
+    },
+    {
+      "event_id": "19aa403dea7e5b65b957d8d2/650401/1/middle/1",
+      "t_ns": "1767342341676923843",
+      "direction": 1,
+      "mid": 4396.35,
+      "line": 4396.345
+    },
+    {
+      "event_id": "19aa403dea7e5b65b957d8d2/650404/1/middle/-1",
+      "t_ns": "1767342342649204651",
+      "direction": -1,
+      "mid": 4396.25,
+      "line": 4396.34
+    },
+    {
+      "event_id": "19aa403dea7e5b65b957d8d2/650442/1/middle/1",
+      "t_ns": "1767342344342982753",
+      "direction": 1,
+      "mid": 4396.35,
+      "line": 4396.345
+    },
+    {
+      "event_id": "19aa403dea7e5b65b957d8d2/650470/1/middle/-1",
+      "t_ns": "1767342344557273254",
+      "direction": -1,
+      "mid": 4396.3,
+      "line": 4396.3425
+    }
+  ]
+}

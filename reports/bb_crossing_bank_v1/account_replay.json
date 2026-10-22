@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "scope": "Continuous raw-quote drawdown through completed trades only; selected censored trade is not silently completed",
+  "script_sha256": "99809bc5df6631e3404dd2963f82459369a1fb9ba2bc7a2506234b5a76322794",
+  "accounts": {
+    "A2/M1": {
+      "peak": 1510.6999999999998,
+      "drawdown": 319.4999999999984,
+      "net": -308.7,
+      "fills": 423,
+      "max_net_error": 0.0
+    },
+    "A2/M3": {
+      "peak": 1500.6,
+      "drawdown": 229.29999999999905,
+      "net": -193.19999999999982,
+      "fills": 758,
+      "max_net_error": 0.0
+    },
+    "A2/M6": {
+      "peak": 1500.6,
+      "drawdown": 20.899999999999636,
+      "net": -19.500000000000004,
+      "fills": 12,
+      "max_net_error": 0.0
+    },
+    "A2/M9": {
+      "peak": 1528.0,
+      "drawdown": 187.60000000000036,
+      "net": -157.3000000000002,
+      "fills": 307,
+      "max_net_error": 0.0
+    },
+    "B/M1": {
+      "peak": 1502.5,
+      "drawdown": 358.10000000000014,
+      "net": -351.4,
+      "fills": 540,
+      "max_net_error": 0.0
+    },
+    "B/M3": {
+      "peak": 1500.0,
+      "drawdown": 301.50000000000045,
+      "net": -271.40000000000003,
+      "fills": 341,
+      "max_net_error": 0.0
+    },
+    "B/M6": {
+      "peak": 1503.8999999999996,
+      "drawdown": 129.80000000000018,
+      "net": -119.2,
+      "fills": 138,
+      "max_net_error": 0.0
+    },
+    "B/M9": {
+      "peak": 1507.1,
+      "drawdown": 146.79999999999995,
+      "net": -138.8,
+      "fills": 170,
+      "max_net_error": 0.0
+    }
+  }
+}

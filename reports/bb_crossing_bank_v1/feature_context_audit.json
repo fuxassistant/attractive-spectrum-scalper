@@ -1,0 +1,593 @@
+{
+  "status": "COMPLETE",
+  "models": {
+    "model_B_global_rich.pkl": {
+      "input_columns": 81,
+      "used_columns": 67,
+      "groups": {
+        "base": {
+          "available": 5,
+          "used": 5,
+          "split_nodes": 191
+        },
+        "short_flow_and_returns": {
+          "available": 31,
+          "used": 20,
+          "split_nodes": 333
+        },
+        "day_summaries": {
+          "available": 21,
+          "used": 18,
+          "split_nodes": 676
+        },
+        "spectrum_summaries": {
+          "available": 8,
+          "used": 8,
+          "split_nodes": 432
+        },
+        "bb_geometry": {
+          "available": 16,
+          "used": 16,
+          "split_nodes": 6253
+        }
+      },
+      "unused": [
+        "book30",
+        "book5",
+        "book_change15",
+        "day_age_minutes",
+        "depth1",
+        "depth12",
+        "depth4",
+        "pressure5",
+        "previous_age_days",
+        "previous_known",
+        "unknown30",
+        "unknown5",
+        "unknown60",
+        "volume5"
+      ]
+    },
+    "model_B_global_rich_event.pkl": {
+      "input_columns": 81,
+      "used_columns": 76,
+      "groups": {
+        "base": {
+          "available": 5,
+          "used": 5,
+          "split_nodes": 102
+        },
+        "short_flow_and_returns": {
+          "available": 31,
+          "used": 29,
+          "split_nodes": 301
+        },
+        "day_summaries": {
+          "available": 21,
+          "used": 18,
+          "split_nodes": 423
+        },
+        "spectrum_summaries": {
+          "available": 8,
+          "used": 8,
+          "split_nodes": 180
+        },
+        "bb_geometry": {
+          "available": 16,
+          "used": 16,
+          "split_nodes": 7093
+        }
+      },
+      "unused": [
+        "book30",
+        "day_age_minutes",
+        "previous_coverage",
+        "previous_known",
+        "unknown30"
+      ]
+    },
+    "model_B_m1_rich.pkl": {
+      "input_columns": 81,
+      "used_columns": 53,
+      "groups": {
+        "base": {
+          "available": 5,
+          "used": 4,
+          "split_nodes": 161
+        },
+        "short_flow_and_returns": {
+          "available": 31,
+          "used": 12,
+          "split_nodes": 175
+        },
+        "day_summaries": {
+          "available": 21,
+          "used": 17,
+          "split_nodes": 212
+        },
+        "spectrum_summaries": {
+          "available": 8,
+          "used": 8,
+          "split_nodes": 304
+        },
+        "bb_geometry": {
+          "available": 16,
+          "used": 12,
+          "split_nodes": 977
+        }
+      },
+      "unused": [
+        "bb3_phase",
+        "bb6_phase",
+        "bb6_spread_half",
+        "bb9_phase",
+        "book30",
+        "book5",
+        "book60",
+        "book_change15",
+        "day_age_minutes",
+        "day_coverage",
+        "depth1",
+        "depth12",
+        "depth_change15",
+        "depth_change5",
+        "pressure30",
+        "pressure5",
+        "pressure60",
+        "pressure_change15",
+        "previous_age_days",
+        "previous_known",
+        "range60",
+        "ret15",
+        "ret5",
+        "spread_ticks",
+        "unknown30",
+        "unknown5",
+        "unknown60",
+        "volume30"
+      ]
+    },
+    "model_B_m1_rich_event.pkl": {
+      "input_columns": 81,
+      "used_columns": 58,
+      "groups": {
+        "base": {
+          "available": 5,
+          "used": 4,
+          "split_nodes": 92
+        },
+        "short_flow_and_returns": {
+          "available": 31,
+          "used": 16,
+          "split_nodes": 170
+        },
+        "day_summaries": {
+          "available": 21,
+          "used": 17,
+          "split_nodes": 200
+        },
+        "spectrum_summaries": {
+          "available": 8,
+          "used": 8,
+          "split_nodes": 182
+        },
+        "bb_geometry": {
+          "available": 16,
+          "used": 13,
+          "split_nodes": 1207
+        }
+      },
+      "unused": [
+        "bb3_phase",
+        "bb6_phase",
+        "bb9_phase",
+        "book_change15",
+        "day_age_minutes",
+        "day_coverage",
+        "depth1",
+        "depth12",
+        "depth4",
+        "depth_change15",
+        "depth_change5",
+        "pressure30",
+        "pressure5",
+        "pressure60",
+        "pressure_change5",
+        "previous_coverage",
+        "previous_known",
+        "range60",
+        "ret5",
+        "spread_ticks",
+        "unknown30",
+        "unknown5",
+        "volume_rate"
+      ]
+    },
+    "model_B_m3_rich.pkl": {
+      "input_columns": 81,
+      "used_columns": 49,
+      "groups": {
+        "base": {
+          "available": 5,
+          "used": 4,
+          "split_nodes": 183
+        },
+        "short_flow_and_returns": {
+          "available": 31,
+          "used": 6,
+          "split_nodes": 28
+        },
+        "day_summaries": {
+          "available": 21,
+          "used": 18,
+          "split_nodes": 469
+        },
+        "spectrum_summaries": {
+          "available": 8,
+          "used": 8,
+          "split_nodes": 332
+        },
+        "bb_geometry": {
+          "available": 16,
+          "used": 13,
+          "split_nodes": 1179
+        }
+      },
+      "unused": [
+        "bb1_phase",
+        "bb6_phase",
+        "bb9_phase",
+        "book30",
+        "book300",
+        "book5",
+        "book60",
+        "book_change15",
+        "context_age_seconds",
+        "day_age_minutes",
+        "depth1",
+        "depth12",
+        "depth4",
+        "depth_change15",
+        "depth_change5",
+        "pressure5",
+        "pressure60",
+        "pressure_change15",
+        "pressure_change5",
+        "previous_known",
+        "range300",
+        "range60",
+        "ret15",
+        "ret5",
+        "ret60",
+        "spread_ticks",
+        "unknown30",
+        "unknown5",
+        "unknown60",
+        "volume30",
+        "volume5",
+        "volume_rate"
+      ]
+    },
+    "model_B_m3_rich_event.pkl": {
+      "input_columns": 81,
+      "used_columns": 62,
+      "groups": {
+        "base": {
+          "available": 5,
+          "used": 4,
+          "split_nodes": 136
+        },
+        "short_flow_and_returns": {
+          "available": 31,
+          "used": 20,
+          "split_nodes": 91
+        },
+        "day_summaries": {
+          "available": 21,
+          "used": 16,
+          "split_nodes": 325
+        },
+        "spectrum_summaries": {
+          "available": 8,
+          "used": 8,
+          "split_nodes": 199
+        },
+        "bb_geometry": {
+          "available": 16,
+          "used": 14,
+          "split_nodes": 1554
+        }
+      },
+      "unused": [
+        "bb1_phase",
+        "bb6_phase",
+        "context_age_seconds",
+        "day_age_minutes",
+        "depth1",
+        "depth_change15",
+        "depth_change5",
+        "pressure30",
+        "pressure60",
+        "pressure_change5",
+        "previous_age_days",
+        "previous_coverage",
+        "previous_known",
+        "range300",
+        "ret60",
+        "spread_ticks",
+        "unknown30",
+        "unknown5",
+        "volume_rate"
+      ]
+    },
+    "model_B_m6_rich.pkl": {
+      "input_columns": 81,
+      "used_columns": 48,
+      "groups": {
+        "base": {
+          "available": 5,
+          "used": 3,
+          "split_nodes": 197
+        },
+        "short_flow_and_returns": {
+          "available": 31,
+          "used": 5,
+          "split_nodes": 16
+        },
+        "day_summaries": {
+          "available": 21,
+          "used": 18,
+          "split_nodes": 497
+        },
+        "spectrum_summaries": {
+          "available": 8,
+          "used": 8,
+          "split_nodes": 298
+        },
+        "bb_geometry": {
+          "available": 16,
+          "used": 14,
+          "split_nodes": 1201
+        }
+      },
+      "unused": [
+        "bb1_phase",
+        "bb3_phase",
+        "book30",
+        "book300",
+        "book5",
+        "book60",
+        "book_change15",
+        "context_age_seconds",
+        "day_age_minutes",
+        "depth1",
+        "depth12",
+        "depth4",
+        "depth_change15",
+        "depth_change5",
+        "pressure30",
+        "pressure300",
+        "pressure60",
+        "pressure_change15",
+        "pressure_change5",
+        "previous_known",
+        "range300",
+        "range60",
+        "ret5",
+        "ret60",
+        "sigma60_ratio",
+        "spread_ticks",
+        "unknown30",
+        "unknown5",
+        "unknown60",
+        "volume30",
+        "volume5",
+        "volume60",
+        "volume_rate"
+      ]
+    },
+    "model_B_m6_rich_event.pkl": {
+      "input_columns": 81,
+      "used_columns": 54,
+      "groups": {
+        "base": {
+          "available": 5,
+          "used": 4,
+          "split_nodes": 174
+        },
+        "short_flow_and_returns": {
+          "available": 31,
+          "used": 13,
+          "split_nodes": 64
+        },
+        "day_summaries": {
+          "available": 21,
+          "used": 17,
+          "split_nodes": 326
+        },
+        "spectrum_summaries": {
+          "available": 8,
+          "used": 8,
+          "split_nodes": 231
+        },
+        "bb_geometry": {
+          "available": 16,
+          "used": 12,
+          "split_nodes": 1525
+        }
+      },
+      "unused": [
+        "bb1_phase",
+        "bb3_phase",
+        "bb9_phase",
+        "bb9_spread_half",
+        "book300",
+        "book5",
+        "book_change15",
+        "context_age_seconds",
+        "day_age_minutes",
+        "depth1",
+        "depth12",
+        "depth_change15",
+        "depth_change5",
+        "pressure30",
+        "pressure300",
+        "pressure60",
+        "pressure_change5",
+        "previous_age_days",
+        "previous_known",
+        "ret300",
+        "ret60",
+        "spread_ticks",
+        "unknown30",
+        "unknown5",
+        "unknown60",
+        "volume5",
+        "volume_rate"
+      ]
+    },
+    "model_B_m9_rich.pkl": {
+      "input_columns": 81,
+      "used_columns": 42,
+      "groups": {
+        "base": {
+          "available": 5,
+          "used": 3,
+          "split_nodes": 238
+        },
+        "short_flow_and_returns": {
+          "available": 31,
+          "used": 4,
+          "split_nodes": 21
+        },
+        "day_summaries": {
+          "available": 21,
+          "used": 17,
+          "split_nodes": 554
+        },
+        "spectrum_summaries": {
+          "available": 8,
+          "used": 8,
+          "split_nodes": 318
+        },
+        "bb_geometry": {
+          "available": 16,
+          "used": 10,
+          "split_nodes": 1148
+        }
+      },
+      "unused": [
+        "bb1_phase",
+        "bb3_phase",
+        "bb3_spread_half",
+        "bb6_phase",
+        "bb6_spread_half",
+        "bb9_phase",
+        "book30",
+        "book300",
+        "book5",
+        "book60",
+        "book_change15",
+        "context_age_seconds",
+        "day_age_minutes",
+        "depth1",
+        "depth12",
+        "depth4",
+        "depth_change15",
+        "depth_change5",
+        "pressure30",
+        "pressure300",
+        "pressure60",
+        "pressure_change15",
+        "pressure_change5",
+        "previous_age_days",
+        "previous_known",
+        "range300",
+        "range60",
+        "ret15",
+        "ret5",
+        "ret60",
+        "sigma60_ratio",
+        "spread_ticks",
+        "unknown30",
+        "unknown5",
+        "unknown60",
+        "volume30",
+        "volume5",
+        "volume60",
+        "volume_rate"
+      ]
+    },
+    "model_B_m9_rich_event.pkl": {
+      "input_columns": 81,
+      "used_columns": 49,
+      "groups": {
+        "base": {
+          "available": 5,
+          "used": 4,
+          "split_nodes": 228
+        },
+        "short_flow_and_returns": {
+          "available": 31,
+          "used": 8,
+          "split_nodes": 30
+        },
+        "day_summaries": {
+          "available": 21,
+          "used": 17,
+          "split_nodes": 370
+        },
+        "spectrum_summaries": {
+          "available": 8,
+          "used": 8,
+          "split_nodes": 245
+        },
+        "bb_geometry": {
+          "available": 16,
+          "used": 12,
+          "split_nodes": 1528
+        }
+      },
+      "unused": [
+        "bb1_phase",
+        "bb3_phase",
+        "bb3_spread_half",
+        "bb6_phase",
+        "book30",
+        "book300",
+        "book5",
+        "book60",
+        "book_change15",
+        "context_age_seconds",
+        "day_age_minutes",
+        "day_coverage",
+        "depth1",
+        "depth4",
+        "depth_change15",
+        "depth_change5",
+        "pressure30",
+        "pressure300",
+        "pressure60",
+        "pressure_change15",
+        "pressure_change5",
+        "previous_known",
+        "range300",
+        "range60",
+        "ret5",
+        "ret60",
+        "spread_ticks",
+        "unknown30",
+        "unknown5",
+        "unknown60",
+        "volume60",
+        "volume_rate"
+      ]
+    }
+  },
+  "script_sha256": "9274a97187d6a7b428a0008123f0199d4e0717e279b57668a24780617224f671",
+  "supplied": "81 scalars: 5 baseline +31 local flow/returns/volume +21 day/previous-day +8 STFT +16 live BB geometry",
+  "day_scope": "Today London prefix and previous same-contract weekday London-to-close summaries, with known/coverage masks; combined VWAP proxy includes current overnight. No full raw two-day sequence or recurrent state.",
+  "spectra": "128 M1 changes/log-volume windows, three power fractions and entropy. No phase/coherence/absolute power; no full-scale bank of spectra.",
+  "vwap": "Volume-weighted available M1 midpoint proxy, not exact trade-price VWAP",
+  "warning": "Feature split use establishes access/use, not incremental predictive or economic value. Compare rich vs geometry on paired chronological days."
+}

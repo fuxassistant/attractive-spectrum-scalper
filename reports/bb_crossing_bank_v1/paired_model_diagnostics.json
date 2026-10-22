@@ -1,0 +1,246 @@
+{
+  "status": "COMPLETE",
+  "comparisons": {
+    "A2/m1/rich-geometry": {
+      "mean_log_score_gain": 0.0010006288476152765,
+      "event_mean_gain": -0.0024399591622269877,
+      "block_day_sum_gain_ci": [
+        -1.4181243676091504,
+        3.77089002716308
+      ],
+      "event_block_day_sum_gain_ci": [
+        -5.763704680943749,
+        -2.508135222515948
+      ]
+    },
+    "A2/m1/rich_event-rich": {
+      "mean_log_score_gain": -0.03454821614213062,
+      "event_mean_gain": 0.03424688400284248,
+      "block_day_sum_gain_ci": [
+        -66.97241344940673,
+        -51.19289091738234
+      ],
+      "event_block_day_sum_gain_ci": [
+        52.89615779541238,
+        60.47330993667127
+      ]
+    },
+    "A2/m3/rich-geometry": {
+      "mean_log_score_gain": -0.00882002437573364,
+      "event_mean_gain": -0.011780096705859172,
+      "block_day_sum_gain_ci": [
+        -23.579991534088162,
+        -1.963395639263825
+      ],
+      "event_block_day_sum_gain_ci": [
+        -26.213622060909255,
+        -13.57614362028825
+      ]
+    },
+    "A2/m3/rich_event-rich": {
+      "mean_log_score_gain": -0.027810772819404094,
+      "event_mean_gain": 0.05830063918152951,
+      "block_day_sum_gain_ci": [
+        -59.50133224629287,
+        -21.187690472361233
+      ],
+      "event_block_day_sum_gain_ci": [
+        88.77400503237172,
+        108.0182096677862
+      ]
+    },
+    "A2/m6/rich-geometry": {
+      "mean_log_score_gain": -0.025965787568257622,
+      "event_mean_gain": -0.01725442116632609,
+      "block_day_sum_gain_ci": [
+        -59.107732881819075,
+        -25.743679298255845
+      ],
+      "event_block_day_sum_gain_ci": [
+        -35.64752390403629,
+        -19.974148598786822
+      ]
+    },
+    "A2/m6/rich_event-rich": {
+      "mean_log_score_gain": -0.0019705021466372465,
+      "event_mean_gain": 0.0643540114144814,
+      "block_day_sum_gain_ci": [
+        -20.160052157965808,
+        18.30312775910756
+      ],
+      "event_block_day_sum_gain_ci": [
+        95.56832150117965,
+        111.96388053529058
+      ]
+    },
+    "A2/m9/rich-geometry": {
+      "mean_log_score_gain": -0.01579378269337756,
+      "event_mean_gain": -0.01623831478755752,
+      "block_day_sum_gain_ci": [
+        -42.494761593180336,
+        -15.900984526518624
+      ],
+      "event_block_day_sum_gain_ci": [
+        -34.38055342471356,
+        -21.42669692832695
+      ]
+    },
+    "A2/m9/rich_event-rich": {
+      "mean_log_score_gain": -9.419806674968371e-05,
+      "event_mean_gain": 0.06016891408915184,
+      "block_day_sum_gain_ci": [
+        -8.791891946439986,
+        10.74165555978233
+      ],
+      "event_block_day_sum_gain_ci": [
+        86.64857802376703,
+        108.84607619671479
+      ]
+    },
+    "A2/global/rich-geometry": {
+      "mean_log_score_gain": -0.007245135687801073,
+      "event_mean_gain": -0.010425677808504827,
+      "block_day_sum_gain_ci": [
+        -17.91894212280034,
+        -7.705029729120072
+      ],
+      "event_block_day_sum_gain_ci": [
+        -22.669644849565838,
+        -13.614973298197281
+      ]
+    },
+    "A2/global/rich_event-rich": {
+      "mean_log_score_gain": -0.000680941377458183,
+      "event_mean_gain": 0.05971612648420749,
+      "block_day_sum_gain_ci": [
+        -13.536821403906597,
+        10.402708982358986
+      ],
+      "event_block_day_sum_gain_ci": [
+        91.27858385965249,
+        107.73858699770642
+      ]
+    },
+    "B/m1/rich-geometry": {
+      "mean_log_score_gain": 0.0011899247059854216,
+      "event_mean_gain": -0.004043648204283179,
+      "block_day_sum_gain_ci": [
+        -0.133278026241006,
+        4.112937258782571
+      ],
+      "event_block_day_sum_gain_ci": [
+        -7.931620000664379,
+        -4.972583809414865
+      ]
+    },
+    "B/m1/rich_event-rich": {
+      "mean_log_score_gain": -0.022674529623520148,
+      "event_mean_gain": 0.03950361885766959,
+      "block_day_sum_gain_ci": [
+        -43.43527641795133,
+        -29.689921499005518
+      ],
+      "event_block_day_sum_gain_ci": [
+        58.96333021346275,
+        69.61415648977199
+      ]
+    },
+    "B/m3/rich-geometry": {
+      "mean_log_score_gain": -0.0020188379095182883,
+      "event_mean_gain": -0.00861660526356563,
+      "block_day_sum_gain_ci": [
+        -10.829732673728065,
+        4.4927597661591445
+      ],
+      "event_block_day_sum_gain_ci": [
+        -18.937078465320923,
+        -9.797962524262095
+      ]
+    },
+    "B/m3/rich_event-rich": {
+      "mean_log_score_gain": -0.03224823208807841,
+      "event_mean_gain": 0.06049478943934342,
+      "block_day_sum_gain_ci": [
+        -67.92825991347328,
+        -33.14030815235832
+      ],
+      "event_block_day_sum_gain_ci": [
+        82.01159422823612,
+        110.91944498381298
+      ]
+    },
+    "B/m6/rich-geometry": {
+      "mean_log_score_gain": -0.006756791564706394,
+      "event_mean_gain": -0.01378835202424839,
+      "block_day_sum_gain_ci": [
+        -19.725944500711154,
+        -0.21267890148499075
+      ],
+      "event_block_day_sum_gain_ci": [
+        -30.804459804023267,
+        -10.543915276114818
+      ]
+    },
+    "B/m6/rich_event-rich": {
+      "mean_log_score_gain": -0.009180165730200956,
+      "event_mean_gain": 0.079022843308253,
+      "block_day_sum_gain_ci": [
+        -28.92016087320633,
+        2.7271943134279932
+      ],
+      "event_block_day_sum_gain_ci": [
+        97.51725786579527,
+        152.83736814278507
+      ]
+    },
+    "B/m9/rich-geometry": {
+      "mean_log_score_gain": -0.008738173199795307,
+      "event_mean_gain": -0.021077124052274708,
+      "block_day_sum_gain_ci": [
+        -20.757504923874663,
+        -4.7133760402282565
+      ],
+      "event_block_day_sum_gain_ci": [
+        -37.54034990875675,
+        -25.445015356640464
+      ]
+    },
+    "B/m9/rich_event-rich": {
+      "mean_log_score_gain": -0.0018822139160820266,
+      "event_mean_gain": 0.07999176523520249,
+      "block_day_sum_gain_ci": [
+        -22.27227098660934,
+        11.278250038399193
+      ],
+      "event_block_day_sum_gain_ci": [
+        104.2723698578536,
+        138.5168550958183
+      ]
+    },
+    "B/global/rich-geometry": {
+      "mean_log_score_gain": -0.004075968603704964,
+      "event_mean_gain": -0.006368936334428016,
+      "block_day_sum_gain_ci": [
+        -10.027885869017126,
+        -2.9028784084062127
+      ],
+      "event_block_day_sum_gain_ci": [
+        -11.324444506296945,
+        -7.812036707845868
+      ]
+    },
+    "B/global/rich_event-rich": {
+      "mean_log_score_gain": 0.0016099272037667814,
+      "event_mean_gain": 0.061536414611700646,
+      "block_day_sum_gain_ci": [
+        -3.350964761042204,
+        8.383464268472814
+      ],
+      "event_block_day_sum_gain_ci": [
+        85.70712904954483,
+        101.96457081837595
+      ]
+    }
+  },
+  "note": "Positive gain favors newer. Moving 5-day blocks; events still temporally dependent. Development-exposed comparisons, not confirmatory inference."
+}

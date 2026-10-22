@@ -1,0 +1,179 @@
+{
+  "status": "COMPLETE_VERIFIED_RESEARCH",
+  "completed_utc": "2026-10-22T06:32:24.849486+00:00",
+  "branch": "codex/bb-crossing-bank-v1",
+  "build_commit": "88afcfe",
+  "tests": {
+    "bb_crossing_v1_tests.log": {
+      "passed": 327,
+      "seconds": 134.0,
+      "sha256": "6324d46e9f657326e08f7cf3554154b3c84da3031e6bad7fc570a8a04465ad5c"
+    },
+    "bb_crossing_v1_focused_tests.log": {
+      "passed": 12,
+      "seconds": 16.92,
+      "sha256": "9e23d6e7537c3c91bee03c9663c3d2e70786bf30074f0589a4233338e3295e26"
+    }
+  },
+  "classification_prediction_pairs": 30,
+  "economic_prediction_checks": [
+    {
+      "stage": "A2",
+      "scale": 1,
+      "heads": 2,
+      "rows": 36313,
+      "max_prediction_error": 0.0,
+      "selected_trades": 423
+    },
+    {
+      "stage": "A2",
+      "scale": 3,
+      "heads": 2,
+      "rows": 36313,
+      "max_prediction_error": 0.0,
+      "selected_trades": 758
+    },
+    {
+      "stage": "A2",
+      "scale": 6,
+      "heads": 2,
+      "rows": 36313,
+      "max_prediction_error": 0.0,
+      "selected_trades": 12
+    },
+    {
+      "stage": "A2",
+      "scale": 9,
+      "heads": 2,
+      "rows": 36313,
+      "max_prediction_error": 0.0,
+      "selected_trades": 307
+    },
+    {
+      "stage": "B",
+      "scale": 1,
+      "heads": 2,
+      "rows": 67587,
+      "max_prediction_error": 0.0,
+      "selected_trades": 540
+    },
+    {
+      "stage": "B",
+      "scale": 3,
+      "heads": 2,
+      "rows": 67587,
+      "max_prediction_error": 0.0,
+      "selected_trades": 341
+    },
+    {
+      "stage": "B",
+      "scale": 6,
+      "heads": 2,
+      "rows": 67587,
+      "max_prediction_error": 0.0,
+      "selected_trades": 138
+    },
+    {
+      "stage": "B",
+      "scale": 9,
+      "heads": 2,
+      "rows": 67587,
+      "max_prediction_error": 0.0,
+      "selected_trades": 170
+    }
+  ],
+  "raw_first_cross_checks": 240,
+  "raw_execution_checks": 640,
+  "late_session_checks": 120,
+  "short_full_session_profile_parity": 582805,
+  "visual_images": 17,
+  "visual_audit_sha256": "51099b5b6674739d5856eb7db837c2fab6210364e59366a07fa98f94ded5f970",
+  "preceding_experiments_unchanged": true,
+  "code_sha256": {
+    "scripts\\bb_crossing_build.py": "0970f814bf5bf3a9ea3bc3fba8e342dce4edd274a7c2e84a84f47ce5cdaffac2",
+    "scripts\\bb_crossing_diagnostics.py": "2aba5f99fffd5538816f98da5dd213e9a7dabcf7271be6e0644a93eff7ab75b3",
+    "scripts\\bb_crossing_feature_audit.py": "9274a97187d6a7b428a0008123f0199d4e0717e279b57668a24780617224f671",
+    "scripts\\bb_crossing_finalize.py": "b7baedd14bc4eff2bc88f7899ba8696092794ea9402a07007e8cf7f672d7f305",
+    "scripts\\bb_crossing_learn.py": "8ab68404656899315a976e34c5a036f23392acd07bbb3b2c2a2057f7f4e50730",
+    "scripts\\bb_crossing_report.py": "8eea2600bcf4fefd328bd0027c823067db687257ec154c92ce94ec35b87d972c",
+    "scripts\\bb_crossing_session.py": "b1a13bb0e6ff4156be98159d519cb51e7b70c5448594875ea2a23010baaa077a",
+    "scripts\\bb_crossing_session_validate.py": "c55b8f148a08d2c8a98cf3d3da5e31bf2cfa60328c724b2ea2762c85d3585bef",
+    "scripts\\bb_crossing_verify.py": "99809bc5df6631e3404dd2963f82459369a1fb9ba2bc7a2506234b5a76322794",
+    "spectrum/cognition/bb_crossing.py": "41a19c06d70855916ecb2ac6e52f1a11854ecfe32092e8cc31af6040f62d7fef"
+  },
+  "artifact_sha256": {
+    "01_learning_scheme.png": "65f7c3ea8513dacf9cbcda016d1f454ef37d1f392594134d2c8430827e967c66",
+    "02_bank_and_examples.png": "42ff8eb7a77e45ea3b24d82c8edbf5e9e49afb87b849860c4999dfb996ec62f9",
+    "03_time_and_net_profiles.png": "e7b746a2f6a556c341f1dc688ae928961d81899a0d2a67b557aac17984509a5c",
+    "04_model_comparison.png": "15eea8c86660b5830bb76a3bb0ecd3d55b69b2e208aebed470a28d6c5bcbcf91",
+    "05_temporal_and_gradient.png": "a0ccc812c0bda639e1c27c31eb12656d2cab3db6845b3bcbc0a4e88fedb048bd",
+    "06_candidate_equity.png": "23bce10801ba1b289aaa1b105213f8f4bd39ba22f0b7b1583d5c8aaea7cf3ffa",
+    "07_microevents_and_coverage.png": "04d8aa50836bb347d73c51b68f8329396e6afc88e8efd898bc9bfb3a13173254",
+    "08_micro_crossing_ids.png": "d58de551e21b6437b43ad562afd1cfcaaee51e212fbeafbe458b79e07d3db44c",
+    "09_full_session_profiles.png": "4f58ec36a51117efabb82c46b1473f774fbb7ab096bf780e3017366315f559aa",
+    "2025-10-01_crossings.png": "00bcbddc09232f691966d94c678424291fcc3f908d217448bf0f3812bec6ce54",
+    "2025-10-01_trade_profile.png": "e49dead223cb581d5909173fde34acf1140c7db92b060defe4401a8edec5c0fc",
+    "2026-01-02_crossings.png": "bf4a16a0be1d008fa09132206da54c2e86f7f14f15724f17b27604462ccdeb56",
+    "2026-01-02_predictions.png": "66230d8f43ce43556bd5dcb01ca46d0509ae7848779837780062ca2c1273302f",
+    "2026-01-02_trade_profile.png": "70d0e0b94836bc34efa902b76be32577207b4dfbb2daf033252ca882e3e2e216",
+    "2026-02-02_crossings.png": "d33326cb70468abd2ec0ed03ea54895359dc3b0012f1c9dfdc3804937b07f84b",
+    "2026-02-02_predictions.png": "89154e877fd3457240599b4c8ac90ddfefbd9837452880085ec490c9c1df0119",
+    "2026-02-02_trade_profile.png": "c951cd0b7e99917cd472e52adcb11ed8b8a7a4c92f52ed9450230f446e46f355",
+    "account_replay.json": "80edff135eeff78c018997bc8a446eb99ec21be8022325fce7a35fe0eba29346",
+    "bank_diagnostics.json": "95a96061a0b4fb99bf82ff6e16d35e26c8bf9d5703c5e75086f9b27c25a3b891",
+    "data_receipt.json": "ccf67dee79cc1d75758155e912b4251badc9bc3a797d7057cf3d5a92c86cc8f7",
+    "execution_censor_diagnostics.json": "ddbe0830040241281567b19dec13d0bd5c77a59815e68d68ecaaf5af75c2b586",
+    "feature_context_audit.json": "36cff64a3732b1383c1f7d8713579c5ea6b55f4ebf7c155830336f3c47684f21",
+    "full_session_projection.json": "288d3a0537ec2811c50396b6ddeeef9981ac8241f86b5ab85ace6ed41dd1216b",
+    "full_session_validation.json": "9b86308f030fc1ae1343bdb7cd58ba4432a4ad6970132e2db6bf35754248206e",
+    "index.html": "89193f306a1563567390b435654a05c727ef63449ba93a827b240af69505f291",
+    "learning_receipt.json": "0efbbb26f0cc4c86ebbf93f3495dcb4ca5b724ac0fbe51e514cec3c22c2c4f00",
+    "micro_scene.json": "4758e5f041ea77f47563608122c088e709e8daa9ad36cf0c1c369736a89d4b0a",
+    "numerical_validation.json": "fb780906ff26d36a8b0e45a93b1e88e26f0ea68824527e94ad1a6149c7e76f17",
+    "paired_model_diagnostics.json": "43a42d575efd2c10266a7d883c551525b2b608266ffe6a527d71718944d1fb09",
+    "profile_summary.json": "cd974cc55957b03f2d32d9e4c8d68d30f2774a652e370a5ae4550b940c2ebc4c",
+    "raw_quote_checks.json": "8ea075ff2c76fca5adb87e0b4218035df3da404dfdcf3d451648719d5ed65059",
+    "scene_receipt.json": "b9905cba3c84a540d8d208b749734e2cf0719b9012ce9161018c88b3dbffba93",
+    "SOL61_VISUAL_AUDIT_RU.md": "51099b5b6674739d5856eb7db837c2fab6210364e59366a07fa98f94ded5f970",
+    "summary.json": "fe73716b32529c153153c7307c96917e3d6cc045d0fa900fe568ca4248538c3b",
+    "visual_receipt.json": "ebf842fc88b2d41a53d6cf12dc817bcd6c56c6c6dff101458e7e9bd6a127bb77"
+  },
+  "economic_data_sha256": {
+    "economic_A2_m1.parquet": "815dafd65a8e842f79f72c8b4ab54a44f7876c86294afa3e871ddb8d17b46c33",
+    "trades_A2_m1.parquet": "fb24d7a5015a04cfd5f7642b98304b7686dd5f4f8a7847a9ae0f2b0c1de1cf83",
+    "equity_A2_m1.parquet": "17ec19cbd71d5252eabbddbd6ea3327561ce41753be392cd661059a0e9194463",
+    "economic_A2_m3.parquet": "b50e41e7fa40b2c6e46c24bf832e2efc0851eeabe1de09e8aa6d4a2fac4ab266",
+    "trades_A2_m3.parquet": "1b506bdda57740dd793d12812f3a7f899ee5b66232f8af3b5759cd29c177a3ed",
+    "equity_A2_m3.parquet": "c4b26c6734e2bd1354568451bc649f2fc96f9986ed8a8b700bd6c3882b03d420",
+    "economic_A2_m6.parquet": "59665c1060012d0272b5bd5380b5b646ff149ce8a45cd4f1edb77234c36211b6",
+    "trades_A2_m6.parquet": "a1dbec854cc6e23b3b8ccd7773a356e93f2313f5d09b9912bfee742f31fc1836",
+    "equity_A2_m6.parquet": "2dcbf2a2ebfb78ac6fdfee1bd2f07d51793c25f4d209d7a35be403f91be8ea23",
+    "economic_A2_m9.parquet": "ab368c498b12d1a2e90af958c1871629becb0ae100889bc2d358b5a851ad2ba7",
+    "trades_A2_m9.parquet": "2a2aff7a1c96521392b3debe1e6df77b0312289d58af15f75e22f75795396172",
+    "equity_A2_m9.parquet": "7b0c5b60e507b8ebb667b7c51bb41eb5907d7d6a0b5f8e25fe1b8b80ae4fe27b",
+    "economic_B_m1.parquet": "cf84cbcf99885c54e886113c7419ca346ddf04e102376cda0bc1f40addeb52c6",
+    "trades_B_m1.parquet": "d7388ba423b0d83bc1745185cd52a9e9acf24ee4cf706c7ea3acb60a281b9ea9",
+    "equity_B_m1.parquet": "d908d67e97eef316e62173f34eeafe4733edca7ec00de12932c640400e5f8609",
+    "economic_B_m3.parquet": "2f1b2bec4b43faf368aaadaa43d9b636f625e4cb813900de8597d2f270ae0da9",
+    "trades_B_m3.parquet": "2ecd9d8ab44e6b8b34e01517820a8c659e9e13134a9fdf8bb24712fdbef21c9f",
+    "equity_B_m3.parquet": "9c4b55ea31897fa7998eeacabe165a54e091aa8592cee2c88bfa3b9530dde64e",
+    "economic_B_m6.parquet": "a49e7984ce47f2e7d7718937d677ddc13b114898804328a96e2accbe8ffe6f54",
+    "trades_B_m6.parquet": "5d5f22f3cace72f06238b48b5e67374522ebac68cda29ce5434e766748d87012",
+    "equity_B_m6.parquet": "527792053d1b18eed549e9db4e54119031bfce707f938a842df780f6e8dc8d14",
+    "economic_B_m9.parquet": "ad3f01b044790335cf7ecee394b861e4f838b315444744203b7947206d30c02f",
+    "trades_B_m9.parquet": "1f09f4eca2353cb89993222a3a0e2e9fc07de0491d99019facdecc935740c620",
+    "equity_B_m9.parquet": "0744e171a708d1018f95bd6e59516cf8f30234a9a748965344ba9bad2b7b281f"
+  },
+  "scope": "Technical and visual comparison complete. Every A2 admission failed; operational WAIT. Full-session factual projection is separate from the 30m learned/strategy target.",
+  "superseded_partial_builds": [
+    {
+      "path": "data/derived/bb_crossing_bank_v1_superseded_id",
+      "reason": "IDs initially depended on query build; fixed before learning; original partial preserved"
+    },
+    {
+      "path": "data/derived/bb_crossing_bank_v1/first_session_superseded_slow",
+      "reason": "Batched mark calculation; 8 old/new tables exactly equal; partial preserved"
+    }
+  ],
+  "test_environment_note": "Full 327-test run exited successfully; pytest emitted an atexit Temp symlink permission warning. The later 12-test run used workspace basetemp and completed cleanly."
+}

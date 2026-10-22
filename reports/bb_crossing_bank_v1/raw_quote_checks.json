@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "script_sha256": "99809bc5df6631e3404dd2963f82459369a1fb9ba2bc7a2506234b5a76322794",
+  "dates": [
+    {
+      "date": "2025-10-01",
+      "independent_first_cross_checks": 48,
+      "raw_execution_checks": 128,
+      "geometry_max_error": 5.115352585960409e-13,
+      "money_max_error": 0.0
+    },
+    {
+      "date": "2025-11-03",
+      "independent_first_cross_checks": 48,
+      "raw_execution_checks": 128,
+      "geometry_max_error": 2.488009798184976e-13,
+      "money_max_error": 0.0
+    },
+    {
+      "date": "2025-12-01",
+      "independent_first_cross_checks": 48,
+      "raw_execution_checks": 128,
+      "geometry_max_error": 4.74953409934642e-13,
+      "money_max_error": 0.0
+    },
+    {
+      "date": "2026-01-02",
+      "independent_first_cross_checks": 48,
+      "raw_execution_checks": 128,
+      "geometry_max_error": 3.65152352799214e-13,
+      "money_max_error": 0.0
+    },
+    {
+      "date": "2026-02-02",
+      "independent_first_cross_checks": 48,
+      "raw_execution_checks": 128,
+      "geometry_max_error": 1.0369483049998962e-13,
+      "money_max_error": 0.0
+    }
+  ],
+  "scope": "Five fixed calendar dates; first crossing and native formula from uncompressed quotes, direct extrema/fees/latency"
+}

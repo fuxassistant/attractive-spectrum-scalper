@@ -1,0 +1,24 @@
+{
+  "script_sha256": "8eea2600bcf4fefd328bd0027c823067db687257ec154c92ce94ec35b87d972c",
+  "summary_sha256": "fe73716b32529c153153c7307c96917e3d6cc045d0fa900fe568ca4248538c3b",
+  "images": {
+    "01_learning_scheme.png": "65f7c3ea8513dacf9cbcda016d1f454ef37d1f392594134d2c8430827e967c66",
+    "02_bank_and_examples.png": "42ff8eb7a77e45ea3b24d82c8edbf5e9e49afb87b849860c4999dfb996ec62f9",
+    "03_time_and_net_profiles.png": "e7b746a2f6a556c341f1dc688ae928961d81899a0d2a67b557aac17984509a5c",
+    "04_model_comparison.png": "15eea8c86660b5830bb76a3bb0ecd3d55b69b2e208aebed470a28d6c5bcbcf91",
+    "05_temporal_and_gradient.png": "a0ccc812c0bda639e1c27c31eb12656d2cab3db6845b3bcbc0a4e88fedb048bd",
+    "06_candidate_equity.png": "23bce10801ba1b289aaa1b105213f8f4bd39ba22f0b7b1583d5c8aaea7cf3ffa",
+    "07_microevents_and_coverage.png": "04d8aa50836bb347d73c51b68f8329396e6afc88e8efd898bc9bfb3a13173254",
+    "08_micro_crossing_ids.png": "d58de551e21b6437b43ad562afd1cfcaaee51e212fbeafbe458b79e07d3db44c",
+    "09_full_session_profiles.png": "4f58ec36a51117efabb82c46b1473f774fbb7ab096bf780e3017366315f559aa",
+    "2025-10-01_crossings.png": "00bcbddc09232f691966d94c678424291fcc3f908d217448bf0f3812bec6ce54",
+    "2025-10-01_trade_profile.png": "e49dead223cb581d5909173fde34acf1140c7db92b060defe4401a8edec5c0fc",
+    "2026-01-02_crossings.png": "bf4a16a0be1d008fa09132206da54c2e86f7f14f15724f17b27604462ccdeb56",
+    "2026-01-02_trade_profile.png": "70d0e0b94836bc34efa902b76be32577207b4dfbb2daf033252ca882e3e2e216",
+    "2026-02-02_crossings.png": "d33326cb70468abd2ec0ed03ea54895359dc3b0012f1c9dfdc3804937b07f84b",
+    "2026-02-02_trade_profile.png": "c951cd0b7e99917cd472e52adcb11ed8b8a7a4c92f52ed9450230f446e46f355",
+    "2026-01-02_predictions.png": "66230d8f43ce43556bd5dcb01ca46d0509ae7848779837780062ca2c1273302f",
+    "2026-02-02_predictions.png": "89154e877fd3457240599b4c8ac90ddfefbd9837452880085ec490c9c1df0119"
+  },
+  "page_sha256": "89193f306a1563567390b435654a05c727ef63449ba93a827b240af69505f291"
+}

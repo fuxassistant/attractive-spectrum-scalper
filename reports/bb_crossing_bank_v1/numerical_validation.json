@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "prediction_pairs": 30,
+  "prediction_max_error": 0.0,
+  "days": 106,
+  "manifest_sha256": "f1a9a6315525254ed578152c4572230b58366c12b24c40f129cc0e474c023adf",
+  "learning_receipt_sha256": "0efbbb26f0cc4c86ebbf93f3495dcb4ca5b724ac0fbe51e514cec3c22c2c4f00",
+  "summary_sha256": "fe73716b32529c153153c7307c96917e3d6cc045d0fa900fe568ca4248538c3b",
+  "script_sha256": "99809bc5df6631e3404dd2963f82459369a1fb9ba2bc7a2506234b5a76322794"
+}

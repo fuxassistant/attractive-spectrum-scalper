@@ -1,0 +1,84 @@
+{
+  "status": "COMPLETE",
+  "censors": [
+    {
+      "stage": "A2",
+      "scale": 6,
+      "date": "2025-12-01",
+      "t_ns": "1764587940000000000",
+      "entry_ns": "1764587940215133933",
+      "request_ns": "1764587946682404018",
+      "first_future_quote_after_latency_ns": "1764587949272681842",
+      "first_exit_quote_delay_s": 2.590277824,
+      "reason": "EXIT_TIMEOUT_WITH_SUPPORTED_QUOTE_PATH",
+      "mark_L": -0.8999999999999999,
+      "mark_S": -0.19999999999999998
+    },
+    {
+      "stage": "A2",
+      "scale": 9,
+      "date": "2025-12-12",
+      "t_ns": "1765573920000000000",
+      "entry_ns": "1765573920114581350",
+      "request_ns": "1765575720114581350",
+      "first_future_quote_after_latency_ns": "1765575723529556984",
+      "first_exit_quote_delay_s": 3.414975634,
+      "reason": "EXIT_TIMEOUT_WITH_SUPPORTED_QUOTE_PATH",
+      "mark_L": null,
+      "mark_S": null
+    },
+    {
+      "stage": "B",
+      "scale": 1,
+      "date": "2026-01-29",
+      "t_ns": "1769698890000000000",
+      "entry_ns": "1769698890114847453",
+      "request_ns": "1769700690114847453",
+      "first_future_quote_after_latency_ns": "1769700690214856712",
+      "first_exit_quote_delay_s": 0.100009259,
+      "reason": "GEOMETRY_SUPPORT_LOST",
+      "mark_L": null,
+      "mark_S": null
+    },
+    {
+      "stage": "B",
+      "scale": 3,
+      "date": "2026-01-21",
+      "t_ns": "1769029950000000000",
+      "entry_ns": "1769029950371014021",
+      "request_ns": "1769031750371014021",
+      "first_future_quote_after_latency_ns": "1769031753614693302",
+      "first_exit_quote_delay_s": 3.243679281,
+      "reason": "EXIT_TIMEOUT_WITH_SUPPORTED_QUOTE_PATH",
+      "mark_L": null,
+      "mark_S": null
+    },
+    {
+      "stage": "B",
+      "scale": 6,
+      "date": "2026-01-07",
+      "t_ns": "1767820530000000000",
+      "entry_ns": "1767820530176703996",
+      "request_ns": "1767822330176703996",
+      "first_future_quote_after_latency_ns": "1767822333180678165",
+      "first_exit_quote_delay_s": 3.003974169,
+      "reason": "EXIT_TIMEOUT_WITH_SUPPORTED_QUOTE_PATH",
+      "mark_L": null,
+      "mark_S": null
+    },
+    {
+      "stage": "B",
+      "scale": 9,
+      "date": "2026-01-07",
+      "t_ns": "1767820890000000000",
+      "entry_ns": "1767820891275339086",
+      "request_ns": "1767821918441036284",
+      "first_future_quote_after_latency_ns": "1767821924755312907",
+      "first_exit_quote_delay_s": 6.314276623,
+      "reason": "EXIT_TIMEOUT_WITH_SUPPORTED_QUOTE_PATH",
+      "mark_L": -0.5,
+      "mark_S": -0.7
+    }
+  ],
+  "meaning": "A >2s absence of a new executable publication is a failure to resolve the chosen execution recipe, not automatically lost book support. Original accounts are not silently continued."
+}

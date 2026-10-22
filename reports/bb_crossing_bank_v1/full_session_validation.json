@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "script_sha256": "c55b8f148a08d2c8a98cf3d3da5e31bf2cfa60328c724b2ea2762c85d3585bef",
+  "short_horizon_profile_parity": 582805,
+  "money_max_error": 0.0,
+  "independent_late_profile_checks": 120,
+  "late_money_max_error": 0.0,
+  "manifest_sha256": "d177fd3842a87e8e30c8ad55f4e02ec18dd8af5ab898405460b24791bc3406a6"
+}
