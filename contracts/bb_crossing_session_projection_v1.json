@@ -1,0 +1,10 @@
+{
+  "version": "BB_CROSSING_SESSION_PROJECTION_V1",
+  "purpose": "Full factual first-crossing query to the end of certified session, without the 1800s learner/strategy cap",
+  "source": "BB_CROSSING_BANK_V1 physical bank; reuse exactly the same event IDs",
+  "decision_projection": "first future packet per scale and global, strictly after decision; require current geometry and uninterrupted support until crossing; no observed cross before support/session end is unresolved, not a negative line label",
+  "post_entry_projection": "same original 100ms T entry; first packet strictly after actual fill; liquidation net and raw-quote prefix MAE/MFE at each scale, even when later than 1800s",
+  "support": "Never bridge a geometry/support break; the available session deadline is the last observation boundary",
+  "learning_and_policy": "No refit or retuning of the preregistered 1800s experiment; these complete-session fields are future audit targets and profiles, never X. No extra executed exit policy is claimed for the full-session projection.",
+  "fee_usd_per_oz": 0.30
+}
