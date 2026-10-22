@@ -1,0 +1,104 @@
+{
+  "status": "COMPLETE",
+  "dataset_root": "data/derived/scientific_pipeline_v3/dataset",
+  "runs_root": "data\\derived\\scientific_pipeline_v4\\runs",
+  "config_sha256": "a4f0847a7b0b147eb2c87f28f07b5baf8ff89a3c92c0f92547ba71ecf928df2f",
+  "dataset_manifest_sha256": "df54dfa2e285e6b7d711785d78a15f47329e1f50a2f5177ed0da1b52e2fbbf3c",
+  "runs": [
+    {
+      "run_id": "tcn_micro_restored_uniform_seed17",
+      "context": "restored",
+      "weighting": "uniform",
+      "seed": 17,
+      "role": "primary"
+    },
+    {
+      "run_id": "tcn_micro_restored_soft_crossing_id_seed17",
+      "context": "restored",
+      "weighting": "soft_crossing_id",
+      "seed": 17,
+      "role": "primary"
+    },
+    {
+      "run_id": "tcn_micro_restored_uniform_seed29",
+      "context": "restored",
+      "weighting": "uniform",
+      "seed": 29,
+      "role": "replication"
+    },
+    {
+      "run_id": "tcn_micro_restored_soft_crossing_id_seed29",
+      "context": "restored",
+      "weighting": "soft_crossing_id",
+      "seed": 29,
+      "role": "replication"
+    }
+  ],
+  "selection": "No arm/seed winner selection; all four fresh fits reported",
+  "primary_seed": 17,
+  "replication_seed": 29,
+  "fixed_visual_cases": [
+    {
+      "date": "2026-07-13",
+      "offset_hours": 0,
+      "duration_hours": 2
+    },
+    {
+      "date": "2026-07-20",
+      "offset_hours": 5,
+      "duration_hours": 2
+    }
+  ],
+  "false_signal_protocol": {
+    "fixed_thresholds": [
+      0.35,
+      0.5,
+      0.65,
+      0.8
+    ],
+    "score_channels": {
+      "event": "1-p_none",
+      "max_side": "max(p_long+p_both,p_short+p_both)"
+    },
+    "side_tie_break": "LONG",
+    "event_true_positive": "y_crossing>0",
+    "side_true_positive": "chosen side is a positive bit of y_crossing; BOTH qualifies either side",
+    "wrong_side": "y_crossing>0 and chosen side is absent from positive target bits",
+    "primary_side_recall_denominator": "All known X-admitted positive event roots; common across models",
+    "none_false_positive": "Selected alert on y_crossing=NONE; geometric false signal, not an execution loss",
+    "calibration_none_fpr": {
+      "budget": 0.05,
+      "cohort": "Known feature-available CAL NONE roots only",
+      "score_dtype": "float64",
+      "selection": "Sort CAL NONE scores descending s[0..n-1], k=floor(0.05*n); threshold=np.nextafter(s[k],+inf) in float64",
+      "comparison": "float64 score >= frozen float64 threshold; inclusive and conservative under ties",
+      "empty_negative_cohort": {
+        "threshold": 1.01,
+        "reason": "insufficient_negative_denominator"
+      },
+      "test_rule": "Apply unchanged frozen CAL threshold to TEST; no positive TPR or TEST outcome used for fitting",
+      "receipt_fields": [
+        "budget_count",
+        "boundary_score",
+        "threshold",
+        "actual_none_alerts",
+        "actual_calibration_fpr",
+        "source_cohort_sha256"
+      ]
+    },
+    "fixed_test_execution_stress": {
+      "thresholds": [
+        0.35,
+        0.5
+      ],
+      "role": "Descriptive TEST stress only; never selects arm, seed, checkpoint, risk or policy",
+      "execution": "Frozen original execution, costs and risk plans; partial/censored replay remains incomplete"
+    }
+  },
+  "historical_exposure": "The same dates, TEST outcomes, fitted predictions and results were previously inspected in scientific_pipeline_v3. The soft capped weighting hypothesis is motivated by V3 findings. This is a controlled follow-up on an exposed TEST block, not a fresh blind holdout. Older cognition experiments also assigned June to training and July to validation.",
+  "prior_control_runs_root": "data/derived/scientific_pipeline_v3/runs",
+  "wall_seconds": 966.2778409002349,
+  "matched_scaler_and_cohort": true,
+  "matched_initialization_and_probes": true,
+  "matched_sampled_root_prefixes": true
+}

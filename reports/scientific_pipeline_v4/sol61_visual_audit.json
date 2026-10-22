@@ -1,0 +1,133 @@
+{
+  "status": "PASS_DESCRIPTIVE_WITH_LIMITATIONS_NO_ECONOMIC_ADMISSION",
+  "model": "gpt-6.1-sol",
+  "actual_pixel_review": true,
+  "reviewed_images": [
+    {
+      "path": "reports/scientific_pipeline_v4/01_probability.png",
+      "sha256": "6d1a76d83e8b3824e9077531ce2ac8791a624306b1ffe92c065bc487c994960f",
+      "method": "view_image",
+      "findings": "Both seeds shown: soft worsens seed17 joint/D NLL, improves seed29; event AUC nearly unchanged."
+    },
+    {
+      "path": "reports/scientific_pipeline_v4/02_training.png",
+      "sha256": "d697b8eb105ed6c1e81ba0e72c30114c9a6d94132b2a5fea1a7fa86996f1b64a",
+      "method": "view_image",
+      "findings": "VAL checkpoint selection remains unweighted; clipping is low and does not explain away seed disagreement."
+    },
+    {
+      "path": "reports/scientific_pipeline_v4/03_weights.png",
+      "sha256": "84049e5ab7070e713bb6dc6e82136aa36b3dc001377cc5be700b6fde6c9ed4af",
+      "method": "view_image",
+      "findings": "Actual bounded weights, preserved class means, concentration ESS and top-decile mass shown; ESS is not independent N."
+    },
+    {
+      "path": "reports/scientific_pipeline_v4/04_gradients.png",
+      "sha256": "fa548dc75dd0d5f1a63396c92c1eaa1177f31cde82df8f2e1850f0e7b5837ad7",
+      "method": "view_image",
+      "findings": "Weighted/unweighted TRAIN logit mass separated; conserved class masses do not guarantee conserved gradient mass."
+    },
+    {
+      "path": "reports/scientific_pipeline_v4/05a_signal_2026-07-13_seed17.png",
+      "sha256": "aa2651e7c138d28a2a86c3394f96b70561bc3eb4623d9ec71a48d04136aa20f2",
+      "method": "view_image",
+      "findings": "Soft spikes and elevated event/side scores after about50 minutes coexist with NONE and marked false alerts."
+    },
+    {
+      "path": "reports/scientific_pipeline_v4/05b_signal_2026-07-20_seed17.png",
+      "sha256": "940f333763c592cbde75ac9989797f679565e918fd842fe2c374bdc7a1928277",
+      "method": "view_image",
+      "findings": "Sharper soft score crosses fixed.35 more often; categorical target, signed side, BCE residual and NLL remain distinct."
+    },
+    {
+      "path": "reports/scientific_pipeline_v4/05c_signal_2026-07-13_seed29.png",
+      "sha256": "1e19922d3633ae73444ef2d2e7f2fe56bbde60f1a069c91e33b0c32b9074730e",
+      "method": "view_image",
+      "findings": "Same fixed rising-price scene: no direct mapping from trend or sharper peaks to crossing timing/side accuracy."
+    },
+    {
+      "path": "reports/scientific_pipeline_v4/05d_signal_2026-07-20_seed29.png",
+      "sha256": "d39583567ee3c709da2974d63f792991080f2c741b7dee79ade3693061e5e5dc",
+      "method": "view_image",
+      "findings": "Replication does not show uniform pointwise superiority; false side alerts occur in both arms."
+    },
+    {
+      "path": "reports/scientific_pipeline_v4/06_false_signal_tradeoff.png",
+      "sha256": "adf75cdbbec17122aca134f7d0ae0b1de7090fa741d553c4afe2574b7fa58f3d",
+      "method": "view_image",
+      "findings": "Final revised labels readable; all four cuts shown, only.35/.50 labelled. Wrong-side miss and BOTH semantics stated."
+    },
+    {
+      "path": "reports/scientific_pipeline_v4/07_calibration_transfer.png",
+      "sha256": "5686738be79f8cf83a48003f8bbe79d4ccbf8cad45a08f3c31fca679c645f36e",
+      "method": "view_image",
+      "findings": "CAL5% budget transferred unchanged: TEST FPR is measured, not constrained; soft event FPR higher and precision lower in both seeds."
+    },
+    {
+      "path": "reports/scientific_pipeline_v4/08_reliability.png",
+      "sha256": "f08284679dd82fd4ad7f6881978a32b596f5864963e7aa9d4c66f57df22c294e",
+      "method": "view_image",
+      "findings": "Validation-to-test shift and overconfidence visible; open sparse-tail markers cannot establish reliable tail calibration."
+    },
+    {
+      "path": "reports/scientific_pipeline_v4/09_execution.png",
+      "sha256": "affa98d2d6912a1e27200b0ebc5acd5374065c8114a65b0e9163340850de2882",
+      "method": "view_image",
+      "findings": "Final censor text readable with white background. Censored full net omitted; every completed.50 curve remains negative."
+    },
+    {
+      "path": "reports/scientific_pipeline_v4/10_paired_effects.png",
+      "sha256": "138b668068194e90e7a7effbaa94c534a188a9c45af8379a68454bd5bc5daa7e",
+      "method": "view_image",
+      "findings": "Seed-disagreeing effects displayed next to within-date seed mean; ten-day intervals explicitly descriptive."
+    }
+  ],
+  "source_sha256": {
+    "visual_manifest.json": "ad83725c3028f2be94eae6b75051f761d6a95ae8b5f482bb63fb318f3c02551e",
+    "index.html": "941ea44a0cd1d809bf562dbe1b05ffc108752ec4295b59360235c2854285d9a4",
+    "decision_findings.json": "18b0b35e199e39fb45d3e4fb74c4576bd6225d5eff61d1c0ac98f573adda03ae",
+    "statistical_audit.json": "c8b3ac91ec8d239f6a43b30f67502289e0326eb28ce5cc2793076a39d345365f",
+    "economic_audit.json": "382071e1ce24d01f94111cc5ad0063157810f6bd3852386da73938b30be1084b",
+    "suite_summary.json": "0b588f7ea3ca465d399c481eff7bfe594ef47f1b2e702a9c46c2621ded079853"
+  },
+  "verification": {
+    "manifest_input_hashes_match": true,
+    "all_13_png_hashes_match": true,
+    "html_hash_matches": true,
+    "four_run_outputs_verified": 40,
+    "run_outputs_and_bound_sources_mismatches": 0,
+    "final_manifest_sha256": "ad83725c3028f2be94eae6b75051f761d6a95ae8b5f482bb63fb318f3c02551e",
+    "scope": "Actual pixels viewed for all13PNG, including final06/09/10. Checked final manifest, source/run receipts, statistical/economic definitions and HTML. No new fits or independent raw-tape replay by this auditor."
+  },
+  "trader_verdict": "Торгового допуска нет. Bounded sqrt-ID не устранил ложные тревоги и не создал положительный результат штатной политики. Все CAL-selected политики WAIT; завершённые TEST stress-счета при0.50 убыточны.",
+  "ml_verdict": "Мягкие веса существенно менее концентрированы, чем V3 full inverse-ID, но изменяют меру обучения. Небольшой средний NLL выигрыш не воспроизводится по seed; AUC почти неизменен. Более широкое покрытие положительных ID получено с ростом NONE-FPR и снижением precision. Сохранить uniform как reference разумно; soft остаётся исследовательской гипотезой.",
+  "findings": [
+    "Bounded normalization действует после масштабирования: TRAIN weights0.59693–2.0, class masses сохранены, Kish ESS149304/155618 означает концентрацию весов, не независимость roots. В highest-weight10% положительных классов около18–19% массы вместо47–48% при прежнем full inverse-ID.",
+    "TEST joint NLL seed17:0.60227→0.60633 хуже; seed29:0.61103→0.60166 лучше. Conditional D также разнонаправлен. Средний joint NLL0.606654→0.603998 и descriptive day CI+0.000069…+0.005116 не преодолевают seed disagreement, historical exposure и multiple metrics. TEST winner не выбирается.",
+    "На фиксированных сценах soft P(E) и max-side часто выше и острее, в частности при NONE. Наличие false-alert крестиков делает этот компромисс видимым. Это не обнаружение гладкой ценовой волны и не доказательство точного входа.",
+    "Средний |ΔP(E)| за5секунд0.04298→0.05246, примерно+22%. Target не изменился. Temporal label transition, BCE dL/dz=pE−E, TRAIN weighted gradient и per-root joint NLL различаются; residual spikes нельзя объявлять label noise или irreducible noise.",
+    "P(L)−P(S)=0 совместим с NONE и BOTH; categorical ribbon сохраняет различие. Teacher-positive side не гарантирует исполненную прибыль: STOP и costs/latency учитываются отдельно.",
+    "Протокол явно разделяет NONE false positive и wrong side на known-positive. UNKNOWN не переводится в NONE и исключается из scored false alarms, оставаясь в coverage/alert counts. BOTH допускает любую сторону. Signal alerts не равны сделкам однопозиционного replay.",
+    "CAL-frozen5% NONE-FPR порог выбирается отдельно для E и max-side с conservative ties. На TEST soft event FPR в среднем4.15→4.53%, recall14.91→15.35%, precision46.34→44.91%. Для side FPR4.43→4.73%, recall8.51→8.76%, precision25.72→25.51%. Модель не улучшила чистоту тревог.",
+    "Покрытие уникальных positive side-ID при CAL-пороге выросло в обоих seed20.15→26.22% и17.02→23.50%, но positive-only metric исключает NONE. Positive-ID NLL улучшен в среднем, а по seed разнонаправлен. Более низкая повторность на ID не означает независимые возможности.",
+    "Средний NONE event NLL улучшен, positive event NLL ухудшен; decomposition figure10 препятствует ошибочному выводу, что lower total NLL означает более точные редкие позитивные входы.",
+    "Все четыре штатных CAL selector выбрали WAIT. Все12 TEST stress-проекций при0.50 COMPLETE и отрицательны. Из24 stress paths8 CENSORED; полные net там не показываются. Prefix cash нельзя ранжировать как полный период.",
+    "Экономические teacher buckets присоединены после причинного replay, не используются для допуска. Даже target-positive bucket может проиграть: это геометрический crossing teacher, не прибыльная сделка.",
+    "Финальные06/09/10 читаются; сохранённые численные результаты, interpretation JSON и HTML согласованы. Остальных blocking visual/semantic defects не обнаружено."
+  ],
+  "limitations": [
+    "V4 мотивирован уже просмотренным V3 на том же June/July TEST; это controlled follow-up, не fresh blind validation. Только два seed и десять зависимых дат.",
+    "Day bootstrap averages seeds within date; он не учитывает всю неопределённость обучения и не превращает разнонаправленные seed effects в стабильный эффект.",
+    "Два фиксированных окна объясняют механизм, но не покрывают все режимы. Пятисекундная display grid не доказывает subsecond signal/execution timing.",
+    "Большие root counts и Kish ESS не независимые sample sizes; sparse reliability tails не подтверждают calibration.",
+    "Shared restored Micro70/141 не включает rich London/VWAP/STFT. Более длинная поддержанная история не доказывает causal utilization каждого lag.",
+    "Данный аудит проверяет pixels, saved measurements и bindings; raw execution audit остаётся отдельным предоставленным артефактом, не повторённым здесь полностью."
+  ],
+  "next_priority": [
+    "Сохранить restored+uniform reference. Любой следующий objective/weighting подтверждать заранее заданным протоколом на новом temporal block и дополнительными prespecified seeds.",
+    "Требовать одновременно false-alert control, correct-side recall, full-population calibration и after-cost execution; не оптимизировать только positive ID diversity или резкость сигнала."
+  ],
+  "economic_admission": false,
+  "test_winner_selected": false,
+  "blocking_findings": []
+}

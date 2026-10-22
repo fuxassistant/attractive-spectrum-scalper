@@ -1,0 +1,46 @@
+{
+  "status": "COMPLETE",
+  "source_sha256": "8ab404c8c0448b0d8970ad2332f1707c6de69ec5a81f4a0a8d4cb526e5309efa",
+  "inputs": {
+    "reports\\scientific_pipeline_v4\\suite_summary.json": "0b588f7ea3ca465d399c481eff7bfe594ef47f1b2e702a9c46c2621ded079853",
+    "configs/research/opportunity_pipeline_v4.json": "a4f0847a7b0b147eb2c87f28f07b5baf8ff89a3c92c0f92547ba71ecf928df2f",
+    "data\\derived\\scientific_pipeline_v3\\dataset\\manifest.json": "df54dfa2e285e6b7d711785d78a15f47329e1f50a2f5177ed0da1b52e2fbbf3c",
+    "data\\derived\\scientific_pipeline_v4\\runs\\tcn_micro_restored_uniform_seed17\\receipt.json": "66f6f295b95f0599159dff31296fbaec708d60a2e9e758be7f7b617b41e44348",
+    "data\\derived\\scientific_pipeline_v4\\runs\\tcn_micro_restored_soft_crossing_id_seed17\\receipt.json": "b21c52f5f322d50e3cf0296e80b16775c552cf5852ffd68956965d970e6eae32",
+    "data\\derived\\scientific_pipeline_v4\\runs\\tcn_micro_restored_uniform_seed29\\receipt.json": "42cde9f7d667c5003e172232d3610d21c9c777951166a5ba0f5228dbdedc9df4",
+    "data\\derived\\scientific_pipeline_v4\\runs\\tcn_micro_restored_soft_crossing_id_seed29\\receipt.json": "4978ea832e6880c42077705c6b9eb7fdcfeeeffd3fb3b614b1f42d00c63da6e0",
+    "reports\\scientific_pipeline_v4\\economic_audit.json": "382071e1ce24d01f94111cc5ad0063157810f6bd3852386da73938b30be1084b",
+    "reports\\scientific_pipeline_v4\\statistical_audit.json": "c8b3ac91ec8d239f6a43b30f67502289e0326eb28ce5cc2793076a39d345365f",
+    "reports\\scientific_pipeline_v4\\decision_findings.json": "18b0b35e199e39fb45d3e4fb74c4576bd6225d5eff61d1c0ac98f573adda03ae"
+  },
+  "figures": {
+    "01_probability.png": "6d1a76d83e8b3824e9077531ce2ac8791a624306b1ffe92c065bc487c994960f",
+    "02_training.png": "d697b8eb105ed6c1e81ba0e72c30114c9a6d94132b2a5fea1a7fa86996f1b64a",
+    "03_weights.png": "84049e5ab7070e713bb6dc6e82136aa36b3dc001377cc5be700b6fde6c9ed4af",
+    "04_gradients.png": "fa548dc75dd0d5f1a63396c92c1eaa1177f31cde82df8f2e1850f0e7b5837ad7",
+    "05a_signal_2026-07-13_seed17.png": "aa2651e7c138d28a2a86c3394f96b70561bc3eb4623d9ec71a48d04136aa20f2",
+    "05b_signal_2026-07-20_seed17.png": "940f333763c592cbde75ac9989797f679565e918fd842fe2c374bdc7a1928277",
+    "05c_signal_2026-07-13_seed29.png": "1e19922d3633ae73444ef2d2e7f2fe56bbde60f1a069c91e33b0c32b9074730e",
+    "05d_signal_2026-07-20_seed29.png": "d39583567ee3c709da2974d63f792991080f2c741b7dee79ade3693061e5e5dc",
+    "06_false_signal_tradeoff.png": "adf75cdbbec17122aca134f7d0ae0b1de7090fa741d553c4afe2574b7fa58f3d",
+    "07_calibration_transfer.png": "5686738be79f8cf83a48003f8bbe79d4ccbf8cad45a08f3c31fca679c645f36e",
+    "08_reliability.png": "f08284679dd82fd4ad7f6881978a32b596f5864963e7aa9d4c66f57df22c294e",
+    "09_execution.png": "affa98d2d6912a1e27200b0ebc5acd5374065c8114a65b0e9163340850de2882",
+    "10_paired_effects.png": "138b668068194e90e7a7effbaa94c534a188a9c45af8379a68454bd5bc5daa7e"
+  },
+  "index_sha256": "941ea44a0cd1d809bf562dbe1b05ffc108752ec4295b59360235c2854285d9a4",
+  "unsmoothed": true,
+  "fixed_visual_cases": [
+    {
+      "date": "2026-07-13",
+      "offset_hours": 0,
+      "duration_hours": 2
+    },
+    {
+      "date": "2026-07-20",
+      "offset_hours": 5,
+      "duration_hours": 2
+    }
+  ],
+  "interpretation": "All prespecified arms and scenes shown; statistical diagnostics and execution remain separate"
+}
