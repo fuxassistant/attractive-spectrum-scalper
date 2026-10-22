@@ -1,0 +1,14 @@
+{
+  "images": {
+    "01_target_loss_scheme.png": "c323caab89893b8ab2168eb8efc1d0c4c1dd18c8fae2c5c824abbe449ae903e2",
+    "02_time_equity_map.png": "613f6abc0f13c2a92d440cd9ef50eab0ed13fd18cda9c2b1e98a28b4ac1df885",
+    "03_one_entry_sequence.png": "0052751f45f64dcbb2539a082e835bf1796a2d0d023498ee1ed2191d8c364c0e",
+    "04_scale_coverage.png": "4ba1edcb35d78b3acb059e970ec2297f50c7cb8604739ed94206a219d615b832",
+    "05_favorable_distribution.png": "cb0c61d24436b2e9838a1a7ff5b90fb85cda5601c8d5a55977a2d59206af3df4",
+    "06_targets_and_gradients.png": "6eea43608db88be5d0c7878bf5b9fda6276ae9cb06fc3acdc721a076631e8085",
+    "07_direction_and_ids.png": "39500862c85174e1d5c3f64b015d7fde7322a3260b7016e6a0756e0468e2739b"
+  },
+  "page_sha256": "ea915b8c2968b847d0338749a150f50aa751c851cda80abb1752b42062f2eeb1",
+  "summary_sha256": "b54f7d8f626c0aed24637722c61352171cf7568f5da59490f213f84309929e3a",
+  "script_sha256": "e40fb2c1da76ad5f32508c7fdc174cee3980413759427962d3f6f0986b77e71d"
+}

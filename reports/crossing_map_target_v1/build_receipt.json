@@ -1,0 +1,8439 @@
+{
+  "status": "PASS",
+  "identity": {
+    "contracts/crossing_map_target_v1.json": "5ac79b8ebfa5edb55d1c0dbef7c614abd8ee754add83e60f05069c0b5d96c1ab",
+    "spectrum/cognition/crossing_map.py": "b4c8aa5f57b424cf4f8ba13cc1bc3e26c324afba67ce9872a2ac9b0d1c5e4487",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\crossing_map_build.py": "78a52f23e58e15faf649d79316a31a186f8f43e5907921b7e8553565f0ea4551"
+  },
+  "manifest_sha256": "bc3d01fd1a97a12f4d86e8311adf0760730e184870ba4fe8200581e31e22a3d2",
+  "dates": [
+    "2026-02-02",
+    "2026-02-03",
+    "2026-02-04",
+    "2026-02-05",
+    "2026-02-06"
+  ],
+  "origins": 8395,
+  "cells": 251850,
+  "events": 198549,
+  "bb_parity_rows": 80762,
+  "checks": [
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 7.460698725481052e-13
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 1.1009859690602752e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 2.9817925906172604e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 4.8970605348586105e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 2.1318768972378166e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 8.288836284009449e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 1.333688715021708e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 2.6015651855004762e-09
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 9.094947017729282e-13
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 1.936228954946273e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 1.2801493198821845e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 2.2777868480261532e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 1.2596856890922936e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 1.6834889038364054e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 5.135447622706124e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 4.183391411061166e-10
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 2.0108359422010835e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 2.6702196009864565e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 2.9118041311448906e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 3.575451046344824e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 5.864819740963867e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 9.014655688588391e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 5.993463503273233e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 1.5411671938636573e-10
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 2.0463630789890885e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 6.266986929404084e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 6.656364348600619e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 4.547473508864641e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 1.715250164124882e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 7.366907084360719e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 3.71638719798284e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 2.0456525362533284e-11
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 6.45172804070171e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 1.4878764886816498e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 7.119638212316204e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 2.560796019679401e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 1.5575096767861396e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 2.496847173460992e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 1.6415668824265595e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 1.5904788597254083e-10
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 1.2789769243681803e-13
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 3.835864959000901e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 6.240359340381474e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 1.0660894389502573e-09
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 1.6647643263922873e-09
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 1.1473488825686218e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 1.5202985537143832e-09
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 1.1704781144317167e-08
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 4.89563944938709e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 2.0591528482327703e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 3.015543370565865e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 3.056754849239951e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 3.7324809909478063e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 1.1760903362301178e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 4.5346837396209594e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 1.915747560587988e-09
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 4.82458517581108e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 3.270628212703741e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 1.1517897746671224e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 1.5233680983328668e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 1.0529532801228925e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 2.234159524050483e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 4.660876129491953e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 1.2992416031920584e-09
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 1.0842882147699129e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 2.90683033199457e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 1.963940121640917e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 1.6475709685437323e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 2.2684432110509078e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 8.490275149597437e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 3.622844246820023e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 5.207425601838622e-10
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 1.3159251466277055e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 1.9824142327706795e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 8.952838470577262e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 1.6327206253663462e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 9.723422067509091e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 1.2351009104349941e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 2.333564452783321e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 4.147153731537401e-10
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 3.552713678800501e-14
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 4.4424908196560864e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 8.500133930056109e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 7.396874224241401e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 3.708677809299843e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 2.2463808591055567e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 7.031175641714071e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 8.65334470745438e-10
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 2.639666263348772e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 1.4690826333207951e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 1.2784084901795723e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 3.979181428803713e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 3.6905589695379604e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 5.4569682106375694e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 3.666755787889997e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 6.162181875879469e-11
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 3.68771679859492e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 2.610693883298154e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 2.7995383788947947e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 3.3873703841891256e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 4.454392410480068e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 8.185452315956354e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 1.426059270670521e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 5.1585402616183273e-11
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 1.4424017535930034e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 1.850892772381485e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 7.717204653090448e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 3.523297209540033e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 4.7414516757271485e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 1.1041834113711957e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 7.275957614183426e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 8.205702783925517e-11
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 5.009326287108706e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 4.9247717015532544e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 7.041478511382593e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 3.354188038429129e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 5.920952617088915e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 1.7820411812863313e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 8.242295734817162e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 6.148326292532147e-11
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 2.5579538487363607e-13
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 2.3163693185779266e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 1.3181455926769559e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 7.915446076367516e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 1.0042811027233256e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 2.799716014578735e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 2.3207924471080332e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 1.2967742435421314e-09
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 2.0873969219792343e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 1.6555645743210334e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 4.888534022029489e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 1.3316991953615798e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 4.60929072687577e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 6.797762353016878e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 7.09192704562156e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 8.252172278844228e-10
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 1.6342482922482304e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 9.094947017729282e-13
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 7.275957614183426e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 5.785949497294496e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 1.2458301057449717e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 1.2157386208855314e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 7.344880259552156e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 8.220268910008599e-10
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 1.5774048733874224e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 9.094947017729282e-13
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 2.808064891723916e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 3.594635700210347e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 1.1200995686522219e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 4.148503762735345e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 5.7980287238024175e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 8.316582977840881e-10
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 1.3308465440786676e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 2.2673418698104797e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 2.8904878490720876e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 8.37019342725398e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 6.95195012667682e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 4.239097961544758e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 2.2239987629291136e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 5.173106387701409e-10
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 9.094947017729282e-13
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 6.0182969718880486e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 5.7838178690872155e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 8.035172527343093e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 2.1875479205846204e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 1.1713296999005252e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 2.8392044271186023e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 1,
+      "error": 2.410865285185082e-09
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 1,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 1.4779288903810084e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 1.7337242752546445e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 1.5717205315013416e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 1.5578649481540197e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 4.384759222375578e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 2.736655346780026e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 2.6406077324736543e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 3,
+      "error": 5.424602989023697e-10
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 3,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 1.2505552149377763e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 1.4424017535930034e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 1.0942358130705543e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 2.651745489856694e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 8.096634473986342e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 3.388223035472038e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 1.5930723407109326e-10
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 5,
+      "error": 4.526867769527598e-11
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 5,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 6.750155989720952e-13
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 2.0534685063466895e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 1.0444978215673473e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 1.5056400570756523e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 1.4210854715202004e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 3.177547114319168e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 7.298694981727749e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 6,
+      "error": 1.9767831815897807e-10
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 6,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "BB",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 1.0942358130705543e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 9.094947017729282e-13
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 9.094947017729282e-13
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 2.6719959578258567e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 6.366462912410498e-12
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 9.094947017729282e-13
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 1.3095302620058646e-11
+    },
+    {
+      "type": "vwap_direct",
+      "scale": 9,
+      "error": 2.347952943182463e-10
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 0,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 1,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    },
+    {
+      "type": "profile_direct",
+      "family": "VWAP",
+      "scale": 9,
+      "role": 2,
+      "error": 0.0
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-02-02",
+      "identity": {
+        "contracts/crossing_map_target_v1.json": "5ac79b8ebfa5edb55d1c0dbef7c614abd8ee754add83e60f05069c0b5d96c1ab",
+        "spectrum/cognition/crossing_map.py": "b4c8aa5f57b424cf4f8ba13cc1bc3e26c324afba67ce9872a2ac9b0d1c5e4487",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\crossing_map_build.py": "78a52f23e58e15faf649d79316a31a186f8f43e5907921b7e8553565f0ea4551"
+      },
+      "files": {
+        "2026-02-02_bank.parquet": "94e5d28bc2148e0e41c823ae6d851932e0fe110841a15d74a9b5a7dab3e9f5cc",
+        "2026-02-02_map.parquet": "0df2d068f8525bb51cdeb86cfdf64b31776846a36101f13bda42c1f0f981d715",
+        "2026-02-02_roots.parquet": "6b273450b17575687e062c627c9fae91f97dc6fd93747c6eadab8a7b3d0d112d",
+        "2026-02-02_scene.parquet": "9e86644ccc948ac32e6c9718f211c8bb4ac35c44cf18bdd9a540222d13ff285f"
+      },
+      "origins": 1679,
+      "cells": 50370,
+      "events": 57881,
+      "quotes": 18684428,
+      "retained": 5069310,
+      "bb_bank_parity_rows": 23193,
+      "checks": [
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 7.460698725481052e-13
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 1.1009859690602752e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 2.9817925906172604e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 4.8970605348586105e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 2.1318768972378166e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 8.288836284009449e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 1.333688715021708e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 2.6015651855004762e-09
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 9.094947017729282e-13
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 1.936228954946273e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 1.2801493198821845e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 2.2777868480261532e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 1.2596856890922936e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 1.6834889038364054e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 5.135447622706124e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 4.183391411061166e-10
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 2.0108359422010835e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 2.6702196009864565e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 2.9118041311448906e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 3.575451046344824e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 5.864819740963867e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 9.014655688588391e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 5.993463503273233e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 1.5411671938636573e-10
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 2.0463630789890885e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 6.266986929404084e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 6.656364348600619e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 4.547473508864641e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 1.715250164124882e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 7.366907084360719e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 3.71638719798284e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 2.0456525362533284e-11
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 6.45172804070171e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 1.4878764886816498e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 7.119638212316204e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 2.560796019679401e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 1.5575096767861396e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 2.496847173460992e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 1.6415668824265595e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 1.5904788597254083e-10
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        }
+      ],
+      "manifest_sha256": "18dff6d3795dfee35b1cff0e26be15364da767c860b6b1aa37d88d57e43ac921"
+    },
+    {
+      "date": "2026-02-03",
+      "identity": {
+        "contracts/crossing_map_target_v1.json": "5ac79b8ebfa5edb55d1c0dbef7c614abd8ee754add83e60f05069c0b5d96c1ab",
+        "spectrum/cognition/crossing_map.py": "b4c8aa5f57b424cf4f8ba13cc1bc3e26c324afba67ce9872a2ac9b0d1c5e4487",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\crossing_map_build.py": "78a52f23e58e15faf649d79316a31a186f8f43e5907921b7e8553565f0ea4551"
+      },
+      "files": {
+        "2026-02-03_bank.parquet": "fbc84b82920be7911b1eaf6be69af2c516caaa4b4e7834c1e7200ec5cbeb10f2",
+        "2026-02-03_map.parquet": "1cba48bb658e5df92e573158812c693db7d27a4581a20129502466cea3ffb044",
+        "2026-02-03_roots.parquet": "a03c3412ccb4d41d3231750cef71a1db0cf425a733c84f07ea16613ab7f28073",
+        "2026-02-03_scene.parquet": "12453a2a3731d221c5e1188fb921c482847fac90096a00c3686314552ee322e4"
+      },
+      "origins": 1679,
+      "cells": 50370,
+      "events": 38438,
+      "quotes": 8278300,
+      "retained": 1751745,
+      "bb_bank_parity_rows": 15270,
+      "checks": [
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 1.2789769243681803e-13
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 3.835864959000901e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 6.240359340381474e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 1.0660894389502573e-09
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 1.6647643263922873e-09
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 1.1473488825686218e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 1.5202985537143832e-09
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 1.1704781144317167e-08
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 4.89563944938709e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 2.0591528482327703e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 3.015543370565865e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 3.056754849239951e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 3.7324809909478063e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 1.1760903362301178e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 4.5346837396209594e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 1.915747560587988e-09
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 4.82458517581108e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 3.270628212703741e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 1.1517897746671224e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 1.5233680983328668e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 1.0529532801228925e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 2.234159524050483e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 4.660876129491953e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 1.2992416031920584e-09
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 1.0842882147699129e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 2.90683033199457e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 1.963940121640917e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 1.6475709685437323e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 2.2684432110509078e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 8.490275149597437e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 3.622844246820023e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 5.207425601838622e-10
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 1.3159251466277055e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 1.9824142327706795e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 8.952838470577262e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 1.6327206253663462e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 9.723422067509091e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 1.2351009104349941e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 2.333564452783321e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 4.147153731537401e-10
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        }
+      ],
+      "manifest_sha256": "124c9dd6e655e67a564575b8000ae89d6018ef5067abeaee302b0d65ca9e80c0"
+    },
+    {
+      "date": "2026-02-04",
+      "identity": {
+        "contracts/crossing_map_target_v1.json": "5ac79b8ebfa5edb55d1c0dbef7c614abd8ee754add83e60f05069c0b5d96c1ab",
+        "spectrum/cognition/crossing_map.py": "b4c8aa5f57b424cf4f8ba13cc1bc3e26c324afba67ce9872a2ac9b0d1c5e4487",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\crossing_map_build.py": "78a52f23e58e15faf649d79316a31a186f8f43e5907921b7e8553565f0ea4551"
+      },
+      "files": {
+        "2026-02-04_bank.parquet": "c5747b6aa8f74f14ae199642d6164fd58697ade818310a6800fa8a6d1b195824",
+        "2026-02-04_map.parquet": "d6d0d277526a70e53912dd3116ab879de7024c046f458cb380b04fa7ce7a01b1",
+        "2026-02-04_roots.parquet": "f3ca7b222f67acc7239c8ffe020077daf3d4bf9071a13ef2179e117a994ce061",
+        "2026-02-04_scene.parquet": "5a5caf4b593a545fcd1b14300b43fbcfe1e1bf660bd538cab9e1ce90a9695b84"
+      },
+      "origins": 1679,
+      "cells": 50370,
+      "events": 29374,
+      "quotes": 6980716,
+      "retained": 1478036,
+      "bb_bank_parity_rows": 12191,
+      "checks": [
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 3.552713678800501e-14
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 4.4424908196560864e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 8.500133930056109e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 7.396874224241401e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 3.708677809299843e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 2.2463808591055567e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 7.031175641714071e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 8.65334470745438e-10
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 2.639666263348772e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 1.4690826333207951e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 1.2784084901795723e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 3.979181428803713e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 3.6905589695379604e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 5.4569682106375694e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 3.666755787889997e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 6.162181875879469e-11
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 3.68771679859492e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 2.610693883298154e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 2.7995383788947947e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 3.3873703841891256e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 4.454392410480068e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 8.185452315956354e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 1.426059270670521e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 5.1585402616183273e-11
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 1.4424017535930034e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 1.850892772381485e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 7.717204653090448e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 3.523297209540033e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 4.7414516757271485e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 1.1041834113711957e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 7.275957614183426e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 8.205702783925517e-11
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 5.009326287108706e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 4.9247717015532544e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 7.041478511382593e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 3.354188038429129e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 5.920952617088915e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 1.7820411812863313e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 8.242295734817162e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 6.148326292532147e-11
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        }
+      ],
+      "manifest_sha256": "be308e6272aecc6343b6556571335b10d7768d740fcc041fe7fb9d725e9ade82"
+    },
+    {
+      "date": "2026-02-05",
+      "identity": {
+        "contracts/crossing_map_target_v1.json": "5ac79b8ebfa5edb55d1c0dbef7c614abd8ee754add83e60f05069c0b5d96c1ab",
+        "spectrum/cognition/crossing_map.py": "b4c8aa5f57b424cf4f8ba13cc1bc3e26c324afba67ce9872a2ac9b0d1c5e4487",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\crossing_map_build.py": "78a52f23e58e15faf649d79316a31a186f8f43e5907921b7e8553565f0ea4551"
+      },
+      "files": {
+        "2026-02-05_bank.parquet": "be80160fdb4a6f90ec3b62978a6c3b93949fe806676d11b7a99efe6f6a831ca8",
+        "2026-02-05_map.parquet": "f53175fa4d3ecaccbd4fd09bce8f5525196abcb3b226019095630412367be8d2",
+        "2026-02-05_roots.parquet": "8b617f0a067cfc68bb920096f5a9dfd845277ba470eb27f7b8e7132189041b15",
+        "2026-02-05_scene.parquet": "6bd93f10943ded56b675935090d6e99e488de6de76bc217a11b6f214e1f25465"
+      },
+      "origins": 1679,
+      "cells": 50370,
+      "events": 45444,
+      "quotes": 9248027,
+      "retained": 2143520,
+      "bb_bank_parity_rows": 18849,
+      "checks": [
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 2.5579538487363607e-13
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 2.3163693185779266e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 1.3181455926769559e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 7.915446076367516e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 1.0042811027233256e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 2.799716014578735e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 2.3207924471080332e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 1.2967742435421314e-09
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 2.0873969219792343e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 1.6555645743210334e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 4.888534022029489e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 1.3316991953615798e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 4.60929072687577e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 6.797762353016878e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 7.09192704562156e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 8.252172278844228e-10
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 1.6342482922482304e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 9.094947017729282e-13
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 7.275957614183426e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 5.785949497294496e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 1.2458301057449717e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 1.2157386208855314e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 7.344880259552156e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 8.220268910008599e-10
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 1.5774048733874224e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 9.094947017729282e-13
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 2.808064891723916e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 3.594635700210347e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 1.1200995686522219e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 4.148503762735345e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 5.7980287238024175e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 8.316582977840881e-10
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 1.3308465440786676e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 2.2673418698104797e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 2.8904878490720876e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 8.37019342725398e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 6.95195012667682e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 4.239097961544758e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 2.2239987629291136e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 5.173106387701409e-10
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        }
+      ],
+      "manifest_sha256": "a4297053695e73b1e0540a230ddadfb009d1c72cb883864388b4e41f7e8a5fb2"
+    },
+    {
+      "date": "2026-02-06",
+      "identity": {
+        "contracts/crossing_map_target_v1.json": "5ac79b8ebfa5edb55d1c0dbef7c614abd8ee754add83e60f05069c0b5d96c1ab",
+        "spectrum/cognition/crossing_map.py": "b4c8aa5f57b424cf4f8ba13cc1bc3e26c324afba67ce9872a2ac9b0d1c5e4487",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\crossing_map_build.py": "78a52f23e58e15faf649d79316a31a186f8f43e5907921b7e8553565f0ea4551"
+      },
+      "files": {
+        "2026-02-06_bank.parquet": "87a8a3a4549af40d4ec808d9c96791fb7f8ee1164934ce4f1f7f52a03ee7cdf3",
+        "2026-02-06_map.parquet": "ef4fdf1416e7d1e0bcdb917df0fc998107168fd6ab1a151121f77be9a2c6d851",
+        "2026-02-06_roots.parquet": "d979e003529fe9cfa1b2aea7d4291b378dcf6586437fad981c61e925ec1060ed",
+        "2026-02-06_scene.parquet": "26959a7c0389a453668640e726597174c283aeb4d027463b3bdc8e06a69cf20a"
+      },
+      "origins": 1679,
+      "cells": 50370,
+      "events": 27412,
+      "quotes": 5065531,
+      "retained": 1049363,
+      "bb_bank_parity_rows": 11259,
+      "checks": [
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 9.094947017729282e-13
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 6.0182969718880486e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 5.7838178690872155e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 8.035172527343093e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 2.1875479205846204e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 1.1713296999005252e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 2.8392044271186023e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 1,
+          "error": 2.410865285185082e-09
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 1,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 1.4779288903810084e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 1.7337242752546445e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 1.5717205315013416e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 1.5578649481540197e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 4.384759222375578e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 2.736655346780026e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 2.6406077324736543e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 3,
+          "error": 5.424602989023697e-10
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 3,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 1.2505552149377763e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 1.4424017535930034e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 1.0942358130705543e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 2.651745489856694e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 8.096634473986342e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 3.388223035472038e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 1.5930723407109326e-10
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 5,
+          "error": 4.526867769527598e-11
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 5,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 6.750155989720952e-13
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 2.0534685063466895e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 1.0444978215673473e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 1.5056400570756523e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 1.4210854715202004e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 3.177547114319168e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 7.298694981727749e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 6,
+          "error": 1.9767831815897807e-10
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 6,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "BB",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 1.0942358130705543e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 9.094947017729282e-13
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 9.094947017729282e-13
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 2.6719959578258567e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 6.366462912410498e-12
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 9.094947017729282e-13
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 1.3095302620058646e-11
+        },
+        {
+          "type": "vwap_direct",
+          "scale": 9,
+          "error": 2.347952943182463e-10
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 0,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 1,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        },
+        {
+          "type": "profile_direct",
+          "family": "VWAP",
+          "scale": 9,
+          "role": 2,
+          "error": 0.0
+        }
+      ],
+      "manifest_sha256": "5479fcc9f6ade274fb7f4f42552826b66ab7dac3196fc1991a580d85b0d03242"
+    }
+  ]
+}

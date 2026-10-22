@@ -1,0 +1,4208 @@
+{
+  "status": "PASS",
+  "raw_first_passage_checks": 600,
+  "checks": [
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770019200000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770019200000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770019200000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770019200000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770019200000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770019200000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770021720000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770021720000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770021720000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770021720000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770021720000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770021720000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770024240000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770024240000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770024240000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770024240000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770024240000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770024240000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770026760000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770026760000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770026760000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770026760000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770026760000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770026760000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770029280000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770029280000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770029280000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770029280000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770029280000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770029280000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770031800000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770031800000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770031800000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770031800000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770031800000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770031800000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770034320000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770034320000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770034320000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770034320000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770034320000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770034320000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770036840000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770036840000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770036840000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770036840000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770036840000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770036840000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770039360000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770039360000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770039360000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770039360000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770039360000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770039360000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770041880000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770041880000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770041880000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770041880000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770041880000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770041880000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770044430000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770044430000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770044430000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770044430000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770044430000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770044430000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770048150000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770048150000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770048150000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770048150000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770048150000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770048150000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770050670000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770050670000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770050670000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770050670000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770050670000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770050670000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770053190000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770053190000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770053190000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770053190000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770053190000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770053190000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770055710000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770055710000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770055710000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770055710000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770055710000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770055710000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770058230000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770058230000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770058230000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770058230000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770058230000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770058230000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770060750000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770060750000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770060750000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770060750000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770060750000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770060750000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770063270000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770063270000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770063270000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770063270000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770063270000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770063270000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770066990000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770066990000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770066990000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770066990000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770066990000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770066990000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770069540000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770069540000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770069540000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770069540000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770069540000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770069540000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770105600000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770105600000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770105600000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770105600000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770105600000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770105600000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770108150000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770108150000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770108150000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770108150000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770108150000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770108150000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770110730000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770110730000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770110730000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770110730000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770110730000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770110730000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770113310000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770113310000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770113310000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770113310000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770113310000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770113310000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770115890000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770115890000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770115890000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770115890000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770115890000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770115890000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770118440000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770118440000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770118440000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770118440000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770118440000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770118440000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770121050000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770121050000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770121050000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770121050000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770121050000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770121050000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770123690000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770123690000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770123690000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770123690000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770123690000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770123690000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770126270000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770126270000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770126270000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770126270000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770126270000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770126270000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770128850000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770128850000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770128850000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770128850000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770128850000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770128850000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770131400000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770131400000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770131400000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770131400000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770131400000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770131400000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770133980000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770133980000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770133980000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770133980000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770133980000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770133980000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770136560000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770136560000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770136560000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770136560000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770136560000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770136560000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770139140000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770139140000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770139140000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770139140000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770139140000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770139140000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770141720000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770141720000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770141720000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770141720000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770141720000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770141720000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770145470000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770145470000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770145470000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770145470000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770145470000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770145470000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770148050000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770148050000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770148050000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770148050000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770148050000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770148050000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770150630000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770150630000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770150630000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770150630000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770150630000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770150630000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770153240000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770153240000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770153240000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770153240000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770153240000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770153240000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770155940000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770155940000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770155940000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770155940000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770155940000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-03",
+      "t_ns": "1770155940000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770192000000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770192000000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770192000000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770192000000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770192000000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770192000000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770194550000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770194550000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770194550000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770194550000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770194550000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770194550000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770197130000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770197130000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770197130000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770197130000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770197130000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770197130000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770199680000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770199680000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770199680000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770199680000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770199680000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770199680000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770202200000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770202200000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770202200000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770202200000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770202200000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770202200000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770204780000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770204780000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770204780000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770204780000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770204780000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770204780000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770207360000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770207360000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770207360000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770207360000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770207360000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770207360000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770209970000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770209970000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770209970000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770209970000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770209970000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770209970000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770212520000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770212520000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770212520000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770212520000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770212520000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770212520000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770215070000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770215070000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770215070000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770215070000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770215070000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770215070000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770217590000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770217590000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770217590000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770217590000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770217590000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770217590000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770220140000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770220140000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770220140000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770220140000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770220140000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770220140000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770222690000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770222690000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770222690000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770222690000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770222690000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770222690000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770226500000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770226500000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770226500000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770226500000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770226500000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770226500000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770229050000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770229050000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770229050000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770229050000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770229050000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770229050000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770231600000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770231600000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770231600000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770231600000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770231600000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770231600000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770234120000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770234120000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770234120000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770234120000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770234120000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770234120000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770236670000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770236670000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770236670000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770236670000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770236670000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770236670000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770239280000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770239280000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770239280000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770239280000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770239280000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770239280000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770242340000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770242340000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770242340000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770242340000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770242340000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-04",
+      "t_ns": "1770242340000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770278400000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770278400000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770278400000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770278400000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770278400000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770278400000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770280980000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770280980000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770280980000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770280980000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770280980000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770280980000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770283560000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770283560000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770283560000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770283560000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770283560000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770283560000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770286140000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770286140000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770286140000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770286140000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770286140000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770286140000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770288720000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770288720000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770288720000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770288720000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770288720000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770288720000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770291330000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770291330000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770291330000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770291330000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770291330000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770291330000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770293940000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770293940000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770293940000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770293940000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770293940000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770293940000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770296520000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770296520000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770296520000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770296520000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770296520000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770296520000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770299100000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770299100000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770299100000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770299100000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770299100000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770299100000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770301680000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770301680000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770301680000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770301680000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770301680000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770301680000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770304290000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770304290000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770304290000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770304290000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770304290000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770304290000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770306870000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770306870000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770306870000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770306870000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770306870000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770306870000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770309450000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770309450000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770309450000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770309450000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770309450000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770309450000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770312030000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770312030000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770312030000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770312030000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770312030000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770312030000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770314610000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770314610000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770314610000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770314610000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770314610000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770314610000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770317190000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770317190000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770317190000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770317190000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770317190000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770317190000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770319770000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770319770000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770319770000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770319770000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770319770000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770319770000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770322350000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770322350000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770322350000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770322350000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770322350000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770322350000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770324930000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770324930000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770324930000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770324930000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770324930000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770324930000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770328740000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770328740000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770328740000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770328740000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770328740000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-05",
+      "t_ns": "1770328740000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770364800000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770364800000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770364800000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770364800000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770364800000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770364800000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770367410000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770367410000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770367410000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770367410000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770367410000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770367410000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770370050000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770370050000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770370050000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770370050000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770370050000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770370050000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770372660000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770372660000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770372660000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770372660000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770372660000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770372660000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770375300000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770375300000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770375300000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770375300000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770375300000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770375300000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770378000000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770378000000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770378000000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770378000000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770378000000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770378000000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770380640000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770380640000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770380640000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770380640000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770380640000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770380640000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770383340000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770383340000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770383340000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770383340000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770383340000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770383340000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770385950000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770385950000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770385950000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770385950000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770385950000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770385950000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770388590000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770388590000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770388590000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770388590000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770388590000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770388590000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770391200000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770391200000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770391200000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770391200000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770391200000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770391200000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770393840000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770393840000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770393840000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770393840000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770393840000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770393840000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770396450000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770396450000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770396450000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770396450000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770396450000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770396450000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770399090000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770399090000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770399090000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770399090000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770399090000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770399090000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770401760000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770401760000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770401760000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770401760000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770401760000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770401760000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770404400000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770404400000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770404400000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770404400000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770404400000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770404400000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770407100000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770407100000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770407100000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770407100000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770407100000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770407100000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770409740000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770409740000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770409740000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770409740000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770409740000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770409740000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770412380000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770412380000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770412380000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770412380000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770412380000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770412380000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770415140000000000",
+      "side": "L",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770415140000000000",
+      "side": "L",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770415140000000000",
+      "side": "L",
+      "gain_multiple": 2.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770415140000000000",
+      "side": "S",
+      "gain_multiple": 0.5,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770415140000000000",
+      "side": "S",
+      "gain_multiple": 1.0,
+      "matched": true
+    },
+    {
+      "date": "2026-02-06",
+      "t_ns": "1770415140000000000",
+      "side": "S",
+      "gain_multiple": 2.0,
+      "matched": true
+    }
+  ],
+  "tests": ".................                                                        [100%]\n17 passed in 7.42s",
+  "script_sha256": "b9e3266be13ae3b672374e42e9b6c4867e6e19507ce2f3213436c65958287c7b"
+}

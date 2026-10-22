@@ -1,0 +1,223 @@
+{
+  "status": "PASS",
+  "preserved_previous": "data\\derived\\crossing_map_target_v1_superseded_ids",
+  "reason": "Physical event identity must not depend on target/loss/query code",
+  "compared_tables": 20,
+  "tables": [
+    {
+      "file": "2026-02-02_bank.parquet",
+      "rows": 57881,
+      "excluded_columns": [
+        "event_id"
+      ],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "609aaade47eb4f8b803f9e10e0dcad35936ecd699fbd9209e7bc66e438edd121",
+      "after_sha256": "94e5d28bc2148e0e41c823ae6d851932e0fe110841a15d74a9b5a7dab3e9f5cc"
+    },
+    {
+      "file": "2026-02-02_map.parquet",
+      "rows": 50370,
+      "excluded_columns": [
+        "event_id"
+      ],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "778e8f4b9e3ae11f067556f82fc40b64e714adc8837e00e102efdb695606c9db",
+      "after_sha256": "0df2d068f8525bb51cdeb86cfdf64b31776846a36101f13bda42c1f0f981d715"
+    },
+    {
+      "file": "2026-02-02_roots.parquet",
+      "rows": 1679,
+      "excluded_columns": [],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "6b273450b17575687e062c627c9fae91f97dc6fd93747c6eadab8a7b3d0d112d",
+      "after_sha256": "6b273450b17575687e062c627c9fae91f97dc6fd93747c6eadab8a7b3d0d112d"
+    },
+    {
+      "file": "2026-02-02_scene.parquet",
+      "rows": 1679,
+      "excluded_columns": [],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "9e86644ccc948ac32e6c9718f211c8bb4ac35c44cf18bdd9a540222d13ff285f",
+      "after_sha256": "9e86644ccc948ac32e6c9718f211c8bb4ac35c44cf18bdd9a540222d13ff285f"
+    },
+    {
+      "file": "2026-02-03_bank.parquet",
+      "rows": 38438,
+      "excluded_columns": [
+        "event_id"
+      ],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "b9142f2d8b8c7cdcebbad21e3005027b50277f883db69892094484ed8421d14a",
+      "after_sha256": "fbc84b82920be7911b1eaf6be69af2c516caaa4b4e7834c1e7200ec5cbeb10f2"
+    },
+    {
+      "file": "2026-02-03_map.parquet",
+      "rows": 50370,
+      "excluded_columns": [
+        "event_id"
+      ],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "9dae5048d30d65b0f4c1917c5ab7671923804ae409bf4cf04698f77297a18bd8",
+      "after_sha256": "1cba48bb658e5df92e573158812c693db7d27a4581a20129502466cea3ffb044"
+    },
+    {
+      "file": "2026-02-03_roots.parquet",
+      "rows": 1679,
+      "excluded_columns": [],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "a03c3412ccb4d41d3231750cef71a1db0cf425a733c84f07ea16613ab7f28073",
+      "after_sha256": "a03c3412ccb4d41d3231750cef71a1db0cf425a733c84f07ea16613ab7f28073"
+    },
+    {
+      "file": "2026-02-03_scene.parquet",
+      "rows": 1679,
+      "excluded_columns": [],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "12453a2a3731d221c5e1188fb921c482847fac90096a00c3686314552ee322e4",
+      "after_sha256": "12453a2a3731d221c5e1188fb921c482847fac90096a00c3686314552ee322e4"
+    },
+    {
+      "file": "2026-02-04_bank.parquet",
+      "rows": 29374,
+      "excluded_columns": [
+        "event_id"
+      ],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "868732da994cbce78b049b02bfd28327fb83423a8a94003f9feccea0409d105e",
+      "after_sha256": "c5747b6aa8f74f14ae199642d6164fd58697ade818310a6800fa8a6d1b195824"
+    },
+    {
+      "file": "2026-02-04_map.parquet",
+      "rows": 50370,
+      "excluded_columns": [
+        "event_id"
+      ],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "68d92e61ec1971a5dda09d4f8a6260e94024fbdd3e13e293b023840f60f576fa",
+      "after_sha256": "d6d0d277526a70e53912dd3116ab879de7024c046f458cb380b04fa7ce7a01b1"
+    },
+    {
+      "file": "2026-02-04_roots.parquet",
+      "rows": 1679,
+      "excluded_columns": [],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "f3ca7b222f67acc7239c8ffe020077daf3d4bf9071a13ef2179e117a994ce061",
+      "after_sha256": "f3ca7b222f67acc7239c8ffe020077daf3d4bf9071a13ef2179e117a994ce061"
+    },
+    {
+      "file": "2026-02-04_scene.parquet",
+      "rows": 1679,
+      "excluded_columns": [],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "5a5caf4b593a545fcd1b14300b43fbcfe1e1bf660bd538cab9e1ce90a9695b84",
+      "after_sha256": "5a5caf4b593a545fcd1b14300b43fbcfe1e1bf660bd538cab9e1ce90a9695b84"
+    },
+    {
+      "file": "2026-02-05_bank.parquet",
+      "rows": 45444,
+      "excluded_columns": [
+        "event_id"
+      ],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "26400e79eb27c593d0d2817922378a742f81ead79a688c8a113bd1700df64538",
+      "after_sha256": "be80160fdb4a6f90ec3b62978a6c3b93949fe806676d11b7a99efe6f6a831ca8"
+    },
+    {
+      "file": "2026-02-05_map.parquet",
+      "rows": 50370,
+      "excluded_columns": [
+        "event_id"
+      ],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "8c4b8ac8eff756e75c1d707ab115ddfd3a27358b6ca7ee1e5786d10079a12ea9",
+      "after_sha256": "f53175fa4d3ecaccbd4fd09bce8f5525196abcb3b226019095630412367be8d2"
+    },
+    {
+      "file": "2026-02-05_roots.parquet",
+      "rows": 1679,
+      "excluded_columns": [],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "8b617f0a067cfc68bb920096f5a9dfd845277ba470eb27f7b8e7132189041b15",
+      "after_sha256": "8b617f0a067cfc68bb920096f5a9dfd845277ba470eb27f7b8e7132189041b15"
+    },
+    {
+      "file": "2026-02-05_scene.parquet",
+      "rows": 1679,
+      "excluded_columns": [],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "6bd93f10943ded56b675935090d6e99e488de6de76bc217a11b6f214e1f25465",
+      "after_sha256": "6bd93f10943ded56b675935090d6e99e488de6de76bc217a11b6f214e1f25465"
+    },
+    {
+      "file": "2026-02-06_bank.parquet",
+      "rows": 27412,
+      "excluded_columns": [
+        "event_id"
+      ],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "bf63d1048a7698c6da3dabc8c139f33edbc118595f6d9531668125818a2dad6e",
+      "after_sha256": "87a8a3a4549af40d4ec808d9c96791fb7f8ee1164934ce4f1f7f52a03ee7cdf3"
+    },
+    {
+      "file": "2026-02-06_map.parquet",
+      "rows": 50370,
+      "excluded_columns": [
+        "event_id"
+      ],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "71c95aac7e6f68c3016ac7e01a4dc5c2361930f8fde19bed3d94dbccc2d5f1cd",
+      "after_sha256": "ef4fdf1416e7d1e0bcdb917df0fc998107168fd6ab1a151121f77be9a2c6d851"
+    },
+    {
+      "file": "2026-02-06_roots.parquet",
+      "rows": 1679,
+      "excluded_columns": [],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "d979e003529fe9cfa1b2aea7d4291b378dcf6586437fad981c61e925ec1060ed",
+      "after_sha256": "d979e003529fe9cfa1b2aea7d4291b378dcf6586437fad981c61e925ec1060ed"
+    },
+    {
+      "file": "2026-02-06_scene.parquet",
+      "rows": 1679,
+      "excluded_columns": [],
+      "exact_numeric_and_non_id_parity": true,
+      "before_sha256": "26959a7c0389a453668640e726597174c283aeb4d027463b3bdc8e06a69cf20a",
+      "after_sha256": "26959a7c0389a453668640e726597174c283aeb4d027463b3bdc8e06a69cf20a"
+    }
+  ],
+  "bank_map_links": [
+    {
+      "date": "2026-02-02",
+      "resolved_cells": 31146,
+      "bank_events": 57881,
+      "identity_link_checks": "PASS"
+    },
+    {
+      "date": "2026-02-03",
+      "resolved_cells": 39728,
+      "bank_events": 38438,
+      "identity_link_checks": "PASS"
+    },
+    {
+      "date": "2026-02-04",
+      "resolved_cells": 34328,
+      "bank_events": 29374,
+      "identity_link_checks": "PASS"
+    },
+    {
+      "date": "2026-02-05",
+      "resolved_cells": 42677,
+      "bank_events": 45444,
+      "identity_link_checks": "PASS"
+    },
+    {
+      "date": "2026-02-06",
+      "resolved_cells": 48038,
+      "bank_events": 27412,
+      "identity_link_checks": "PASS"
+    }
+  ],
+  "previous_manifest_sha256": "8a4b0ff0178bccda7c84e505cf61ab93dea4cb6db838a8c54ddb990b6c5ad2ce",
+  "current_manifest_sha256": "bc3d01fd1a97a12f4d86e8311adf0760730e184870ba4fe8200581e31e22a3d2",
+  "script_sha256": "e561f5cd5c3137b89df3209e04ded7207fa4b439d4981199673b181be37aedac"
+}

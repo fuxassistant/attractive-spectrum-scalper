@@ -1,0 +1,58 @@
+{
+  "status": "COMPLETE_RESEARCH_NOT_MODEL_ADMISSION",
+  "base_commit": "cb32abf",
+  "branch": "codex/crossing-map-target-v1",
+  "origins": 8395,
+  "cells": 251850,
+  "physical_events": 198549,
+  "verification": {
+    "tests": ".................                                                        [100%]\n17 passed in 7.42s",
+    "raw_first_passage_checks": 600,
+    "direct_vwap_checks": 200,
+    "direct_path_checks": 450,
+    "unchanged_bb_bank_rows": 80762,
+    "identity_only_exact_table_parity": 20,
+    "resolved_id_links": 195917,
+    "gradient_max_abs_error": 7.684677894026493e-11,
+    "existing_baseline_artifacts_unchanged": true,
+    "local_report_links_checked": 13
+  },
+  "data_manifest_sha256": "bc3d01fd1a97a12f4d86e8311adf0760730e184870ba4fe8200581e31e22a3d2",
+  "source_sha256": {
+    "spectrum/cognition/crossing_map.py": "b4c8aa5f57b424cf4f8ba13cc1bc3e26c324afba67ce9872a2ac9b0d1c5e4487",
+    "tests/test_crossing_map.py": "f4835755a1a864112b9c3c56781151d617bbef889cfae99c47e23894934509c1",
+    "scripts/crossing_map_analyze.py": "fa4ebf96e9aefd6205c95e775393a665c07f6f7606250f8d90a117538f24975a",
+    "scripts/crossing_map_build.py": "78a52f23e58e15faf649d79316a31a186f8f43e5907921b7e8553565f0ea4551",
+    "scripts/crossing_map_finalize.py": "c36f97db3c1012843cd6129052c84591720b8bf982da21cebbca5cb1f1666406",
+    "scripts/crossing_map_identity_check.py": "e561f5cd5c3137b89df3209e04ded7207fa4b439d4981199673b181be37aedac",
+    "scripts/crossing_map_report.py": "e40fb2c1da76ad5f32508c7fdc174cee3980413759427962d3f6f0986b77e71d",
+    "scripts/crossing_map_verify.py": "b9e3266be13ae3b672374e42e9b6c4867e6e19507ce2f3213436c65958287c7b",
+    "contracts/crossing_map_target_v1.json": "5ac79b8ebfa5edb55d1c0dbef7c614abd8ee754add83e60f05069c0b5d96c1ab",
+    "contracts/crossing_map_training_proposal_v1.json": "72b61ab46569062d2440f76d2f755ac6df374795074c68122fe2aaf3d70873fb"
+  },
+  "report_sha256": {
+    "01_target_loss_scheme.png": "c323caab89893b8ab2168eb8efc1d0c4c1dd18c8fae2c5c824abbe449ae903e2",
+    "02_time_equity_map.png": "613f6abc0f13c2a92d440cd9ef50eab0ed13fd18cda9c2b1e98a28b4ac1df885",
+    "03_one_entry_sequence.png": "0052751f45f64dcbb2539a082e835bf1796a2d0d023498ee1ed2191d8c364c0e",
+    "04_scale_coverage.png": "4ba1edcb35d78b3acb059e970ec2297f50c7cb8604739ed94206a219d615b832",
+    "05_favorable_distribution.png": "cb0c61d24436b2e9838a1a7ff5b90fb85cda5601c8d5a55977a2d59206af3df4",
+    "06_targets_and_gradients.png": "6eea43608db88be5d0c7878bf5b9fda6276ae9cb06fc3acdc721a076631e8085",
+    "07_direction_and_ids.png": "39500862c85174e1d5c3f64b015d7fde7322a3260b7016e6a0756e0468e2739b",
+    "build_receipt.json": "9521e71b5abfd75d6a57c142743daf87a6b8599785147d6d2360ce4c068a5435",
+    "case_receipt.json": "f25db69373b16ad585a063a2b9c4b89746cbc94218c5e5ef8987077f17b1202f",
+    "identity_migration_receipt.json": "9b4b713e7521173546d8f9fdb650baf4820a343212085b61c76b3b92faa97ea1",
+    "index.html": "ea915b8c2968b847d0338749a150f50aa751c851cda80abb1752b42062f2eeb1",
+    "REPRODUCTION_RU.md": "d1503f1767c794cd51a566b20e326b53ccea63ed81be6ccddb49af0781031df7",
+    "sol61_visual_audit_receipt.json": "291ed968242e00c7a30ba34dd56f14c0b16ba6cda6b43521a249261d95d5d184",
+    "SOL61_VISUAL_AUDIT_RU.md": "e8b413ef1b5dfd5e13d3d006d9e1b1f101b366b2de0a483f3f0ae0cbcb4a122f",
+    "summary.json": "b54f7d8f626c0aed24637722c61352171cf7568f5da59490f213f84309929e3a",
+    "validation.json": "59798e9679e7d7b06ba1bd96966e8802d0dfa33369154b688db2027803f15743",
+    "visual_receipt.json": "7b7fdb7db7c8fcdef08e420b3470870d4e683a85f2169ecc0c204c1f5ca9c1b2"
+  },
+  "limitations": [
+    "One exposed development week, highly dependent origins/cells",
+    "Checkpoint marks are alternative liquidation states, not policy equity",
+    "New predictive learner, survival and quantile heads not trained",
+    "Target stability and correct loss do not establish prediction or profitability"
+  ]
+}
