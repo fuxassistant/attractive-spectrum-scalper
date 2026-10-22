@@ -135,3 +135,10 @@ credentials.json
 !/reports/target_loss_audit_v1/*.json
 !/reports/target_loss_audit_v1/*.png
 !/reports/target_loss_audit_v1/index.html
+!/reports/bb_crossing_bank_v1/
+/reports/bb_crossing_bank_v1/*
+!/reports/bb_crossing_bank_v1/*.md
+!/reports/bb_crossing_bank_v1/*.json
+!/reports/bb_crossing_bank_v1/*.png
+!/reports/bb_crossing_bank_v1/index.html
+/reports/bb_crossing_bank_v1/summary.running.json
