@@ -1,0 +1,55 @@
+{
+  "scenes": [
+    {
+      "date": "2026-01-02",
+      "t_ns": "1767344880000000000",
+      "side": 1,
+      "mode": "P",
+      "selection": "calendar_2026-01"
+    },
+    {
+      "date": "2026-01-02",
+      "t_ns": "1767341640000000000",
+      "side": -1,
+      "mode": "P",
+      "selection": "first_episode_TAKE"
+    },
+    {
+      "date": "2026-01-02",
+      "t_ns": "1767341310000000000",
+      "side": 1,
+      "mode": "P",
+      "selection": "first_episode_STOP"
+    },
+    {
+      "date": "2026-01-02",
+      "t_ns": "1767341370000000000",
+      "side": 1,
+      "mode": "P",
+      "selection": "first_episode_TIME"
+    },
+    {
+      "date": "2026-01-02",
+      "t_ns": "1767342150000000000",
+      "side": -1,
+      "mode": "P",
+      "selection": "first_episode_EMPTY"
+    },
+    {
+      "date": "2026-01-12",
+      "t_ns": "1768253850000000000",
+      "side": -1,
+      "mode": "P",
+      "selection": "first_episode_CENSORED"
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770035100000000000",
+      "side": 1,
+      "mode": "P",
+      "selection": "calendar_2026-02"
+    }
+  ],
+  "missing_categories": [],
+  "semantics": "calendar and first class-conditioned diagnostic candidates; not a representative random sample or selected policy trades"
+}

@@ -1,0 +1,41 @@
+{
+  "status": "POST_HOC_DIAGNOSTIC",
+  "parts": {
+    "joint": {
+      "mean_gain_per_attempt": 0.0024500774245393335,
+      "total": 32.23076851981493,
+      "daily_ci": [
+        0.09376569409074591,
+        1.4578815128816511
+      ],
+      "days": 41
+    },
+    "fill": {
+      "mean_gain_per_attempt": 0.002086792503068327,
+      "total": 27.45175537786384,
+      "daily_ci": [
+        0.10109640775235763,
+        1.1503274336187956
+      ],
+      "days": 41
+    },
+    "conditional_path": {
+      "mean_gain_per_attempt": 0.00036328492147100607,
+      "total": 4.779013141951085,
+      "daily_ci": [
+        -0.12902906564251201,
+        0.4176663190854971
+      ],
+      "days": 41
+    }
+  },
+  "n_known": 13155,
+  "n_filled": 10497,
+  "fill_share_of_joint": 0.851725125976657,
+  "identity_max_abs_error": 7.216449660063518e-16,
+  "prediction_sha256": {
+    "baseline": "75b1d94c5bdc42a99fd8b6967e5f6b7aad7e308b9fcb50495e0f035d30693c1f",
+    "response": "415aa0d5a2927c5a0f70ad5bdc16d7d45ea6e9fee9f478a207adfe0e97058f30"
+  },
+  "semantics": "Exact log-score decomposition; conditional evaluation uses observed fills diagnostically, never to select policy rows; no admission or model changed"
+}

@@ -1,0 +1,20 @@
+{
+  "recorded_utc": "2026-10-22T01:39:26.155051+00:00",
+  "status": "PASS",
+  "full_suite_before_calendar_fix": {
+    "passed": 305,
+    "seconds": 80.84,
+    "log_sha256": "fe27d34c7600835165ea5a270933d8d28f326c5fa05c6396b03a0712c0757007"
+  },
+  "focused_after_calendar_fix": {
+    "command": ".venv/Scripts/python.exe -m pytest tests/test_cognition_episodes.py -q",
+    "passed": 9,
+    "seconds": 3.3,
+    "tests_sha256": "e322122d4d89bed8e45aedf3ae3acf274631aefa86e967e8f64cdd49a247c9f2"
+  },
+  "verified_daily_parquets": 106,
+  "verified_prediction_parquets": 20,
+  "summary_sha256": "b177ca0963f579bc86b2c9095e70202794b9c0ef5e115639f67167830fb4bfed",
+  "analysis_identity_verified": true,
+  "execution_audit_sha256": "aa909ab6e6d5b64bb7d89ab71aa5462c8082ab4e0d41c5b51e1d3b3365260d8f"
+}

@@ -1,0 +1,29 @@
+{
+  "scalper.py": {
+    "source": "fcd1f94944440cbdf79051f20cf9fa5787f7cc226c0d998595c43d3b7d7a7247",
+    "current": "a9d11d1752748afa020bb8088c37147ec3eacd46740d6d9175feb2621e3279a5",
+    "exact": false,
+    "historical_commit": "a68c7aa",
+    "proof": "entire module AST identical after inlining extracted entry_points"
+  },
+  "queue.py": {
+    "source": "d569680a804a558ad31ea644f6ce649ce8940b9c7f697d8857502947a3366094",
+    "current": "d569680a804a558ad31ea644f6ce649ce8940b9c7f697d8857502947a3366094",
+    "exact": true
+  },
+  "passive.py": {
+    "source": "25cae30d19b63fc0378dd06111ca7dad99fe5889364459584969eea710e5cb4c",
+    "current": "25cae30d19b63fc0378dd06111ca7dad99fe5889364459584969eea710e5cb4c",
+    "exact": true
+  },
+  "opportunity.py": {
+    "source": "8a2b856bda856ed81ee7cc96296c18aeb4f8e651a80bf1adfff5c6619936a4c9",
+    "current": "8a2b856bda856ed81ee7cc96296c18aeb4f8e651a80bf1adfff5c6619936a4c9",
+    "exact": true
+  },
+  "representation.py": {
+    "source": "6bc7f0aeaf85692cc45674d6741aea5bd3949718463b8362de2145b368c9ab7b",
+    "current": "6bc7f0aeaf85692cc45674d6741aea5bd3949718463b8362de2145b368c9ab7b",
+    "exact": true
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "date": "2025-10-01",
+      "roots": 40,
+      "compared": 160,
+      "mismatches": 0,
+      "captures": [
+        "member_000/capture_010000"
+      ]
+    },
+    {
+      "date": "2025-11-03",
+      "roots": 40,
+      "compared": 160,
+      "mismatches": 0,
+      "captures": [
+        "member_001/capture_011001"
+      ]
+    },
+    {
+      "date": "2025-12-01",
+      "roots": 40,
+      "compared": 160,
+      "mismatches": 0,
+      "captures": [
+        "member_002/capture_012000"
+      ]
+    },
+    {
+      "date": "2026-01-02",
+      "roots": 45,
+      "compared": 180,
+      "mismatches": 0,
+      "captures": [
+        "member_003/capture_013001"
+      ]
+    },
+    {
+      "date": "2026-01-12",
+      "roots": 1,
+      "compared": 4,
+      "mismatches": 0,
+      "captures": [
+        "member_003/capture_013009"
+      ]
+    },
+    {
+      "date": "2026-02-02",
+      "roots": 1,
+      "compared": 4,
+      "mismatches": 0,
+      "captures": [
+        "member_004/capture_014001"
+      ]
+    }
+  ],
+  "compared": 668,
+  "quote_hashes": {
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_000\\capture_010000\\quotes.parquet": "8ffb8f787809e61969c1f9ae0936faaa9801952346a1278a49e40abe939cb3dc",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_001\\capture_011000\\quotes.parquet": "e6e008d001984acd86ab69c78247abc9c1c8afd3691711f6ec0c6677af5d97ab",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_001\\capture_011001\\quotes.parquet": "b9ba4951b6e476047edfad6b505b0b17d292a494bd5980cb92670dd189296faf",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_001\\capture_011025\\quotes.parquet": "c802b23f783117fc7e5251b023483f19e0215a0f8a522c91659f2c4137e169c9",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_002\\capture_012000\\quotes.parquet": "c91dcddb9a25310bc4e8e20eb8c108f6dd40f7366f1f9ba444df2a9791f77bce",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_003\\capture_013000\\quotes.parquet": "e034302f265da2918d32d1431ee70f0719a49518b7ace4b5b185f36c20239f80",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_003\\capture_013001\\quotes.parquet": "9e8e132971b173fba674839321c0e604be5f67d0800a98e697a6abe49419a7fc",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_003\\capture_013008\\quotes.parquet": "e2ecd2b35802c4f8211c0d2fb4ae69f579166c30bafe93efceede7661275246a",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_003\\capture_013009\\quotes.parquet": "9c2e1d01566762c72243b7c0cdd5505132aa710f6b9f258cc516610d633ee977",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_004\\capture_014000\\quotes.parquet": "dcc4ae5013c6719387fcbe3505f6711d52c91f155204c47389a8f9f96f14e203",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_004\\capture_014001\\quotes.parquet": "b64bcb6115f628e0bb46e50eb944f0df86e3a66365cd760a4739f759b63810e8"
+  },
+  "entry_semantics": "fresh MBO replay, queue kernel V5 proof; T independently checked",
+  "exit_semantics": "independent Python quote loop; status, category, net and exit time compared",
+  "facts_sha256": "5ceebd7c63acab53a8d2d67a308cfb3aabede643bc8bfdfbbfd628a19c1ef8bf",
+  "missing_scene_categories": []
+}

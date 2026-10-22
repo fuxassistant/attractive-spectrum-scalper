@@ -1,0 +1,16 @@
+{
+  "images": {
+    "01_prediction_quality.png": "1b4ead6f6ccbb37b9185e4f954b7f72efcdd22c726df5bd01dc1fa61f957de66",
+    "02_coverage_and_economics.png": "dc06eeb325e4f7bc750617d551da00e99574d03fab1ee5e20812c281295b0af0",
+    "03_all_class_calibration.png": "9bb30f6353a8c92ea4997949afe392528714695ccb503785593535737dad8b37",
+    "scene_01_empty.png": "389a4bf937d712878d4d3a10d9bfc9e7303f771f60c2fd012bc125323d2dc5a2",
+    "scene_02_take.png": "bb2ad37186b2eb9c4dcf389343d164f95aad12633fd173da3bbb3dcfce724e8f",
+    "scene_03_stop.png": "c9b73488793c60e6a041c612a5220ece155b1f7f5990cd677fca10a9dce6853e",
+    "scene_04_time.png": "ac7001421185ff86b920e7b6dacbab54b933b6af7d647973245500f8eba22bd3",
+    "scene_05_empty.png": "95264597e063e4f432043b8e523dbc2d28f0b2094795fbb232ce9c98766bc13f",
+    "scene_06_censored.png": "080e7745d953668835e208f8c56954e267d99b0d4a0542d8b3e653cbfdb0f51e",
+    "scene_07_stop.png": "0cc918b3c71b55e21b65643705cfc351ff98e5c8fc4b6a76fa782ba243681344"
+  },
+  "summary_sha256": "b177ca0963f579bc86b2c9095e70202794b9c0ef5e115639f67167830fb4bfed",
+  "scene_selection_sha256": "c11aedbdaa5349945a3b7b48319a9ae2d5063c4a3d1a8b9440f11997c90d4f29"
+}

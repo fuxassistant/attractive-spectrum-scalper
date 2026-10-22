@@ -1,0 +1,15 @@
+{
+  "historical_commit": "9e96c75",
+  "historical_sha256": "872cc6e996845dcb74af25f9eda9c26844f1dfac094c5f60c3f3d13ad6dd71ba",
+  "current_sha256": "55b32dfb5eb6497f498808024a8f743af432abf96f3937f497159a2329adae34",
+  "ast_equal_functions": [
+    "build",
+    "source_columns",
+    "verify_source_code",
+    "sha",
+    "fit_model",
+    "predictions"
+  ],
+  "data_receipts_mutated": false,
+  "reason": "calendar report correction; no changed X, Y, fitted model or prediction"
+}

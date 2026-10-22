@@ -1,0 +1,37 @@
+{
+  "status": "COMPLETE",
+  "days": 106,
+  "roots": 41658,
+  "rows": 166632,
+  "source_hashes_checked": 108,
+  "excluded": [
+    {
+      "date": "2025-12-25",
+      "excluded": "NO_SOURCE_DECISIONS",
+      "identity": {
+        "contracts\\opportunity_episodes_v1.json": "5887f6a51ae2dac3689265b205b7b2fd7ebc95a21418246f0cce7b21f75b7855",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\episodes.py": "29a6b5f867dc96ca521eb2814175494c28ed6f996d3139c2238550d4fbc15c4b",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\episodes_lab.py": "872cc6e996845dcb74af25f9eda9c26844f1dfac094c5f60c3f3d13ad6dd71ba"
+      },
+      "source_sha256": "49caab8daa2541ad3f387165ad83520727081ac0e9636d973f0a5790deac5986",
+      "rows": 0
+    },
+    {
+      "date": "2026-01-01",
+      "excluded": "NO_SOURCE_DECISIONS",
+      "identity": {
+        "contracts\\opportunity_episodes_v1.json": "5887f6a51ae2dac3689265b205b7b2fd7ebc95a21418246f0cce7b21f75b7855",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\episodes.py": "29a6b5f867dc96ca521eb2814175494c28ed6f996d3139c2238550d4fbc15c4b",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\episodes_lab.py": "872cc6e996845dcb74af25f9eda9c26844f1dfac094c5f60c3f3d13ad6dd71ba"
+      },
+      "source_sha256": "49caab8daa2541ad3f387165ad83520727081ac0e9636d973f0a5790deac5986",
+      "rows": 0
+    }
+  ],
+  "identity": {
+    "contracts\\opportunity_episodes_v1.json": "5887f6a51ae2dac3689265b205b7b2fd7ebc95a21418246f0cce7b21f75b7855",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\episodes.py": "29a6b5f867dc96ca521eb2814175494c28ed6f996d3139c2238550d4fbc15c4b",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\episodes_lab.py": "872cc6e996845dcb74af25f9eda9c26844f1dfac094c5f60c3f3d13ad6dd71ba"
+  },
+  "source_manifest_sha256": "e666b062a2489db2ac2b9715d657c1d1fe9cd6b2298da6b74b83ceed921656c0"
+}
