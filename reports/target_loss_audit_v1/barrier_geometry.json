@@ -1,0 +1,103 @@
+{
+  "status": "DESCRIPTIVE_POSTHOC",
+  "monthly": [
+    {
+      "month": "2025-10",
+      "n_roots": 37741,
+      "sigma_ticks_per_sqrt_s_quantiles": [
+        1.0935416221618652,
+        2.0099751949310303,
+        4.028957843780518
+      ],
+      "stop_over_sigma_sqrt300_quantiles": [
+        0.17196017503738403,
+        0.3446909785270691,
+        0.6335564255714417
+      ],
+      "spread_over_stop_quantiles": [
+        0.1666666716337204,
+        0.25,
+        0.3333333432674408
+      ]
+    },
+    {
+      "month": "2025-11",
+      "n_roots": 32083,
+      "sigma_ticks_per_sqrt_s_quantiles": [
+        1.0281455516815186,
+        1.7356555461883545,
+        2.9517367839813233
+      ],
+      "stop_over_sigma_sqrt300_quantiles": [
+        0.23471615910530091,
+        0.3991692364215851,
+        0.6738542914390564
+      ],
+      "spread_over_stop_quantiles": [
+        0.1666666716337204,
+        0.25,
+        0.3333333432674408
+      ]
+    },
+    {
+      "month": "2025-12",
+      "n_roots": 36313,
+      "sigma_ticks_per_sqrt_s_quantiles": [
+        0.9016651034355164,
+        1.5352795124053955,
+        2.9086505889892575
+      ],
+      "stop_over_sigma_sqrt300_quantiles": [
+        0.23819301426410674,
+        0.4512665569782257,
+        0.7683787584304809
+      ],
+      "spread_over_stop_quantiles": [
+        0.1666666716337204,
+        0.25,
+        0.3333333432674408
+      ]
+    },
+    {
+      "month": "2026-01",
+      "n_roots": 34717,
+      "sigma_ticks_per_sqrt_s_quantiles": [
+        1.1575117111206055,
+        2.048881769180298,
+        5.64699039459229
+      ],
+      "stop_over_sigma_sqrt300_quantiles": [
+        0.12268842160701754,
+        0.33814558386802673,
+        0.5985427975654604
+      ],
+      "spread_over_stop_quantiles": [
+        0.1666666716337204,
+        0.25,
+        0.4166666567325592
+      ]
+    },
+    {
+      "month": "2026-02",
+      "n_roots": 32870,
+      "sigma_ticks_per_sqrt_s_quantiles": [
+        1.5280705690383911,
+        2.796686887741089,
+        7.008072137832644
+      ],
+      "stop_over_sigma_sqrt300_quantiles": [
+        0.0988603249192238,
+        0.24772893637418747,
+        0.45339545607566833
+      ],
+      "spread_over_stop_quantiles": [
+        0.3333333432674408,
+        0.5833333134651184,
+        0.9166666865348816
+      ]
+    }
+  ],
+  "formula": "stop_ticks / (sigma600_ticks_per_sqrt_s * sqrt(300)); diffusive reference, not a future volatility forecast",
+  "selection": "all original v2 roots, one side to avoid duplication; added after initial temporal plots, no model change",
+  "source_units_code_sha256": "a9d11d1752748afa020bb8088c37147ec3eacd46740d6d9175feb2621e3279a5"
+}

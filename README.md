@@ -2,6 +2,10 @@
 
 Исследовательский проект для причинной реконструкции рынка GC, лаборатории фич и обучения торговой политики. Экономическое преимущество модели пока не установлено.
 
+## Аудит target, loss и градиента — 22 октября 2026
+
+[Результат](reports/target_loss_audit_v1/REPORT_RU.md), [14 схем и временных сцен](reports/target_loss_audit_v1/index.html), [Sol 6.1](reports/target_loss_audit_v1/SOL61_TARGET_LOSS_AUDIT_RU.md). Без переобучения проверены реальные градиенты HGB, распределения примеров, первые 32 листовых обновления и чувствительность меток к сдвигу старта. Формулы корректны; target является разрывным first-hit исходом отдельной заявки, а не плавной волной. На B соседние filled origins через 30 секунд меняют класс в 23.4% случаев; прогноз TAKE меняется в среднем на 1.07 п.п. Модель лучше постоянного prior, но богатые входы не превосходят baseline по conditional loss. Плавность прогнозов не доказывает распознавание возможности. Исходный v2 и его WAIT-допуск сохранены.
+
 ## Поток без эпизода и память дня — второй опыт 22 октября 2026
 
 Ветка `codex/flow-response-context-v2` продолжает `codex/opportunity-episodes-v1`. [Результаты](reports/flow_context_v2/RESULTS_RU.md), [14 графиков и сцен](reports/flow_context_v2/index.html), [аудит реальных входов модели](reports/flow_context_v2/FEATURE_CONTEXT_AUDIT_RU.md), [визуальный аудит Sol 6.1](reports/flow_context_v2/SOL61_VISUAL_AUDIT_RU.md), [воспроизводимость](reports/flow_context_v2/REPRODUCE_RU.md).

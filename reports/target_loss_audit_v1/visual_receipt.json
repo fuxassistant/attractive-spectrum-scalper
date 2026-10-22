@@ -1,0 +1,20 @@
+{
+  "images": {
+    "01_learning_scheme.png": "ea54127fa8e25eb27f21a433df5e5a6c37a7d84b86c5093a6bd398c438be9e34",
+    "02_examples_and_gradients.png": "65a1482eeb82ece01c5a211d43a8d8dc6a8928644f4142fae386d135d9c3a026",
+    "03_temporal_roughness.png": "b545139655e25819a4c0bc4b107c91a1d05d6241b8e1a8e17c7ba8b9dcf5054d",
+    "04_training_gradient_and_leaves.png": "c5ac9201ac6cfcacf918b4de2986ded938dfc879c91d2bd5b5d981b0fec9643c",
+    "05_prior_and_model_guesses.png": "4d683ccd420f67a9cba0a8a749fab4ba37c7aaeb403f323b133b8f0c5b878e9f",
+    "06_barrier_geometry.png": "6a7150c47271b00d3665af91c484b2b32840d55c00d7c6c4032615098e32d3f7",
+    "scene_2025-10-01_session.png": "aafcbe07e93cf1c39c47da9ef89dd3052cb18f8a4379940acad88bc8e762fe54",
+    "scene_2025-10-01_zoom.png": "b66a1038ebac421297ecd74af8e0633621b018296366b13ac3a96dbae8531565",
+    "scene_2025-11-03_session.png": "457a594de93ae1b6148965ae044cac811db68d07ee1091736af7ae59ccc0c6c3",
+    "scene_2025-12-01_session.png": "c99183931f41e62411cd4c79dc8789372d4366e3f280ab53f97860d56a4e5f18",
+    "scene_2026-01-02_session.png": "2c18dae8aa7183d082f389e2aa58cd1f01cc11428f90278b94fbe00bac4d55bb",
+    "scene_2026-01-02_zoom.png": "2e46547a18abeb2667b235a963ac9cd8866bfd5095720248f67fe6d834111956",
+    "scene_2026-02-02_session.png": "cd467568fcd30eec2eccf9ba64801eda26ef70ad9ef5fa277d214570c84af380",
+    "scene_2026-02-02_zoom.png": "59f9fb56f94734dccf7ee7bcefe567a6725bff2f42087b8b425b7c35ba998fad"
+  },
+  "measurements_sha256": "768ec6143b271b822782379f2b9448f2143b712e754aefc4186349addf8462ba",
+  "script_sha256": "9ca237a5cf52d9884c3783554f9a559e1a2bee183c86bc4edc7ed897fb6de3a4"
+}

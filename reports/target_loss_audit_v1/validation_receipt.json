@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-10-22T04:56:39.544651+00:00",
+  "tests": {
+    "full_before_temporal_hardening": {
+      "passed": 320,
+      "seconds": 94.9,
+      "log_sha256": "79d380d6ae7df5587cbd31c322b031cc2ed2eba1cea2f72051dc5d20732376dc"
+    },
+    "focused_after_temporal_hardening": {
+      "passed": 22,
+      "seconds": 5.66,
+      "log_sha256": "f85a9bd3a2cc11f1f21eb456e7bdcf4ee8637edfc36df46c7f8fb627068c1a80"
+    }
+  },
+  "full_B_saved_prediction_parity": [
+    {
+      "mode": "P",
+      "family": "baseline",
+      "rows": 135174,
+      "max_probability_error": 0.0
+    },
+    {
+      "mode": "P",
+      "family": "rich_flow",
+      "rows": 135174,
+      "max_probability_error": 0.0
+    },
+    {
+      "mode": "P",
+      "family": "rich_spectrum",
+      "rows": 135174,
+      "max_probability_error": 0.0
+    },
+    {
+      "mode": "P",
+      "family": "shuffled",
+      "rows": 135174,
+      "max_probability_error": 0.0
+    },
+    {
+      "mode": "T",
+      "family": "baseline",
+      "rows": 135174,
+      "max_probability_error": 0.0
+    },
+    {
+      "mode": "T",
+      "family": "rich_flow",
+      "rows": 135174,
+      "max_probability_error": 0.0
+    },
+    {
+      "mode": "T",
+      "family": "rich_spectrum",
+      "rows": 135174,
+      "max_probability_error": 0.0
+    },
+    {
+      "mode": "T",
+      "family": "shuffled",
+      "rows": 135174,
+      "max_probability_error": 0.0
+    }
+  ],
+  "source_experiment_unchanged": true,
+  "derivative_gradient_max_error": 2.7755575615628914e-17,
+  "actual_first_tree_leaves": 32,
+  "leaf_update_max_error": 6.118576478808535e-09,
+  "checked_visuals": 14,
+  "artifacts_sha256": {
+    "REPORT_RU.md": "316ac5d6ee1ae9adc122239247c800d9ead94428bad81ecf8a1c29f6add6c925",
+    "SOL61_TARGET_LOSS_AUDIT_RU.md": "7c3568cac54e06cb36c570f3cf1f155b61c8a58234817040c2c774e93f1da2e1",
+    "index.html": "5d9f0832be9034a319613cc6c47adc3d9ba9afd92974c0691e88046d2e48fafa",
+    "measurements.json": "768ec6143b271b822782379f2b9448f2143b712e754aefc4186349addf8462ba",
+    "barrier_geometry.json": "159fceaefedfe0d9b8dd3d860be3b63960073b1dfd516eac5bc704d876a533c9",
+    "visual_receipt.json": "4cb85d75be36e30109755b8167fe96354b8aca594dd027ff72fd63f4bf6c67f4"
+  },
+  "script_sha256": "05aca122c802c35fa8f4904281ab106eebda6869b2d8c51baef5c89d19c251e4",
+  "tests_sha256": "449fd31a4a557f221189bbc4dd25da728c1da413652b136db500e2ca431bcc24",
+  "scope": "Technical diagnosis; no refit, no new economic admission; B gradients are diagnostic, not training updates"
+}
