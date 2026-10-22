@@ -210,8 +210,9 @@ def metrics(frame):
                 calibration=calibration)
 
 
-def policy_stats(frame, threshold=0.):
-    tr, censor = ep.sequential(frame, threshold=threshold); days = sorted(frame.date.unique())
+def policy_stats(frame, threshold=0., calendar_days=None):
+    tr, censor = ep.sequential(frame, threshold=threshold)
+    days = sorted(calendar_days if calendar_days is not None else frame.date.unique())
     # No censor means all calendar days, including WAIT days, are observed.
     known_days = [d for d in days if censor is None or d < censor["date"]]
     daily = tr.groupby("date").net.sum().reindex(known_days, fill_value=0.)
@@ -250,8 +251,9 @@ def synthetic_control(seed):
 
 def run():
     c = ep.contract(); ids = identity(); man = json.loads((DATA / "manifest.json").read_text())
-    if man["status"] != "COMPLETE" or man["identity"] != ids:
+    if man["status"] != "COMPLETE":
         raise ValueError("Dataset not complete for this code")
+    validate_dataset_identity(man["identity"])
     frames = []
     for r in man["days"]:
         p = DATA / (r["date"] + ".parquet")
@@ -266,6 +268,7 @@ def run():
     families = list(ep.FAMILIES)
     for stage, train_months, test_months in (("A2", c["train_months"], c["development_months"]),
                                             ("B", c["train_months"] + c["development_months"], c["evaluation_months"])):
+        stage_days = [r["date"] for r in man["days"] if r["date"][:7] in test_months]
         summary["stages"][stage] = {}
         for mode in ("P", "T"):
             train = all_rows.loc[all_rows.month.isin(train_months) & (all_rows["mode"] == mode)].reset_index(drop=True)
@@ -274,8 +277,9 @@ def run():
             for family in families:
                 started = time.perf_counter(); model, values, fit_info = fit_model(train, family, c["seed"])
                 f = predictions(model, test, family, values); predicted[family] = f
-                pol, trades = policy_stats(f)
+                pol, trades = policy_stats(f, calendar_days=stage_days)
                 res = dict(fit=fit_info, all=metrics(f), episodes=metrics(f.loc[f.episode_id > 0]), policy=pol,
+                           calendar_days=stage_days,
                            months={month: metrics(f.loc[f.month == month]) for month in test_months},
                            unknown_counts={str(k): int(v) for k, v in f.loc[f.category < 0, "status"].value_counts().items()})
                 key = mode + "/" + family
@@ -288,7 +292,7 @@ def run():
                 res["coverage"] = {}
                 for cov, threshold in thresholds[key].items():
                     roots = f.groupby("t_ns").expected_net.max()
-                    ps, _ = policy_stats(f, threshold=threshold)
+                    ps, _ = policy_stats(f, threshold=threshold, calendar_days=stage_days)
                     ps["actual_score_coverage"] = float((roots > threshold).mean()); res["coverage"][cov] = ps
                 summary["stages"][stage][mode][family] = res
                 f.to_parquet(DATA / f"predictions_{stage}_{mode}_{family}.parquet", index=False)
@@ -304,7 +308,7 @@ def run():
                 pa = a[["p_" + k for k in ep.CLASSES]].to_numpy()[ok]
                 pb = b[["p_" + k for k in ep.CLASSES]].to_numpy()[ok]
                 gain = np.log(np.clip(pb[np.arange(len(y)), y], 1e-9, 1)) - np.log(np.clip(pa[np.arange(len(y)), y], 1e-9, 1))
-                g = pd.DataFrame(dict(date=a.loc[ok, "date"].to_numpy(), gain=gain)).groupby("date").gain.sum()
+                g = pd.DataFrame(dict(date=a.loc[ok, "date"].to_numpy(), gain=gain)).groupby("date").gain.sum().reindex(stage_days, fill_value=0.)
                 summary["comparisons"][f"{stage}/{mode}/{family}"] = dict(mean_gain_per_attempt=float(gain.mean()),
                     daily_gain=float(g.mean()), daily_ci=ep.block_interval(g.to_numpy()), days=len(g),
                     daily={d: float(v) for d, v in g.items()})
@@ -318,6 +322,74 @@ def run():
         datasets_sha256=sha(DATA / "manifest.json"), prediction_files={p.name: sha(p) for p in DATA.glob("predictions_*.parquet")}))
 
 
+def validate_dataset_identity(old_ids):
+    """Reuse immutable features across the documented calendar-report correction.
+
+    Exact contract/features plus AST-equal build functions are required. The
+    historical module SHA must match Git, and no data receipt is rewritten.
+    """
+    ids = identity()
+    if old_ids == ids:
+        return
+    this = str(Path(__file__))
+    if any(ids[k] != v for k, v in old_ids.items() if k != this):
+        raise ValueError("Dataset feature/contract identity changed")
+    old = subprocess.check_output(["git", "show", "9e96c75:spectrum/cognition/episodes_lab.py"])
+    if hashlib.sha256(old).hexdigest() != old_ids[this]:
+        raise ValueError("Unknown historical dataset generator")
+    trees = [ast.parse(old), ast.parse(Path(__file__).read_text(encoding="utf-8"))]
+    names = ("build", "source_columns", "verify_source_code", "sha", "fit_model", "predictions")
+    for name in names:
+        nodes = [next(n for n in t.body if isinstance(n, ast.FunctionDef) and n.name == name) for t in trees]
+        if ast.dump(nodes[0], include_attributes=False) != ast.dump(nodes[1], include_attributes=False):
+            raise ValueError("Dataset/training function changed: " + name)
+    save(REPORT / "analysis_code_compatibility.json", dict(historical_commit="9e96c75", historical_sha256=old_ids[this],
+        current_sha256=ids[this], ast_equal_functions=names, data_receipts_mutated=False,
+        reason="calendar report correction; no changed X, Y, fitted model or prediction"))
+
+
+def rescore_calendar():
+    """Correct calendar denominators from saved predictions, without refitting."""
+    man = json.loads((DATA / "manifest.json").read_text()); validate_dataset_identity(man["identity"])
+    src = REPORT / "summary.json"; previous = REPORT / "summary_pre_calendar_fix.json"
+    if previous.exists():
+        raise ValueError("Calendar correction already recorded; inspect instead of overwrite")
+    previous.write_bytes(src.read_bytes()); s = json.loads(src.read_text(encoding="utf-8"))
+    before = sha(previous); c = ep.contract()
+    for stage, months in (("A2", c["development_months"]), ("B", c["evaluation_months"])):
+        days = [r["date"] for r in man["days"] if r["date"][:7] in months]
+        for mode in ("P", "T"):
+            pred = {}
+            for family in ep.FAMILIES:
+                f = pd.read_parquet(DATA / f"predictions_{stage}_{mode}_{family}.parquet"); pred[family] = f
+                r = s["stages"][stage][mode][family]; r["calendar_days"] = days
+                r["policy"], _ = policy_stats(f, calendar_days=days)
+                if stage == "A2":
+                    p = r["policy"]
+                    admitted = bool(p["censor"] is None and p["fills"] >= 30 and p["daily_ci"][0] > 0)
+                    if admitted != s["admissions"][mode + "/" + family]:
+                        raise AssertionError("Calendar correction changed admission; requires explicit review")
+                for cov, threshold in s["coverage"][mode + "/" + family].items():
+                    p, _ = policy_stats(f, threshold=threshold, calendar_days=days)
+                    roots = f.groupby("t_ns").expected_net.max()
+                    p["actual_score_coverage"] = float((roots > threshold).mean()); r["coverage"][cov] = p
+            for family in list(ep.FAMILIES)[1:]:
+                key = f"{stage}/{mode}/{family}"; r = s["comparisons"][key]
+                g = pd.Series(r["daily"], dtype=float).reindex(days, fill_value=0.)
+                r.update(daily_gain=float(g.mean()), daily_ci=ep.block_interval(g.to_numpy()), days=len(days),
+                         daily={d: float(v) for d, v in g.items()})
+    s["calendar_correction"] = dict(previous_summary_sha256=before, previous_summary=previous.name,
+        all_predictions_unchanged=True, thresholds_unchanged=True, admissions_unchanged=True,
+        note="Five B days with zero eligible roots included as known zero daily totals; no refit or reselection")
+    s["analysis_identity"] = identity(); save(src, s)
+    old = REPORT / "completion_receipt.json"; backup = REPORT / "completion_pre_calendar_fix.json"
+    backup.write_bytes(old.read_bytes()); receipt = json.loads(old.read_text())
+    receipt.update(summary_sha256=sha(src), analysis_identity=identity(), calendar_correction=s["calendar_correction"])
+    save(old, receipt)
+
+
 if __name__ == "__main__":
-    p = argparse.ArgumentParser(); p.add_argument("command", choices=("build", "run")); a = p.parse_args()
-    (build if a.command == "build" else run)()
+    p = argparse.ArgumentParser(); p.add_argument("command", choices=("build", "run", "rescore-calendar"))
+    p.add_argument("--data", type=Path, default=DATA); p.add_argument("--report", type=Path, default=REPORT); a = p.parse_args()
+    DATA, REPORT = a.data, a.report
+    {"build": build, "run": run, "rescore-calendar": rescore_calendar}[a.command]()

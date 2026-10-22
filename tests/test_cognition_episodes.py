@@ -75,3 +75,28 @@ def test_account_cannot_overlap_or_skip_unknown_to_get_future_profit():
 def test_bootstrap_keeps_zero_days_and_observed_negative_sign():
     lo, hi = e.block_interval(np.r_[np.zeros(10), np.full(10, -2.)])
     assert -2 <= lo <= hi <= 0
+
+
+def test_policy_calendar_includes_source_days_without_eligible_roots():
+    from spectrum.cognition.episodes_lab import policy_stats
+    frame = pd.DataFrame(dict(date=["2026-01-02"] * 2, t_ns=[0, 0], side=[1, -1],
+        expected_net=[1., -1.], status=[1, 1], category=[0, 1], net=[2., -1.], busy_s=[1., 1.]))
+    days = ["2026-01-02", "2026-01-05", "2026-01-06"]
+    result, _ = policy_stats(frame, calendar_days=days)
+    assert result["daily"] == {days[0]: 2., days[1]: 0., days[2]: 0.}
+    assert result["net_per_day"] == pytest.approx(2 / 3)
+    assert result["paired_random_side"]["difference"] == pytest.approx(1.5)
+
+
+def test_censored_policy_and_paired_control_never_claim_full_calendar_ci():
+    from spectrum.cognition.episodes_lab import policy_stats
+    frame = pd.DataFrame(dict(date=["2026-01-02"] * 2 + ["2026-01-05"] * 2,
+        t_ns=[0, 0, 100 * e.NS, 100 * e.NS], side=[1, -1, 1, -1],
+        expected_net=[1., -1., 1., -1.], status=[1, 1, 2, 1], category=[0, 1, -1, 0],
+        net=[2., -1., np.nan, 2.], busy_s=[1., 1., np.nan, 1.]))
+    result, _ = policy_stats(frame, calendar_days=["2026-01-02", "2026-01-05", "2026-01-06"])
+    assert result["net"] is None and result["daily_ci"] == [None, None]
+    assert result["daily"] == {"2026-01-02": 2.}
+    assert result["observed_prefix_net"] == 2.
+    assert result["paired_random_side"]["daily_ci"] == [None, None]
+    assert result["paired_random_side"]["observed_prefix_only"] is True

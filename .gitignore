@@ -121,3 +121,4 @@ credentials.json
 !/reports/opportunity_episodes_v1/*.json
 !/reports/opportunity_episodes_v1/*.png
 !/reports/opportunity_episodes_v1/index.html
+/reports/opportunity_episodes_v1/summary.running.json

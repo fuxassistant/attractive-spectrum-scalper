@@ -133,7 +133,7 @@ def main():
     save(REPORT / "scene_selection.json", dict(scenes=scenes, **scene_info,
         semantics="calendar and first class-conditioned diagnostic candidates; not a representative random sample or selected policy trades"))
     save(REPORT / "execution_audit.json", dict(status="PASS", checks=checks, compared=sum(r["compared"] for r in checks),
-        quote_hashes=source_hashes, entry_semantics="fresh MBO replay, queue kernel V5 proof; T independently checked", 
+        quote_hashes=source_hashes, entry_semantics="fresh MBO replay, queue kernel V5 proof; T independently checked",
         exit_semantics="independent Python quote loop; status, category, net and exit time compared",
         facts_sha256=sha(DATA / "audit_execution_facts.json"), missing_scene_categories=scene_info["missing_categories"]))
 
