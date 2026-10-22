@@ -1,6 +1,9 @@
 # Local inputs, labels, generated datasets and checkpoints.
 /data/
 /.tmp/
+/.claude/
+/tmp/pytest*/
+/tmp/pdfs/
 /.venv/
 /exports/
 /research_results/
