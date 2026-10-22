@@ -1,0 +1,208 @@
+{
+  "schema": "scientific_opportunity_pipeline_v3",
+  "run_id": "tcn_micro_legacy_uniform_seed17",
+  "seed": 17,
+  "data": {
+    "root": "data/derived/scientific_pipeline_v3/dataset",
+    "market_root": "data/derived/basket_multimonth_v1",
+    "source_root": "data/derived/full_mbo_v1",
+    "admission_overlay": "reports/full_mbo_v1/audit_20261016/training_admission_overlay.json",
+    "source_inventory": "reports/scientific_pipeline_v3/source_inventory.json",
+    "source_inventory_sha256": "f0038783b62cec650bb6ba023da9d7eced2dff88fae563118b2866ab494ee6ee",
+    "dates": [
+      "2026-06-01",
+      "2026-06-02",
+      "2026-06-03",
+      "2026-06-04",
+      "2026-06-05",
+      "2026-06-08",
+      "2026-06-09",
+      "2026-06-10",
+      "2026-06-11",
+      "2026-06-12",
+      "2026-06-15",
+      "2026-06-16",
+      "2026-06-17",
+      "2026-06-18",
+      "2026-06-23",
+      "2026-06-24",
+      "2026-06-25",
+      "2026-06-26",
+      "2026-06-29",
+      "2026-06-30",
+      "2026-07-01",
+      "2026-07-02",
+      "2026-07-07",
+      "2026-07-08",
+      "2026-07-09",
+      "2026-07-10",
+      "2026-07-13",
+      "2026-07-14",
+      "2026-07-15",
+      "2026-07-16",
+      "2026-07-17",
+      "2026-07-20",
+      "2026-07-21",
+      "2026-07-22",
+      "2026-07-23",
+      "2026-07-24"
+    ],
+    "family": "micro",
+    "sequence_length": 64,
+    "cadence_seconds": 5,
+    "max_feature_age_seconds": 2.0,
+    "context_mode": "legacy"
+  },
+  "splits": {
+    "train": [
+      "2026-06-01",
+      "2026-06-02",
+      "2026-06-03",
+      "2026-06-04",
+      "2026-06-05",
+      "2026-06-08",
+      "2026-06-09",
+      "2026-06-10",
+      "2026-06-11",
+      "2026-06-12",
+      "2026-06-15",
+      "2026-06-16",
+      "2026-06-17",
+      "2026-06-18",
+      "2026-06-23",
+      "2026-06-24"
+    ],
+    "validation": [
+      "2026-06-25",
+      "2026-06-26",
+      "2026-06-29",
+      "2026-06-30",
+      "2026-07-01"
+    ],
+    "calibration": [
+      "2026-07-02",
+      "2026-07-07",
+      "2026-07-08",
+      "2026-07-09",
+      "2026-07-10"
+    ],
+    "test": [
+      "2026-07-13",
+      "2026-07-14",
+      "2026-07-15",
+      "2026-07-16",
+      "2026-07-17",
+      "2026-07-20",
+      "2026-07-21",
+      "2026-07-22",
+      "2026-07-23",
+      "2026-07-24"
+    ]
+  },
+  "event_query": {
+    "family": "BB",
+    "scales": [
+      1,
+      3,
+      6
+    ],
+    "deadline_seconds": 300.0,
+    "gain_multiple": 2.0,
+    "reference_fee": 0.3,
+    "risk_cost_multiple": 2.0,
+    "risk_half_multiple": 0.1,
+    "minimum_risk": 0.5
+  },
+  "execution": {
+    "fee_roundtrip": 0.3,
+    "latency_ms": 100.0,
+    "pending_timeout_seconds": 2.0,
+    "max_quote_gap_seconds": 60.0,
+    "exit_mode": "first_qualifying_crossing"
+  },
+  "risk": {
+    "cost_multipliers": [
+      2.0,
+      4.0,
+      6.0
+    ],
+    "half_multiple": 0.1,
+    "minimum_risk": 0.5,
+    "gain_reference": "fixed_event_G_for_all_plans"
+  },
+  "model": {
+    "architecture": "tcn",
+    "hidden": 32,
+    "layers": 4,
+    "kernel_size": 3,
+    "dropout": 0.05
+  },
+  "loss": {
+    "formulation": "factorized",
+    "event_loss": "bce",
+    "gamma": 0.0
+  },
+  "training": {
+    "device": "auto",
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "max_updates": 1500,
+    "validate_every": 150,
+    "patience_checks": 5,
+    "min_delta": 0.0001,
+    "cpu_threads": 4,
+    "weighting": "uniform",
+    "train_metric_probe": 2048,
+    "gradient_probe": 256
+  },
+  "policy": {
+    "threshold_candidates": [
+      0.35,
+      0.5,
+      0.65,
+      0.8,
+      1.01
+    ],
+    "minimum_calibration_trades": 50,
+    "selection": "calibration_after_cost_net_else_wait",
+    "one_position": true
+  },
+  "experiment": {
+    "contexts": [
+      "legacy",
+      "restored"
+    ],
+    "weightings": [
+      "uniform",
+      "crossing_id"
+    ],
+    "seeds": [
+      17,
+      29
+    ],
+    "selection": "No arm or seed winner selection. Fixed v2 TCN Micro. Each checkpoint minimizes unweighted validation joint NLL; risk/threshold selected on calibration only; all eight arms reported on test.",
+    "primary_target": "Unchanged v2 fixed crossing E/D; factorized BCE plus conditional direction CE, common known-root denominator. Risk grid never changes target.",
+    "context_contract": "Regular 5s roots retained. Restored resets on date, clock gap or physical quote support transition only. Missing historical X has zero values and finite masks, clock_row_present=1 inside supported history; padding/support absent flag=0. No forward fill or time compression. No extra X channels.",
+    "weighting_contract": "TRAIN mature available roots only; count long/short witness ID memberships including BOTH. Inverse ID multiplicity, mean of two inverse counts for BOTH; normalize within each positive joint class to preserve four class masses. NONE=1. Uniform permutations. mean(weight * [BCE+conditional CE]) over root count. Unweighted validation/test probability metrics.",
+    "feature_clock": "64 five-second roots; TCN RF61 = 300 seconds detailed history. Same 70 feature values and 141 model input channels in all arms.",
+    "day_context": "Primary Micro omits day/VWAP/STFT channels. Rich 225 family retained as data artifact only, not fit in this experiment.",
+    "historical_exposure": "New dates relative to scientific-v2. Existing cognition recipe historically assigns June to train and July to validation; never-inspected holdout is not claimed.",
+    "fixed_visual_cases": [
+      {
+        "date": "2026-07-13",
+        "offset_hours": 0,
+        "duration_hours": 2
+      },
+      {
+        "date": "2026-07-20",
+        "offset_hours": 5,
+        "duration_hours": 2
+      }
+    ],
+    "primary_seed": 17,
+    "replication_seed": 29,
+    "paired_diagnostics": "Same initial state, uniform batch order, scaler, cohort and probes per seed; report context/weight effects, interaction and day-paired descriptive intervals. Event-balanced diagnostics do not imply profitability."
+  }
+}
