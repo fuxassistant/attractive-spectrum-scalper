@@ -233,7 +233,8 @@ def economic_panels(economic, bundles):
                 censored = [r['plan'] for r in rows if not r['completed']]
                 if censored:
                     ax.text(.02, .96-.06*ARMS.index(arm), f"{label}: {', '.join(censored)} CENSORED; full-period net unavailable",
-                            transform=ax.transAxes, color=color, fontsize=8, va='top')
+                            transform=ax.transAxes, color=color, fontsize=8, va='top', zorder=5,
+                            bbox=dict(facecolor='white', edgecolor='none', alpha=.97, pad=2))
             ax.axhline(0, color='black', lw=.6)
             ax.margins(y=.15)
             ax.set(xticks=range(3), xticklabels=['cost2', 'cost4', 'cost6'],
