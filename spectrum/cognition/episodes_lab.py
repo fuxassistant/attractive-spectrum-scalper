@@ -4,6 +4,8 @@ Run build, then run. Heavy arrays remain local; compact receipts enter Git.
 """
 from pathlib import Path
 import argparse
+import ast
+import copy
 import hashlib
 import json
 import pickle
@@ -54,6 +56,36 @@ def source_columns(path):
         f"{mode}_{side}_f24_12_{field}" for mode in ("P", "T") for side in ("L", "S") for field in ("st", "net", "busy_s")]
 
 
+def verify_source_code(code):
+    """Accept the historical extraction of entry_points only with AST equality.
+
+    The cached data predates this refactor. Never replace its source receipt with
+    the current hash or treat an arbitrary changed execution as compatible.
+    """
+    checks = {}
+    for filename, expected in code.items():
+        path = Path(ep.__file__).with_name(filename); current = sha(path)
+        if current == expected:
+            checks[filename] = dict(source=expected, current=current, exact=True); continue
+        if filename != "scalper.py":
+            raise ValueError("Source execution code identity drift: " + filename)
+        old = subprocess.check_output(["git", "show", "a68c7aa:spectrum/cognition/scalper.py"])
+        if hashlib.sha256(old).hexdigest() != expected:
+            raise ValueError("Historical source hash does not match receipt")
+        old_ast = ast.parse(old); current_ast = ast.parse(path.read_text(encoding="utf-8"))
+        entry = next(n for n in current_ast.body if isinstance(n, ast.FunctionDef) and n.name == "entry_points")
+        labels = next(n for n in current_ast.body if isinstance(n, ast.FunctionDef) and n.name == "labels")
+        call = next(i for i, n in enumerate(labels.body) if isinstance(n, ast.Assign) and isinstance(n.value, ast.Call)
+                    and isinstance(n.value.func, ast.Name) and n.value.func.id == "entry_points")
+        labels.body[call:call + 1] = copy.deepcopy(entry.body[3:-1])
+        current_ast.body.remove(entry)
+        if ast.dump(old_ast, include_attributes=False) != ast.dump(current_ast, include_attributes=False):
+            raise ValueError("Execution refactor not semantically identical after inlining")
+        checks[filename] = dict(source=expected, current=current, exact=False, historical_commit="a68c7aa",
+                                proof="entire module AST identical after inlining extracted entry_points")
+    save(REPORT / "source_code_compatibility.json", checks)
+
+
 def build():
     c = ep.contract(); DATA.mkdir(parents=True, exist_ok=True); REPORT.mkdir(parents=True, exist_ok=True)
     ids = identity(); source = Path(c["source"])
@@ -61,9 +93,7 @@ def build():
     if manifest["status"] != "COMPLETE":
         raise ValueError("Source not COMPLETE")
     code = json.loads((source / "protocol.json").read_text())["code"]
-    for filename, expected in code.items():
-        if sha(Path(ep.__file__).with_name(filename)) != expected:
-            raise ValueError("Source execution code identity drift: " + filename)
+    verify_source_code(code)
     months = c["train_months"] + c["development_months"] + c["evaluation_months"]
     dates = [d for d in manifest["days"] if d[:7] in months]
     receipts = []; excluded = []
