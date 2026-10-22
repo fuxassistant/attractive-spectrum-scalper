@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "source_member_sha256": "a1800bc6c7fbfe4136922983c36c83f10108b52801fa9c482c1a8fe339f0a506",
+  "records": 144070482,
+  "route": [
+    1,
+    42000890,
+    22
+  ],
+  "symbol": "GCJ6",
+  "captures": [
+    {
+      "date": "2026-02-01",
+      "file": "data\\derived\\vwap_bands_week_v1\\2026-02-01_trades.parquet",
+      "sha256": "25dc27f5fba91afa725c2604018995f4678fd1d549c86963564efc12c6ac6094",
+      "rows": 15591,
+      "quantity": 21063,
+      "partition_sha256": "038c6c8ca0a36421c27a948c140e077434bd92126e4a7d0863b19e813998f1f1",
+      "quote_sha256": "dcc4ae5013c6719387fcbe3505f6711d52c91f155204c47389a8f9f96f14e203",
+      "canonical_volume_checks": 36990,
+      "max_volume_error": 0.0
+    },
+    {
+      "date": "2026-02-02",
+      "file": "data\\derived\\vwap_bands_week_v1\\2026-02-02_trades.parquet",
+      "sha256": "a51fc3285185aa070ceda77a5b27146be5721eb3625d29ab849fa225f0b0441a",
+      "rows": 266951,
+      "quantity": 345311,
+      "partition_sha256": "a83a2b4a5982e9e3f7d5bbd64a71a6485ebed6ffe2c5a6688b8946bbd18217fa",
+      "quote_sha256": "b64bcb6115f628e0bb46e50eb944f0df86e3a66365cd760a4739f759b63810e8",
+      "canonical_volume_checks": 86367,
+      "max_volume_error": 0.0
+    },
+    {
+      "date": "2026-02-03",
+      "file": "data\\derived\\vwap_bands_week_v1\\2026-02-03_trades.parquet",
+      "sha256": "b3006171136acc972ba964ac677f33014d5c53ceb09eae123bc9c40017c1d0a7",
+      "rows": 184304,
+      "quantity": 242449,
+      "partition_sha256": "c7a20732786c1646699c166fd6f37a4c84968799bca0f5c4560df39a6475f28a",
+      "quote_sha256": "0579e2c012b36e141d322ae959acbf1e1e3f1d5ad41151a9381d38c6e62556c6",
+      "canonical_volume_checks": 86387,
+      "max_volume_error": 0.0
+    },
+    {
+      "date": "2026-02-04",
+      "file": "data\\derived\\vwap_bands_week_v1\\2026-02-04_trades.parquet",
+      "sha256": "e61e08eee6e0e751350c7cb49478f6f7511b6f7175dcadf96b2fca344ce1dfe6",
+      "rows": 169528,
+      "quantity": 228259,
+      "partition_sha256": "49f3308502081c29ead83055182ba8f8f865759f1228c47d7d6d7f4c1e0f27ea",
+      "quote_sha256": "261d953d90d40b9e1b1e4f673f6cffafe46babeda2e27a2d0e74d45f93c3162a",
+      "canonical_volume_checks": 86379,
+      "max_volume_error": 0.0
+    },
+    {
+      "date": "2026-02-05",
+      "file": "data\\derived\\vwap_bands_week_v1\\2026-02-05_trades.parquet",
+      "sha256": "df82f95171a20ce3447a6ff5f803f190789b4054cad3ca8e5831a8767f1d9b67",
+      "rows": 171809,
+      "quantity": 225623,
+      "partition_sha256": "f4f2672bd286ce5d18393e211535b6b9b083c5875e548f45a1697152105b0789",
+      "quote_sha256": "5bbb30d29a6f2d4ef7e2bb0352590013cebefb535fd9d208e4eb7290746597a8",
+      "canonical_volume_checks": 86380,
+      "max_volume_error": 0.0
+    },
+    {
+      "date": "2026-02-06",
+      "file": "data\\derived\\vwap_bands_week_v1\\2026-02-06_trades.parquet",
+      "sha256": "edc1a1c2176f4098f955aa078196d2749e48036db02815c8d8496f715d943095",
+      "rows": 114678,
+      "quantity": 151762,
+      "partition_sha256": "d4a2c85ff62333252977ec9083618f3b760306af6bd93d8ee70fe4acf99e6958",
+      "quote_sha256": "893dca91e90c9df6dde8d7d77caf9b249f83c5e38d22213734b503588e17d6fb",
+      "canonical_volume_checks": 79197,
+      "max_volume_error": 0.0
+    }
+  ],
+  "script_sha256": "e30efd90e86b55ee3999bd041baec3d37045ec0aaa3428cc9f756485961a12bb",
+  "scope": "T only, no F/C duplication; publication clock from canonical last source ordinal; full raw member and six partitions rehashed"
+}

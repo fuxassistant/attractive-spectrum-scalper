@@ -1,0 +1,389 @@
+{
+  "status": "PASS",
+  "by_scale": {
+    "1": {
+      "common_origins": 8142,
+      "first_line_agreement": 0.8687054777695897,
+      "both_have_crossing": 8142,
+      "first_time_exact_on_1s_grid": 0.21861950380741832,
+      "first_delay_abs_median_s": 11.0,
+      "sample_counts": {
+        "bb": {
+          "line_crossings": 5382,
+          "packets": 5382,
+          "supported_seconds": 245821
+        },
+        "vwap": {
+          "line_crossings": 5680,
+          "packets": 5679,
+          "supported_seconds": 245821
+        }
+      },
+      "decomposition_median_abs_usd": {
+        "volume_weighting_of_closes": 0.8871354933726252,
+        "within_bar_sampling": 0.4656012176774311,
+        "trade_vs_publication_mid": 0.020097663702472346
+      },
+      "slopes": {
+        "60": {
+          "pairs": 245221,
+          "both_active": 204341,
+          "opposite_fraction": 0.046994974087432285,
+          "correlation": 0.8596941061410942,
+          "down_flat_up_confusion": [
+            [
+              94749,
+              8723,
+              4795
+            ],
+            [
+              7300,
+              8384,
+              7279
+            ],
+            [
+              4808,
+              9194,
+              99989
+            ]
+          ]
+        },
+        "300": {
+          "pairs": 242821,
+          "both_active": 233469,
+          "opposite_fraction": 0.047629449734225955,
+          "correlation": 0.9442596299057566,
+          "down_flat_up_confusion": [
+            [
+              109090,
+              2265,
+              6190
+            ],
+            [
+              1863,
+              835,
+              2094
+            ],
+            [
+              4930,
+              2295,
+              113259
+            ]
+          ]
+        },
+        "900": {
+          "pairs": 237392,
+          "both_active": 233844,
+          "opposite_fraction": 0.037636201912386036,
+          "correlation": 0.9785608355756036,
+          "down_flat_up_confusion": [
+            [
+              110740,
+              746,
+              5030
+            ],
+            [
+              793,
+              31,
+              1000
+            ],
+            [
+              3771,
+              978,
+              114303
+            ]
+          ]
+        }
+      }
+    },
+    "3": {
+      "common_origins": 7720,
+      "first_line_agreement": 0.8851036269430052,
+      "both_have_crossing": 7475,
+      "first_time_exact_on_1s_grid": 0.185685618729097,
+      "first_delay_abs_median_s": 23.0,
+      "sample_counts": {
+        "bb": {
+          "line_crossings": 3289,
+          "packets": 3289,
+          "supported_seconds": 235892
+        },
+        "vwap": {
+          "line_crossings": 3596,
+          "packets": 3596,
+          "supported_seconds": 235892
+        }
+      },
+      "decomposition_median_abs_usd": {
+        "volume_weighting_of_closes": 1.157222242615262,
+        "within_bar_sampling": 0.5943702920499163,
+        "trade_vs_publication_mid": 0.01458901349133157
+      },
+      "slopes": {
+        "60": {
+          "pairs": 235352,
+          "both_active": 122486,
+          "opposite_fraction": 0.24251751220547654,
+          "correlation": 0.7462030835255046,
+          "down_flat_up_confusion": [
+            [
+              43904,
+              20832,
+              15445
+            ],
+            [
+              14111,
+              38115,
+              18595
+            ],
+            [
+              14260,
+              21213,
+              48877
+            ]
+          ]
+        },
+        "300": {
+          "pairs": 233192,
+          "both_active": 214348,
+          "opposite_fraction": 0.07050683934536361,
+          "correlation": 0.8974235850621507,
+          "down_flat_up_confusion": [
+            [
+              93718,
+              4287,
+              7396
+            ],
+            [
+              4238,
+              1399,
+              4470
+            ],
+            [
+              7717,
+              4450,
+              105517
+            ]
+          ]
+        },
+        "900": {
+          "pairs": 227792,
+          "both_active": 222663,
+          "opposite_fraction": 0.043276161733202194,
+          "correlation": 0.9512027476578058,
+          "down_flat_up_confusion": [
+            [
+              101807,
+              1010,
+              4050
+            ],
+            [
+              1368,
+              156,
+              1216
+            ],
+            [
+              5586,
+              1379,
+              111220
+            ]
+          ]
+        }
+      }
+    },
+    "6": {
+      "common_origins": 7185,
+      "first_line_agreement": 0.8640222686151705,
+      "both_have_crossing": 6178,
+      "first_time_exact_on_1s_grid": 0.15976044027193267,
+      "first_delay_abs_median_s": 35.0,
+      "sample_counts": {
+        "bb": {
+          "line_crossings": 2271,
+          "packets": 2271,
+          "supported_seconds": 221522
+        },
+        "vwap": {
+          "line_crossings": 2355,
+          "packets": 2355,
+          "supported_seconds": 221522
+        }
+      },
+      "decomposition_median_abs_usd": {
+        "volume_weighting_of_closes": 1.2771491872581464,
+        "within_bar_sampling": 0.8517451569769037,
+        "trade_vs_publication_mid": 0.011711780965924845
+      },
+      "slopes": {
+        "60": {
+          "pairs": 221042,
+          "both_active": 88256,
+          "opposite_fraction": 0.31809735315445975,
+          "correlation": 0.7680983093636146,
+          "down_flat_up_confusion": [
+            [
+              27304,
+              25654,
+              15142
+            ],
+            [
+              10796,
+              54189,
+              15071
+            ],
+            [
+              12932,
+              27076,
+              32878
+            ]
+          ]
+        },
+        "300": {
+          "pairs": 219122,
+          "both_active": 190398,
+          "opposite_fraction": 0.12484900051471129,
+          "correlation": 0.8636552545049153,
+          "down_flat_up_confusion": [
+            [
+              72283,
+              5047,
+              12220
+            ],
+            [
+              5931,
+              3687,
+              6995
+            ],
+            [
+              11551,
+              7064,
+              94344
+            ]
+          ]
+        },
+        "900": {
+          "pairs": 214322,
+          "both_active": 205611,
+          "opposite_fraction": 0.06524456376361187,
+          "correlation": 0.9317470009483532,
+          "down_flat_up_confusion": [
+            [
+              81833,
+              1433,
+              5601
+            ],
+            [
+              2407,
+              581,
+              1669
+            ],
+            [
+              7814,
+              2621,
+              110363
+            ]
+          ]
+        }
+      }
+    },
+    "9": {
+      "common_origins": 6541,
+      "first_line_agreement": 0.8764714875401315,
+      "both_have_crossing": 5170,
+      "first_time_exact_on_1s_grid": 0.16499032882011605,
+      "first_delay_abs_median_s": 19.0,
+      "sample_counts": {
+        "bb": {
+          "line_crossings": 1663,
+          "packets": 1663,
+          "supported_seconds": 206401
+        },
+        "vwap": {
+          "line_crossings": 1903,
+          "packets": 1903,
+          "supported_seconds": 206401
+        }
+      },
+      "decomposition_median_abs_usd": {
+        "volume_weighting_of_closes": 1.7218706293706418,
+        "within_bar_sampling": 1.135177767478126,
+        "trade_vs_publication_mid": 0.011537286834936822
+      },
+      "slopes": {
+        "60": {
+          "pairs": 205921,
+          "both_active": 67808,
+          "opposite_fraction": 0.3451067720622935,
+          "correlation": 0.7676162642822167,
+          "down_flat_up_confusion": [
+            [
+              20280,
+              28877,
+              12590
+            ],
+            [
+              8784,
+              59172,
+              11781
+            ],
+            [
+              10811,
+              29499,
+              24127
+            ]
+          ]
+        },
+        "300": {
+          "pairs": 204001,
+          "both_active": 165251,
+          "opposite_fraction": 0.21994420608649873,
+          "correlation": 0.827511917839685,
+          "down_flat_up_confusion": [
+            [
+              53735,
+              8950,
+              19379
+            ],
+            [
+              7030,
+              5566,
+              9362
+            ],
+            [
+              16967,
+              7842,
+              75170
+            ]
+          ]
+        },
+        "900": {
+          "pairs": 199201,
+          "both_active": 190957,
+          "opposite_fraction": 0.08119629026430034,
+          "correlation": 0.9151544237810966,
+          "down_flat_up_confusion": [
+            [
+              72641,
+              1820,
+              7734
+            ],
+            [
+              2034,
+              290,
+              2483
+            ],
+            [
+              7771,
+              1617,
+              102811
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "invalid_midpoint_rows": 120,
+  "invalid_midpoints_in_geometry_or_metrics": 0,
+  "crossing_scope": "Strict reversals observed on 1-second grid; 30-second origins, 30-minute future cap, common mature support, ties retained. Not full-publication crossing counts.",
+  "script_sha256": "91eab7f6f0b6a19db6066c982438cfc5acfef099291965426c466ef57884de03"
+}

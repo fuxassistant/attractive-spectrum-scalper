@@ -1,0 +1,43 @@
+{
+  "status": "COMPLETE_VERIFIED_DESCRIPTIVE_WEEK",
+  "completed_utc": "2026-10-22T10:51:37.433913+00:00",
+  "dates": [
+    "2026-02-02",
+    "2026-02-03",
+    "2026-02-04",
+    "2026-02-05",
+    "2026-02-06"
+  ],
+  "tests": "............                                                             [100%]\n12 passed in 5.64s",
+  "raw_member_sha256": "a1800bc6c7fbfe4136922983c36c83f10108b52801fa9c482c1a8fe339f0a506",
+  "raw_trades": 922861,
+  "canonical_volume_checks": 461700,
+  "max_volume_error": 0.0,
+  "direct_vwap_checks": 400,
+  "max_direct_price_error": 1.4015611782269843e-08,
+  "future_prefix_checks": 400,
+  "previous_bb_experiment_unchanged": true,
+  "visual_images": 6,
+  "report_sha256": {
+    "01_week_centers.png": "f79be8632a6b895279b3a0e281318bcc633859b0eea0219601a222511569d6d1",
+    "02_wednesday_bands.png": "835b33e489992670e79a8cd5e47e3973adef325384e2ebd50ff7830fb7eda728",
+    "03_mechanism_metrics.png": "a4591b40e37723010c66ce9b2ce2bd0908d15fed9f5084a906f11e1a1a54931f",
+    "04_scales_and_direction.png": "da689fbc1fc0e8e1cc4e163e40496998315038782a9e0104b06283d891da3b70",
+    "05_volume_decomposition.png": "51eb230af528b434db41888763045bc98a4ad054664f4567242eb491dead4d0a",
+    "06_sampled_crossings.png": "837d42593b057108d5955605a1f96cdf63aa62f7c005aee074010d1650841837",
+    "comparison_diagnostics.json": "55ae6554158f41091427930a97b89810c49e1e114e07f22fced3419a8427e9b2",
+    "direct_checks.json": "d857f63ff28c50e972339ac372001adeba89728d8f99def8a4978ac53d3a027d",
+    "index.html": "4a8c31f88fa1a7ef050a67f5e4a58b2c514a039c5d95ef7199f5cf3daf7dd468",
+    "SOL61_VISUAL_AUDIT_RU.md": "cad42833d98f81b589c40a3ddbbe7aea6c9a43294214e241537d78f6b5d767f9",
+    "source_receipt.json": "8498369703dbff28bdcd4f97ed654479e1695dc72bead706544315e77eaba578",
+    "summary.json": "c9ce1d49a18d3ca324cdf6047baeca0b823ee25e9069a2e735e48ae947aacc7c",
+    "visual_receipt.json": "4a50469cb05b9d4e4746aad3c840f354e25c83b0c75dbefd6740d984d9b4d8fe"
+  },
+  "code_sha256": {
+    "scripts\\vwap_week_compare.py": "2012a26feb3131cdc3c6dc4ac23b9c42d39f568406ed7ff5e7ce8185744f5370",
+    "scripts\\vwap_week_finalize.py": "fa93af12f62c626b61c9ac85d862042d23f167fd1320461d9cc7c705ddbfbdfe",
+    "scripts\\vwap_week_report.py": "91eab7f6f0b6a19db6066c982438cfc5acfef099291965426c466ef57884de03",
+    "scripts\\vwap_week_source.py": "e30efd90e86b55ee3999bd041baec3d37045ec0aaa3428cc9f756485961a12bb"
+  },
+  "scope": "Five-day geometry comparison; no model fitting or economic admission; crossings measured at one-second resolution"
+}
