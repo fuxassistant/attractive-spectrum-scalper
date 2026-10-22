@@ -1,0 +1,73 @@
+{
+  "status": "COMPLETE_RESEARCH_EXPERIMENT",
+  "branch": "codex/opportunity-pipeline-v2",
+  "base_commit": "7483ebd",
+  "implementation_commit": "0f5f434",
+  "tests_commit": "ea13b13",
+  "dataset": {
+    "manifest_sha256": "8b924637e2e06c7744dbf8e73eae24dfff0f15cfd1aefe01799a31919792550a",
+    "dates": 36,
+    "roots": 362664,
+    "verified_daily_payloads": 216,
+    "family_channels": {
+      "geometry": 14,
+      "micro": 70,
+      "rich": 225
+    }
+  },
+  "tests": {
+    "result": "101 passed",
+    "new_v2": 52,
+    "existing_research_regressions": 49,
+    "scope": "features, targets, simulation, learning, losses, causal cohort selection, evaluation and runner",
+    "source_check": "Committed source matches frozen training and dataset recipes"
+  },
+  "runs": {
+    "mlp_geometry_seed17": "44271bbfb548b0179d2f8baefca0c1d5f7f3046c2d22ecb96e78e592bacafd32",
+    "tcn_geometry_seed17": "8a2eb639a5015d0bcc872a6b96dcf3e40451c409888b40bc2a3d25116a2f8e5c",
+    "mlp_micro_seed17": "6ce35c5ffe1e725ed138e78241b71f8f84fce01d2e6a83d60bee571598b20d95",
+    "tcn_micro_seed17": "d7d41955b5ee7eb282a76339fa1de03c58b343e29b97e713f4b7b5a9a78b823e",
+    "mlp_rich_seed17": "3de0d3e1e7ec7799263f8c0cf30de64fb85b22d77c0a051118c65199a8ebd3c7",
+    "tcn_rich_seed17": "97412a0cc1367dfaa9ea57d5379338db9cefd426bb7df8511366a74967093b47",
+    "tcn_micro_seed29": "f8efa1b36fa0a3795241358c1c7cf06eda9fda375f5a6984466d0a554d13d56b"
+  },
+  "primary": "tcn_micro_seed17",
+  "confirmation": "tcn_micro_seed29",
+  "visual_audit": {
+    "figures": 10,
+    "sha256": "aaceb79a0e7ca431ab4078c7c89958caee35834f78d6a89976390905c33f2fbb",
+    "verdict": "PASS_DESCRIPTIVE_WITH_LIMITATIONS_NO_ECONOMIC_ADMISSION"
+  },
+  "report_sha256": {
+    "01_features_and_cohorts.png": "a2836005a755c6338815928767e159e2de51fab11171820a986c4f7d19928e1d",
+    "02_learning_by_family.png": "9f1f668f8dda7d3572a22db1646b90ebcd115e10db0fc8738e0f388c7cf48ba7",
+    "03a_test_open_may11.png": "49476f6dbd226358bf385f35f35439fad702b7373d143302f06d94b9972e6d49",
+    "03b_test_afternoon_may18.png": "eabf3cd6caeeb2a04af25203271b3a49f4ec818420684da3dd79c49d229cd4dc",
+    "03_selection_and_test.png": "5e7105e6a40d10e296238f7e50bebeb6e398c861b2d818d751a5eacddc6cf37b",
+    "04_temporal_vs_loss_gradients.png": "00714a63d23b8eb221f1ae90a24b2e968393e3d360d651956dd78139dea09df1",
+    "05_gradient_mass_and_alignment.png": "aa03609c8178361c00f8b4e692d1f2aba372eb369348c63e125732d7785a7257",
+    "06_risk_and_execution.png": "5710e2fe180af4fa5c51dfd8a0ee0adf477ee9d50b0d1dd661376f45efb69c2e",
+    "07_context_history.png": "859506b52c400b38197d66ce8da381a842891719eae0cb1c6d2f8fa92f6d3d47",
+    "crossing_case.json": "2b23ae4e6db6f051119105d41b0d4b1474db8cff8eb7e5c4ca13861fff588a59",
+    "crossing_case.png": "879af343658ecac940104041b888b83dfbd6cb79a36a4afc5126706cb0cbc718",
+    "dataset_diagnostics.json": "7df94267b66563c2eab52fa4b12e380af2d384e90a20213a3e53e244c32dd973",
+    "index.html": "77a97c949028bc8094b41055de01a7e69a22d2e8178b9ae1855393d27a2d5552",
+    "methodology.json": "56825f6b0c4ae83dbeb653e4aac354a629d88ace95d796eabd8d9554cf0c363d",
+    "model_selection.json": "54e22ea63b5502adc85086be80517a9d637b741d492669e5750f7d7f3c4e8007",
+    "report_metrics.json": "4d1f7aaff489a8145b3949025667400c97500f495e54e01788513308b31fd45f",
+    "shadow_parity.json": "6be079ceffdf858ef462ebca83aa088963a5dea636cab6e49356026ca582fab0",
+    "sol61_visual_audit.json": "aaceb79a0e7ca431ab4078c7c89958caee35834f78d6a89976390905c33f2fbb",
+    "source_inventory.json": "0f6b1495fb703565db3ab00fd89e312845ec60bed5aae2dd1d0357a195368c45",
+    "statistical_audit.json": "c9fdc857b9d994ff18be8b5a53bbd1c4de9618f0fbeaad3770f5727307757fc0",
+    "suite_summary.json": "b1b8608cc1f94ac548c9e12acbdab6cfd3914e8e4bf9d56425ff23954b7dbf9e",
+    "visual_receipt.json": "72b32ca852ca87559d58a0834e5c45f1645a0a996e6419c0e634ca4cc5a9f015"
+  },
+  "result": "Event ranking transfers across the ten test sessions and both seeds; direction gain is weak; calibrated selected policies WAIT",
+  "limitations": [
+    "TEST is new relative to February v1 but some dates were used historically",
+    "Day bootstrap is descriptive across only ten adjacent sessions",
+    "Actual detailed TEST sequence median20s, full300s only15.24%; primary micro has no rich DAY/STFT block",
+    "BBO execution with assumed fee and latency, no queue/depth/impact admission",
+    "Crossing event is not all favorable intrahorizon movement and not plan-specific win probability"
+  ]
+}

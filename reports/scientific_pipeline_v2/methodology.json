@@ -1,0 +1,43 @@
+{
+  "scope": "Fixed crossing event, matched feature families, separate risk and execution; a bounded development experiment, not an untouched historical holdout",
+  "event": {
+    "geometry": "Native BB M1/M3/M6: nineteen completed closes plus developing quote, sample standard deviation, three lines per scale",
+    "query": "The first future crossing of each of nine lines strictly after delayed entry; later recross cannot replace a first failed crossing",
+    "states": ["NONE", "LONG_ONLY", "SHORT_ONLY", "BOTH"],
+    "reference": "R_event=max(2*(decision spread+0.30),0.10*BB1 halfwidth,0.50); G_event=2*R_event; H=300 seconds",
+    "unknown": "Common full maturity of all nine cells; unresolved support loss is UNKNOWN, never a negative",
+    "ids": "Geometry/source-bound physical crossing IDs retained in bank, map and first-qualifying label fields; no future IDs enter X"
+  },
+  "loss": {
+    "formula": "BCE(z_event,1[y>0]) + 1[y>0]*CE(z_direction,y-1), averaged over common known roots",
+    "probabilities": "P(NONE)=1-pE; P(LONG_ONLY/SHORT_ONLY/BOTH)=pE*softmax(z_direction)",
+    "weights": "Uniform origins. Conditional direction is not gated by predicted event confidence. Crossing IDs are retained but do not yet change training weights.",
+    "gradient": "Unreduced actual dL_i/dz_i is stored; E/L/S temporal indicator differences and shared-encoder gradient cosine are separate diagnostics",
+    "focal": "gamma=0 baseline. Do not suppress easy examples until gradient mass and event multiplicity identify a specific imbalance problem. No claim that focal is superior."
+  },
+  "risk_execution": {
+    "stop": "R_trade=max(k*(decision spread+0.30),0.10*BB1 halfwidth,0.50), k in {2,4,6}",
+    "gain": "G_event is fixed across plans, so enlarging the stop does not silently change the event label",
+    "exit": "First qualifying first-line crossing, STOP, or exact entry+300s timer; TIME wins a same-clock crossing; exit latency still applies",
+    "entry": "First supported full-quote publication strictly after decision+100ms, pending timeout 2s",
+    "money": "USD per reference ounce, executable BBO and assumed 0.30 roundtrip fee; no depth, queue, size-impact or live-fill claim",
+    "account": "One position, full prediction clock, no future-label filter; CENSORED halts the account; closed cash is not mark-to-market equity",
+    "interpretation": "P(side crossing) is not calibrated P(success under a particular stop). Paired true-event retention is an oracle diagnostic, not model profit."
+  },
+  "hyperparameters": {
+    "sequence": "64 roots at 5s; four-layer TCN with two kernel-3 convolutions per block has RF61=300s. MLP sees only the current token. This compares architecture and history together.",
+    "context": "Current/previous London summaries and 128-completed-M1 spectral summaries; long paths are compressed. VWAP context is a midpoint/volume proxy, not exact new-session trade-price VWAP.",
+    "capacity": "Hidden width32, dropout0.05; fixed across feature families, so parameter count increases with input dimension. Not an equal-parameter architecture contest.",
+    "optimizer": "AdamW learning rate0.001, weight decay0.0001, batch256, gradient norm cap1.0; actual gradient clipping fraction is recorded",
+    "budget": "At most1500 optimizer updates, approximately2.5 passes over admitted TRAIN roots; validation every150, patience5. This is a bounded baseline, not a converged hyperparameter search.",
+    "sampling": "Uniform-root permutation cycles; 5s origins overlap heavily over a300s target horizon. Root count is not independent sample count.",
+    "normalization": "One shared TRAIN-only scaler, independent of label maturity; log transforms for heavy-tailed counts/depth/power, cap10 standard deviations, explicit per-feature missingness and real-row masks"
+  },
+  "selection": {
+    "checkpoint_and_family": "VAL joint NLL selects checkpoint and one of six seed17 architecture/family combinations",
+    "replication": "Selected architecture/family is fitted at prespecified seed29; seed17 remains primary, no test-selected seed winner",
+    "policy": "CAL selects one of three risks and five thresholds, requiring completed positive net and at least50 trades; otherwise WAIT",
+    "test": "Two weeks, ten sessions, are evaluated without retuning; all development TEST diagnostics are saved, so this is not a technically sealed blind test",
+    "uncertainty": "Use day-level paired summaries/bootstrap, not independent-root confidence intervals; ten days still limit precision"
+  }
+}

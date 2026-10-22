@@ -1,0 +1,741 @@
+{
+  "status": "PASS",
+  "date": "2026-02-02",
+  "scope": "Full February 2 30-second shadow against immutable v1 BB M1/M3/M6 map and fixed amplitude target; new execution rule intentionally differs and is not claimed equal to v1",
+  "config_sha256": "289bc6e31055a6bbdc8ee5fdc59b143dee7dba35ce01fd0daee5e409ebaed983",
+  "code_sha256": {
+    "spectrum/research_v2/targets.py": "500ae32ab3946f1cfa3dfd2c45fde80494e86748835942605c9c6d218ec8cdd1",
+    "spectrum/research_v2/simulation.py": "87390016c39936915041dc9105860a48f2437a2f9201c2dbc0ab02706c1862f1",
+    "spectrum/cognition/bb_crossing.py": "41a19c06d70855916ecb2ac6e52f1a11854ecfe32092e8cc31af6040f62d7fef",
+    "spectrum/cognition/crossing_map.py": "b4c8aa5f57b424cf4f8ba13cc1bc3e26c324afba67ce9872a2ac9b0d1c5e4487",
+    "scripts/crossing_map_analyze.py": "fa4ebf96e9aefd6205c95e775393a665c07f6f7606250f8d90a117538f24975a"
+  },
+  "source_sha256": {
+    "data\\derived\\crossing_map_target_v1\\2026-02-02_roots.parquet": "6b273450b17575687e062c627c9fae91f97dc6fd93747c6eadab8a7b3d0d112d",
+    "data\\derived\\crossing_map_target_v1\\2026-02-02_map.parquet": "0df2d068f8525bb51cdeb86cfdf64b31776846a36101f13bda42c1f0f981d715",
+    "data\\derived\\crossing_map_target_v1\\2026-02-02_bank.parquet": "94e5d28bc2148e0e41c823ae6d851932e0fe110841a15d74a9b5a7dab3e9f5cc",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_004\\capture_014000\\quotes.parquet": "dcc4ae5013c6719387fcbe3505f6711d52c91f155204c47389a8f9f96f14e203",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_004\\capture_014001\\quotes.parquet": "b64bcb6115f628e0bb46e50eb944f0df86e3a66365cd760a4739f759b63810e8"
+  },
+  "origins": 1679,
+  "map_cells": 15111,
+  "bank_events": 22555,
+  "quotes": 18684428,
+  "checks": {
+    "fixed_y_crossing": {
+      "pass": true,
+      "rows": 1679,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "common_maturity": {
+      "pass": true,
+      "rows": 1679,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "reference_risk": {
+      "pass": true,
+      "rows": 1679,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "root_entry_ordinal": {
+      "pass": true,
+      "rows": 1679,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "root_entry_ns": {
+      "pass": true,
+      "rows": 1679,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "root_decision_spread": {
+      "pass": true,
+      "rows": 1679,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "bank_ordinal": {
+      "pass": true,
+      "rows": 22555,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "bank_t_ns": {
+      "pass": true,
+      "rows": 22555,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "bank_scale": {
+      "pass": true,
+      "rows": 22555,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "bank_role": {
+      "pass": true,
+      "rows": 22555,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "bank_direction": {
+      "pass": true,
+      "rows": 22555,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "bank_event_id": {
+      "pass": true,
+      "rows": 22555,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_t_ns": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_scale": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_role": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_entry_ordinal": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_entry_ns": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_ready": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_support_end_ns": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_cross_ordinal": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_cross_ns": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_event_id": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_cross_direction": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_delay_s": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_mark_L": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_mark_S": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_mae_L": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_mae_S": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_mfe_L": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "map_mfe_S": {
+      "pass": true,
+      "rows": 15111,
+      "mismatch_count": 0,
+      "first_indices": [],
+      "max_error": 0.0
+    },
+    "bound_source_unchanged": {
+      "pass": true
+    }
+  },
+  "v2_internal_checks": [
+    {
+      "kind": "map_raw",
+      "scale": 1,
+      "role": 0,
+      "t_ns": "1770041160000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "map_raw",
+      "scale": 1,
+      "role": 1,
+      "t_ns": "1770042510000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "map_raw",
+      "scale": 1,
+      "role": 2,
+      "t_ns": "1770039690000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "map_raw",
+      "scale": 3,
+      "role": 0,
+      "t_ns": "1770032790000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "map_raw",
+      "scale": 3,
+      "role": 1,
+      "t_ns": "1770039870000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "map_raw",
+      "scale": 3,
+      "role": 2,
+      "t_ns": "1770037320000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "map_raw",
+      "scale": 6,
+      "role": 0,
+      "t_ns": "1770032070000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "map_raw",
+      "scale": 6,
+      "role": 1,
+      "t_ns": "1770036900000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "map_raw",
+      "scale": 6,
+      "role": 2,
+      "t_ns": "1770030900000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "online_seen_lines",
+      "t_ns": "1770019200000000000",
+      "sides": 2
+    },
+    {
+      "kind": "online_seen_lines",
+      "t_ns": "1770043020000000000",
+      "sides": 2
+    },
+    {
+      "kind": "online_seen_lines",
+      "t_ns": "1770069240000000000",
+      "sides": 2
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost2",
+      "side": 1,
+      "t_ns": "1770019200000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost2",
+      "side": -1,
+      "t_ns": "1770019200000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost2",
+      "side": 1,
+      "t_ns": "1770043020000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost2",
+      "side": -1,
+      "t_ns": "1770043020000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost2",
+      "side": 1,
+      "t_ns": "1770069240000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost2",
+      "side": -1,
+      "t_ns": "1770069240000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost4",
+      "side": 1,
+      "t_ns": "1770019200000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost4",
+      "side": -1,
+      "t_ns": "1770019200000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost4",
+      "side": 1,
+      "t_ns": "1770043020000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost4",
+      "side": -1,
+      "t_ns": "1770043020000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost4",
+      "side": 1,
+      "t_ns": "1770069240000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost4",
+      "side": -1,
+      "t_ns": "1770069240000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost6",
+      "side": 1,
+      "t_ns": "1770019200000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost6",
+      "side": -1,
+      "t_ns": "1770019200000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost6",
+      "side": 1,
+      "t_ns": "1770043020000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost6",
+      "side": -1,
+      "t_ns": "1770043020000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost6",
+      "side": 1,
+      "t_ns": "1770069240000000000",
+      "max_money_error": 0.0
+    },
+    {
+      "kind": "execution_raw",
+      "plan": "cost6",
+      "side": -1,
+      "t_ns": "1770069240000000000",
+      "max_money_error": 0.0
+    }
+  ],
+  "fixed_states": {
+    "-1": 505,
+    "0": 418,
+    "2": 358,
+    "1": 350,
+    "3": 48
+  },
+  "seconds": 4.546264600008726,
+  "dataset_outputs_written": false,
+  "dataset36_audit": {
+    "status": "PASS",
+    "days": 36,
+    "roots": 362664,
+    "map_cells": 3263976,
+    "execution_trials": 2175984,
+    "table_checks": 1620,
+    "raw_benchmark_counts": {
+      "map_raw": 324,
+      "online_seen_lines": 108,
+      "execution_raw": 648
+    },
+    "max_raw_benchmark_money_error": 0.0,
+    "execution_statuses": {
+      "COMPLETE": 2109308,
+      "EMPTY": 31020,
+      "CENSORED": 18436,
+      "INELIGIBLE": 17220
+    },
+    "execution_reasons": {
+      "STOP": 1155609,
+      "TAKE": 229481,
+      "TIME": 724218,
+      "ENTRY_TIMEOUT": 31020,
+      "EXIT_TIMEOUT": 18146,
+      "SESSION": 12960,
+      "SUPPORT": 290,
+      "RISK": 4260
+    },
+    "issues": [],
+    "daily": [
+      {
+        "date": "2026-03-30",
+        "roots": 10074,
+        "common_mature": 9942,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-03-31",
+        "roots": 10074,
+        "common_mature": 9987,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-01",
+        "roots": 10074,
+        "common_mature": 9955,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-02",
+        "roots": 10074,
+        "common_mature": 9972,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-07",
+        "roots": 10074,
+        "common_mature": 10001,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-08",
+        "roots": 10074,
+        "common_mature": 8531,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-09",
+        "roots": 10074,
+        "common_mature": 9919,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-14",
+        "roots": 10074,
+        "common_mature": 9778,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-15",
+        "roots": 10074,
+        "common_mature": 8401,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-16",
+        "roots": 10074,
+        "common_mature": 9725,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-17",
+        "roots": 10074,
+        "common_mature": 9814,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-20",
+        "roots": 10074,
+        "common_mature": 9772,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-21",
+        "roots": 10074,
+        "common_mature": 9915,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-22",
+        "roots": 10074,
+        "common_mature": 9816,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-23",
+        "roots": 10074,
+        "common_mature": 9945,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-24",
+        "roots": 10074,
+        "common_mature": 9889,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-27",
+        "roots": 10074,
+        "common_mature": 9705,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-28",
+        "roots": 10074,
+        "common_mature": 9914,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-29",
+        "roots": 10074,
+        "common_mature": 9992,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-04-30",
+        "roots": 10074,
+        "common_mature": 9947,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-01",
+        "roots": 10074,
+        "common_mature": 9829,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-04",
+        "roots": 10074,
+        "common_mature": 9854,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-05",
+        "roots": 10074,
+        "common_mature": 9725,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-06",
+        "roots": 10074,
+        "common_mature": 9900,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-07",
+        "roots": 10074,
+        "common_mature": 9938,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-08",
+        "roots": 10074,
+        "common_mature": 9839,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-11",
+        "roots": 10074,
+        "common_mature": 9777,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-12",
+        "roots": 10074,
+        "common_mature": 9874,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-13",
+        "roots": 10074,
+        "common_mature": 9759,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-14",
+        "roots": 10074,
+        "common_mature": 9834,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-15",
+        "roots": 10074,
+        "common_mature": 9975,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-18",
+        "roots": 10074,
+        "common_mature": 9867,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-19",
+        "roots": 10074,
+        "common_mature": 9884,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-20",
+        "roots": 10074,
+        "common_mature": 9828,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-21",
+        "roots": 10074,
+        "common_mature": 9844,
+        "benchmarks": 30,
+        "issues": []
+      },
+      {
+        "date": "2026-05-22",
+        "roots": 10074,
+        "common_mature": 8356,
+        "benchmarks": 30,
+        "issues": []
+      }
+    ],
+    "dataset_manifest_sha256": "8b924637e2e06c7744dbf8e73eae24dfff0f15cfd1aefe01799a31919792550a",
+    "scope": "Independent saved-table semantic recomputation and source/output hashes across all36days; raw-quote correctness uses bound per-day independent scalar benchmarks, not a second complete raw replay"
+  }
+}

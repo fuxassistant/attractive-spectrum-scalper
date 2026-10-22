@@ -1,0 +1,1245 @@
+{
+  "status": "COMPLETE",
+  "manifest_sha256": "8b924637e2e06c7744dbf8e73eae24dfff0f15cfd1aefe01799a31919792550a",
+  "date_count": 36,
+  "roots": 362664,
+  "by_role": {
+    "train": {
+      "days": 16,
+      "roots": 161184,
+      "admitted": 153736,
+      "states": [
+        103321,
+        24009,
+        25635,
+        771
+      ]
+    },
+    "validation": {
+      "days": 5,
+      "roots": 50370,
+      "admitted": 48824,
+      "states": [
+        36004,
+        6230,
+        6390,
+        200
+      ]
+    },
+    "calibration": {
+      "days": 5,
+      "roots": 50370,
+      "admitted": 48623,
+      "states": [
+        35505,
+        6045,
+        6813,
+        260
+      ]
+    },
+    "test": {
+      "days": 10,
+      "roots": 100740,
+      "admitted": 95567,
+      "states": [
+        71375,
+        11485,
+        12505,
+        202
+      ]
+    }
+  },
+  "by_day": [
+    {
+      "date": "2026-03-30",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 10000,
+      "target_known": 9942,
+      "admitted": 9878,
+      "states": [
+        5805,
+        1798,
+        2198,
+        77
+      ],
+      "full_window_fraction": 0.25663089694270097,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9981213663841726,
+        "rich": 0.9319043441092438
+      }
+    },
+    {
+      "date": "2026-03-31",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 10053,
+      "target_known": 9987,
+      "admitted": 9966,
+      "states": [
+        5915,
+        2146,
+        1827,
+        78
+      ],
+      "full_window_fraction": 0.3543046357615894,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9984561795820074,
+        "rich": 0.929799094699757
+      }
+    },
+    {
+      "date": "2026-04-01",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 10020,
+      "target_known": 9955,
+      "admitted": 9908,
+      "states": [
+        5734,
+        2074,
+        1991,
+        109
+      ],
+      "full_window_fraction": 0.2791683488090432,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9979006863140897,
+        "rich": 0.9349163414524738
+      }
+    },
+    {
+      "date": "2026-04-02",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 10029,
+      "target_known": 9972,
+      "admitted": 9931,
+      "states": [
+        5516,
+        2375,
+        1927,
+        113
+      ],
+      "full_window_fraction": 0.2629141073406505,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9981846167124588,
+        "rich": 0.9358703946117097
+      }
+    },
+    {
+      "date": "2026-04-07",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 10057,
+      "target_known": 10001,
+      "admitted": 9985,
+      "states": [
+        6017,
+        1853,
+        2043,
+        72
+      ],
+      "full_window_fraction": 0.29904857285928893,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9985335145575506,
+        "rich": 0.9416141990763923
+      }
+    },
+    {
+      "date": "2026-04-08",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 10019,
+      "target_known": 8531,
+      "admitted": 8491,
+      "states": [
+        5172,
+        1328,
+        1936,
+        55
+      ],
+      "full_window_fraction": 0.3257566835472854,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9978060803876373,
+        "rich": 0.9385037752391421
+      }
+    },
+    {
+      "date": "2026-04-09",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 9980,
+      "target_known": 9919,
+      "admitted": 9834,
+      "states": [
+        6465,
+        1742,
+        1621,
+        6
+      ],
+      "full_window_fraction": 0.2093756355501322,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9975188122839129,
+        "rich": 0.9447336903712743
+      }
+    },
+    {
+      "date": "2026-04-14",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 9879,
+      "target_known": 9778,
+      "admitted": 9619,
+      "states": [
+        6690,
+        1620,
+        1283,
+        26
+      ],
+      "full_window_fraction": 0.10999064351803722,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9973326600626736,
+        "rich": 0.9485624516292985
+      }
+    },
+    {
+      "date": "2026-04-15",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 9881,
+      "target_known": 8401,
+      "admitted": 8262,
+      "states": [
+        6120,
+        866,
+        1262,
+        14
+      ],
+      "full_window_fraction": 0.08012587751149843,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9975170315039597,
+        "rich": 0.9614701847817316
+      }
+    },
+    {
+      "date": "2026-04-16",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 9768,
+      "target_known": 9725,
+      "admitted": 9482,
+      "states": [
+        7444,
+        826,
+        1169,
+        43
+      ],
+      "full_window_fraction": 0.15155030584264922,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9973799981920631,
+        "rich": 0.9572635871475779
+      }
+    },
+    {
+      "date": "2026-04-17",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 9902,
+      "target_known": 9814,
+      "admitted": 9656,
+      "states": [
+        7096,
+        1191,
+        1337,
+        32
+      ],
+      "full_window_fraction": 0.2052609776304888,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9974612380163332,
+        "rich": 0.9529770781552057
+      }
+    },
+    {
+      "date": "2026-04-20",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 9835,
+      "target_known": 9772,
+      "admitted": 9584,
+      "states": [
+        7138,
+        1151,
+        1281,
+        14
+      ],
+      "full_window_fraction": 0.148059265442404,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9971082756975912,
+        "rich": 0.9508977926173252
+      }
+    },
+    {
+      "date": "2026-04-21",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 9984,
+      "target_known": 9915,
+      "admitted": 9830,
+      "states": [
+        6451,
+        1461,
+        1875,
+        43
+      ],
+      "full_window_fraction": 0.3118006103763988,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9982546141549193,
+        "rich": 0.941412004069176
+      }
+    },
+    {
+      "date": "2026-04-22",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 9875,
+      "target_known": 9816,
+      "admitted": 9641,
+      "states": [
+        7416,
+        1080,
+        1117,
+        28
+      ],
+      "full_window_fraction": 0.1031013380354735,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9975432305481056,
+        "rich": 0.9531141306226878
+      }
+    },
+    {
+      "date": "2026-04-23",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 10021,
+      "target_known": 9945,
+      "admitted": 9902,
+      "states": [
+        6567,
+        1471,
+        1812,
+        52
+      ],
+      "full_window_fraction": 0.2360129266814785,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9987866809014052,
+        "rich": 0.9441625709733162
+      }
+    },
+    {
+      "date": "2026-04-24",
+      "role": "train",
+      "roots": 10074,
+      "x_available": 9939,
+      "target_known": 9889,
+      "admitted": 9767,
+      "states": [
+        7775,
+        1027,
+        956,
+        9
+      ],
+      "full_window_fraction": 0.1474352411180506,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9981863125100557,
+        "rich": 0.9543646974505989
+      }
+    },
+    {
+      "date": "2026-04-27",
+      "role": "validation",
+      "roots": 10074,
+      "x_available": 9752,
+      "target_known": 9705,
+      "admitted": 9460,
+      "states": [
+        7933,
+        669,
+        849,
+        9
+      ],
+      "full_window_fraction": 0.10644820295983087,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9972410147991543,
+        "rich": 0.9518468404980033
+      }
+    },
+    {
+      "date": "2026-04-28",
+      "role": "validation",
+      "roots": 10074,
+      "x_available": 9945,
+      "target_known": 9914,
+      "admitted": 9808,
+      "states": [
+        6930,
+        1464,
+        1315,
+        99
+      ],
+      "full_window_fraction": 0.2903752039151713,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9986046376136098,
+        "rich": 0.9448028820010875
+      }
+    },
+    {
+      "date": "2026-04-29",
+      "role": "validation",
+      "roots": 10074,
+      "x_available": 10056,
+      "target_known": 9992,
+      "admitted": 9977,
+      "states": [
+        6726,
+        1466,
+        1722,
+        63
+      ],
+      "full_window_fraction": 0.27723764658715044,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9991093801457638,
+        "rich": 0.9475308765716703
+      }
+    },
+    {
+      "date": "2026-04-30",
+      "role": "validation",
+      "roots": 10074,
+      "x_available": 10015,
+      "target_known": 9947,
+      "admitted": 9900,
+      "states": [
+        7101,
+        1612,
+        1176,
+        11
+      ],
+      "full_window_fraction": 0.18696969696969698,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9985988455988456,
+        "rich": 0.950852076318743
+      }
+    },
+    {
+      "date": "2026-05-01",
+      "role": "validation",
+      "roots": 10074,
+      "x_available": 9896,
+      "target_known": 9829,
+      "admitted": 9679,
+      "states": [
+        7314,
+        1019,
+        1328,
+        18
+      ],
+      "full_window_fraction": 0.1354478768467817,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9974525113279117,
+        "rich": 0.9610019400534949
+      }
+    },
+    {
+      "date": "2026-05-04",
+      "role": "calibration",
+      "roots": 10074,
+      "x_available": 9912,
+      "target_known": 9854,
+      "admitted": 9723,
+      "states": [
+        6919,
+        1275,
+        1421,
+        108
+      ],
+      "full_window_fraction": 0.20538928314306285,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.998097295073537,
+        "rich": 0.95498280137589
+      }
+    },
+    {
+      "date": "2026-05-05",
+      "role": "calibration",
+      "roots": 10074,
+      "x_available": 9803,
+      "target_known": 9725,
+      "admitted": 9508,
+      "states": [
+        7447,
+        1112,
+        948,
+        1
+      ],
+      "full_window_fraction": 0.05122002524190156,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9970971813209929,
+        "rich": 0.9562609264712757
+      }
+    },
+    {
+      "date": "2026-05-06",
+      "role": "calibration",
+      "roots": 10074,
+      "x_available": 9960,
+      "target_known": 9900,
+      "admitted": 9809,
+      "states": [
+        6826,
+        1417,
+        1530,
+        36
+      ],
+      "full_window_fraction": 0.3359159955143236,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9981168897368307,
+        "rich": 0.9447274045377828
+      }
+    },
+    {
+      "date": "2026-05-07",
+      "role": "calibration",
+      "roots": 10074,
+      "x_available": 10007,
+      "target_known": 9938,
+      "admitted": 9874,
+      "states": [
+        6534,
+        1251,
+        2040,
+        49
+      ],
+      "full_window_fraction": 0.27942070083046383,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.998826644289476,
+        "rich": 0.9466261562352306
+      }
+    },
+    {
+      "date": "2026-05-08",
+      "role": "calibration",
+      "roots": 10074,
+      "x_available": 9922,
+      "target_known": 9839,
+      "admitted": 9709,
+      "states": [
+        7779,
+        990,
+        874,
+        66
+      ],
+      "full_window_fraction": 0.15634977855597898,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9977443609022556,
+        "rich": 0.9610954326455408
+      }
+    },
+    {
+      "date": "2026-05-11",
+      "role": "test",
+      "roots": 10074,
+      "x_available": 9817,
+      "target_known": 9777,
+      "admitted": 9578,
+      "states": [
+        7591,
+        1052,
+        933,
+        2
+      ],
+      "full_window_fraction": 0.13979954061390687,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9972943948930585,
+        "rich": 0.9505375745342336
+      }
+    },
+    {
+      "date": "2026-05-12",
+      "role": "test",
+      "roots": 10074,
+      "x_available": 9832,
+      "target_known": 9874,
+      "admitted": 9678,
+      "states": [
+        7209,
+        1177,
+        1257,
+        35
+      ],
+      "full_window_fraction": 0.16914651787559412,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9979246007144333,
+        "rich": 0.9506968841128791
+      }
+    },
+    {
+      "date": "2026-05-13",
+      "role": "test",
+      "roots": 10074,
+      "x_available": 9814,
+      "target_known": 9759,
+      "admitted": 9560,
+      "states": [
+        7880,
+        705,
+        964,
+        11
+      ],
+      "full_window_fraction": 0.08974895397489539,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9975747160789001,
+        "rich": 0.9489497907949791
+      }
+    },
+    {
+      "date": "2026-05-14",
+      "role": "test",
+      "roots": 10074,
+      "x_available": 9883,
+      "target_known": 9834,
+      "admitted": 9668,
+      "states": [
+        7415,
+        953,
+        1292,
+        8
+      ],
+      "full_window_fraction": 0.06061232933388498,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9976165849045452,
+        "rich": 0.9490042752723762
+      }
+    },
+    {
+      "date": "2026-05-15",
+      "role": "test",
+      "roots": 10074,
+      "x_available": 10035,
+      "target_known": 9975,
+      "admitted": 9942,
+      "states": [
+        6419,
+        1709,
+        1767,
+        47
+      ],
+      "full_window_fraction": 0.20921343794005232,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9989841078253873,
+        "rich": 0.934635552873332
+      }
+    },
+    {
+      "date": "2026-05-18",
+      "role": "test",
+      "roots": 10074,
+      "x_available": 9908,
+      "target_known": 9867,
+      "admitted": 9732,
+      "states": [
+        6858,
+        1303,
+        1526,
+        45
+      ],
+      "full_window_fraction": 0.21557747636662555,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.998342727966649,
+        "rich": 0.9441448600264877
+      }
+    },
+    {
+      "date": "2026-05-19",
+      "role": "test",
+      "roots": 10074,
+      "x_available": 9941,
+      "target_known": 9884,
+      "admitted": 9772,
+      "states": [
+        6799,
+        1402,
+        1546,
+        25
+      ],
+      "full_window_fraction": 0.17488743348342203,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9982471785275715,
+        "rich": 0.9419329603856824
+      }
+    },
+    {
+      "date": "2026-05-20",
+      "role": "test",
+      "roots": 10074,
+      "x_available": 9908,
+      "target_known": 9828,
+      "admitted": 9688,
+      "states": [
+        7386,
+        1411,
+        886,
+        5
+      ],
+      "full_window_fraction": 0.14419900908340214,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9979193700601628,
+        "rich": 0.9329681622167171
+      }
+    },
+    {
+      "date": "2026-05-21",
+      "role": "test",
+      "roots": 10074,
+      "x_available": 9922,
+      "target_known": 9844,
+      "admitted": 9732,
+      "states": [
+        7286,
+        1131,
+        1295,
+        20
+      ],
+      "full_window_fraction": 0.22379778051787916,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9985702542422641,
+        "rich": 0.9291807096862584
+      }
+    },
+    {
+      "date": "2026-05-22",
+      "role": "test",
+      "roots": 10074,
+      "x_available": 9903,
+      "target_known": 8356,
+      "admitted": 8217,
+      "states": [
+        6532,
+        642,
+        1039,
+        4
+      ],
+      "full_window_fraction": 0.04210782524035536,
+      "finite_fraction": {
+        "geometry": 1.0,
+        "micro": 0.9972930683774057,
+        "rich": 0.9228153016104823
+      }
+    }
+  ],
+  "families": {
+    "geometry": {
+      "features": 14,
+      "model_input_channels": 29
+    },
+    "micro": {
+      "features": 70,
+      "model_input_channels": 141
+    },
+    "rich": {
+      "features": 225,
+      "model_input_channels": 451
+    }
+  },
+  "feature_names": [
+    "bb1_position",
+    "bb1_log_half_ticks",
+    "bb1_spread_half",
+    "bb1_phase",
+    "bb3_position",
+    "bb3_log_half_ticks",
+    "bb3_spread_half",
+    "bb3_phase",
+    "bb6_position",
+    "bb6_log_half_ticks",
+    "bb6_spread_half",
+    "bb6_phase",
+    "minutes_since_london",
+    "spread_ticks",
+    "mbo__spread_ticks",
+    "mbo__displacement_1s",
+    "mbo__path_1s__signed_log1p",
+    "mbo__efficiency_1s",
+    "mbo__displacement_5s",
+    "mbo__path_5s__signed_log1p",
+    "mbo__efficiency_5s",
+    "mbo__displacement_15s",
+    "mbo__path_15s__signed_log1p",
+    "mbo__efficiency_15s",
+    "mbo__displacement_30s",
+    "mbo__path_30s__signed_log1p",
+    "mbo__efficiency_30s",
+    "mbo__displacement_60s",
+    "mbo__path_60s__signed_log1p",
+    "mbo__efficiency_60s",
+    "mbo__displacement_128s",
+    "mbo__path_128s__signed_log1p",
+    "mbo__efficiency_128s",
+    "mbo__imbalance_l1",
+    "mbo__depth_bid_1__signed_log1p",
+    "mbo__depth_bid_4__signed_log1p",
+    "mbo__depth_bid_12__signed_log1p",
+    "mbo__depth_ask_1__signed_log1p",
+    "mbo__depth_ask_4__signed_log1p",
+    "mbo__depth_ask_12__signed_log1p",
+    "mbo__trade_buy_1s__signed_log1p",
+    "mbo__trade_buy_5s__signed_log1p",
+    "mbo__trade_buy_30s__signed_log1p",
+    "mbo__trade_sell_1s__signed_log1p",
+    "mbo__trade_sell_5s__signed_log1p",
+    "mbo__trade_sell_30s__signed_log1p",
+    "mbo__trade_unknown_1s__signed_log1p",
+    "mbo__trade_unknown_5s__signed_log1p",
+    "mbo__trade_unknown_30s__signed_log1p",
+    "mbo__add_bid_1s__signed_log1p",
+    "mbo__add_bid_5s__signed_log1p",
+    "mbo__add_bid_30s__signed_log1p",
+    "mbo__add_ask_1s__signed_log1p",
+    "mbo__add_ask_5s__signed_log1p",
+    "mbo__add_ask_30s__signed_log1p",
+    "mbo__remove_bid_1s__signed_log1p",
+    "mbo__remove_bid_5s__signed_log1p",
+    "mbo__remove_bid_30s__signed_log1p",
+    "mbo__remove_ask_1s__signed_log1p",
+    "mbo__remove_ask_5s__signed_log1p",
+    "mbo__remove_ask_30s__signed_log1p",
+    "mbo__matched_fill_remove_bid_1s__signed_log1p",
+    "mbo__matched_fill_remove_bid_5s__signed_log1p",
+    "mbo__matched_fill_remove_bid_30s__signed_log1p",
+    "mbo__matched_fill_remove_ask_1s__signed_log1p",
+    "mbo__matched_fill_remove_ask_5s__signed_log1p",
+    "mbo__matched_fill_remove_ask_30s__signed_log1p",
+    "mbo__event_count_1s__signed_log1p",
+    "mbo__event_count_5s__signed_log1p",
+    "mbo__event_count_30s__signed_log1p",
+    "mbo__fft_mid_change_32s_mean",
+    "mbo__fft_mid_change_32s_power__signed_log1p",
+    "mbo__fft_mid_change_32s_entropy",
+    "mbo__fft_mid_change_32s_period4_8_power__signed_log1p",
+    "mbo__fft_mid_change_32s_period4_8_fraction",
+    "mbo__fft_mid_change_64s_mean",
+    "mbo__fft_mid_change_64s_power__signed_log1p",
+    "mbo__fft_mid_change_64s_entropy",
+    "mbo__fft_mid_change_64s_period4_8_power__signed_log1p",
+    "mbo__fft_mid_change_64s_period4_8_fraction",
+    "mbo__fft_mid_change_64s_period8_16_power__signed_log1p",
+    "mbo__fft_mid_change_64s_period8_16_fraction",
+    "mbo__fft_mid_change_128s_mean",
+    "mbo__fft_mid_change_128s_power__signed_log1p",
+    "mbo__fft_mid_change_128s_entropy",
+    "mbo__fft_mid_change_128s_period4_8_power__signed_log1p",
+    "mbo__fft_mid_change_128s_period4_8_fraction",
+    "mbo__fft_mid_change_128s_period8_16_power__signed_log1p",
+    "mbo__fft_mid_change_128s_period8_16_fraction",
+    "mbo__fft_mid_change_128s_period16_32_power__signed_log1p",
+    "mbo__fft_mid_change_128s_period16_32_fraction",
+    "mbo__fft_signed_trade_32s_mean",
+    "mbo__fft_signed_trade_32s_power__signed_log1p",
+    "mbo__fft_signed_trade_32s_entropy",
+    "mbo__fft_signed_trade_32s_period4_8_power__signed_log1p",
+    "mbo__fft_signed_trade_32s_period4_8_fraction",
+    "mbo__fft_signed_trade_64s_mean",
+    "mbo__fft_signed_trade_64s_power__signed_log1p",
+    "mbo__fft_signed_trade_64s_entropy",
+    "mbo__fft_signed_trade_64s_period4_8_power__signed_log1p",
+    "mbo__fft_signed_trade_64s_period4_8_fraction",
+    "mbo__fft_signed_trade_64s_period8_16_power__signed_log1p",
+    "mbo__fft_signed_trade_64s_period8_16_fraction",
+    "mbo__fft_signed_trade_128s_mean",
+    "mbo__fft_signed_trade_128s_power__signed_log1p",
+    "mbo__fft_signed_trade_128s_entropy",
+    "mbo__fft_signed_trade_128s_period4_8_power__signed_log1p",
+    "mbo__fft_signed_trade_128s_period4_8_fraction",
+    "mbo__fft_signed_trade_128s_period8_16_power__signed_log1p",
+    "mbo__fft_signed_trade_128s_period8_16_fraction",
+    "mbo__fft_signed_trade_128s_period16_32_power__signed_log1p",
+    "mbo__fft_signed_trade_128s_period16_32_fraction",
+    "mbo__fft_bid_add_32s_mean",
+    "mbo__fft_bid_add_32s_power__signed_log1p",
+    "mbo__fft_bid_add_32s_entropy",
+    "mbo__fft_bid_add_32s_period4_8_power__signed_log1p",
+    "mbo__fft_bid_add_32s_period4_8_fraction",
+    "mbo__fft_bid_add_64s_mean",
+    "mbo__fft_bid_add_64s_power__signed_log1p",
+    "mbo__fft_bid_add_64s_entropy",
+    "mbo__fft_bid_add_64s_period4_8_power__signed_log1p",
+    "mbo__fft_bid_add_64s_period4_8_fraction",
+    "mbo__fft_bid_add_64s_period8_16_power__signed_log1p",
+    "mbo__fft_bid_add_64s_period8_16_fraction",
+    "mbo__fft_bid_add_128s_mean",
+    "mbo__fft_bid_add_128s_power__signed_log1p",
+    "mbo__fft_bid_add_128s_entropy",
+    "mbo__fft_bid_add_128s_period4_8_power__signed_log1p",
+    "mbo__fft_bid_add_128s_period4_8_fraction",
+    "mbo__fft_bid_add_128s_period8_16_power__signed_log1p",
+    "mbo__fft_bid_add_128s_period8_16_fraction",
+    "mbo__fft_bid_add_128s_period16_32_power__signed_log1p",
+    "mbo__fft_bid_add_128s_period16_32_fraction",
+    "mbo__fft_ask_add_32s_mean",
+    "mbo__fft_ask_add_32s_power__signed_log1p",
+    "mbo__fft_ask_add_32s_entropy",
+    "mbo__fft_ask_add_32s_period4_8_power__signed_log1p",
+    "mbo__fft_ask_add_32s_period4_8_fraction",
+    "mbo__fft_ask_add_64s_mean",
+    "mbo__fft_ask_add_64s_power__signed_log1p",
+    "mbo__fft_ask_add_64s_entropy",
+    "mbo__fft_ask_add_64s_period4_8_power__signed_log1p",
+    "mbo__fft_ask_add_64s_period4_8_fraction",
+    "mbo__fft_ask_add_64s_period8_16_power__signed_log1p",
+    "mbo__fft_ask_add_64s_period8_16_fraction",
+    "mbo__fft_ask_add_128s_mean",
+    "mbo__fft_ask_add_128s_power__signed_log1p",
+    "mbo__fft_ask_add_128s_entropy",
+    "mbo__fft_ask_add_128s_period4_8_power__signed_log1p",
+    "mbo__fft_ask_add_128s_period4_8_fraction",
+    "mbo__fft_ask_add_128s_period8_16_power__signed_log1p",
+    "mbo__fft_ask_add_128s_period8_16_fraction",
+    "mbo__fft_ask_add_128s_period16_32_power__signed_log1p",
+    "mbo__fft_ask_add_128s_period16_32_fraction",
+    "mbo__fft_bid_remove_32s_mean",
+    "mbo__fft_bid_remove_32s_power__signed_log1p",
+    "mbo__fft_bid_remove_32s_entropy",
+    "mbo__fft_bid_remove_32s_period4_8_power__signed_log1p",
+    "mbo__fft_bid_remove_32s_period4_8_fraction",
+    "mbo__fft_bid_remove_64s_mean",
+    "mbo__fft_bid_remove_64s_power__signed_log1p",
+    "mbo__fft_bid_remove_64s_entropy",
+    "mbo__fft_bid_remove_64s_period4_8_power__signed_log1p",
+    "mbo__fft_bid_remove_64s_period4_8_fraction",
+    "mbo__fft_bid_remove_64s_period8_16_power__signed_log1p",
+    "mbo__fft_bid_remove_64s_period8_16_fraction",
+    "mbo__fft_bid_remove_128s_mean",
+    "mbo__fft_bid_remove_128s_power__signed_log1p",
+    "mbo__fft_bid_remove_128s_entropy",
+    "mbo__fft_bid_remove_128s_period4_8_power__signed_log1p",
+    "mbo__fft_bid_remove_128s_period4_8_fraction",
+    "mbo__fft_bid_remove_128s_period8_16_power__signed_log1p",
+    "mbo__fft_bid_remove_128s_period8_16_fraction",
+    "mbo__fft_bid_remove_128s_period16_32_power__signed_log1p",
+    "mbo__fft_bid_remove_128s_period16_32_fraction",
+    "mbo__fft_ask_remove_32s_mean",
+    "mbo__fft_ask_remove_32s_power__signed_log1p",
+    "mbo__fft_ask_remove_32s_entropy",
+    "mbo__fft_ask_remove_32s_period4_8_power__signed_log1p",
+    "mbo__fft_ask_remove_32s_period4_8_fraction",
+    "mbo__fft_ask_remove_64s_mean",
+    "mbo__fft_ask_remove_64s_power__signed_log1p",
+    "mbo__fft_ask_remove_64s_entropy",
+    "mbo__fft_ask_remove_64s_period4_8_power__signed_log1p",
+    "mbo__fft_ask_remove_64s_period4_8_fraction",
+    "mbo__fft_ask_remove_64s_period8_16_power__signed_log1p",
+    "mbo__fft_ask_remove_64s_period8_16_fraction",
+    "mbo__fft_ask_remove_128s_mean",
+    "mbo__fft_ask_remove_128s_power__signed_log1p",
+    "mbo__fft_ask_remove_128s_entropy",
+    "mbo__fft_ask_remove_128s_period4_8_power__signed_log1p",
+    "mbo__fft_ask_remove_128s_period4_8_fraction",
+    "mbo__fft_ask_remove_128s_period8_16_power__signed_log1p",
+    "mbo__fft_ask_remove_128s_period8_16_fraction",
+    "mbo__fft_ask_remove_128s_period16_32_power__signed_log1p",
+    "mbo__fft_ask_remove_128s_period16_32_fraction",
+    "context__day_age_minutes",
+    "context__context_age_seconds",
+    "context__day_coverage",
+    "context__day_from_open",
+    "context__day_from_high",
+    "context__day_from_low",
+    "context__day_vwap",
+    "context__day_range",
+    "context__day_log_volume",
+    "context__previous_known",
+    "context__previous_age_days",
+    "context__previous_coverage",
+    "context__previous_from_open",
+    "context__previous_from_close",
+    "context__previous_from_high",
+    "context__previous_from_low",
+    "context__previous_vwap",
+    "context__previous_range",
+    "context__combined_vwap",
+    "context__combined_range",
+    "context__volume_vs_previous",
+    "context__stft_price_b0",
+    "context__stft_price_b1",
+    "context__stft_price_b2",
+    "context__stft_price_entropy",
+    "context__stft_volume_b0",
+    "context__stft_volume_b1",
+    "context__stft_volume_b2",
+    "context__stft_volume_entropy"
+  ],
+  "feature_finite_fraction": [
+    0.9980422650166545,
+    0.9980422650166545,
+    0.9980422650166545,
+    0.9980422650166545,
+    0.9942701784571946,
+    0.9942701784571946,
+    0.9942701784571946,
+    0.9942701784571946,
+    0.988413517746454,
+    0.988413517746454,
+    0.988413517746454,
+    0.988413517746454,
+    1.0,
+    1.0,
+    0.9856864756358502,
+    0.9856864756358502,
+    0.9856864756358502,
+    0.8458269913749366,
+    0.9856754461429863,
+    0.9856754461429863,
+    0.9804143780468974,
+    0.9856561445304745,
+    0.9856561445304745,
+    0.9854631284053559,
+    0.9856230560518827,
+    0.9856230560518827,
+    0.985584452826859,
+    0.9855568790946992,
+    0.9855568790946992,
+    0.9855568790946992,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9856864756358502,
+    0.9856864756358502,
+    0.9856864756358502,
+    0.9856864756358502,
+    0.9856864756358502,
+    0.9856864756358502,
+    0.9856864756358502,
+    0.9856864756358502,
+    0.9856754461429863,
+    0.9856230560518827,
+    0.9856864756358502,
+    0.9856754461429863,
+    0.9856230560518827,
+    0.9856864756358502,
+    0.9856754461429863,
+    0.9856230560518827,
+    0.9856864756358502,
+    0.9856754461429863,
+    0.9856230560518827,
+    0.9856864756358502,
+    0.9856754461429863,
+    0.9856230560518827,
+    0.9856864756358502,
+    0.9856754461429863,
+    0.9856230560518827,
+    0.9856864756358502,
+    0.9856754461429863,
+    0.9856230560518827,
+    0.9856864756358502,
+    0.9856754461429863,
+    0.9856230560518827,
+    0.9856864756358502,
+    0.9856754461429863,
+    0.9856230560518827,
+    0.9856864756358502,
+    0.9856754461429863,
+    0.9856230560518827,
+    0.9856230560518827,
+    0.9856230560518827,
+    0.985581695453643,
+    0.9856230560518827,
+    0.985581695453643,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.6391149934925993,
+    0.6391149934925993,
+    0.6359908896388944,
+    0.6391149934925993,
+    0.6359908896388944,
+    0.46257417333950984,
+    0.46257417333950984,
+    0.46238115721439127,
+    0.46257417333950984,
+    0.46238115721439127,
+    0.46257417333950984,
+    0.46238115721439127,
+    0.27420146471665235,
+    0.27420146471665235,
+    0.27419594997022034,
+    0.27420146471665235,
+    0.27419594997022034,
+    0.27420146471665235,
+    0.27419594997022034,
+    0.27420146471665235,
+    0.27419594997022034,
+    0.9856230560518827,
+    0.9856230560518827,
+    0.9856202986786667,
+    0.9856230560518827,
+    0.9856202986786667,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9856230560518827,
+    0.9856230560518827,
+    0.9856230560518827,
+    0.9856230560518827,
+    0.9856230560518827,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9856230560518827,
+    0.9856230560518827,
+    0.9856202986786667,
+    0.9856230560518827,
+    0.9856202986786667,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9856230560518827,
+    0.9856230560518827,
+    0.9856202986786667,
+    0.9856230560518827,
+    0.9856202986786667,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9855486069750513,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    0.9854107383142523,
+    1.0,
+    1.0,
+    1.0,
+    0.9967518143515761,
+    0.9967518143515761,
+    0.9967518143515761,
+    0.9967518143515761,
+    0.9967518143515761,
+    0.9987095493349216,
+    1.0,
+    1.0,
+    1.0,
+    0.9980422650166545,
+    0.9980422650166545,
+    0.9980422650166545,
+    0.9980422650166545,
+    0.9980422650166545,
+    0.9980422650166545,
+    0.9980422650166545,
+    0.9980422650166545,
+    1.0,
+    0.9871947587849911,
+    0.9871947587849911,
+    0.9871947587849911,
+    0.9871947587849911,
+    0.9871947587849911,
+    0.9871947587849911,
+    0.9871947587849911,
+    0.9871947587849911
+  ],
+  "context": "64 five-second roots, TCN RF61=300 seconds; longer current/previous London summaries and M1 spectra are compressed, not full paths",
+  "event": "One fixed BB first-line crossing query and common known cohort for every family and risk plan",
+  "historical_exposure": "New relative to February scientific-v1. Some dates used by historical repository experiments; not never-inspected holdout"
+}

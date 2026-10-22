@@ -1,0 +1,65 @@
+{
+  "status": "COMPLETE",
+  "dataset_root": "data/derived/scientific_pipeline_v2/dataset",
+  "runs_root": "data\\derived\\scientific_pipeline_v2\\runs",
+  "config_sha256": "289bc6e31055a6bbdc8ee5fdc59b143dee7dba35ce01fd0daee5e409ebaed983",
+  "dataset_manifest_sha256": "8b924637e2e06c7744dbf8e73eae24dfff0f15cfd1aefe01799a31919792550a",
+  "runs": [
+    {
+      "run_id": "mlp_geometry_seed17",
+      "role": "development"
+    },
+    {
+      "run_id": "tcn_geometry_seed17",
+      "role": "development"
+    },
+    {
+      "run_id": "mlp_micro_seed17",
+      "role": "development"
+    },
+    {
+      "run_id": "tcn_micro_seed17",
+      "role": "development"
+    },
+    {
+      "run_id": "mlp_rich_seed17",
+      "role": "development"
+    },
+    {
+      "run_id": "tcn_rich_seed17",
+      "role": "development"
+    },
+    {
+      "run_id": "tcn_micro_seed29",
+      "role": "confirmation"
+    }
+  ],
+  "primary_run_id": "tcn_micro_seed17",
+  "confirmation_run_id": "tcn_micro_seed29",
+  "selection": {
+    "criterion": "validation_joint_nll",
+    "selected_run_id": "tcn_micro_seed17",
+    "validation_scores": {
+      "mlp_geometry_seed17": 0.7533521944113076,
+      "tcn_geometry_seed17": 0.748286949936387,
+      "mlp_micro_seed17": 0.7435914146177888,
+      "tcn_micro_seed17": 0.7408420959812018,
+      "mlp_rich_seed17": 0.7451332328599994,
+      "tcn_rich_seed17": 0.7457110852860961
+    },
+    "test_and_economics_used_for_selection": false,
+    "tie_break": "lexicographic run_id",
+    "source_sha256": {
+      "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\run_opportunity_v2.py": "b368863e006144a72f8b43c06a3492f5e641e37247dcb275d16ac2e1def30297",
+      "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v2\\learning.py": "038ecd83bb45468c426d1312efd6a25264368a63712154405bcc2786a1936ed3",
+      "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v2\\evaluation.py": "a8009c9d8e1c6d35c294f822c108d85c1612148db905620dd7bbc8cfeaf3ecac",
+      "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research\\models.py": "0fe6aad6eb274140e89f416c947235b35f72607ddf3c1ecfa9b112a537f77d69",
+      "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research\\losses.py": "82e66491dbf53051a3179be1adc861f944c2d3cbd39be08592f6ff1f26a7fc16",
+      "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research\\training.py": "e8a0fc7d67a3d44de302a50814fd83e5fa1ba8cc575dcba24c648901c3c51dcf"
+    },
+    "dataset_manifest_sha256": "8b924637e2e06c7744dbf8e73eae24dfff0f15cfd1aefe01799a31919792550a"
+  },
+  "primary_seed": 17,
+  "confirmation_role": "Prespecified seed replication; not a second test-selected winner",
+  "wall_seconds": 1795.3618650007993
+}

@@ -1,0 +1,151 @@
+{
+  "schema": "sol61_scientific_pipeline_v2_visual_audit_v1",
+  "status": "COMPLETE",
+  "auditor": "Sol 6.1 independent trader and ML review",
+  "verdict": "PASS_DESCRIPTIVE_WITH_LIMITATIONS_NO_ECONOMIC_ADMISSION",
+  "economic_admission": false,
+  "scope": "Read-only code and measurement review; all ten PNGs actually inspected with view_image, including final revised 02/03a/03b/05 and new 07. No training, source edits or independent full raw replay in this audit.",
+  "source_sha256": {
+    "index.html": "77a97c949028bc8094b41055de01a7e69a22d2e8178b9ae1855393d27a2d5552",
+    "visual_receipt.json": "72b32ca852ca87559d58a0834e5c45f1645a0a996e6419c0e634ca4cc5a9f015",
+    "report_metrics.json": "4d1f7aaff489a8145b3949025667400c97500f495e54e01788513308b31fd45f",
+    "statistical_audit.json": "c9fdc857b9d994ff18be8b5a53bbd1c4de9618f0fbeaad3770f5727307757fc0",
+    "crossing_case.json": "2b23ae4e6db6f051119105d41b0d4b1474db8cff8eb7e5c4ca13861fff588a59",
+    "model_selection.json": "54e22ea63b5502adc85086be80517a9d637b741d492669e5750f7d7f3c4e8007",
+    "dataset_diagnostics.json": "7df94267b66563c2eab52fa4b12e380af2d384e90a20213a3e53e244c32dd973"
+  },
+  "figures_actually_seen": [
+    {
+      "name": "01_features_and_cohorts.png",
+      "sha256": "a2836005a755c6338815928767e159e2de51fab11171820a986c4f7d19928e1d",
+      "actually_viewed": true,
+      "method": "view_image"
+    },
+    {
+      "name": "02_learning_by_family.png",
+      "sha256": "9f1f668f8dda7d3572a22db1646b90ebcd115e10db0fc8738e0f388c7cf48ba7",
+      "actually_viewed": true,
+      "method": "view_image"
+    },
+    {
+      "name": "03_selection_and_test.png",
+      "sha256": "5e7105e6a40d10e296238f7e50bebeb6e398c861b2d818d751a5eacddc6cf37b",
+      "actually_viewed": true,
+      "method": "view_image"
+    },
+    {
+      "name": "03a_test_open_may11.png",
+      "sha256": "49476f6dbd226358bf385f35f35439fad702b7373d143302f06d94b9972e6d49",
+      "actually_viewed": true,
+      "method": "view_image"
+    },
+    {
+      "name": "03b_test_afternoon_may18.png",
+      "sha256": "eabf3cd6caeeb2a04af25203271b3a49f4ec818420684da3dd79c49d229cd4dc",
+      "actually_viewed": true,
+      "method": "view_image"
+    },
+    {
+      "name": "04_temporal_vs_loss_gradients.png",
+      "sha256": "00714a63d23b8eb221f1ae90a24b2e968393e3d360d651956dd78139dea09df1",
+      "actually_viewed": true,
+      "method": "view_image"
+    },
+    {
+      "name": "05_gradient_mass_and_alignment.png",
+      "sha256": "aa03609c8178361c00f8b4e692d1f2aba372eb369348c63e125732d7785a7257",
+      "actually_viewed": true,
+      "method": "view_image"
+    },
+    {
+      "name": "06_risk_and_execution.png",
+      "sha256": "5710e2fe180af4fa5c51dfd8a0ee0adf477ee9d50b0d1dd661376f45efb69c2e",
+      "actually_viewed": true,
+      "method": "view_image"
+    },
+    {
+      "name": "07_context_history.png",
+      "sha256": "859506b52c400b38197d66ce8da381a842891719eae0cb1c6d2f8fa92f6d3d47",
+      "actually_viewed": true,
+      "method": "view_image"
+    },
+    {
+      "name": "crossing_case.png",
+      "sha256": "879af343658ecac940104041b888b83dfbd6cb79a36a4afc5126706cb0cbc718",
+      "actually_viewed": true,
+      "method": "view_image"
+    }
+  ],
+  "concrete_findings": [
+    "Primary TCN micro seed17 is selected by validation joint NLL; seed29 is a prespecified replication. Test results of other candidates do not authorize changing that choice. Shared cohorts and TRAIN-only label-independent scaler support matched family comparisons.",
+    "Primary TEST joint NLL 0.7117436585 improves on TRAIN prior 0.7655306133 and secondary VAL-only prior 0.7526228015. Event AUC 0.685116 is replicated near 0.685042. Conditional direction NLL 0.731280 improves only modestly on 0.736703 TRAIN prior / 0.737254 VAL prior: most joint gain is event prediction, not demonstrated trading direction.",
+    "Fixed May11 and May18 scenes display jagged observed targets and less abrupt nonconstant forecasts. Lower probability total variation does not prove a smooth teacher, precise timing, or predictive skill by itself. BCE dL/dz=pE-E is a loss derivative, not a temporal target derivative.",
+    "Head-specific difficulty is essential: event easy examples are 27.91% with 10.57% event absolute gradient mass; conditional direction is 84.07% intermediate. Joint-hard groups in figure05 include the pE factor and are not an independent demonstration that direction itself is hard.",
+    "Primary micro receives 70 value channels plus masks/row flag, not rich-only London or spectral blocks. Rich225 does not win validation; channel presence is not evidence of learned utilization, and this comparison alone does not isolate individual block benefit.",
+    "Actual TCN TEST history median is20 seconds; only15.235% have full61-token RF. Maximum300 seconds is not typical history. Conservative source publication/admission resets need not mean physical quote failure. Current-token rolling micro statistics and BB geometry still summarize older information.",
+    "Risk retention in figure06 conditions on future-observed favorable crossing labels and is an oracle diagnostic. Wider stops improve retention but also alter exposure and payoff; retention alone proves neither stop misspecification nor positive edge.",
+    "Twelve non-WAIT CAL combinations complete without censoring: three sufficient-trade candidates are negative, nine have too few trades. Both selected policies WAIT and make zero TEST trades; zero cash from inactivity is not a demonstrated profitable equity strategy.",
+    "The fixed crossing case correctly has NONE despite SHORT MFE3.0 exceeding G2.8: no qualified first-line crossing within300seconds. LONG cost6 ends+0.10 with NONE. These are consistent with this specific target and disprove interpreting NONE as no favorable move or no possible profitable outcome.",
+    "Final figures are readable. Revised timeline legends say crossing event rather than success, figure02 states maximum history, figure05 explains joint difficulty, and HTML explicitly distinguishes primary micro from rich and maximum from actual history."
+  ],
+  "numerical_or_visual_discrepancies": [],
+  "remaining_limitations": [
+    "Calibration high-tail bins have counts as low as3 or a singleton; connected reliability points do not establish stable tail calibration or trade-threshold support.",
+    "Only10 TEST days, overlapping5-second origins and300-second futures; row counts are not independent observations. Day bootstrap is descriptive and does not remove adjacent-day dependence, historical exposure, or selection uncertainty.",
+    "Forecast curves are displayed on5-second roots; the plots cannot establish subsecond signal timing or execution quality. No depth, queue, market-impact or live/cTrader parity claim follows.",
+    "Shared-encoder gradient cosines vary with seed/checkpoint. A negative probe cosine does not prove separate networks would improve performance; easy-gradient mass alone does not justify focal reweighting.",
+    "TEST is not a sealed unseen market: all candidate test summaries are computed while the mechanical selection uses VAL only, and historical dates may have appeared in earlier repository work.",
+    "MAE-MFE bars are ranges, not reconstructed trajectories; closed-cash drawdown excludes intratrade mark-to-market."
+  ],
+  "next_priority": [
+    "Audit why conservative publication/admission boundaries truncate real history; preregister any causal continuity repair with unchanged source integrity, then compare matched cohorts without relaxing masks retrospectively.",
+    "Keep crossing E/D prediction separate from executed return objectives. Study whether calibrated direction and executable payoff conditional on causal state justify action under costs, using new frozen evaluation rather than tuning this TEST.",
+    "Use head-specific probability/gradient diagnostics before proposing focal/custom loss; controlled ablations must measure calibration and economics, not only smoother scores or lower training loss."
+  ],
+  "head_specific_test_difficulty": {
+    "scope": "TEST known feature-available roots; diagnostics only, no loss or fit changed",
+    "event_definition": "E true probability is pE for positive Y, 1-pE for NONE; pE=1-p_none; mass is absolute saved dL/dz_event",
+    "direction_definition": "D true probability is p_true_joint/pE only for positive Y (three-way LONG_ONLY/SHORT_ONLY/BOTH); mass is saved conditional-direction gradient L2. Tiny float32 roundtrip deviations are clipped to [0,1].",
+    "event": {
+      "hard_true_head_probability_lt_0.4": {
+        "count": 16732,
+        "fraction_head_examples": 0.17508135653520568,
+        "mean_true_head_probability": 0.27009736012000374,
+        "gradient_mass_fraction": 0.3578985941576307
+      },
+      "intermediate_true_head_probability_0.4_to_0.8": {
+        "count": 52163,
+        "fraction_head_examples": 0.5458264882229221,
+        "mean_true_head_probability": 0.6490854664583197,
+        "gradient_mass_fraction": 0.5364276015661219
+      },
+      "easy_true_head_probability_ge_0.8": {
+        "count": 26672,
+        "fraction_head_examples": 0.2790921552418722,
+        "mean_true_head_probability": 0.8648037767528272,
+        "gradient_mass_fraction": 0.10567380427624741
+      }
+    },
+    "direction_given_event": {
+      "hard_true_head_probability_lt_0.4": {
+        "count": 3838,
+        "fraction_head_examples": 0.15864748677248677,
+        "mean_true_head_probability": 0.33901544450521676,
+        "gradient_mass_fraction": 0.20931131379743792
+      },
+      "intermediate_true_head_probability_0.4_to_0.8": {
+        "count": 20339,
+        "fraction_head_examples": 0.8407324735449735,
+        "mean_true_head_probability": 0.5317912170253125,
+        "gradient_mass_fraction": 0.7904600049251042
+      },
+      "easy_true_head_probability_ge_0.8": {
+        "count": 15,
+        "fraction_head_examples": 0.0006200396825396825,
+        "mean_true_head_probability": 0.8158327164844053,
+        "gradient_mass_fraction": 0.0002286812774578948
+      }
+    },
+    "caution": "Existing joint-probability difficulty groups remain unchanged. Joint-hard does not imply conditional-direction-hard; separate head probabilities are needed to discuss focal loss."
+  }
+}
