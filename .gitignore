@@ -154,3 +154,9 @@ credentials.json
 !/reports/crossing_map_target_v1/*.json
 !/reports/crossing_map_target_v1/*.png
 !/reports/crossing_map_target_v1/index.html
+!/reports/opportunity_loss_research_v1/
+/reports/opportunity_loss_research_v1/*
+!/reports/opportunity_loss_research_v1/*.json
+!/reports/opportunity_loss_research_v1/*.md
+!/reports/opportunity_loss_research_v1/*.png
+!/reports/opportunity_loss_research_v1/index.html

@@ -1,0 +1,67 @@
+{
+  "version": "OPPORTUNITY_LOSS_RESEARCH_V1",
+  "status": "THEORY_AND_ANALYTICAL_PROBES_COMPLETE_FIT_PROTOCOL_PROPOSED",
+  "immutable_basis": "crossing_map_target_v1 remains unchanged; its exposed development week is not a fresh holdout",
+  "question": "Can factorization, proper probability losses and shared/private representations improve learning efficiency without changing an opportunity map into an unjustified OPEN label?",
+  "primary_target": "Keep BB M1/M3/M6 amplitude >=2R by 300s, NONE/LONG_ONLY/SHORT_ONLY/BOTH, the frozen decision-time R and maturity rules. VWAP and M5 are separate ablations, not a pooled retrospective winner.",
+  "semantic_constraints": [
+    "At a common checkpoint, NL-NS=2*delta(mid); NL+NS=-(entry_spread+exit_spread+2*fee). Net sides are not exact negatives.",
+    "After searching different future checkpoints, both side opportunities may exist; pS is not 1-pL.",
+    "An actually complementary side task does not automatically cause gradient conflict in a shared encoder.",
+    "A favorable checkpoint is not an executable exit rule or account value."
+  ],
+  "probability_baseline": {
+    "loss": "BCE(E)+1[E=1]CE(L_ONLY,S_ONLY,BOTH|E), averaged over a common admitted root cohort",
+    "unconditional_marginals": "pL=pE*(qL+qB); pS=pE*(qS+qB); pNONE=1-pE",
+    "alternative": "Two Bernoulli side heads learn marginals but do not identify their joint probability or BOTH. Do not assume conditional independence without evidence.",
+    "direction_mask": "Use observed mature target E to define conditional supervision. Do not multiply direction CE by the trainable predicted pE: lowering pE could avoid that loss.",
+    "censoring": "Initial BCE/CE positives and negatives share the same fully mature cohort. Partial-witness facts are retained, not mixed selectively with mature negatives. Survival treatment needs specified censoring assumptions."
+  },
+  "loss_candidates": {
+    "baseline": "Unweighted BCE/CE; no inverse-frequency correction by default",
+    "proper_hybrid": "(1-lambda)*BCE+lambda*Brier, lambda in {0,0.25,0.5}; choose on internal chronological validation. Current analytic probe uses lambda=0.5.",
+    "proper_confidence_probe": "For epsilon=1/3, BCE-4/3*(p-y)^2 has logit gradient (p-y)*(1/3+2/3*(2p-1)^2). This remains proper but suppresses near-half-probability gradients; no benefit on market data is established.",
+    "focal": "Gamma in {0,0.5,1,2}; begin with equal class weights. Only after gradient-mass evidence, compare positive/negative weight ratio {0.5,1,2}, normalized by mean FIT weight. Gamma and class weights selected jointly; never stack uncorrected oversampling and large class weights.",
+    "focal_schedule": "Optional controlled ablation: begin with gamma=0 then ramp to selected gamma during first10% of steps. This is a hypothesis, not a literature-guaranteed optimum. Always retain a fixed-gamma comparator.",
+    "focal_calibration": "Use raw scores for ranking only until probability calibration is checked on a separate chronological calibration set. Temperature or logistic calibration is not guaranteed to undo all misspecification. Do not apply focal to survival hazards by default.",
+    "auxiliary": "Line-addressed survival NLL and conditional net/MAE quantile losses; optional monotone gain-threshold ordinal heads. Do not impose ordinal order on named crossing lines or mutually exclusive competition on all line events.",
+    "not_default": "ASL/GCE, future-profit weights, label smoothing, ranking-only loss and temporal smoothing require a separately specified estimand; they are not automatic noise removal."
+  },
+  "sharing_candidates": [
+    "One shared encoder with coherent E/D and time/risk heads",
+    "One weight-shared side-conditioned encoder with explicit mirrored feature contract",
+    "Shared early representation plus private side adapters or towers",
+    "Two independent encoders, both trained with all relevant positive AND negative roots"
+  ],
+  "split_model_trigger": "Persistent harmful per-task gradients together with repeated held-out degradation versus side-specific fits after weighting/capacity controls. Negative cosine alone is insufficient. Compare GradNorm for magnitude imbalance, PCGrad for conflict, private towers for different useful representations.",
+  "context_and_backbones": {
+    "input_contract": "Matched fast flow/DOM history, slow causal M1 context through current and previous London session, VWAP/band/STFT context, availability masks and elapsed time. Equal target definitions and data clocks for CNN/TCN/LSTM/Mamba-2.",
+    "CNN": "Causal local receptive field must be computed; book-side filters and multiscale branches can be shared. A local model is a local-context control, not an equal long-context comparison.",
+    "TCN": "Causal dilated convolutions; record exact receptive field. With two stride1 k3 convolutions per block and dilations 1..2^(B-1), R=1+4*(2^B-1) tokens.",
+    "LSTM": "Record sequence length, burn-in, state carry/reset and gradient truncation. Existing MixedPlayer has 900s fast and up to2760 M1 states with causal retrieval, but is not a crossing-target benchmark.",
+    "Mamba2": "Record actual Mamba-2 version/kernel, state dimension, chunk/state-carry semantics, masks and numerical precision. Long streaming memory is compressed; it is not a guarantee of remembering yesterday or a trading advantage."
+  },
+  "opportunity_utilization": {
+    "semantic_contract": "Same opportunity meaning across all architectures",
+    "three_roles": "Auxiliary representation supervision; coherent joint probability factor; optional high-recall inference router. Report which role is active.",
+    "model_specific": "Calibrator, operating threshold, head gradient scale, state/receptive-field settings and compute budget may differ; targets must remain fixed for comparison.",
+    "routing": "No early hard predicted gate during fitting. If a separate model consumes opportunity predictions, use chronological out-of-fold predictions for its FIT inputs, never future true E or in-sample scores presented as held-out.",
+    "adaptation": "Update calibrators or policy thresholds only from already mature past outcomes; account for target delay and changed selection prevalence. No automatic online updating implemented here."
+  },
+  "staged_comparison": [
+    "Freeze chronology, coverage, target/maturity and geometric baseline; count repeated physical events inside FIT only",
+    "Compare flat four-state CE, coherent E/D, and two marginal heads on one fixed encoder and identical cohorts",
+    "Compare shared, side-conditioned, private-tower and separate models with matched total parameters/compute; also report equal-per-side-capacity diagnostic",
+    "Introduce focal or proper hybrid only on the best-supported setup; isolate loss from target and architecture changes",
+    "Compare CNN/TCN/LSTM/Mamba-2 with matched accessible context and trained budget; report latency/VRAM and OOS signal use",
+    "Freeze calibration and thresholds before sequential account replay; compare after-cost equity separately"
+  ],
+  "measurements": [
+    "Proper NLL/Brier, classwise and sidewise reliability, PR-AUC plus prevalence, recall at matched acceptance rate, repeated-event/day clustered uncertainty; report both natural-clock and event-weighted populations",
+    "Head/block gradient norms, paired-task gradient cosine distributions, gradient mass by easy/hard/near-threshold/repeated-event cohorts, not only scalar loss",
+    "Prediction stability around events, time CDF calibration, quantile coverage and gain-before-stop ordering",
+    "Past-only removal or permutation ablations of previous-session context, fast flow, bands and STFT; gradient/saliency alone is insufficient",
+    "Accepted-set calibration and net/MAE under causal exit rules, trade count, costs, drawdown and capital growth"
+  ],
+  "admission": "No trained architecture ranking, no measured negative transfer, no optimal gamma, no profitable policy established by this research."
+}
