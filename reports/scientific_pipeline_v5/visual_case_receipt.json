@@ -1,0 +1,182 @@
+{
+  "rule": "For seed17 TEST, earliest completed base cost2 primary-retention ledger entry per NONE, WRONG_SIDE, CORRECT_RISK_FIRST, CORRECT_SAFE bucket; plot even if uninteresting. No PnL ranking.",
+  "cases": [
+    {
+      "bucket": "CORRECT_RISK_FIRST",
+      "date": "2026-08-24",
+      "t_ns": "1787571315000000000",
+      "root_index": 154413,
+      "source_quote_parts": [
+        {
+          "root": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_028\\capture_038000",
+          "key": "member_028/capture_038000",
+          "start_ns": 1787522400000000000,
+          "end_ns": 1787605200000000000,
+          "quote_file": {
+            "bytes": 3846547,
+            "sha256": "f8e5412b2bac29bb0e11d60fe2e40a5ef4091aa717fe4e164a12184493ac307a"
+          },
+          "source_sha256": "0e9047e8683af70a0e367efceac6eaae102d4183c71506c6857c7cdd23150d66",
+          "route": [
+            1,
+            41271,
+            22
+          ]
+        },
+        {
+          "root": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_029\\capture_039000",
+          "key": "member_029/capture_039000",
+          "start_ns": 1787522400000000000,
+          "end_ns": 1787605200000000000,
+          "quote_file": {
+            "bytes": 99569152,
+            "sha256": "ebe9c02c85b89c5a88efc21c3d478099ddbc54c1b50e3ad15bbf4880803c1528"
+          },
+          "source_sha256": "a375ef169670c086920ec1baa3d658d5841fdaa33c5605bd0160734fa2db6ba0",
+          "route": [
+            1,
+            41271,
+            22
+          ]
+        }
+      ],
+      "actual_exit_ns": "1787571327593490382",
+      "witness_ns": "1787571360001535355",
+      "full_quote_rows": 108429,
+      "file": "08_trade_1_correct_risk_first.png"
+    },
+    {
+      "bucket": "NONE",
+      "date": "2026-08-24",
+      "t_ns": "1787571350000000000",
+      "root_index": 154420,
+      "source_quote_parts": [
+        {
+          "root": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_028\\capture_038000",
+          "key": "member_028/capture_038000",
+          "start_ns": 1787522400000000000,
+          "end_ns": 1787605200000000000,
+          "quote_file": {
+            "bytes": 3846547,
+            "sha256": "f8e5412b2bac29bb0e11d60fe2e40a5ef4091aa717fe4e164a12184493ac307a"
+          },
+          "source_sha256": "0e9047e8683af70a0e367efceac6eaae102d4183c71506c6857c7cdd23150d66",
+          "route": [
+            1,
+            41271,
+            22
+          ]
+        },
+        {
+          "root": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_029\\capture_039000",
+          "key": "member_029/capture_039000",
+          "start_ns": 1787522400000000000,
+          "end_ns": 1787605200000000000,
+          "quote_file": {
+            "bytes": 99569152,
+            "sha256": "ebe9c02c85b89c5a88efc21c3d478099ddbc54c1b50e3ad15bbf4880803c1528"
+          },
+          "source_sha256": "a375ef169670c086920ec1baa3d658d5841fdaa33c5605bd0160734fa2db6ba0",
+          "route": [
+            1,
+            41271,
+            22
+          ]
+        }
+      ],
+      "actual_exit_ns": "1787571650520940691",
+      "witness_ns": "0",
+      "full_quote_rows": 94321,
+      "file": "08_trade_2_none.png"
+    },
+    {
+      "bucket": "WRONG_SIDE",
+      "date": "2026-08-24",
+      "t_ns": "1787574790000000000",
+      "root_index": 155108,
+      "source_quote_parts": [
+        {
+          "root": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_028\\capture_038000",
+          "key": "member_028/capture_038000",
+          "start_ns": 1787522400000000000,
+          "end_ns": 1787605200000000000,
+          "quote_file": {
+            "bytes": 3846547,
+            "sha256": "f8e5412b2bac29bb0e11d60fe2e40a5ef4091aa717fe4e164a12184493ac307a"
+          },
+          "source_sha256": "0e9047e8683af70a0e367efceac6eaae102d4183c71506c6857c7cdd23150d66",
+          "route": [
+            1,
+            41271,
+            22
+          ]
+        },
+        {
+          "root": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_029\\capture_039000",
+          "key": "member_029/capture_039000",
+          "start_ns": 1787522400000000000,
+          "end_ns": 1787605200000000000,
+          "quote_file": {
+            "bytes": 99569152,
+            "sha256": "ebe9c02c85b89c5a88efc21c3d478099ddbc54c1b50e3ad15bbf4880803c1528"
+          },
+          "source_sha256": "a375ef169670c086920ec1baa3d658d5841fdaa33c5605bd0160734fa2db6ba0",
+          "route": [
+            1,
+            41271,
+            22
+          ]
+        }
+      ],
+      "actual_exit_ns": "1787574790829835863",
+      "witness_ns": "0",
+      "full_quote_rows": 37880,
+      "file": "08_trade_3_wrong_side.png"
+    },
+    {
+      "bucket": "CORRECT_SAFE",
+      "date": "2026-08-25",
+      "t_ns": "1787646270000000000",
+      "root_index": 162198,
+      "source_quote_parts": [
+        {
+          "root": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_029\\capture_039000",
+          "key": "member_029/capture_039000",
+          "start_ns": 1787608800000000000,
+          "end_ns": 1787691600000000000,
+          "quote_file": {
+            "bytes": 99569152,
+            "sha256": "ebe9c02c85b89c5a88efc21c3d478099ddbc54c1b50e3ad15bbf4880803c1528"
+          },
+          "source_sha256": "a375ef169670c086920ec1baa3d658d5841fdaa33c5605bd0160734fa2db6ba0",
+          "route": [
+            1,
+            41271,
+            22
+          ]
+        },
+        {
+          "root": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_030\\capture_040000",
+          "key": "member_030/capture_040000",
+          "start_ns": 1787608800000000000,
+          "end_ns": 1787691600000000000,
+          "quote_file": {
+            "bytes": 86563354,
+            "sha256": "06b8c029938631cfd1e811bf0fef266e5fccf442259a946dd63012380cf3d395"
+          },
+          "source_sha256": "5d1df6e2aa90616a0f9fb6225cda773fb6bbc6ec4710b70a5da6102467db9b1b",
+          "route": [
+            1,
+            41271,
+            22
+          ]
+        }
+      ],
+      "actual_exit_ns": "1787646291686488878",
+      "witness_ns": "1787646291586439363",
+      "full_quote_rows": 52606,
+      "file": "08_trade_4_correct_safe.png"
+    }
+  ],
+  "missing_buckets": []
+}

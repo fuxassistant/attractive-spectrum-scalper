@@ -1,0 +1,2991 @@
+{
+  "status": "COMPLETE",
+  "experiment": "SCIENTIFIC_PIPELINE_V5",
+  "config_sha256": "332dfab60c496846ee575b77a82d1ca99add7003364e9715931715a11c5af020",
+  "dataset_manifest_sha256": "bf0f120d0204b912e60f5c11c1c0dd1d6bc2f29d9c867f4a53614266784fa26a",
+  "git_branch": "codex/opportunity-risk-filter-v5",
+  "git_head_before_evidence_commit": "50f87ecfe7e3be44c08bdc821a522d931863de57",
+  "tests_passed": 292,
+  "test_files": 25,
+  "visual_images": 15,
+  "independent_economic_replays": 252,
+  "raw_risk_order_probes": 72,
+  "source_replay_days": 3,
+  "data_days": 20,
+  "roots": 201480,
+  "admitted_known": 194493,
+  "fitted_filters": 2,
+  "frozen_base_models": 2,
+  "report_files": {
+    "01_learning.png": "5420ce91fe248bbde9642d398d365ff1f099136888bc95c43d2e5c7c1a0f441d",
+    "02_targets_gradients.png": "ab6c9cb47df291fd8875852e4baa45954567c97c688e1124f22862fd10dd34bf",
+    "03_retention_tradeoff.png": "a97fc101a4cdc0c156c73a3e72269fcb51a7fc2215f8277fe50255281eeaedb0",
+    "04_false_entries.png": "129b50c787a8ec477827829fa487d59dd49eed8f01cb94cfa73a9b18aeb984d7",
+    "05_reliability.png": "e8ab26ccd65df479d84f8d8bb7bc91072c19b9ae062deb828ac0fb705d79e6a8",
+    "06_economics.png": "520996437e098c730cf483f2e5ce73294717e8f4f6bc8e8d9b0bd592ae66c5d9",
+    "07_scene_17_1.png": "0992868dd4b7b68a5523f2737513dad3010b05a7d69a41d33c247e1c86a6808f",
+    "07_scene_17_2.png": "70a3c2a7c953c253db88214e77c1978f032f5dcae373213bcc1fac86043b259c",
+    "07_scene_29_1.png": "8304c1080ecc669e41abf18e870bb89c8527166c6a082ba174ce732faa81d80a",
+    "07_scene_29_2.png": "9a6fbe07edc60f0451ad8cb675aec81af521b468701aab61f3fa2dfee9d5ed53",
+    "08_trade_1_correct_risk_first.png": "7c3bb076a92448cd65c1ef44d080da2d25dd29fe93b2d011b26d8f8f8ca6f1de",
+    "08_trade_2_none.png": "b36b270e335e2e05650f58fb618b394ad7a0211d0a20d1622cefae866105211b",
+    "08_trade_3_wrong_side.png": "931edd70e5aeeeeff6ddc215a8b5dbd980a0cca907133cf645a956a33e45967c",
+    "08_trade_4_correct_safe.png": "e46d46d82d004566a34265246d987f0bd2d87881278c6bab67406b070a9d1828",
+    "09_candidate_funnel.png": "efd8056cd9ee369746484617024eafa6c159ff115a0daa36e6936b68690ae622",
+    "causal_verification.json": "c4387a69f1e8c1aada94944af07986a9b55716b78e2d141921b12746a59f27cc",
+    "data_admission.json": "0d631eaa69c2e917b341574fa7a6089f3a266e762b86fc1ab4e674e84d3dbf5c",
+    "decision_findings.json": "7067edc5d1ce5530051ceb6a9e90f0d067a595326ccfd5b183be1f1c4378f402",
+    "economic_audit.json": "d714473f340894d7691b166bd508b8c6d5bc22973bebea5fa9f86e6c846f0b78",
+    "evaluation.json": "6454529da7d557b6a7ff1433bbad13bb997fa64a22c512fd394d239e040f64d8",
+    "index.html": "19c847f5e35b58812c1b28cae174b4ab820c782b0fe82f2fa675fa3c070e1288",
+    "learning_audit.json": "473bb22528e5c189e358c50636f576aea14f9a49a0bdb0eedbbdd92f6c246f04",
+    "paired_diagnostics.json": "bb952b3a4a09c677dc1912bab7c19cca268a02ca48eb2e410b294e869a57cf53",
+    "sol61_visual_audit.json": "4eacbae42d877fe6379d29496821b2e40ad5401d006a25e5e734f07570d2c927",
+    "source_inventory.json": "c88a435a622c51e4aba4e829cad375e38aa53a11e7d2f8ae9dfc43aa26a98796",
+    "suite_summary.json": "7c7fa32d247a61ea5a8a2e7e0179d8715e84a63bb50546a13659b8d231a1f8d8",
+    "test_receipt.json": "07362eb3890bb797e2f0ed1907090b14a204668a44c81a487e5b1cf8b2e17799",
+    "visual_case_receipt.json": "01322cfa308fcd0394cdcce0cbf3e3491d8c9c051c47de3bdb73c3b25c62bd4a",
+    "visual_manifest.json": "3c22ce90671958b1b360aae56c91d652a1dfae0ee8384b1a74966bf3ed63d42d"
+  },
+  "verified_unique_bound_files": 587,
+  "bound_files": {
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\configs\\research\\opportunity_pipeline_v5.json": {
+      "sha256": "332dfab60c496846ee575b77a82d1ca99add7003364e9715931715a11c5af020",
+      "size": 7912,
+      "mtime_ns": "1792698278042675300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\finalize_opportunity_v5.py": {
+      "sha256": "f4f73e7c92ee4af598cffdf6a0617cd88b419d53c1251e7f10793686ed543ed6",
+      "size": 7590,
+      "mtime_ns": "1792700473143582900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\manifest.json": {
+      "sha256": "bf0f120d0204b912e60f5c11c1c0dd1d6bc2f29d9c867f4a53614266784fa26a",
+      "size": 2565535,
+      "mtime_ns": "1792698355218699500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-07-30.json": {
+      "sha256": "5ed54bed14e3d0e9a6f66b9c39cfa6cbfad05d32a20f8c27026523e2a1fd1a6a",
+      "size": 115996,
+      "mtime_ns": "1792698291162948800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-07-30_roots.parquet": {
+      "sha256": "2ca99d200061f2e713eade2a8e47451f792d3cad9b3e929e01f530cbcd06ec16",
+      "size": 1132659,
+      "mtime_ns": "1792698290929138500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-07-30_scene.parquet": {
+      "sha256": "b57dc200fd94f4dfb008155f8255937dccb87caccbcb13d7ae6fc6b27ca0f572",
+      "size": 574098,
+      "mtime_ns": "1792698290949437500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-07-30_bank.parquet": {
+      "sha256": "162b285a37e0372a31b9d89af613978f6e2f49ac072740a35fc7b19a4c55fdaa",
+      "size": 476414,
+      "mtime_ns": "1792698290972434000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-07-30_map.parquet": {
+      "sha256": "3a7a7e9e0f6e98a18f4c1633621849ac7dfd51be819bb0f944f3ee6f2c4672da",
+      "size": 1769765,
+      "mtime_ns": "1792698291053437700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-07-30_execution.parquet": {
+      "sha256": "ff62cd7f12c2600a46399401665d0777d1fed70bc134d5868d91e4f1f27e04ce",
+      "size": 1937215,
+      "mtime_ns": "1792698291128510900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-07-30_x.npy": {
+      "sha256": "ae065eab132c48107c34c8375a39988cbb4847cf05abdfe2dcdc14456ab0656d",
+      "size": 9066728,
+      "mtime_ns": "1792698291142602300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\manifest.json": {
+      "sha256": "6d4e533b21b26b79d142cedecfaca4dfd93796279d9f5887574af0be55037970",
+      "size": 4899,
+      "mtime_ns": "1792360548087633600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_009\\capture_019024\\quotes.parquet": {
+      "sha256": "e5bef71cee1c6c2ceb4a840d91affde826535fb48714b3e23156685b682057e5",
+      "size": 65061910,
+      "mtime_ns": "1792112671909053400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_009\\capture_019025\\quotes.parquet": {
+      "sha256": "6f7610a4f4593ea47f6f373f680e53d9a2dc96c47540b02557e7e160ced859be",
+      "size": 70947374,
+      "mtime_ns": "1792112302508042900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\x.npy": {
+      "sha256": "61fee09a7574cf03f36f2ef655415515136b456de9b75ec4875bf41d06f53cf0",
+      "size": 391764,
+      "mtime_ns": "1792360547960171100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\decision_t.npy": {
+      "sha256": "81378c1a3cc5e6091e9ce0d7f3d06e64689d2172caf3bdc096c9757cebca3a3b",
+      "size": 11160,
+      "mtime_ns": "1792360547961171100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\bar_t.npy": {
+      "sha256": "0ff3c7a0c0428c2869c6e3e53cdf6dd78b0724d337b4bd61cf5fc2be706b8e9a",
+      "size": 11160,
+      "mtime_ns": "1792360547962172100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\can_enter.npy": {
+      "sha256": "d546df6a4b1f8dd6e86866cbf68a43a48e040d0ae5f4e7b329f56c2c45011da1",
+      "size": 1507,
+      "mtime_ns": "1792360547963679600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\decision_mid.npy": {
+      "sha256": "33522e1621e503e4756fbb41e468d71b83463b68b82adf182c3bca4f63be55b7",
+      "size": 11160,
+      "mtime_ns": "1792360547964689500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\cuts.npy": {
+      "sha256": "2b6a4091399f2994deda792538f15c8f4a9cc1ff4496193e8675b1ffa98d5931",
+      "size": 11160,
+      "mtime_ns": "1792360547965189900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\execution_valid.npy": {
+      "sha256": "72cfb1125fee16a4cfa58328d2842f3817946753914e51a8f7c7c7a83842e9bc",
+      "size": 5193132,
+      "mtime_ns": "1792360547968196400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\execution_segment.npy": {
+      "sha256": "745821e94d1783a628f84e12a56211f5e4d208d1e81556416d591540769a334c",
+      "size": 20772144,
+      "mtime_ns": "1792360547985729700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\manifest.json": {
+      "sha256": "6494441ad65a5cdeb2f3a21fd7ed52e7fd41d61dae48be2eb12cfb71cbfed1a0",
+      "size": 2663577,
+      "mtime_ns": "1792115135739798900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\full_mbo_v1\\audit_20261016\\training_admission_overlay.json": {
+      "sha256": "907ff17e961457c7d6bd3342efeb5a253165de15ecee7d546b8c3b439ff0dda3",
+      "size": 229095,
+      "mtime_ns": "1792142734727297800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_009\\capture_019024\\manifest.json": {
+      "sha256": "f57a80775232adf5d5026820bfb5f152110dbe8c8ade76af911e28817fd614bf",
+      "size": 14953,
+      "mtime_ns": "1792112754132441900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_009\\capture_019024\\features.parquet": {
+      "sha256": "288862f1378b813e04265b26869a2e1bebf4f536ea82dc82da07cb82af2f8fef",
+      "size": 75924476,
+      "mtime_ns": "1792112719803790300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_009\\capture_019024\\manifest.json": {
+      "sha256": "04eaa1443e19bfbb040430a32f24d3af1692d693c6c954a5cef9e1c3c40724d2",
+      "size": 5004,
+      "mtime_ns": "1792112672084889200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_009\\capture_019025\\manifest.json": {
+      "sha256": "6dc7ef919921f6dad32666dd6fc65fd7c70126f8281d9a14421a331e30228e48",
+      "size": 14767,
+      "mtime_ns": "1792112367055180100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_009\\capture_019025\\features.parquet": {
+      "sha256": "495957416fa2fd9421f5bb465e5553f1f1c0febeff21febda74b61a75ca78c58",
+      "size": 77805344,
+      "mtime_ns": "1792112332171090500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_009\\capture_019025\\manifest.json": {
+      "sha256": "6f94eeb258f4cf21f6eb5bae45872545a74e175fc60f58860ec2819763a58365",
+      "size": 4778,
+      "mtime_ns": "1792112302694686600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\manifest.json": {
+      "sha256": "8f0a029e83a0e1173758d3c2151c121bce1a978b6e733cde9687f9c90de3b6cc",
+      "size": 4329,
+      "mtime_ns": "1792360542157483400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\x.npy": {
+      "sha256": "0a1a214ab7ca5a49c64ed68a6845b2ac013eb2e5217568e777e637df8bd02676",
+      "size": 357684,
+      "mtime_ns": "1792360542015524400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\bar_t.npy": {
+      "sha256": "77b535df1bc2a0ad85f8dbf38c70048f039750466f619f9d0520fb73bf1f587b",
+      "size": 10200,
+      "mtime_ns": "1792360542017520100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\decision_t.npy": {
+      "sha256": "e64b6b39ee06af0a4a4d23586732f34c6e40c6d06153eae6e0d94de05526c988",
+      "size": 10200,
+      "mtime_ns": "1792360542016520600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\decision_mid.npy": {
+      "sha256": "1880d42614f834ce7ca37a88e0dc5af2c971bd598cac3176b3e8bdca970bcea5",
+      "size": 10200,
+      "mtime_ns": "1792360542020020100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\cuts.npy": {
+      "sha256": "3495108f00712e45f784bc19c49ef3b86090052dbc86a5e62d60c979abd45321",
+      "size": 10200,
+      "mtime_ns": "1792360542021520500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\execution_valid.npy": {
+      "sha256": "4980378323ce4720be23f9ab548c8eacdba6cfed24319cbd4b97e46a1ec5be6e",
+      "size": 4417723,
+      "mtime_ns": "1792360542026038100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\execution_segment.npy": {
+      "sha256": "7a5ac15c9d3e162b3cabfe17a958ba83f1349cbce81bb59b0f8400f86e09f318",
+      "size": 17670508,
+      "mtime_ns": "1792360542043680600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-04.json": {
+      "sha256": "bb3fe167a34cd90263eafd2cb1f2167a640d209a7ff1e373b0c39465d089afdf",
+      "size": 115840,
+      "mtime_ns": "1792698290481154400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-04_roots.parquet": {
+      "sha256": "910cdd8e1e301246e24173d8af2246f189221ea498379fc6a84dab7e782a19a4",
+      "size": 1121043,
+      "mtime_ns": "1792698290272983000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-04_scene.parquet": {
+      "sha256": "c3444b1d448d2fe01f8350214900ee7421c8b8cce1fe2d07eeb292537cf831b3",
+      "size": 548786,
+      "mtime_ns": "1792698290289751000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-04_bank.parquet": {
+      "sha256": "2c8474fa274cb2c63723771cf7716c54edefb779d06b709c5a46623c23797d16",
+      "size": 341179,
+      "mtime_ns": "1792698290305974900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-04_map.parquet": {
+      "sha256": "24205c162eed015757512334d38c5ddfeb328096a2ab33e3134189e5dd388759",
+      "size": 1816193,
+      "mtime_ns": "1792698290386129000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-04_execution.parquet": {
+      "sha256": "0d15e3ea08c90f2b898cfd423cd8caf0153c033123a5b29cb553f873f28aa360",
+      "size": 1824341,
+      "mtime_ns": "1792698290449320300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-04_x.npy": {
+      "sha256": "2b8a48a36bce14ad37588cfb7e29bbe6a07e5ddf50bbf52c99f0578ad4fb5b0a",
+      "size": 9066728,
+      "mtime_ns": "1792698290449320300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-04\\manifest.json": {
+      "sha256": "d92bd0048fb050928f1c68b6ec14186ba858ed2096df8a801d7d36a882086219",
+      "size": 4899,
+      "mtime_ns": "1792360562786829900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_011\\capture_021000\\quotes.parquet": {
+      "sha256": "0b5502ac4a99545ed2dc17ee2c029c7b9e578ad8ab4de966abc84202af165ca8",
+      "size": 48013929,
+      "mtime_ns": "1792113348710022200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_012\\capture_022000\\quotes.parquet": {
+      "sha256": "1ea61fa6205be60eedf06ec93ac0b92dc4703e8b39ec26606c207659e259aa88",
+      "size": 53949578,
+      "mtime_ns": "1792113405482446600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-04\\x.npy": {
+      "sha256": "ac70a80a6fcceb4b176d7f24fd5c5884665bde4de35c2c8a4e618c9b424093e7",
+      "size": 391764,
+      "mtime_ns": "1792360562516935900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-04\\decision_t.npy": {
+      "sha256": "75c6e54d365251d5572fccbdaddd0016438ff84b79ef07333b4ac0803bc95bec",
+      "size": 11160,
+      "mtime_ns": "1792360562519438900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-04\\bar_t.npy": {
+      "sha256": "5204f3e13dfa1d747a99dce50dc638a06047be9126cf9e54243aab7f50d974a3",
+      "size": 11160,
+      "mtime_ns": "1792360562521933900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-04\\can_enter.npy": {
+      "sha256": "74db2e9f490225c30d0d739b50c7fbe422a939391d1b23656d2dc14162713f71",
+      "size": 1507,
+      "mtime_ns": "1792360562524452200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-04\\decision_mid.npy": {
+      "sha256": "8b280675f58bcb14abc455500c7f6b48d41c7d9e015f32f7f504ac4c2a3b2d6c",
+      "size": 11160,
+      "mtime_ns": "1792360562559347700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-04\\cuts.npy": {
+      "sha256": "43eed4ed2c036783a67b8067845df3b513ee050f325ea21b1520181abd84efc3",
+      "size": 11160,
+      "mtime_ns": "1792360562613742800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-04\\execution_valid.npy": {
+      "sha256": "c48fe23df5c236823adf44b4c9f92ed79dd52081fe5a473ea01abfdc6a7aac22",
+      "size": 3791774,
+      "mtime_ns": "1792360562631379500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-04\\execution_segment.npy": {
+      "sha256": "0aa1d3859855af8d65e56d82aca03ab64472b2e42a0c55404548cd6c7f76fef4",
+      "size": 15166712,
+      "mtime_ns": "1792360562650513700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_011\\capture_021000\\manifest.json": {
+      "sha256": "171173764fe8820630ebf34f14703beb8b824c4bf85f65b2cbe1ed71aab26b01",
+      "size": 14572,
+      "mtime_ns": "1792113386804345900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_011\\capture_021000\\features.parquet": {
+      "sha256": "8f26614df94fad19df22a63dac65e1c371f1f3f451704f8d185b1d0997245b31",
+      "size": 74347324,
+      "mtime_ns": "1792113355343283400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_011\\capture_021000\\manifest.json": {
+      "sha256": "402e5adf01e098f4991e28aa464cb9b295dbb91dea4e1800e42cdd498c826ec5",
+      "size": 4587,
+      "mtime_ns": "1792113348834043100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_012\\capture_022000\\manifest.json": {
+      "sha256": "e3f8e82ba22df51f4c6a1015dd63f567cd728cdb1a1f6e9e737bf278d264b015",
+      "size": 14700,
+      "mtime_ns": "1792113444655154200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_012\\capture_022000\\features.parquet": {
+      "sha256": "ab99a519a0711e313ec82742f8e6a65467da181096391165717aac904d4ba6e0",
+      "size": 75984257,
+      "mtime_ns": "1792113412100485100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_012\\capture_022000\\manifest.json": {
+      "sha256": "f3ab10a918d8213d6f1b2d8662457b85b23a686d3034ad3994479b4cf4461122",
+      "size": 4764,
+      "mtime_ns": "1792113405601212300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-03\\manifest.json": {
+      "sha256": "b610bfcc953b06ec4104bf23a73f7470b6707a1a6c2230ce361748424162fb44",
+      "size": 4898,
+      "mtime_ns": "1792360555205781300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-03\\x.npy": {
+      "sha256": "c2d65064eab95d92561deec77efdf4df1397dd53a73f97367b7db885c034b6c2",
+      "size": 391764,
+      "mtime_ns": "1792360555021547300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-03\\bar_t.npy": {
+      "sha256": "2d66da72797ee342b2be32b624088ce319273fb73baf2653414018f739fd728c",
+      "size": 11160,
+      "mtime_ns": "1792360555034602600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-03\\decision_t.npy": {
+      "sha256": "73e9975d34a7d9cd5114e736c97b92e20c8e66b75ddecff7a209b08be2b754c7",
+      "size": 11160,
+      "mtime_ns": "1792360555022549200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-03\\decision_mid.npy": {
+      "sha256": "d7061c538066327da294cd25e867507987718f2536cfee7058e22cf8159b6e60",
+      "size": 11160,
+      "mtime_ns": "1792360555041709200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-03\\cuts.npy": {
+      "sha256": "a09cdc359d53913a69b739ee1e4661ce1dfd4f1b7b8833e527f1585f073df15b",
+      "size": 11160,
+      "mtime_ns": "1792360555047746000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-03\\execution_valid.npy": {
+      "sha256": "de009f2b2bfb270464d0fb8797278ae5d9b0ebd30c3c147251aba75e75cbed69",
+      "size": 3701194,
+      "mtime_ns": "1792360555056778700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-03\\execution_segment.npy": {
+      "sha256": "fbfbb7ba8f0fbc81467746abe19e5a8335a684992df92e3d005f67886a82b0a4",
+      "size": 14804392,
+      "mtime_ns": "1792360555080969700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-05.json": {
+      "sha256": "483b11c99b0c41ffe87e80c78d7d0cd869cd197b901609ec2f6c208469e4fd02",
+      "size": 115840,
+      "mtime_ns": "1792698297336312400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-05_roots.parquet": {
+      "sha256": "2dee1477f8b02c7a682b4e3e1451ae047afda0e6137f8caef4af4a9ef0471292",
+      "size": 1152654,
+      "mtime_ns": "1792698297137639200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-05_scene.parquet": {
+      "sha256": "e6309748749bb05f10b84928e1de2383f6c59a9bae2443902eea6425311c0ad1",
+      "size": 585644,
+      "mtime_ns": "1792698297153294800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-05_bank.parquet": {
+      "sha256": "2d41a76863b63901ae784bb2cd38635382a4e85f8d5a9ce56fac5b41bcd120f1",
+      "size": 352503,
+      "mtime_ns": "1792698297169295000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-05_map.parquet": {
+      "sha256": "5243e8ae97de03bb32c8c423795c2ad5e76256936e2a245c348b5314f6444959",
+      "size": 1790598,
+      "mtime_ns": "1792698297248510900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-05_execution.parquet": {
+      "sha256": "53d2a4c30c9999d8e52b428e3ed7f07e73e2e88cf14ce50197d190ed0284445d",
+      "size": 1891769,
+      "mtime_ns": "1792698297309138700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-05_x.npy": {
+      "sha256": "6f0a2a61ed3f7efb004b6452c7ec0443fc44451a7692ceda8bf055563306fab5",
+      "size": 9066728,
+      "mtime_ns": "1792698297320144600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-05\\manifest.json": {
+      "sha256": "48906f12de39d1fa67c0f22e4f5b77444cc74514baaecf207497f243d796e42b",
+      "size": 4899,
+      "mtime_ns": "1792360578190230400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_013\\capture_023000\\quotes.parquet": {
+      "sha256": "1e39741aa5d283e89d5c947d93320b624266eada5bfbb7146a3b02248ea69a4b",
+      "size": 69737028,
+      "mtime_ns": "1792113619898770700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-05\\x.npy": {
+      "sha256": "b5ca614bfef2b6120ac138ce9c970dd8c7c23677619973625d28c4472fc7a756",
+      "size": 391764,
+      "mtime_ns": "1792360577965408100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-05\\decision_t.npy": {
+      "sha256": "1453575c2b343095acc250c0b3c884df87a87ff0d714011aa32168051cb5b782",
+      "size": 11160,
+      "mtime_ns": "1792360577971422600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-05\\bar_t.npy": {
+      "sha256": "e5838e6016e1f0e981bad8a9dd69f4f9370b810d7747bd397d1804c889bbc4f4",
+      "size": 11160,
+      "mtime_ns": "1792360577972422600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-05\\can_enter.npy": {
+      "sha256": "e8020497391b7ab9878cd7d6dd23b96db373f95c0c273c51875fd5c58bd5d0f1",
+      "size": 1507,
+      "mtime_ns": "1792360577973430200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-05\\decision_mid.npy": {
+      "sha256": "b3df2c10520f22883375040672e0669de69e7066b3c4202861744c35208d959d",
+      "size": 11160,
+      "mtime_ns": "1792360577975439000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-05\\cuts.npy": {
+      "sha256": "d97f33ce1d19e19f8075485650f010a591fbb51629e133108de5c9fceb32ebeb",
+      "size": 11160,
+      "mtime_ns": "1792360577978452800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-05\\execution_valid.npy": {
+      "sha256": "91f48902c98306314b9d34fa48dd56615a5102f9e2eace0f46131f1f4527717a",
+      "size": 4998265,
+      "mtime_ns": "1792360577983460900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-05\\execution_segment.npy": {
+      "sha256": "d58a81683f6665968ca02ca00261a569adc4e8d728af1fc75116c03268c6a1cb",
+      "size": 19992676,
+      "mtime_ns": "1792360578007689900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_013\\capture_023000\\manifest.json": {
+      "sha256": "3372158e67c7edb56bc6bd31a2b3670ba6cfc5fb879ac790cabc9dc97e64d130",
+      "size": 14929,
+      "mtime_ns": "1792113657389557000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_013\\capture_023000\\features.parquet": {
+      "sha256": "8ed4eb020f880e0692ab1e82fe327576426ce51df8c1f5edb50572e5698ef03d",
+      "size": 76313332,
+      "mtime_ns": "1792113626085849200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_013\\capture_023000\\manifest.json": {
+      "sha256": "ec8fd23ede624d01005077d92fc7775059485f45979977b13527946d9c0a60da",
+      "size": 4995,
+      "mtime_ns": "1792113620053759200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-06.json": {
+      "sha256": "f19b72a1ef7ad1bab262494012a7da8727af181bd337729f03d00f30336886f9",
+      "size": 115988,
+      "mtime_ns": "1792698297617471800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-06_roots.parquet": {
+      "sha256": "d4f0da40dae75884e8d302640603e7a1ba9bd0749710833ba576289199dfcf6b",
+      "size": 1156759,
+      "mtime_ns": "1792698297426020400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-06_scene.parquet": {
+      "sha256": "be4c851baa5a365094573e443ce7c5e3793a3b0918025f5aa7a911adacf3e1d9",
+      "size": 570359,
+      "mtime_ns": "1792698297444027100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-06_bank.parquet": {
+      "sha256": "9bcb72ee7ac1f27fd8bf0bbdb75a301460c4ccd83f4834388bb8cb307b95bfbf",
+      "size": 282125,
+      "mtime_ns": "1792698297455358900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-06_map.parquet": {
+      "sha256": "670a34103ab345a7c66d033ba1ca500d34077afecdeab0b49c56c487f0ac6fea",
+      "size": 1930823,
+      "mtime_ns": "1792698297530967000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-06_execution.parquet": {
+      "sha256": "bc12e1875fa2b5caacbd9201fc8b74265e13d08875e3f6ea277ee91d47c9cf74",
+      "size": 1942103,
+      "mtime_ns": "1792698297594642200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-06_x.npy": {
+      "sha256": "3fdef3c612f3698aefc30ec563818351ff08c798d8493d1e9a12e00dd213879c",
+      "size": 9066728,
+      "mtime_ns": "1792698297603686100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-06\\manifest.json": {
+      "sha256": "7e25aabcd7994935375dfb7e9cc11ae8e3a7ad9bc0fdb129368677bce3480d77",
+      "size": 4899,
+      "mtime_ns": "1792360584669694200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_014\\capture_024000\\quotes.parquet": {
+      "sha256": "5e9ac0830939a171c26fe758509cc5cc8cc7933dff898b5ff8422daaa91854b2",
+      "size": 67814229,
+      "mtime_ns": "1792113652003401400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-06\\x.npy": {
+      "sha256": "ddf85a7a63e42a1791114b44424e3e5ddd44dddfd191a081edb198dc500dab59",
+      "size": 391764,
+      "mtime_ns": "1792360584543709100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-06\\decision_t.npy": {
+      "sha256": "93b85c141a5443a27defe4c023047542bf231bfc500af76ff8d0ed9c6226cf9b",
+      "size": 11160,
+      "mtime_ns": "1792360584544222600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-06\\bar_t.npy": {
+      "sha256": "ed486cdf4c65b67c030ed167c27ba47c9afaa64576d45e47adf15a40b1412121",
+      "size": 11160,
+      "mtime_ns": "1792360584545219900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-06\\can_enter.npy": {
+      "sha256": "f0a8a1e8f8086f18e9c35dfe334dbe1509ea3ab24a5615101fa17631b987eee3",
+      "size": 1507,
+      "mtime_ns": "1792360584546718600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-06\\decision_mid.npy": {
+      "sha256": "22fe933230fef2979456597fd561c99e2cf06f93b5933b2ed09f5a757d3a716a",
+      "size": 11160,
+      "mtime_ns": "1792360584548219700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-06\\cuts.npy": {
+      "sha256": "fb93637d168a225a2afab78a57dd711fe80c4411742b56a82d5684f681689a6c",
+      "size": 11160,
+      "mtime_ns": "1792360584549222500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-06\\execution_valid.npy": {
+      "sha256": "9dd52f71fdb1f5923d71103ed32793b186f816da902f29466d38a1b6d936d9c3",
+      "size": 5012540,
+      "mtime_ns": "1792360584552719600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-06\\execution_segment.npy": {
+      "sha256": "9ba468fb014ec52c2dbb240caac56cf72ad61dc6b29502eb7398ad862e2383f2",
+      "size": 20049776,
+      "mtime_ns": "1792360584574866500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_014\\capture_024000\\manifest.json": {
+      "sha256": "e900123ce0c04a588208ba4af04f0e67dbf7d1f08761783709b6bb62e92df23d",
+      "size": 15673,
+      "mtime_ns": "1792113694944527400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_014\\capture_024000\\features.parquet": {
+      "sha256": "c3a1e280d9863df5ba283c375eebc1abfa85a4b1a5da650c16cc40bff6e64b6c",
+      "size": 76576428,
+      "mtime_ns": "1792113659225417600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_014\\capture_024000\\manifest.json": {
+      "sha256": "2ce9dafd2685cda8398577f50e4ed99961360546d6717d13ae63df6d2c8cc2d1",
+      "size": 5794,
+      "mtime_ns": "1792113652178586000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-07.json": {
+      "sha256": "a5d8a6505c0f44a26f2a9acfd61991e0c4493758a89abfdf8c1358f746e33e08",
+      "size": 115840,
+      "mtime_ns": "1792698304639045500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-07_roots.parquet": {
+      "sha256": "e7dccd522ac40807536124d3184d40048aa0a4871dc0fe09293a605eec429436",
+      "size": 1174922,
+      "mtime_ns": "1792698304436626300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-07_scene.parquet": {
+      "sha256": "5536366948d3cdde2552ccb90dafbe058d02b407db56508634ab2946461b190c",
+      "size": 586684,
+      "mtime_ns": "1792698304454808200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-07_bank.parquet": {
+      "sha256": "6ca6f7ed70d431237184bdb147bc595ccfedecf17ca58d7de09df0b2e2584a20",
+      "size": 396419,
+      "mtime_ns": "1792698304471501000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-07_map.parquet": {
+      "sha256": "454fd47369ea6c2d8ae0efda7d726f9e33945d535e2d4c179a8698e76a36e872",
+      "size": 1876646,
+      "mtime_ns": "1792698304550102600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-07_execution.parquet": {
+      "sha256": "d341e91322531400ebd782856a8d1c599d7b1b6651df0ed2a6b01ae7a23a3048",
+      "size": 1985463,
+      "mtime_ns": "1792698304607116500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-07_x.npy": {
+      "sha256": "939e496828e31ce909a037a54e1cc4f029693af302d55ff3e2db1a701790b789",
+      "size": 9066728,
+      "mtime_ns": "1792698304617986000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-07\\manifest.json": {
+      "sha256": "386798190a9b7a3de7b3f6be1f8cf61a6c27de97dd483c03d17226c8cba6dd9f",
+      "size": 4899,
+      "mtime_ns": "1792360588427040200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_015\\capture_025000\\quotes.parquet": {
+      "sha256": "22ec95669416b6baab10fe1311a4e5475035c3540115084f652838dca3750cd5",
+      "size": 73512203,
+      "mtime_ns": "1792113713210540400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-07\\x.npy": {
+      "sha256": "e92a292b986079c77f92fc3d23c77f00f73ca89528611f3f35857cbf60bb2aef",
+      "size": 391764,
+      "mtime_ns": "1792360588268908000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-07\\decision_t.npy": {
+      "sha256": "a1f6fa4f8dffdf933aa3061c3098b92d37aca10ce0f325dfd1e25339db22352d",
+      "size": 11160,
+      "mtime_ns": "1792360588270411300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-07\\bar_t.npy": {
+      "sha256": "748d4e6960963f55c0707aaa8f53507f452824db7c365ab57b39e907dd69630d",
+      "size": 11160,
+      "mtime_ns": "1792360588271417100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-07\\can_enter.npy": {
+      "sha256": "c63d94981562a899f893bbe5f547cd2609c06d517d4271e1e5679d7744bdf05a",
+      "size": 1507,
+      "mtime_ns": "1792360588272415400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-07\\decision_mid.npy": {
+      "sha256": "271e120cb3b5de749f1320592e5e3f3cfe0413cbf1b89e022bb80c852b619dec",
+      "size": 11160,
+      "mtime_ns": "1792360588272415400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-07\\cuts.npy": {
+      "sha256": "c8819eee3f8ef9e057c556aaadd74756eb439f7fd5cc086d786323a1e98b1148",
+      "size": 11160,
+      "mtime_ns": "1792360588274241600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-07\\execution_valid.npy": {
+      "sha256": "f91d2f56b1b8d7ff9bcbb6bcdd1db013d4e35fdf418043c106fae95f0b999b7d",
+      "size": 5401251,
+      "mtime_ns": "1792360588280244300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-07\\execution_segment.npy": {
+      "sha256": "d463474e8cdc62d45b6cce3e8d204e823a4a22c1c7f024b5e53db3a0224dcd80",
+      "size": 21604620,
+      "mtime_ns": "1792360588302853000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_015\\capture_025000\\manifest.json": {
+      "sha256": "813e642fddc4a38fa2a8f4da4e27f9a815c3c3300e4b9f2fb476fa8ffb57bc2d",
+      "size": 16060,
+      "mtime_ns": "1792113749242891800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_015\\capture_025000\\features.parquet": {
+      "sha256": "17ff765076a43af30a20e5d8abac03b61534a31a4fba1d9b5cd78c7f5b7611fe",
+      "size": 71294186,
+      "mtime_ns": "1792113719042327700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_015\\capture_025000\\manifest.json": {
+      "sha256": "3fc24ae96bfc8c400c8cbf2c65d8273680a8c0760f103556e8dc5281a4e864b1",
+      "size": 6210,
+      "mtime_ns": "1792113713358597000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-10.json": {
+      "sha256": "d6aeb7d519bbb44a1d3f4900d6feeb70615bf02cb5c855db0a19472c9e468a36",
+      "size": 115998,
+      "mtime_ns": "1792698303287880800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-10_roots.parquet": {
+      "sha256": "3d18e1a5ca72cbf6ab4ae7d7dc4a9831a4d965ee65b5357bcb771ff6d4dd12db",
+      "size": 1123543,
+      "mtime_ns": "1792698303085562400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-10_scene.parquet": {
+      "sha256": "9cc5d9d65b650925a37b760075d9117da4b6562e4fd2022a92e54f865aa46761",
+      "size": 553724,
+      "mtime_ns": "1792698303101563100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-10_bank.parquet": {
+      "sha256": "03e341746e565efdbbe925bc6f531cfc7f60b5b25864f52135d325ffa7d602c3",
+      "size": 338083,
+      "mtime_ns": "1792698303119009600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-10_map.parquet": {
+      "sha256": "8fe86a0941470ff575d828e0b36fb42a094f3b18a273a10ecc9a61c75859f5a5",
+      "size": 1740521,
+      "mtime_ns": "1792698303193732100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-10_execution.parquet": {
+      "sha256": "64b5ac9a1aece660f516aa1867c80346623fb666814264aa84a953412b8ec048",
+      "size": 1807021,
+      "mtime_ns": "1792698303259890000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-10_x.npy": {
+      "sha256": "6187c9fa5cabfe5c38dcdfe81a94f40516a633fe7c79a15ba4a52ef78c5a69f8",
+      "size": 9066728,
+      "mtime_ns": "1792698303270881400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-10\\manifest.json": {
+      "sha256": "fa9d900769cfbe2edf683db46aa4fbc71cf51baffdb5c9661138bc03f0285a0e",
+      "size": 4898,
+      "mtime_ns": "1792360592797481200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_016\\capture_026000\\quotes.parquet": {
+      "sha256": "478522fbf7f96a5355d6e618da545543f9a67e2baec6f082889405addefb7fb2",
+      "size": 2121789,
+      "mtime_ns": "1792113253318899400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_017\\capture_027000\\quotes.parquet": {
+      "sha256": "e03e4972d84e36d8adce400c199b8279bf86bd7a8b1d9eba4931b28963c03dd7",
+      "size": 47859671,
+      "mtime_ns": "1792113554241083700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-10\\x.npy": {
+      "sha256": "cc1b69cbcf3967892b30f974094efb340a688b4f0cc32c1b3eb1e274580cc574",
+      "size": 391764,
+      "mtime_ns": "1792360592662590600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-10\\decision_t.npy": {
+      "sha256": "f79059174838606e2db97a011d450dffaf3a25a930e6993eff94fac651eceb2c",
+      "size": 11160,
+      "mtime_ns": "1792360592665110500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-10\\bar_t.npy": {
+      "sha256": "ad22e90a0a622bfb53438eda1e0c626f45d468c6f3af2dbaa44d91bf8978a1c5",
+      "size": 11160,
+      "mtime_ns": "1792360592667117500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-10\\can_enter.npy": {
+      "sha256": "b9fcc92269c9ab90726ab46ac4b07cdde00f1f2b0c68a77d9b7f9ec37dc9b54b",
+      "size": 1507,
+      "mtime_ns": "1792360592668618400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-10\\decision_mid.npy": {
+      "sha256": "afcb50327f475ef1e0b7692c978654631fc53046dbd1978939b7905e33e3eb0e",
+      "size": 11160,
+      "mtime_ns": "1792360592670119100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-10\\cuts.npy": {
+      "sha256": "0c3ba2b724c5c63c38ae82e6889757ea4f40094fa9b2ce1cf456416397432cfd",
+      "size": 11160,
+      "mtime_ns": "1792360592671647000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-10\\execution_valid.npy": {
+      "sha256": "3454bed8c0e3e19f34744d5e9533e5a4937e31924d7a3d890b1acf3b5433502b",
+      "size": 3450881,
+      "mtime_ns": "1792360592676735400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-10\\execution_segment.npy": {
+      "sha256": "09cdf4591e55e43550cbfe2faeff28cfbb0bb6c7d46e3fed0b2adad2418585cf",
+      "size": 13803140,
+      "mtime_ns": "1792360592689767100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_016\\capture_026000\\manifest.json": {
+      "sha256": "65d65f5092c83eacdce716fdaafe5552ef665b28de832e10a37bb9f8a5b6b35b",
+      "size": 18562,
+      "mtime_ns": "1792113275852669000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_016\\capture_026000\\features.parquet": {
+      "sha256": "fc4bb93fcfef72ceef15fe8cf1ef326333a2c8104e12ee19d6fba2cff3f28661",
+      "size": 6055425,
+      "mtime_ns": "1792113256531308900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_016\\capture_026000\\manifest.json": {
+      "sha256": "d8036a3d677a9f67783e1df4a6303510de2fb9a8e9007c75ec591adbdf597f15",
+      "size": 8822,
+      "mtime_ns": "1792113253351230500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_017\\capture_027000\\manifest.json": {
+      "sha256": "f5a762151af63f9cb6f90e3be1a6a3ae70232f24760063c275687f45b3509e25",
+      "size": 14492,
+      "mtime_ns": "1792113592242433000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_017\\capture_027000\\features.parquet": {
+      "sha256": "b70406ac5bdfcc3d384bc134427b458b2e2c92d117e7f8d1188744280e230965",
+      "size": 75371194,
+      "mtime_ns": "1792113560897814400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_017\\capture_027000\\manifest.json": {
+      "sha256": "2285b5895d6044783817e1fd28ff5454677280925bcc98d4a0d0167462c1997b",
+      "size": 4584,
+      "mtime_ns": "1792113554373887100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-11.json": {
+      "sha256": "d81dca8d818f5fc07d2ce891abb9006534d6a5e0439d26bf213ad6f92ef706a1",
+      "size": 115843,
+      "mtime_ns": "1792698309211491700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-11_roots.parquet": {
+      "sha256": "2205309f601e9116807d2179bacb591b67cfdfb65bb638032b55e25d17473eee",
+      "size": 1097231,
+      "mtime_ns": "1792698308987531300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-11_scene.parquet": {
+      "sha256": "5150a3fdb01e0b3449443e23781d953d61c399c7dc2be3b65faec1c2ec4c1607",
+      "size": 549613,
+      "mtime_ns": "1792698309014764500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-11_bank.parquet": {
+      "sha256": "f693aa41cc69c11892a4eb3c635c261dda2eadb797338ac957d6eb795d2213ef",
+      "size": 376893,
+      "mtime_ns": "1792698309032921300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-11_map.parquet": {
+      "sha256": "6fa1a050eb4f0fbfc3cec69b5661abf4a6c9f730774d6e56e5aff950d6b2554f",
+      "size": 1716669,
+      "mtime_ns": "1792698309119653100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-11_execution.parquet": {
+      "sha256": "0e89cd56c199f1fa992c65c1c53c403a205d27a8cf3b465b683bfdb37cfc5632",
+      "size": 1837487,
+      "mtime_ns": "1792698309182676200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-11_x.npy": {
+      "sha256": "7e936fe3a7ef52c74ab87c8c86e6b7617bf71e6bab90b31d1804914eff0249ea",
+      "size": 9066728,
+      "mtime_ns": "1792698309182676200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-11\\manifest.json": {
+      "sha256": "9fb46da703fa5aff7d88a4a4cdbc4d208a572bb7c2158f10ca0270beadd8238a",
+      "size": 4899,
+      "mtime_ns": "1792360601989292700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_018\\capture_028000\\quotes.parquet": {
+      "sha256": "e63ffc9b85681b5b327b9574c3fb6676387a982053044f6a2c9fd8aeede92676",
+      "size": 60360566,
+      "mtime_ns": "1792113744913429100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-11\\x.npy": {
+      "sha256": "4af87451353711b23926257e6acaffacb717c612120ba1f1ad6ac387edd02e7a",
+      "size": 391764,
+      "mtime_ns": "1792360601849618500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-11\\decision_t.npy": {
+      "sha256": "7d4a2673a5039da883d15e7c1860697cae1af727c3e64a4122bcb5f576da49af",
+      "size": 11160,
+      "mtime_ns": "1792360601851118000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-11\\bar_t.npy": {
+      "sha256": "09ca7b6096e2379ab9dd329b3f638ce711fbae7a3585bb4c1d7f5e4779f0a5d0",
+      "size": 11160,
+      "mtime_ns": "1792360601854653500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-11\\can_enter.npy": {
+      "sha256": "a725a776cfc7aad7d07c0dcb7449885f5b1e74ac1db94f2e027ea6de417843d0",
+      "size": 1507,
+      "mtime_ns": "1792360601856161900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-11\\decision_mid.npy": {
+      "sha256": "442a903c05d03a7ae9ff3d1305381660ef3c4f87275293ceb8ccca0ba66a2411",
+      "size": 11160,
+      "mtime_ns": "1792360601856659000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-11\\cuts.npy": {
+      "sha256": "83ab94d1e50fb8e5a41df9003d2f7ba9c7ff39988b220442972b3309dae1979b",
+      "size": 11160,
+      "mtime_ns": "1792360601857667000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-11\\execution_valid.npy": {
+      "sha256": "fb0a6c01c627aba20a5e8e010399a39b28866e75a4ecc8a58444760c398e3f8c",
+      "size": 4282214,
+      "mtime_ns": "1792360601861659300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-11\\execution_segment.npy": {
+      "sha256": "e7cee5b13694c29708f74f0099828b1932f53e9656020584e4da4e3848f5e1ec",
+      "size": 17128472,
+      "mtime_ns": "1792360601884790700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_018\\capture_028000\\manifest.json": {
+      "sha256": "f67bc4a83f5ef17f6ceae4d758d8da2ab9ec7bc9701d344fae2a3e5eb79c01e8",
+      "size": 14499,
+      "mtime_ns": "1792113786222239500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_018\\capture_028000\\features.parquet": {
+      "sha256": "8bc17c18273ec846fbb5c64533047b7c7718dc11061152d2a39f668a5cab87fc",
+      "size": 76635770,
+      "mtime_ns": "1792113752164877600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_018\\capture_028000\\manifest.json": {
+      "sha256": "d5172e410a057e9e236352b76db7606488a1c977b44309de7a621a52811fad1e",
+      "size": 4586,
+      "mtime_ns": "1792113745070506400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-12.json": {
+      "sha256": "00fd837c0fa31186e26f0c584e4cbbc05e84cd9c57cfee9b6f89b6253f2ec7f5",
+      "size": 115998,
+      "mtime_ns": "1792698310967747500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-12_roots.parquet": {
+      "sha256": "631a770eb0bfebb7b38e106ce0edb873eac516de194c2d6703f2efb28fa4f0ca",
+      "size": 1134886,
+      "mtime_ns": "1792698310751921500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-12_scene.parquet": {
+      "sha256": "d9101e61bdcbf4150b1fe818f04d49fa8b6f404413b2a419b384f7ff430521d8",
+      "size": 549499,
+      "mtime_ns": "1792698310782970200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-12_bank.parquet": {
+      "sha256": "587dd1452cd9f5214c6cb46f3738b647eff8115e54fc8f83e15b0b1fd1048681",
+      "size": 347299,
+      "mtime_ns": "1792698310800969400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-12_map.parquet": {
+      "sha256": "f69791b859bbc5afa5ed538317b2505ec78e04c0fc424bade38c078c3f454a0a",
+      "size": 1798948,
+      "mtime_ns": "1792698310880402200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-12_execution.parquet": {
+      "sha256": "281bca300c3c0fa1475058b6bd3a0a101c9fef26f3410f1d43e89ab19dcc2e2c",
+      "size": 1929638,
+      "mtime_ns": "1792698310941696600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-12_x.npy": {
+      "sha256": "91de0ac3c7856d7163287a2c5852c1fefa29321c166e62ffe4b7da2cb4da7030",
+      "size": 9066728,
+      "mtime_ns": "1792698310951708600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-12\\manifest.json": {
+      "sha256": "f0affccea4c06d0e4e444c286d15404336933b63fae184ef45df40970ad5c41a",
+      "size": 4899,
+      "mtime_ns": "1792360604867052800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_019\\capture_029000\\quotes.parquet": {
+      "sha256": "05fb32c772d5d5fef09751d893e0720998b3f2d4847e91e560bc80888e0295e2",
+      "size": 64801119,
+      "mtime_ns": "1792113826388282600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-12\\x.npy": {
+      "sha256": "7c5901d6502fa61111c46362be87cf219cb2c4fbfc391559c628962768e2bf98",
+      "size": 391764,
+      "mtime_ns": "1792360604736974000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-12\\decision_t.npy": {
+      "sha256": "b3cc4e83153998446966faa48f17d604a2df7a1e32f9af25618bd2922eb12695",
+      "size": 11160,
+      "mtime_ns": "1792360604738471600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-12\\bar_t.npy": {
+      "sha256": "d73596adfdf04809b0b647fe12b21a08444f20955cc0705adcc4d94550f9fb11",
+      "size": 11160,
+      "mtime_ns": "1792360604739471700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-12\\can_enter.npy": {
+      "sha256": "1a4310a33927f40feab19ccc62edc661e91af1a27db868cc1324945f51c9f6ca",
+      "size": 1507,
+      "mtime_ns": "1792360604740472800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-12\\decision_mid.npy": {
+      "sha256": "c88d5ae42f022a0fa87b1ac0e180794e467dd8136f8af08abe1a936e1e346bc7",
+      "size": 11160,
+      "mtime_ns": "1792360604741975000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-12\\cuts.npy": {
+      "sha256": "f5f3492585addcdc1146a23fe4ba035de417ff56ad425748e39db21ff29e44ac",
+      "size": 11160,
+      "mtime_ns": "1792360604743483300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-12\\execution_valid.npy": {
+      "sha256": "89ae1bdff41bc8a6e86ab2f16d80570871af0ccbf2856e6e1e0bd3d34bac2d1e",
+      "size": 4747010,
+      "mtime_ns": "1792360604750001700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-12\\execution_segment.npy": {
+      "sha256": "561d5543a3cd8c0da06f10a1052dd300b86594f00ab95bf0468d1be490d846c6",
+      "size": 18987656,
+      "mtime_ns": "1792360604769102700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_019\\capture_029000\\manifest.json": {
+      "sha256": "2b06917dc98f96e68080a92a944c4b0663d3f019a9b0d7ffa1a95a3d8a03e461",
+      "size": 15084,
+      "mtime_ns": "1792113864819323300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_019\\capture_029000\\features.parquet": {
+      "sha256": "8a374d26257a0fbf7a8cf038249bccd4c01d054ef1f29f743fa3addc090b1dc2",
+      "size": 76052074,
+      "mtime_ns": "1792113833050340100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_019\\capture_029000\\manifest.json": {
+      "sha256": "a46f00dd17d1ea010cee45be891d77600a4aae2782cb9cc28301b80e1cc9e7ba",
+      "size": 5196,
+      "mtime_ns": "1792113826551679500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-13.json": {
+      "sha256": "15f7410031d274f5aa737b916b8aa4679de041d0c33fa88a9b74a1cfbf83cc9c",
+      "size": 115679,
+      "mtime_ns": "1792698315414244900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-13_roots.parquet": {
+      "sha256": "52346363789a0817c7914b9758a3ce378cf8b87195d99b524d02374897c4d2fe",
+      "size": 1105136,
+      "mtime_ns": "1792698315217485700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-13_scene.parquet": {
+      "sha256": "826aabd25fea227f0dff6313a454f0bd18e4bbc9a7008ec6bc7d52ff45290e86",
+      "size": 551804,
+      "mtime_ns": "1792698315238352600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-13_bank.parquet": {
+      "sha256": "acf4b3bfe2e1e2a2899f19eceea7e9d9b4baa66444cd0f27d2b2fd37e772474d",
+      "size": 343450,
+      "mtime_ns": "1792698315253769700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-13_map.parquet": {
+      "sha256": "4f10d786bbaa00b012b2b7cf52e6a2bb9789f1726b6add82c43c6087ae3ee121",
+      "size": 1759852,
+      "mtime_ns": "1792698315326113100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-13_execution.parquet": {
+      "sha256": "cfa7865c38f7d70825ead12850b3f9e67ed23a850e1086e8b6e2a8b474d55b72",
+      "size": 1894882,
+      "mtime_ns": "1792698315386747200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-13_x.npy": {
+      "sha256": "7065aa85b4ad6df20f6c83551e6ba5f7a0b5f07c9e4b4817c68495c166e64871",
+      "size": 9066728,
+      "mtime_ns": "1792698315391891900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-13\\manifest.json": {
+      "sha256": "f69f85c1d88a44882753540edb958a780a0c6fc36aa483ffa0d76891e8a825eb",
+      "size": 4899,
+      "mtime_ns": "1792360608336380500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_020\\capture_030000\\quotes.parquet": {
+      "sha256": "a6a5a52fa7a4ee6f28bdb1420d3ae9be11a7342bc6c26c24910b9de070c6d519",
+      "size": 64364640,
+      "mtime_ns": "1792113974960581200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-13\\x.npy": {
+      "sha256": "b1708875a696834786ad73592dac53f97c7b66fb9f54a31fd5b5c5b8f66c217d",
+      "size": 391764,
+      "mtime_ns": "1792360608204953000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-13\\decision_t.npy": {
+      "sha256": "8c0ffe3751ac07b978678e17a4381197e56df221d75d710419b3cbec25ddc29d",
+      "size": 11160,
+      "mtime_ns": "1792360608209962200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-13\\bar_t.npy": {
+      "sha256": "421517c65feef2ec5b28250cc6276283fc14693fa64dfe5904101ca77546300b",
+      "size": 11160,
+      "mtime_ns": "1792360608212472100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-13\\can_enter.npy": {
+      "sha256": "060c31aa1dc9f289354ab660f31503a19a38a551d1791287864ea7d441b4ddb8",
+      "size": 1507,
+      "mtime_ns": "1792360608215070700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-13\\decision_mid.npy": {
+      "sha256": "eda188f72a43de17c10af9fefb7c082c0d89718e34d9e200b9937c987149c269",
+      "size": 11160,
+      "mtime_ns": "1792360608216579400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-13\\cuts.npy": {
+      "sha256": "49e44d0984eeda5a54ed232afc409e0c133dc85bfd428dd4da07f284e6f29fd8",
+      "size": 11160,
+      "mtime_ns": "1792360608218082200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-13\\execution_valid.npy": {
+      "sha256": "583369872fe897818e958510d2aa6b9a4461972645ac0c51b8146d70c5f9aa21",
+      "size": 4528666,
+      "mtime_ns": "1792360608222079500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-13\\execution_segment.npy": {
+      "sha256": "f492969810359c9293afd0dc86a1cd95993b0a0d794579fb27c1c9843a368222",
+      "size": 18114280,
+      "mtime_ns": "1792360608235635300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_020\\capture_030000\\manifest.json": {
+      "sha256": "e63e41a9f681adbbaf4ba77bf7f02e112cd40fbd58f32cba9fc44d75398a4baf",
+      "size": 14941,
+      "mtime_ns": "1792114019694754000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_020\\capture_030000\\features.parquet": {
+      "sha256": "0f68ca5dc98565dd492d84d453c2856b818cb3d3d4c4d6912d906537d009f8ad",
+      "size": 77353495,
+      "mtime_ns": "1792113982413353400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_020\\capture_030000\\manifest.json": {
+      "sha256": "8b0a7f382c58ea84dd249e275876d9086539044cc895a8bb7afa2e7fbedbe151",
+      "size": 4996,
+      "mtime_ns": "1792113975147198800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-14.json": {
+      "sha256": "2fd6fc66b210cdbf5dff03c88454b28f6265909592ef9dc86d24062078f0b3b7",
+      "size": 115998,
+      "mtime_ns": "1792698316760316100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-14_roots.parquet": {
+      "sha256": "9a1a5fbcbab40e73ce91426242450890b07d44020e298e553b87e49ef92ee84f",
+      "size": 1095494,
+      "mtime_ns": "1792698316559787200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-14_scene.parquet": {
+      "sha256": "617b0b6ba6502dff8563f6bf91fb58767b5cb11fe64cbb5d5b57d0a80145c227",
+      "size": 539309,
+      "mtime_ns": "1792698316577109600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-14_bank.parquet": {
+      "sha256": "b6b52f15dfef79e037fbf0bec1549a637eb5776609319132053b2ea860bfdff2",
+      "size": 374448,
+      "mtime_ns": "1792698316594109900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-14_map.parquet": {
+      "sha256": "d2aa281d270a578398597662b133422f5746f1ddfea61a7f86fbfe015ab0b773",
+      "size": 1776403,
+      "mtime_ns": "1792698316676437300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-14_execution.parquet": {
+      "sha256": "aab5fb2fe3c05fe90eefde9831929e567aa60b075139ae14d06783523392f128",
+      "size": 1784590,
+      "mtime_ns": "1792698316732056900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-14_x.npy": {
+      "sha256": "30cf76711b215e8b8705fb3fd65988905d2d78f850223d05801942b4d576d555",
+      "size": 9066728,
+      "mtime_ns": "1792698316744770400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\manifest.json": {
+      "sha256": "22360e9f5c2b64adb88d09d7654dbdf15344be03306fa047253879bf2d486a53",
+      "size": 4899,
+      "mtime_ns": "1792360616919363000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_021\\capture_031000\\quotes.parquet": {
+      "sha256": "57fad81dfc4c35cc4ee4c4e4114ddd2804495f98fea4cd23e53a989446d9cd53",
+      "size": 51921789,
+      "mtime_ns": "1792113959576461400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\x.npy": {
+      "sha256": "7b2cc49e645a260a62d13286cf5b6094cff2c785cee784064901c2eac8754b98",
+      "size": 391764,
+      "mtime_ns": "1792360616805295100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\decision_t.npy": {
+      "sha256": "b01a914db03e85c915e978e4c1fa1d5c2c1e8fd4d5b82569629390908e53c2f8",
+      "size": 11160,
+      "mtime_ns": "1792360616806803700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\bar_t.npy": {
+      "sha256": "b3e9487107957000ddec5faf22f286a1b194720253fcdd0e76d7e9a88528c23d",
+      "size": 11160,
+      "mtime_ns": "1792360616807802000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\can_enter.npy": {
+      "sha256": "5d3f270c3a4171d58f2ef5aafc644168e7708752a95d1bba8c2b25c1a387dbf7",
+      "size": 1507,
+      "mtime_ns": "1792360616808304200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\decision_mid.npy": {
+      "sha256": "ac3efcf4b012f40bf61cb2ea5069c0c7f50c6dcec99cbcad23d26cd59d867e29",
+      "size": 11160,
+      "mtime_ns": "1792360616809306500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\cuts.npy": {
+      "sha256": "db3cb212018b5b2a9f2bca08350ae208678f96629d75fe4540cb828cebab48c6",
+      "size": 11160,
+      "mtime_ns": "1792360616810303100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\execution_valid.npy": {
+      "sha256": "f341f2efec14dcf07cdf410c81a007976579f0fcf43cd01af594ae8f0192f71f",
+      "size": 3886313,
+      "mtime_ns": "1792360616814824400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\execution_segment.npy": {
+      "sha256": "0e243f8c258e067013eba3ceb413b25367e8441cfa25790fcfd9ff9370e1ecc7",
+      "size": 15544868,
+      "mtime_ns": "1792360616829395700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_021\\capture_031000\\manifest.json": {
+      "sha256": "98c579bb919c97086550f330f656b4173b111522722fae1ceade539b97a91558",
+      "size": 14292,
+      "mtime_ns": "1792113996522290400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_021\\capture_031000\\features.parquet": {
+      "sha256": "019afff42ddc96e942c9895fbe43ce78541d833e4899a435a56f8a874fd64e12",
+      "size": 70252190,
+      "mtime_ns": "1792113965148842600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_021\\capture_031000\\manifest.json": {
+      "sha256": "e90c41e70b05af2aacbc57d1418235a46fb7aebcef6f04c24d2bf42972dab368",
+      "size": 4357,
+      "mtime_ns": "1792113959678861300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-17.json": {
+      "sha256": "300e0a23b0d6471eaddbfdea3add42b313712efb495a3e76fe8a266a3c7c0dc2",
+      "size": 115962,
+      "mtime_ns": "1792698321219599800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-17_roots.parquet": {
+      "sha256": "cc4df12680f1d5f730b628e13dc7afca7dd236177e501118245b0efba6bb6d56",
+      "size": 1128846,
+      "mtime_ns": "1792698320966021900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-17_scene.parquet": {
+      "sha256": "44751d033236c149679a7701932b6c0aa8715def7111f551c3bbc751c861ca06",
+      "size": 542459,
+      "mtime_ns": "1792698320985065800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-17_bank.parquet": {
+      "sha256": "3431c78d159511ef315d66ebbf537b44423440402eaea0b92fdb5bf8085dde8e",
+      "size": 380052,
+      "mtime_ns": "1792698321004275600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-17_map.parquet": {
+      "sha256": "7b510c8f6ed2065331a3cfd6f7c2c8e31e38cf0188a35a1147499eb8c4e69adf",
+      "size": 1740310,
+      "mtime_ns": "1792698321078139300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-17_execution.parquet": {
+      "sha256": "ee623ef0b266067885d91b7d6037308195390368dddd212389c8c9941ee543fa",
+      "size": 1874745,
+      "mtime_ns": "1792698321176600000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-17_x.npy": {
+      "sha256": "39bbe2539edbf54087c0f4340663b211fbc3429e149b32f8ad202ea9938ba0a2",
+      "size": 9066728,
+      "mtime_ns": "1792698321191589000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\manifest.json": {
+      "sha256": "dc42b8a5c94e0b447127b9f2e03a914c0c001ce64182428e4d2c2457e5b91eb4",
+      "size": 4898,
+      "mtime_ns": "1792360619497663700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_022\\capture_032000\\quotes.parquet": {
+      "sha256": "5ff0d6fc85a9915e0a4ac954049e79f3ee29ecbe8c2022a13186a1bc0f50ceb8",
+      "size": 2521820,
+      "mtime_ns": "1792113671647463900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_023\\capture_033000\\quotes.parquet": {
+      "sha256": "ba979fd4b0622b54b4001c53561d18b45666330bd987633a27e41dbc62eff3b6",
+      "size": 56848404,
+      "mtime_ns": "1792114047053613700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\x.npy": {
+      "sha256": "a0c2940fb848cd515625977d0079e86d8c83b9866956d1c1928b83d4a42dd465",
+      "size": 391764,
+      "mtime_ns": "1792360619397650800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\decision_t.npy": {
+      "sha256": "823d3677cca0ebc429d8004db89127736c8e9589d2ffbb1a6e0aa1dce2c6bc7e",
+      "size": 11160,
+      "mtime_ns": "1792360619399150300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\bar_t.npy": {
+      "sha256": "c7670191dcdf55605bd274b4e48d7156919356dde8847624956a2923669935bd",
+      "size": 11160,
+      "mtime_ns": "1792360619400650300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\can_enter.npy": {
+      "sha256": "db1aaf3174f4967fefb7b72bd46865839a97b1856c6f8d4fb63ea49aa8a361ed",
+      "size": 1507,
+      "mtime_ns": "1792360619401150800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\decision_mid.npy": {
+      "sha256": "bb33a1e9389ba6c12952b15e135b47094b9db468148694a2ff61bf0edc5f0d8a",
+      "size": 11160,
+      "mtime_ns": "1792360619402151900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\cuts.npy": {
+      "sha256": "cbe75f9eda5ac5eb77d652dfd8f9a4b33601d3834be0ecf0a0faf78dc0f7a5b8",
+      "size": 11160,
+      "mtime_ns": "1792360619402649900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\execution_valid.npy": {
+      "sha256": "721843dd9ce2bebd1e9affc1cbe2bf5548446a5f4c4a65c80ea34e9125de1e8c",
+      "size": 4128466,
+      "mtime_ns": "1792360619406731200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\execution_segment.npy": {
+      "sha256": "ff2c589092f4573ead76cb2c940914348b970be7d96bbe9664a1f7c6f90c56b7",
+      "size": 16513480,
+      "mtime_ns": "1792360619418832800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_022\\capture_032000\\manifest.json": {
+      "sha256": "150a0ca0688c5122ad140d37a23c7256953ff3465646140c3f015720367557af",
+      "size": 18737,
+      "mtime_ns": "1792113694287939400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_022\\capture_032000\\features.parquet": {
+      "sha256": "e4556593e8cbbc71a697310cc684a0533b9e456bfd3519c0f7c68590b36d324c",
+      "size": 6385814,
+      "mtime_ns": "1792113674319311200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_022\\capture_032000\\manifest.json": {
+      "sha256": "8c89eb88a1083045eff49d843c8c76bd10471d5e0f9f7e86873d534d2ced90dd",
+      "size": 9030,
+      "mtime_ns": "1792113671705507700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_023\\capture_033000\\manifest.json": {
+      "sha256": "c751860565aa293fa9e666b0ec55e799a872914ed65999cf957331c70ee890b9",
+      "size": 15310,
+      "mtime_ns": "1792114086991379600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_023\\capture_033000\\features.parquet": {
+      "sha256": "55e460dea842644e6f3ca0ac24a0ec788c9701c83b885643b640c553bf22f65c",
+      "size": 77780352,
+      "mtime_ns": "1792114054356501500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_023\\capture_033000\\manifest.json": {
+      "sha256": "93d8583f63cb1845aaf360203948693b66bee1ee26946157d35c363ad2b30720",
+      "size": 5409,
+      "mtime_ns": "1792114047194241400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-18.json": {
+      "sha256": "79d653de6e6f06505e429e82a2668f9cbbaacc65fcd284f5545d39b1ddf1c34d",
+      "size": 116001,
+      "mtime_ns": "1792698323486279700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-18_roots.parquet": {
+      "sha256": "b586d687224be45c7ae8ae4f8701a67b06edfdb4beac4bd6d8c18dfbfb434689",
+      "size": 1120092,
+      "mtime_ns": "1792698323101825000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-18_scene.parquet": {
+      "sha256": "6bc23049a23b9bb68b735b0270914480b25c45c3c2e3274a0494e1d9a76b84a0",
+      "size": 543585,
+      "mtime_ns": "1792698323118307600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-18_bank.parquet": {
+      "sha256": "0ca7a453187e4bbe8b7832e138abf4d51782ba501508b629e3a7beaa67bc27d3",
+      "size": 370001,
+      "mtime_ns": "1792698323137849400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-18_map.parquet": {
+      "sha256": "28a73ccbfa43bc5f2144035a8475a733647507dabdfae8905b860e74a1b52659",
+      "size": 1734364,
+      "mtime_ns": "1792698323218685500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-18_execution.parquet": {
+      "sha256": "3fb35042ac38a81e81e684ed9b8c75b44a2cfee960418e73227c4ca7e175118a",
+      "size": 1880887,
+      "mtime_ns": "1792698323465547000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-18_x.npy": {
+      "sha256": "7986660278410c9445f15f5731e51cec0fdceb7db3c6f59f4f2c532c7fa40abe",
+      "size": 9066728,
+      "mtime_ns": "1792698323474945300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-18\\manifest.json": {
+      "sha256": "e18bf20edd83b07d96d871dc7903c044e076a5920ba863a647abe750901fad61",
+      "size": 4899,
+      "mtime_ns": "1792360624444084900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_024\\capture_034000\\quotes.parquet": {
+      "sha256": "3f53832e3476895ea173e323d443b73c4f3dfc4185dae08b80e3e64403c43a03",
+      "size": 68138876,
+      "mtime_ns": "1792114156460057400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-18\\x.npy": {
+      "sha256": "3bd55e3f9093cb59db78d760988009972121208a2bdc8fe69a4ac38556b3704a",
+      "size": 391764,
+      "mtime_ns": "1792360624315622900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-18\\decision_t.npy": {
+      "sha256": "88deedd86528cbda0c80b49004b9cbaf6234c47469c02012563afb378588379c",
+      "size": 11160,
+      "mtime_ns": "1792360624316634600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-18\\bar_t.npy": {
+      "sha256": "eec73d02b31278405514466b22bff01a103952635d9f179a75b9d7d9f059cf04",
+      "size": 11160,
+      "mtime_ns": "1792360624317633700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-18\\can_enter.npy": {
+      "sha256": "998b3570f3234982c392fd9d99676f4f61c6075b43171af7b06c645f1165522e",
+      "size": 1507,
+      "mtime_ns": "1792360624318637600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-18\\decision_mid.npy": {
+      "sha256": "dcd21c5ad9b6edf89cf657158f1684106a7608982ef454fd75f35e5be16dd29f",
+      "size": 11160,
+      "mtime_ns": "1792360624319634400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-18\\cuts.npy": {
+      "sha256": "576b2e2677115dbb79b5720e738448db1f3519a726a62a8bd9cdc8923d1a24de",
+      "size": 11160,
+      "mtime_ns": "1792360624320132700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-18\\execution_valid.npy": {
+      "sha256": "47aa9e2d044583873ea4fcc0d138da0cd64b7ac934863aa2a7c77f79cf10be3d",
+      "size": 4833984,
+      "mtime_ns": "1792360624324274800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-18\\execution_segment.npy": {
+      "sha256": "9427f3ee1519a050976a666fa85052f53534ce3fc790b8a2673fb66418d7d861",
+      "size": 19335552,
+      "mtime_ns": "1792360624341298900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_024\\capture_034000\\manifest.json": {
+      "sha256": "79b5b56088b49d8e691836aa305f5c67f1c3526f9fa6931a35d8edfe7084f772",
+      "size": 14935,
+      "mtime_ns": "1792114194788118100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_024\\capture_034000\\features.parquet": {
+      "sha256": "6f281cbd50c198b04af56f3fe94991f82fac4c4bdf63c4aa1f9b439308ec7089",
+      "size": 79369750,
+      "mtime_ns": "1792114163522692900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_024\\capture_034000\\manifest.json": {
+      "sha256": "2cbbc96f45eb2ce4a66849bab66ac65c24952324d50cecfdd32ab02376f333b3",
+      "size": 4996,
+      "mtime_ns": "1792114156616264600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-19.json": {
+      "sha256": "fff9f98c81ebf33c7ab73b9be832a28217eb4f2f2eb4c81ce7d3109925abc56f",
+      "size": 115841,
+      "mtime_ns": "1792698328993562700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-19_roots.parquet": {
+      "sha256": "2e0bd4d52fa1a99d6c8c3d5935ce67c67162e332ab89cfd0ea6efa670070e0f5",
+      "size": 1185710,
+      "mtime_ns": "1792698328766182300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-19_scene.parquet": {
+      "sha256": "2cc9e0cd336fbf4724389f34f7d27ef61d06a21e54fa92c75a75c11e8634ef2f",
+      "size": 580403,
+      "mtime_ns": "1792698328783185100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-19_bank.parquet": {
+      "sha256": "1b484149b9ce3188a17923dfe5433254b56f38d6384a2f5ea3f03f8ffa6a941a",
+      "size": 356361,
+      "mtime_ns": "1792698328803185700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-19_map.parquet": {
+      "sha256": "f9fef45c3cf3a830a64c37e904a0641f41fd68280752a949395aa7531f97e611",
+      "size": 1982872,
+      "mtime_ns": "1792698328891527900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-19_execution.parquet": {
+      "sha256": "a37485b2284bb8ffeea0ef9156fded45a401881bb33fb23c452b6aa8ce2119d7",
+      "size": 2026910,
+      "mtime_ns": "1792698328950672100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-19_x.npy": {
+      "sha256": "45ce21ce2842d5d719001a9741047a152165fe1607d22802cc5db4711646ddec",
+      "size": 9066728,
+      "mtime_ns": "1792698328976095500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-19\\manifest.json": {
+      "sha256": "97a916825b0ada09793856789095df3d7c9856e2dfa4e64768bce60565b8645c",
+      "size": 4899,
+      "mtime_ns": "1792360639026897000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_025\\capture_035000\\quotes.parquet": {
+      "sha256": "f884b63c97c23905450cf84f72cfe61890c8f38cc02abd084c7d52506b96d845",
+      "size": 91752711,
+      "mtime_ns": "1792114330807261500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-19\\x.npy": {
+      "sha256": "1f21d351fa845d9435fdfc480115521024cc8dcbe11a109cc2122b729da392ac",
+      "size": 391764,
+      "mtime_ns": "1792360638834429800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-19\\decision_t.npy": {
+      "sha256": "99a1944883da00bb75abd640e70cdee740aeb97c5c066c59ebbb12f67a6ad5be",
+      "size": 11160,
+      "mtime_ns": "1792360638835928100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-19\\bar_t.npy": {
+      "sha256": "c890f1cf0fd0c4c1854594673656522dc1c65dcb4ce26e3386443fc4ec097885",
+      "size": 11160,
+      "mtime_ns": "1792360638836936800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-19\\can_enter.npy": {
+      "sha256": "9335ddf2a8d0c612aadc52a304eba38fdaf474beebb6add7aa4b05967e476f2f",
+      "size": 1507,
+      "mtime_ns": "1792360638837936000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-19\\decision_mid.npy": {
+      "sha256": "7a90dfeb597e0008fc39347be2aaad330497bc628a80175d9e9be16e683421af",
+      "size": 11160,
+      "mtime_ns": "1792360638838938000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-19\\cuts.npy": {
+      "sha256": "912b8cadf426ad57cecf62317a5c8551baa35b1586aabb60697c6f41a7ed6c95",
+      "size": 11160,
+      "mtime_ns": "1792360638839940900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-19\\execution_valid.npy": {
+      "sha256": "a7b5f82d410f072bb488b17b9001e0a2cd7fddf4e61a507e6e5b959c1407c186",
+      "size": 6636224,
+      "mtime_ns": "1792360638846469000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-19\\execution_segment.npy": {
+      "sha256": "b5270098231ab934aeb0077687014c9ef0584a9da19d9db58cc9cb0b8e8ac83f",
+      "size": 26544512,
+      "mtime_ns": "1792360638885564700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_025\\capture_035000\\manifest.json": {
+      "sha256": "6c827ecbe1459c07f41245baf7ccbffe9e39535d76f17057bfbeec656e7bb558",
+      "size": 14741,
+      "mtime_ns": "1792114374513690000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_025\\capture_035000\\features.parquet": {
+      "sha256": "111c0f2dd2ff18573866a410212eaa9d2710e0fc22734e2159536574b718330a",
+      "size": 79535582,
+      "mtime_ns": "1792114337860455100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_025\\capture_035000\\manifest.json": {
+      "sha256": "410e24323d675665bd44f69f1a83d95548b0849960357e25c64feb738a64488a",
+      "size": 4790,
+      "mtime_ns": "1792114331006847800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-20.json": {
+      "sha256": "69a4aafbd3acf5a8948fa7f2e5f01c7b6b0e0dbf30be8b9d5313520882d9739f",
+      "size": 115841,
+      "mtime_ns": "1792698330848290400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-20_roots.parquet": {
+      "sha256": "7685928368570955cafc1e8c6b3747349641c5e6bece26631c16a0771533d7ce",
+      "size": 1139120,
+      "mtime_ns": "1792698330646975100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-20_scene.parquet": {
+      "sha256": "324a145705b24093796cba33614d14e79191db05a722f4b397a7991b4bda6831",
+      "size": 574070,
+      "mtime_ns": "1792698330657105900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-20_bank.parquet": {
+      "sha256": "8502a30b78131fbfb7f59aca690813c06bd68c0b03c28b60445774c0220019aa",
+      "size": 400579,
+      "mtime_ns": "1792698330682003400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-20_map.parquet": {
+      "sha256": "b631781e011f46d99668b5a5c2cf11c8d37d8349de17a41eaddb99451d7d3e08",
+      "size": 1894190,
+      "mtime_ns": "1792698330763697300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-20_execution.parquet": {
+      "sha256": "77f583036c1f943a6014f456a22ccf881977efa5b5eb17f97f9151869345f247",
+      "size": 1969325,
+      "mtime_ns": "1792698330818479000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-20_x.npy": {
+      "sha256": "1178d3042868be9f09bfa28192341060b7ea2a7f60abbed6950b9cc73844e284",
+      "size": 9066728,
+      "mtime_ns": "1792698330818479000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-20\\manifest.json": {
+      "sha256": "90cb66ef335c4eb3469370d46f22ac9cc424995e86efc22df389bf9726e140c3",
+      "size": 4899,
+      "mtime_ns": "1792360639989222200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_026\\capture_036000\\quotes.parquet": {
+      "sha256": "1dedbff07da384ec7c863195972fa1cde024515c98b4dca8729130a29699ede2",
+      "size": 85408623,
+      "mtime_ns": "1792114366940513600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-20\\x.npy": {
+      "sha256": "c6bde5cbc8edbf509f1a1f70c5a2737a1f48a30148a85541057aaf847e21b6be",
+      "size": 391764,
+      "mtime_ns": "1792360639820494000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-20\\decision_t.npy": {
+      "sha256": "ed111afd829b6b93160e0b92f493106915f22636dc004f732c31c34a10a374b8",
+      "size": 11160,
+      "mtime_ns": "1792360639820996700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-20\\bar_t.npy": {
+      "sha256": "6fdb7fc181cf6b2148f79b3b1d311d2b95c3847206bd7675441f2b440143b926",
+      "size": 11160,
+      "mtime_ns": "1792360639823507700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-20\\can_enter.npy": {
+      "sha256": "5cb1f1c74eaedca3c16556844b35cd5058c4b401c696c609b618938cece2bade",
+      "size": 1507,
+      "mtime_ns": "1792360639824020800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-20\\decision_mid.npy": {
+      "sha256": "cacf54dc2288f46dde0aacd8467a2925f444e238ec722652ea7ee698343b9d31",
+      "size": 11160,
+      "mtime_ns": "1792360639825524600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-20\\cuts.npy": {
+      "sha256": "70a0a643218c07f7c102945ab657b06f41b59c4bf07e4dad28f32186bd4bb330",
+      "size": 11160,
+      "mtime_ns": "1792360639837540900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-20\\execution_valid.npy": {
+      "sha256": "50303d8ecfe5f51addd74b1fd967f4ec1d5961f1823f5c0adcbb62873df1b7e0",
+      "size": 6198555,
+      "mtime_ns": "1792360639846630100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-20\\execution_segment.npy": {
+      "sha256": "5e227ebdc535ed503d2db8fa9e2bb405c54524c461c0a451b3b6e906cbc8e3db",
+      "size": 24793836,
+      "mtime_ns": "1792360639873695500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_026\\capture_036000\\manifest.json": {
+      "sha256": "b49a0f57c9bdf952519841fa27469b57caae9fd088361d6675e6548390503638",
+      "size": 15299,
+      "mtime_ns": "1792114405179125100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_026\\capture_036000\\features.parquet": {
+      "sha256": "9e6bfbbdad7c2c1db0800a227f5b3133c2f7dd142b16649d4454b69bfac62ea1",
+      "size": 79774011,
+      "mtime_ns": "1792114374692594400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_026\\capture_036000\\manifest.json": {
+      "sha256": "9b142f87422818aaa51aba649ac88728694be197d0141095c161309e600bbbb0",
+      "size": 5409,
+      "mtime_ns": "1792114367167304800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-21.json": {
+      "sha256": "eaab30bcab9b928c9be738e05403431ad27e061ca060f9f17bcb1337c4167429",
+      "size": 115997,
+      "mtime_ns": "1792698335774173000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-21_roots.parquet": {
+      "sha256": "4f77ae05c95705f7a406513f7631eeec8d44a8c478d4d24bf7ddf631cdafc38b",
+      "size": 1132090,
+      "mtime_ns": "1792698335512901500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-21_scene.parquet": {
+      "sha256": "86182cd82ffab93a3e047d927db8d19072186b1480b53808ba255606665193e1",
+      "size": 575167,
+      "mtime_ns": "1792698335544519400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-21_bank.parquet": {
+      "sha256": "30cca8fb37599d483259a01a7fa2eacc00fbcc5ad57f167f5eb9c6b71b84e2d7",
+      "size": 392424,
+      "mtime_ns": "1792698335586516600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-21_map.parquet": {
+      "sha256": "aa8498868104e267db4a722d56bd3f79ea6120e531dfc54e3958ed8635f15b44",
+      "size": 1851772,
+      "mtime_ns": "1792698335683511700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-21_execution.parquet": {
+      "sha256": "25b5f060b3ae1bee1b5869e0151df7bf6d5267ff58e927605b027ac2283795ee",
+      "size": 1908240,
+      "mtime_ns": "1792698335745966800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-21_x.npy": {
+      "sha256": "8e81283e2a09c232337a9a85c629a188202c9a68aa879927adf3eb651fcf74ae",
+      "size": 9066728,
+      "mtime_ns": "1792698335755201600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-21\\manifest.json": {
+      "sha256": "22def91dbe51906767e55cace24116e70229bc3199de952f9fd82ef8ffffb281",
+      "size": 4899,
+      "mtime_ns": "1792360643497798900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_027\\capture_037000\\quotes.parquet": {
+      "sha256": "9ce31e6dca609ff22648185da60701ec00115f4900b20b4c3a29d13bcb5ac46c",
+      "size": 73228097,
+      "mtime_ns": "1792114433571581000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-21\\x.npy": {
+      "sha256": "d3559e55e948176ef733da40e3bc14f0afb7e05cd7c82d905b73060c1c0917f1",
+      "size": 391764,
+      "mtime_ns": "1792360643328885100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-21\\decision_t.npy": {
+      "sha256": "9381aec3e7eadb5b4ef3b17b0670b14c6727fd19e74294f677d4a9acd916c062",
+      "size": 11160,
+      "mtime_ns": "1792360643330385400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-21\\bar_t.npy": {
+      "sha256": "63d82ef426b49d084f52820606537c18a95d1716084df2a1e79e51690efec8df",
+      "size": 11160,
+      "mtime_ns": "1792360643330886200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-21\\can_enter.npy": {
+      "sha256": "d432a9ce2fb12dfdf638d28cab1101547eb75dfa9938b38af274bc3187ecb2de",
+      "size": 1507,
+      "mtime_ns": "1792360643332384700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-21\\decision_mid.npy": {
+      "sha256": "e21b4ac094bac789cd89c924e3b812cc70f7caece68626cad62d3366f2f5b043",
+      "size": 11160,
+      "mtime_ns": "1792360643334450200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-21\\cuts.npy": {
+      "sha256": "c2b09aceccd825e7fac0519522772178c5ef77ee6ec824640a1215db50e1bd0a",
+      "size": 11160,
+      "mtime_ns": "1792360643336463600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-21\\execution_valid.npy": {
+      "sha256": "a537cca18e1d9125ebd1a17b500e7c0223713878b89cff7bc5ff09e05898771b",
+      "size": 5434086,
+      "mtime_ns": "1792360643344243500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-21\\execution_segment.npy": {
+      "sha256": "92447d499b78076c9fc3efe776ffe48b02e705b695c29683097416197c8d3d21",
+      "size": 21735960,
+      "mtime_ns": "1792360643375495500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_027\\capture_037000\\manifest.json": {
+      "sha256": "0ca25ce60bbfe5f965cf43d68961fde95d8f9bf0096f877af0d29a2eb42ddd88",
+      "size": 15845,
+      "mtime_ns": "1792114468742072900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_027\\capture_037000\\features.parquet": {
+      "sha256": "fa0dde43639e457caaefa3845544ffad23fd97a0282bfb4373ac5ebab43e3f01",
+      "size": 72520367,
+      "mtime_ns": "1792114439428708700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_027\\capture_037000\\manifest.json": {
+      "sha256": "351a97ee5258e3292b0f452438ead3fe047d3bd0bcf214b5368c6387291cc3a1",
+      "size": 6000,
+      "mtime_ns": "1792114433710275600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-24.json": {
+      "sha256": "35b085c916bfd677e687c2f2983cd8b1fa3607f5fb526eda95feffd577f8153d",
+      "size": 115842,
+      "mtime_ns": "1792698337746173400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-24_roots.parquet": {
+      "sha256": "4161a100f2d10a0e65ebb14e9bce63f3782c4c9ded8a9d850a7d840c9688b24b",
+      "size": 1152327,
+      "mtime_ns": "1792698337540878300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-24_scene.parquet": {
+      "sha256": "d1e624a12955d790bd7180118b0be63a8678f2b73bda47da0dbb2a4c01b21803",
+      "size": 580954,
+      "mtime_ns": "1792698337559414000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-24_bank.parquet": {
+      "sha256": "470e217a160a654829e9e8f52b4c8d09467998f8e01da0191f757ac4fc28f9ec",
+      "size": 457226,
+      "mtime_ns": "1792698337582749000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-24_map.parquet": {
+      "sha256": "230f7a0f89fec147a5a6744bff3f64050023caeaca62c5d861f44dc8bcb4353c",
+      "size": 1910355,
+      "mtime_ns": "1792698337657428600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-24_execution.parquet": {
+      "sha256": "b2d804900e36e450bddc16cf682b2addb0db511dbc53d8551271c49b9e744f6c",
+      "size": 2005633,
+      "mtime_ns": "1792698337718914100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-24_x.npy": {
+      "sha256": "e28af2d61a694c2c2798ab4825fc057b7296fa21ff7c7f708ce5a67ca2118bcb",
+      "size": 9066728,
+      "mtime_ns": "1792698337720307600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-24\\manifest.json": {
+      "sha256": "cddfef7c12c28c8e8e7b315024a67b59883c7ddfd993648c09aa5947361ae266",
+      "size": 4898,
+      "mtime_ns": "1792360664701963800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_028\\capture_038000\\quotes.parquet": {
+      "sha256": "f8e5412b2bac29bb0e11d60fe2e40a5ef4091aa717fe4e164a12184493ac307a",
+      "size": 3846547,
+      "mtime_ns": "1792114005804293900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_029\\capture_039000\\quotes.parquet": {
+      "sha256": "ebe9c02c85b89c5a88efc21c3d478099ddbc54c1b50e3ad15bbf4880803c1528",
+      "size": 99569152,
+      "mtime_ns": "1792114638356601300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-24\\x.npy": {
+      "sha256": "d1f12f1ffed8b5bb34ea2be5c4aeb53825b287a3e4610b58f992a62188f7448b",
+      "size": 391764,
+      "mtime_ns": "1792360664423869300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-24\\decision_t.npy": {
+      "sha256": "e4542cb92f6f81bd8a24c05edf489a2b4018ad1fe2fd41ab989f967bafdfad6c",
+      "size": 11160,
+      "mtime_ns": "1792360664426385700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-24\\bar_t.npy": {
+      "sha256": "40125141a9bb6c4409cf194b67ae902f62eb3938e88249866faae2e0ed3dd224",
+      "size": 11160,
+      "mtime_ns": "1792360664429385700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-24\\can_enter.npy": {
+      "sha256": "939412fc25844e21f55eb4df910a6fa927626302fd8d376c4e45dbaec7d97aed",
+      "size": 1507,
+      "mtime_ns": "1792360664432385900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-24\\decision_mid.npy": {
+      "sha256": "234add5251e69421e81974ebe0a041d2b0c784f496ba395b9f858debfdd3a129",
+      "size": 11160,
+      "mtime_ns": "1792360664433957500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-24\\cuts.npy": {
+      "sha256": "22fd1462ae139f73a4dcaa84002a3bc2ffc7e218111d295eefc34b5cfc801e57",
+      "size": 11160,
+      "mtime_ns": "1792360664434964300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-24\\execution_valid.npy": {
+      "sha256": "537821f4dc770117f066d89f29043208058d23ea0715921f7371f9c304bc6bdd",
+      "size": 7249396,
+      "mtime_ns": "1792360664442469300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-24\\execution_segment.npy": {
+      "sha256": "ea39443365aa30f5c4baf0e4e1d3b506e9aa068aa6163acc2368774bdf3e76ed",
+      "size": 28997200,
+      "mtime_ns": "1792360664500808200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_028\\capture_038000\\manifest.json": {
+      "sha256": "0088be6300df7664a5275e38ec71420e075053bab10fd986781f8dfee5c95429",
+      "size": 18752,
+      "mtime_ns": "1792114027788161600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_028\\capture_038000\\features.parquet": {
+      "sha256": "26df3658036ae8636d7e570424c30da62210053319cdcb7a4112469adb6d6ff2",
+      "size": 6932931,
+      "mtime_ns": "1792114008851550800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_028\\capture_038000\\manifest.json": {
+      "sha256": "332b438ac7b42dc0e2feac5b1beff3d43c505b600045d3f9023aa2f1e46896ab",
+      "size": 9028,
+      "mtime_ns": "1792114005852337800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_029\\capture_039000\\manifest.json": {
+      "sha256": "96439a89b6f85021f95c01c28ec550462b7c0302fbeeb0f46162dbfc99cd11e6",
+      "size": 15693,
+      "mtime_ns": "1792114669631967500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_029\\capture_039000\\features.parquet": {
+      "sha256": "0a6c3a7f167d940d874951a9fba59ea27adae4b74b7628e0096c91f622838253",
+      "size": 79443164,
+      "mtime_ns": "1792114643975572000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_029\\capture_039000\\manifest.json": {
+      "sha256": "6a4dcac85553fbbb19417617d1061e3523443363299d452b82bcc721b5eab82e",
+      "size": 5822,
+      "mtime_ns": "1792114638554291300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-25.json": {
+      "sha256": "b0e5831c751c0c3cb42b8b74cee05bba4ead37a9912cb39f45c0bb0833741c5b",
+      "size": 116001,
+      "mtime_ns": "1792698343299930300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-25_roots.parquet": {
+      "sha256": "4c09557c865c35ce4ae89882108c8a319efea015c3d9adaa7c844b716ab12bb5",
+      "size": 1121659,
+      "mtime_ns": "1792698343070805700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-25_scene.parquet": {
+      "sha256": "d58e96a2b6f692367ce3041cc8688b857c3475a9e996bd5f422f34e926157218",
+      "size": 566217,
+      "mtime_ns": "1792698343090800000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-25_bank.parquet": {
+      "sha256": "0de907dc4aba7c79bb5b29edfa7a00da7fb291caf6afacf1d932524dd4df052a",
+      "size": 391843,
+      "mtime_ns": "1792698343110054900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-25_map.parquet": {
+      "sha256": "6f4b6ae47919082977f46962e680427b9bbf41719ad2c0f60635255c15fbf9e2",
+      "size": 1813494,
+      "mtime_ns": "1792698343193211700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-25_execution.parquet": {
+      "sha256": "576fe5d8b7c4d6d4c4aa0b41b09addcf6dce4d37e6ade9e5bf32689a06ce7a45",
+      "size": 1924525,
+      "mtime_ns": "1792698343270871800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-25_x.npy": {
+      "sha256": "91d6a421839f6b54c5b38043f8abfa8192fb5881fbef450175b3312a11173994",
+      "size": 9066728,
+      "mtime_ns": "1792698343282877200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-25\\manifest.json": {
+      "sha256": "c1e4d6578ee5a84e3d4d6ae979820c53984d03d2d6708e566796e8c717e90308",
+      "size": 4899,
+      "mtime_ns": "1792360662402475100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_030\\capture_040000\\quotes.parquet": {
+      "sha256": "06b8c029938631cfd1e811bf0fef266e5fccf442259a946dd63012380cf3d395",
+      "size": 86563354,
+      "mtime_ns": "1792114592037907600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-25\\x.npy": {
+      "sha256": "6430d172691ad79d9ffb3997e28dbc1cbd9bbe9b02327686de924172774eb7ad",
+      "size": 391764,
+      "mtime_ns": "1792360662147589200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-25\\decision_t.npy": {
+      "sha256": "87e585737b912c82d9308580680e8822cf61d12c936c119a0ff8ce7f44847141",
+      "size": 11160,
+      "mtime_ns": "1792360662150589000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-25\\bar_t.npy": {
+      "sha256": "db132cdc079ca508e3832423c94e285e988120172f50c8a26ff69ad64659f64b",
+      "size": 11160,
+      "mtime_ns": "1792360662152588400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-25\\can_enter.npy": {
+      "sha256": "b370dfb0f8c2cee723b0035763bd6573b38afa6ae0106e7fd421b8956709f8f7",
+      "size": 1507,
+      "mtime_ns": "1792360662154110200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-25\\decision_mid.npy": {
+      "sha256": "6490c8bffb1e1685926b60609c3188813a6241a795381e9821e2f6f810407eec",
+      "size": 11160,
+      "mtime_ns": "1792360662155110300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-25\\cuts.npy": {
+      "sha256": "f15ff7f9d98d2f51c5a7bd13585dfb634a50fa9c194dafbac64216a047063b5a",
+      "size": 11160,
+      "mtime_ns": "1792360662157620200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-25\\execution_valid.npy": {
+      "sha256": "fd02a6abecb345714a3e6f572fb8ac77e379b23bd844979676dd5be6ffd9c137",
+      "size": 6277675,
+      "mtime_ns": "1792360662165763200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-25\\execution_segment.npy": {
+      "sha256": "36e23ff4a7ddcf6187fb1f99ab37483337eb044039625528c7b4eaf151798df1",
+      "size": 25110316,
+      "mtime_ns": "1792360662206388400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_030\\capture_040000\\manifest.json": {
+      "sha256": "9720ea1cec49d2f90434bed5da163b09a6731064934501b7fb78404857183e81",
+      "size": 15108,
+      "mtime_ns": "1792114628975437100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_030\\capture_040000\\features.parquet": {
+      "sha256": "8c1c70f7e1e89def68e56e3109ba9f76489c4dd0e487990a2ddc7cf91f788d8c",
+      "size": 79608365,
+      "mtime_ns": "1792114598913146600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_030\\capture_040000\\manifest.json": {
+      "sha256": "2ab3742eac68b009f475aaa4b2b67e27004f6770b76082f68582e0d58d93de44",
+      "size": 5179,
+      "mtime_ns": "1792114592225436100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-26.json": {
+      "sha256": "ed60dde45c3ba1b9188904807d7700f165e71bf38b0ff5c2e61666e40fa95e99",
+      "size": 115991,
+      "mtime_ns": "1792698344920523200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-26_roots.parquet": {
+      "sha256": "d137200efd83e4dd7104ec416d4e97b50371ad4a710ec6f7e86c683339bec0e4",
+      "size": 1123940,
+      "mtime_ns": "1792698344735307100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-26_scene.parquet": {
+      "sha256": "57d8da8463526322c5696633b251dfdc2fb33db8bf126ba190107236111234d1",
+      "size": 556141,
+      "mtime_ns": "1792698344752669100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-26_bank.parquet": {
+      "sha256": "fceda18bffe8df0e6611e3411bd903ddd5579e822425d32de6b81b7a7ab54544",
+      "size": 489620,
+      "mtime_ns": "1792698344770669200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-26_map.parquet": {
+      "sha256": "a55ebdfe56993a481cedbe15833d11a8e15c31b7ae2f5a707aa1df0324e1a575",
+      "size": 1908972,
+      "mtime_ns": "1792698344852453100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-26_execution.parquet": {
+      "sha256": "fc4a7a22af1290898b3b4f36ad5f8505e3e7e605bd53d0028993a3c439b1b599",
+      "size": 1902523,
+      "mtime_ns": "1792698344909095600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-26_x.npy": {
+      "sha256": "1451e6ed3da57d193199482a370709870765cd50a1b773b991190ceef411c80f",
+      "size": 9066728,
+      "mtime_ns": "1792698344918013900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-26\\manifest.json": {
+      "sha256": "084577d86fe9a09f797b1c8c7f67b9482bbe19203f594e6b8b11a85af098a8fc",
+      "size": 4899,
+      "mtime_ns": "1792360665719498300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_031\\capture_041000\\quotes.parquet": {
+      "sha256": "6198261134350f240dccb05b1655499382137996fbf82d3b4b3fd50f34bd0d37",
+      "size": 81980769,
+      "mtime_ns": "1792114670066289400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-26\\x.npy": {
+      "sha256": "7da6e38cfd51096464a794236115a190e1b8c73de53f08e0b2c1d676bcee5263",
+      "size": 391764,
+      "mtime_ns": "1792360665521853000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-26\\decision_t.npy": {
+      "sha256": "0c0feb54738e1e4c339d5048ca69ac9143e4612914808ab48c39c466a4527ea0",
+      "size": 11160,
+      "mtime_ns": "1792360665525889000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-26\\bar_t.npy": {
+      "sha256": "f065ef71d174174c98c86e9788e97e949ed3c2da917b82f98f41f0e3b889e835",
+      "size": 11160,
+      "mtime_ns": "1792360665529389900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-26\\can_enter.npy": {
+      "sha256": "e77c0ae43f7677a02e3709367d614aacf76da9e63901074e1a0bf01b828f6b0c",
+      "size": 1507,
+      "mtime_ns": "1792360665530890500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-26\\decision_mid.npy": {
+      "sha256": "8463823463a3f87d57ae26cd2aeeb108eec176221f1f0f54fae40ba73af901db",
+      "size": 11160,
+      "mtime_ns": "1792360665532389500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-26\\cuts.npy": {
+      "sha256": "8703b7f25c7e912cbe7d510184ddeefe36a15542d520a5eb94312ac54f046f0a",
+      "size": 11160,
+      "mtime_ns": "1792360665533401800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-26\\execution_valid.npy": {
+      "sha256": "8261e2e040da163afbb657a3d68a09e6c1ebd3c5e10a1abd1565310e7f4950b3",
+      "size": 5843232,
+      "mtime_ns": "1792360665538421200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-26\\execution_segment.npy": {
+      "sha256": "0314576f9fd13f61ebcb177bfc4a2b5030258cbee305798a46896643f6093e0f",
+      "size": 23372544,
+      "mtime_ns": "1792360665580096300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_031\\capture_041000\\manifest.json": {
+      "sha256": "114d45b678d77141a55a08e9442b115bac290907f7e8f83e4bfebc474213effc",
+      "size": 15297,
+      "mtime_ns": "1792114699866139900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_031\\capture_041000\\features.parquet": {
+      "sha256": "589295b0e43538c167fb652b58c561f34c63533c1e01763106817aa084ab96fc",
+      "size": 79772902,
+      "mtime_ns": "1792114675988549600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_031\\capture_041000\\manifest.json": {
+      "sha256": "b82cfba091a582b3b8e3ff25c8d9d476d522cb9182cbffed5ec8fd5e5bf792a6",
+      "size": 5409,
+      "mtime_ns": "1792114670249678300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-27.json": {
+      "sha256": "0bc24ee0caa8ff957ecd642ce63b94c1d4f58de6cdac61666088e8654bd99b45",
+      "size": 115999,
+      "mtime_ns": "1792698350147340700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-27_roots.parquet": {
+      "sha256": "fd63796a8a524f36b5296f802b10602f50a711f665e8a0c7bbb3495880d16fdd",
+      "size": 1103331,
+      "mtime_ns": "1792698349928269200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-27_scene.parquet": {
+      "sha256": "890793868d57bdfc75b8f67b45f1302784435b40751b151f2f5701dfb357d696",
+      "size": 548483,
+      "mtime_ns": "1792698349947478400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-27_bank.parquet": {
+      "sha256": "d69aee667afd8f9e84cec412eee46639af3cb985119bc2012eabe3258c5bc8b7",
+      "size": 364824,
+      "mtime_ns": "1792698349966635600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-27_map.parquet": {
+      "sha256": "c1942d5c66ef3354f75f88bf9e256953ba44e17df86d7c565f71fc0a8b35891e",
+      "size": 1909060,
+      "mtime_ns": "1792698350051746900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-27_execution.parquet": {
+      "sha256": "1e97caeee18dd73e5d69e44220b02407843987d52f585ef28868642a0309a29e",
+      "size": 1873788,
+      "mtime_ns": "1792698350118887900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-27_x.npy": {
+      "sha256": "5dea16a3796c5a7cd91ea2cf84938e19c9ffbae09d0e9ba20c1223671178e168",
+      "size": 9066728,
+      "mtime_ns": "1792698350129885400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-27\\manifest.json": {
+      "sha256": "c9e935be4d2102afe2f53a1fb5996ac060ac998e04b51903d494676dc470d256",
+      "size": 4899,
+      "mtime_ns": "1792360690109353500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_032\\capture_042000\\quotes.parquet": {
+      "sha256": "4a8eb41ae0637a82d3ec6bf4479f25c1605be1d64a3e66b9bf832488ff5f71cf",
+      "size": 71230322,
+      "mtime_ns": "1792114760429223600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-27\\x.npy": {
+      "sha256": "bf1bbab1f366aa66e228d40e901d704093bb6cba5e7bf8b89ac1b092e97d7265",
+      "size": 391764,
+      "mtime_ns": "1792360689915028300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-27\\decision_t.npy": {
+      "sha256": "6dd15b50f217fe711c9f7d7851c42569e17aef7e6c1687e8b7766a15e7573fce",
+      "size": 11160,
+      "mtime_ns": "1792360689917539200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-27\\bar_t.npy": {
+      "sha256": "71cd72c1c588f2e86c55c56e26659a77c23a0eb77b79fcd76e32efa05b4646bc",
+      "size": 11160,
+      "mtime_ns": "1792360689919037400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-27\\can_enter.npy": {
+      "sha256": "1e688f43450810fa28673e814889c48c73171f425470f934c508360b0543d27a",
+      "size": 1507,
+      "mtime_ns": "1792360689920038100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-27\\decision_mid.npy": {
+      "sha256": "bb6d1879e8fc6d1cf508209322f88f2d5d1621e4a9a86a872722758df1e137c2",
+      "size": 11160,
+      "mtime_ns": "1792360689921038000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-27\\cuts.npy": {
+      "sha256": "9cf4a13e6ac38f788a84604946c3ede87aeb0c6c5dbb1c6c822fe92e40fd015d",
+      "size": 11160,
+      "mtime_ns": "1792360689927073000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-27\\execution_valid.npy": {
+      "sha256": "557a773f7dca49f7dc1370b469db5557dfd5c9b0f5d964e176419855ddbe0384",
+      "size": 5208834,
+      "mtime_ns": "1792360689933580700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-27\\execution_segment.npy": {
+      "sha256": "a5f67300dacc44c33b1832cc8f0e21963f20dfe7e28a6042f4101d0cdc6e0dc8",
+      "size": 20834952,
+      "mtime_ns": "1792360689958670900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_032\\capture_042000\\manifest.json": {
+      "sha256": "15f64fed6cf261bdd3b650fece33f729f682b2870cbcc8c9d2741688c030b888",
+      "size": 14885,
+      "mtime_ns": "1792114787131967900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_032\\capture_042000\\features.parquet": {
+      "sha256": "543be18de907a8a8b5cf3cb305d925c79b45b0a134c28c692cf00433c2e60980",
+      "size": 78657974,
+      "mtime_ns": "1792114765319745700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_032\\capture_042000\\manifest.json": {
+      "sha256": "befce5846dcc2510f2ed5f5647a7443a76e813c4cb04cee3db3e4c9cde484889",
+      "size": 4995,
+      "mtime_ns": "1792114760555495700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-09-01.json": {
+      "sha256": "f4338f855dd4911a36d9814d265bf040dd9394333ee11379db4cf4cf8b896447",
+      "size": 115994,
+      "mtime_ns": "1792698353533878600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-09-01_roots.parquet": {
+      "sha256": "0dc18c631845cbbca81a1fba31770092a727af4e0845da7ebe121a9dc2ba2977",
+      "size": 1178756,
+      "mtime_ns": "1792698353347193600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-09-01_scene.parquet": {
+      "sha256": "a52eb8eb2176d34816f5cd1141c5445fd807401f2b36b72e5fc67bb2b0df8bd2",
+      "size": 592473,
+      "mtime_ns": "1792698353360573800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-09-01_bank.parquet": {
+      "sha256": "c4cfeba5baf71be9f707874ecdc807b6b1a1116b521d5975e5417ed7037d5de3",
+      "size": 416362,
+      "mtime_ns": "1792698353379893000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-09-01_map.parquet": {
+      "sha256": "a737b84fba1d21e59a0a86ea6dcf829189ebe55daef0a96110ee90444d90e12a",
+      "size": 1795978,
+      "mtime_ns": "1792698353451756500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-09-01_execution.parquet": {
+      "sha256": "6a4ec385320b3b87874d326170d683776d4313713fa003915b69fa75b0c05477",
+      "size": 2000805,
+      "mtime_ns": "1792698353507689500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-09-01_x.npy": {
+      "sha256": "7a78fadd2e66cb3e2bba9efca3be8c74544a95466b24fb48002809a8b3e918da",
+      "size": 9066728,
+      "mtime_ns": "1792698353517689400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\manifest.json": {
+      "sha256": "83052f40f1973753783f344576f390934d9f4ff9f142c1bd296c88ab94bcbada",
+      "size": 4900,
+      "mtime_ns": "1792360715201390400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_035\\capture_045000\\quotes.parquet": {
+      "sha256": "f709ccf6f601d66e36a3478df2dcab6f95c9025cc0d2d3722fd06fbdc18ac169",
+      "size": 91100391,
+      "mtime_ns": "1792114949069534500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_036\\capture_046000\\quotes.parquet": {
+      "sha256": "8548e22a7b8c0554aa5d46d1d61e454ed068be52d5fe4f90f62aa375e301375e",
+      "size": 108942302,
+      "mtime_ns": "1792115110029975500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\x.npy": {
+      "sha256": "ea5ee385c9f5b98d491f5d412c79ffb50d1389de99d69c8d0806cd74e67ad7da",
+      "size": 391764,
+      "mtime_ns": "1792360714991776500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\decision_t.npy": {
+      "sha256": "334f28d3c22aee6065c02ddb39b928af0e86d0dbc13200e89f0016927ee51d08",
+      "size": 11160,
+      "mtime_ns": "1792360714992781000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\bar_t.npy": {
+      "sha256": "56089727a274f146d314693ac13ac143f79ef13ff54517aacc4ba97de49d6d79",
+      "size": 11160,
+      "mtime_ns": "1792360714995808700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\can_enter.npy": {
+      "sha256": "8ecb2a71244e10e7c2dc8831195aebfb0eabc2544623dfea127569fc7c829c13",
+      "size": 1507,
+      "mtime_ns": "1792360714997309800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\decision_mid.npy": {
+      "sha256": "03c56bbef33b5f395588d044609d4ed03e6eb4b6588bd97c40aadc0c1228a0d8",
+      "size": 11160,
+      "mtime_ns": "1792360715000314500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\cuts.npy": {
+      "sha256": "6b8dd206385ab302645fe19c5d7b91c385604001f9edb03eff6444a07d3bec1f",
+      "size": 11160,
+      "mtime_ns": "1792360715001310800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\execution_valid.npy": {
+      "sha256": "422ee261076c96d6dc0a72f847731e3d961b940d97bf961282a300c0195ed6c5",
+      "size": 7931613,
+      "mtime_ns": "1792360715007883800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\execution_segment.npy": {
+      "sha256": "a8cb6031af5b2e38e2767676b8cabb81fccc6a6db2220a1b6e059a1ec6fc79f4",
+      "size": 31726068,
+      "mtime_ns": "1792360715051028400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_035\\capture_045000\\manifest.json": {
+      "sha256": "59dbff59d0a9342b04d0c4f042fe74ff6e553145c3d1fc19f4cad1c949d34014",
+      "size": 14903,
+      "mtime_ns": "1792114974361355400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_035\\capture_045000\\features.parquet": {
+      "sha256": "57cb67f93e414e07170e7b934d8aa158cb828c57232c5ffa4545b062f5a482cd",
+      "size": 79423875,
+      "mtime_ns": "1792114954120928200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_035\\capture_045000\\manifest.json": {
+      "sha256": "048589cab83d275cc50ca5dbb192d28546ae6661bbb53ec273d6ae9cac311aa6",
+      "size": 4971,
+      "mtime_ns": "1792114949263437800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_036\\capture_046000\\manifest.json": {
+      "sha256": "58f721cea3a27984522576528fccdcda35333aa6968c6ca385cc4c59c0425a44",
+      "size": 15299,
+      "mtime_ns": "1792115132366249300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_036\\capture_046000\\features.parquet": {
+      "sha256": "05d8049a0d413c55d9b01997792849707b73b00ddbb2b7d9e20ca260d4320ed9",
+      "size": 80473205,
+      "mtime_ns": "1792115115863212900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_036\\capture_046000\\manifest.json": {
+      "sha256": "6758b17fc9f412bcc56293f91abf56ede862f2b228cf26e9066e6b72536a1281",
+      "size": 5400,
+      "mtime_ns": "1792115110180503600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\manifest.json": {
+      "sha256": "a579280c59b176932950606bf515dac846e8ca9ba6eb49e8307e79f7566cf8ee",
+      "size": 4898,
+      "mtime_ns": "1792360696051204600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\x.npy": {
+      "sha256": "9d6eb06d4ec6771d553e12ba4759ccdad4d2fdf5d93f5fd1cd5768cc6683d1d8",
+      "size": 391764,
+      "mtime_ns": "1792360695871178700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\bar_t.npy": {
+      "sha256": "525aec49d93aa1be76f39593bf648909bdd065dce8b0fa0cfdd697afbbfd337b",
+      "size": 11160,
+      "mtime_ns": "1792360695875254200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\decision_t.npy": {
+      "sha256": "a7048eadd6b4aca72041a2f3acf5674e4b65c430ef9dc8ab9316c66a4467209d",
+      "size": 11160,
+      "mtime_ns": "1792360695873743800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\decision_mid.npy": {
+      "sha256": "82da0d4e2cd52fa50c0fb1b1e5c91f248c38acbcd553d306748097811a84c607",
+      "size": 11160,
+      "mtime_ns": "1792360695879265300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\cuts.npy": {
+      "sha256": "0e51edec11214f58192e6fdf9a323d04630ec430b34f88ffaa4e8a23af2889a6",
+      "size": 11160,
+      "mtime_ns": "1792360695879771700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\execution_valid.npy": {
+      "sha256": "d0487586d693be0cab5f4d68b5a6b2ca820dc398f5dc2f06223a126bbfcf7d1b",
+      "size": 6844785,
+      "mtime_ns": "1792360695885284300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\execution_segment.npy": {
+      "sha256": "ffda8f297bdca43f6026e9eb6b47f3b5a2794d096ff4ce03c96142d0465eb53e",
+      "size": 27378756,
+      "mtime_ns": "1792360695915880100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v4\\runs\\tcn_micro_restored_uniform_seed17\\checkpoint.pt": {
+      "sha256": "97c78ae4853f28976a266b53622c2022fb6a58104a1795987d45e0b410e8ff32",
+      "size": 128117,
+      "mtime_ns": "1792695685540659300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v4\\runs\\tcn_micro_restored_uniform_seed17\\scaler.json": {
+      "sha256": "4dca80035b6d9f3e180370c0dfe2df6ee5a8007eb46e4df3f0b6da910b5b441d",
+      "size": 23512,
+      "mtime_ns": "1792695482120225100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v4\\runs\\tcn_micro_restored_uniform_seed17\\config.json": {
+      "sha256": "a4f0847a7b0b147eb2c87f28f07b5baf8ff89a3c92c0f92547ba71ecf928df2f",
+      "size": 8360,
+      "mtime_ns": "1792695480616408900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v4\\runs\\tcn_micro_restored_uniform_seed17\\receipt.json": {
+      "sha256": "66f6f295b95f0599159dff31296fbaec708d60a2e9e758be7f7b617b41e44348",
+      "size": 5147,
+      "mtime_ns": "1792695691242828800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v4\\runs\\tcn_micro_restored_uniform_seed29\\checkpoint.pt": {
+      "sha256": "c91e74f6a7e8b92808b55663ce8acb3ff581a8ae227f79ac72ccbc71e53e314f",
+      "size": 128117,
+      "mtime_ns": "1792696185800423800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v4\\runs\\tcn_micro_restored_uniform_seed29\\scaler.json": {
+      "sha256": "4dca80035b6d9f3e180370c0dfe2df6ee5a8007eb46e4df3f0b6da910b5b441d",
+      "size": 23512,
+      "mtime_ns": "1792695941744504900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v4\\runs\\tcn_micro_restored_uniform_seed29\\config.json": {
+      "sha256": "bb6edb015855915dcc3cd536e0856cdb4345e85e64ab05dc97b482f774695f7d",
+      "size": 8360,
+      "mtime_ns": "1792695941121429100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v4\\runs\\tcn_micro_restored_uniform_seed29\\receipt.json": {
+      "sha256": "42cde9f7d667c5003e172232d3610d21c9c777951166a5ba0f5228dbdedc9df4",
+      "size": 5147,
+      "mtime_ns": "1792696191508850600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\receipt.json": {
+      "sha256": "d693c0f76d791585c32d906d0c3045f3e42a57414f91cbae44929707e65fa6bd",
+      "size": 5054,
+      "mtime_ns": "1792698600554778200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\run_opportunity_v5.py": {
+      "sha256": "b9d04c9ec1b862cc4053eb08ee5ac91c9679adf8f1cb60b0384da8ec9a59e72b",
+      "size": 11384,
+      "mtime_ns": "1792698536817617100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\bb_crossing_session.py": {
+      "sha256": "b1a13bb0e6ff4156be98159d519cb51e7b70c5448594875ea2a23010baaa077a",
+      "size": 7123,
+      "mtime_ns": "1792649203472840700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\crossing_map_analyze.py": {
+      "sha256": "fa4ebf96e9aefd6205c95e775393a665c07f6f7606250f8d90a117538f24975a",
+      "size": 12037,
+      "mtime_ns": "1792668808072851700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\prepare_opportunity_v3.py": {
+      "sha256": "9806bd78e551f1fa452a0e6ad9d80f9d19b230371cd67335ee1afd2a52dc81f0",
+      "size": 10132,
+      "mtime_ns": "1792689458660096500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\bb_crossing.py": {
+      "sha256": "41a19c06d70855916ecb2ac6e52f1a11854ecfe32092e8cc31af6040f62d7fef",
+      "size": 14585,
+      "mtime_ns": "1792647593710159200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\crossing_map.py": {
+      "sha256": "b4c8aa5f57b424cf4f8ba13cc1bc3e26c324afba67ce9872a2ac9b0d1c5e4487",
+      "size": 4562,
+      "mtime_ns": "1792669323303844000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\execution.py": {
+      "sha256": "a3fb6adac03cc4e14ca68953f05717569058fb03236a175e1e0e4b565f0e2005",
+      "size": 18127,
+      "mtime_ns": "1792425584580685500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\flow_context.py": {
+      "sha256": "43b41ec5e901bff03f01ac85a2bcfce60d6ac3df586b48801ef56310f640051a",
+      "size": 9669,
+      "mtime_ns": "1792637488609999800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\playground\\data.py": {
+      "sha256": "07e13250366b14430c64189cbd67d343e35de1d229e66108f9f9464966ad412f",
+      "size": 15419,
+      "mtime_ns": "1792354917999802000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research\\losses.py": {
+      "sha256": "82e66491dbf53051a3179be1adc861f944c2d3cbd39be08592f6ff1f26a7fc16",
+      "size": 4807,
+      "mtime_ns": "1792680762266107100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research\\models.py": {
+      "sha256": "0fe6aad6eb274140e89f416c947235b35f72607ddf3c1ecfa9b112a537f77d69",
+      "size": 6379,
+      "mtime_ns": "1792680708555534600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v2\\features.py": {
+      "sha256": "58607fb7f80c488762f4ddbb2cb24636bd4e47ec0af68e4faa66a1d64173c655",
+      "size": 17069,
+      "mtime_ns": "1792684767872641600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v2\\learning.py": {
+      "sha256": "038ecd83bb45468c426d1312efd6a25264368a63712154405bcc2786a1936ed3",
+      "size": 31857,
+      "mtime_ns": "1792684818015209900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v2\\simulation.py": {
+      "sha256": "87390016c39936915041dc9105860a48f2437a2f9201c2dbc0ab02706c1862f1",
+      "size": 17045,
+      "mtime_ns": "1792684500336266500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v2\\targets.py": {
+      "sha256": "500ae32ab3946f1cfa3dfd2c45fde80494e86748835942605c9c6d218ec8cdd1",
+      "size": 17886,
+      "mtime_ns": "1792684851474728600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v3\\features.py": {
+      "sha256": "0f591f8301e87b95e77c7580159ab10c0bbe6a6cde972ee5030f5ca59ac43901",
+      "size": 9537,
+      "mtime_ns": "1792689382417394700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v3\\learning.py": {
+      "sha256": "d2e96bdf220a439996a835a4da7a20ebf373016dfe2ece9a897c5d4ff1f4aaea",
+      "size": 38383,
+      "mtime_ns": "1792689779836352600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v5\\__init__.py": {
+      "sha256": "b5f8bd70fabb52e026ed206f3c33547ae4f7ea8ec0c4898ef2e70152bb25f62f",
+      "size": 72,
+      "mtime_ns": "1792698374731885400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v5\\learning.py": {
+      "sha256": "445deae4e3b14e5dd922fa98fb4d131ea475d631bd5f8e5d444deb619ede6ccd",
+      "size": 24015,
+      "mtime_ns": "1792698375145105500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v5\\targets.py": {
+      "sha256": "6a9146a3576b67a3c10224f51f4c1610e8231d1b97478a4bca556a836ff4b7b0",
+      "size": 13946,
+      "mtime_ns": "1792698364354632300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\checkpoint.pt": {
+      "sha256": "b77deefacefa884a23ebc0bcad02845045b73fc6cf89dc25250f5a0178e322ef",
+      "size": 33017,
+      "mtime_ns": "1792698599383384700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\config.json": {
+      "sha256": "332dfab60c496846ee575b77a82d1ca99add7003364e9715931715a11c5af020",
+      "size": 7912,
+      "mtime_ns": "1792698588696368800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\feature_schema.json": {
+      "sha256": "76b95e45fe7c67bcdd73dcd3254a6925bd7a72ea06d90ea94f93e6f0925d3371",
+      "size": 8114,
+      "mtime_ns": "1792698588661698000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\filter_predictions.parquet": {
+      "sha256": "cf46ba29d18e7dd892d23ecdce97f41ff0f701cc485d2fc9406f48b1d01ec480",
+      "size": 20467513,
+      "mtime_ns": "1792698599667325600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\gradient_artifact.json": {
+      "sha256": "4cb731a77800cfd9208bcfefb3e912425d0582d7429268374e15f8e77b47e004",
+      "size": 38102,
+      "mtime_ns": "1792698599641810400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\history.json": {
+      "sha256": "00cc97505d126032b8622a5994831c2b66f17557afe10f146af8aca9ef71ec8d",
+      "size": 197145,
+      "mtime_ns": "1792698599639727000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\predictions.parquet": {
+      "sha256": "5fd4130942d8f443dc86b57de77406fd0a1a0f3dffe59249fe51276e66dce55b",
+      "size": 24830279,
+      "mtime_ns": "1792698600271983300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\scaler.json": {
+      "sha256": "811eb8a18074d17fab758cef4ba6b76b7b6de526899bdff6c61fb758dc64cdfd",
+      "size": 9201,
+      "mtime_ns": "1792698588959693400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\summary.json": {
+      "sha256": "8925fe37566c0c9b2a35dcf29010108ccacd95d19d8542ada052e6ace7561472",
+      "size": 79508,
+      "mtime_ns": "1792698600275981000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\targets.parquet": {
+      "sha256": "07d80eeab0a87917aad24392304aa780cb6864a406d3270440795a1d72f03edd",
+      "size": 11165020,
+      "mtime_ns": "1792698588633291400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\target_receipt.json": {
+      "sha256": "bed82203ed70030e16c98c7b7638353debaeada338b5e2031ffef73d1464b697",
+      "size": 1842,
+      "mtime_ns": "1792698588634291900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\receipt.json": {
+      "sha256": "1cf581f0ea3901f83d82cb3be85dbefa210a5da258b8d501cc1bbf69c4d75c88",
+      "size": 5054,
+      "mtime_ns": "1792698635853941900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\checkpoint.pt": {
+      "sha256": "d09f966b8535d25e086ccdc9af783757f13646b8478ac38e26ca5be9288b7e9c",
+      "size": 33017,
+      "mtime_ns": "1792698634867796800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\config.json": {
+      "sha256": "332dfab60c496846ee575b77a82d1ca99add7003364e9715931715a11c5af020",
+      "size": 7912,
+      "mtime_ns": "1792698623190630200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\feature_schema.json": {
+      "sha256": "76b95e45fe7c67bcdd73dcd3254a6925bd7a72ea06d90ea94f93e6f0925d3371",
+      "size": 8114,
+      "mtime_ns": "1792698623162545000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\filter_predictions.parquet": {
+      "sha256": "95b23a18c60b6f9f18062213be99e611bda7ff2cd7444d45a4a9283d4795dfa1",
+      "size": 20455147,
+      "mtime_ns": "1792698635154922700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\gradient_artifact.json": {
+      "sha256": "6d10c4de0f0f92d9e2d60e005b59adf6c159e29a3638c5b88688ab44932b8835",
+      "size": 38522,
+      "mtime_ns": "1792698635129142100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\history.json": {
+      "sha256": "e3d2d485851d54c5bd895c44f893a43dac43e2d8f912e205b02b6225d9a83792",
+      "size": 220129,
+      "mtime_ns": "1792698635127633900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\predictions.parquet": {
+      "sha256": "18c64afe6d936e18b61a1c369f52eae564059e3d53bfc0f48e5483b8151ea55e",
+      "size": 24825862,
+      "mtime_ns": "1792698635636352900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\scaler.json": {
+      "sha256": "3cd267f783b0051077f43df6180f02a293378f91bcc8228c05d120a3af6970fa",
+      "size": 9190,
+      "mtime_ns": "1792698623443530500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\summary.json": {
+      "sha256": "9e41585e11067cf7078fc7846eee2c7b09db8c3a435208f18c576e1a14518c76",
+      "size": 79701,
+      "mtime_ns": "1792698635639858200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\targets.parquet": {
+      "sha256": "01e7d9e1aa6f490e60cf5300ab3d75d28dd65b8dfdf702a712d5ff96fa26ad9b",
+      "size": 11122778,
+      "mtime_ns": "1792698623140819700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\target_receipt.json": {
+      "sha256": "6aabb11cc658b2c0832078c633517a716ddc8df965f657801a20ffa084d92a12",
+      "size": 1842,
+      "mtime_ns": "1792698623141821500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\audit_opportunity_v5_data.py": {
+      "sha256": "386af923cf1350e5690fba379e65f3cc8d0fc266d2ee10c7b4abc5752e95ae97",
+      "size": 11384,
+      "mtime_ns": "1792698558814633800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\audit_opportunity_v3.py": {
+      "sha256": "971aea50a7998b43681eebb77a101fba73c81481dca982bfca4f008fb2f330cb",
+      "size": 36944,
+      "mtime_ns": "1792690610292522200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\causal_verification.json": {
+      "sha256": "c4387a69f1e8c1aada94944af07986a9b55716b78e2d141921b12746a59f27cc",
+      "size": 94686,
+      "mtime_ns": "1792698434312206100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\source_inventory.json": {
+      "sha256": "c88a435a622c51e4aba4e829cad375e38aa53a11e7d2f8ae9dfc43aa26a98796",
+      "size": 326060,
+      "mtime_ns": "1792698242126331200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\audit_economics_v5.py": {
+      "sha256": "28afd3fa0e29c3acd4e015fa8d6d40c54fc353b8e4cb8c08ece853d8eec17f13",
+      "size": 19092,
+      "mtime_ns": "1792698768221618400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\verify_opportunity_v3.py": {
+      "sha256": "de567a8fbb58301d25698ea44b60467fb488f2afff5521b1daf1d35237a4d6d5",
+      "size": 18342,
+      "mtime_ns": "1792689824597521800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v2\\evaluation.py": {
+      "sha256": "a8009c9d8e1c6d35c294f822c108d85c1612148db905620dd7bbc8cfeaf3ecac",
+      "size": 17243,
+      "mtime_ns": "1792685336027948100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\evaluate_opportunity_v5.py": {
+      "sha256": "8bfd54e3bc5fec17b871084a306e31aad108e804052f10bf7e7533b06068a2bd",
+      "size": 15115,
+      "mtime_ns": "1792698469421768800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\suite_summary.json": {
+      "sha256": "7c7fa32d247a61ea5a8a2e7e0179d8715e84a63bb50546a13659b8d231a1f8d8",
+      "size": 206252,
+      "mtime_ns": "1792698635899411100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\evaluation.json": {
+      "sha256": "6454529da7d557b6a7ff1433bbad13bb997fa64a22c512fd394d239e040f64d8",
+      "size": 3600219,
+      "mtime_ns": "1792698798957697900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\ledgers\\base_calibration_primary.json": {
+      "sha256": "6589492c9b522911ef3b068b65ab1859e8ab934578126a59edeadf3be3a629e3",
+      "size": 30629,
+      "mtime_ns": "1792698754016651200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\ledgers\\base_test_primary.json": {
+      "sha256": "93517f9445cf73176da35638980833b137e3fbcc6f9bd1238e7c646cc44f7114",
+      "size": 46154,
+      "mtime_ns": "1792698754208209600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\ledgers\\semantic_calibration_primary.json": {
+      "sha256": "f1567846883ed8b4222dfb48b3c698e1ae693b255e9ffafef452a20a6f1d5140",
+      "size": 42604,
+      "mtime_ns": "1792698758836359900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\ledgers\\semantic_test_primary.json": {
+      "sha256": "6dd42afb9ccb3049187fe3ef575eb54f4cec8ffba346577555ac26c7212b84dc",
+      "size": 101150,
+      "mtime_ns": "1792698758996364700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\ledgers\\risk_calibration_primary.json": {
+      "sha256": "c84b93ef07d77165f314c17504981e23607c128696677a98a19430ea47059a9f",
+      "size": 41639,
+      "mtime_ns": "1792698763616712600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\ledgers\\risk_test_primary.json": {
+      "sha256": "a5909aa4e609fd899803ae8aa993cd9834f47071158afa65379feaa7f5391167",
+      "size": 100538,
+      "mtime_ns": "1792698763822714300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\ledgers\\hash_control_calibration_primary.json": {
+      "sha256": "7cf98bc96ee43220654e19173551b60e74fe57a2aa3d8160663ab760fa0df307",
+      "size": 35475,
+      "mtime_ns": "1792698768736568500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed17\\ledgers\\hash_control_test_primary.json": {
+      "sha256": "8b14f8932383a7daef5b4705a4e9a2038b790f496d98fb6d82b5cac0aa690b34",
+      "size": 67262,
+      "mtime_ns": "1792698768957798000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\ledgers\\base_calibration_primary.json": {
+      "sha256": "7c01e64894543ffb66f29f1d5beedfbb5b31b167687a367acabedaaaaff7aa5c",
+      "size": 188539,
+      "mtime_ns": "1792698776612664100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\ledgers\\base_test_primary.json": {
+      "sha256": "feb8afaab71c85af9c658060f5f66cdfa1919289feacf5c87c92efbb40be68a2",
+      "size": 322703,
+      "mtime_ns": "1792698776794528400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\ledgers\\semantic_calibration_primary.json": {
+      "sha256": "956a7323b6bc66ee6ba1d6b4428b49593eda0c3bf8e79efde543f208627c0a4e",
+      "size": 193030,
+      "mtime_ns": "1792698783222751700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\ledgers\\semantic_test_primary.json": {
+      "sha256": "3594dc4d16c9abd5f289a4154de50d02dcbe5dfe32170fb707f7c85f23ef2d11",
+      "size": 315644,
+      "mtime_ns": "1792698783454491400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\ledgers\\risk_calibration_primary.json": {
+      "sha256": "bb1568c2af76facac1a5b55dd4bab9793474ea0496eaf97ea7c6fa5c482a196c",
+      "size": 206370,
+      "mtime_ns": "1792698788734249200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\ledgers\\risk_test_primary.json": {
+      "sha256": "addc584db43d0225488a524757b285347d43c1ea389012e34959415a31b9d1ea",
+      "size": 314635,
+      "mtime_ns": "1792698788942444500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\ledgers\\hash_control_calibration_primary.json": {
+      "sha256": "868fd8d0a739fa0f00e5165635ea30548e3125b847b28e9dce2f6363de8ada92",
+      "size": 224909,
+      "mtime_ns": "1792698793930156800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\runs\\filter_seed29\\ledgers\\hash_control_test_primary.json": {
+      "sha256": "f61a5a3147c570793276c3c957e3a70a20367f81c274981a7629e18e5ff61c79",
+      "size": 384012,
+      "mtime_ns": "1792698794103260000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\compare_opportunity_v5.py": {
+      "sha256": "4ce4a77d4a3390f162c4fdda8462014d58fbe27ece386642b82d71d170dd0f09",
+      "size": 18770,
+      "mtime_ns": "1792699134706921700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\audit_opportunity_v4.py": {
+      "sha256": "8d298351e322db77774f4d774197fad118994cda29870bcced0e51e830f7d2fa",
+      "size": 32522,
+      "mtime_ns": "1792695275339084600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\audit_economics_v4.py": {
+      "sha256": "b681007c0f10b0ab86429c9f82a06563826ccb3e4b0d893eebea5cb1183f167b",
+      "size": 20522,
+      "mtime_ns": "1792695222292444000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_controls.py": {
+      "sha256": "7e45a069b62401ec04e4b70f073336441d3fc2da705ba365e3fa09c1fe535bb3",
+      "size": 2867,
+      "mtime_ns": "1792681431233348500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_data.py": {
+      "sha256": "77140e3e5a8f087c7f0bbd9b4944e5ad24d7d4d0b3754bdf1beffe37fa6a3bc3",
+      "size": 3959,
+      "mtime_ns": "1792681326795808000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_models.py": {
+      "sha256": "a8968bbb94e7728e9008a3d0d4b16538de03d6ec723e2267918298a3aae7afc0",
+      "size": 6523,
+      "mtime_ns": "1792680762861443600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_simulation.py": {
+      "sha256": "fd1683b0d61bebf80aae71a8d01c66cc05472018153a5ef9aa5339e3568963b2",
+      "size": 7138,
+      "mtime_ns": "1792681571857512600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_training.py": {
+      "sha256": "d5a99c8a5071d59848a786ddd91e97ff671a520c7849a6b2c094ef51e3fc4d35",
+      "size": 4272,
+      "mtime_ns": "1792681709582578700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v2_evaluation.py": {
+      "sha256": "948c88ffc602a50e9743b85f99b6cc967947fbfb61137ac30eebdfadce035c8b",
+      "size": 8379,
+      "mtime_ns": "1792685463652800600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v2_features.py": {
+      "sha256": "46b770d71ecc98bb99eb88d9a046a684e7292c17c33708dc5ef36eef0db50be3",
+      "size": 5706,
+      "mtime_ns": "1792684768281937900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v2_learning.py": {
+      "sha256": "29e764276d5030ed8fb0379bf41eb2e8446ee9dce8a3ba7bb04ec0562de10ece",
+      "size": 9366,
+      "mtime_ns": "1792684759019663100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v2_runner.py": {
+      "sha256": "8bb1fdb2ca4ebba8e8b7a5f3c0e6498c130145799e39164816e66a8143b05b3d",
+      "size": 2055,
+      "mtime_ns": "1792685518397306200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v2_simulation.py": {
+      "sha256": "424b97bcdd3b1cec58c47b30f0b28eef6222bd367c4976e224ea6695c7edeb94",
+      "size": 6072,
+      "mtime_ns": "1792684976316041900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v2_targets.py": {
+      "sha256": "b2b81900133edd6bf544733fa07213fcd41810e33052d2d8112e35a5885fc762",
+      "size": 4510,
+      "mtime_ns": "1792684852119052100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v3_audit.py": {
+      "sha256": "241629808086950cb902c65d8378800cb41653fa219bc9ab33214dc50da57d51",
+      "size": 9893,
+      "mtime_ns": "1792690391951587800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v3_features.py": {
+      "sha256": "f667fd9a121a1e30bae2b7bea55e3eddfd0e511307e4d9588e08785b6c030562",
+      "size": 8166,
+      "mtime_ns": "1792689382980644600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v3_learning.py": {
+      "sha256": "6c540ccbe08fcd24758bf52e81b8d8baf3ee618777d2b4fb719a9044164bb0d9",
+      "size": 14432,
+      "mtime_ns": "1792689663038531500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v3_pipeline.py": {
+      "sha256": "f65f668ec2b04797a70debc2b9e5d956bc98944f61fdbe8bfb2b2785758b1891",
+      "size": 1942,
+      "mtime_ns": "1792689555254506400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v4_audit.py": {
+      "sha256": "64e9ef0202dc1c6a3e3715215eb655a71bf473d2e13d973e642323572c53cc03",
+      "size": 9321,
+      "mtime_ns": "1792695275668364800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v4_economics.py": {
+      "sha256": "acfb8ec2ff2030ecdf4bd3e1ccb8d1057c22d5d71c61054bed6837619365719f",
+      "size": 8069,
+      "mtime_ns": "1792695222637608700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v4_learning.py": {
+      "sha256": "d9a53e9444f037d8f2391939a6123f076c3c7a7e4ca92c8b17b9c69225ff0367",
+      "size": 9789,
+      "mtime_ns": "1792695324746497000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v4_runner.py": {
+      "sha256": "4834cdce53317c08b4144c198a949c9a6e427378d02ae8132b58b7195f7c0d42",
+      "size": 5260,
+      "mtime_ns": "1792695375030391100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v5_audit.py": {
+      "sha256": "202277262d4d6d8f15e205860bf106420023c4333a9df6b2be11989b90b0060b",
+      "size": 10992,
+      "mtime_ns": "1792699031263064400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v5_economics.py": {
+      "sha256": "927ac57f9db29f12e937599f6705613c32a9c8f7bb9606b7025af892b0007a89",
+      "size": 5956,
+      "mtime_ns": "1792698699811608900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v5_evaluation.py": {
+      "sha256": "73c94327d52c3c05a42f89c5ce11ed55559a6ba242047df340500c427a26f027",
+      "size": 4219,
+      "mtime_ns": "1792698437979098100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v5_inventory.py": {
+      "sha256": "aec169533270339b3c2a688c37dfd1933864e61eef66a75973d9f16ebdaa3fe8",
+      "size": 1263,
+      "mtime_ns": "1792698239957190400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v5_learning.py": {
+      "sha256": "28f45d0a1642d84dc44deda2d215c205ccd8bde0010b5e47689413f3b957fecc",
+      "size": 9760,
+      "mtime_ns": "1792698455236089700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\tests\\test_research_v5_targets.py": {
+      "sha256": "ed1003cfb0ff165d4d9e6096850023e3f7aa9abb36969e3683dc808f6a8decd3",
+      "size": 7704,
+      "mtime_ns": "1792698364671653900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\audit_learning_v5.py": {
+      "sha256": "851b82e72ac11ec3c46f313fd62e9654d0692f3012e13c5ebbd20281a8e5e6c3",
+      "size": 37667,
+      "mtime_ns": "1792699030844434300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\visual_manifest.json": {
+      "sha256": "3c22ce90671958b1b360aae56c91d652a1dfae0ee8384b1a74966bf3ed63d42d",
+      "size": 16708,
+      "mtime_ns": "1792700408253438500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\report_opportunity_v5.py": {
+      "sha256": "211fc2168b35a50ecf98c0392aceb7ba6c9d7ecb38413763f6bb4c060521912e",
+      "size": 28971,
+      "mtime_ns": "1792700403725480600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\index.html": {
+      "sha256": "19c847f5e35b58812c1b28cae174b4ab820c782b0fe82f2fa675fa3c070e1288",
+      "size": 16926,
+      "mtime_ns": "1792700408243904600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\01_learning.png": {
+      "sha256": "5420ce91fe248bbde9642d398d365ff1f099136888bc95c43d2e5c7c1a0f441d",
+      "size": 195686,
+      "mtime_ns": "1792699059418093700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\02_targets_gradients.png": {
+      "sha256": "ab6c9cb47df291fd8875852e4baa45954567c97c688e1124f22862fd10dd34bf",
+      "size": 164478,
+      "mtime_ns": "1792699060458229000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\03_retention_tradeoff.png": {
+      "sha256": "a97fc101a4cdc0c156c73a3e72269fcb51a7fc2215f8277fe50255281eeaedb0",
+      "size": 430636,
+      "mtime_ns": "1792699062219774100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\04_false_entries.png": {
+      "sha256": "129b50c787a8ec477827829fa487d59dd49eed8f01cb94cfa73a9b18aeb984d7",
+      "size": 117648,
+      "mtime_ns": "1792699063151404100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\05_reliability.png": {
+      "sha256": "e8ab26ccd65df479d84f8d8bb7bc91072c19b9ae062deb828ac0fb705d79e6a8",
+      "size": 309475,
+      "mtime_ns": "1792699064799743300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\06_economics.png": {
+      "sha256": "520996437e098c730cf483f2e5ce73294717e8f4f6bc8e8d9b0bd592ae66c5d9",
+      "size": 256566,
+      "mtime_ns": "1792699066325342600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\07_scene_17_1.png": {
+      "sha256": "0992868dd4b7b68a5523f2737513dad3010b05a7d69a41d33c247e1c86a6808f",
+      "size": 929598,
+      "mtime_ns": "1792699067824265100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\07_scene_17_2.png": {
+      "sha256": "70a3c2a7c953c253db88214e77c1978f032f5dcae373213bcc1fac86043b259c",
+      "size": 848706,
+      "mtime_ns": "1792699069378517900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\07_scene_29_1.png": {
+      "sha256": "8304c1080ecc669e41abf18e870bb89c8527166c6a082ba174ce732faa81d80a",
+      "size": 948386,
+      "mtime_ns": "1792699071145373600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\07_scene_29_2.png": {
+      "sha256": "9a6fbe07edc60f0451ad8cb675aec81af521b468701aab61f3fa2dfee9d5ed53",
+      "size": 847821,
+      "mtime_ns": "1792699072383092400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\08_trade_1_correct_risk_first.png": {
+      "sha256": "7c3bb076a92448cd65c1ef44d080da2d25dd29fe93b2d011b26d8f8f8ca6f1de",
+      "size": 218762,
+      "mtime_ns": "1792699074075301300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\08_trade_2_none.png": {
+      "sha256": "b36b270e335e2e05650f58fb618b394ad7a0211d0a20d1622cefae866105211b",
+      "size": 207126,
+      "mtime_ns": "1792699076726162300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\08_trade_3_wrong_side.png": {
+      "sha256": "931edd70e5aeeeeff6ddc215a8b5dbd980a0cca907133cf645a956a33e45967c",
+      "size": 180787,
+      "mtime_ns": "1792699078489242200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\08_trade_4_correct_safe.png": {
+      "sha256": "e46d46d82d004566a34265246d987f0bd2d87881278c6bab67406b070a9d1828",
+      "size": 193128,
+      "mtime_ns": "1792699080048171100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\09_candidate_funnel.png": {
+      "sha256": "efd8056cd9ee369746484617024eafa6c159ff115a0daa36e6936b68690ae622",
+      "size": 152890,
+      "mtime_ns": "1792699081570422800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\learning_audit.json": {
+      "sha256": "473bb22528e5c189e358c50636f576aea14f9a49a0bdb0eedbbdd92f6c246f04",
+      "size": 110660,
+      "mtime_ns": "1792699109823250300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\data_admission.json": {
+      "sha256": "0d631eaa69c2e917b341574fa7a6089f3a266e762b86fc1ab4e674e84d3dbf5c",
+      "size": 295643,
+      "mtime_ns": "1792698571023418700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\decision_findings.json": {
+      "sha256": "7067edc5d1ce5530051ceb6a9e90f0d067a595326ccfd5b183be1f1c4378f402",
+      "size": 124188,
+      "mtime_ns": "1792700529912310200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\economic_audit.json": {
+      "sha256": "d714473f340894d7691b166bd508b8c6d5bc22973bebea5fa9f86e6c846f0b78",
+      "size": 1264443,
+      "mtime_ns": "1792698899237695600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\paired_diagnostics.json": {
+      "sha256": "bb952b3a4a09c677dc1912bab7c19cca268a02ca48eb2e410b294e869a57cf53",
+      "size": 284688,
+      "mtime_ns": "1792699140859392000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\sol61_visual_audit.json": {
+      "sha256": "4eacbae42d877fe6379d29496821b2e40ad5401d006a25e5e734f07570d2c927",
+      "size": 18468,
+      "mtime_ns": "1792700408257457200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\test_receipt.json": {
+      "sha256": "07362eb3890bb797e2f0ed1907090b14a204668a44c81a487e5b1cf8b2e17799",
+      "size": 4602,
+      "mtime_ns": "1792699110741423400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\visual_case_receipt.json": {
+      "sha256": "01322cfa308fcd0394cdcce0cbf3e3491d8c9c051c47de3bdb73c3b25c62bd4a",
+      "size": 6509,
+      "mtime_ns": "1792699080336430600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\inventory_opportunity_v5.py": {
+      "sha256": "8c90492cb50141c6b36004b71080d57bb4b14e2c0db9ca3441ebe623243525ea",
+      "size": 16649,
+      "mtime_ns": "1792698239611705100"
+    }
+  },
+  "original_target_loss_preserved": true,
+  "all_required_work_complete": true,
+  "publication": "Local branch and reports only; no remote push or live trading deployment"
+}

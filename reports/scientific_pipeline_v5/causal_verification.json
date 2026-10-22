@@ -1,0 +1,2173 @@
+{
+  "status": "PASS",
+  "version": "SCIENTIFIC_V3_INDEPENDENT_SOURCE_REPLAY_V1",
+  "config_path": "D:\\scalper-mini\\attractive-spectrum-scalper\\configs\\research\\opportunity_pipeline_v5.json",
+  "config_sha256": "332dfab60c496846ee575b77a82d1ca99add7003364e9715931715a11c5af020",
+  "verifier_sha256": "de567a8fbb58301d25698ea44b60467fb488f2afff5521b1daf1d35237a4d6d5",
+  "selected_dates": [
+    "2026-07-30",
+    "2026-08-17",
+    "2026-09-01"
+  ],
+  "days": [
+    {
+      "date": "2026-07-30",
+      "split": "train",
+      "status": "PASS",
+      "symbol": "GCZ6",
+      "roots": 10074,
+      "quotes": 5193004,
+      "saved_x_shape": [
+        10074,
+        225
+      ],
+      "feature_family_widths": {
+        "geometry": 14,
+        "micro": 70,
+        "rich": 225
+      },
+      "exact_v2_X_and_admission": true,
+      "exact_nan_masks": true,
+      "exact_target_and_execution_tables": {
+        "roots": {
+          "rows": 10074,
+          "columns": [
+            "date",
+            "t_ns",
+            "entry_status",
+            "entry_reason",
+            "decision_ordinal",
+            "entry_ordinal",
+            "decision_ns",
+            "entry_ns",
+            "decision_spread",
+            "R_event",
+            "risk_R",
+            "G_event",
+            "decision_eligible",
+            "geometry_ready",
+            "R_cost2",
+            "R_cost4",
+            "R_cost6"
+          ],
+          "exact": true
+        },
+        "labels": {
+          "rows": 10074,
+          "columns": [
+            "date",
+            "t_ns",
+            "entry_ns",
+            "R_event",
+            "G_event",
+            "all_known",
+            "event_known",
+            "maturity_ns",
+            "available_ns",
+            "positive_witness_L",
+            "first_qualifying_ordinal_L",
+            "first_qualifying_ns_L",
+            "first_qualifying_event_id_L",
+            "max_cross_net_L",
+            "max_cross_net_R_L",
+            "gain_margin_L",
+            "gain_margin_R_L",
+            "positive_witness_S",
+            "first_qualifying_ordinal_S",
+            "first_qualifying_ns_S",
+            "first_qualifying_event_id_S",
+            "max_cross_net_S",
+            "max_cross_net_R_S",
+            "gain_margin_S",
+            "gain_margin_R_S",
+            "state",
+            "y_crossing",
+            "event",
+            "direction_known",
+            "direction",
+            "deadline_ns",
+            "deadline_seconds",
+            "gain_multiple",
+            "reference_fee",
+            "observed_cells",
+            "mature_cells"
+          ],
+          "exact": true
+        },
+        "scene": {
+          "rows": 10074,
+          "columns": [
+            "t_ns",
+            "available_ns",
+            "mid",
+            "decision_spread",
+            "BB1_middle",
+            "BB1_half",
+            "BB1_support",
+            "R_event",
+            "BB3_middle",
+            "BB3_half",
+            "BB3_support",
+            "BB6_middle",
+            "BB6_half",
+            "BB6_support"
+          ],
+          "exact": true
+        },
+        "bank": {
+          "rows": 17463,
+          "columns": [
+            "family",
+            "scale",
+            "ordinal",
+            "t_ns",
+            "role",
+            "direction",
+            "support",
+            "mid",
+            "line",
+            "cause",
+            "event_id"
+          ],
+          "exact": true
+        },
+        "map": {
+          "rows": 90666,
+          "columns": [
+            "date",
+            "t_ns",
+            "family",
+            "scale",
+            "role",
+            "entry_ordinal",
+            "entry_ns",
+            "ready",
+            "support_end_ns",
+            "cross_ordinal",
+            "cross_ns",
+            "event_id",
+            "cross_direction",
+            "resolved",
+            "within_horizon",
+            "delay_s",
+            "mark_L",
+            "mark_S",
+            "mae_L",
+            "mae_S",
+            "mfe_L",
+            "mfe_S",
+            "R_event",
+            "risk_R",
+            "G_event"
+          ],
+          "exact": true
+        },
+        "execution": {
+          "rows": 60444,
+          "columns": [
+            "date",
+            "plan",
+            "t_ns",
+            "side",
+            "risk_R",
+            "status",
+            "reason",
+            "net",
+            "mae",
+            "mfe",
+            "decision_ordinal",
+            "decision_ns",
+            "entry_ordinal",
+            "entry_ns",
+            "trigger_ordinal",
+            "trigger_ns",
+            "exit_ordinal",
+            "exit_ns",
+            "R_trade",
+            "R_event",
+            "G_event",
+            "cost_multiplier"
+          ],
+          "exact": true
+        }
+      },
+      "crossing_geometry_namespaces": {
+        "1": "520813a4f3c82e17dedb50fa",
+        "3": "6dbb5efc91deddd91a26a940",
+        "6": "d337a9194aaf6c22f554b05f"
+      },
+      "bank_events": 17463,
+      "map_cells": 90666,
+      "execution_trials": 60444,
+      "clock_and_support": {
+        "status": "PASS",
+        "source_rows": 82799,
+        "selected_source_rows": 10074,
+        "admitted": 9987,
+        "physical_support_origins": 10074,
+        "missing_x_inside_physical_support": 87,
+        "current_available_legacy_resets_without_physical_break": 1647,
+        "physical_breaks_between_available_origins": 0,
+        "source_ready_but_crosses_physical_boundary": 0,
+        "finite_observed_cells": 2067589,
+        "unavailable_rows_have_zero_observed_cells": true,
+        "max_admitted_endpoint_age_seconds": 2.0,
+        "max_selected_lookahead_ns": 0,
+        "late_source_rows": 4456,
+        "quote_transitions": 3,
+        "invalid_quote_rows": 1,
+        "witnesses": [
+          {
+            "previous_origin_ns": "1785394855000000000",
+            "origin_ns": "1785394860000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 1,
+            "legacy_token": 2,
+            "source_endpoint_ns": "1785394859000000000",
+            "source_publication_ns": "1785394859078532670"
+          },
+          {
+            "previous_origin_ns": "1785394935000000000",
+            "origin_ns": "1785394940000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 2,
+            "legacy_token": 3,
+            "source_endpoint_ns": "1785394939000000000",
+            "source_publication_ns": "1785394939000100839"
+          },
+          {
+            "previous_origin_ns": "1785395130000000000",
+            "origin_ns": "1785395135000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 3,
+            "legacy_token": 4,
+            "source_endpoint_ns": "1785395134000000000",
+            "source_publication_ns": "1785395134056309215"
+          },
+          {
+            "previous_origin_ns": "1785395260000000000",
+            "origin_ns": "1785395265000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 4,
+            "legacy_token": 5,
+            "source_endpoint_ns": "1785395264000000000",
+            "source_publication_ns": "1785395264016540599"
+          },
+          {
+            "previous_origin_ns": "1785395375000000000",
+            "origin_ns": "1785395380000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 5,
+            "legacy_token": 6,
+            "source_endpoint_ns": "1785395379000000000",
+            "source_publication_ns": "1785395379092842145"
+          }
+        ]
+      },
+      "frozen_scalar_checks": [
+        {
+          "kind": "map_raw",
+          "scale": 1,
+          "role": 0,
+          "t_ns": "1785419580000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 1,
+          "role": 1,
+          "t_ns": "1785419850000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 1,
+          "role": 2,
+          "t_ns": "1785418320000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 3,
+          "role": 0,
+          "t_ns": "1785419610000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 3,
+          "role": 1,
+          "t_ns": "1785419000000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 3,
+          "role": 2,
+          "t_ns": "1785417250000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 6,
+          "role": 0,
+          "t_ns": "1785405775000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 6,
+          "role": 1,
+          "t_ns": "1785419170000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 6,
+          "role": 2,
+          "t_ns": "1785417470000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "online_seen_lines",
+          "t_ns": "1785394800000000000",
+          "sides": 2
+        },
+        {
+          "kind": "online_seen_lines",
+          "t_ns": "1785419830000000000",
+          "sides": 2
+        },
+        {
+          "kind": "online_seen_lines",
+          "t_ns": "1785444865000000000",
+          "sides": 2
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": 1,
+          "t_ns": "1785394800000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": -1,
+          "t_ns": "1785394800000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": 1,
+          "t_ns": "1785419830000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": -1,
+          "t_ns": "1785419830000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": 1,
+          "t_ns": "1785444865000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": -1,
+          "t_ns": "1785444865000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": 1,
+          "t_ns": "1785394800000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": -1,
+          "t_ns": "1785394800000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": 1,
+          "t_ns": "1785419830000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": -1,
+          "t_ns": "1785419830000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": 1,
+          "t_ns": "1785444865000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": -1,
+          "t_ns": "1785444865000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": 1,
+          "t_ns": "1785394800000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": -1,
+          "t_ns": "1785394800000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": 1,
+          "t_ns": "1785419830000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": -1,
+          "t_ns": "1785419830000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": 1,
+          "t_ns": "1785444865000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": -1,
+          "t_ns": "1785444865000000000",
+          "max_money_error": 0.0
+        }
+      ],
+      "risk_ordering": {
+        "common_complete_origin_side_rows": 19548,
+        "nondecreasing_trade_risk": true,
+        "fixed_event_gain_across_plans": true,
+        "nondecreasing_trigger_time_on_common_complete": true
+      },
+      "states": {
+        "0": 6961,
+        "1": 1590,
+        "2": 1265,
+        "-1": 191,
+        "3": 67
+      },
+      "execution_statuses": {
+        "COMPLETE": 58875,
+        "EMPTY": 786,
+        "CENSORED": 423,
+        "INELIGIBLE": 360
+      },
+      "source_sha256": {
+        "data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\manifest.json": "6d4e533b21b26b79d142cedecfaca4dfd93796279d9f5887574af0be55037970",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_009\\capture_019024\\quotes.parquet": "e5bef71cee1c6c2ceb4a840d91affde826535fb48714b3e23156685b682057e5",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_009\\capture_019025\\quotes.parquet": "6f7610a4f4593ea47f6f373f680e53d9a2dc96c47540b02557e7e160ced859be",
+        "data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\x.npy": "61fee09a7574cf03f36f2ef655415515136b456de9b75ec4875bf41d06f53cf0",
+        "data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\decision_t.npy": "81378c1a3cc5e6091e9ce0d7f3d06e64689d2172caf3bdc096c9757cebca3a3b",
+        "data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\bar_t.npy": "0ff3c7a0c0428c2869c6e3e53cdf6dd78b0724d337b4bd61cf5fc2be706b8e9a",
+        "data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\can_enter.npy": "d546df6a4b1f8dd6e86866cbf68a43a48e040d0ae5f4e7b329f56c2c45011da1",
+        "data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\decision_mid.npy": "33522e1621e503e4756fbb41e468d71b83463b68b82adf182c3bca4f63be55b7",
+        "data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\cuts.npy": "2b6a4091399f2994deda792538f15c8f4a9cc1ff4496193e8675b1ffa98d5931",
+        "data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\execution_valid.npy": "72cfb1125fee16a4cfa58328d2842f3817946753914e51a8f7c7c7a83842e9bc",
+        "data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\execution_segment.npy": "745821e94d1783a628f84e12a56211f5e4d208d1e81556416d591540769a334c",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\manifest.json": "6494441ad65a5cdeb2f3a21fd7ed52e7fd41d61dae48be2eb12cfb71cbfed1a0",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\full_mbo_v1\\audit_20261016\\training_admission_overlay.json": "907ff17e961457c7d6bd3342efeb5a253165de15ecee7d546b8c3b439ff0dda3",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_009\\capture_019024\\manifest.json": "f57a80775232adf5d5026820bfb5f152110dbe8c8ade76af911e28817fd614bf",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_009\\capture_019024\\features.parquet": "288862f1378b813e04265b26869a2e1bebf4f536ea82dc82da07cb82af2f8fef",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_009\\capture_019024\\manifest.json": "04eaa1443e19bfbb040430a32f24d3af1692d693c6c954a5cef9e1c3c40724d2",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_009\\capture_019025\\manifest.json": "6dc7ef919921f6dad32666dd6fc65fd7c70126f8281d9a14421a331e30228e48",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_009\\capture_019025\\features.parquet": "495957416fa2fd9421f5bb465e5553f1f1c0febeff21febda74b61a75ca78c58",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_009\\capture_019025\\manifest.json": "6f94eeb258f4cf21f6eb5bae45872545a74e175fc60f58860ec2819763a58365",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\manifest.json": "6d4e533b21b26b79d142cedecfaca4dfd93796279d9f5887574af0be55037970",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\x.npy": "61fee09a7574cf03f36f2ef655415515136b456de9b75ec4875bf41d06f53cf0",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\bar_t.npy": "0ff3c7a0c0428c2869c6e3e53cdf6dd78b0724d337b4bd61cf5fc2be706b8e9a",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\decision_t.npy": "81378c1a3cc5e6091e9ce0d7f3d06e64689d2172caf3bdc096c9757cebca3a3b",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\decision_mid.npy": "33522e1621e503e4756fbb41e468d71b83463b68b82adf182c3bca4f63be55b7",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\cuts.npy": "2b6a4091399f2994deda792538f15c8f4a9cc1ff4496193e8675b1ffa98d5931",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\execution_valid.npy": "72cfb1125fee16a4cfa58328d2842f3817946753914e51a8f7c7c7a83842e9bc",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\execution_segment.npy": "745821e94d1783a628f84e12a56211f5e4d208d1e81556416d591540769a334c",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\manifest.json": "8f0a029e83a0e1173758d3c2151c121bce1a978b6e733cde9687f9c90de3b6cc",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\x.npy": "0a1a214ab7ca5a49c64ed68a6845b2ac013eb2e5217568e777e637df8bd02676",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\bar_t.npy": "77b535df1bc2a0ad85f8dbf38c70048f039750466f619f9d0520fb73bf1f587b",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\decision_t.npy": "e64b6b39ee06af0a4a4d23586732f34c6e40c6d06153eae6e0d94de05526c988",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\decision_mid.npy": "1880d42614f834ce7ca37a88e0dc5af2c971bd598cac3176b3e8bdca970bcea5",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\cuts.npy": "3495108f00712e45f784bc19c49ef3b86090052dbc86a5e62d60c979abd45321",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\execution_valid.npy": "4980378323ce4720be23f9ab548c8eacdba6cfed24319cbd4b97e46a1ec5be6e",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\execution_segment.npy": "7a5ac15c9d3e162b3cabfe17a958ba83f1349cbce81bb59b0f8400f86e09f318"
+      },
+      "dataset_files_sha256": {
+        "2026-07-30_roots.parquet": "2ca99d200061f2e713eade2a8e47451f792d3cad9b3e929e01f530cbcd06ec16",
+        "2026-07-30_scene.parquet": "b57dc200fd94f4dfb008155f8255937dccb87caccbcb13d7ae6fc6b27ca0f572",
+        "2026-07-30_bank.parquet": "162b285a37e0372a31b9d89af613978f6e2f49ac072740a35fc7b19a4c55fdaa",
+        "2026-07-30_map.parquet": "3a7a7e9e0f6e98a18f4c1633621849ac7dfd51be819bb0f944f3ee6f2c4672da",
+        "2026-07-30_execution.parquet": "ff62cd7f12c2600a46399401665d0777d1fed70bc134d5868d91e4f1f27e04ce",
+        "2026-07-30_x.npy": "ae065eab132c48107c34c8375a39988cbb4847cf05abdfe2dcdc14456ab0656d"
+      },
+      "seconds": 6.811161000281572
+    },
+    {
+      "date": "2026-08-17",
+      "split": "calibration",
+      "status": "PASS",
+      "symbol": "GCZ6",
+      "roots": 10074,
+      "quotes": 4128338,
+      "saved_x_shape": [
+        10074,
+        225
+      ],
+      "feature_family_widths": {
+        "geometry": 14,
+        "micro": 70,
+        "rich": 225
+      },
+      "exact_v2_X_and_admission": true,
+      "exact_nan_masks": true,
+      "exact_target_and_execution_tables": {
+        "roots": {
+          "rows": 10074,
+          "columns": [
+            "date",
+            "t_ns",
+            "entry_status",
+            "entry_reason",
+            "decision_ordinal",
+            "entry_ordinal",
+            "decision_ns",
+            "entry_ns",
+            "decision_spread",
+            "R_event",
+            "risk_R",
+            "G_event",
+            "decision_eligible",
+            "geometry_ready",
+            "R_cost2",
+            "R_cost4",
+            "R_cost6"
+          ],
+          "exact": true
+        },
+        "labels": {
+          "rows": 10074,
+          "columns": [
+            "date",
+            "t_ns",
+            "entry_ns",
+            "R_event",
+            "G_event",
+            "all_known",
+            "event_known",
+            "maturity_ns",
+            "available_ns",
+            "positive_witness_L",
+            "first_qualifying_ordinal_L",
+            "first_qualifying_ns_L",
+            "first_qualifying_event_id_L",
+            "max_cross_net_L",
+            "max_cross_net_R_L",
+            "gain_margin_L",
+            "gain_margin_R_L",
+            "positive_witness_S",
+            "first_qualifying_ordinal_S",
+            "first_qualifying_ns_S",
+            "first_qualifying_event_id_S",
+            "max_cross_net_S",
+            "max_cross_net_R_S",
+            "gain_margin_S",
+            "gain_margin_R_S",
+            "state",
+            "y_crossing",
+            "event",
+            "direction_known",
+            "direction",
+            "deadline_ns",
+            "deadline_seconds",
+            "gain_multiple",
+            "reference_fee",
+            "observed_cells",
+            "mature_cells"
+          ],
+          "exact": true
+        },
+        "scene": {
+          "rows": 10074,
+          "columns": [
+            "t_ns",
+            "available_ns",
+            "mid",
+            "decision_spread",
+            "BB1_middle",
+            "BB1_half",
+            "BB1_support",
+            "R_event",
+            "BB3_middle",
+            "BB3_half",
+            "BB3_support",
+            "BB6_middle",
+            "BB6_half",
+            "BB6_support"
+          ],
+          "exact": true
+        },
+        "bank": {
+          "rows": 13836,
+          "columns": [
+            "family",
+            "scale",
+            "ordinal",
+            "t_ns",
+            "role",
+            "direction",
+            "support",
+            "mid",
+            "line",
+            "cause",
+            "event_id"
+          ],
+          "exact": true
+        },
+        "map": {
+          "rows": 90666,
+          "columns": [
+            "date",
+            "t_ns",
+            "family",
+            "scale",
+            "role",
+            "entry_ordinal",
+            "entry_ns",
+            "ready",
+            "support_end_ns",
+            "cross_ordinal",
+            "cross_ns",
+            "event_id",
+            "cross_direction",
+            "resolved",
+            "within_horizon",
+            "delay_s",
+            "mark_L",
+            "mark_S",
+            "mae_L",
+            "mae_S",
+            "mfe_L",
+            "mfe_S",
+            "R_event",
+            "risk_R",
+            "G_event"
+          ],
+          "exact": true
+        },
+        "execution": {
+          "rows": 60444,
+          "columns": [
+            "date",
+            "plan",
+            "t_ns",
+            "side",
+            "risk_R",
+            "status",
+            "reason",
+            "net",
+            "mae",
+            "mfe",
+            "decision_ordinal",
+            "decision_ns",
+            "entry_ordinal",
+            "entry_ns",
+            "trigger_ordinal",
+            "trigger_ns",
+            "exit_ordinal",
+            "exit_ns",
+            "R_trade",
+            "R_event",
+            "G_event",
+            "cost_multiplier"
+          ],
+          "exact": true
+        }
+      },
+      "crossing_geometry_namespaces": {
+        "1": "efd932518328ffb0214361cf",
+        "3": "09273a90db50acf63a6f4be5",
+        "6": "d362626276862c4c7dae5aae"
+      },
+      "bank_events": 13836,
+      "map_cells": 90666,
+      "execution_trials": 60444,
+      "clock_and_support": {
+        "status": "PASS",
+        "source_rows": 82797,
+        "selected_source_rows": 10074,
+        "admitted": 9832,
+        "physical_support_origins": 10074,
+        "missing_x_inside_physical_support": 242,
+        "current_available_legacy_resets_without_physical_break": 1995,
+        "physical_breaks_between_available_origins": 0,
+        "source_ready_but_crosses_physical_boundary": 0,
+        "finite_observed_cells": 2063881,
+        "unavailable_rows_have_zero_observed_cells": true,
+        "max_admitted_endpoint_age_seconds": 2.0,
+        "max_selected_lookahead_ns": 0,
+        "late_source_rows": 6803,
+        "quote_transitions": 3,
+        "invalid_quote_rows": 1,
+        "witnesses": [
+          {
+            "previous_origin_ns": "1786950035000000000",
+            "origin_ns": "1786950040000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 1,
+            "legacy_token": 2,
+            "source_endpoint_ns": "1786950039000000000",
+            "source_publication_ns": "1786950039118812955"
+          },
+          {
+            "previous_origin_ns": "1786950075000000000",
+            "origin_ns": "1786950080000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 2,
+            "legacy_token": 3,
+            "source_endpoint_ns": "1786950079000000000",
+            "source_publication_ns": "1786950079144105548"
+          },
+          {
+            "previous_origin_ns": "1786950180000000000",
+            "origin_ns": "1786950185000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 3,
+            "legacy_token": 4,
+            "source_endpoint_ns": "1786950184000000000",
+            "source_publication_ns": "1786950184342204838"
+          },
+          {
+            "previous_origin_ns": "1786950260000000000",
+            "origin_ns": "1786950265000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 4,
+            "legacy_token": 5,
+            "source_endpoint_ns": "1786950264000000000",
+            "source_publication_ns": "1786950264240030923"
+          },
+          {
+            "previous_origin_ns": "1786950290000000000",
+            "origin_ns": "1786950295000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 5,
+            "legacy_token": 6,
+            "source_endpoint_ns": "1786950294000000000",
+            "source_publication_ns": "1786950294125777845"
+          }
+        ]
+      },
+      "frozen_scalar_checks": [
+        {
+          "kind": "map_raw",
+          "scale": 1,
+          "role": 0,
+          "t_ns": "1786974260000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 1,
+          "role": 1,
+          "t_ns": "1786974860000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 1,
+          "role": 2,
+          "t_ns": "1786974990000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 3,
+          "role": 0,
+          "t_ns": "1786971160000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 3,
+          "role": 1,
+          "t_ns": "1786974955000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 3,
+          "role": 2,
+          "t_ns": "1786972560000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 6,
+          "role": 0,
+          "t_ns": "1786971230000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 6,
+          "role": 1,
+          "t_ns": "1786972250000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 6,
+          "role": 2,
+          "t_ns": "1786963455000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "online_seen_lines",
+          "t_ns": "1786950000000000000",
+          "sides": 2
+        },
+        {
+          "kind": "online_seen_lines",
+          "t_ns": "1786975030000000000",
+          "sides": 2
+        },
+        {
+          "kind": "online_seen_lines",
+          "t_ns": "1787000065000000000",
+          "sides": 2
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": 1,
+          "t_ns": "1786950000000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": -1,
+          "t_ns": "1786950000000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": 1,
+          "t_ns": "1786975030000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": -1,
+          "t_ns": "1786975030000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": 1,
+          "t_ns": "1787000065000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": -1,
+          "t_ns": "1787000065000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": 1,
+          "t_ns": "1786950000000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": -1,
+          "t_ns": "1786950000000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": 1,
+          "t_ns": "1786975030000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": -1,
+          "t_ns": "1786975030000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": 1,
+          "t_ns": "1787000065000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": -1,
+          "t_ns": "1787000065000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": 1,
+          "t_ns": "1786950000000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": -1,
+          "t_ns": "1786950000000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": 1,
+          "t_ns": "1786975030000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": -1,
+          "t_ns": "1786975030000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": 1,
+          "t_ns": "1787000065000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": -1,
+          "t_ns": "1787000065000000000",
+          "max_money_error": 0.0
+        }
+      ],
+      "risk_ordering": {
+        "common_complete_origin_side_rows": 19174,
+        "nondecreasing_trade_risk": true,
+        "fixed_event_gain_across_plans": true,
+        "nondecreasing_trigger_time_on_common_complete": true
+      },
+      "states": {
+        "0": 7573,
+        "1": 1104,
+        "2": 1080,
+        "-1": 295,
+        "3": 22
+      },
+      "execution_statuses": {
+        "COMPLETE": 57828,
+        "EMPTY": 1410,
+        "CENSORED": 846,
+        "INELIGIBLE": 360
+      },
+      "source_sha256": {
+        "data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\manifest.json": "dc42b8a5c94e0b447127b9f2e03a914c0c001ce64182428e4d2c2457e5b91eb4",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_022\\capture_032000\\quotes.parquet": "5ff0d6fc85a9915e0a4ac954049e79f3ee29ecbe8c2022a13186a1bc0f50ceb8",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_023\\capture_033000\\quotes.parquet": "ba979fd4b0622b54b4001c53561d18b45666330bd987633a27e41dbc62eff3b6",
+        "data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\x.npy": "a0c2940fb848cd515625977d0079e86d8c83b9866956d1c1928b83d4a42dd465",
+        "data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\decision_t.npy": "823d3677cca0ebc429d8004db89127736c8e9589d2ffbb1a6e0aa1dce2c6bc7e",
+        "data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\bar_t.npy": "c7670191dcdf55605bd274b4e48d7156919356dde8847624956a2923669935bd",
+        "data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\can_enter.npy": "db1aaf3174f4967fefb7b72bd46865839a97b1856c6f8d4fb63ea49aa8a361ed",
+        "data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\decision_mid.npy": "bb33a1e9389ba6c12952b15e135b47094b9db468148694a2ff61bf0edc5f0d8a",
+        "data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\cuts.npy": "cbe75f9eda5ac5eb77d652dfd8f9a4b33601d3834be0ecf0a0faf78dc0f7a5b8",
+        "data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\execution_valid.npy": "721843dd9ce2bebd1e9affc1cbe2bf5548446a5f4c4a65c80ea34e9125de1e8c",
+        "data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\execution_segment.npy": "ff2c589092f4573ead76cb2c940914348b970be7d96bbe9664a1f7c6f90c56b7",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\manifest.json": "6494441ad65a5cdeb2f3a21fd7ed52e7fd41d61dae48be2eb12cfb71cbfed1a0",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\full_mbo_v1\\audit_20261016\\training_admission_overlay.json": "907ff17e961457c7d6bd3342efeb5a253165de15ecee7d546b8c3b439ff0dda3",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_022\\capture_032000\\manifest.json": "150a0ca0688c5122ad140d37a23c7256953ff3465646140c3f015720367557af",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_022\\capture_032000\\features.parquet": "e4556593e8cbbc71a697310cc684a0533b9e456bfd3519c0f7c68590b36d324c",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_022\\capture_032000\\manifest.json": "8c89eb88a1083045eff49d843c8c76bd10471d5e0f9f7e86873d534d2ced90dd",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_023\\capture_033000\\manifest.json": "c751860565aa293fa9e666b0ec55e799a872914ed65999cf957331c70ee890b9",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_023\\capture_033000\\features.parquet": "55e460dea842644e6f3ca0ac24a0ec788c9701c83b885643b640c553bf22f65c",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_023\\capture_033000\\manifest.json": "93d8583f63cb1845aaf360203948693b66bee1ee26946157d35c363ad2b30720",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\manifest.json": "dc42b8a5c94e0b447127b9f2e03a914c0c001ce64182428e4d2c2457e5b91eb4",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\x.npy": "a0c2940fb848cd515625977d0079e86d8c83b9866956d1c1928b83d4a42dd465",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\bar_t.npy": "c7670191dcdf55605bd274b4e48d7156919356dde8847624956a2923669935bd",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\decision_t.npy": "823d3677cca0ebc429d8004db89127736c8e9589d2ffbb1a6e0aa1dce2c6bc7e",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\decision_mid.npy": "bb33a1e9389ba6c12952b15e135b47094b9db468148694a2ff61bf0edc5f0d8a",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\cuts.npy": "cbe75f9eda5ac5eb77d652dfd8f9a4b33601d3834be0ecf0a0faf78dc0f7a5b8",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\execution_valid.npy": "721843dd9ce2bebd1e9affc1cbe2bf5548446a5f4c4a65c80ea34e9125de1e8c",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\execution_segment.npy": "ff2c589092f4573ead76cb2c940914348b970be7d96bbe9664a1f7c6f90c56b7",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\manifest.json": "22360e9f5c2b64adb88d09d7654dbdf15344be03306fa047253879bf2d486a53",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\x.npy": "7b2cc49e645a260a62d13286cf5b6094cff2c785cee784064901c2eac8754b98",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\bar_t.npy": "b3e9487107957000ddec5faf22f286a1b194720253fcdd0e76d7e9a88528c23d",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\decision_t.npy": "b01a914db03e85c915e978e4c1fa1d5c2c1e8fd4d5b82569629390908e53c2f8",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\decision_mid.npy": "ac3efcf4b012f40bf61cb2ea5069c0c7f50c6dcec99cbcad23d26cd59d867e29",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\cuts.npy": "db3cb212018b5b2a9f2bca08350ae208678f96629d75fe4540cb828cebab48c6",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\execution_valid.npy": "f341f2efec14dcf07cdf410c81a007976579f0fcf43cd01af594ae8f0192f71f",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\execution_segment.npy": "0e243f8c258e067013eba3ceb413b25367e8441cfa25790fcfd9ff9370e1ecc7"
+      },
+      "dataset_files_sha256": {
+        "2026-08-17_roots.parquet": "cc4df12680f1d5f730b628e13dc7afca7dd236177e501118245b0efba6bb6d56",
+        "2026-08-17_scene.parquet": "44751d033236c149679a7701932b6c0aa8715def7111f551c3bbc751c861ca06",
+        "2026-08-17_bank.parquet": "3431c78d159511ef315d66ebbf537b44423440402eaea0b92fdb5bf8085dde8e",
+        "2026-08-17_map.parquet": "7b510c8f6ed2065331a3cfd6f7c2c8e31e38cf0188a35a1147499eb8c4e69adf",
+        "2026-08-17_execution.parquet": "ee623ef0b266067885d91b7d6037308195390368dddd212389c8c9941ee543fa",
+        "2026-08-17_x.npy": "39bbe2539edbf54087c0f4340663b211fbc3429e149b32f8ad202ea9938ba0a2"
+      },
+      "seconds": 5.248642299324274
+    },
+    {
+      "date": "2026-09-01",
+      "split": "test",
+      "status": "PASS",
+      "symbol": "GCZ6",
+      "roots": 10074,
+      "quotes": 7931485,
+      "saved_x_shape": [
+        10074,
+        225
+      ],
+      "feature_family_widths": {
+        "geometry": 14,
+        "micro": 70,
+        "rich": 225
+      },
+      "exact_v2_X_and_admission": true,
+      "exact_nan_masks": true,
+      "exact_target_and_execution_tables": {
+        "roots": {
+          "rows": 10074,
+          "columns": [
+            "date",
+            "t_ns",
+            "entry_status",
+            "entry_reason",
+            "decision_ordinal",
+            "entry_ordinal",
+            "decision_ns",
+            "entry_ns",
+            "decision_spread",
+            "R_event",
+            "risk_R",
+            "G_event",
+            "decision_eligible",
+            "geometry_ready",
+            "R_cost2",
+            "R_cost4",
+            "R_cost6"
+          ],
+          "exact": true
+        },
+        "labels": {
+          "rows": 10074,
+          "columns": [
+            "date",
+            "t_ns",
+            "entry_ns",
+            "R_event",
+            "G_event",
+            "all_known",
+            "event_known",
+            "maturity_ns",
+            "available_ns",
+            "positive_witness_L",
+            "first_qualifying_ordinal_L",
+            "first_qualifying_ns_L",
+            "first_qualifying_event_id_L",
+            "max_cross_net_L",
+            "max_cross_net_R_L",
+            "gain_margin_L",
+            "gain_margin_R_L",
+            "positive_witness_S",
+            "first_qualifying_ordinal_S",
+            "first_qualifying_ns_S",
+            "first_qualifying_event_id_S",
+            "max_cross_net_S",
+            "max_cross_net_R_S",
+            "gain_margin_S",
+            "gain_margin_R_S",
+            "state",
+            "y_crossing",
+            "event",
+            "direction_known",
+            "direction",
+            "deadline_ns",
+            "deadline_seconds",
+            "gain_multiple",
+            "reference_fee",
+            "observed_cells",
+            "mature_cells"
+          ],
+          "exact": true
+        },
+        "scene": {
+          "rows": 10074,
+          "columns": [
+            "t_ns",
+            "available_ns",
+            "mid",
+            "decision_spread",
+            "BB1_middle",
+            "BB1_half",
+            "BB1_support",
+            "R_event",
+            "BB3_middle",
+            "BB3_half",
+            "BB3_support",
+            "BB6_middle",
+            "BB6_half",
+            "BB6_support"
+          ],
+          "exact": true
+        },
+        "bank": {
+          "rows": 15278,
+          "columns": [
+            "family",
+            "scale",
+            "ordinal",
+            "t_ns",
+            "role",
+            "direction",
+            "support",
+            "mid",
+            "line",
+            "cause",
+            "event_id"
+          ],
+          "exact": true
+        },
+        "map": {
+          "rows": 90666,
+          "columns": [
+            "date",
+            "t_ns",
+            "family",
+            "scale",
+            "role",
+            "entry_ordinal",
+            "entry_ns",
+            "ready",
+            "support_end_ns",
+            "cross_ordinal",
+            "cross_ns",
+            "event_id",
+            "cross_direction",
+            "resolved",
+            "within_horizon",
+            "delay_s",
+            "mark_L",
+            "mark_S",
+            "mae_L",
+            "mae_S",
+            "mfe_L",
+            "mfe_S",
+            "R_event",
+            "risk_R",
+            "G_event"
+          ],
+          "exact": true
+        },
+        "execution": {
+          "rows": 60444,
+          "columns": [
+            "date",
+            "plan",
+            "t_ns",
+            "side",
+            "risk_R",
+            "status",
+            "reason",
+            "net",
+            "mae",
+            "mfe",
+            "decision_ordinal",
+            "decision_ns",
+            "entry_ordinal",
+            "entry_ns",
+            "trigger_ordinal",
+            "trigger_ns",
+            "exit_ordinal",
+            "exit_ns",
+            "R_trade",
+            "R_event",
+            "G_event",
+            "cost_multiplier"
+          ],
+          "exact": true
+        }
+      },
+      "crossing_geometry_namespaces": {
+        "1": "c3a5c7d937a9442e1c94e90e",
+        "3": "93537e3d0c51b09e9659206e",
+        "6": "326de69fd3a294c42e423af2"
+      },
+      "bank_events": 15278,
+      "map_cells": 90666,
+      "execution_trials": 60444,
+      "clock_and_support": {
+        "status": "PASS",
+        "source_rows": 82799,
+        "selected_source_rows": 10074,
+        "admitted": 10036,
+        "physical_support_origins": 10074,
+        "missing_x_inside_physical_support": 38,
+        "current_available_legacy_resets_without_physical_break": 558,
+        "physical_breaks_between_available_origins": 0,
+        "source_ready_but_crosses_physical_boundary": 0,
+        "finite_observed_cells": 2080174,
+        "unavailable_rows_have_zero_observed_cells": true,
+        "max_admitted_endpoint_age_seconds": 2.0,
+        "max_selected_lookahead_ns": 0,
+        "late_source_rows": 3718,
+        "quote_transitions": 3,
+        "invalid_quote_rows": 1,
+        "witnesses": [
+          {
+            "previous_origin_ns": "1788246175000000000",
+            "origin_ns": "1788246180000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 1,
+            "legacy_token": 2,
+            "source_endpoint_ns": "1788246179000000000",
+            "source_publication_ns": "1788246179129383046"
+          },
+          {
+            "previous_origin_ns": "1788246255000000000",
+            "origin_ns": "1788246260000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 2,
+            "legacy_token": 3,
+            "source_endpoint_ns": "1788246259000000000",
+            "source_publication_ns": "1788246259079057768"
+          },
+          {
+            "previous_origin_ns": "1788246635000000000",
+            "origin_ns": "1788246640000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 3,
+            "legacy_token": 4,
+            "source_endpoint_ns": "1788246639000000000",
+            "source_publication_ns": "1788246639086144329"
+          },
+          {
+            "previous_origin_ns": "1788246720000000000",
+            "origin_ns": "1788246725000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 4,
+            "legacy_token": 5,
+            "source_endpoint_ns": "1788246724000000000",
+            "source_publication_ns": "1788246724017882160"
+          },
+          {
+            "previous_origin_ns": "1788246730000000000",
+            "origin_ns": "1788246735000000000",
+            "physical_token": 3,
+            "previous_legacy_token": 5,
+            "legacy_token": 6,
+            "source_endpoint_ns": "1788246734000000000",
+            "source_publication_ns": "1788246734017933742"
+          }
+        ]
+      },
+      "frozen_scalar_checks": [
+        {
+          "kind": "map_raw",
+          "scale": 1,
+          "role": 0,
+          "t_ns": "1788270435000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 1,
+          "role": 1,
+          "t_ns": "1788271080000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 1,
+          "role": 2,
+          "t_ns": "1788270790000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 3,
+          "role": 0,
+          "t_ns": "1788269015000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 3,
+          "role": 1,
+          "t_ns": "1788270915000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 3,
+          "role": 2,
+          "t_ns": "1788262085000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 6,
+          "role": 0,
+          "t_ns": "1788269015000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 6,
+          "role": 1,
+          "t_ns": "1788270625000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "map_raw",
+          "scale": 6,
+          "role": 2,
+          "t_ns": "1788252300000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "online_seen_lines",
+          "t_ns": "1788246000000000000",
+          "sides": 2
+        },
+        {
+          "kind": "online_seen_lines",
+          "t_ns": "1788271030000000000",
+          "sides": 2
+        },
+        {
+          "kind": "online_seen_lines",
+          "t_ns": "1788296065000000000",
+          "sides": 2
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": 1,
+          "t_ns": "1788246000000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": -1,
+          "t_ns": "1788246000000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": 1,
+          "t_ns": "1788271030000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": -1,
+          "t_ns": "1788271030000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": 1,
+          "t_ns": "1788296065000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost2",
+          "side": -1,
+          "t_ns": "1788296065000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": 1,
+          "t_ns": "1788246000000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": -1,
+          "t_ns": "1788246000000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": 1,
+          "t_ns": "1788271030000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": -1,
+          "t_ns": "1788271030000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": 1,
+          "t_ns": "1788296065000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost4",
+          "side": -1,
+          "t_ns": "1788296065000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": 1,
+          "t_ns": "1788246000000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": -1,
+          "t_ns": "1788246000000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": 1,
+          "t_ns": "1788271030000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": -1,
+          "t_ns": "1788271030000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": 1,
+          "t_ns": "1788296065000000000",
+          "max_money_error": 0.0
+        },
+        {
+          "kind": "execution_raw",
+          "plan": "cost6",
+          "side": -1,
+          "t_ns": "1788296065000000000",
+          "max_money_error": 0.0
+        }
+      ],
+      "risk_ordering": {
+        "common_complete_origin_side_rows": 19915,
+        "nondecreasing_trade_risk": true,
+        "fixed_event_gain_across_plans": true,
+        "nondecreasing_trigger_time_on_common_complete": true
+      },
+      "states": {
+        "0": 6418,
+        "2": 1909,
+        "1": 1600,
+        "-1": 91,
+        "3": 56
+      },
+      "execution_statuses": {
+        "COMPLETE": 59789,
+        "INELIGIBLE": 360,
+        "EMPTY": 186,
+        "CENSORED": 109
+      },
+      "source_sha256": {
+        "data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\manifest.json": "83052f40f1973753783f344576f390934d9f4ff9f142c1bd296c88ab94bcbada",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_035\\capture_045000\\quotes.parquet": "f709ccf6f601d66e36a3478df2dcab6f95c9025cc0d2d3722fd06fbdc18ac169",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_036\\capture_046000\\quotes.parquet": "8548e22a7b8c0554aa5d46d1d61e454ed068be52d5fe4f90f62aa375e301375e",
+        "data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\x.npy": "ea5ee385c9f5b98d491f5d412c79ffb50d1389de99d69c8d0806cd74e67ad7da",
+        "data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\decision_t.npy": "334f28d3c22aee6065c02ddb39b928af0e86d0dbc13200e89f0016927ee51d08",
+        "data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\bar_t.npy": "56089727a274f146d314693ac13ac143f79ef13ff54517aacc4ba97de49d6d79",
+        "data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\can_enter.npy": "8ecb2a71244e10e7c2dc8831195aebfb0eabc2544623dfea127569fc7c829c13",
+        "data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\decision_mid.npy": "03c56bbef33b5f395588d044609d4ed03e6eb4b6588bd97c40aadc0c1228a0d8",
+        "data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\cuts.npy": "6b8dd206385ab302645fe19c5d7b91c385604001f9edb03eff6444a07d3bec1f",
+        "data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\execution_valid.npy": "422ee261076c96d6dc0a72f847731e3d961b940d97bf961282a300c0195ed6c5",
+        "data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\execution_segment.npy": "a8cb6031af5b2e38e2767676b8cabb81fccc6a6db2220a1b6e059a1ec6fc79f4",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\manifest.json": "6494441ad65a5cdeb2f3a21fd7ed52e7fd41d61dae48be2eb12cfb71cbfed1a0",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\full_mbo_v1\\audit_20261016\\training_admission_overlay.json": "907ff17e961457c7d6bd3342efeb5a253165de15ecee7d546b8c3b439ff0dda3",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_035\\capture_045000\\manifest.json": "59dbff59d0a9342b04d0c4f042fe74ff6e553145c3d1fc19f4cad1c949d34014",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_035\\capture_045000\\features.parquet": "57cb67f93e414e07170e7b934d8aa158cb828c57232c5ffa4545b062f5a482cd",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_035\\capture_045000\\manifest.json": "048589cab83d275cc50ca5dbb192d28546ae6661bbb53ec273d6ae9cac311aa6",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_036\\capture_046000\\manifest.json": "58f721cea3a27984522576528fccdcda35333aa6968c6ca385cc4c59c0425a44",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_036\\capture_046000\\features.parquet": "05d8049a0d413c55d9b01997792849707b73b00ddbb2b7d9e20ca260d4320ed9",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_036\\capture_046000\\manifest.json": "6758b17fc9f412bcc56293f91abf56ede862f2b228cf26e9066e6b72536a1281",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\manifest.json": "83052f40f1973753783f344576f390934d9f4ff9f142c1bd296c88ab94bcbada",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\x.npy": "ea5ee385c9f5b98d491f5d412c79ffb50d1389de99d69c8d0806cd74e67ad7da",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\bar_t.npy": "56089727a274f146d314693ac13ac143f79ef13ff54517aacc4ba97de49d6d79",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\decision_t.npy": "334f28d3c22aee6065c02ddb39b928af0e86d0dbc13200e89f0016927ee51d08",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\decision_mid.npy": "03c56bbef33b5f395588d044609d4ed03e6eb4b6588bd97c40aadc0c1228a0d8",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\cuts.npy": "6b8dd206385ab302645fe19c5d7b91c385604001f9edb03eff6444a07d3bec1f",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\execution_valid.npy": "422ee261076c96d6dc0a72f847731e3d961b940d97bf961282a300c0195ed6c5",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\execution_segment.npy": "a8cb6031af5b2e38e2767676b8cabb81fccc6a6db2220a1b6e059a1ec6fc79f4",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\manifest.json": "a579280c59b176932950606bf515dac846e8ca9ba6eb49e8307e79f7566cf8ee",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\x.npy": "9d6eb06d4ec6771d553e12ba4759ccdad4d2fdf5d93f5fd1cd5768cc6683d1d8",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\bar_t.npy": "525aec49d93aa1be76f39593bf648909bdd065dce8b0fa0cfdd697afbbfd337b",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\decision_t.npy": "a7048eadd6b4aca72041a2f3acf5674e4b65c430ef9dc8ab9316c66a4467209d",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\decision_mid.npy": "82da0d4e2cd52fa50c0fb1b1e5c91f248c38acbcd553d306748097811a84c607",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\cuts.npy": "0e51edec11214f58192e6fdf9a323d04630ec430b34f88ffaa4e8a23af2889a6",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\execution_valid.npy": "d0487586d693be0cab5f4d68b5a6b2ca820dc398f5dc2f06223a126bbfcf7d1b",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\execution_segment.npy": "ffda8f297bdca43f6026e9eb6b47f3b5a2794d096ff4ce03c96142d0465eb53e"
+      },
+      "dataset_files_sha256": {
+        "2026-09-01_roots.parquet": "0dc18c631845cbbca81a1fba31770092a727af4e0845da7ebe121a9dc2ba2977",
+        "2026-09-01_scene.parquet": "a52eb8eb2176d34816f5cd1141c5445fd807401f2b36b72e5fc67bb2b0df8bd2",
+        "2026-09-01_bank.parquet": "c4cfeba5baf71be9f707874ecdc807b6b1a1116b521d5975e5417ed7037d5de3",
+        "2026-09-01_map.parquet": "a737b84fba1d21e59a0a86ea6dcf829189ebe55daef0a96110ee90444d90e12a",
+        "2026-09-01_execution.parquet": "6a4ec385320b3b87874d326170d683776d4313713fa003915b69fa75b0c05477",
+        "2026-09-01_x.npy": "7a78fadd2e66cb3e2bba9efca3be8c74544a95466b24fb48002809a8b3e918da"
+      },
+      "seconds": 7.603933699429035
+    }
+  ],
+  "totals": {
+    "roots": 30222,
+    "quotes": 17252827,
+    "bank_events": 46577,
+    "map_cells": 271998,
+    "execution_trials": 181332,
+    "frozen_scalar_checks": 90
+  },
+  "bound_files": {
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\configs\\research\\opportunity_pipeline_v5.json": {
+      "sha256": "332dfab60c496846ee575b77a82d1ca99add7003364e9715931715a11c5af020",
+      "size": 7912,
+      "mtime_ns": "1792698278042675300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\verify_opportunity_v3.py": {
+      "sha256": "de567a8fbb58301d25698ea44b60467fb488f2afff5521b1daf1d35237a4d6d5",
+      "size": 18342,
+      "mtime_ns": "1792689824597521800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v5\\source_inventory.json": {
+      "sha256": "c88a435a622c51e4aba4e829cad375e38aa53a11e7d2f8ae9dfc43aa26a98796",
+      "size": 326060,
+      "mtime_ns": "1792698242126331200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\prepare_opportunity_v3.py": {
+      "sha256": "9806bd78e551f1fa452a0e6ad9d80f9d19b230371cd67335ee1afd2a52dc81f0",
+      "size": 10132,
+      "mtime_ns": "1792689458660096500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v3\\features.py": {
+      "sha256": "0f591f8301e87b95e77c7580159ab10c0bbe6a6cde972ee5030f5ca59ac43901",
+      "size": 9537,
+      "mtime_ns": "1792689382417394700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v2\\features.py": {
+      "sha256": "58607fb7f80c488762f4ddbb2cb24636bd4e47ec0af68e4faa66a1d64173c655",
+      "size": 17069,
+      "mtime_ns": "1792684767872641600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v2\\targets.py": {
+      "sha256": "500ae32ab3946f1cfa3dfd2c45fde80494e86748835942605c9c6d218ec8cdd1",
+      "size": 17886,
+      "mtime_ns": "1792684851474728600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\research_v2\\simulation.py": {
+      "sha256": "87390016c39936915041dc9105860a48f2437a2f9201c2dbc0ab02706c1862f1",
+      "size": 17045,
+      "mtime_ns": "1792684500336266500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\bb_crossing.py": {
+      "sha256": "41a19c06d70855916ecb2ac6e52f1a11854ecfe32092e8cc31af6040f62d7fef",
+      "size": 14585,
+      "mtime_ns": "1792647593710159200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\crossing_map.py": {
+      "sha256": "b4c8aa5f57b424cf4f8ba13cc1bc3e26c324afba67ce9872a2ac9b0d1c5e4487",
+      "size": 4562,
+      "mtime_ns": "1792669323303844000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\flow_context.py": {
+      "sha256": "43b41ec5e901bff03f01ac85a2bcfce60d6ac3df586b48801ef56310f640051a",
+      "size": 9669,
+      "mtime_ns": "1792637488609999800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\execution.py": {
+      "sha256": "a3fb6adac03cc4e14ca68953f05717569058fb03236a175e1e0e4b565f0e2005",
+      "size": 18127,
+      "mtime_ns": "1792425584580685500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\playground\\data.py": {
+      "sha256": "07e13250366b14430c64189cbd67d343e35de1d229e66108f9f9464966ad412f",
+      "size": 15419,
+      "mtime_ns": "1792354917999802000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\crossing_map_analyze.py": {
+      "sha256": "fa4ebf96e9aefd6205c95e775393a665c07f6f7606250f8d90a117538f24975a",
+      "size": 12037,
+      "mtime_ns": "1792668808072851700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\bb_crossing_session.py": {
+      "sha256": "b1a13bb0e6ff4156be98159d519cb51e7b70c5448594875ea2a23010baaa077a",
+      "size": 7123,
+      "mtime_ns": "1792649203472840700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-07-30.json": {
+      "sha256": "5ed54bed14e3d0e9a6f66b9c39cfa6cbfad05d32a20f8c27026523e2a1fd1a6a",
+      "size": 115996,
+      "mtime_ns": "1792698291162948800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-07-30_roots.parquet": {
+      "sha256": "2ca99d200061f2e713eade2a8e47451f792d3cad9b3e929e01f530cbcd06ec16",
+      "size": 1132659,
+      "mtime_ns": "1792698290929138500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-07-30_scene.parquet": {
+      "sha256": "b57dc200fd94f4dfb008155f8255937dccb87caccbcb13d7ae6fc6b27ca0f572",
+      "size": 574098,
+      "mtime_ns": "1792698290949437500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-07-30_bank.parquet": {
+      "sha256": "162b285a37e0372a31b9d89af613978f6e2f49ac072740a35fc7b19a4c55fdaa",
+      "size": 476414,
+      "mtime_ns": "1792698290972434000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-07-30_map.parquet": {
+      "sha256": "3a7a7e9e0f6e98a18f4c1633621849ac7dfd51be819bb0f944f3ee6f2c4672da",
+      "size": 1769765,
+      "mtime_ns": "1792698291053437700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-07-30_execution.parquet": {
+      "sha256": "ff62cd7f12c2600a46399401665d0777d1fed70bc134d5868d91e4f1f27e04ce",
+      "size": 1937215,
+      "mtime_ns": "1792698291128510900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-07-30_x.npy": {
+      "sha256": "ae065eab132c48107c34c8375a39988cbb4847cf05abdfe2dcdc14456ab0656d",
+      "size": 9066728,
+      "mtime_ns": "1792698291142602300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\manifest.json": {
+      "sha256": "6d4e533b21b26b79d142cedecfaca4dfd93796279d9f5887574af0be55037970",
+      "size": 4899,
+      "mtime_ns": "1792360548087633600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_009\\capture_019024\\quotes.parquet": {
+      "sha256": "e5bef71cee1c6c2ceb4a840d91affde826535fb48714b3e23156685b682057e5",
+      "size": 65061910,
+      "mtime_ns": "1792112671909053400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_009\\capture_019025\\quotes.parquet": {
+      "sha256": "6f7610a4f4593ea47f6f373f680e53d9a2dc96c47540b02557e7e160ced859be",
+      "size": 70947374,
+      "mtime_ns": "1792112302508042900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\x.npy": {
+      "sha256": "61fee09a7574cf03f36f2ef655415515136b456de9b75ec4875bf41d06f53cf0",
+      "size": 391764,
+      "mtime_ns": "1792360547960171100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\decision_t.npy": {
+      "sha256": "81378c1a3cc5e6091e9ce0d7f3d06e64689d2172caf3bdc096c9757cebca3a3b",
+      "size": 11160,
+      "mtime_ns": "1792360547961171100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\bar_t.npy": {
+      "sha256": "0ff3c7a0c0428c2869c6e3e53cdf6dd78b0724d337b4bd61cf5fc2be706b8e9a",
+      "size": 11160,
+      "mtime_ns": "1792360547962172100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\can_enter.npy": {
+      "sha256": "d546df6a4b1f8dd6e86866cbf68a43a48e040d0ae5f4e7b329f56c2c45011da1",
+      "size": 1507,
+      "mtime_ns": "1792360547963679600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\decision_mid.npy": {
+      "sha256": "33522e1621e503e4756fbb41e468d71b83463b68b82adf182c3bca4f63be55b7",
+      "size": 11160,
+      "mtime_ns": "1792360547964689500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\cuts.npy": {
+      "sha256": "2b6a4091399f2994deda792538f15c8f4a9cc1ff4496193e8675b1ffa98d5931",
+      "size": 11160,
+      "mtime_ns": "1792360547965189900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\execution_valid.npy": {
+      "sha256": "72cfb1125fee16a4cfa58328d2842f3817946753914e51a8f7c7c7a83842e9bc",
+      "size": 5193132,
+      "mtime_ns": "1792360547968196400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-30\\execution_segment.npy": {
+      "sha256": "745821e94d1783a628f84e12a56211f5e4d208d1e81556416d591540769a334c",
+      "size": 20772144,
+      "mtime_ns": "1792360547985729700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\manifest.json": {
+      "sha256": "6494441ad65a5cdeb2f3a21fd7ed52e7fd41d61dae48be2eb12cfb71cbfed1a0",
+      "size": 2663577,
+      "mtime_ns": "1792115135739798900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\full_mbo_v1\\audit_20261016\\training_admission_overlay.json": {
+      "sha256": "907ff17e961457c7d6bd3342efeb5a253165de15ecee7d546b8c3b439ff0dda3",
+      "size": 229095,
+      "mtime_ns": "1792142734727297800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_009\\capture_019024\\manifest.json": {
+      "sha256": "f57a80775232adf5d5026820bfb5f152110dbe8c8ade76af911e28817fd614bf",
+      "size": 14953,
+      "mtime_ns": "1792112754132441900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_009\\capture_019024\\features.parquet": {
+      "sha256": "288862f1378b813e04265b26869a2e1bebf4f536ea82dc82da07cb82af2f8fef",
+      "size": 75924476,
+      "mtime_ns": "1792112719803790300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_009\\capture_019024\\manifest.json": {
+      "sha256": "04eaa1443e19bfbb040430a32f24d3af1692d693c6c954a5cef9e1c3c40724d2",
+      "size": 5004,
+      "mtime_ns": "1792112672084889200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_009\\capture_019025\\manifest.json": {
+      "sha256": "6dc7ef919921f6dad32666dd6fc65fd7c70126f8281d9a14421a331e30228e48",
+      "size": 14767,
+      "mtime_ns": "1792112367055180100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_009\\capture_019025\\features.parquet": {
+      "sha256": "495957416fa2fd9421f5bb465e5553f1f1c0febeff21febda74b61a75ca78c58",
+      "size": 77805344,
+      "mtime_ns": "1792112332171090500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_009\\capture_019025\\manifest.json": {
+      "sha256": "6f94eeb258f4cf21f6eb5bae45872545a74e175fc60f58860ec2819763a58365",
+      "size": 4778,
+      "mtime_ns": "1792112302694686600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\manifest.json": {
+      "sha256": "8f0a029e83a0e1173758d3c2151c121bce1a978b6e733cde9687f9c90de3b6cc",
+      "size": 4329,
+      "mtime_ns": "1792360542157483400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\x.npy": {
+      "sha256": "0a1a214ab7ca5a49c64ed68a6845b2ac013eb2e5217568e777e637df8bd02676",
+      "size": 357684,
+      "mtime_ns": "1792360542015524400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\bar_t.npy": {
+      "sha256": "77b535df1bc2a0ad85f8dbf38c70048f039750466f619f9d0520fb73bf1f587b",
+      "size": 10200,
+      "mtime_ns": "1792360542017520100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\decision_t.npy": {
+      "sha256": "e64b6b39ee06af0a4a4d23586732f34c6e40c6d06153eae6e0d94de05526c988",
+      "size": 10200,
+      "mtime_ns": "1792360542016520600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\decision_mid.npy": {
+      "sha256": "1880d42614f834ce7ca37a88e0dc5af2c971bd598cac3176b3e8bdca970bcea5",
+      "size": 10200,
+      "mtime_ns": "1792360542020020100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\cuts.npy": {
+      "sha256": "3495108f00712e45f784bc19c49ef3b86090052dbc86a5e62d60c979abd45321",
+      "size": 10200,
+      "mtime_ns": "1792360542021520500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\execution_valid.npy": {
+      "sha256": "4980378323ce4720be23f9ab548c8eacdba6cfed24319cbd4b97e46a1ec5be6e",
+      "size": 4417723,
+      "mtime_ns": "1792360542026038100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-07\\2026-07-29\\execution_segment.npy": {
+      "sha256": "7a5ac15c9d3e162b3cabfe17a958ba83f1349cbce81bb59b0f8400f86e09f318",
+      "size": 17670508,
+      "mtime_ns": "1792360542043680600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-17.json": {
+      "sha256": "300e0a23b0d6471eaddbfdea3add42b313712efb495a3e76fe8a266a3c7c0dc2",
+      "size": 115962,
+      "mtime_ns": "1792698321219599800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-17_roots.parquet": {
+      "sha256": "cc4df12680f1d5f730b628e13dc7afca7dd236177e501118245b0efba6bb6d56",
+      "size": 1128846,
+      "mtime_ns": "1792698320966021900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-17_scene.parquet": {
+      "sha256": "44751d033236c149679a7701932b6c0aa8715def7111f551c3bbc751c861ca06",
+      "size": 542459,
+      "mtime_ns": "1792698320985065800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-17_bank.parquet": {
+      "sha256": "3431c78d159511ef315d66ebbf537b44423440402eaea0b92fdb5bf8085dde8e",
+      "size": 380052,
+      "mtime_ns": "1792698321004275600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-17_map.parquet": {
+      "sha256": "7b510c8f6ed2065331a3cfd6f7c2c8e31e38cf0188a35a1147499eb8c4e69adf",
+      "size": 1740310,
+      "mtime_ns": "1792698321078139300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-17_execution.parquet": {
+      "sha256": "ee623ef0b266067885d91b7d6037308195390368dddd212389c8c9941ee543fa",
+      "size": 1874745,
+      "mtime_ns": "1792698321176600000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-08-17_x.npy": {
+      "sha256": "39bbe2539edbf54087c0f4340663b211fbc3429e149b32f8ad202ea9938ba0a2",
+      "size": 9066728,
+      "mtime_ns": "1792698321191589000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\manifest.json": {
+      "sha256": "dc42b8a5c94e0b447127b9f2e03a914c0c001ce64182428e4d2c2457e5b91eb4",
+      "size": 4898,
+      "mtime_ns": "1792360619497663700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_022\\capture_032000\\quotes.parquet": {
+      "sha256": "5ff0d6fc85a9915e0a4ac954049e79f3ee29ecbe8c2022a13186a1bc0f50ceb8",
+      "size": 2521820,
+      "mtime_ns": "1792113671647463900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_023\\capture_033000\\quotes.parquet": {
+      "sha256": "ba979fd4b0622b54b4001c53561d18b45666330bd987633a27e41dbc62eff3b6",
+      "size": 56848404,
+      "mtime_ns": "1792114047053613700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\x.npy": {
+      "sha256": "a0c2940fb848cd515625977d0079e86d8c83b9866956d1c1928b83d4a42dd465",
+      "size": 391764,
+      "mtime_ns": "1792360619397650800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\decision_t.npy": {
+      "sha256": "823d3677cca0ebc429d8004db89127736c8e9589d2ffbb1a6e0aa1dce2c6bc7e",
+      "size": 11160,
+      "mtime_ns": "1792360619399150300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\bar_t.npy": {
+      "sha256": "c7670191dcdf55605bd274b4e48d7156919356dde8847624956a2923669935bd",
+      "size": 11160,
+      "mtime_ns": "1792360619400650300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\can_enter.npy": {
+      "sha256": "db1aaf3174f4967fefb7b72bd46865839a97b1856c6f8d4fb63ea49aa8a361ed",
+      "size": 1507,
+      "mtime_ns": "1792360619401150800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\decision_mid.npy": {
+      "sha256": "bb33a1e9389ba6c12952b15e135b47094b9db468148694a2ff61bf0edc5f0d8a",
+      "size": 11160,
+      "mtime_ns": "1792360619402151900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\cuts.npy": {
+      "sha256": "cbe75f9eda5ac5eb77d652dfd8f9a4b33601d3834be0ecf0a0faf78dc0f7a5b8",
+      "size": 11160,
+      "mtime_ns": "1792360619402649900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\execution_valid.npy": {
+      "sha256": "721843dd9ce2bebd1e9affc1cbe2bf5548446a5f4c4a65c80ea34e9125de1e8c",
+      "size": 4128466,
+      "mtime_ns": "1792360619406731200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-17\\execution_segment.npy": {
+      "sha256": "ff2c589092f4573ead76cb2c940914348b970be7d96bbe9664a1f7c6f90c56b7",
+      "size": 16513480,
+      "mtime_ns": "1792360619418832800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_022\\capture_032000\\manifest.json": {
+      "sha256": "150a0ca0688c5122ad140d37a23c7256953ff3465646140c3f015720367557af",
+      "size": 18737,
+      "mtime_ns": "1792113694287939400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_022\\capture_032000\\features.parquet": {
+      "sha256": "e4556593e8cbbc71a697310cc684a0533b9e456bfd3519c0f7c68590b36d324c",
+      "size": 6385814,
+      "mtime_ns": "1792113674319311200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_022\\capture_032000\\manifest.json": {
+      "sha256": "8c89eb88a1083045eff49d843c8c76bd10471d5e0f9f7e86873d534d2ced90dd",
+      "size": 9030,
+      "mtime_ns": "1792113671705507700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_023\\capture_033000\\manifest.json": {
+      "sha256": "c751860565aa293fa9e666b0ec55e799a872914ed65999cf957331c70ee890b9",
+      "size": 15310,
+      "mtime_ns": "1792114086991379600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_023\\capture_033000\\features.parquet": {
+      "sha256": "55e460dea842644e6f3ca0ac24a0ec788c9701c83b885643b640c553bf22f65c",
+      "size": 77780352,
+      "mtime_ns": "1792114054356501500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_023\\capture_033000\\manifest.json": {
+      "sha256": "93d8583f63cb1845aaf360203948693b66bee1ee26946157d35c363ad2b30720",
+      "size": 5409,
+      "mtime_ns": "1792114047194241400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\manifest.json": {
+      "sha256": "22360e9f5c2b64adb88d09d7654dbdf15344be03306fa047253879bf2d486a53",
+      "size": 4899,
+      "mtime_ns": "1792360616919363000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\x.npy": {
+      "sha256": "7b2cc49e645a260a62d13286cf5b6094cff2c785cee784064901c2eac8754b98",
+      "size": 391764,
+      "mtime_ns": "1792360616805295100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\bar_t.npy": {
+      "sha256": "b3e9487107957000ddec5faf22f286a1b194720253fcdd0e76d7e9a88528c23d",
+      "size": 11160,
+      "mtime_ns": "1792360616807802000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\decision_t.npy": {
+      "sha256": "b01a914db03e85c915e978e4c1fa1d5c2c1e8fd4d5b82569629390908e53c2f8",
+      "size": 11160,
+      "mtime_ns": "1792360616806803700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\decision_mid.npy": {
+      "sha256": "ac3efcf4b012f40bf61cb2ea5069c0c7f50c6dcec99cbcad23d26cd59d867e29",
+      "size": 11160,
+      "mtime_ns": "1792360616809306500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\cuts.npy": {
+      "sha256": "db3cb212018b5b2a9f2bca08350ae208678f96629d75fe4540cb828cebab48c6",
+      "size": 11160,
+      "mtime_ns": "1792360616810303100"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\execution_valid.npy": {
+      "sha256": "f341f2efec14dcf07cdf410c81a007976579f0fcf43cd01af594ae8f0192f71f",
+      "size": 3886313,
+      "mtime_ns": "1792360616814824400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-14\\execution_segment.npy": {
+      "sha256": "0e243f8c258e067013eba3ceb413b25367e8441cfa25790fcfd9ff9370e1ecc7",
+      "size": 15544868,
+      "mtime_ns": "1792360616829395700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-09-01.json": {
+      "sha256": "f4338f855dd4911a36d9814d265bf040dd9394333ee11379db4cf4cf8b896447",
+      "size": 115994,
+      "mtime_ns": "1792698353533878600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-09-01_roots.parquet": {
+      "sha256": "0dc18c631845cbbca81a1fba31770092a727af4e0845da7ebe121a9dc2ba2977",
+      "size": 1178756,
+      "mtime_ns": "1792698353347193600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-09-01_scene.parquet": {
+      "sha256": "a52eb8eb2176d34816f5cd1141c5445fd807401f2b36b72e5fc67bb2b0df8bd2",
+      "size": 592473,
+      "mtime_ns": "1792698353360573800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-09-01_bank.parquet": {
+      "sha256": "c4cfeba5baf71be9f707874ecdc807b6b1a1116b521d5975e5417ed7037d5de3",
+      "size": 416362,
+      "mtime_ns": "1792698353379893000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-09-01_map.parquet": {
+      "sha256": "a737b84fba1d21e59a0a86ea6dcf829189ebe55daef0a96110ee90444d90e12a",
+      "size": 1795978,
+      "mtime_ns": "1792698353451756500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-09-01_execution.parquet": {
+      "sha256": "6a4ec385320b3b87874d326170d683776d4313713fa003915b69fa75b0c05477",
+      "size": 2000805,
+      "mtime_ns": "1792698353507689500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\scientific_pipeline_v5\\dataset\\2026-09-01_x.npy": {
+      "sha256": "7a78fadd2e66cb3e2bba9efca3be8c74544a95466b24fb48002809a8b3e918da",
+      "size": 9066728,
+      "mtime_ns": "1792698353517689400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\manifest.json": {
+      "sha256": "83052f40f1973753783f344576f390934d9f4ff9f142c1bd296c88ab94bcbada",
+      "size": 4900,
+      "mtime_ns": "1792360715201390400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_035\\capture_045000\\quotes.parquet": {
+      "sha256": "f709ccf6f601d66e36a3478df2dcab6f95c9025cc0d2d3722fd06fbdc18ac169",
+      "size": 91100391,
+      "mtime_ns": "1792114949069534500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_036\\capture_046000\\quotes.parquet": {
+      "sha256": "8548e22a7b8c0554aa5d46d1d61e454ed068be52d5fe4f90f62aa375e301375e",
+      "size": 108942302,
+      "mtime_ns": "1792115110029975500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\x.npy": {
+      "sha256": "ea5ee385c9f5b98d491f5d412c79ffb50d1389de99d69c8d0806cd74e67ad7da",
+      "size": 391764,
+      "mtime_ns": "1792360714991776500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\decision_t.npy": {
+      "sha256": "334f28d3c22aee6065c02ddb39b928af0e86d0dbc13200e89f0016927ee51d08",
+      "size": 11160,
+      "mtime_ns": "1792360714992781000"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\bar_t.npy": {
+      "sha256": "56089727a274f146d314693ac13ac143f79ef13ff54517aacc4ba97de49d6d79",
+      "size": 11160,
+      "mtime_ns": "1792360714995808700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\can_enter.npy": {
+      "sha256": "8ecb2a71244e10e7c2dc8831195aebfb0eabc2544623dfea127569fc7c829c13",
+      "size": 1507,
+      "mtime_ns": "1792360714997309800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\decision_mid.npy": {
+      "sha256": "03c56bbef33b5f395588d044609d4ed03e6eb4b6588bd97c40aadc0c1228a0d8",
+      "size": 11160,
+      "mtime_ns": "1792360715000314500"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\cuts.npy": {
+      "sha256": "6b8dd206385ab302645fe19c5d7b91c385604001f9edb03eff6444a07d3bec1f",
+      "size": 11160,
+      "mtime_ns": "1792360715001310800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\execution_valid.npy": {
+      "sha256": "422ee261076c96d6dc0a72f847731e3d961b940d97bf961282a300c0195ed6c5",
+      "size": 7931613,
+      "mtime_ns": "1792360715007883800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-09\\2026-09-01\\execution_segment.npy": {
+      "sha256": "a8cb6031af5b2e38e2767676b8cabb81fccc6a6db2220a1b6e059a1ec6fc79f4",
+      "size": 31726068,
+      "mtime_ns": "1792360715051028400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_035\\capture_045000\\manifest.json": {
+      "sha256": "59dbff59d0a9342b04d0c4f042fe74ff6e553145c3d1fc19f4cad1c949d34014",
+      "size": 14903,
+      "mtime_ns": "1792114974361355400"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_035\\capture_045000\\features.parquet": {
+      "sha256": "57cb67f93e414e07170e7b934d8aa158cb828c57232c5ffa4545b062f5a482cd",
+      "size": 79423875,
+      "mtime_ns": "1792114954120928200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_035\\capture_045000\\manifest.json": {
+      "sha256": "048589cab83d275cc50ca5dbb192d28546ae6661bbb53ec273d6ae9cac311aa6",
+      "size": 4971,
+      "mtime_ns": "1792114949263437800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_036\\capture_046000\\manifest.json": {
+      "sha256": "58f721cea3a27984522576528fccdcda35333aa6968c6ca385cc4c59c0425a44",
+      "size": 15299,
+      "mtime_ns": "1792115132366249300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\features\\member_036\\capture_046000\\features.parquet": {
+      "sha256": "05d8049a0d413c55d9b01997792849707b73b00ddbb2b7d9e20ca260d4320ed9",
+      "size": 80473205,
+      "mtime_ns": "1792115115863212900"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_036\\capture_046000\\manifest.json": {
+      "sha256": "6758b17fc9f412bcc56293f91abf56ede862f2b228cf26e9066e6b72536a1281",
+      "size": 5400,
+      "mtime_ns": "1792115110180503600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\manifest.json": {
+      "sha256": "a579280c59b176932950606bf515dac846e8ca9ba6eb49e8307e79f7566cf8ee",
+      "size": 4898,
+      "mtime_ns": "1792360696051204600"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\x.npy": {
+      "sha256": "9d6eb06d4ec6771d553e12ba4759ccdad4d2fdf5d93f5fd1cd5768cc6683d1d8",
+      "size": 391764,
+      "mtime_ns": "1792360695871178700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\bar_t.npy": {
+      "sha256": "525aec49d93aa1be76f39593bf648909bdd065dce8b0fa0cfdd697afbbfd337b",
+      "size": 11160,
+      "mtime_ns": "1792360695875254200"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\decision_t.npy": {
+      "sha256": "a7048eadd6b4aca72041a2f3acf5674e4b65c430ef9dc8ab9316c66a4467209d",
+      "size": 11160,
+      "mtime_ns": "1792360695873743800"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\decision_mid.npy": {
+      "sha256": "82da0d4e2cd52fa50c0fb1b1e5c91f248c38acbcd553d306748097811a84c607",
+      "size": 11160,
+      "mtime_ns": "1792360695879265300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\cuts.npy": {
+      "sha256": "0e51edec11214f58192e6fdf9a323d04630ec430b34f88ffaa4e8a23af2889a6",
+      "size": 11160,
+      "mtime_ns": "1792360695879771700"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\execution_valid.npy": {
+      "sha256": "d0487586d693be0cab5f4d68b5a6b2ca820dc398f5dc2f06223a126bbfcf7d1b",
+      "size": 6844785,
+      "mtime_ns": "1792360695885284300"
+    },
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1\\2026-08\\2026-08-31\\execution_segment.npy": {
+      "sha256": "ffda8f297bdca43f6026e9eb6b47f3b5a2794d096ff4ce03c96142d0465eb53e",
+      "size": 27378756,
+      "mtime_ns": "1792360695915880100"
+    }
+  },
+  "verified_unique_files": 113,
+  "seconds": 21.239436000585556,
+  "interpretation": "Exact saved-data/source parity and causal metadata verification on three declared days. This is not an economic or uninspected-holdout claim.",
+  "method": "V2 full-day targets/execution/features replay; independently calculated publication/asof/admission and full raw quote support tokens; no V3 wrapper called; only COMPLETE days read.",
+  "unchanged_bound_sources": true,
+  "no_dataset_writes": true
+}

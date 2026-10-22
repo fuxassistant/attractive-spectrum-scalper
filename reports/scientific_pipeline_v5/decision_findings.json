@@ -1,0 +1,3641 @@
+{
+  "status": "COMPLETE",
+  "verdict": "NO_DEMONSTRATED_FILTER_ECONOMIC_ADVANTAGE",
+  "original_crossing_target_and_base_BCE_unchanged": true,
+  "base_updates": 0,
+  "new_days": 20,
+  "split_days": {
+    "train": 7,
+    "validation": 3,
+    "calibration": 5,
+    "test": 5
+  },
+  "roots": 201480,
+  "primary_comparison": "cost2; CAL retention50%; numeric thresholds transferred unchanged",
+  "primary": [
+    {
+      "seed": 17,
+      "arms": {
+        "base": {
+          "signal": {
+            "known_roots": 49334,
+            "unknown_roots": 610,
+            "causal_candidates": 514,
+            "alerts": 213,
+            "unknown_alerts": 0,
+            "total_causal_alerts": 213,
+            "true_positives": 56,
+            "none_false_positives": 84,
+            "wrong_side_alerts": 73,
+            "false_signals": 157,
+            "precision": 0.26291079812206575,
+            "event_opportunity_recall": 0.003286192124875301,
+            "none_fpr": 0.0026011829188988325,
+            "wrong_side_fraction": 0.3427230046948357,
+            "safe_correct_alerts": 9,
+            "unsafe_correct_alerts": 47,
+            "unknown_risk_correct_alerts": 0,
+            "safe_precision": 0.04225352112676056,
+            "unsafe_rate_among_risk_known_correct": 0.8392857142857143,
+            "safe_recall": 0.0022156573116691287,
+            "positive_identity": {
+              "available_positive_side_ids": 1087,
+              "covered_positive_side_ids": 25,
+              "coverage": 0.022999080036798528,
+              "covered_root_side_memberships": 56,
+              "repeats_beyond_first": 31,
+              "repeat_multiplicity": {
+                "n": 25,
+                "mean": 2.24,
+                "q10": 1.0,
+                "q50": 1.0,
+                "q90": 4.800000000000004,
+                "maximum": 10.0
+              },
+              "denominator": "Distinct (side, ID) among all known admitted positive memberships; BOTH supplies two memberships"
+            }
+          },
+          "trades": 104,
+          "completed": true,
+          "net": -69.30000000000003
+        },
+        "semantic": {
+          "signal": {
+            "known_roots": 49334,
+            "unknown_roots": 610,
+            "causal_candidates": 514,
+            "alerts": 496,
+            "unknown_alerts": 0,
+            "total_causal_alerts": 496,
+            "true_positives": 156,
+            "none_false_positives": 184,
+            "wrong_side_alerts": 156,
+            "false_signals": 340,
+            "precision": 0.31451612903225806,
+            "event_opportunity_recall": 0.00915439234786691,
+            "none_fpr": 0.005697829250921252,
+            "wrong_side_fraction": 0.31451612903225806,
+            "safe_correct_alerts": 28,
+            "unsafe_correct_alerts": 128,
+            "unknown_risk_correct_alerts": 0,
+            "safe_precision": 0.056451612903225805,
+            "unsafe_rate_among_risk_known_correct": 0.8205128205128205,
+            "safe_recall": 0.006893156080748399,
+            "positive_identity": {
+              "available_positive_side_ids": 1087,
+              "covered_positive_side_ids": 48,
+              "coverage": 0.04415823367065318,
+              "covered_root_side_memberships": 156,
+              "repeats_beyond_first": 108,
+              "repeat_multiplicity": {
+                "n": 48,
+                "mean": 3.25,
+                "q10": 1.0,
+                "q50": 2.0,
+                "q90": 7.300000000000004,
+                "maximum": 22.0
+              },
+              "denominator": "Distinct (side, ID) among all known admitted positive memberships; BOTH supplies two memberships"
+            }
+          },
+          "trades": 225,
+          "completed": true,
+          "net": -143.8999999999999
+        },
+        "risk": {
+          "signal": {
+            "known_roots": 49334,
+            "unknown_roots": 610,
+            "causal_candidates": 514,
+            "alerts": 493,
+            "unknown_alerts": 0,
+            "total_causal_alerts": 493,
+            "true_positives": 153,
+            "none_false_positives": 184,
+            "wrong_side_alerts": 156,
+            "false_signals": 340,
+            "precision": 0.3103448275862069,
+            "event_opportunity_recall": 0.008978346341177161,
+            "none_fpr": 0.005697829250921252,
+            "wrong_side_fraction": 0.31643002028397565,
+            "safe_correct_alerts": 28,
+            "unsafe_correct_alerts": 125,
+            "unknown_risk_correct_alerts": 0,
+            "safe_precision": 0.056795131845841784,
+            "unsafe_rate_among_risk_known_correct": 0.8169934640522876,
+            "safe_recall": 0.006893156080748399,
+            "positive_identity": {
+              "available_positive_side_ids": 1087,
+              "covered_positive_side_ids": 48,
+              "coverage": 0.04415823367065318,
+              "covered_root_side_memberships": 153,
+              "repeats_beyond_first": 105,
+              "repeat_multiplicity": {
+                "n": 48,
+                "mean": 3.1875,
+                "q10": 1.0,
+                "q50": 2.0,
+                "q90": 7.300000000000004,
+                "maximum": 22.0
+              },
+              "denominator": "Distinct (side, ID) among all known admitted positive memberships; BOTH supplies two memberships"
+            }
+          },
+          "trades": 224,
+          "completed": true,
+          "net": -142.69999999999993
+        },
+        "hash_control": {
+          "signal": {
+            "known_roots": 49334,
+            "unknown_roots": 610,
+            "causal_candidates": 514,
+            "alerts": 263,
+            "unknown_alerts": 0,
+            "total_causal_alerts": 263,
+            "true_positives": 83,
+            "none_false_positives": 100,
+            "wrong_side_alerts": 80,
+            "false_signals": 180,
+            "precision": 0.3155893536121673,
+            "event_opportunity_recall": 0.004870606185083035,
+            "none_fpr": 0.0030966463320224197,
+            "wrong_side_fraction": 0.3041825095057034,
+            "safe_correct_alerts": 15,
+            "unsafe_correct_alerts": 68,
+            "unknown_risk_correct_alerts": 0,
+            "safe_precision": 0.057034220532319393,
+            "unsafe_rate_among_risk_known_correct": 0.8192771084337349,
+            "safe_recall": 0.003692762186115214,
+            "positive_identity": {
+              "available_positive_side_ids": 1087,
+              "covered_positive_side_ids": 38,
+              "coverage": 0.034958601655933765,
+              "covered_root_side_memberships": 83,
+              "repeats_beyond_first": 45,
+              "repeat_multiplicity": {
+                "n": 38,
+                "mean": 2.1842105263157894,
+                "q10": 1.0,
+                "q50": 1.0,
+                "q90": 4.300000000000004,
+                "maximum": 11.0
+              },
+              "denominator": "Distinct (side, ID) among all known admitted positive memberships; BOTH supplies two memberships"
+            }
+          },
+          "trades": 152,
+          "completed": true,
+          "net": -91.30000000000001
+        }
+      }
+    },
+    {
+      "seed": 29,
+      "arms": {
+        "base": {
+          "signal": {
+            "known_roots": 49334,
+            "unknown_roots": 610,
+            "causal_candidates": 4178,
+            "alerts": 2263,
+            "unknown_alerts": 0,
+            "total_causal_alerts": 2263,
+            "true_positives": 835,
+            "none_false_positives": 1026,
+            "wrong_side_alerts": 402,
+            "false_signals": 1428,
+            "precision": 0.36897923110914715,
+            "event_opportunity_recall": 0.04899947186197993,
+            "none_fpr": 0.03177159136655003,
+            "wrong_side_fraction": 0.17764030048608043,
+            "safe_correct_alerts": 275,
+            "unsafe_correct_alerts": 560,
+            "unknown_risk_correct_alerts": 0,
+            "safe_precision": 0.12152010605391074,
+            "unsafe_rate_among_risk_known_correct": 0.6706586826347305,
+            "safe_recall": 0.06745155751778269,
+            "positive_identity": {
+              "available_positive_side_ids": 1087,
+              "covered_positive_side_ids": 135,
+              "coverage": 0.12419503219871206,
+              "covered_root_side_memberships": 835,
+              "repeats_beyond_first": 700,
+              "repeat_multiplicity": {
+                "n": 135,
+                "mean": 6.185185185185185,
+                "q10": 1.0,
+                "q50": 3.0,
+                "q90": 15.600000000000009,
+                "maximum": 29.0
+              },
+              "denominator": "Distinct (side, ID) among all known admitted positive memberships; BOTH supplies two memberships"
+            }
+          },
+          "trades": 714,
+          "completed": true,
+          "net": -395.4999999999997
+        },
+        "semantic": {
+          "signal": {
+            "known_roots": 49334,
+            "unknown_roots": 610,
+            "causal_candidates": 4178,
+            "alerts": 2168,
+            "unknown_alerts": 0,
+            "total_causal_alerts": 2168,
+            "true_positives": 774,
+            "none_false_positives": 869,
+            "wrong_side_alerts": 525,
+            "false_signals": 1394,
+            "precision": 0.3570110701107011,
+            "event_opportunity_recall": 0.04541986972595505,
+            "none_fpr": 0.026909856625274828,
+            "wrong_side_fraction": 0.24215867158671586,
+            "safe_correct_alerts": 221,
+            "unsafe_correct_alerts": 553,
+            "unknown_risk_correct_alerts": 0,
+            "safe_precision": 0.10193726937269372,
+            "unsafe_rate_among_risk_known_correct": 0.7144702842377261,
+            "safe_recall": 0.0542065244051999,
+            "positive_identity": {
+              "available_positive_side_ids": 1087,
+              "covered_positive_side_ids": 132,
+              "coverage": 0.12143514259429623,
+              "covered_root_side_memberships": 774,
+              "repeats_beyond_first": 642,
+              "repeat_multiplicity": {
+                "n": 132,
+                "mean": 5.863636363636363,
+                "q10": 1.0,
+                "q50": 3.0,
+                "q90": 14.0,
+                "maximum": 33.0
+              },
+              "denominator": "Distinct (side, ID) among all known admitted positive memberships; BOTH supplies two memberships"
+            }
+          },
+          "trades": 702,
+          "completed": true,
+          "net": -432.6999999999997
+        },
+        "risk": {
+          "signal": {
+            "known_roots": 49334,
+            "unknown_roots": 610,
+            "causal_candidates": 4178,
+            "alerts": 2165,
+            "unknown_alerts": 1,
+            "total_causal_alerts": 2166,
+            "true_positives": 780,
+            "none_false_positives": 884,
+            "wrong_side_alerts": 501,
+            "false_signals": 1385,
+            "precision": 0.36027713625866054,
+            "event_opportunity_recall": 0.045771961739334545,
+            "none_fpr": 0.02737435357507819,
+            "wrong_side_fraction": 0.23140877598152426,
+            "safe_correct_alerts": 226,
+            "unsafe_correct_alerts": 554,
+            "unknown_risk_correct_alerts": 0,
+            "safe_precision": 0.10438799076212471,
+            "unsafe_rate_among_risk_known_correct": 0.7102564102564103,
+            "safe_recall": 0.055432916360068675,
+            "positive_identity": {
+              "available_positive_side_ids": 1087,
+              "covered_positive_side_ids": 134,
+              "coverage": 0.12327506899724011,
+              "covered_root_side_memberships": 780,
+              "repeats_beyond_first": 646,
+              "repeat_multiplicity": {
+                "n": 134,
+                "mean": 5.82089552238806,
+                "q10": 1.0,
+                "q50": 3.0,
+                "q90": 15.400000000000006,
+                "maximum": 33.0
+              },
+              "denominator": "Distinct (side, ID) among all known admitted positive memberships; BOTH supplies two memberships"
+            }
+          },
+          "trades": 696,
+          "completed": true,
+          "net": -403.79999999999984
+        },
+        "hash_control": {
+          "signal": {
+            "known_roots": 49334,
+            "unknown_roots": 610,
+            "causal_candidates": 4178,
+            "alerts": 2047,
+            "unknown_alerts": 0,
+            "total_causal_alerts": 2047,
+            "true_positives": 713,
+            "none_false_positives": 918,
+            "wrong_side_alerts": 416,
+            "false_signals": 1334,
+            "precision": 0.34831460674157305,
+            "event_opportunity_recall": 0.04184026758993017,
+            "none_fpr": 0.028427213327965814,
+            "wrong_side_fraction": 0.20322423058133854,
+            "safe_correct_alerts": 250,
+            "unsafe_correct_alerts": 463,
+            "unknown_risk_correct_alerts": 0,
+            "safe_precision": 0.12212994626282364,
+            "unsafe_rate_among_risk_known_correct": 0.6493688639551192,
+            "safe_recall": 0.0613195977434388,
+            "positive_identity": {
+              "available_positive_side_ids": 1087,
+              "covered_positive_side_ids": 167,
+              "coverage": 0.15363385464581417,
+              "covered_root_side_memberships": 713,
+              "repeats_beyond_first": 546,
+              "repeat_multiplicity": {
+                "n": 167,
+                "mean": 4.269461077844311,
+                "q10": 1.0,
+                "q50": 3.0,
+                "q90": 10.0,
+                "maximum": 21.0
+              },
+              "denominator": "Distinct (side, ID) among all known admitted positive memberships; BOTH supplies two memberships"
+            }
+          },
+          "trades": 844,
+          "completed": true,
+          "net": -495.09999999999985
+        }
+      }
+    }
+  ],
+  "selected_policy": [
+    {
+      "seed": 17,
+      "arms": {
+        "base": {
+          "reason": "positive_complete_CAL",
+          "plan": "cost6",
+          "fraction": 1.0,
+          "threshold": 0.0,
+          "calibration": {
+            "plan": "cost6",
+            "threshold": 0.0,
+            "completed": true,
+            "closed_max_drawdown": 15.400000000000006,
+            "wins": 24,
+            "win_rate": 0.48,
+            "origin_candidates": 366,
+            "causal_feature_origins": 366,
+            "unprocessed_after_censor": 0,
+            "halt": null,
+            "exit_reasons": {
+              "TAKE": 17,
+              "STOP": 22,
+              "TIME": 11
+            },
+            "trades": 50,
+            "ineligible": 0,
+            "empty": 0,
+            "censored": 0,
+            "skipped_busy": 316,
+            "status": "COMPLETE",
+            "observed_closed_cash": 53.699999999999996,
+            "total_net_if_complete": 53.699999999999996,
+            "daily": {
+              "2026-08-17": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -6.699999999999999,
+                "cumulative_closed_cash": -6.699999999999999,
+                "total_net_if_complete": -6.699999999999999,
+                "trades": 2,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-18": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 24.400000000000002,
+                "cumulative_closed_cash": 17.700000000000003,
+                "total_net_if_complete": 24.400000000000002,
+                "trades": 8,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-19": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 32.699999999999996,
+                "cumulative_closed_cash": 50.4,
+                "total_net_if_complete": 32.699999999999996,
+                "trades": 20,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-20": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 11.9,
+                "cumulative_closed_cash": 62.3,
+                "total_net_if_complete": 11.9,
+                "trades": 12,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-21": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -8.6,
+                "cumulative_closed_cash": 53.699999999999996,
+                "total_net_if_complete": -8.6,
+                "trades": 8,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              }
+            },
+            "teacher_buckets_after_execution": {
+              "UNKNOWN_TEACHER": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TEACHER_NONE": {
+                "attempts": 17,
+                "complete_trades": 17,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 13.400000000000002,
+                "mean_net": 0.7882352941176471,
+                "median_net": -0.3,
+                "wins": 7,
+                "losses": 10,
+                "zeros": 0,
+                "win_rate": 0.4117647058823529,
+                "gross_positive_net": 42.599999999999994,
+                "gross_negative_net": -29.199999999999996,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 6,
+                  "TIME": 11
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 17,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "WRONG_SIDE": {
+                "attempts": 11,
+                "complete_trades": 11,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": -37.5,
+                "mean_net": -3.409090909090909,
+                "median_net": -3.5,
+                "wins": 0,
+                "losses": 11,
+                "zeros": 0,
+                "win_rate": 0.0,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": -37.5,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 11,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 11,
+                  "3": 0
+                }
+              },
+              "TARGET_POSITIVE_SIDE": {
+                "attempts": 22,
+                "complete_trades": 22,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 77.80000000000001,
+                "mean_net": 3.536363636363637,
+                "median_net": 3.25,
+                "wins": 17,
+                "losses": 5,
+                "zeros": 0,
+                "win_rate": 0.7727272727272727,
+                "gross_positive_net": 94.30000000000001,
+                "gross_negative_net": -16.5,
+                "exit_reasons": {
+                  "TAKE": 17,
+                  "STOP": 5,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 20,
+                  "2": 2,
+                  "3": 0
+                }
+              }
+            },
+            "ledger_rows": 50,
+            "ledger_sha256": "d824a50f9ce9103004af888755fd6f3c66d63da8989d7c6a78a0590314a3fd57",
+            "ledger_first_three": [
+              {
+                "date": "2026-08-17",
+                "t_ns": "1786962625000000000",
+                "side": 1,
+                "probability": 0.3641216028481722,
+                "status": "COMPLETE",
+                "reason": "STOP",
+                "entry_ns": "1786962625100927060",
+                "exit_ns": "1786962640000901608",
+                "net": -3.5,
+                "mae": -3.6999999999999997,
+                "mfe": -0.3,
+                "R_trade": 3.5999999999999996,
+                "R_event": 1.2,
+                "G_event": 2.4,
+                "closed_cash": -3.5,
+                "closed_drawdown": 3.5
+              },
+              {
+                "date": "2026-08-17",
+                "t_ns": "1786962645000000000",
+                "side": 1,
+                "probability": 0.3588338755071163,
+                "status": "COMPLETE",
+                "reason": "TIME",
+                "entry_ns": "1786962645131163989",
+                "exit_ns": "1786962945237858602",
+                "net": -3.1999999999999997,
+                "mae": -4.3999999999999995,
+                "mfe": 1.0,
+                "R_trade": 4.800000000000001,
+                "R_event": 1.6,
+                "G_event": 3.2,
+                "closed_cash": -6.699999999999999,
+                "closed_drawdown": 6.699999999999999
+              },
+              {
+                "date": "2026-08-18",
+                "t_ns": "1787059820000000000",
+                "side": 1,
+                "probability": 0.3837638981640339,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1787059820100476644",
+                "exit_ns": "1787059860509710863",
+                "net": 6.3,
+                "mae": -1.4000000000000001,
+                "mfe": 6.6000000000000005,
+                "R_trade": 4.800000000000001,
+                "R_event": 1.6,
+                "G_event": 3.2,
+                "closed_cash": -0.39999999999999947,
+                "closed_drawdown": 0.39999999999999947
+              }
+            ],
+            "ledger_last_three": [
+              {
+                "date": "2026-08-21",
+                "t_ns": "1787319585000000000",
+                "side": 1,
+                "probability": 0.38326715864241123,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1787319585101940035",
+                "exit_ns": "1787319654053697683",
+                "net": 1.9000000000000001,
+                "mae": -1.2,
+                "mfe": 2.1,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": 54.199999999999996,
+                "closed_drawdown": 8.100000000000001
+              },
+              {
+                "date": "2026-08-21",
+                "t_ns": "1787319705000000000",
+                "side": 1,
+                "probability": 0.3683165833353996,
+                "status": "COMPLETE",
+                "reason": "STOP",
+                "entry_ns": "1787319705109378118",
+                "exit_ns": "1787319748302940828",
+                "net": -3.0,
+                "mae": -3.0999999999999996,
+                "mfe": -0.19999999999999998,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": 51.199999999999996,
+                "closed_drawdown": 11.100000000000001
+              },
+              {
+                "date": "2026-08-21",
+                "t_ns": "1787320925000000000",
+                "side": 1,
+                "probability": 0.3647977188229561,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1787320925119142175",
+                "exit_ns": "1787320966556905883",
+                "net": 2.5,
+                "mae": -1.7,
+                "mfe": 2.5,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": 53.699999999999996,
+                "closed_drawdown": 8.600000000000001
+              }
+            ]
+          },
+          "test": {
+            "plan": "cost6",
+            "threshold": 0.0,
+            "completed": true,
+            "closed_max_drawdown": 72.1,
+            "wins": 38,
+            "win_rate": 0.40860215053763443,
+            "origin_candidates": 514,
+            "causal_feature_origins": 514,
+            "unprocessed_after_censor": 0,
+            "halt": null,
+            "exit_reasons": {
+              "TAKE": 27,
+              "STOP": 51,
+              "TIME": 15
+            },
+            "trades": 93,
+            "ineligible": 0,
+            "empty": 0,
+            "censored": 0,
+            "skipped_busy": 421,
+            "status": "COMPLETE",
+            "observed_closed_cash": -25.299999999999994,
+            "total_net_if_complete": -25.299999999999994,
+            "daily": {
+              "2026-08-24": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -1.4999999999999973,
+                "cumulative_closed_cash": -1.4999999999999973,
+                "total_net_if_complete": -1.4999999999999973,
+                "trades": 26,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-25": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -1.1999999999999984,
+                "cumulative_closed_cash": -2.6999999999999957,
+                "total_net_if_complete": -1.1999999999999984,
+                "trades": 14,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-26": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -3.2999999999999967,
+                "cumulative_closed_cash": -5.999999999999993,
+                "total_net_if_complete": -3.2999999999999967,
+                "trades": 18,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-27": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -22.999999999999993,
+                "cumulative_closed_cash": -28.999999999999986,
+                "total_net_if_complete": -22.999999999999993,
+                "trades": 18,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-09-01": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 3.700000000000002,
+                "cumulative_closed_cash": -25.299999999999983,
+                "total_net_if_complete": 3.700000000000002,
+                "trades": 17,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              }
+            },
+            "teacher_buckets_after_execution": {
+              "UNKNOWN_TEACHER": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TEACHER_NONE": {
+                "attempts": 34,
+                "complete_trades": 34,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": -29.300000000000004,
+                "mean_net": -0.8617647058823531,
+                "median_net": -2.95,
+                "wins": 11,
+                "losses": 22,
+                "zeros": 1,
+                "win_rate": 0.3235294117647059,
+                "gross_positive_net": 41.2,
+                "gross_negative_net": -70.5,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 19,
+                  "TIME": 15
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 34,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "WRONG_SIDE": {
+                "attempts": 25,
+                "complete_trades": 25,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": -98.9,
+                "mean_net": -3.9560000000000004,
+                "median_net": -3.8,
+                "wins": 0,
+                "losses": 25,
+                "zeros": 0,
+                "win_rate": 0.0,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": -98.9,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 25,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 2,
+                  "2": 23,
+                  "3": 0
+                }
+              },
+              "TARGET_POSITIVE_SIDE": {
+                "attempts": 34,
+                "complete_trades": 34,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 102.89999999999999,
+                "mean_net": 3.026470588235294,
+                "median_net": 4.050000000000001,
+                "wins": 27,
+                "losses": 7,
+                "zeros": 0,
+                "win_rate": 0.7941176470588235,
+                "gross_positive_net": 127.60000000000001,
+                "gross_negative_net": -24.7,
+                "exit_reasons": {
+                  "TAKE": 27,
+                  "STOP": 7,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 24,
+                  "2": 5,
+                  "3": 5
+                }
+              }
+            },
+            "ledger_rows": 93,
+            "ledger_sha256": "57c8733ad945776d03114cf5fa06d0b601a1ee894688102ddb5e932c956d2671",
+            "ledger_first_three": [
+              {
+                "date": "2026-08-24",
+                "t_ns": "1787558905000000000",
+                "side": 1,
+                "probability": 0.358927003107965,
+                "status": "COMPLETE",
+                "reason": "STOP",
+                "entry_ns": "1787558905258735191",
+                "exit_ns": "1787558938357400425",
+                "net": -3.0,
+                "mae": -3.0,
+                "mfe": 0.0,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": -3.0,
+                "closed_drawdown": 3.0
+              },
+              {
+                "date": "2026-08-24",
+                "t_ns": "1787559160000000000",
+                "side": 1,
+                "probability": 0.3563083400949836,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1787559160565880228",
+                "exit_ns": "1787559246996228212",
+                "net": 2.4000000000000004,
+                "mae": -0.6,
+                "mfe": 2.8000000000000003,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": -0.5999999999999996,
+                "closed_drawdown": 0.5999999999999996
+              },
+              {
+                "date": "2026-08-24",
+                "t_ns": "1787564015000000000",
+                "side": 1,
+                "probability": 0.3536096680909395,
+                "status": "COMPLETE",
+                "reason": "TIME",
+                "entry_ns": "1787564015291438377",
+                "exit_ns": "1787564316353599747",
+                "net": 0.7,
+                "mae": -3.0999999999999996,
+                "mfe": 0.8999999999999999,
+                "R_trade": 3.5999999999999996,
+                "R_event": 1.2,
+                "G_event": 2.4,
+                "closed_cash": 0.10000000000000031,
+                "closed_drawdown": 0.0
+              }
+            ],
+            "ledger_last_three": [
+              {
+                "date": "2026-09-01",
+                "t_ns": "1788271415000000000",
+                "side": 1,
+                "probability": 0.35123037174344063,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1788271415113098765",
+                "exit_ns": "1788271586359876949",
+                "net": 5.9,
+                "mae": -1.0,
+                "mfe": 5.9,
+                "R_trade": 3.5999999999999996,
+                "R_event": 1.2,
+                "G_event": 2.4,
+                "closed_cash": -26.699999999999996,
+                "closed_drawdown": 50.89999999999999
+              },
+              {
+                "date": "2026-09-01",
+                "t_ns": "1788280020000000000",
+                "side": -1,
+                "probability": 0.3721163310110569,
+                "status": "COMPLETE",
+                "reason": "STOP",
+                "entry_ns": "1788280020100118304",
+                "exit_ns": "1788280022257980635",
+                "net": -2.9,
+                "mae": -3.0999999999999996,
+                "mfe": -0.6,
+                "R_trade": 3.0,
+                "R_event": 1.0237982685748166,
+                "G_event": 2.047596537149633,
+                "closed_cash": -29.599999999999994,
+                "closed_drawdown": 53.8
+              },
+              {
+                "date": "2026-09-01",
+                "t_ns": "1788283555000000000",
+                "side": 1,
+                "probability": 0.3554420415312052,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1788283555104504294",
+                "exit_ns": "1788283741260727785",
+                "net": 4.3,
+                "mae": -0.7,
+                "mfe": 4.3,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": -25.299999999999994,
+                "closed_drawdown": 49.49999999999999
+              }
+            ]
+          }
+        },
+        "semantic": {
+          "reason": "positive_complete_CAL",
+          "plan": "cost6",
+          "fraction": 1.0,
+          "threshold": 0.0,
+          "calibration": {
+            "plan": "cost6",
+            "threshold": 0.0,
+            "completed": true,
+            "closed_max_drawdown": 15.400000000000006,
+            "wins": 24,
+            "win_rate": 0.48,
+            "origin_candidates": 366,
+            "causal_feature_origins": 366,
+            "unprocessed_after_censor": 0,
+            "halt": null,
+            "exit_reasons": {
+              "TAKE": 17,
+              "STOP": 22,
+              "TIME": 11
+            },
+            "trades": 50,
+            "ineligible": 0,
+            "empty": 0,
+            "censored": 0,
+            "skipped_busy": 316,
+            "status": "COMPLETE",
+            "observed_closed_cash": 53.699999999999996,
+            "total_net_if_complete": 53.699999999999996,
+            "daily": {
+              "2026-08-17": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -6.699999999999999,
+                "cumulative_closed_cash": -6.699999999999999,
+                "total_net_if_complete": -6.699999999999999,
+                "trades": 2,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-18": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 24.400000000000002,
+                "cumulative_closed_cash": 17.700000000000003,
+                "total_net_if_complete": 24.400000000000002,
+                "trades": 8,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-19": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 32.699999999999996,
+                "cumulative_closed_cash": 50.4,
+                "total_net_if_complete": 32.699999999999996,
+                "trades": 20,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-20": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 11.9,
+                "cumulative_closed_cash": 62.3,
+                "total_net_if_complete": 11.9,
+                "trades": 12,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-21": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -8.6,
+                "cumulative_closed_cash": 53.699999999999996,
+                "total_net_if_complete": -8.6,
+                "trades": 8,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              }
+            },
+            "teacher_buckets_after_execution": {
+              "UNKNOWN_TEACHER": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TEACHER_NONE": {
+                "attempts": 17,
+                "complete_trades": 17,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 13.400000000000002,
+                "mean_net": 0.7882352941176471,
+                "median_net": -0.3,
+                "wins": 7,
+                "losses": 10,
+                "zeros": 0,
+                "win_rate": 0.4117647058823529,
+                "gross_positive_net": 42.599999999999994,
+                "gross_negative_net": -29.199999999999996,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 6,
+                  "TIME": 11
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 17,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "WRONG_SIDE": {
+                "attempts": 11,
+                "complete_trades": 11,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": -37.5,
+                "mean_net": -3.409090909090909,
+                "median_net": -3.5,
+                "wins": 0,
+                "losses": 11,
+                "zeros": 0,
+                "win_rate": 0.0,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": -37.5,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 11,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 11,
+                  "3": 0
+                }
+              },
+              "TARGET_POSITIVE_SIDE": {
+                "attempts": 22,
+                "complete_trades": 22,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 77.80000000000001,
+                "mean_net": 3.536363636363637,
+                "median_net": 3.25,
+                "wins": 17,
+                "losses": 5,
+                "zeros": 0,
+                "win_rate": 0.7727272727272727,
+                "gross_positive_net": 94.30000000000001,
+                "gross_negative_net": -16.5,
+                "exit_reasons": {
+                  "TAKE": 17,
+                  "STOP": 5,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 20,
+                  "2": 2,
+                  "3": 0
+                }
+              }
+            },
+            "ledger_rows": 50,
+            "ledger_sha256": "a6ae47f94a6665fe7dca4087343fee395760f36298ca93dcd6a9fd18ec9652ab",
+            "ledger_first_three": [
+              {
+                "date": "2026-08-17",
+                "t_ns": "1786962625000000000",
+                "side": 1,
+                "probability": 0.33050046488471946,
+                "status": "COMPLETE",
+                "reason": "STOP",
+                "entry_ns": "1786962625100927060",
+                "exit_ns": "1786962640000901608",
+                "net": -3.5,
+                "mae": -3.6999999999999997,
+                "mfe": -0.3,
+                "R_trade": 3.5999999999999996,
+                "R_event": 1.2,
+                "G_event": 2.4,
+                "closed_cash": -3.5,
+                "closed_drawdown": 3.5
+              },
+              {
+                "date": "2026-08-17",
+                "t_ns": "1786962645000000000",
+                "side": 1,
+                "probability": 0.3402042883548978,
+                "status": "COMPLETE",
+                "reason": "TIME",
+                "entry_ns": "1786962645131163989",
+                "exit_ns": "1786962945237858602",
+                "net": -3.1999999999999997,
+                "mae": -4.3999999999999995,
+                "mfe": 1.0,
+                "R_trade": 4.800000000000001,
+                "R_event": 1.6,
+                "G_event": 3.2,
+                "closed_cash": -6.699999999999999,
+                "closed_drawdown": 6.699999999999999
+              },
+              {
+                "date": "2026-08-18",
+                "t_ns": "1787059820000000000",
+                "side": 1,
+                "probability": 0.44550827333048615,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1787059820100476644",
+                "exit_ns": "1787059860509710863",
+                "net": 6.3,
+                "mae": -1.4000000000000001,
+                "mfe": 6.6000000000000005,
+                "R_trade": 4.800000000000001,
+                "R_event": 1.6,
+                "G_event": 3.2,
+                "closed_cash": -0.39999999999999947,
+                "closed_drawdown": 0.39999999999999947
+              }
+            ],
+            "ledger_last_three": [
+              {
+                "date": "2026-08-21",
+                "t_ns": "1787319585000000000",
+                "side": 1,
+                "probability": 0.40361896836732947,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1787319585101940035",
+                "exit_ns": "1787319654053697683",
+                "net": 1.9000000000000001,
+                "mae": -1.2,
+                "mfe": 2.1,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": 54.199999999999996,
+                "closed_drawdown": 8.100000000000001
+              },
+              {
+                "date": "2026-08-21",
+                "t_ns": "1787319705000000000",
+                "side": 1,
+                "probability": 0.3425011184235977,
+                "status": "COMPLETE",
+                "reason": "STOP",
+                "entry_ns": "1787319705109378118",
+                "exit_ns": "1787319748302940828",
+                "net": -3.0,
+                "mae": -3.0999999999999996,
+                "mfe": -0.19999999999999998,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": 51.199999999999996,
+                "closed_drawdown": 11.100000000000001
+              },
+              {
+                "date": "2026-08-21",
+                "t_ns": "1787320925000000000",
+                "side": 1,
+                "probability": 0.4537038804771086,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1787320925119142175",
+                "exit_ns": "1787320966556905883",
+                "net": 2.5,
+                "mae": -1.7,
+                "mfe": 2.5,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": 53.699999999999996,
+                "closed_drawdown": 8.600000000000001
+              }
+            ]
+          },
+          "test": {
+            "plan": "cost6",
+            "threshold": 0.0,
+            "completed": true,
+            "closed_max_drawdown": 72.1,
+            "wins": 38,
+            "win_rate": 0.40860215053763443,
+            "origin_candidates": 514,
+            "causal_feature_origins": 514,
+            "unprocessed_after_censor": 0,
+            "halt": null,
+            "exit_reasons": {
+              "TAKE": 27,
+              "STOP": 51,
+              "TIME": 15
+            },
+            "trades": 93,
+            "ineligible": 0,
+            "empty": 0,
+            "censored": 0,
+            "skipped_busy": 421,
+            "status": "COMPLETE",
+            "observed_closed_cash": -25.299999999999994,
+            "total_net_if_complete": -25.299999999999994,
+            "daily": {
+              "2026-08-24": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -1.4999999999999973,
+                "cumulative_closed_cash": -1.4999999999999973,
+                "total_net_if_complete": -1.4999999999999973,
+                "trades": 26,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-25": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -1.1999999999999984,
+                "cumulative_closed_cash": -2.6999999999999957,
+                "total_net_if_complete": -1.1999999999999984,
+                "trades": 14,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-26": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -3.2999999999999967,
+                "cumulative_closed_cash": -5.999999999999993,
+                "total_net_if_complete": -3.2999999999999967,
+                "trades": 18,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-27": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -22.999999999999993,
+                "cumulative_closed_cash": -28.999999999999986,
+                "total_net_if_complete": -22.999999999999993,
+                "trades": 18,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-09-01": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 3.700000000000002,
+                "cumulative_closed_cash": -25.299999999999983,
+                "total_net_if_complete": 3.700000000000002,
+                "trades": 17,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              }
+            },
+            "teacher_buckets_after_execution": {
+              "UNKNOWN_TEACHER": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TEACHER_NONE": {
+                "attempts": 34,
+                "complete_trades": 34,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": -29.300000000000004,
+                "mean_net": -0.8617647058823531,
+                "median_net": -2.95,
+                "wins": 11,
+                "losses": 22,
+                "zeros": 1,
+                "win_rate": 0.3235294117647059,
+                "gross_positive_net": 41.2,
+                "gross_negative_net": -70.5,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 19,
+                  "TIME": 15
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 34,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "WRONG_SIDE": {
+                "attempts": 25,
+                "complete_trades": 25,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": -98.9,
+                "mean_net": -3.9560000000000004,
+                "median_net": -3.8,
+                "wins": 0,
+                "losses": 25,
+                "zeros": 0,
+                "win_rate": 0.0,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": -98.9,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 25,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 2,
+                  "2": 23,
+                  "3": 0
+                }
+              },
+              "TARGET_POSITIVE_SIDE": {
+                "attempts": 34,
+                "complete_trades": 34,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 102.89999999999999,
+                "mean_net": 3.026470588235294,
+                "median_net": 4.050000000000001,
+                "wins": 27,
+                "losses": 7,
+                "zeros": 0,
+                "win_rate": 0.7941176470588235,
+                "gross_positive_net": 127.60000000000001,
+                "gross_negative_net": -24.7,
+                "exit_reasons": {
+                  "TAKE": 27,
+                  "STOP": 7,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 24,
+                  "2": 5,
+                  "3": 5
+                }
+              }
+            },
+            "ledger_rows": 93,
+            "ledger_sha256": "4d5da702b77b8d9e20e1a38014217e905832d0f00eef9d8763ed031328eaa785",
+            "ledger_first_three": [
+              {
+                "date": "2026-08-24",
+                "t_ns": "1787558905000000000",
+                "side": 1,
+                "probability": 0.35079758103662145,
+                "status": "COMPLETE",
+                "reason": "STOP",
+                "entry_ns": "1787558905258735191",
+                "exit_ns": "1787558938357400425",
+                "net": -3.0,
+                "mae": -3.0,
+                "mfe": 0.0,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": -3.0,
+                "closed_drawdown": 3.0
+              },
+              {
+                "date": "2026-08-24",
+                "t_ns": "1787559160000000000",
+                "side": 1,
+                "probability": 0.34904352644000675,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1787559160565880228",
+                "exit_ns": "1787559246996228212",
+                "net": 2.4000000000000004,
+                "mae": -0.6,
+                "mfe": 2.8000000000000003,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": -0.5999999999999996,
+                "closed_drawdown": 0.5999999999999996
+              },
+              {
+                "date": "2026-08-24",
+                "t_ns": "1787564015000000000",
+                "side": 1,
+                "probability": 0.37990621511321093,
+                "status": "COMPLETE",
+                "reason": "TIME",
+                "entry_ns": "1787564015291438377",
+                "exit_ns": "1787564316353599747",
+                "net": 0.7,
+                "mae": -3.0999999999999996,
+                "mfe": 0.8999999999999999,
+                "R_trade": 3.5999999999999996,
+                "R_event": 1.2,
+                "G_event": 2.4,
+                "closed_cash": 0.10000000000000031,
+                "closed_drawdown": 0.0
+              }
+            ],
+            "ledger_last_three": [
+              {
+                "date": "2026-09-01",
+                "t_ns": "1788271415000000000",
+                "side": 1,
+                "probability": 0.41940872942671537,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1788271415113098765",
+                "exit_ns": "1788271586359876949",
+                "net": 5.9,
+                "mae": -1.0,
+                "mfe": 5.9,
+                "R_trade": 3.5999999999999996,
+                "R_event": 1.2,
+                "G_event": 2.4,
+                "closed_cash": -26.699999999999996,
+                "closed_drawdown": 50.89999999999999
+              },
+              {
+                "date": "2026-09-01",
+                "t_ns": "1788280020000000000",
+                "side": -1,
+                "probability": 0.3333230152981244,
+                "status": "COMPLETE",
+                "reason": "STOP",
+                "entry_ns": "1788280020100118304",
+                "exit_ns": "1788280022257980635",
+                "net": -2.9,
+                "mae": -3.0999999999999996,
+                "mfe": -0.6,
+                "R_trade": 3.0,
+                "R_event": 1.0237982685748166,
+                "G_event": 2.047596537149633,
+                "closed_cash": -29.599999999999994,
+                "closed_drawdown": 53.8
+              },
+              {
+                "date": "2026-09-01",
+                "t_ns": "1788283555000000000",
+                "side": 1,
+                "probability": 0.4349266952925105,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1788283555104504294",
+                "exit_ns": "1788283741260727785",
+                "net": 4.3,
+                "mae": -0.7,
+                "mfe": 4.3,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": -25.299999999999994,
+                "closed_drawdown": 49.49999999999999
+              }
+            ]
+          }
+        },
+        "risk": {
+          "reason": "positive_complete_CAL",
+          "plan": "cost6",
+          "fraction": 1.0,
+          "threshold": 0.0,
+          "calibration": {
+            "plan": "cost6",
+            "threshold": 0.0,
+            "completed": true,
+            "closed_max_drawdown": 15.400000000000006,
+            "wins": 24,
+            "win_rate": 0.48,
+            "origin_candidates": 366,
+            "causal_feature_origins": 366,
+            "unprocessed_after_censor": 0,
+            "halt": null,
+            "exit_reasons": {
+              "TAKE": 17,
+              "STOP": 22,
+              "TIME": 11
+            },
+            "trades": 50,
+            "ineligible": 0,
+            "empty": 0,
+            "censored": 0,
+            "skipped_busy": 316,
+            "status": "COMPLETE",
+            "observed_closed_cash": 53.699999999999996,
+            "total_net_if_complete": 53.699999999999996,
+            "daily": {
+              "2026-08-17": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -6.699999999999999,
+                "cumulative_closed_cash": -6.699999999999999,
+                "total_net_if_complete": -6.699999999999999,
+                "trades": 2,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-18": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 24.400000000000002,
+                "cumulative_closed_cash": 17.700000000000003,
+                "total_net_if_complete": 24.400000000000002,
+                "trades": 8,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-19": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 32.699999999999996,
+                "cumulative_closed_cash": 50.4,
+                "total_net_if_complete": 32.699999999999996,
+                "trades": 20,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-20": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 11.9,
+                "cumulative_closed_cash": 62.3,
+                "total_net_if_complete": 11.9,
+                "trades": 12,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-21": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -8.6,
+                "cumulative_closed_cash": 53.699999999999996,
+                "total_net_if_complete": -8.6,
+                "trades": 8,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              }
+            },
+            "teacher_buckets_after_execution": {
+              "UNKNOWN_TEACHER": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TEACHER_NONE": {
+                "attempts": 17,
+                "complete_trades": 17,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 13.400000000000002,
+                "mean_net": 0.7882352941176471,
+                "median_net": -0.3,
+                "wins": 7,
+                "losses": 10,
+                "zeros": 0,
+                "win_rate": 0.4117647058823529,
+                "gross_positive_net": 42.599999999999994,
+                "gross_negative_net": -29.199999999999996,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 6,
+                  "TIME": 11
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 17,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "WRONG_SIDE": {
+                "attempts": 11,
+                "complete_trades": 11,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": -37.5,
+                "mean_net": -3.409090909090909,
+                "median_net": -3.5,
+                "wins": 0,
+                "losses": 11,
+                "zeros": 0,
+                "win_rate": 0.0,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": -37.5,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 11,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 11,
+                  "3": 0
+                }
+              },
+              "TARGET_POSITIVE_SIDE": {
+                "attempts": 22,
+                "complete_trades": 22,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 77.80000000000001,
+                "mean_net": 3.536363636363637,
+                "median_net": 3.25,
+                "wins": 17,
+                "losses": 5,
+                "zeros": 0,
+                "win_rate": 0.7727272727272727,
+                "gross_positive_net": 94.30000000000001,
+                "gross_negative_net": -16.5,
+                "exit_reasons": {
+                  "TAKE": 17,
+                  "STOP": 5,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 20,
+                  "2": 2,
+                  "3": 0
+                }
+              }
+            },
+            "ledger_rows": 50,
+            "ledger_sha256": "256d55dc1c030537b9fe86cf4457c9d9d139af5156a791ae0a2cde442327c410",
+            "ledger_first_three": [
+              {
+                "date": "2026-08-17",
+                "t_ns": "1786962625000000000",
+                "side": 1,
+                "probability": 0.31466865284911505,
+                "status": "COMPLETE",
+                "reason": "STOP",
+                "entry_ns": "1786962625100927060",
+                "exit_ns": "1786962640000901608",
+                "net": -3.5,
+                "mae": -3.6999999999999997,
+                "mfe": -0.3,
+                "R_trade": 3.5999999999999996,
+                "R_event": 1.2,
+                "G_event": 2.4,
+                "closed_cash": -3.5,
+                "closed_drawdown": 3.5
+              },
+              {
+                "date": "2026-08-17",
+                "t_ns": "1786962645000000000",
+                "side": 1,
+                "probability": 0.2924536124146033,
+                "status": "COMPLETE",
+                "reason": "TIME",
+                "entry_ns": "1786962645131163989",
+                "exit_ns": "1786962945237858602",
+                "net": -3.1999999999999997,
+                "mae": -4.3999999999999995,
+                "mfe": 1.0,
+                "R_trade": 4.800000000000001,
+                "R_event": 1.6,
+                "G_event": 3.2,
+                "closed_cash": -6.699999999999999,
+                "closed_drawdown": 6.699999999999999
+              },
+              {
+                "date": "2026-08-18",
+                "t_ns": "1787059820000000000",
+                "side": 1,
+                "probability": 0.43592442771815393,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1787059820100476644",
+                "exit_ns": "1787059860509710863",
+                "net": 6.3,
+                "mae": -1.4000000000000001,
+                "mfe": 6.6000000000000005,
+                "R_trade": 4.800000000000001,
+                "R_event": 1.6,
+                "G_event": 3.2,
+                "closed_cash": -0.39999999999999947,
+                "closed_drawdown": 0.39999999999999947
+              }
+            ],
+            "ledger_last_three": [
+              {
+                "date": "2026-08-21",
+                "t_ns": "1787319585000000000",
+                "side": 1,
+                "probability": 0.36501640154562237,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1787319585101940035",
+                "exit_ns": "1787319654053697683",
+                "net": 1.9000000000000001,
+                "mae": -1.2,
+                "mfe": 2.1,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": 54.199999999999996,
+                "closed_drawdown": 8.100000000000001
+              },
+              {
+                "date": "2026-08-21",
+                "t_ns": "1787319705000000000",
+                "side": 1,
+                "probability": 0.2992878784257505,
+                "status": "COMPLETE",
+                "reason": "STOP",
+                "entry_ns": "1787319705109378118",
+                "exit_ns": "1787319748302940828",
+                "net": -3.0,
+                "mae": -3.0999999999999996,
+                "mfe": -0.19999999999999998,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": 51.199999999999996,
+                "closed_drawdown": 11.100000000000001
+              },
+              {
+                "date": "2026-08-21",
+                "t_ns": "1787320925000000000",
+                "side": 1,
+                "probability": 0.4024445275522067,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1787320925119142175",
+                "exit_ns": "1787320966556905883",
+                "net": 2.5,
+                "mae": -1.7,
+                "mfe": 2.5,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": 53.699999999999996,
+                "closed_drawdown": 8.600000000000001
+              }
+            ]
+          },
+          "test": {
+            "plan": "cost6",
+            "threshold": 0.0,
+            "completed": true,
+            "closed_max_drawdown": 72.1,
+            "wins": 38,
+            "win_rate": 0.40860215053763443,
+            "origin_candidates": 514,
+            "causal_feature_origins": 514,
+            "unprocessed_after_censor": 0,
+            "halt": null,
+            "exit_reasons": {
+              "TAKE": 27,
+              "STOP": 51,
+              "TIME": 15
+            },
+            "trades": 93,
+            "ineligible": 0,
+            "empty": 0,
+            "censored": 0,
+            "skipped_busy": 421,
+            "status": "COMPLETE",
+            "observed_closed_cash": -25.299999999999994,
+            "total_net_if_complete": -25.299999999999994,
+            "daily": {
+              "2026-08-24": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -1.4999999999999973,
+                "cumulative_closed_cash": -1.4999999999999973,
+                "total_net_if_complete": -1.4999999999999973,
+                "trades": 26,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-25": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -1.1999999999999984,
+                "cumulative_closed_cash": -2.6999999999999957,
+                "total_net_if_complete": -1.1999999999999984,
+                "trades": 14,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-26": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -3.2999999999999967,
+                "cumulative_closed_cash": -5.999999999999993,
+                "total_net_if_complete": -3.2999999999999967,
+                "trades": 18,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-27": {
+                "status": "COMPLETE",
+                "observed_closed_cash": -22.999999999999993,
+                "cumulative_closed_cash": -28.999999999999986,
+                "total_net_if_complete": -22.999999999999993,
+                "trades": 18,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-09-01": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 3.700000000000002,
+                "cumulative_closed_cash": -25.299999999999983,
+                "total_net_if_complete": 3.700000000000002,
+                "trades": 17,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              }
+            },
+            "teacher_buckets_after_execution": {
+              "UNKNOWN_TEACHER": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TEACHER_NONE": {
+                "attempts": 34,
+                "complete_trades": 34,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": -29.300000000000004,
+                "mean_net": -0.8617647058823531,
+                "median_net": -2.95,
+                "wins": 11,
+                "losses": 22,
+                "zeros": 1,
+                "win_rate": 0.3235294117647059,
+                "gross_positive_net": 41.2,
+                "gross_negative_net": -70.5,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 19,
+                  "TIME": 15
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 34,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "WRONG_SIDE": {
+                "attempts": 25,
+                "complete_trades": 25,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": -98.9,
+                "mean_net": -3.9560000000000004,
+                "median_net": -3.8,
+                "wins": 0,
+                "losses": 25,
+                "zeros": 0,
+                "win_rate": 0.0,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": -98.9,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 25,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 2,
+                  "2": 23,
+                  "3": 0
+                }
+              },
+              "TARGET_POSITIVE_SIDE": {
+                "attempts": 34,
+                "complete_trades": 34,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 102.89999999999999,
+                "mean_net": 3.026470588235294,
+                "median_net": 4.050000000000001,
+                "wins": 27,
+                "losses": 7,
+                "zeros": 0,
+                "win_rate": 0.7941176470588235,
+                "gross_positive_net": 127.60000000000001,
+                "gross_negative_net": -24.7,
+                "exit_reasons": {
+                  "TAKE": 27,
+                  "STOP": 7,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 24,
+                  "2": 5,
+                  "3": 5
+                }
+              }
+            },
+            "ledger_rows": 93,
+            "ledger_sha256": "808e36cf739bd333f99dcfe19b32503e97439483c3b4317d574790f3d9468d59",
+            "ledger_first_three": [
+              {
+                "date": "2026-08-24",
+                "t_ns": "1787558905000000000",
+                "side": 1,
+                "probability": 0.29276891441559594,
+                "status": "COMPLETE",
+                "reason": "STOP",
+                "entry_ns": "1787558905258735191",
+                "exit_ns": "1787558938357400425",
+                "net": -3.0,
+                "mae": -3.0,
+                "mfe": 0.0,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": -3.0,
+                "closed_drawdown": 3.0
+              },
+              {
+                "date": "2026-08-24",
+                "t_ns": "1787559160000000000",
+                "side": 1,
+                "probability": 0.29548851851711383,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1787559160565880228",
+                "exit_ns": "1787559246996228212",
+                "net": 2.4000000000000004,
+                "mae": -0.6,
+                "mfe": 2.8000000000000003,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": -0.5999999999999996,
+                "closed_drawdown": 0.5999999999999996
+              },
+              {
+                "date": "2026-08-24",
+                "t_ns": "1787564015000000000",
+                "side": 1,
+                "probability": 0.35082907052770723,
+                "status": "COMPLETE",
+                "reason": "TIME",
+                "entry_ns": "1787564015291438377",
+                "exit_ns": "1787564316353599747",
+                "net": 0.7,
+                "mae": -3.0999999999999996,
+                "mfe": 0.8999999999999999,
+                "R_trade": 3.5999999999999996,
+                "R_event": 1.2,
+                "G_event": 2.4,
+                "closed_cash": 0.10000000000000031,
+                "closed_drawdown": 0.0
+              }
+            ],
+            "ledger_last_three": [
+              {
+                "date": "2026-09-01",
+                "t_ns": "1788271415000000000",
+                "side": 1,
+                "probability": 0.3520037732250444,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1788271415113098765",
+                "exit_ns": "1788271586359876949",
+                "net": 5.9,
+                "mae": -1.0,
+                "mfe": 5.9,
+                "R_trade": 3.5999999999999996,
+                "R_event": 1.2,
+                "G_event": 2.4,
+                "closed_cash": -26.699999999999996,
+                "closed_drawdown": 50.89999999999999
+              },
+              {
+                "date": "2026-09-01",
+                "t_ns": "1788280020000000000",
+                "side": -1,
+                "probability": 0.3009870436671844,
+                "status": "COMPLETE",
+                "reason": "STOP",
+                "entry_ns": "1788280020100118304",
+                "exit_ns": "1788280022257980635",
+                "net": -2.9,
+                "mae": -3.0999999999999996,
+                "mfe": -0.6,
+                "R_trade": 3.0,
+                "R_event": 1.0237982685748166,
+                "G_event": 2.047596537149633,
+                "closed_cash": -29.599999999999994,
+                "closed_drawdown": 53.8
+              },
+              {
+                "date": "2026-09-01",
+                "t_ns": "1788283555000000000",
+                "side": 1,
+                "probability": 0.40514070071652714,
+                "status": "COMPLETE",
+                "reason": "TAKE",
+                "entry_ns": "1788283555104504294",
+                "exit_ns": "1788283741260727785",
+                "net": 4.3,
+                "mae": -0.7,
+                "mfe": 4.3,
+                "R_trade": 3.0,
+                "R_event": 1.0,
+                "G_event": 2.0,
+                "closed_cash": -25.299999999999994,
+                "closed_drawdown": 49.49999999999999
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "seed": 29,
+      "arms": {
+        "base": {
+          "reason": "WAIT_no_positive_complete_CAL_with_50_trades",
+          "plan": "cost2",
+          "fraction": 0.0,
+          "threshold": 1.01,
+          "calibration": {
+            "plan": "cost2",
+            "threshold": 1.01,
+            "completed": true,
+            "closed_max_drawdown": 0.0,
+            "wins": 0,
+            "win_rate": null,
+            "origin_candidates": 0,
+            "causal_feature_origins": 2042,
+            "unprocessed_after_censor": 0,
+            "halt": null,
+            "exit_reasons": {
+              "TAKE": 0,
+              "STOP": 0,
+              "TIME": 0
+            },
+            "trades": 0,
+            "ineligible": 0,
+            "empty": 0,
+            "censored": 0,
+            "skipped_busy": 0,
+            "status": "COMPLETE",
+            "observed_closed_cash": 0.0,
+            "total_net_if_complete": 0.0,
+            "daily": {
+              "2026-08-17": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-18": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-19": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-20": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-21": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              }
+            },
+            "teacher_buckets_after_execution": {
+              "UNKNOWN_TEACHER": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TEACHER_NONE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "WRONG_SIDE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TARGET_POSITIVE_SIDE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              }
+            },
+            "ledger_rows": 0,
+            "ledger_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "ledger_first_three": [],
+            "ledger_last_three": []
+          },
+          "test": {
+            "plan": "cost2",
+            "threshold": 1.01,
+            "completed": true,
+            "closed_max_drawdown": 0.0,
+            "wins": 0,
+            "win_rate": null,
+            "origin_candidates": 0,
+            "causal_feature_origins": 4178,
+            "unprocessed_after_censor": 0,
+            "halt": null,
+            "exit_reasons": {
+              "TAKE": 0,
+              "STOP": 0,
+              "TIME": 0
+            },
+            "trades": 0,
+            "ineligible": 0,
+            "empty": 0,
+            "censored": 0,
+            "skipped_busy": 0,
+            "status": "COMPLETE",
+            "observed_closed_cash": 0.0,
+            "total_net_if_complete": 0.0,
+            "daily": {
+              "2026-08-24": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-25": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-26": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-27": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-09-01": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              }
+            },
+            "teacher_buckets_after_execution": {
+              "UNKNOWN_TEACHER": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TEACHER_NONE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "WRONG_SIDE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TARGET_POSITIVE_SIDE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              }
+            },
+            "ledger_rows": 0,
+            "ledger_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "ledger_first_three": [],
+            "ledger_last_three": []
+          }
+        },
+        "semantic": {
+          "reason": "WAIT_no_positive_complete_CAL_with_50_trades",
+          "plan": "cost2",
+          "fraction": 0.0,
+          "threshold": 1.01,
+          "calibration": {
+            "plan": "cost2",
+            "threshold": 1.01,
+            "completed": true,
+            "closed_max_drawdown": 0.0,
+            "wins": 0,
+            "win_rate": null,
+            "origin_candidates": 0,
+            "causal_feature_origins": 2042,
+            "unprocessed_after_censor": 0,
+            "halt": null,
+            "exit_reasons": {
+              "TAKE": 0,
+              "STOP": 0,
+              "TIME": 0
+            },
+            "trades": 0,
+            "ineligible": 0,
+            "empty": 0,
+            "censored": 0,
+            "skipped_busy": 0,
+            "status": "COMPLETE",
+            "observed_closed_cash": 0.0,
+            "total_net_if_complete": 0.0,
+            "daily": {
+              "2026-08-17": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-18": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-19": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-20": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-21": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              }
+            },
+            "teacher_buckets_after_execution": {
+              "UNKNOWN_TEACHER": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TEACHER_NONE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "WRONG_SIDE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TARGET_POSITIVE_SIDE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              }
+            },
+            "ledger_rows": 0,
+            "ledger_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "ledger_first_three": [],
+            "ledger_last_three": []
+          },
+          "test": {
+            "plan": "cost2",
+            "threshold": 1.01,
+            "completed": true,
+            "closed_max_drawdown": 0.0,
+            "wins": 0,
+            "win_rate": null,
+            "origin_candidates": 0,
+            "causal_feature_origins": 4178,
+            "unprocessed_after_censor": 0,
+            "halt": null,
+            "exit_reasons": {
+              "TAKE": 0,
+              "STOP": 0,
+              "TIME": 0
+            },
+            "trades": 0,
+            "ineligible": 0,
+            "empty": 0,
+            "censored": 0,
+            "skipped_busy": 0,
+            "status": "COMPLETE",
+            "observed_closed_cash": 0.0,
+            "total_net_if_complete": 0.0,
+            "daily": {
+              "2026-08-24": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-25": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-26": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-27": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-09-01": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              }
+            },
+            "teacher_buckets_after_execution": {
+              "UNKNOWN_TEACHER": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TEACHER_NONE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "WRONG_SIDE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TARGET_POSITIVE_SIDE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              }
+            },
+            "ledger_rows": 0,
+            "ledger_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "ledger_first_three": [],
+            "ledger_last_three": []
+          }
+        },
+        "risk": {
+          "reason": "WAIT_no_positive_complete_CAL_with_50_trades",
+          "plan": "cost2",
+          "fraction": 0.0,
+          "threshold": 1.01,
+          "calibration": {
+            "plan": "cost2",
+            "threshold": 1.01,
+            "completed": true,
+            "closed_max_drawdown": 0.0,
+            "wins": 0,
+            "win_rate": null,
+            "origin_candidates": 0,
+            "causal_feature_origins": 2042,
+            "unprocessed_after_censor": 0,
+            "halt": null,
+            "exit_reasons": {
+              "TAKE": 0,
+              "STOP": 0,
+              "TIME": 0
+            },
+            "trades": 0,
+            "ineligible": 0,
+            "empty": 0,
+            "censored": 0,
+            "skipped_busy": 0,
+            "status": "COMPLETE",
+            "observed_closed_cash": 0.0,
+            "total_net_if_complete": 0.0,
+            "daily": {
+              "2026-08-17": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-18": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-19": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-20": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-21": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              }
+            },
+            "teacher_buckets_after_execution": {
+              "UNKNOWN_TEACHER": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TEACHER_NONE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "WRONG_SIDE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TARGET_POSITIVE_SIDE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              }
+            },
+            "ledger_rows": 0,
+            "ledger_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "ledger_first_three": [],
+            "ledger_last_three": []
+          },
+          "test": {
+            "plan": "cost2",
+            "threshold": 1.01,
+            "completed": true,
+            "closed_max_drawdown": 0.0,
+            "wins": 0,
+            "win_rate": null,
+            "origin_candidates": 0,
+            "causal_feature_origins": 4178,
+            "unprocessed_after_censor": 0,
+            "halt": null,
+            "exit_reasons": {
+              "TAKE": 0,
+              "STOP": 0,
+              "TIME": 0
+            },
+            "trades": 0,
+            "ineligible": 0,
+            "empty": 0,
+            "censored": 0,
+            "skipped_busy": 0,
+            "status": "COMPLETE",
+            "observed_closed_cash": 0.0,
+            "total_net_if_complete": 0.0,
+            "daily": {
+              "2026-08-24": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-25": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-26": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-08-27": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              },
+              "2026-09-01": {
+                "status": "COMPLETE",
+                "observed_closed_cash": 0.0,
+                "cumulative_closed_cash": 0.0,
+                "total_net_if_complete": 0.0,
+                "trades": 0,
+                "ineligible": 0,
+                "empty": 0,
+                "censored": 0
+              }
+            },
+            "teacher_buckets_after_execution": {
+              "UNKNOWN_TEACHER": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TEACHER_NONE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "WRONG_SIDE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              },
+              "TARGET_POSITIVE_SIDE": {
+                "attempts": 0,
+                "complete_trades": 0,
+                "empty_attempts": 0,
+                "censored_attempts": 0,
+                "observed_closed_net": 0.0,
+                "mean_net": null,
+                "median_net": null,
+                "wins": 0,
+                "losses": 0,
+                "zeros": 0,
+                "win_rate": null,
+                "gross_positive_net": 0.0,
+                "gross_negative_net": 0.0,
+                "exit_reasons": {
+                  "TAKE": 0,
+                  "STOP": 0,
+                  "TIME": 0
+                },
+                "joint_teacher_classes": {
+                  "-1": 0,
+                  "0": 0,
+                  "1": 0,
+                  "2": 0,
+                  "3": 0
+                }
+              }
+            },
+            "ledger_rows": 0,
+            "ledger_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "ledger_first_three": [],
+            "ledger_last_three": []
+          }
+        }
+      }
+    }
+  ],
+  "learning_findings": [
+    {
+      "seed": 17,
+      "global_heads": {
+        "event": {
+          "n": 49334,
+          "positive": 17041,
+          "negative": 32293,
+          "nll": 0.6091328607899624,
+          "brier": 0.21044900863171792,
+          "auc": 0.6547002970877898
+        },
+        "chosen_correct_given_event": {
+          "n": 17041,
+          "positive": 9345,
+          "negative": 7696,
+          "nll": 0.6908134087914365,
+          "brier": 0.24882195333309484,
+          "auc": 0.5174860454354836
+        },
+        "safe_cost2_given_correct": {
+          "n": 9345,
+          "positive": 4062,
+          "negative": 5283,
+          "nll": 0.6608088692958853,
+          "brier": 0.23418977398179583,
+          "auc": 0.6256685020270234
+        },
+        "safe_cost4_given_correct": {
+          "n": 9345,
+          "positive": 7437,
+          "negative": 1908,
+          "nll": 0.4797389964415996,
+          "brier": 0.15411893746381392,
+          "auc": 0.660651886750169
+        },
+        "safe_cost6_given_correct": {
+          "n": 9345,
+          "positive": 8530,
+          "negative": 815,
+          "nll": 0.292764351417027,
+          "brier": 0.0791050192743611,
+          "auc": 0.6021746416473076
+        }
+      },
+      "candidate_heads": {
+        "event": {
+          "n": 514,
+          "positive": 328,
+          "negative": 186,
+          "nll": 0.6808508200033817,
+          "brier": 0.2432315602161739,
+          "auc": 0.46246393915552064
+        },
+        "chosen_correct_given_event": {
+          "n": 328,
+          "positive": 160,
+          "negative": 168,
+          "nll": 0.6721489658588202,
+          "brier": 0.2394799416385576,
+          "auc": 0.6975818452380952
+        },
+        "safe_cost2_given_correct": {
+          "n": 160,
+          "positive": 30,
+          "negative": 130,
+          "nll": 0.5088126581092057,
+          "brier": 0.16212224766827227,
+          "auc": 0.5038461538461538
+        },
+        "safe_cost4_given_correct": {
+          "n": 160,
+          "positive": 87,
+          "negative": 73,
+          "nll": 0.7099802077353186,
+          "brier": 0.2547504375477048,
+          "auc": 0.538497874350496
+        },
+        "safe_cost6_given_correct": {
+          "n": 160,
+          "positive": 131,
+          "negative": 29,
+          "nll": 0.4946782629117134,
+          "brier": 0.14848530311395153,
+          "auc": 0.5683074493287706
+        }
+      },
+      "candidate_counts": {
+        "train": 400,
+        "validation": 245,
+        "calibration": 366,
+        "test": 514
+      },
+      "risk_probability_monotonicity": {
+        "all_admitted": {
+          "roots": 49944,
+          "any_strict_violation_fraction": 0.0,
+          "any_above_1e_6_fraction": 0.0,
+          "cost2_above_cost4": {
+            "strict_violation_count": 0,
+            "fraction": 0.0,
+            "maximum": 0.0,
+            "mean_positive_difference_over_all_roots": 0.0
+          },
+          "cost4_above_cost6": {
+            "strict_violation_count": 0,
+            "fraction": 0.0,
+            "maximum": 0.0,
+            "mean_positive_difference_over_all_roots": 0.0
+          }
+        },
+        "risk_known_conditional": {
+          "roots": 9345,
+          "any_strict_violation_fraction": 0.0,
+          "any_above_1e_6_fraction": 0.0,
+          "cost2_above_cost4": {
+            "strict_violation_count": 0,
+            "fraction": 0.0,
+            "maximum": 0.0,
+            "mean_positive_difference_over_all_roots": 0.0
+          },
+          "cost4_above_cost6": {
+            "strict_violation_count": 0,
+            "fraction": 0.0,
+            "maximum": 0.0,
+            "mean_positive_difference_over_all_roots": 0.0
+          }
+        }
+      }
+    },
+    {
+      "seed": 29,
+      "global_heads": {
+        "event": {
+          "n": 49334,
+          "positive": 17041,
+          "negative": 32293,
+          "nll": 0.6185515319505124,
+          "brier": 0.2142437104202686,
+          "auc": 0.6397998267916923
+        },
+        "chosen_correct_given_event": {
+          "n": 17041,
+          "positive": 9285,
+          "negative": 7756,
+          "nll": 0.6915832170672833,
+          "brier": 0.24929812146094718,
+          "auc": 0.5266662695242038
+        },
+        "safe_cost2_given_correct": {
+          "n": 9285,
+          "positive": 4077,
+          "negative": 5208,
+          "nll": 0.6641263885685215,
+          "brier": 0.23572795116462764,
+          "auc": 0.6187495926155757
+        },
+        "safe_cost4_given_correct": {
+          "n": 9285,
+          "positive": 7406,
+          "negative": 1879,
+          "nll": 0.4763590274254432,
+          "brier": 0.15350859813533943,
+          "auc": 0.6643677213518892
+        },
+        "safe_cost6_given_correct": {
+          "n": 9285,
+          "positive": 8470,
+          "negative": 815,
+          "nll": 0.3012311799499234,
+          "brier": 0.08050122864144324,
+          "auc": 0.5894452452176937
+        }
+      },
+      "candidate_heads": {
+        "event": {
+          "n": 4176,
+          "positive": 2289,
+          "negative": 1887,
+          "nll": 0.7513767407540277,
+          "brier": 0.27209401009563283,
+          "auc": 0.5736298321295623
+        },
+        "chosen_correct_given_event": {
+          "n": 2289,
+          "positive": 1427,
+          "negative": 862,
+          "nll": 0.6454396752465503,
+          "brier": 0.2269643048169614,
+          "auc": 0.6473008940925505
+        },
+        "safe_cost2_given_correct": {
+          "n": 1427,
+          "positive": 484,
+          "negative": 943,
+          "nll": 0.6326284724901425,
+          "brier": 0.2204935966198166,
+          "auc": 0.5712930422512993
+        },
+        "safe_cost4_given_correct": {
+          "n": 1427,
+          "positive": 960,
+          "negative": 467,
+          "nll": 0.6251967717994412,
+          "brier": 0.21734011680453275,
+          "auc": 0.5973144182726624
+        },
+        "safe_cost6_given_correct": {
+          "n": 1427,
+          "positive": 1191,
+          "negative": 236,
+          "nll": 0.504849036720326,
+          "brier": 0.14505062723749076,
+          "auc": 0.5564865018713799
+        }
+      },
+      "candidate_counts": {
+        "train": 2410,
+        "validation": 1213,
+        "calibration": 2042,
+        "test": 4178
+      },
+      "risk_probability_monotonicity": {
+        "all_admitted": {
+          "roots": 49944,
+          "any_strict_violation_fraction": 4.004485023226013e-05,
+          "any_above_1e_6_fraction": 4.004485023226013e-05,
+          "cost2_above_cost4": {
+            "strict_violation_count": 0,
+            "fraction": 0.0,
+            "maximum": 0.0,
+            "mean_positive_difference_over_all_roots": 0.0
+          },
+          "cost4_above_cost6": {
+            "strict_violation_count": 2,
+            "fraction": 4.004485023226013e-05,
+            "maximum": 0.009588014436748948,
+            "mean_positive_difference_over_all_roots": 2.827904532856476e-07
+          }
+        },
+        "risk_known_conditional": {
+          "roots": 9285,
+          "any_strict_violation_fraction": 0.0,
+          "any_above_1e_6_fraction": 0.0,
+          "cost2_above_cost4": {
+            "strict_violation_count": 0,
+            "fraction": 0.0,
+            "maximum": 0.0,
+            "mean_positive_difference_over_all_roots": 0.0
+          },
+          "cost4_above_cost6": {
+            "strict_violation_count": 0,
+            "fraction": 0.0,
+            "maximum": 0.0,
+            "mean_positive_difference_over_all_roots": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "next_research_hypothesis": "Align filter training/validation/calibration to the candidate distribution and independently test a broader proposal gate. Keep original crossing target and BCE as reference. No posthoc threshold change or additional fit was performed.",
+  "limitations": [
+    "Five TEST days; no stable advantage across seeds.",
+    "New scientific V3/V4 dates but historical cognition August exposure; no never-inspected holdout claim.",
+    "Frozen base GCQ6 to new GCZ6 changes temporal and contract regimes together.",
+    "Micro70 used, Rich225 including day/VWAP/STFT not fully used; detailed RF61 is 300 seconds.",
+    "CAL root matching does not match TEST alert counts, position occupancy or paired account states.",
+    "Risk safety before crossing is separate from latency-delayed execution PnL.",
+    "Sol pixel findings were delivered; root compiled their JSON after the subagent usage limit."
+  ]
+}
