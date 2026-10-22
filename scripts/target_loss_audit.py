@@ -190,8 +190,11 @@ def temporal_diagnostics(frames):
             for name in ('fill','take_joint','take_conditional','class_conditional'):
                 v=values[name].copy();ok=np.isfinite(v)&support;v[ok]=rng.permutation(v[ok]);values[name+'_permuted']=v
             for name,v in values.items():
+                # Conditional continuity requires every interior origin to be
+                # filled as well. EMPTY is an interruption, never a path class.
+                used_support=support&filled if ('conditional' in name or name=='g_take') else support
                 for lag in [30,60,120,300,600,1800]:
-                    accumulator[f'{mode}/{split}/{name}/{lag}'].append(lag_record(t,v,seg,support,30,lag))
+                    accumulator[f'{mode}/{split}/{name}/{lag}'].append(lag_record(t,v,seg,used_support,30,lag))
                 if name in ('fill','take_conditional','class_conditional'):
                     runs[f'{mode}/{split}/{name}']+=run_lengths(t,v,seg,support,30)
     return {k:combine_lags(v) for k,v in accumulator.items()}, {k:dict(n_runs=len(v),median_observed_span_seconds=float(np.median([r[1]*30 for r in v])),
@@ -207,18 +210,21 @@ def dense_scenes(man,frames):
         src=pd.read_parquet(p,columns=columns);t=src.t_ns.to_numpy();j=np.searchsorted(q.quote_t,t,side='right')-1
         gate=(j>=0)&(src.sigma_known.to_numpy()>0)&(src.sigma600.to_numpy()>=.3)&(src.spread_ticks.to_numpy()>0)&(t+335*ep.NS<q.deadline_ns)&q.valid[j]
         src=src.loc[gate].reset_index(drop=True);j=j[gate];t=src.t_ns.to_numpy();dense=[]
+        audit_support,audit_segment=minute_certificate(day,t)
         for mode in ('P','T'):
             for side,sn in ((1,'L'),(-1,'S')):
                 key=f'{mode}_{sn}_f24_12';cat=ep.categories(src[key+'_st'],src[key+'_net']);known=cat>=0;filled=known&(cat<3)
                 d=pd.DataFrame(dict(date=date,t_ns=t,mode=mode,side=side,category=cat,net=src[key+'_net'],busy_s=src[key+'_busy_s'],
-                    mid=(q.bid[j].astype(float)+q.ask[j])/2e9,bid=q.bid[j]/1e9,ask=q.ask[j]/1e9,epoch=q.epoch[j],spread_ticks=src.spread_ticks))
+                    mid=(q.bid[j].astype(float)+q.ask[j])/2e9,bid=q.bid[j]/1e9,ask=q.ask[j]/1e9,epoch=q.epoch[j],spread_ticks=src.spread_ticks,
+                    audit_support=audit_support,audit_segment=audit_segment))
                 dense.append(d)
                 origin=frames[mode].loc[(frames[mode].date==date)&(frames[mode].side==side),['t_ns','category']]
                 joined=origin.merge(d[['t_ns','category']],on='t_ns',suffixes=('_v2','_dense'),validate='one_to_one')
                 if len(joined)!=len(origin) or not np.array_equal(joined.category_v2,joined.category_dense):raise ValueError('Dense targets disagree at v2 roots')
                 for name,v in {'fill':np.where(known,cat<3,np.nan),'take_conditional':np.where(filled,cat==0,np.nan),
                                'class_conditional':np.where(filled,cat,np.nan)}.items():
-                    for lag in [1,2,5,10,30,60]:stats[f'{mode}/{name}/{lag}'].append(lag_record(t,v,q.epoch[j],known,1,lag))
+                    used_support=audit_support&(filled if 'conditional' in name else known)
+                    for lag in [1,2,5,10,30,60]:stats[f'{mode}/{name}/{lag}'].append(lag_record(t,v,audit_segment,used_support,1,lag))
         output=pd.concat(dense,ignore_index=True);output.to_parquet(DATA/(date+'_dense.parquet'),index=False)
         records.append(dict(date=date,source_sha256=sha(p),rows=len(output),london_ns=str(day.meta['london_ns']),
                             dense_sha256=sha(DATA/(date+'_dense.parquet'))))

@@ -42,3 +42,6 @@ def test_missing_path_label_is_not_a_false_transition():
     r=lag_record(t,[0,np.nan,1,1],np.ones(4),np.ones(4,bool),30,30)
     assert r['n']==1 and r['changed']==0
     assert run_lengths(t,[0,np.nan,1,1],np.ones(4),np.ones(4,bool),30)==[(0,1),(1,2)]
+    filled,_=head_targets(np.array([0,3,1,1]),'path')
+    a,b=consecutive_pairs(t,filled,np.ones(4),30,60)
+    assert len(a)==0  # the EMPTY between two fills breaks conditional continuity
