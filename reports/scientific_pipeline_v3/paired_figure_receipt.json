@@ -1,0 +1,37 @@
+{
+  "status": "COMPLETE",
+  "source_hashes": {
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\plot_factorial_v3.py": "18d5958f496120524a0a482f293f44c6abcd6f10080481e637bffe7ed699804d",
+    "reports\\scientific_pipeline_v3\\statistical_audit.json": "8e00d69d3aaa84f17c615135eb6f2b19914b65ebe9aac8665cfb06d6d780ea69",
+    "reports\\scientific_pipeline_v3\\08_paired_effects.png": "471ec7b9007c28fff8ef20124da01ba5ee689e818d55f91bd400247c346044fb"
+  },
+  "output": "reports/scientific_pipeline_v3/08_paired_effects.png",
+  "split": "test",
+  "metrics": [
+    "joint_nll",
+    "event_id_positive_side_nll"
+  ],
+  "contrasts": [
+    "context_at_uniform",
+    "weighting_at_restored",
+    "interaction"
+  ],
+  "seeds": [
+    17,
+    29
+  ],
+  "dates": [
+    "2026-07-13",
+    "2026-07-14",
+    "2026-07-15",
+    "2026-07-16",
+    "2026-07-17",
+    "2026-07-20",
+    "2026-07-21",
+    "2026-07-22",
+    "2026-07-23",
+    "2026-07-24"
+  ],
+  "definition": "All 10 paired daily effects per seed; diamond averages seeds within day, then averages days. Bars are descriptive 95% paired day-bootstrap intervals, not independent-seed intervals.",
+  "limitation": "Side-ID panel is positive-only and cannot assess false positives, full-population calibration, or profit; no TEST winner selection."
+}

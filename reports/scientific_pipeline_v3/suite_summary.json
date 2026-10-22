@@ -1,0 +1,83 @@
+{
+  "status": "COMPLETE",
+  "dataset_root": "data/derived/scientific_pipeline_v3/dataset",
+  "runs_root": "data\\derived\\scientific_pipeline_v3\\runs",
+  "config_sha256": "00c19a4fa8ecaba8d1b1ed559c3a6d4bb116b27d416c2d3d6778ac8e5e372005",
+  "dataset_manifest_sha256": "df54dfa2e285e6b7d711785d78a15f47329e1f50a2f5177ed0da1b52e2fbbf3c",
+  "runs": [
+    {
+      "run_id": "tcn_micro_legacy_uniform_seed17",
+      "context": "legacy",
+      "weighting": "uniform",
+      "seed": 17,
+      "role": "primary"
+    },
+    {
+      "run_id": "tcn_micro_legacy_crossing_id_seed17",
+      "context": "legacy",
+      "weighting": "crossing_id",
+      "seed": 17,
+      "role": "primary"
+    },
+    {
+      "run_id": "tcn_micro_restored_uniform_seed17",
+      "context": "restored",
+      "weighting": "uniform",
+      "seed": 17,
+      "role": "primary"
+    },
+    {
+      "run_id": "tcn_micro_restored_crossing_id_seed17",
+      "context": "restored",
+      "weighting": "crossing_id",
+      "seed": 17,
+      "role": "primary"
+    },
+    {
+      "run_id": "tcn_micro_legacy_uniform_seed29",
+      "context": "legacy",
+      "weighting": "uniform",
+      "seed": 29,
+      "role": "replication"
+    },
+    {
+      "run_id": "tcn_micro_legacy_crossing_id_seed29",
+      "context": "legacy",
+      "weighting": "crossing_id",
+      "seed": 29,
+      "role": "replication"
+    },
+    {
+      "run_id": "tcn_micro_restored_uniform_seed29",
+      "context": "restored",
+      "weighting": "uniform",
+      "seed": 29,
+      "role": "replication"
+    },
+    {
+      "run_id": "tcn_micro_restored_crossing_id_seed29",
+      "context": "restored",
+      "weighting": "crossing_id",
+      "seed": 29,
+      "role": "replication"
+    }
+  ],
+  "selection": "No arm/seed winner selection; all eight factorial arms reported",
+  "primary_seed": 17,
+  "replication_seed": 29,
+  "fixed_visual_cases": [
+    {
+      "date": "2026-07-13",
+      "offset_hours": 0,
+      "duration_hours": 2
+    },
+    {
+      "date": "2026-07-20",
+      "offset_hours": 5,
+      "duration_hours": 2
+    }
+  ],
+  "wall_seconds": 3923.1999281998724,
+  "matched_scaler_and_cohort": true,
+  "matched_initialization_and_probes": true
+}

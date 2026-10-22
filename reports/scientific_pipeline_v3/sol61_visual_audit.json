@@ -1,0 +1,142 @@
+{
+  "status": "PASS_DESCRIPTIVE_WITH_LIMITATIONS_NO_ECONOMIC_ADMISSION",
+  "model": "gpt-6.1-sol",
+  "actual_pixel_review": true,
+  "reviewed_images": [
+    {
+      "path": "reports/scientific_pipeline_v3/01_context.png",
+      "sha256": "5000d46796a85b9fbc73d6ccec552fba6c9d64ceb82ad2e9e90203413349a8fb",
+      "actual_pixel_review": true,
+      "method": "view_image",
+      "findings": "Restored supplies nearly all supported RF positions; observed rows remain masked and distinct from contiguous complete observations."
+    },
+    {
+      "path": "reports/scientific_pipeline_v3/02_comparison.png",
+      "sha256": "b9afbf66eeddf46c1dd964996cc4beec940732acac0a01c3c44f7b04c3768321",
+      "actual_pixel_review": true,
+      "method": "view_image",
+      "findings": "All eight arms shown; context direction benefit is more consistent than joint benefit; ID weighting reduces event ranking."
+    },
+    {
+      "path": "reports/scientific_pipeline_v3/03_training.png",
+      "sha256": "6e0d92b2123af58e4fd40b02091e53ed61159936e8d4c605f3628b424759e981",
+      "actual_pixel_review": true,
+      "method": "view_image",
+      "findings": "Unweighted VAL checkpoints and higher weighted-arm clipping visible; matched initialization does not imply identical gradients."
+    },
+    {
+      "path": "reports/scientific_pipeline_v3/04a_signal_2026-07-13_seed17.png",
+      "sha256": "75f4a60f05dca9428ebc2e1f1955793a99a8f04b54561df73a1dbc3a9dfacede",
+      "actual_pixel_review": true,
+      "method": "view_image",
+      "findings": "Fixed rising-price window: E and signed side signals do not simply encode price slope; weighted spikes coexist with misses."
+    },
+    {
+      "path": "reports/scientific_pipeline_v3/04b_signal_2026-07-20_seed17.png",
+      "sha256": "758f1af3b786701e20ca160e4fa44c58eddc8c0c219f3f4af66d380c0398e135",
+      "actual_pixel_review": true,
+      "method": "view_image",
+      "findings": "Fixed afternoon window: jagged binary target, small signed side signal, abrupt error derivatives; no retrospective smoothing."
+    },
+    {
+      "path": "reports/scientific_pipeline_v3/04c_signal_2026-07-13_seed29.png",
+      "sha256": "6ed3c5f118d05936146cf774d9c75c3d7f7dfd38b3a8afa4875e497ab1baaecb",
+      "actual_pixel_review": true,
+      "method": "view_image",
+      "findings": "Replication confirms qualitative weighted sharpness, not exact event timing or consistent superiority."
+    },
+    {
+      "path": "reports/scientific_pipeline_v3/04d_signal_2026-07-20_seed29.png",
+      "sha256": "c61897dc29d44151e11924f1f3938b51229a943ed6c1299f89dba1c1a491a0f5",
+      "actual_pixel_review": true,
+      "method": "view_image",
+      "findings": "Replication retains disagreement among arms; lower local NLL cannot be inferred from sharper E alone."
+    },
+    {
+      "path": "reports/scientific_pipeline_v3/05_gradient_mass.png",
+      "sha256": "44ba3f8d6069d0f46526052249450db2d488f33d5b773001000bb217c1503754",
+      "actual_pixel_review": true,
+      "method": "view_image",
+      "findings": "TRAIN unreduced head-gradient mass changes despite conserved class weight mass; not encoder attribution or causal feature use."
+    },
+    {
+      "path": "reports/scientific_pipeline_v3/06_weights_calibration.png",
+      "sha256": "0a58dfcd065a935a2e1876d95a6deed6f45769783cdb98a2135d67a166cb68a0",
+      "actual_pixel_review": true,
+      "method": "view_image",
+      "findings": "ID weights are heavy-tailed; unweighted root reliability deteriorates in substantial ranges and sparse tails are explicitly marked."
+    },
+    {
+      "path": "reports/scientific_pipeline_v3/07_execution.png",
+      "sha256": "1d59f504a0aa81f231cde60d0e274cdb2726cf58aaaa0f59f526b36c409276da",
+      "actual_pixel_review": true,
+      "method": "view_image",
+      "findings": "Censored CAL net omitted; oracle favorable-side retention is not policy equity or economic admission."
+    },
+    {
+      "path": "reports/scientific_pipeline_v3/08_paired_effects.png",
+      "sha256": "471ec7b9007c28fff8ef20124da01ba5ee689e818d55f91bd400247c346044fb",
+      "actual_pixel_review": true,
+      "method": "view_image",
+      "findings": "Ten dates paired across seeds, not twenty independent days; positive-only metric explicitly excludes false positives."
+    },
+    {
+      "path": "reports/scientific_pipeline_v3/09_weight_target_population.png",
+      "sha256": "035488f04814aed510416aa73dea5c11eecb3844727074a023f1fb657991cd50",
+      "actual_pixel_review": true,
+      "method": "view_image",
+      "findings": "Previously viewed exact same SHA; low-multiplicity roots receive concentrated mass, shorter admitted-origin span and smaller max-first-crossing margin."
+    }
+  ],
+  "source_sha256": {
+    "index.html": "ca7c3391ed8f74e05f45cd57af62d6a30db0b07e7e64319df1ef0ea5ff185d6c",
+    "visual_manifest.json": "ad05bbd6afd2a9541fa81b3d1c3d289775ebcd231236ccca7dbf346593b9f4fd",
+    "statistical_audit.json": "8e00d69d3aaa84f17c615135eb6f2b19914b65ebe9aac8665cfb06d6d780ea69",
+    "report_metrics.json": "b3315e6f5b6c4d88d00661dd50a6e4b4a6c5153f986634e2990516063a18d28d",
+    "decision_findings.json": "800496eaeb1d1613ecd5ba8cee946c3cf05e7f0bdf665d44f1378e29a1494766",
+    "weight_semantics.json": "f98824ad7a9c5812e4ef4f919af3143a516931a723b2bddfc4ba084bb3336298",
+    "weight_figure_receipt.json": "5b3cba6a436a847b6629b7a185b8289a4e5fd555e44b27ac81bc15d2efd88d99",
+    "causal_verification.json": "c02807d5ee7a75454df444665db1df8d4d5e2f7357d435ea4f199b9eb974943d",
+    "suite_summary.json": "82eb9257bd2fd80d0aa33368717ffff2b8f34cc58164c2dde09d58caa26c40c8"
+  },
+  "hash_verification": {
+    "visual_manifest_inputs_match": true,
+    "all_12_image_hashes_match": true,
+    "html_hash_matches": true,
+    "run_output_files_verified": 80,
+    "run_output_and_bound_source_hash_mismatches": 0,
+    "scope": "Hashes verified against final visual manifest and all eight COMPLETE run receipts. Hash parity establishes binding, not full independent raw-data economic replay."
+  },
+  "trader_verdict": "Экономического допуска нет: все восемь CAL-selected политик WAIT, TEST без сделок. Орaкульное сохранение благоприятного crossing при расширении стопа не является прибылью стратегии.",
+  "ml_verdict": "Модель учит не константу и не направление ценовой волны: она оценивает состояние специфического будущего first-crossing target. Восстановление истории улучшает conditional D при uniform weights в обоих seed, но устойчивого общего joint выигрыша нет. Full inverse-ID меняет меру задачи: positive-only ID score лучше, root ranking и joint score хуже в среднем. Более резкий сигнал не означает более информативный.",
+  "findings": [
+    "Контекст TEST: median oldest-observed span 15→300 секунд; полный supported RF 12.69→99.38%; в среднем 59.57 из61 X-строк наблюдены. Это сохранение доступной информации с масками, не доказательство использования моделью всех lag. Текущий admission, X, target, scaler и cohort между arms сохранены.",
+    "Uniform context comparison: conditional D NLL 0.72881→0.71584 в seed17 и0.72606→0.72232 в seed29; day-paired mean improvement0.00919, descriptive95% interval[0.00338,0.01505]. Joint NLL0.60362→0.60227 и0.60630→0.61103: средний эффект−0.00170, interval пересекает0. Нельзя выбрать TEST winner.",
+    "Restored uniform seed17 D NLL0.715844 против TRAIN prior0.724895: это скромное условное улучшение, а не точное угадывание LONG/SHORT. D loss наблюдается только на positive events; результат не оценивает входы при NONE.",
+    "На фиксированных окнах тренд цены/движущиеся BB и crossing E различаются: длительный рост может сопровождаться NONE, а частые labels и ошибки не образуют гладкую волну. Inverse-ID сигналы часто острее, но сохраняют misses и spikes без подтверждённой временной точности.",
+    "Средний шаг P(E) при ID weights растёт примерно0.0430→0.0767, target flip5.52% остаётся прежним. BCE derivative pE−E, temporal ΔE, per-root NLL и encoder gradient являются разными объектами. Форма residual не измеряет irreducible noise.",
+    "P(L)−P(S) может быть около0 при NONE и BOTH; signed target0 не обозначает единственный класс. Категориальная ribbon сохраняет различие. Вероятности crossings не являются вероятностями net-positive executed trades.",
+    "Positive-side ID score усредняет roots внутри(side,ID), затем группы; BOTH даёт две memberships. Восстановленный weighted arm улучшает этот positive-only side NLL на0.07210 по paired days, одновременно event AUC ухудшается примернона0.01193. Исключение NONE не позволяет этим score измерять false positives или full-population calibration.",
+    "TRAIN inverse-ID сохраняет массы joint классов, но около11% LONG/SHORT roots получают47–48% массы класса. Наблюдаемые span/delay/margin сдвиги соответствуют09. Span не длительность сделки, margin не executed PnL; эти ассоциации не доказывают ошибку teacher или причинную причину ухудшения.",
+    "При BOTH малая multiplicity одной стороны усиливает вес всего BCE+conditionalCE. Weighted objective coherent для изменённой меры, но его optimum не обязан быть root-calibrated. Отдельные normalization classes не дают точного равенства physical ID mass.",
+    "Gradient figure05 корректно показывает weighted/unweighted TRAIN logit derivatives; conserved class masses не сохраняют gradient masses. Повышенный clipping weighted arms означает также изменение effective optimization. Это не прямое измерение полезности features или доказательство необходимости separate networks.",
+    "CAL complete/censored/too-few различены; положительный малый набор не удовлетворяет минимуму50. Censored prefix не сравнивается с полным периодом. Oracle retention≈48/84/91% по cost2/4/6 относится к заранее известным favorable sides на common observed cohort.",
+    "Читаемых графических/численных противоречий с frozen JSON и HTML не найдено. Root report корректно раскрывает GCQ6 вместо GCM6, Micro70/141 без rich London/VWAP/STFT и отсутствие никогда не просмотренного holdout."
+  ],
+  "limitations": [
+    "Только10 TEST дат, два seed не удваивают число независимых дней. Bootstrap intervals descriptive; adjacent dates, overlapping horizons и physical crossings могут зависеть.",
+    "Sparse reliability tails помечены, но даже большие root counts коррелированы; E calibration не устанавливает D/side-tail calibration или economic admission.",
+    "Только два заранее фиксированных временных окна; они полезны для counterexamples и signal mechanics, но не представляют все regimes. Пятисекундная визуализация не подтверждает subsecond execution timing.",
+    "Настоящий будущий event-ID используется только как TRAIN optimization metadata. Zero cross-split ID overlap не доказывает отсутствие иных зависимостей или всего класса утечек.",
+    "No independent full raw replay or new fits performed by this auditor. Проверены source/run/image bindings и предоставленные measurements, code review выполнен ранее.",
+    "Ни new loss, ни новые capped weights в этом опыте не проверены. Гипотезы следующего шага нельзя называть полученным улучшением."
+  ],
+  "next_priority": [
+    "Сохранить причинную physical continuity и маски как представление, но не заявлять доказанный joint/economic выигрыш.",
+    "Оставить uniform BCE контрольной целью. Любое смягчённое weighting заранее фиксировать на новых данных с matched optimization budget и clipping diagnostics.",
+    "Сопоставлять event-level recall с ложными входами/полной root calibration и executed payoff; не оптимизировать positive-only score как самостоятельную торговую цель."
+  ],
+  "economic_admission": false,
+  "test_winner_selected": false,
+  "remaining_blocking_defects": []
+}

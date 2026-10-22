@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "total_passed": 147,
+  "batches": [
+    {
+      "command": "python -m pytest tests/test_research*.py -q (expanded file paths)",
+      "passed": 133,
+      "seconds": 13.42,
+      "exit_code": 0,
+      "post_test_cleanup_warning": "Windows denied cleanup of an old external pytest-current temporary symlink; all assertions passed."
+    },
+    {
+      "command": "python -m pytest tests/test_research_v3_audit.py -q --basetemp .tmp/pytest_v3_audit_final",
+      "passed": 14,
+      "seconds": 2.29,
+      "exit_code": 0
+    }
+  ],
+  "test_sources": {
+    "tests\\test_research_controls.py": "7e45a069b62401ec04e4b70f073336441d3fc2da705ba365e3fa09c1fe535bb3",
+    "tests\\test_research_data.py": "77140e3e5a8f087c7f0bbd9b4944e5ad24d7d4d0b3754bdf1beffe37fa6a3bc3",
+    "tests\\test_research_models.py": "a8968bbb94e7728e9008a3d0d4b16538de03d6ec723e2267918298a3aae7afc0",
+    "tests\\test_research_simulation.py": "fd1683b0d61bebf80aae71a8d01c66cc05472018153a5ef9aa5339e3568963b2",
+    "tests\\test_research_training.py": "d5a99c8a5071d59848a786ddd91e97ff671a520c7849a6b2c094ef51e3fc4d35",
+    "tests\\test_research_v2_evaluation.py": "948c88ffc602a50e9743b85f99b6cc967947fbfb61137ac30eebdfadce035c8b",
+    "tests\\test_research_v2_features.py": "46b770d71ecc98bb99eb88d9a046a684e7292c17c33708dc5ef36eef0db50be3",
+    "tests\\test_research_v2_learning.py": "29e764276d5030ed8fb0379bf41eb2e8446ee9dce8a3ba7bb04ec0562de10ece",
+    "tests\\test_research_v2_runner.py": "8bb1fdb2ca4ebba8e8b7a5f3c0e6498c130145799e39164816e66a8143b05b3d",
+    "tests\\test_research_v2_simulation.py": "424b97bcdd3b1cec58c47b30f0b28eef6222bd367c4976e224ea6695c7edeb94",
+    "tests\\test_research_v2_targets.py": "b2b81900133edd6bf544733fa07213fcd41810e33052d2d8112e35a5885fc762",
+    "tests\\test_research_v3_audit.py": "241629808086950cb902c65d8378800cb41653fa219bc9ab33214dc50da57d51",
+    "tests\\test_research_v3_features.py": "f667fd9a121a1e30bae2b7bea55e3eddfd0e511307e4d9588e08785b6c030562",
+    "tests\\test_research_v3_learning.py": "6c540ccbe08fcd24758bf52e81b8d8baf3ee618777d2b4fb719a9044164bb0d9",
+    "tests\\test_research_v3_pipeline.py": "f65f668ec2b04797a70debc2b9e5d956bc98944f61fdbe8bfb2b2785758b1891"
+  },
+  "new_v3_tests": 46,
+  "old_v1_v2_regression_tests": 101
+}

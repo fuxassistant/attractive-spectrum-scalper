@@ -1,0 +1,38 @@
+{
+  "status": "COMPLETE",
+  "source_sha256": "05ca508d697c6eef00ea4053fa97f1cceffb2c876c47087ce8cae424ab13d13b",
+  "inputs": {
+    "reports\\scientific_pipeline_v3\\suite_summary.json": "82eb9257bd2fd80d0aa33368717ffff2b8f34cc58164c2dde09d58caa26c40c8",
+    "data\\derived\\scientific_pipeline_v3\\dataset\\manifest.json": "df54dfa2e285e6b7d711785d78a15f47329e1f50a2f5177ed0da1b52e2fbbf3c",
+    "configs/research/opportunity_pipeline_v3.json": "00c19a4fa8ecaba8d1b1ed559c3a6d4bb116b27d416c2d3d6778ac8e5e372005",
+    "data\\derived\\scientific_pipeline_v3\\runs\\tcn_micro_legacy_uniform_seed17\\receipt.json": "e832f45cf74318d0838cfc05aa649a972163daf136f6166b853cbb6f64e4e99b",
+    "data\\derived\\scientific_pipeline_v3\\runs\\tcn_micro_legacy_crossing_id_seed17\\receipt.json": "525b62d4a364659ab2096eb035fbd227919983651086f59a90ff67e3cb6a3692",
+    "data\\derived\\scientific_pipeline_v3\\runs\\tcn_micro_restored_uniform_seed17\\receipt.json": "8baebea2c9140e8728839a7de237bdd79d80677a37a3a8ecf50b73ca6c335860",
+    "data\\derived\\scientific_pipeline_v3\\runs\\tcn_micro_restored_crossing_id_seed17\\receipt.json": "e35bdd941404e2345f12f849fbe3a24ccc25fa80bb98388bdb4d593573253565",
+    "data\\derived\\scientific_pipeline_v3\\runs\\tcn_micro_legacy_uniform_seed29\\receipt.json": "343bcf30bd5533a062b3f833898dc0ec9a5e323d7f0283442ada86cda7f3b33a",
+    "data\\derived\\scientific_pipeline_v3\\runs\\tcn_micro_legacy_crossing_id_seed29\\receipt.json": "c069f196051cbae991b0f60b2a0ead863dc75b414a17e71404a9cd36e9254d98",
+    "data\\derived\\scientific_pipeline_v3\\runs\\tcn_micro_restored_uniform_seed29\\receipt.json": "a11481a1404b83846d9c0f590d2b895c755fb8688ad04d5f1e295eb252f05c21",
+    "data\\derived\\scientific_pipeline_v3\\runs\\tcn_micro_restored_crossing_id_seed29\\receipt.json": "88fbc54854db5c4873dcaf65f0620ad624a02c8cc17f87e442819fe8bdbca737",
+    "reports\\scientific_pipeline_v3\\statistical_audit.json": "8e00d69d3aaa84f17c615135eb6f2b19914b65ebe9aac8665cfb06d6d780ea69",
+    "reports\\scientific_pipeline_v3\\causal_verification.json": "c02807d5ee7a75454df444665db1df8d4d5e2f7357d435ea4f199b9eb974943d",
+    "reports\\scientific_pipeline_v3\\decision_findings.json": "800496eaeb1d1613ecd5ba8cee946c3cf05e7f0bdf665d44f1378e29a1494766",
+    "reports\\scientific_pipeline_v3\\paired_figure_receipt.json": "d5ce5db62803b69d3adbdfd8861c5969e02f18c7336b9e7ed4cb8075f9b71a97",
+    "reports\\scientific_pipeline_v3\\weight_semantics.json": "f98824ad7a9c5812e4ef4f919af3143a516931a723b2bddfc4ba084bb3336298",
+    "reports\\scientific_pipeline_v3\\weight_figure_receipt.json": "5b3cba6a436a847b6629b7a185b8289a4e5fd555e44b27ac81bc15d2efd88d99"
+  },
+  "figures": {
+    "01_context.png": "5000d46796a85b9fbc73d6ccec552fba6c9d64ceb82ad2e9e90203413349a8fb",
+    "02_comparison.png": "b9afbf66eeddf46c1dd964996cc4beec940732acac0a01c3c44f7b04c3768321",
+    "03_training.png": "6e0d92b2123af58e4fd40b02091e53ed61159936e8d4c605f3628b424759e981",
+    "04a_signal_2026-07-13_seed17.png": "75f4a60f05dca9428ebc2e1f1955793a99a8f04b54561df73a1dbc3a9dfacede",
+    "04b_signal_2026-07-20_seed17.png": "758f1af3b786701e20ca160e4fa44c58eddc8c0c219f3f4af66d380c0398e135",
+    "04c_signal_2026-07-13_seed29.png": "6ed3c5f118d05936146cf774d9c75c3d7f7dfd38b3a8afa4875e497ab1baaecb",
+    "04d_signal_2026-07-20_seed29.png": "c61897dc29d44151e11924f1f3938b51229a943ed6c1299f89dba1c1a491a0f5",
+    "05_gradient_mass.png": "44ba3f8d6069d0f46526052249450db2d488f33d5b773001000bb217c1503754",
+    "06_weights_calibration.png": "0a58dfcd065a935a2e1876d95a6deed6f45769783cdb98a2135d67a166cb68a0",
+    "07_execution.png": "1d59f504a0aa81f231cde60d0e274cdb2726cf58aaaa0f59f526b36c409276da",
+    "08_paired_effects.png": "471ec7b9007c28fff8ef20124da01ba5ee689e818d55f91bd400247c346044fb",
+    "09_weight_target_population.png": "035488f04814aed510416aa73dea5c11eecb3844727074a023f1fb657991cd50"
+  },
+  "index_sha256": "ca7c3391ed8f74e05f45cd57af62d6a30db0b07e7e64319df1ef0ea5ff185d6c"
+}

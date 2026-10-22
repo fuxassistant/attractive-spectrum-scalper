@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "source_script": "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\plot_weight_semantics_v3.py",
+  "source_script_sha256": "896c2de70c3b1d40a31b14ca12d61cee55ee53c29102619c892d10dde26fd580",
+  "input_report": "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v3\\weight_semantics.json",
+  "input_report_sha256": "f98824ad7a9c5812e4ef4f919af3143a516931a723b2bddfc4ba084bb3336298",
+  "png": "D:\\scalper-mini\\attractive-spectrum-scalper\\reports\\scientific_pipeline_v3\\09_weight_target_population.png",
+  "png_sha256": "035488f04814aed510416aa73dea5c11eecb3844727074a023f1fb657991cd50",
+  "figure_size_pixels": [
+    2512,
+    1712
+  ],
+  "plotted_values": {
+    "origin_span_s": [
+      [
+        210.0,
+        110.0
+      ],
+      [
+        210.0,
+        105.0
+      ],
+      [
+        222.5,
+        165.0
+      ]
+    ],
+    "delay_s": [
+      [
+        160.324390785,
+        138.032348755
+      ],
+      [
+        164.810247012,
+        138.441185521
+      ],
+      [
+        146.484246007,
+        136.8574535865
+      ]
+    ],
+    "gain_margin_R": [
+      [
+        1.0714285714285714,
+        0.6428571428571431
+      ],
+      [
+        1.0833333333333337,
+        0.6874999999999998
+      ],
+      [
+        1.28125,
+        1.0833333333333335
+      ]
+    ],
+    "tail_percent": [
+      [
+        10.808179162609543,
+        47.87153330407356
+      ],
+      [
+        11.541501976284586,
+        46.73380676774863
+      ],
+      [
+        10.14851485148515,
+        40.54620799483393
+      ]
+    ]
+  },
+  "class_order": [
+    "LONG_ONLY",
+    "SHORT_ONLY",
+    "BOTH"
+  ],
+  "statistics": "Medians of uniform-root and weight-mass empirical distributions, not medians of values multiplied by weights.",
+  "semantics": {
+    "population": "Known feature-available TRAIN roots only",
+    "span": "Observed admitted origin span, not trade duration",
+    "margin": "Maximum net first-crossing mark across nine lines within H minus G; not executed PnL",
+    "both": "Side-averaged root metrics",
+    "tail": "weight >= class q90 including all ties"
+  },
+  "fitted_scores_read": false,
+  "frozen_training_files_modified": false,
+  "visual_review": {
+    "reviewer": "pipeline_simulation",
+    "method": "view_image",
+    "render_passes": 2,
+    "reviewed_png_sha256": "035488f04814aed510416aa73dea5c11eecb3844727074a023f1fb657991cd50",
+    "checks": [
+      "All four panels and numeric labels readable",
+      "No label or footer overlaps",
+      "Half-second BOTH span preserved",
+      "TRAIN-only, span and margin caveats visible",
+      "Uniform versus weight-mass median semantics stated"
+    ]
+  }
+}
