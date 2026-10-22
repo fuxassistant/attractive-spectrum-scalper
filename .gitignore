@@ -110,3 +110,14 @@ credentials.json
 !/reports/scalper_mind_v1/path_direct_check.json
 !/reports/scalper_mind_v1/null_grid.json
 !/reports/scalper_mind_v1/hedge_weights.csv
+!/reports/hotpath_v1/
+/reports/hotpath_v1/*
+!/reports/hotpath_v1/PREREGISTRATION_RU.md
+!/reports/hotpath_v1/HOTPATH_RU.md
+!/reports/hotpath_v1/check_B.json
+!/reports/opportunity_episodes_v1/
+/reports/opportunity_episodes_v1/*
+!/reports/opportunity_episodes_v1/*.md
+!/reports/opportunity_episodes_v1/*.json
+!/reports/opportunity_episodes_v1/*.png
+!/reports/opportunity_episodes_v1/index.html
