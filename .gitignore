@@ -122,3 +122,10 @@ credentials.json
 !/reports/opportunity_episodes_v1/*.png
 !/reports/opportunity_episodes_v1/index.html
 /reports/opportunity_episodes_v1/summary.running.json
+!/reports/flow_context_v2/
+/reports/flow_context_v2/*
+!/reports/flow_context_v2/*.md
+!/reports/flow_context_v2/*.json
+!/reports/flow_context_v2/*.png
+!/reports/flow_context_v2/index.html
+/reports/flow_context_v2/summary.running.json
