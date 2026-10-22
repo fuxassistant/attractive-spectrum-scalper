@@ -129,3 +129,9 @@ credentials.json
 !/reports/flow_context_v2/*.png
 !/reports/flow_context_v2/index.html
 /reports/flow_context_v2/summary.running.json
+!/reports/target_loss_audit_v1/
+/reports/target_loss_audit_v1/*
+!/reports/target_loss_audit_v1/*.md
+!/reports/target_loss_audit_v1/*.json
+!/reports/target_loss_audit_v1/*.png
+!/reports/target_loss_audit_v1/index.html

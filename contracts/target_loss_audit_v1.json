@@ -1,0 +1,21 @@
+{
+  "version": "TARGET_LOSS_AUDIT_V1",
+  "source_experiment": "FLOW_CONTEXT_V2",
+  "source_commit": "349d4b5",
+  "scope": "Read-only diagnosis of saved targets, fitted models and their actual loss; no retraining, no replacement target",
+  "models": ["baseline", "rich_flow", "rich_spectrum", "shuffled"],
+  "gradient_primary": "B-stage P rich_spectrum; October-December are actual fit rows, January-February are exposed development evaluation rows",
+  "stage_iterations": [0, 1, 5, 10, 25, 50, 75, 100],
+  "staged_sample": "deterministic evenly spaced rows, at most 24000 per head and split; final gradient distribution on all applicable rows",
+  "leaf_check": "reconstruct first-tree leaf aggregates on all real training rows; compare shrunk Newton update -lr*sum(g)/(sum(h)+l2) with saved values",
+  "uniform_weights": "Every known side-attempt has weight one for fill; only known filled side-attempts train path; no day, duration, overlap or class weighting",
+  "temporal_lags_seconds": [30, 60, 120, 300, 600, 1800],
+  "temporal_masks": "same date and side, exact regular grid; conservative completed-minute quote validity and segment certificate; unknown breaks; EMPTY never treated as a conditional path class",
+  "dense_dates": "first nonempty source day of each source month, fixed before measurements",
+  "dense_lags_seconds": [1, 2, 5, 10, 30, 60],
+  "scene_selection": "the five dense calendar dates; full supported session and fixed London+60min to +120min zooms for October, January and February; no selection by PnL or target roughness",
+  "local_rate_visual": "centered 20-minute realized frequency for audit only; uses hindsight, is not a training target, causal input or true conditional probability",
+  "permutation_control": "shuffle observed labels within date/side while retaining unknown and conditional-fill masks; a descriptive dependence reference, not a volatility-preserving economic null",
+  "seed": 61023,
+  "limitations": "Hard outcomes can be jagged even when conditional probabilities are learnable; smooth predictions can be an uninformative prior. Loss gradients on B are diagnostic residuals, not training updates. No economic admission from smoothness."
+}
