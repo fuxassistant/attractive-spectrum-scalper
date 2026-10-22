@@ -1,0 +1,38 @@
+{
+  "status": "COMPLETE",
+  "config_sha256": "08ecb8849d6cd127d6db7691dce54befe43039582c21aa50d6c480c364b23d7d",
+  "sources": {
+    "spectrum\\research\\__init__.py": "0aaa600ec08c54a421de9ce3f7bdc7fc9686dacfefe34ba14a81f3ea7efa942a",
+    "spectrum\\research\\controls.py": "b8d575f8ab4222eff0bbf5fc568f55a6a74dedd1fff3c77060b34c6be519a365",
+    "spectrum\\research\\data.py": "d477e6874c9aa406c94e6e86c20382ac3574348cbf05926be3b687fdf4958c24",
+    "spectrum\\research\\losses.py": "82e66491dbf53051a3179be1adc861f944c2d3cbd39be08592f6ff1f26a7fc16",
+    "spectrum\\research\\models.py": "0fe6aad6eb274140e89f416c947235b35f72607ddf3c1ecfa9b112a537f77d69",
+    "spectrum\\research\\simulation.py": "9c256f5fb50f1169be72e70e635144b651dcdc5e9b5d9e02a0ecfdeff50d3739",
+    "spectrum\\research\\training.py": "e8a0fc7d67a3d44de302a50814fd83e5fa1ba8cc575dcba24c648901c3c51dcf",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\run_opportunity_pipeline.py": "c4a7bad8ba4a5676ddd131f15624ecd5d09019043db39564cb237ad4764a555d"
+  },
+  "git_head": "73343a9dca0bdbdfb07bb9975d56c3893077aa91",
+  "source_note": "Working source SHA is authoritative, including uncommitted implementation",
+  "libraries": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "torch": "2.11.0+cu128",
+    "numba": "0.64.0",
+    "scikit-learn": "1.9.1"
+  },
+  "cuda": "12.8",
+  "requested_config_path": "configs/research/opportunity_pipeline_v1.json",
+  "outputs": {
+    "cohorts.json": "a8fee0759dbbf2bf59045ff9136e14fa259b0e9ffb4194cdff949c05c59ef2eb",
+    "config.json": "08ecb8849d6cd127d6db7691dce54befe43039582c21aa50d6c480c364b23d7d",
+    "data_receipt.json": "7b39512b1e1fac3aa8d3dcc6401f0a539ec8a6207377cd343f2450eb41db59b5",
+    "execution_receipt.json": "b8acef0e1908718f8151945d7254d0fbf4b8e33e8506c6e381e385a7d1c6a3b1",
+    "ledgers.json": "bcdb07aae90f5e0d56c7a3a19a68bd93321b43cdfbfc82ce854d1ae95a793908",
+    "predictions.parquet": "077aa90e3bba9f6135e42198574254550e9f6d03f85d689066d483a3097eeda9",
+    "scaler.json": "5dc2acebf379fdb2fc718a2639ec3ae5fefb5c473e9c5a06833e0ff69381201a",
+    "summary.json": "882e65075e6b919d7dea121ffc458c608ea39b11c9356b3b97f993de47ddea39",
+    "market\\checkpoint.pt": "66b3e455146a1c82d2fe9c28bf01e20e855973b1bb888ade9708fe0b3360b248",
+    "market\\history.json": "8870de9d74c4d00842443a9ed064303bdbf018bcbb35dc067493d368404e3920",
+    "market\\training.json": "206066089bd71e96dfc111f2676858504774bf5f7bf9c88ce1153c58421de60b"
+  }
+}

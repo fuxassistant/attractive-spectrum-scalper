@@ -1,0 +1,1092 @@
+{
+  "run_id": "tcn_crossing_bce_seed17",
+  "status": "COMPLETE",
+  "cohorts": {
+    "train": {
+      "dates": [
+        "2026-02-02",
+        "2026-02-03"
+      ],
+      "roots": 3358,
+      "feature_available": 3334,
+      "target_known": 2592,
+      "admitted": 2590,
+      "state_counts": [
+        1067,
+        711,
+        734,
+        78
+      ],
+      "execution_status_L": {
+        "COMPLETE": 3211,
+        "INELIGIBLE": 140,
+        "EMPTY": 7
+      },
+      "execution_status_S": {
+        "COMPLETE": 3209,
+        "INELIGIBLE": 140,
+        "EMPTY": 7,
+        "CENSORED": 2
+      }
+    },
+    "validation": {
+      "dates": [
+        "2026-02-04"
+      ],
+      "roots": 1679,
+      "feature_available": 1667,
+      "target_known": 1390,
+      "admitted": 1388,
+      "state_counts": [
+        693,
+        264,
+        403,
+        28
+      ],
+      "execution_status_L": {
+        "COMPLETE": 1598,
+        "INELIGIBLE": 53,
+        "EMPTY": 26,
+        "CENSORED": 2
+      },
+      "execution_status_S": {
+        "COMPLETE": 1597,
+        "INELIGIBLE": 53,
+        "EMPTY": 26,
+        "CENSORED": 3
+      }
+    },
+    "calibration": {
+      "dates": [
+        "2026-02-05"
+      ],
+      "roots": 1679,
+      "feature_available": 1667,
+      "target_known": 1617,
+      "admitted": 1616,
+      "state_counts": [
+        782,
+        371,
+        427,
+        36
+      ],
+      "execution_status_L": {
+        "COMPLETE": 1627,
+        "INELIGIBLE": 50,
+        "EMPTY": 2
+      },
+      "execution_status_S": {
+        "COMPLETE": 1627,
+        "INELIGIBLE": 50,
+        "EMPTY": 2
+      }
+    },
+    "test": {
+      "dates": [
+        "2026-02-06"
+      ],
+      "roots": 1679,
+      "feature_available": 1667,
+      "target_known": 1655,
+      "admitted": 1653,
+      "state_counts": [
+        1121,
+        257,
+        260,
+        15
+      ],
+      "execution_status_L": {
+        "COMPLETE": 1651,
+        "EMPTY": 14,
+        "INELIGIBLE": 10,
+        "CENSORED": 4
+      },
+      "execution_status_S": {
+        "COMPLETE": 1655,
+        "EMPTY": 14,
+        "INELIGIBLE": 10
+      }
+    }
+  },
+  "training": {
+    "best_epoch": 1,
+    "best_validation_nll": 1.154658185658468,
+    "epochs": 13,
+    "seconds": 38.62893470004201,
+    "parameter_count": 30212,
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "architecture_receptive_field": 61,
+    "supplied_tokens": 64,
+    "effective_tokens": 61,
+    "gradients_before": {
+      "event_bce_encoder_norm": 0.35186660289764404,
+      "direction_encoder_norm": 1.1245744228363037,
+      "cosine_event_direction": -0.05186940357089043,
+      "output_gradient_abs_mean": [
+        0.0019462326308712363,
+        0.0010841727489605546,
+        0.0010229304898530245,
+        0.0008640859741717577
+      ],
+      "loss": 1.362889051437378,
+      "n": 256,
+      "event_n": 144,
+      "diagnostic_formulation": "BCE event versus conditional CE, same root denominator; only meaningful for factorized output",
+      "all_finite": true
+    },
+    "gradients_selected": {
+      "event_bce_encoder_norm": 0.3469255864620209,
+      "direction_encoder_norm": 0.22687594592571259,
+      "cosine_event_direction": -0.08827275037765503,
+      "output_gradient_abs_mean": [
+        0.0017710127867758274,
+        0.0010152253089472651,
+        0.0010093855671584606,
+        0.00020685314666479826
+      ],
+      "loss": 1.1285877227783203,
+      "n": 256,
+      "event_n": 144,
+      "diagnostic_formulation": "BCE event versus conditional CE, same root denominator; only meaningful for factorized output",
+      "all_finite": true
+    },
+    "selection": "minimum validation joint NLL, min_delta, earliest retained tie"
+  },
+  "evaluation": {
+    "train": {
+      "model": {
+        "n": 2590,
+        "joint_nll": 1.1249852550689639,
+        "accuracy": 0.46988416988416987,
+        "event_nll": 0.6379244576880089,
+        "event_brier": 0.2232462508349244,
+        "event_auc": 0.6649647608891098,
+        "event_ece": 0.026047212207639506,
+        "direction_nll_given_event": 0.8282911787371455,
+        "state_counts": [
+          1067,
+          711,
+          734,
+          78
+        ],
+        "mean_joint_probability": [
+          0.38592189976147245,
+          0.2912879592893667,
+          0.3007240869234312,
+          0.022066051481672812
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 10,
+            "probability": 0.28561840057373045,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 105,
+            "probability": 0.3651816146714347,
+            "frequency": 0.26666666666666666
+          },
+          {
+            "lower": 0.4,
+            "count": 403,
+            "probability": 0.4560337223426876,
+            "frequency": 0.38461538461538464
+          },
+          {
+            "lower": 0.5,
+            "count": 609,
+            "probability": 0.5522002253822114,
+            "frequency": 0.5385878489326765
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 722,
+            "probability": 0.6508022022544512,
+            "frequency": 0.646814404432133
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 640,
+            "probability": 0.7449126607738435,
+            "frequency": 0.7296875
+          },
+          {
+            "lower": 0.8,
+            "count": 101,
+            "probability": 0.8174970869970793,
+            "frequency": 0.7722772277227723
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      },
+      "prior": {
+        "n": 2590,
+        "joint_nll": 1.1830414959267799,
+        "accuracy": 0.41196911196911196,
+        "event_nll": 0.6775672569721725,
+        "event_brier": 0.24225057837153557,
+        "event_auc": 0.5,
+        "event_ece": 0.00012497616664297606,
+        "direction_nll_given_event": 0.8596049106319323,
+        "state_counts": [
+          1067,
+          711,
+          734,
+          78
+        ],
+        "mean_joint_probability": [
+          0.4118441358024557,
+          0.2744984567901109,
+          0.2833719135802533,
+          0.03028549382716043
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.4,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.5,
+            "count": 2590,
+            "probability": 0.588155864197531,
+            "frequency": 0.588030888030888
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.8,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      }
+    },
+    "validation": {
+      "model": {
+        "n": 1388,
+        "joint_nll": 1.154658185658468,
+        "accuracy": 0.43515850144092216,
+        "event_nll": 0.6991055890892847,
+        "event_brier": 0.25017396619622145,
+        "event_auc": 0.6181880469650254,
+        "event_ece": 0.09873414313909128,
+        "direction_nll_given_event": 0.9097942504144265,
+        "state_counts": [
+          693,
+          264,
+          403,
+          28
+        ],
+        "mean_joint_probability": [
+          0.40054539576580783,
+          0.3669581828526186,
+          0.2075582674009355,
+          0.02493815313721403
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 4,
+            "probability": 0.2805081754922867,
+            "frequency": 0.25
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 75,
+            "probability": 0.3678646651903788,
+            "frequency": 0.21333333333333335
+          },
+          {
+            "lower": 0.4,
+            "count": 312,
+            "probability": 0.4564098820854456,
+            "frequency": 0.4358974358974359
+          },
+          {
+            "lower": 0.5,
+            "count": 388,
+            "probability": 0.5466785741221044,
+            "frequency": 0.45103092783505155
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 214,
+            "probability": 0.6490652013883412,
+            "frequency": 0.514018691588785
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 238,
+            "probability": 0.7512834157888629,
+            "frequency": 0.6554621848739496
+          },
+          {
+            "lower": 0.8,
+            "count": 157,
+            "probability": 0.8351244080313451,
+            "frequency": 0.643312101910828
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      },
+      "prior": {
+        "n": 1388,
+        "joint_nll": 1.1254817157498234,
+        "accuracy": 0.4992795389048991,
+        "event_nll": 0.7086800675414006,
+        "event_brier": 0.25764443065149495,
+        "event_auc": 0.5,
+        "event_ece": 0.08743540310243003,
+        "direction_nll_given_event": 0.8324038672133681,
+        "state_counts": [
+          693,
+          264,
+          403,
+          28
+        ],
+        "mean_joint_probability": [
+          0.41184413580247337,
+          0.27449845679012663,
+          0.28337191358025277,
+          0.030285493827160143
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.4,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.5,
+            "count": 1388,
+            "probability": 0.5881558641975309,
+            "frequency": 0.5007204610951008
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.8,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      }
+    },
+    "calibration": {
+      "model": {
+        "n": 1616,
+        "joint_nll": 1.16790655777406,
+        "accuracy": 0.40965346534653463,
+        "event_nll": 0.7141619761390642,
+        "event_brier": 0.2583753404239172,
+        "event_auc": 0.6109480701883506,
+        "event_ece": 0.13755531954385414,
+        "direction_nll_given_event": 0.8791981341992244,
+        "state_counts": [
+          782,
+          371,
+          427,
+          36
+        ],
+        "mean_joint_probability": [
+          0.34635557154525476,
+          0.36760854566617324,
+          0.26308438619414326,
+          0.022951492637460404
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 37,
+            "probability": 0.38123134342399806,
+            "frequency": 0.2702702702702703
+          },
+          {
+            "lower": 0.4,
+            "count": 156,
+            "probability": 0.4521071322453328,
+            "frequency": 0.34615384615384615
+          },
+          {
+            "lower": 0.5,
+            "count": 197,
+            "probability": 0.5528615516454435,
+            "frequency": 0.36548223350253806
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 596,
+            "probability": 0.6581920519871199,
+            "frequency": 0.5369127516778524
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 572,
+            "probability": 0.7388237246891836,
+            "frequency": 0.6013986013986014
+          },
+          {
+            "lower": 0.8,
+            "count": 58,
+            "probability": 0.8250304287106827,
+            "frequency": 0.5862068965517241
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      },
+      "prior": {
+        "n": 1616,
+        "joint_nll": 1.1371860418821285,
+        "accuracy": 0.4839108910891089,
+        "event_nll": 0.7032034956704425,
+        "event_brier": 0.254934757791998,
+        "event_auc": 0.5,
+        "event_ece": 0.07206675528663975,
+        "direction_nll_given_event": 0.8409062286307966,
+        "state_counts": [
+          782,
+          371,
+          427,
+          36
+        ],
+        "mean_joint_probability": [
+          0.41184413580246665,
+          0.2744984567901267,
+          0.28337191358025293,
+          0.03028549382715983
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.4,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.5,
+            "count": 1616,
+            "probability": 0.5881558641975309,
+            "frequency": 0.5160891089108911
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.8,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      }
+    },
+    "test": {
+      "model": {
+        "n": 1653,
+        "joint_nll": 0.8561745370529763,
+        "accuracy": 0.6817906836055656,
+        "event_nll": 0.5879114519161417,
+        "event_brier": 0.20056061951383908,
+        "event_auc": 0.6924218440838938,
+        "event_ece": 0.05535381928726319,
+        "direction_nll_given_event": 0.8335317288180223,
+        "state_counts": [
+          1121,
+          257,
+          260,
+          15
+        ],
+        "mean_joint_probability": [
+          0.6230145101376324,
+          0.14654189522653654,
+          0.2177914576509182,
+          0.012652133848953088
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 2,
+            "probability": 0.0946182906627655,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.1,
+            "count": 109,
+            "probability": 0.17156089773965538,
+            "frequency": 0.13761467889908258
+          },
+          {
+            "lower": 0.2,
+            "count": 402,
+            "probability": 0.25484474648290606,
+            "frequency": 0.15422885572139303
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 483,
+            "probability": 0.3446349109181706,
+            "frequency": 0.2836438923395445
+          },
+          {
+            "lower": 0.4,
+            "count": 320,
+            "probability": 0.44911226723343134,
+            "frequency": 0.434375
+          },
+          {
+            "lower": 0.5,
+            "count": 251,
+            "probability": 0.5461282965196557,
+            "frequency": 0.49800796812749004
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 78,
+            "probability": 0.6260073811579974,
+            "frequency": 0.6282051282051282
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 8,
+            "probability": 0.7173358220607042,
+            "frequency": 0.625
+          },
+          {
+            "lower": 0.8,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      },
+      "prior": {
+        "n": 1653,
+        "joint_nll": 1.032678614763847,
+        "accuracy": 0.6781609195402298,
+        "event_nll": 0.772423914701399,
+        "event_brier": 0.289183316049005,
+        "event_auc": 0.5,
+        "event_ece": 0.26631678373776074,
+        "direction_nll_given_event": 0.8086485323368923,
+        "state_counts": [
+          1121,
+          257,
+          260,
+          15
+        ],
+        "mean_joint_probability": [
+          0.4118441358024657,
+          0.2744984567901267,
+          0.283371913580253,
+          0.03028549382715979
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.4,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.5,
+            "count": 1653,
+            "probability": 0.5881558641975309,
+            "frequency": 0.3218390804597701
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.8,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      }
+    }
+  },
+  "selected_threshold": 1.01,
+  "calibration_grid": [
+    {
+      "threshold": 0.35,
+      "completed": true,
+      "censored": null,
+      "trades": 834,
+      "closed_net": -1145.5999999999983,
+      "closed_cash_max_drawdown": 1145.5999999999983,
+      "win_rate": 0.18705035971223022,
+      "entry_timeouts": 0,
+      "causally_ineligible": 39,
+      "maximum_adverse_trade_mark": -10.700000000000001,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    },
+    {
+      "threshold": 0.5,
+      "completed": true,
+      "censored": null,
+      "trades": 204,
+      "closed_net": -150.29999999999995,
+      "closed_cash_max_drawdown": 165.09999999999997,
+      "win_rate": 0.2549019607843137,
+      "entry_timeouts": 0,
+      "causally_ineligible": 9,
+      "maximum_adverse_trade_mark": -10.700000000000001,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    },
+    {
+      "threshold": 0.65,
+      "completed": true,
+      "censored": null,
+      "trades": 9,
+      "closed_net": -3.8,
+      "closed_cash_max_drawdown": 8.2,
+      "win_rate": 0.3333333333333333,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": -3.6999999999999997,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    },
+    {
+      "threshold": 0.8,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    },
+    {
+      "threshold": 1.01,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    }
+  ],
+  "projections": {
+    "calibration": {
+      "threshold": 1.01,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    },
+    "calibration_forced_05": {
+      "threshold": 0.5,
+      "completed": true,
+      "censored": null,
+      "trades": 204,
+      "closed_net": -150.29999999999995,
+      "closed_cash_max_drawdown": 165.09999999999997,
+      "win_rate": 0.2549019607843137,
+      "entry_timeouts": 0,
+      "causally_ineligible": 9,
+      "maximum_adverse_trade_mark": -10.700000000000001,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    },
+    "test": {
+      "threshold": 1.01,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    },
+    "test_forced_05": {
+      "threshold": 0.5,
+      "completed": true,
+      "censored": null,
+      "trades": 1,
+      "closed_net": -1.4000000000000001,
+      "closed_cash_max_drawdown": 1.4000000000000001,
+      "win_rate": 0.0,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": -2.4,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    }
+  },
+  "prior_policy": {
+    "threshold": 1.01,
+    "calibration_grid": [
+      {
+        "threshold": 0.35,
+        "completed": true,
+        "censored": null,
+        "trades": 0,
+        "closed_net": 0.0,
+        "closed_cash_max_drawdown": 0.0,
+        "win_rate": null,
+        "entry_timeouts": 0,
+        "causally_ineligible": 0,
+        "maximum_adverse_trade_mark": null,
+        "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+      },
+      {
+        "threshold": 0.5,
+        "completed": true,
+        "censored": null,
+        "trades": 0,
+        "closed_net": 0.0,
+        "closed_cash_max_drawdown": 0.0,
+        "win_rate": null,
+        "entry_timeouts": 0,
+        "causally_ineligible": 0,
+        "maximum_adverse_trade_mark": null,
+        "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+      },
+      {
+        "threshold": 0.65,
+        "completed": true,
+        "censored": null,
+        "trades": 0,
+        "closed_net": 0.0,
+        "closed_cash_max_drawdown": 0.0,
+        "win_rate": null,
+        "entry_timeouts": 0,
+        "causally_ineligible": 0,
+        "maximum_adverse_trade_mark": null,
+        "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+      },
+      {
+        "threshold": 0.8,
+        "completed": true,
+        "censored": null,
+        "trades": 0,
+        "closed_net": 0.0,
+        "closed_cash_max_drawdown": 0.0,
+        "win_rate": null,
+        "entry_timeouts": 0,
+        "causally_ineligible": 0,
+        "maximum_adverse_trade_mark": null,
+        "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+      },
+      {
+        "threshold": 1.01,
+        "completed": true,
+        "censored": null,
+        "trades": 0,
+        "closed_net": 0.0,
+        "closed_cash_max_drawdown": 0.0,
+        "win_rate": null,
+        "entry_timeouts": 0,
+        "causally_ineligible": 0,
+        "maximum_adverse_trade_mark": null,
+        "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+      }
+    ],
+    "test": {
+      "threshold": 1.01,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    }
+  },
+  "diagnostics": {
+    "crossing_rows_execution_columns": [
+      [
+        2439,
+        631,
+        583,
+        0
+      ],
+      [
+        888,
+        633,
+        82,
+        0
+      ],
+      [
+        978,
+        68,
+        778,
+        0
+      ],
+      [
+        86,
+        29,
+        42,
+        0
+      ]
+    ],
+    "common_count": 7237,
+    "direct_X_channels": 81,
+    "normalized_input_channels": 163,
+    "complete_window_fraction": 0.9553305539011316,
+    "risk_quantiles": [
+      1.7999999999999998,
+      2.6,
+      3.6
+    ],
+    "target_change_rate": {
+      "execution": 0.442933765747786,
+      "crossing": 0.22131147540983606
+    }
+  },
+  "limitations": {
+    "status": "engineering_demonstration_on_previously_inspected_week",
+    "units": "USD per reference ounce; no contract multiplier or account sizing",
+    "selection": "checkpoint on validation NLL; policy threshold on calibration only; test descriptive once",
+    "context": "64 roots at 30 seconds plus compressed current/previous London summaries; not full two-day microstructure",
+    "rationale": "BCE joint NLL is the proper baseline. Fixed delayed-exit labels match replay. The small TCN tests a roughly 30-minute local path without a large architecture sweep."
+  },
+  "controls": "SKIPPED: comparison run; use baseline controls"
+}

@@ -1,0 +1,47 @@
+{
+  "status": "COMPLETE_ENGINEERING_EXPERIMENT_NOT_ECONOMIC_ADMISSION",
+  "branch": "codex/opportunity-pipeline-v1",
+  "implementation_commit": "e4296da",
+  "tests_commit": "33dfdb4",
+  "verification": {
+    "source_output_hash_checks": 132,
+    "new_unit_tests_passed": 49,
+    "regression_tests_passed": 13,
+    "independent_raw_quote_checks": 100,
+    "max_raw_money_error": 0,
+    "visual_pngs_seen_by_sol61": 6
+  },
+  "experiments": [
+    "mlp_execution_bce_seed17",
+    "tcn_crossing_bce_seed17",
+    "tcn_execution_bce_seed17"
+  ],
+  "scientific_result": "Synthetic learnability established; market crossing event discrimination observed on an exposed week; executed profitability not established; all calibrated policies WAIT",
+  "superseded_execution_cache": "data/derived/scientific_pipeline_v1/execution retained unchanged; use execution_clock_v2",
+  "files": {
+    "01_learning_and_controls.png": "3dcb8b7d0206ed7fc621f6369b28511018a1c094655623eb620afdc53045f245",
+    "02_cohorts_and_target_relation.png": "edad9ab28d85f5007b2fd87f434b57da5cf10649eb5d320d1a95a3a9a68a0aca",
+    "03_fixed_test_timeline.png": "35bf0e2b881b94e953914aa233d80c1a6e789431b70b89e5eda823a603c6f5f8",
+    "04_calibration_and_distributions.png": "fbbabbd8722f2f1b6998674ff5c8969ec909d8ae1d55b0dcc6e9d8b295621b55",
+    "05_gradients_and_clipping.png": "c6946d0ef27fac3ab403d3403397695d53e725efff257faa2567dae3d7a1700e",
+    "06_forced_account_stress.png": "bcca306fc82f73af42d2a57aa28510212853590c3a8d11605449ec4ae01c48fd",
+    "account_stress.json": "dd5d545dc3162824ad10daaa0ce98a464796e7f4fefdb51e006ccafc46ba484c",
+    "controls.json": "36ca106e5802b629cd0521c30882a0598490e4aa50f7d84c33b5454541515f07",
+    "data_diagnostics.json": "2dd9cc4bf83467fbb44f403c6b040566e51fc5b4b101859795a060234290694d",
+    "execution_manifest.json": "fb86acd2ef18732a25ce4c488f5dca7f9f1ac56fa872d8a94289e73b478edcd4",
+    "independent_null.json": "f608c353fc3156f2cc75dffaa0fdfc09f54bd20acd2815a18642c2b039179794",
+    "index.html": "b978fd129f7afdad69adad0990047623005d993bb66d253ca4fbca4fdc4df9a1",
+    "mlp_execution_bce_seed17_config.json": "08ecb8849d6cd127d6db7691dce54befe43039582c21aa50d6c480c364b23d7d",
+    "mlp_execution_bce_seed17_receipt.json": "ad0fb15ad859862a560a5cadcd1d2cbd84dfca70141c18e60d7efeff26894dc4",
+    "mlp_execution_bce_seed17_summary.json": "882e65075e6b919d7dea121ffc458c608ea39b11c9356b3b97f993de47ddea39",
+    "report_receipt.json": "8d809eddcfc60f5c460a019b0a926df3492935010844cf791287bc1ada64ab74",
+    "sol61_visual_audit.json": "4ecea6129666f2afe72e5110ae37a586e942ac30f6a292e35000b95790e9a070",
+    "tcn_crossing_bce_seed17_config.json": "f106a840654b125d513390921a99d7a959ca7f227dc084ed0eb6bcfa7a1afd16",
+    "tcn_crossing_bce_seed17_receipt.json": "23c2abd60716cfe0092327326b97cbba1b758acacd62a2c27c22054753702eea",
+    "tcn_crossing_bce_seed17_summary.json": "b9a2e9de6e3009a69d078a55f1f87aec2a4755aba9246717351447d2d9a78b36",
+    "tcn_execution_bce_seed17_config.json": "dde585a3e652cb389de1f4d308c61f2a568b0d9d9f1772d974bb61075eb3910c",
+    "tcn_execution_bce_seed17_receipt.json": "061b26361b5f5c7de50aed6f8753a83972589ab5417f907a9198e1f7b06b6a36",
+    "tcn_execution_bce_seed17_summary.json": "b1459a06fce7dde68dffa883db618aab9cb661db748007185edef5913d54c277",
+    "visual_receipt.json": "000c2b72b43ea92f8ffb4aa0d3e6f3b36b5f9488a75d82056b5824fc5c6039f3"
+  }
+}

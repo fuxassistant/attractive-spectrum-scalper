@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETE_REPORT_PENDING_FINAL_AUDIT",
+  "inputs": {
+    "data\\derived\\scientific_pipeline_v1\\runs\\tcn_execution_bce_seed17\\summary.json": "b1459a06fce7dde68dffa883db618aab9cb661db748007185edef5913d54c277",
+    "data\\derived\\scientific_pipeline_v1\\runs\\tcn_execution_bce_seed17\\config.json": "dde585a3e652cb389de1f4d308c61f2a568b0d9d9f1772d974bb61075eb3910c",
+    "data\\derived\\scientific_pipeline_v1\\runs\\tcn_execution_bce_seed17\\receipt.json": "061b26361b5f5c7de50aed6f8753a83972589ab5417f907a9198e1f7b06b6a36",
+    "data\\derived\\scientific_pipeline_v1\\runs\\mlp_execution_bce_seed17\\summary.json": "882e65075e6b919d7dea121ffc458c608ea39b11c9356b3b97f993de47ddea39",
+    "data\\derived\\scientific_pipeline_v1\\runs\\mlp_execution_bce_seed17\\config.json": "08ecb8849d6cd127d6db7691dce54befe43039582c21aa50d6c480c364b23d7d",
+    "data\\derived\\scientific_pipeline_v1\\runs\\mlp_execution_bce_seed17\\receipt.json": "ad0fb15ad859862a560a5cadcd1d2cbd84dfca70141c18e60d7efeff26894dc4",
+    "data\\derived\\scientific_pipeline_v1\\runs\\tcn_crossing_bce_seed17\\summary.json": "b9a2e9de6e3009a69d078a55f1f87aec2a4755aba9246717351447d2d9a78b36",
+    "data\\derived\\scientific_pipeline_v1\\runs\\tcn_crossing_bce_seed17\\config.json": "f106a840654b125d513390921a99d7a959ca7f227dc084ed0eb6bcfa7a1afd16",
+    "data\\derived\\scientific_pipeline_v1\\runs\\tcn_crossing_bce_seed17\\receipt.json": "23c2abd60716cfe0092327326b97cbba1b758acacd62a2c27c22054753702eea"
+  },
+  "report_script_sha256": "2976fe72700731ed4488ec81b98e74d143c866e98f34314d7e1382e0a7517250",
+  "html_sha256": "b978fd129f7afdad69adad0990047623005d993bb66d253ca4fbca4fdc4df9a1",
+  "stress_figure_sha256": "bcca306fc82f73af42d2a57aa28510212853590c3a8d11605449ec4ae01c48fd",
+  "tests": {
+    "new_unit_passed": 49,
+    "regression_passed": 13,
+    "independent_raw_checks": 100
+  },
+  "limitations": "Previously inspected week, one seed, only two training days; no economic admission"
+}

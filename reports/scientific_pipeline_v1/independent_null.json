@@ -1,0 +1,290 @@
+{
+  "status": "COMPLETE",
+  "training": {
+    "best_epoch": 6,
+    "best_validation_nll": 1.0996378291942397,
+    "epochs": 18,
+    "seconds": 3.913200500421226,
+    "parameter_count": 25156,
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "architecture_receptive_field": 61,
+    "supplied_tokens": 16,
+    "effective_tokens": 16,
+    "gradients_before": {
+      "event_bce_encoder_norm": 0.5190382599830627,
+      "direction_encoder_norm": 0.47701340913772583,
+      "cosine_event_direction": -0.17441406846046448,
+      "output_gradient_abs_mean": [
+        0.002047234680503607,
+        0.0013458755565807223,
+        0.001349852653220296,
+        0.0007409986574202776
+      ],
+      "loss": 1.4869190454483032,
+      "n": 256,
+      "event_n": 177,
+      "diagnostic_formulation": "BCE event versus conditional CE, same root denominator; only meaningful for factorized output",
+      "all_finite": true
+    },
+    "gradients_selected": {
+      "event_bce_encoder_norm": 0.09630854427814484,
+      "direction_encoder_norm": 0.03627992048859596,
+      "cosine_event_direction": -0.03856641799211502,
+      "output_gradient_abs_mean": [
+        0.0016929267439991236,
+        0.0013491520658135414,
+        0.0013491659192368388,
+        1.5355583400378237e-06
+      ],
+      "loss": 1.0979046821594238,
+      "n": 256,
+      "event_n": 177,
+      "diagnostic_formulation": "BCE event versus conditional CE, same root denominator; only meaningful for factorized output",
+      "all_finite": true
+    },
+    "selection": "minimum validation joint NLL, min_delta, earliest retained tie"
+  },
+  "test": {
+    "n": 384,
+    "joint_nll": 1.100119441215395,
+    "accuracy": 0.3359375,
+    "event_nll": 0.6365455975008949,
+    "event_brier": 0.22223641433356223,
+    "event_auc": 0.507415771484375,
+    "event_ece": 0.007399763601521725,
+    "direction_nll_given_event": 0.69536076557175,
+    "state_counts": [
+      128,
+      128,
+      128,
+      0
+    ],
+    "mean_joint_probability": [
+      0.3259335697318117,
+      0.34190230645860237,
+      0.33178852521814406,
+      0.0003755943242443512
+    ],
+    "reliability": [
+      {
+        "lower": 0.0,
+        "count": 0,
+        "probability": null,
+        "frequency": null
+      },
+      {
+        "lower": 0.1,
+        "count": 0,
+        "probability": null,
+        "frequency": null
+      },
+      {
+        "lower": 0.2,
+        "count": 0,
+        "probability": null,
+        "frequency": null
+      },
+      {
+        "lower": 0.30000000000000004,
+        "count": 0,
+        "probability": null,
+        "frequency": null
+      },
+      {
+        "lower": 0.4,
+        "count": 0,
+        "probability": null,
+        "frequency": null
+      },
+      {
+        "lower": 0.5,
+        "count": 0,
+        "probability": null,
+        "frequency": null
+      },
+      {
+        "lower": 0.6000000000000001,
+        "count": 384,
+        "probability": 0.6740664302681884,
+        "frequency": 0.6666666666666666
+      },
+      {
+        "lower": 0.7000000000000001,
+        "count": 0,
+        "probability": null,
+        "frequency": null
+      },
+      {
+        "lower": 0.8,
+        "count": 0,
+        "probability": null,
+        "frequency": null
+      },
+      {
+        "lower": 0.9,
+        "count": 0,
+        "probability": null,
+        "frequency": null
+      }
+    ]
+  },
+  "permutations": [
+    1701,
+    1702,
+    1703
+  ],
+  "synthetic_receipts": [
+    {
+      "recipe": "synthetic_observable_drift_v1",
+      "seed": 117,
+      "requested_count": 768,
+      "retained_count": 768,
+      "excluded_unknown_count": 0,
+      "state_order": [
+        "NONE",
+        "LONG_ONLY",
+        "SHORT_ONLY",
+        "BOTH"
+      ],
+      "state_counts": [
+        256,
+        256,
+        256,
+        0
+      ],
+      "feature_names": [
+        "past_return_over_005",
+        "past_four_return_mean_over_005",
+        "price_from_first_past_quote_over_05",
+        "spread_over_01",
+        "quote_valid"
+      ],
+      "past_steps": 16,
+      "sample_interval_seconds": 0.25,
+      "latent_dynamic_counts": {
+        "-1": 256,
+        "0": 256,
+        "1": 256
+      },
+      "simulation_config": {
+        "fee_roundtrip": 0.05,
+        "latency_ms": 100.0,
+        "pending_timeout_seconds": 2.0,
+        "max_quote_gap_seconds": 60.0,
+        "gain_multiple": 2.0,
+        "stop_multiple": 1.0,
+        "deadline_seconds": 8.0
+      },
+      "why_causal": "Each feature at each past step uses prices/spreads at or before that step. Past and future innovations use separate SeedSequence children; they share only the deliberately persistent latent drift. That latent drift is not in X. Future quotes are used only by simulate_tape to determine delayed-exit outcomes.",
+      "label_rule": "COMPLETE finite two-side trials; y=1*(net_LONG>0)+2*(net_SHORT>0)",
+      "timing": "Quotes publish every 250 ms. A 100 ms requested latency executes at the next strictly eligible publication, generally 250 ms later. Each episode has its own epoch.",
+      "intended_scope": "Strong synthetic positive control only. It establishes pipeline learnability, not market predictability, calibrated market probabilities or economic admission."
+    },
+    {
+      "recipe": "synthetic_observable_drift_v1",
+      "seed": 317,
+      "requested_count": 384,
+      "retained_count": 384,
+      "excluded_unknown_count": 0,
+      "state_order": [
+        "NONE",
+        "LONG_ONLY",
+        "SHORT_ONLY",
+        "BOTH"
+      ],
+      "state_counts": [
+        128,
+        128,
+        128,
+        0
+      ],
+      "feature_names": [
+        "past_return_over_005",
+        "past_four_return_mean_over_005",
+        "price_from_first_past_quote_over_05",
+        "spread_over_01",
+        "quote_valid"
+      ],
+      "past_steps": 16,
+      "sample_interval_seconds": 0.25,
+      "latent_dynamic_counts": {
+        "-1": 128,
+        "0": 128,
+        "1": 128
+      },
+      "simulation_config": {
+        "fee_roundtrip": 0.05,
+        "latency_ms": 100.0,
+        "pending_timeout_seconds": 2.0,
+        "max_quote_gap_seconds": 60.0,
+        "gain_multiple": 2.0,
+        "stop_multiple": 1.0,
+        "deadline_seconds": 8.0
+      },
+      "why_causal": "Each feature at each past step uses prices/spreads at or before that step. Past and future innovations use separate SeedSequence children; they share only the deliberately persistent latent drift. That latent drift is not in X. Future quotes are used only by simulate_tape to determine delayed-exit outcomes.",
+      "label_rule": "COMPLETE finite two-side trials; y=1*(net_LONG>0)+2*(net_SHORT>0)",
+      "timing": "Quotes publish every 250 ms. A 100 ms requested latency executes at the next strictly eligible publication, generally 250 ms later. Each episode has its own epoch.",
+      "intended_scope": "Strong synthetic positive control only. It establishes pipeline learnability, not market predictability, calibrated market probabilities or economic admission."
+    },
+    {
+      "recipe": "synthetic_observable_drift_v1",
+      "seed": 217,
+      "requested_count": 384,
+      "retained_count": 384,
+      "excluded_unknown_count": 0,
+      "state_order": [
+        "NONE",
+        "LONG_ONLY",
+        "SHORT_ONLY",
+        "BOTH"
+      ],
+      "state_counts": [
+        128,
+        128,
+        128,
+        0
+      ],
+      "feature_names": [
+        "past_return_over_005",
+        "past_four_return_mean_over_005",
+        "price_from_first_past_quote_over_05",
+        "spread_over_01",
+        "quote_valid"
+      ],
+      "past_steps": 16,
+      "sample_interval_seconds": 0.25,
+      "latent_dynamic_counts": {
+        "-1": 128,
+        "0": 128,
+        "1": 128
+      },
+      "simulation_config": {
+        "fee_roundtrip": 0.05,
+        "latency_ms": 100.0,
+        "pending_timeout_seconds": 2.0,
+        "max_quote_gap_seconds": 60.0,
+        "gain_multiple": 2.0,
+        "stop_multiple": 1.0,
+        "deadline_seconds": 8.0
+      },
+      "why_causal": "Each feature at each past step uses prices/spreads at or before that step. Past and future innovations use separate SeedSequence children; they share only the deliberately persistent latent drift. That latent drift is not in X. Future quotes are used only by simulate_tape to determine delayed-exit outcomes.",
+      "label_rule": "COMPLETE finite two-side trials; y=1*(net_LONG>0)+2*(net_SHORT>0)",
+      "timing": "Quotes publish every 250 ms. A 100 ms requested latency executes at the next strictly eligible publication, generally 250 ms later. Each episode has its own epoch.",
+      "intended_scope": "Strong synthetic positive control only. It establishes pipeline learnability, not market predictability, calibrated market probabilities or economic admission."
+    }
+  ],
+  "selection": "minimum NLL on independently shuffled validation labels; test labels independently shuffled too",
+  "scope": "One synthetic IID association-breaking control; not a market permutation p-value or a proof of no leakage",
+  "source_sha256": {
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\check_pipeline_null.py": "2fe80f4a2f2557bfb3af6acfbda783fbfeffa8567d978c7de9ea7d8ce8e2d679",
+    "configs\\research\\opportunity_pipeline_v1.json": "1019c7a12ed1424e48efc36871a510ed08ed30f81e8a56850c2bd0d705a1d458",
+    "spectrum\\research\\controls.py": "b8d575f8ab4222eff0bbf5fc568f55a6a74dedd1fff3c77060b34c6be519a365",
+    "spectrum\\research\\data.py": "d477e6874c9aa406c94e6e86c20382ac3574348cbf05926be3b687fdf4958c24",
+    "spectrum\\research\\losses.py": "82e66491dbf53051a3179be1adc861f944c2d3cbd39be08592f6ff1f26a7fc16",
+    "spectrum\\research\\models.py": "0fe6aad6eb274140e89f416c947235b35f72607ddf3c1ecfa9b112a537f77d69",
+    "spectrum\\research\\simulation.py": "9c256f5fb50f1169be72e70e635144b651dcdc5e9b5d9e02a0ecfdeff50d3739",
+    "spectrum\\research\\training.py": "e8a0fc7d67a3d44de302a50814fd83e5fa1ba8cc575dcba24c648901c3c51dcf",
+    "spectrum\\research\\__init__.py": "0aaa600ec08c54a421de9ce3f7bdc7fc9686dacfefe34ba14a81f3ea7efa942a"
+  }
+}

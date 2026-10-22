@@ -1,0 +1,1024 @@
+{
+  "status": "COMPLETE",
+  "identity": {
+    "version": "CAUSAL_PAIRED_FIXED_PLAN_CLOCK_EXECUTION_V2",
+    "execution_config": {
+      "fee_roundtrip": 0.3,
+      "latency_ms": 100,
+      "pending_timeout_seconds": 2,
+      "max_quote_gap_seconds": 60,
+      "gain_multiple": 2.0,
+      "stop_multiple": 1.0,
+      "deadline_seconds": 300
+    },
+    "dates": [
+      "2026-02-02",
+      "2026-02-03",
+      "2026-02-04",
+      "2026-02-05",
+      "2026-02-06"
+    ],
+    "roots_dir": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\crossing_map_target_v1",
+    "market_dir": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1",
+    "code": {
+      "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\prepare_research_execution.py": "fd5fb509bb03f7112e36692105ac39508fa121903a2b7df2cdb87e417685908a",
+      "spectrum\\research\\simulation.py": "9c256f5fb50f1169be72e70e635144b651dcdc5e9b5d9e02a0ecfdeff50d3739",
+      "spectrum\\cognition\\execution.py": "a3fb6adac03cc4e14ca68953f05717569058fb03236a175e1e0e4b565f0e2005",
+      "spectrum\\playground\\data.py": "07e13250366b14430c64189cbd67d343e35de1d229e66108f9f9464966ad412f",
+      "spectrum\\player_v3\\data.py": "8889cb0a957c8253655ea654153534ed415d8dd937287fea792050f7d1a37108"
+    },
+    "libraries": {
+      "numpy": "2.2.6",
+      "pandas": "2.2.3",
+      "numba": "0.64.0",
+      "pyarrow": "20.0.0"
+    }
+  },
+  "days": [
+    {
+      "date": "2026-02-02",
+      "identity": {
+        "version": "CAUSAL_PAIRED_FIXED_PLAN_CLOCK_EXECUTION_V2",
+        "execution_config": {
+          "fee_roundtrip": 0.3,
+          "latency_ms": 100,
+          "pending_timeout_seconds": 2,
+          "max_quote_gap_seconds": 60,
+          "gain_multiple": 2.0,
+          "stop_multiple": 1.0,
+          "deadline_seconds": 300
+        },
+        "dates": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ],
+        "roots_dir": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\crossing_map_target_v1",
+        "market_dir": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1",
+        "code": {
+          "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\prepare_research_execution.py": "fd5fb509bb03f7112e36692105ac39508fa121903a2b7df2cdb87e417685908a",
+          "spectrum\\research\\simulation.py": "9c256f5fb50f1169be72e70e635144b651dcdc5e9b5d9e02a0ecfdeff50d3739",
+          "spectrum\\cognition\\execution.py": "a3fb6adac03cc4e14ca68953f05717569058fb03236a175e1e0e4b565f0e2005",
+          "spectrum\\playground\\data.py": "07e13250366b14430c64189cbd67d343e35de1d229e66108f9f9464966ad412f",
+          "spectrum\\player_v3\\data.py": "8889cb0a957c8253655ea654153534ed415d8dd937287fea792050f7d1a37108"
+        },
+        "libraries": {
+          "numpy": "2.2.6",
+          "pandas": "2.2.3",
+          "numba": "0.64.0",
+          "pyarrow": "20.0.0"
+        }
+      },
+      "root_source": {
+        "root_sha256": "6b273450b17575687e062c627c9fae91f97dc6fd93747c6eadab8a7b3d0d112d",
+        "root_manifest_sha256": "bc3d01fd1a97a12f4d86e8311adf0760730e184870ba4fe8200581e31e22a3d2"
+      },
+      "raw_sources": {
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-02\\manifest.json": "18dff6d3795dfee35b1cff0e26be15364da767c860b6b1aa37d88d57e43ac921",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_004\\capture_014000\\quotes.parquet": "dcc4ae5013c6719387fcbe3505f6711d52c91f155204c47389a8f9f96f14e203",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_004\\capture_014001\\quotes.parquet": "b64bcb6115f628e0bb46e50eb944f0df86e3a66365cd760a4739f759b63810e8",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-02\\x.npy": "cc7f017c85520895c6633cd02e5592840a89574dae083a554a398bea2de78da1",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-02\\decision_t.npy": "03213fc8dc59f3d9f253d38e63b910e2b7019a34e8d7af93b45dbdef35ec14c5",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-02\\bar_t.npy": "a9be05f2a5e994cd08dd269230c3ba1064f5e7a7e85f4ac61d2528428f49ec59",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-02\\can_enter.npy": "b42e41a371249b7c4aec3d43d875d6a65bb0a2775acbe493762dc765a859c5ef",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-02\\decision_mid.npy": "02b754c69dda7d582c6a5199147e2f79e06714df135dd9c5ca54afe12670b31c",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-02\\cuts.npy": "01af49db16540d576c061a238e82e1e62a78e29f00c22011b87b718b2cf2e2cb",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-02\\execution_valid.npy": "a196ab18b96ece07e4dbf1a31718bceb0156978add275635a141ec7e4d9499c5",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-02\\execution_segment.npy": "0e951e9dd63e00814043392beef79008cc72c540d26c07cbd61a50198fdc2438"
+      },
+      "full_config_sha256_at_build": "0ef4f1577f0218d3f5c02ea3bb401bbee451f8e770f38d81570b47e6d22f13a3",
+      "file": "2026-02-02.parquet",
+      "sha256": "f1ad4f1d0cdcc9f09d1195fbf85e2594095c9b0be80694ebd9a7cf671442cf9e",
+      "quote_rows": 18684428,
+      "rows": 3358,
+      "status_counts": {
+        "COMPLETE": 3178,
+        "INELIGIBLE": 180
+      },
+      "reason_counts": {
+        "STOP": 2558,
+        "TAKE": 616,
+        "RISK": 160,
+        "SESSION": 20,
+        "TIME": 4
+      },
+      "checks": [
+        {
+          "t_ns": "1770019200000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770019200000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770024780000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770024780000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770030360000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770030360000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770035970000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770035970000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770041550000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770041550000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770047160000000000",
+          "side": 1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770047160000000000",
+          "side": -1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770052740000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770052740000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770058350000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770058350000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770063930000000000",
+          "side": 1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770063930000000000",
+          "side": -1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770069540000000000",
+          "side": 1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770069540000000000",
+          "side": -1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        }
+      ]
+    },
+    {
+      "date": "2026-02-03",
+      "identity": {
+        "version": "CAUSAL_PAIRED_FIXED_PLAN_CLOCK_EXECUTION_V2",
+        "execution_config": {
+          "fee_roundtrip": 0.3,
+          "latency_ms": 100,
+          "pending_timeout_seconds": 2,
+          "max_quote_gap_seconds": 60,
+          "gain_multiple": 2.0,
+          "stop_multiple": 1.0,
+          "deadline_seconds": 300
+        },
+        "dates": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ],
+        "roots_dir": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\crossing_map_target_v1",
+        "market_dir": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1",
+        "code": {
+          "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\prepare_research_execution.py": "fd5fb509bb03f7112e36692105ac39508fa121903a2b7df2cdb87e417685908a",
+          "spectrum\\research\\simulation.py": "9c256f5fb50f1169be72e70e635144b651dcdc5e9b5d9e02a0ecfdeff50d3739",
+          "spectrum\\cognition\\execution.py": "a3fb6adac03cc4e14ca68953f05717569058fb03236a175e1e0e4b565f0e2005",
+          "spectrum\\playground\\data.py": "07e13250366b14430c64189cbd67d343e35de1d229e66108f9f9464966ad412f",
+          "spectrum\\player_v3\\data.py": "8889cb0a957c8253655ea654153534ed415d8dd937287fea792050f7d1a37108"
+        },
+        "libraries": {
+          "numpy": "2.2.6",
+          "pandas": "2.2.3",
+          "numba": "0.64.0",
+          "pyarrow": "20.0.0"
+        }
+      },
+      "root_source": {
+        "root_sha256": "a03c3412ccb4d41d3231750cef71a1db0cf425a733c84f07ea16613ab7f28073",
+        "root_manifest_sha256": "bc3d01fd1a97a12f4d86e8311adf0760730e184870ba4fe8200581e31e22a3d2"
+      },
+      "raw_sources": {
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-03\\manifest.json": "124c9dd6e655e67a564575b8000ae89d6018ef5067abeaee302b0d65ca9e80c0",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_004\\capture_014001\\quotes.parquet": "b64bcb6115f628e0bb46e50eb944f0df86e3a66365cd760a4739f759b63810e8",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_004\\capture_014002\\quotes.parquet": "0579e2c012b36e141d322ae959acbf1e1e3f1d5ad41151a9381d38c6e62556c6",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-03\\x.npy": "e2f9165288a14ec67add135ac07b9beeffac85b6bec16bba865bbd918949be62",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-03\\decision_t.npy": "02841214c3041dc44d61c285513dd9c5efacf495969fcf4302721b68deb12f17",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-03\\bar_t.npy": "bf16a6ba41da86b932d4997e58d5fe5cf16aea60ae2309aeca3e12c3164eb7f3",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-03\\can_enter.npy": "7500e5c178a59492fd877cff1db14e49f52274640e6139b96948b9ef636388e2",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-03\\decision_mid.npy": "c2496e5f632437544f4e4926189c1eea57bdb9353762157b5afcec7bec4aa645",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-03\\cuts.npy": "e34468dc4af8e886e178b11d457ce67954bf95c2773616b5b84492b3aa15f88b",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-03\\execution_valid.npy": "8f72404350f8818c0076d7329828e3f03a731ceae9854cac2403b06c7986af2c",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-03\\execution_segment.npy": "d87a10c747d0a9c71bb0c6a3705add6518d901fbf7978b585939b45bb53e5df3"
+      },
+      "full_config_sha256_at_build": "0ef4f1577f0218d3f5c02ea3bb401bbee451f8e770f38d81570b47e6d22f13a3",
+      "file": "2026-02-03.parquet",
+      "sha256": "dd16b7107535088f67ec75efb260b6d2ead9b318b59132b709fbeed176e27204",
+      "quote_rows": 8278300,
+      "rows": 3358,
+      "status_counts": {
+        "COMPLETE": 3242,
+        "INELIGIBLE": 100,
+        "EMPTY": 14,
+        "CENSORED": 2
+      },
+      "reason_counts": {
+        "STOP": 2637,
+        "TAKE": 584,
+        "RISK": 80,
+        "TIME": 21,
+        "SESSION": 20,
+        "ENTRY_TIMEOUT": 14,
+        "SUPPORT": 1,
+        "EXIT_TIMEOUT": 1
+      },
+      "checks": [
+        {
+          "t_ns": "1770105600000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770105600000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770111180000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770111180000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770116760000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770116760000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770122370000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770122370000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770127950000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770127950000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770133560000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770133560000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770139140000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770139140000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770144750000000000",
+          "side": 1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770144750000000000",
+          "side": -1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770150330000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770150330000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770155940000000000",
+          "side": 1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770155940000000000",
+          "side": -1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        }
+      ]
+    },
+    {
+      "date": "2026-02-04",
+      "identity": {
+        "version": "CAUSAL_PAIRED_FIXED_PLAN_CLOCK_EXECUTION_V2",
+        "execution_config": {
+          "fee_roundtrip": 0.3,
+          "latency_ms": 100,
+          "pending_timeout_seconds": 2,
+          "max_quote_gap_seconds": 60,
+          "gain_multiple": 2.0,
+          "stop_multiple": 1.0,
+          "deadline_seconds": 300
+        },
+        "dates": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ],
+        "roots_dir": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\crossing_map_target_v1",
+        "market_dir": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1",
+        "code": {
+          "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\prepare_research_execution.py": "fd5fb509bb03f7112e36692105ac39508fa121903a2b7df2cdb87e417685908a",
+          "spectrum\\research\\simulation.py": "9c256f5fb50f1169be72e70e635144b651dcdc5e9b5d9e02a0ecfdeff50d3739",
+          "spectrum\\cognition\\execution.py": "a3fb6adac03cc4e14ca68953f05717569058fb03236a175e1e0e4b565f0e2005",
+          "spectrum\\playground\\data.py": "07e13250366b14430c64189cbd67d343e35de1d229e66108f9f9464966ad412f",
+          "spectrum\\player_v3\\data.py": "8889cb0a957c8253655ea654153534ed415d8dd937287fea792050f7d1a37108"
+        },
+        "libraries": {
+          "numpy": "2.2.6",
+          "pandas": "2.2.3",
+          "numba": "0.64.0",
+          "pyarrow": "20.0.0"
+        }
+      },
+      "root_source": {
+        "root_sha256": "f3ca7b222f67acc7239c8ffe020077daf3d4bf9071a13ef2179e117a994ce061",
+        "root_manifest_sha256": "bc3d01fd1a97a12f4d86e8311adf0760730e184870ba4fe8200581e31e22a3d2"
+      },
+      "raw_sources": {
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-04\\manifest.json": "be308e6272aecc6343b6556571335b10d7768d740fcc041fe7fb9d725e9ade82",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_004\\capture_014002\\quotes.parquet": "0579e2c012b36e141d322ae959acbf1e1e3f1d5ad41151a9381d38c6e62556c6",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_004\\capture_014003\\quotes.parquet": "261d953d90d40b9e1b1e4f673f6cffafe46babeda2e27a2d0e74d45f93c3162a",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-04\\x.npy": "9a54f0e4cdc8407f8502b4972016e3295fd492c7a79d2dca77ab4a1b709aade6",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-04\\decision_t.npy": "04aaf16b7a4b6c3011d6deb1729e318def752393b8f4d72d3f09f4e7d709199b",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-04\\bar_t.npy": "407689eb95ee4202fb564fdbc112e3b362bbfdd2c30f9c152822a308943547c4",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-04\\can_enter.npy": "d0378daf8537017ad2340cc8fb2378fb10ad8224a9f03cd57b7f69f645810cf3",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-04\\decision_mid.npy": "67f1fb30979662785c92141d2ad6861288b599b28668292e80ebea88c5531fb8",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-04\\cuts.npy": "f01c01607a365420f04919af49be7e38c31b567daac14e30c2c172a7849e9845",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-04\\execution_valid.npy": "8df3768fb5a95fff2cdaa6679ae17a0d7cc6e2943eeb088213df5e9ac8c0d83a",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-04\\execution_segment.npy": "19a8038694d84e91ff75972f576abfeb329a7d54e7b25405001bbdda704c0543"
+      },
+      "full_config_sha256_at_build": "0ef4f1577f0218d3f5c02ea3bb401bbee451f8e770f38d81570b47e6d22f13a3",
+      "file": "2026-02-04.parquet",
+      "sha256": "220bcd4bb023bd896966dad67ecb0138ab00214cee7436bd5e2387988dd821b6",
+      "quote_rows": 6980716,
+      "rows": 3358,
+      "status_counts": {
+        "COMPLETE": 3195,
+        "INELIGIBLE": 106,
+        "EMPTY": 52,
+        "CENSORED": 5
+      },
+      "reason_counts": {
+        "STOP": 2544,
+        "TAKE": 597,
+        "RISK": 86,
+        "TIME": 54,
+        "ENTRY_TIMEOUT": 52,
+        "SESSION": 20,
+        "EXIT_TIMEOUT": 5
+      },
+      "checks": [
+        {
+          "t_ns": "1770192000000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770192000000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770197580000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770197580000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770203160000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770203160000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770208770000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770208770000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770214350000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770214350000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770219960000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770219960000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770225540000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770225540000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770231150000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770231150000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770236730000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770236730000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770242340000000000",
+          "side": 1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770242340000000000",
+          "side": -1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        }
+      ]
+    },
+    {
+      "date": "2026-02-05",
+      "identity": {
+        "version": "CAUSAL_PAIRED_FIXED_PLAN_CLOCK_EXECUTION_V2",
+        "execution_config": {
+          "fee_roundtrip": 0.3,
+          "latency_ms": 100,
+          "pending_timeout_seconds": 2,
+          "max_quote_gap_seconds": 60,
+          "gain_multiple": 2.0,
+          "stop_multiple": 1.0,
+          "deadline_seconds": 300
+        },
+        "dates": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ],
+        "roots_dir": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\crossing_map_target_v1",
+        "market_dir": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1",
+        "code": {
+          "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\prepare_research_execution.py": "fd5fb509bb03f7112e36692105ac39508fa121903a2b7df2cdb87e417685908a",
+          "spectrum\\research\\simulation.py": "9c256f5fb50f1169be72e70e635144b651dcdc5e9b5d9e02a0ecfdeff50d3739",
+          "spectrum\\cognition\\execution.py": "a3fb6adac03cc4e14ca68953f05717569058fb03236a175e1e0e4b565f0e2005",
+          "spectrum\\playground\\data.py": "07e13250366b14430c64189cbd67d343e35de1d229e66108f9f9464966ad412f",
+          "spectrum\\player_v3\\data.py": "8889cb0a957c8253655ea654153534ed415d8dd937287fea792050f7d1a37108"
+        },
+        "libraries": {
+          "numpy": "2.2.6",
+          "pandas": "2.2.3",
+          "numba": "0.64.0",
+          "pyarrow": "20.0.0"
+        }
+      },
+      "root_source": {
+        "root_sha256": "8b617f0a067cfc68bb920096f5a9dfd845277ba470eb27f7b8e7132189041b15",
+        "root_manifest_sha256": "bc3d01fd1a97a12f4d86e8311adf0760730e184870ba4fe8200581e31e22a3d2"
+      },
+      "raw_sources": {
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-05\\manifest.json": "a4297053695e73b1e0540a230ddadfb009d1c72cb883864388b4e41f7e8a5fb2",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_004\\capture_014003\\quotes.parquet": "261d953d90d40b9e1b1e4f673f6cffafe46babeda2e27a2d0e74d45f93c3162a",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_004\\capture_014004\\quotes.parquet": "5bbb30d29a6f2d4ef7e2bb0352590013cebefb535fd9d208e4eb7290746597a8",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-05\\x.npy": "347ae28bd65ad2894f87f4d8ee5361fce31d4650637c1d8cb14a720dd222eaf2",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-05\\decision_t.npy": "0128d76380081d53dc40760f010067cb6f89271defc8e64ae0ef3e531610149e",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-05\\bar_t.npy": "3cdb1942ac477dcc4c994d402774241d9a846865cd219bbfb675c56fc29f36de",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-05\\can_enter.npy": "969c45b2a9b57fe6b51e46684b22bd0977f4be0815106c6f1b66ea1cbec3388f",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-05\\decision_mid.npy": "44d7acdbe0bd2f6e292fcaabceaf9d53e3f3f261dd8f9318a3c6f0c7c9a48be8",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-05\\cuts.npy": "679d65cc3362017695440584ae3b0d77173411419fbfd2393e51e99787c0da79",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-05\\execution_valid.npy": "b68a34a8ae5160df9b3f0e122e143d2d81f072cbda3e2b0553259d6894efdd36",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-05\\execution_segment.npy": "afaa454b897ebf56e109297d8e42b511d10af0150a2c64993943423e06f554ff"
+      },
+      "full_config_sha256_at_build": "0ef4f1577f0218d3f5c02ea3bb401bbee451f8e770f38d81570b47e6d22f13a3",
+      "file": "2026-02-05.parquet",
+      "sha256": "59f4bc8c88b2d6ba6dd3bcaf39bf15e3f8a87eb76f034849ce8b64e7821e4fe7",
+      "quote_rows": 9248027,
+      "rows": 3358,
+      "status_counts": {
+        "COMPLETE": 3254,
+        "INELIGIBLE": 100,
+        "EMPTY": 4
+      },
+      "reason_counts": {
+        "STOP": 2614,
+        "TAKE": 614,
+        "RISK": 80,
+        "TIME": 26,
+        "SESSION": 20,
+        "ENTRY_TIMEOUT": 4
+      },
+      "checks": [
+        {
+          "t_ns": "1770278400000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770278400000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770283980000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770283980000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770289560000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770289560000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770295170000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770295170000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770300750000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770300750000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770306360000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770306360000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770311940000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770311940000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770317550000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770317550000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770323130000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770323130000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770328740000000000",
+          "side": 1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770328740000000000",
+          "side": -1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        }
+      ]
+    },
+    {
+      "date": "2026-02-06",
+      "identity": {
+        "version": "CAUSAL_PAIRED_FIXED_PLAN_CLOCK_EXECUTION_V2",
+        "execution_config": {
+          "fee_roundtrip": 0.3,
+          "latency_ms": 100,
+          "pending_timeout_seconds": 2,
+          "max_quote_gap_seconds": 60,
+          "gain_multiple": 2.0,
+          "stop_multiple": 1.0,
+          "deadline_seconds": 300
+        },
+        "dates": [
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06"
+        ],
+        "roots_dir": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\crossing_map_target_v1",
+        "market_dir": "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\basket_multimonth_v1",
+        "code": {
+          "D:\\scalper-mini\\attractive-spectrum-scalper\\scripts\\prepare_research_execution.py": "fd5fb509bb03f7112e36692105ac39508fa121903a2b7df2cdb87e417685908a",
+          "spectrum\\research\\simulation.py": "9c256f5fb50f1169be72e70e635144b651dcdc5e9b5d9e02a0ecfdeff50d3739",
+          "spectrum\\cognition\\execution.py": "a3fb6adac03cc4e14ca68953f05717569058fb03236a175e1e0e4b565f0e2005",
+          "spectrum\\playground\\data.py": "07e13250366b14430c64189cbd67d343e35de1d229e66108f9f9464966ad412f",
+          "spectrum\\player_v3\\data.py": "8889cb0a957c8253655ea654153534ed415d8dd937287fea792050f7d1a37108"
+        },
+        "libraries": {
+          "numpy": "2.2.6",
+          "pandas": "2.2.3",
+          "numba": "0.64.0",
+          "pyarrow": "20.0.0"
+        }
+      },
+      "root_source": {
+        "root_sha256": "d979e003529fe9cfa1b2aea7d4291b378dcf6586437fad981c61e925ec1060ed",
+        "root_manifest_sha256": "bc3d01fd1a97a12f4d86e8311adf0760730e184870ba4fe8200581e31e22a3d2"
+      },
+      "raw_sources": {
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-06\\manifest.json": "5479fcc9f6ade274fb7f4f42552826b66ab7dac3196fc1991a580d85b0d03242",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_004\\capture_014004\\quotes.parquet": "5bbb30d29a6f2d4ef7e2bb0352590013cebefb535fd9d208e4eb7290746597a8",
+        "D:\\scalper-mini\\attractive-spectrum-scalper\\data\\derived\\full_mbo_v1\\market\\member_004\\capture_014005\\quotes.parquet": "893dca91e90c9df6dde8d7d77caf9b249f83c5e38d22213734b503588e17d6fb",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-06\\x.npy": "c752c5a0f00bd8a36bfab0642eb23607096eac568ffb6370be7bd24ac98c4277",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-06\\decision_t.npy": "3b2a7c73265a2f566a929c2f7e0644f4adafdaafa322696535dd7d5fbaa79c72",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-06\\bar_t.npy": "50f44bceedccbb3190bc0de3c88827da1e4d62345f9a27f7fe9b90ef5ac9bb5a",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-06\\can_enter.npy": "fb8397304a9b7140ce5681a62f1ba83fb0cc3c7a632f55fd6bad96480ebafb7f",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-06\\decision_mid.npy": "0ae24a77135ed702b5e28c3dbf838c58da339ec8e84477a4916d9eb3af085e7f",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-06\\cuts.npy": "81f205fe624ec22b940d5d4eec317a6ab8f978a20ebfee6731088f9f77048330",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-06\\execution_valid.npy": "570ede2b86097696e04c559f8d7d6bb4203af9fdab9cdf3d1aa7b798975bffcd",
+        "data\\derived\\basket_multimonth_v1\\2026-02\\2026-02-06\\execution_segment.npy": "8c5998a5a7a9c123615cea119fc5f89081ddd6758196c168fd179cddaa8342f5"
+      },
+      "full_config_sha256_at_build": "0ef4f1577f0218d3f5c02ea3bb401bbee451f8e770f38d81570b47e6d22f13a3",
+      "file": "2026-02-06.parquet",
+      "sha256": "f9d2170f8c5157c91b2ff19e4006c673a0f88ffe0bd05d86d133049c248cc43f",
+      "quote_rows": 5065531,
+      "rows": 3358,
+      "status_counts": {
+        "COMPLETE": 3306,
+        "EMPTY": 28,
+        "INELIGIBLE": 20,
+        "CENSORED": 4
+      },
+      "reason_counts": {
+        "STOP": 2596,
+        "TAKE": 524,
+        "TIME": 186,
+        "ENTRY_TIMEOUT": 28,
+        "SESSION": 20,
+        "EXIT_TIMEOUT": 4
+      },
+      "checks": [
+        {
+          "t_ns": "1770364800000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770364800000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770370380000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770370380000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770375960000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770375960000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770381570000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770381570000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770387150000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770387150000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770392760000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770392760000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770398340000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770398340000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770403950000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770403950000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770409530000000000",
+          "side": 1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770409530000000000",
+          "side": -1,
+          "status": "COMPLETE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770415140000000000",
+          "side": 1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        },
+        {
+          "t_ns": "1770415140000000000",
+          "side": -1,
+          "status": "INELIGIBLE",
+          "max_money_error": 0.0
+        }
+      ]
+    }
+  ],
+  "full_config_sha256_current_invocation": "0ef4f1577f0218d3f5c02ea3bb401bbee451f8e770f38d81570b47e6d22f13a3",
+  "observations": 16790,
+  "independent_raw_checks": 100,
+  "semantics": {
+    "target": "Paired outcomes of exactly the same causal fixed plan",
+    "censor": "Unknown outcomes carry NaN; never loss/zero labels",
+    "execution": "One reference ounce, taker BBO fills with explicit latency; no queue/depth/impact claim",
+    "path": "MAE/MFE includes entry cost and all publications through the actual exit",
+    "clock": "TIME request_ns equals entry_ns plus duration exactly; TIME wins same-ns quotes; trigger_ordinal=-1 for timer",
+    "cache": "Model/loss changes reuse this effective-execution cache; full config hash recorded per invocation"
+  }
+}

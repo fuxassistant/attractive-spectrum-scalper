@@ -1,0 +1,90 @@
+{
+  "auditor": "Sol 6.1",
+  "date": "2026-10-22",
+  "verdict": "PASS_VISUAL_DESCRIPTIVE_AND_PIPELINE_CONTROLS; MARKET_EDGE_AND_POLICY_ADMISSION_NOT_ESTABLISHED",
+  "blocking_visual_findings": [],
+  "figures_actually_seen_via_view_image": {
+    "01_learning_and_controls.png": "3dcb8b7d0206ed7fc621f6369b28511018a1c094655623eb620afdc53045f245",
+    "02_cohorts_and_target_relation.png": "edad9ab28d85f5007b2fd87f434b57da5cf10649eb5d320d1a95a3a9a68a0aca",
+    "03_fixed_test_timeline.png": "35bf0e2b881b94e953914aa233d80c1a6e789431b70b89e5eda823a603c6f5f8",
+    "04_calibration_and_distributions.png": "fbbabbd8722f2f1b6998674ff5c8969ec909d8ae1d55b0dcc6e9d8b295621b55",
+    "05_gradients_and_clipping.png": "c6946d0ef27fac3ab403d3403397695d53e725efff257faa2567dae3d7a1700e",
+    "06_forced_account_stress.png": "bcca306fc82f73af42d2a57aa28510212853590c3a8d11605449ec4ae01c48fd"
+  },
+  "source_sha256": {
+    "data_diagnostics.json": "2dd9cc4bf83467fbb44f403c6b040566e51fc5b4b101859795a060234290694d",
+    "independent_null.json": "f608c353fc3156f2cc75dffaa0fdfc09f54bd20acd2815a18642c2b039179794",
+    "account_stress.json": "dd5d545dc3162824ad10daaa0ce98a464796e7f4fefdb51e006ccafc46ba484c",
+    "index.html": "b978fd129f7afdad69adad0990047623005d993bb66d253ca4fbca4fdc4df9a1"
+  },
+  "run_checks": [
+    {
+      "run_id": "tcn_execution_bce_seed17",
+      "summary_sha256": "b1459a06fce7dde68dffa883db618aab9cb661db748007185edef5913d54c277",
+      "test_n": 1649,
+      "test_joint_nll": 1.008343081596244,
+      "prior_test_joint_nll": 0.9547353603341588,
+      "test_event_auc": 0.4823904106863547,
+      "test_direction_nll": 0.7374463110896092,
+      "prior_test_direction_nll": 0.6978688025280098,
+      "selected_epoch": 1,
+      "selected_threshold": 1.01,
+      "test_policy_trades": 0,
+      "supplied_tokens": 64,
+      "effective_tokens": 61
+    },
+    {
+      "run_id": "mlp_execution_bce_seed17",
+      "summary_sha256": "882e65075e6b919d7dea121ffc458c608ea39b11c9356b3b97f993de47ddea39",
+      "test_n": 1649,
+      "test_joint_nll": 0.9667822625417823,
+      "prior_test_joint_nll": 0.9547353603341588,
+      "test_event_auc": 0.5343322711870633,
+      "test_direction_nll": 0.7293076826402414,
+      "prior_test_direction_nll": 0.6978688025280098,
+      "selected_epoch": 11,
+      "selected_threshold": 1.01,
+      "test_policy_trades": 0,
+      "supplied_tokens": 64,
+      "effective_tokens": 1
+    },
+    {
+      "run_id": "tcn_crossing_bce_seed17",
+      "summary_sha256": "b9a2e9de6e3009a69d078a55f1f87aec2a4755aba9246717351447d2d9a78b36",
+      "test_n": 1653,
+      "test_joint_nll": 0.8561745370529763,
+      "prior_test_joint_nll": 1.032678614763847,
+      "test_event_auc": 0.6924218440838938,
+      "test_direction_nll": 0.8335317288180223,
+      "prior_test_direction_nll": 0.8086485323368923,
+      "selected_epoch": 1,
+      "selected_threshold": 1.01,
+      "test_policy_trades": 0,
+      "supplied_tokens": 64,
+      "effective_tokens": 61
+    }
+  ],
+  "concrete_findings": [
+    "01: synthetic persistent-drift held-out success and same-small-real-batch memorization show learnability/backprop capacity in designed controls; neither establishes market signal. Train-only shuffle retains true validation labels for selection and is a weak contrast even with 34.4% accuracy; its event AUC around .702 cannot be dismissed. The figure now explicitly states that limitation.",
+    "Independent TRAIN/VAL/TEST permutations use shuffled validation for selection: 384 test rows, accuracy .3359375, event AUC .50741577, joint NLL 1.10011944. This is a stronger association-breaking diagnostic, one repeat on synthetic data, not a market p-value or proof of no leakage.",
+    "01: execution TCN selected epoch 1 and MLP epoch 11. Training loss improves while validation increasingly diverges; both execution test joint NLL values are worse than the identical-cohort train prior. This does not show sequence-model edge.",
+    "02: execution profit after a fixed delayed plan and existence of a crossing mark >=2R answer different questions. The right matrix compares TARGETS on 7237 common known outcomes with available X, not prediction errors. More than half of crossing LONG/SHORT/BOTH rows are execution NONE. Unknown remains visible in full-clock bars.",
+    "03: discrete observed labels change abruptly, while scores are compressed and smoother. Smooth probabilities are not smooth targets or evidence of recovered opportunity waves. The first two test hours are fixed by clock, not outcome search; this remains one illustrative window. No price/BBO or individual fill/exit panel is shown, so this figure cannot independently establish exact execution timing.",
+    "04: reliability is on the calibration DAY with T=1 and no fitted probability calibrator; distributions and NLL below are TEST. Sparse bins with counts 1 or 3 are not reliable local calibration evidence; no bin uncertainty is displayed. Crossing event overconfidence is visible on calibration day. Comparisons across execution/crossing targets and cohorts are not architecture rankings.",
+    "Crossing event AUC .69242 and lower joint NLL than its own prior indicate event discrimination in this exposed test day, while direction NLL .83353 is worse than prior .80865. Neither finding makes a crossing mark an executed profitable trade.",
+    "All selected thresholds are 1.01 with zero selected test trades: operational WAIT. Zero realized policy net and drawdown under WAIT are not a positive trading result or evidence that risk disappears.",
+    "Costs/timing in data diagnostics: initial cost/R median .5, required favorable liquidation quote move about2.5R versus adverse allowance .5R, median take/stop distance ratio5. Completed branch holding median15.69s,64.2% under30s;30s origin cadence is not holding duration. Exit overshoot mixes trigger overshoot and latency, not pure latency slippage.",
+    "05: encoder-only E BCE versus conditional-direction CE gradients use a shared root denominator. A negative cosine on one fixed 256-root probe is local E/direction interference, not a LONG/SHORT separate-model benchmark. Gradient norm scales differ across architectures; they cannot directly rank optimization quality. Clipping fractions in later unselected epochs do not describe the retained early checkpoint.",
+    "06 actually viewed: all six threshold=0 calibration/test stress accounts are complete and visibly lose closed cash. Plot correctly calls forcing not the selected strategy; calibration/test panels have different trade counts and scales. This post-fit stress is not a selected policy, a threshold optimization or evidence of universal impossibility. Closed cash excludes intra-trade drawdown; it is not full mark-to-market equity. Crossing performs less badly on this test day but worse on calibration, so ranking these lines is not robust model selection."
+  ],
+  "limitations": [
+    "Single seed and one already exposed development week; TEST is chronological but not a newly blind market sample. Train Feb2-3, validation Feb4, calibration Feb5, test Feb6.",
+    "Overlapping horizons, sequences and neighboring roots are dependent; counts are not independent trials, and this audit does not certify absence of leakage.",
+    "TCN effective receptive field61 supplied30s tokens is about30 minutes of summarized history, not all current and previous sessions; MLP effective token count1. A causal history remains different from a full raw market trajectory.",
+    "Execution models share a cohort; crossing target uses a separate mature cohort and event meaning. Complete-case calibration is conditional on admission and support.",
+    "No empirical superiority of focal/custom losses, Mamba2/CNN/LSTM/TCN or separate LONG/SHORT models follows from these five figures.",
+    "The audit reviewed saved summaries, diagnostics and actual PNG pixels; it did not rerun training, raw replay or statistical uncertainty estimation.",
+    "HTML read as text and consistent with saved summary interpretation; no browser rendering audit was performed. Numeric completeness of stress accounts relies on account_stress artifact and separate numeric review, not line appearance alone."
+  ],
+  "scope": "Read/report audit only; only sol61_visual_audit.json written. Six PNG actually viewed. No commits, code/data/image edits or model fitting."
+}

@@ -1,0 +1,1092 @@
+{
+  "run_id": "mlp_execution_bce_seed17",
+  "status": "COMPLETE",
+  "cohorts": {
+    "train": {
+      "dates": [
+        "2026-02-02",
+        "2026-02-03"
+      ],
+      "roots": 3358,
+      "feature_available": 3334,
+      "target_known": 3209,
+      "admitted": 3205,
+      "state_counts": [
+        1988,
+        577,
+        640,
+        0
+      ],
+      "execution_status_L": {
+        "COMPLETE": 3211,
+        "INELIGIBLE": 140,
+        "EMPTY": 7
+      },
+      "execution_status_S": {
+        "COMPLETE": 3209,
+        "INELIGIBLE": 140,
+        "EMPTY": 7,
+        "CENSORED": 2
+      }
+    },
+    "validation": {
+      "dates": [
+        "2026-02-04"
+      ],
+      "roots": 1679,
+      "feature_available": 1667,
+      "target_known": 1595,
+      "admitted": 1593,
+      "state_counts": [
+        957,
+        299,
+        337,
+        0
+      ],
+      "execution_status_L": {
+        "COMPLETE": 1598,
+        "INELIGIBLE": 53,
+        "EMPTY": 26,
+        "CENSORED": 2
+      },
+      "execution_status_S": {
+        "COMPLETE": 1597,
+        "INELIGIBLE": 53,
+        "EMPTY": 26,
+        "CENSORED": 3
+      }
+    },
+    "calibration": {
+      "dates": [
+        "2026-02-05"
+      ],
+      "roots": 1679,
+      "feature_available": 1667,
+      "target_known": 1627,
+      "admitted": 1626,
+      "state_counts": [
+        993,
+        274,
+        359,
+        0
+      ],
+      "execution_status_L": {
+        "COMPLETE": 1627,
+        "INELIGIBLE": 50,
+        "EMPTY": 2
+      },
+      "execution_status_S": {
+        "COMPLETE": 1627,
+        "INELIGIBLE": 50,
+        "EMPTY": 2
+      }
+    },
+    "test": {
+      "dates": [
+        "2026-02-06"
+      ],
+      "roots": 1679,
+      "feature_available": 1667,
+      "target_known": 1651,
+      "admitted": 1649,
+      "state_counts": [
+        987,
+        350,
+        312,
+        0
+      ],
+      "execution_status_L": {
+        "COMPLETE": 1651,
+        "EMPTY": 14,
+        "INELIGIBLE": 10,
+        "CENSORED": 4
+      },
+      "execution_status_S": {
+        "COMPLETE": 1655,
+        "EMPTY": 14,
+        "INELIGIBLE": 10
+      }
+    }
+  },
+  "training": {
+    "best_epoch": 11,
+    "best_validation_nll": 0.9510234035712479,
+    "epochs": 23,
+    "seconds": 19.502630199305713,
+    "parameter_count": 8548,
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "architecture_receptive_field": 1,
+    "supplied_tokens": 64,
+    "effective_tokens": 1,
+    "gradients_before": {
+      "event_bce_encoder_norm": 0.03018026426434517,
+      "direction_encoder_norm": 0.061309654265642166,
+      "cosine_event_direction": 0.21654322743415833,
+      "output_gradient_abs_mean": [
+        0.0019532234873622656,
+        0.0007590727182105184,
+        0.0008418977959081531,
+        0.0005490537732839584
+      ],
+      "loss": 1.1476984024047852,
+      "n": 256,
+      "event_n": 106,
+      "diagnostic_formulation": "BCE event versus conditional CE, same root denominator; only meaningful for factorized output",
+      "all_finite": true
+    },
+    "gradients_selected": {
+      "event_bce_encoder_norm": 0.0770123153924942,
+      "direction_encoder_norm": 0.032297417521476746,
+      "cosine_event_direction": -0.2191590964794159,
+      "output_gradient_abs_mean": [
+        0.0018657783512026072,
+        0.0007911432185210288,
+        0.0007920832140371203,
+        3.3962028282985557e-06
+      ],
+      "loss": 0.9585109353065491,
+      "n": 256,
+      "event_n": 106,
+      "diagnostic_formulation": "BCE event versus conditional CE, same root denominator; only meaningful for factorized output",
+      "all_finite": true
+    },
+    "selection": "minimum validation joint NLL, min_delta, earliest retained tie"
+  },
+  "evaluation": {
+    "train": {
+      "model": {
+        "n": 3205,
+        "joint_nll": 0.9198471960462586,
+        "accuracy": 0.6202808112324493,
+        "event_nll": 0.6585022708948076,
+        "event_brier": 0.23297647070750935,
+        "event_auc": 0.5681608136906897,
+        "event_ece": 0.02311042552805171,
+        "direction_nll_given_event": 0.6882584101153663,
+        "state_counts": [
+          1988,
+          577,
+          640,
+          0
+        ],
+        "mean_joint_probability": [
+          0.6141158029925247,
+          0.1693073810774153,
+          0.21578985017937916,
+          0.0007869642535056108
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 10,
+            "probability": 0.2946441888809204,
+            "frequency": 0.2
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 2059,
+            "probability": 0.3681240605752175,
+            "frequency": 0.3457989315201554
+          },
+          {
+            "lower": 0.4,
+            "count": 1136,
+            "probability": 0.4188776133765637,
+            "frequency": 0.44278169014084506
+          },
+          {
+            "lower": 0.5,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.8,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      },
+      "prior": {
+        "n": 3205,
+        "joint_nll": 0.9267747229887167,
+        "accuracy": 0.6202808112324493,
+        "event_nll": 0.6639266017399131,
+        "event_brier": 0.2355325797734806,
+        "event_auc": 0.5,
+        "event_ece": 0.00023092036871380506,
+        "direction_nll_given_event": 0.6922171147102836,
+        "state_counts": [
+          1988,
+          577,
+          640,
+          0
+        ],
+        "mean_joint_probability": [
+          0.6200498908637642,
+          0.18007483629560286,
+          0.19971936389148356,
+          0.00015590894917367706
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 3205,
+            "probability": 0.3799501091362645,
+            "frequency": 0.3797191887675507
+          },
+          {
+            "lower": 0.4,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.5,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.8,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      }
+    },
+    "validation": {
+      "model": {
+        "n": 1593,
+        "joint_nll": 0.9510234035712479,
+        "accuracy": 0.60075329566855,
+        "event_nll": 0.673036850145654,
+        "event_brier": 0.23997846117082464,
+        "event_auc": 0.5171165132128047,
+        "event_ece": 0.02294163234714285,
+        "direction_nll_given_event": 0.6962776408914643,
+        "state_counts": [
+          957,
+          299,
+          337,
+          0
+        ],
+        "mean_joint_probability": [
+          0.6029776293230147,
+          0.1780039161228565,
+          0.2178355886344257,
+          0.0011828644090170293
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 5,
+            "probability": 0.2903031349182129,
+            "frequency": 0.6
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 752,
+            "probability": 0.37035078777277725,
+            "frequency": 0.3949468085106383
+          },
+          {
+            "lower": 0.4,
+            "count": 836,
+            "probability": 0.42165230670899295,
+            "frequency": 0.4019138755980861
+          },
+          {
+            "lower": 0.5,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.8,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      },
+      "prior": {
+        "n": 1593,
+        "joint_nll": 0.9496908226468406,
+        "accuracy": 0.60075329566855,
+        "event_nll": 0.6734903975981154,
+        "event_brier": 0.24022113199805264,
+        "event_auc": 0.5,
+        "event_ece": 0.019296595195185673,
+        "direction_nll_given_event": 0.6918038948154392,
+        "state_counts": [
+          957,
+          299,
+          337,
+          0
+        ],
+        "mean_joint_probability": [
+          0.6200498908637209,
+          0.18007483629560286,
+          0.19971936389148354,
+          0.0001559089491736876
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 1593,
+            "probability": 0.3799501091362644,
+            "frequency": 0.3992467043314501
+          },
+          {
+            "lower": 0.4,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.5,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.8,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      }
+    },
+    "calibration": {
+      "model": {
+        "n": 1626,
+        "joint_nll": 0.9359971727113241,
+        "accuracy": 0.6107011070110702,
+        "event_nll": 0.6715133351401235,
+        "event_brier": 0.23923669848708778,
+        "event_auc": 0.4885955241190704,
+        "event_ece": 0.03689605345878504,
+        "direction_nll_given_event": 0.6793850235241269,
+        "state_counts": [
+          993,
+          274,
+          359,
+          0
+        ],
+        "mean_joint_probability": [
+          0.5942924067762945,
+          0.18495761796942056,
+          0.21960295330810958,
+          0.0011470186752945734
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 1,
+            "probability": 0.29797428846359253,
+            "frequency": 0.0
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 627,
+            "probability": 0.3769438306680707,
+            "frequency": 0.40350877192982454
+          },
+          {
+            "lower": 0.4,
+            "count": 998,
+            "probability": 0.4238865635915844,
+            "frequency": 0.3807615230460922
+          },
+          {
+            "lower": 0.5,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.8,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      },
+      "prior": {
+        "n": 1626,
+        "joint_nll": 0.9364347043846627,
+        "accuracy": 0.6107011070110702,
+        "event_nll": 0.6686183575987384,
+        "event_brier": 0.23783266466604747,
+        "event_auc": 0.5,
+        "event_ece": 0.009348783852665465,
+        "direction_nll_given_event": 0.6879453078576825,
+        "state_counts": [
+          993,
+          274,
+          359,
+          0
+        ],
+        "mean_joint_probability": [
+          0.6200498908637204,
+          0.18007483629560286,
+          0.19971936389148306,
+          0.00015590894917368736
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 1626,
+            "probability": 0.3799501091362644,
+            "frequency": 0.3892988929889299
+          },
+          {
+            "lower": 0.4,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.5,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.8,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      }
+    },
+    "test": {
+      "model": {
+        "n": 1649,
+        "joint_nll": 0.9667822625417823,
+        "accuracy": 0.5985445724681625,
+        "event_nll": 0.6739977350051907,
+        "event_brier": 0.24039413459640033,
+        "event_auc": 0.5343322711870633,
+        "event_ece": 0.02867885688494886,
+        "direction_nll_given_event": 0.7293076826402414,
+        "state_counts": [
+          987,
+          350,
+          312,
+          0
+        ],
+        "mean_joint_probability": [
+          0.6272234293531114,
+          0.14940593599044172,
+          0.22166243663623594,
+          0.0017081969325634225
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 14,
+            "probability": 0.29360162786075045,
+            "frequency": 0.42857142857142855
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 1273,
+            "probability": 0.3608167240775109,
+            "frequency": 0.38177533385703066
+          },
+          {
+            "lower": 0.4,
+            "count": 362,
+            "probability": 0.41789627750275543,
+            "frequency": 0.4696132596685083
+          },
+          {
+            "lower": 0.5,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.8,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      },
+      "prior": {
+        "n": 1649,
+        "joint_nll": 0.9547353603341588,
+        "accuracy": 0.5985445724681625,
+        "event_nll": 0.6745721418541452,
+        "event_brier": 0.24075144595636205,
+        "event_auc": 0.5,
+        "event_ece": 0.02150531839557307,
+        "direction_nll_given_event": 0.6978688025280098,
+        "state_counts": [
+          987,
+          350,
+          312,
+          0
+        ],
+        "mean_joint_probability": [
+          0.6200498908637201,
+          0.18007483629560286,
+          0.19971936389148276,
+          0.00015590894917368706
+        ],
+        "reliability": [
+          {
+            "lower": 0.0,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.1,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.2,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "count": 1649,
+            "probability": 0.3799501091362644,
+            "frequency": 0.4014554275318375
+          },
+          {
+            "lower": 0.4,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.5,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.8,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          },
+          {
+            "lower": 0.9,
+            "count": 0,
+            "probability": null,
+            "frequency": null
+          }
+        ]
+      }
+    }
+  },
+  "selected_threshold": 1.01,
+  "calibration_grid": [
+    {
+      "threshold": 0.35,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    },
+    {
+      "threshold": 0.5,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    },
+    {
+      "threshold": 0.65,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    },
+    {
+      "threshold": 0.8,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    },
+    {
+      "threshold": 1.01,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    }
+  ],
+  "projections": {
+    "calibration": {
+      "threshold": 1.01,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    },
+    "calibration_forced_05": {
+      "threshold": 0.5,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    },
+    "test": {
+      "threshold": 1.01,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    },
+    "test_forced_05": {
+      "threshold": 0.5,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    }
+  },
+  "prior_policy": {
+    "threshold": 1.01,
+    "calibration_grid": [
+      {
+        "threshold": 0.35,
+        "completed": true,
+        "censored": null,
+        "trades": 0,
+        "closed_net": 0.0,
+        "closed_cash_max_drawdown": 0.0,
+        "win_rate": null,
+        "entry_timeouts": 0,
+        "causally_ineligible": 0,
+        "maximum_adverse_trade_mark": null,
+        "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+      },
+      {
+        "threshold": 0.5,
+        "completed": true,
+        "censored": null,
+        "trades": 0,
+        "closed_net": 0.0,
+        "closed_cash_max_drawdown": 0.0,
+        "win_rate": null,
+        "entry_timeouts": 0,
+        "causally_ineligible": 0,
+        "maximum_adverse_trade_mark": null,
+        "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+      },
+      {
+        "threshold": 0.65,
+        "completed": true,
+        "censored": null,
+        "trades": 0,
+        "closed_net": 0.0,
+        "closed_cash_max_drawdown": 0.0,
+        "win_rate": null,
+        "entry_timeouts": 0,
+        "causally_ineligible": 0,
+        "maximum_adverse_trade_mark": null,
+        "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+      },
+      {
+        "threshold": 0.8,
+        "completed": true,
+        "censored": null,
+        "trades": 0,
+        "closed_net": 0.0,
+        "closed_cash_max_drawdown": 0.0,
+        "win_rate": null,
+        "entry_timeouts": 0,
+        "causally_ineligible": 0,
+        "maximum_adverse_trade_mark": null,
+        "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+      },
+      {
+        "threshold": 1.01,
+        "completed": true,
+        "censored": null,
+        "trades": 0,
+        "closed_net": 0.0,
+        "closed_cash_max_drawdown": 0.0,
+        "win_rate": null,
+        "entry_timeouts": 0,
+        "causally_ineligible": 0,
+        "maximum_adverse_trade_mark": null,
+        "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+      }
+    ],
+    "test": {
+      "threshold": 1.01,
+      "completed": true,
+      "censored": null,
+      "trades": 0,
+      "closed_net": 0.0,
+      "closed_cash_max_drawdown": 0.0,
+      "win_rate": null,
+      "entry_timeouts": 0,
+      "causally_ineligible": 0,
+      "maximum_adverse_trade_mark": null,
+      "interpretation": "One reference ounce, fixed taker recipe, realized cash only; closed drawdown excludes intra-trade drawdown; incomplete projection is not a full-period return"
+    }
+  },
+  "diagnostics": {
+    "crossing_rows_execution_columns": [
+      [
+        2439,
+        631,
+        583,
+        0
+      ],
+      [
+        888,
+        633,
+        82,
+        0
+      ],
+      [
+        978,
+        68,
+        778,
+        0
+      ],
+      [
+        86,
+        29,
+        42,
+        0
+      ]
+    ],
+    "common_count": 7237,
+    "direct_X_channels": 81,
+    "normalized_input_channels": 163,
+    "complete_window_fraction": 0.9553305539011316,
+    "risk_quantiles": [
+      1.7999999999999998,
+      2.6,
+      3.6
+    ],
+    "target_change_rate": {
+      "execution": 0.442933765747786,
+      "crossing": 0.22131147540983606
+    }
+  },
+  "limitations": {
+    "status": "engineering_demonstration_on_previously_inspected_week",
+    "units": "USD per reference ounce; no contract multiplier or account sizing",
+    "selection": "checkpoint on validation NLL; policy threshold on calibration only; test descriptive once",
+    "context": "64 roots at 30 seconds plus compressed current/previous London summaries; not full two-day microstructure",
+    "rationale": "BCE joint NLL is the proper baseline. Fixed delayed-exit labels match replay. The small TCN tests a roughly 30-minute local path without a large architecture sweep."
+  },
+  "controls": "SKIPPED: comparison run; use baseline controls"
+}
