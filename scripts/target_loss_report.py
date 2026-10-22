@@ -25,7 +25,7 @@ def finish(fig,name):
 def schema_plot(m):
     fig=plt.figure(figsize=(15,10),layout='constrained');gs=fig.add_gridspec(2,3,height_ratios=[1.1,1])
     ax=fig.add_subplot(gs[0,:]);ax.axis('off')
-    ax.set_title('Actual learning contract: independent side-attempts, two proper classification losses',fontsize=14,pad=15)
+    ax.set_title('Actual learning contract: separately scored side-attempts, two proper classification losses',fontsize=14,pad=15)
     boxes=[(.02,.58,.24,.30,'Known decision-time X\n6 / 22 / 30 / 37 / 58 / 66 scalars\nNo row-order memory\nUniform weight per eligible row'),
            (.35,.62,.25,.27,'Fill head\ny = 1 for TAKE / STOP / TIME\ny = 0 for EMPTY\nUNKNOWN excluded'),
            (.35,.18,.25,.27,'Conditional path head\ny = one-hot TAKE / STOP / TIME\nOnly observed filled rows\nEMPTY / UNKNOWN excluded'),
@@ -133,6 +133,32 @@ def guess_plot(m,frame):
     return finish(fig,'05_prior_and_model_guesses.png')
 
 
+def geometry_plot(m,frame):
+    roots=frame.loc[frame.side==1].copy();roots['sigma']=np.exp(roots.log_sigma)
+    result=[]
+    for month,d in roots.groupby(roots.date.str[:7]):
+        result.append(dict(month=month,n_roots=len(d),
+            sigma_ticks_per_sqrt_s_quantiles=np.quantile(d.sigma,[.1,.5,.9]).tolist(),
+            stop_over_sigma_sqrt300_quantiles=np.quantile(12/(d.sigma*np.sqrt(300)),[.1,.5,.9]).tolist(),
+            spread_over_stop_quantiles=np.quantile(d.spread_ticks/12,[.1,.5,.9]).tolist()))
+    save(REPORT/'barrier_geometry.json',dict(status='DESCRIPTIVE_POSTHOC',monthly=result,
+        formula='stop_ticks / (sigma600_ticks_per_sqrt_s * sqrt(300)); diffusive reference, not a future volatility forecast',
+        selection='all original v2 roots, one side to avoid duplication; added after initial temporal plots, no model change',
+        source_units_code_sha256=sha('spectrum/cognition/scalper.py')))
+    fig,ax=plt.subplots(1,3,figsize=(16,5.5),layout='constrained');months=[r['month'] for r in result]
+    fig.suptitle('A visible price wave is not the current teacher: a fixed executable 24/12-tick first-hit race',fontsize=13)
+    for a,key,title in [(ax[0],'stop_over_sigma_sqrt300_quantiles','12-tick stop / diffusive sigma600 sqrt(300)'),
+                         (ax[1],'spread_over_stop_quantiles','Decision spread / 12-tick stop')]:
+        v=np.array([r[key] for r in result]);a.plot(months,v[:,1],'o-',color='#bf437e');a.fill_between(months,v[:,0],v[:,2],alpha=.18,color='#bf437e')
+        for i,val in enumerate(v[:,1]):a.annotate(f'{val:.3f}',(i,val),xytext=(0,8),textcoords='offset points',ha='center',fontsize=8)
+        a.set(title=title,ylabel='Median; shading = 10th-90th percentile');a.tick_params(axis='x',rotation=20)
+    for cat,color in [('TAKE',C['TAKE']),('STOP',C['STOP']),('TIME',C['TIME'])]:
+        d=[r for r in m['class_distribution'] if r['mode']=='P' and r['category']==cat]
+        ax[2].plot([r['month'] for r in d],[r['busy_s_quantiles'][1] for r in d],'o-',label=cat,color=color)
+    ax[2].set(title='Time until release from the decision, P',ylabel='Median busy seconds (includes entry wait)');ax[2].legend();ax[2].tick_params(axis='x',rotation=20)
+    return finish(fig,'06_barrier_geometry.png')
+
+
 def time_scene(record,frame,zoom=False):
     date=record['date'];dense=pd.read_parquet(DATA/(date+'_dense.parquet'));d=dense.loc[dense['mode']=='P'];london=int(record['london_ns'])
     root=frame.loc[(frame.date==date)&(frame.side==1)].sort_values('t_ns').copy();root.index=pd.to_datetime(root.t_ns,unit='ns',utc=True)
@@ -141,12 +167,13 @@ def time_scene(record,frame,zoom=False):
     split='FIT: final-model training residual' if date<'2026-01' else 'B: evaluation residual, not a training update'
     fig.suptitle(f'{date} | {split} | '+('fixed London +60 to +120 min' if zoom else 'full supported session')+'\nEach origin asks a separate 24/12-tick, 300-second question. Targets are future facts; forecasts use their own past.',fontsize=12)
     dl=d.loc[d.side==1].sort_values('t_ns');x=(dl.t_ns.to_numpy()-london)/3.6e12
-    mid=dl.mid.to_numpy().copy();breaks=np.r_[False,(np.diff(dl.t_ns)!=10**9)|(np.diff(dl.epoch)!=0)];mid[breaks]=np.nan
+    mid=dl.mid.to_numpy().copy();breaks=np.r_[False,(np.diff(dl.t_ns)!=10**9)|(np.diff(dl.epoch)!=0)];mid[breaks|~dl.audit_support.to_numpy()]=np.nan
     ax[0].plot(x,mid,color='#416aa8',lw=.7);ax[0].set_ylabel('GC mid $/oz')
     grid=np.arange(int(d.t_ns.min()),int(d.t_ns.max())+10**9,10**9,dtype=np.int64)
-    matrix=np.stack([d.loc[d.side==side].set_index('t_ns').category.reindex(grid).fillna(-1).to_numpy()+1 for side in (1,-1)])
+    shown=d.copy();shown.loc[~shown.audit_support,'category']=-1
+    matrix=np.stack([shown.loc[shown.side==side].set_index('t_ns').category.reindex(grid).fillna(-1).to_numpy()+1 for side in (1,-1)])
     ax[1].imshow(matrix,aspect='auto',interpolation='nearest',origin='upper',extent=[(grid[0]-london)/3.6e12,(grid[-1]-london)/3.6e12,1.5,-.5],vmin=0,vmax=4,cmap=ListedColormap([C[k] for k in ['UNKNOWN','TAKE','STOP','TIME','EMPTY']]))
-    ax[1].set_yticks([0,1],['LONG','SHORT']);ax[1].set_title('Dense 1s hard labels: green TAKE | red STOP | gold TIME | blue EMPTY | grey unknown',fontsize=9)
+    ax[1].set_yticks([0,1],['LONG','SHORT']);ax[1].set_title('Dense 1s hard labels: green TAKE | red STOP | gold TIME | blue EMPTY | grey unknown / audit support gap',fontsize=9)
     rx=(root.t_ns.to_numpy()-london)/3.6e12;known=root.category>=0;filled=known&(root.category<3)
     for a,field,title in [(ax[2],'pf_','P(fill)'),(ax[3],'pc0_','P(TAKE | fill)')]:
         for family in ['baseline','rich_flow','rich_spectrum']:
@@ -154,13 +181,17 @@ def time_scene(record,frame,zoom=False):
             # Reindexing is deliberately avoided: draw only original forecasts.
             a.scatter(rx,values,s=4,color=MODEL[family],label=family,alpha=.85)
         a.set(ylim=(-.03,1.03),ylabel=title)
-    fill_y=pd.Series(np.where(known,filled.astype(float),np.nan),index=root.index)
-    take_y=pd.Series(np.where(filled,(root.category==0).astype(float),np.nan),index=root.index)
+    supported=root.audit_support.to_numpy()&known.to_numpy()
+    fill_y=pd.Series(np.where(supported,filled.astype(float),np.nan),index=root.index)
+    take_y=pd.Series(np.where(supported&filled,(root.category==0).astype(float),np.nan),index=root.index)
+    blocks=np.cumsum(np.r_[True,(np.diff(root.t_ns)!=30*10**9)|(np.diff(root.audit_segment)!=0)|~supported[:-1]|~supported[1:]])
     for a,y in [(ax[2],fill_y),(ax[3],take_y)]:
-        local=y.rolling('20min',center=True,min_periods=15).mean()
+        local=pd.Series(np.nan,index=root.index)
+        for block in np.unique(blocks):
+            mask=blocks==block;local.loc[mask]=y.loc[mask].rolling('20min',center=True,min_periods=15).mean()
         a.plot(rx,local.to_numpy(),color='#d28b18',lw=1.3,label='20min centered realized rate: HINDSIGHT, not target / true probability')
         a.legend(fontsize=7,loc='upper right',ncol=2)
-    g=root.g_path.to_numpy();show=np.isfinite(g)
+    g=root.g_path.to_numpy();show=np.isfinite(g)&supported
     ax[4].vlines(rx[show],0,g[show],colors=np.where(g[show]<0,C['TAKE'],C['STOP']),lw=.5,alpha=.6)
     ax[4].scatter(rx[show],g[show],s=5,c=np.where(g[show]<0,C['TAKE'],C['STOP']))
     ax[4].axhline(0,color='gray',lw=.6);ax[4].set(ylabel='TAKE-logit gradient p - y',ylim=(-1.02,1.02),xlabel='Hours since London open (each probability point has its own causal past)')
@@ -171,7 +202,7 @@ def time_scene(record,frame,zoom=False):
 
 def main():
     m=json.loads((REPORT/'measurements.json').read_text(encoding='utf-8'));frame=pd.read_parquet(DATA/'frame_P.parquet')
-    files=[schema_plot(m),distribution_plot(m),temporal_plot(m),training_plot(m),guess_plot(m,frame)]
+    files=[schema_plot(m),distribution_plot(m),temporal_plot(m),training_plot(m),guess_plot(m,frame),geometry_plot(m,frame)]
     for r in m['dense_dates']:
         files.append(time_scene(r,frame))
         if r['date'][:7] in ['2025-10','2026-01','2026-02']:files.append(time_scene(r,frame,True))
