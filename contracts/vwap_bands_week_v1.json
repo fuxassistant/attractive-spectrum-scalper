@@ -1,0 +1,17 @@
+{
+  "version": "VWAP_BANDS_WEEK_V1",
+  "dates": ["2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06"],
+  "selection": "First complete February Monday-Friday; GCJ6 throughout; chosen before measurements",
+  "clock": "Causal canonical complete-publication available_ns; 1-second observations London open through liquidation deadline",
+  "bollinger": "Existing native developing 19 completed closes + current midpoint; SMA20 +/- 2 sample SD (ddof=1); M1/M3/M6/M9",
+  "vwap": "Sum(price_T * quantity_T)/sum(quantity_T); +/-2 sqrt(sum(quantity_T*(price_T-VWAP)^2)/sum(quantity_T)); population price dispersion, not standard error",
+  "aligned_window": "Current native bucket opening minus 19 native periods, inclusive, through current observation inclusive; same temporal support as 19 completed bars + current developing bar",
+  "rolling_window": "(t-W,t], calendar counterparts 20/60/120/180 minutes",
+  "controls": ["VWMA native midpoint closes weighted by each bar T volume", "VWAP of publication midpoint at each T, same volumes/times", "Exact trade VWAP"],
+  "variance_control": "Bollinger sample SD is sqrt(20/19) times its population SD; width comparisons retain and disclose this 2.60 percent factor",
+  "support": "No cross-contract stitching; invalid BBO, epoch changes or >60s publication gaps reset; rolling windows require full supported interval; native comparison uses BB warmup too",
+  "trend": "60-second central-line displacement; sign disagreement only when both absolute displacements exceed one GC tick ($0.10); report sample count",
+  "scale_match": "Calendar match is primary. Secondary line-RMSE fit over factors 0.5/0.75/1/1.25/1.5/2 on Feb2-3 only, compare Feb4-6 on identical common candidate support. Descriptive geometry calibration, no profit fit.",
+  "causality": "All T in completed publications, including unknown aggressor side; F and C excluded. Future source rows never enter an observation.",
+  "scope": "One-week descriptive line/band comparison. No fitted trading model, no execution or profitability claim. Sampled paths are not a full quote-clock crossing bank."
+}
