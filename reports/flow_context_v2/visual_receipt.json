@@ -1,0 +1,21 @@
+{
+  "images": {
+    "01_coverage.png": "6f287483606d18723295fc54180584346f89d9f5c6326ec02096df4dc95319ed",
+    "02_separate_heads.png": "2c17ebafde190ec126edfc4949371e2bd2110bcc81db157eaed4055963d38468",
+    "03_feature_usage.png": "8e30e9bb0a076dc16a61087411260128bebb6fab93ff9c63dd38c5d31c014d8c",
+    "04_calibration_economics.png": "90aadbf82edb6bdfa7e3aab435ae8a886af532e7e4c7c1808bd55a3e20c2d5f1",
+    "05_day_context.png": "75f24514401a85be3574464c47cacb3814296b5f1086cba28df6c482696af88f",
+    "scene_01_take.png": "7d98f5c67b5e5a823353d71f5ca2358b349428c30f1c59c2e734e35acbac6937",
+    "scene_02_stop.png": "d57d4873a1f0d4c7a7f654818e218be0954db489a289d17688cdab3cb99e6423",
+    "scene_03_time.png": "2b0c475bebaa4010071b937882466234a8d8baf2d5895e7b56547d97d4e26e30",
+    "scene_04_empty.png": "e99afb4c9ee9de77538463eb57fb375efd405ccba4e08498a3376e710e404adb",
+    "scene_05_censored.png": "3f8475d9bc7d7f49eb3a838ee5b1e8bdfb9a0a050e8bfa3884e35c037d702665",
+    "scene_06_stop.png": "df81a7e47c7b00ef7da5de2ce4cb76f79179617a342dc6b46df1d3fb6daf297d",
+    "scene_07_stop.png": "72a0f88c2c3b5234b90f67cf1e23bd320836c88564a63df71637d2bff07da539",
+    "scene_08_take.png": "e937d5af5c53191bb7e5b380d9cbddf8b36591e823681a5ed4980e6da8559000",
+    "scene_09_stop.png": "d1fa2fa47aac7c60256e9e78032ba46984b645e7eac232f6ce865a08ddce23f8"
+  },
+  "summary_sha256": "f60aca8e7f69fa13fe302fb4c04ab108c7dbc41770b409c71d70f5b91430321b",
+  "scene_selection_sha256": "a37a05222a407879ccc3ada2b29e346c951a320f25bbb18f6b320c7d840a7583",
+  "script_sha256": "ef19ca91c5cf81d7d6d06dc7c607e273acdb3df369b675bb64a46bf2380eb4dc"
+}

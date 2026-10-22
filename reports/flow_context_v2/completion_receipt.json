@@ -1,0 +1,43 @@
+{
+  "status": "COMPLETE",
+  "identity": {
+    "contracts\\flow_context_v2.json": "0939169445abe388765d584a752c540c6467cce61e027f053beda8a518e57c38",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\flow_context.py": "43b41ec5e901bff03f01ac85a2bcfce60d6ac3df586b48801ef56310f640051a",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\episodes.py": "29a6b5f867dc96ca521eb2814175494c28ed6f996d3139c2238550d4fbc15c4b",
+    "D:\\scalper-mini\\attractive-spectrum-scalper\\spectrum\\cognition\\flow_context_lab.py": "f5ac6fade1c54a2d2d2e82671b7fa160fa1c36278babd95d5f6e6770c42ddeca",
+    "contracts\\opportunity_episodes_v1.json": "5887f6a51ae2dac3689265b205b7b2fd7ebc95a21418246f0cce7b21f75b7855"
+  },
+  "summary_sha256": "f60aca8e7f69fa13fe302fb4c04ab108c7dbc41770b409c71d70f5b91430321b",
+  "manifest_sha256": "0f6c5363823917f53d55e9a8ec77186184dc78aac8f29db6c74f320c240cc1a8",
+  "prediction_sha256": {
+    "predictions_A2_P_baseline.parquet": "6e3b4dc3fa5bd204358ff196dd0a0b2f9331214b2780e54162ac200e043c0e75",
+    "predictions_A2_P_flow.parquet": "83349d946f46998dfa1542e9d6db4ca1cbac7b6f941343fbb99f37495f34b38e",
+    "predictions_A2_P_flow_episode.parquet": "0f63cee51eef5e3ef06e5114c9c12c2da2cbcb5f34ab48378ef5b34c2a84b44e",
+    "predictions_A2_P_rich_day.parquet": "28312de529517d4cf45019ef210a6d4dcc564b4bbc7902101840c8a8bd7da209",
+    "predictions_A2_P_rich_flow.parquet": "12fa211ec9b48f0de5044aa100707e6437700be104e8964f57da3bb52cb20840",
+    "predictions_A2_P_rich_spectrum.parquet": "6f429301c9d0a48f042978e0be9726dc9d3cf493239106b8bd2b4ef5bb1f6632",
+    "predictions_A2_P_shuffled.parquet": "560bd7687dc600bd71dd6f6ed87d8b4550edcacef4b8c63336f69e20296ecca7",
+    "predictions_A2_T_baseline.parquet": "00eac86149060f6a9add6cbfad52df240b3fe035702de9b5da972548cbdc8ec1",
+    "predictions_A2_T_flow.parquet": "a0dd67dc7d871132119f720ffe89ba40d38beb7e5c0078af36400e000535c366",
+    "predictions_A2_T_flow_episode.parquet": "f0b196944e97ea22fee8a9760e77c072cf88b02c566e77733f20464806fc1816",
+    "predictions_A2_T_rich_day.parquet": "37be73301cd414cc097b3cf9e13d57c2f6398f82a32ecd75b5be702ea879a3b5",
+    "predictions_A2_T_rich_flow.parquet": "2578458d513e7150f5e819c7350c69f58dc4ccf445170432ba6861c2d4336333",
+    "predictions_A2_T_rich_spectrum.parquet": "29a4772b644424b6b2a768e7f161d2e3ce2aa35d54098479ff4efcbc5dd6e853",
+    "predictions_A2_T_shuffled.parquet": "1aceeab3c3bf9cc29da54a30dc06bfbf378afe2900e249baa13a519502467d9e",
+    "predictions_B_P_baseline.parquet": "27f2c4a94206030db61761f7212cc1f272a30b9fda874e0881633229f445b6f4",
+    "predictions_B_P_flow.parquet": "59dbc108735c86ba5b6ac86352da87e0e91e5ebd9cdc754041691d3181e8d21d",
+    "predictions_B_P_flow_episode.parquet": "d21e8c19c7f868e63308d4e2da16d464cb40802c702e83c64cb76f4b0be2c05a",
+    "predictions_B_P_rich_day.parquet": "a0c4489ce3d57f69e295f12e62436d7ebbeaf8320ec1209fdb3a384359c7b50b",
+    "predictions_B_P_rich_flow.parquet": "53497172eebcf4c07cdf6e953d73b79d777ace5dc83f4b7402ea18cb4c9c8c44",
+    "predictions_B_P_rich_spectrum.parquet": "cc18b89376c94fd31a88ed7b60a6307bb02186752519ca04fc9813ad87b74032",
+    "predictions_B_P_shuffled.parquet": "f26777f3ef80e7b45275c2803a985a3edc798cf9c075b6f153773be1d667a448",
+    "predictions_B_T_baseline.parquet": "1c5b4249610b49d6e13ec3185f7be5901ba4a9dc582bf12016c0982a8ced5855",
+    "predictions_B_T_flow.parquet": "9526f61752bf9c48b6292258304b209ce33d09a4e95e604ea812f02bd99d88cc",
+    "predictions_B_T_flow_episode.parquet": "ae7c8ef04dff81e389fbe52656a66afd0a5412765cf3cf81363bad921b9cd05c",
+    "predictions_B_T_rich_day.parquet": "ad68a44d040b5b6d60acf78bddfd293da9c70375492b63796de8aedbe00acd67",
+    "predictions_B_T_rich_flow.parquet": "a4d6f6a086bb711935bafc06171187c88783c702da63cf43aaf4f11ecc2f383a",
+    "predictions_B_T_rich_spectrum.parquet": "5706a8832903d579f9a26bb45e6589bf4b9e3acdd1b9db85e42177c21b2706ed",
+    "predictions_B_T_shuffled.parquet": "fcef9eaf9f543bd6601690c738d6d3ef76de6c1b7ab3e76b72a4dc8d2778e834"
+  },
+  "completed_utc": "2026-10-22T03:01:02.775651+00:00"
+}

@@ -1,0 +1,69 @@
+{
+  "scenes": [
+    {
+      "date": "2026-01-02",
+      "t_ns": "1767340950000000000",
+      "side": -1,
+      "mode": "P",
+      "selection": "first_TAKE"
+    },
+    {
+      "date": "2026-01-02",
+      "t_ns": "1767340830000000000",
+      "side": -1,
+      "mode": "P",
+      "selection": "first_STOP"
+    },
+    {
+      "date": "2026-01-02",
+      "t_ns": "1767341250000000000",
+      "side": 1,
+      "mode": "P",
+      "selection": "first_TIME"
+    },
+    {
+      "date": "2026-01-02",
+      "t_ns": "1767340830000000000",
+      "side": 1,
+      "mode": "P",
+      "selection": "first_EMPTY"
+    },
+    {
+      "date": "2026-01-02",
+      "t_ns": "1767346350000000000",
+      "side": 1,
+      "mode": "P",
+      "selection": "first_CENSORED"
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770035100000000000",
+      "side": 1,
+      "mode": "P",
+      "selection": "first_Feb_spread_0-2"
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770041220000000000",
+      "side": 1,
+      "mode": "P",
+      "selection": "first_Feb_spread_2-4"
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770019650000000000",
+      "side": 1,
+      "mode": "P",
+      "selection": "first_Feb_spread_4-8"
+    },
+    {
+      "date": "2026-02-02",
+      "t_ns": "1770019230000000000",
+      "side": 1,
+      "mode": "P",
+      "selection": "first_Feb_spread_8+"
+    }
+  ],
+  "missing_categories": [],
+  "semantics": "calendar and first class-conditioned diagnostic candidates; not a representative random sample or selected policy trades"
+}
