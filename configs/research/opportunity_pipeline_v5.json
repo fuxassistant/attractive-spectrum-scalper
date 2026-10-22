@@ -1,0 +1,245 @@
+{
+  "schema": "scientific_opportunity_pipeline_v5",
+  "run_id": "frozen_uniform_risk_filter_v5",
+  "seed": 17,
+  "data": {
+    "root": "data/derived/scientific_pipeline_v5/dataset",
+    "market_root": "data/derived/basket_multimonth_v1",
+    "source_root": "data/derived/full_mbo_v1",
+    "admission_overlay": "reports/full_mbo_v1/audit_20261016/training_admission_overlay.json",
+    "source_inventory": "reports/scientific_pipeline_v5/source_inventory.json",
+    "source_inventory_sha256": "c88a435a622c51e4aba4e829cad375e38aa53a11e7d2f8ae9dfc43aa26a98796",
+    "dates": [
+      "2026-07-30",
+      "2026-08-04",
+      "2026-08-05",
+      "2026-08-06",
+      "2026-08-07",
+      "2026-08-10",
+      "2026-08-11",
+      "2026-08-12",
+      "2026-08-13",
+      "2026-08-14",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27",
+      "2026-09-01"
+    ],
+    "family": "micro",
+    "sequence_length": 64,
+    "cadence_seconds": 5,
+    "max_feature_age_seconds": 2.0,
+    "context_mode": "restored"
+  },
+  "splits": {
+    "train": [
+      "2026-07-30",
+      "2026-08-04",
+      "2026-08-05",
+      "2026-08-06",
+      "2026-08-07",
+      "2026-08-10",
+      "2026-08-11"
+    ],
+    "validation": [
+      "2026-08-12",
+      "2026-08-13",
+      "2026-08-14"
+    ],
+    "calibration": [
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "test": [
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27",
+      "2026-09-01"
+    ]
+  },
+  "event_query": {
+    "family": "BB",
+    "scales": [
+      1,
+      3,
+      6
+    ],
+    "deadline_seconds": 300.0,
+    "gain_multiple": 2.0,
+    "reference_fee": 0.3,
+    "risk_cost_multiple": 2.0,
+    "risk_half_multiple": 0.1,
+    "minimum_risk": 0.5
+  },
+  "execution": {
+    "fee_roundtrip": 0.3,
+    "latency_ms": 100.0,
+    "pending_timeout_seconds": 2.0,
+    "max_quote_gap_seconds": 60.0,
+    "exit_mode": "first_qualifying_crossing"
+  },
+  "risk": {
+    "cost_multipliers": [
+      2.0,
+      4.0,
+      6.0
+    ],
+    "half_multiple": 0.1,
+    "minimum_risk": 0.5,
+    "gain_reference": "fixed_event_G_for_all_plans"
+  },
+  "model": {
+    "architecture": "tcn",
+    "hidden": 32,
+    "layers": 4,
+    "kernel_size": 3,
+    "dropout": 0.05
+  },
+  "loss": {
+    "formulation": "factorized",
+    "event_loss": "bce",
+    "gamma": 0.0
+  },
+  "training": {
+    "device": "auto",
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "max_updates": 1500,
+    "validate_every": 150,
+    "patience_checks": 5,
+    "min_delta": 0.0001,
+    "cpu_threads": 4,
+    "weighting": "uniform",
+    "train_metric_probe": 2048,
+    "gradient_probe": 256,
+    "id_weighting": {
+      "alpha": 0.5,
+      "min_weight": 0.5,
+      "max_weight": 2.0
+    }
+  },
+  "policy": {
+    "threshold_candidates": [
+      0.35,
+      0.5,
+      0.65,
+      0.8,
+      1.01
+    ],
+    "minimum_calibration_trades": 50,
+    "selection": "calibration_after_cost_net_else_wait",
+    "one_position": true
+  },
+  "experiment": {
+    "seeds": [
+      17,
+      29
+    ],
+    "arms": [
+      "base",
+      "semantic",
+      "risk",
+      "hash_control"
+    ],
+    "candidate_floor": 0.35,
+    "retention_fractions": [
+      1.0,
+      0.75,
+      0.5,
+      0.25,
+      0.1
+    ],
+    "primary_retention": 0.5,
+    "primary_plan": "cost2",
+    "calibration_none_fpr": 0.05,
+    "minimum_calibration_trades": 50,
+    "selection": "Each learned arm: select risk plan and CAL retention threshold by complete CAL net>0 and >=50 trades; else WAIT. Hash is a diagnostic control only. No TEST model/seed/threshold selection.",
+    "threshold_rule": "Within causal available CAL base candidates, descending score order; for k=floor(fraction*N), threshold=nextafter(score[k],+inf), except fraction1 threshold0. Conservative ties. Frozen numeric thresholds applied to TEST.",
+    "scores": {
+      "base": "max(pL+pB,pS+pB)",
+      "semantic": "q_event*q_chosen_correct_given_event",
+      "risk": "q_event*q_chosen_correct_given_event*q_safe_given_correct_plan",
+      "hash_control": "fixed splitmix64(t_ns xor seed) deterministic uniform hash, independent of labels"
+    },
+    "side": "frozen base side only; LONG wins ties; no direction reversal by filter",
+    "risk_economic_grid": [
+      2,
+      4,
+      6
+    ],
+    "paired_comparison": "CAL matched root alert retention; TEST rates may drift. Also descriptive TEST exact-rank matched root counts, clearly nondeployable and never used for economic policy. Whole-day effects descriptive with five TEST days.",
+    "base_target_loss": "Original V2 crossing target and factorized BCE(E)+conditional CE(D) unchanged; V4 uniform checkpoints/scalers frozen. Filter auxiliary BCE labels are separate.",
+    "context": "Same 70 Micro feature values and restored 64x5s windows; frozen TCN RF61=300s. Rich day/VWAP/STFT feature bank retained but not input.",
+    "historical_exposure": "New dates relative to scientific V3/V4; cognition/dataset.py historically assigns Aug2026 to TEST, so no never-inspected holdout claim. Base trained GCQ6; all V5 selected dates GCZ6, confounding temporal and contract shifts.",
+    "fixed_visual_cases": [
+      {
+        "date": "2026-08-24",
+        "offset_hours": 0,
+        "duration_hours": 2
+      },
+      {
+        "date": "2026-09-01",
+        "offset_hours": 5,
+        "duration_hours": 2
+      }
+    ],
+    "execution_case_rule": "For seed17 TEST, earliest completed base cost2 primary-retention ledger entry per NONE, WRONG_SIDE, CORRECT_RISK_FIRST, CORRECT_SAFE bucket; plot even if uninteresting. No PnL ranking."
+  },
+  "base_models": {
+    "17": {
+      "root": "data/derived/scientific_pipeline_v4/runs/tcn_micro_restored_uniform_seed17",
+      "files": {
+        "checkpoint.pt": "97c78ae4853f28976a266b53622c2022fb6a58104a1795987d45e0b410e8ff32",
+        "scaler.json": "4dca80035b6d9f3e180370c0dfe2df6ee5a8007eb46e4df3f0b6da910b5b441d",
+        "config.json": "a4f0847a7b0b147eb2c87f28f07b5baf8ff89a3c92c0f92547ba71ecf928df2f",
+        "receipt.json": "66f6f295b95f0599159dff31296fbaec708d60a2e9e758be7f7b617b41e44348"
+      }
+    },
+    "29": {
+      "root": "data/derived/scientific_pipeline_v4/runs/tcn_micro_restored_uniform_seed29",
+      "files": {
+        "checkpoint.pt": "c91e74f6a7e8b92808b55663ce8acb3ff581a8ae227f79ac72ccbc71e53e314f",
+        "scaler.json": "4dca80035b6d9f3e180370c0dfe2df6ee5a8007eb46e4df3f0b6da910b5b441d",
+        "config.json": "bb6edb015855915dcc3cd536e0856cdb4345e85e64ab05dc97b482f774695f7d",
+        "receipt.json": "42cde9f7d667c5003e172232d3610d21c9c777951166a5ba0f5228dbdedc9df4"
+      }
+    }
+  },
+  "filter": {
+    "hidden": 32,
+    "layers": 2,
+    "dropout": 0.05,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "max_updates": 1500,
+    "validate_every": 150,
+    "patience_checks": 5,
+    "min_delta": 0.0001,
+    "cpu_threads": 4,
+    "head_names": [
+      "event",
+      "chosen_correct_given_event",
+      "safe_cost2_given_correct",
+      "safe_cost4_given_correct",
+      "safe_cost6_given_correct"
+    ],
+    "loss": "masked BCE(E)+I_E*BCE(chosen_correct)+I_correct*(BCE(safe2)+BCE(safe4)+BCE(safe6))/3; common known-root denominator; uniform roots; no focal/class/event-ID weights",
+    "input": "141 current base-scaled Micro channels + 32 frozen TCN hidden channels + 4 base joint probabilities + chosen side + 4 causal risk/cost-to-G ratios = 182 channels; own TRAIN-only standardization",
+    "risk_target": "At first qualifying chosen-side witness, pre-cross mark MAE > -R_trade; equality unsafe. Unknown and deadline-equal witnesses masked. Execution latency and censoring assessed separately.",
+    "base_updates": 0
+  }
+}
