@@ -176,3 +176,9 @@ credentials.json
 !/reports/scientific_pipeline_v3/*.json
 !/reports/scientific_pipeline_v3/*.png
 !/reports/scientific_pipeline_v3/index.html
+
+!/reports/scientific_pipeline_v4/
+/reports/scientific_pipeline_v4/*
+!/reports/scientific_pipeline_v4/*.json
+!/reports/scientific_pipeline_v4/*.png
+!/reports/scientific_pipeline_v4/index.html
