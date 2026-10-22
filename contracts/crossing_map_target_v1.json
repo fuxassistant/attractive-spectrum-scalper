@@ -1,0 +1,20 @@
+{
+  "version": "CROSSING_MAP_TARGET_V1",
+  "dates": ["2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06"],
+  "families": ["BB", "VWAP"],
+  "scales_minutes": [1, 3, 5, 6, 9],
+  "roles": ["lower", "middle", "upper"],
+  "event_identity": "Geometry-only formula/code + raw quote/source lineage + publication ordinal + role + crossing direction. Entries, thresholds, query sets, target/loss code and features do not enter physical IDs.",
+  "geometry": "Existing developing native SMA20 ddof1 BB and exact T-price quantity-weighted population-SD VWAP, 19 completed native buckets + current; +/-2 sigma. Not session-anchored.",
+  "clock": "Full canonical publication order. Compression retains every BBO/support change, every T-bearing publication, first/last publication per minute and both sides of >60s gaps. Same-ns ordinal order retained in VWAP and crossing lookup.",
+  "map": "Every 30-second London-to-deadline origin has 30 cells: two families x five scales x three lines. Each cell records its first crossing strictly after the actual entry publication; earlier crossings of OTHER lines do not terminate the cell. No 30m cap in factual map; support/session end censors.",
+  "entry": "First positive-spread supported quote strictly after origin+100ms, within 2s, same quote support. One reference ounce, BUY ask, SELL bid, roundtrip fee $0.30.",
+  "checkpoint": "LONG bid_cross-ask_entry-fee, SHORT bid_entry-ask_cross-fee; full quote-prefix MAE/MFE. These are alternative liquidation marks for one entry, not realized account trades. Optional lagged exit price requires a supported quote after cross+100ms within 2s.",
+  "risk_query": "R=max(2*(decision spread+0.30),0.10*decision BB1 halfwidth,0.50), set at decision time. G/R=0.5,1,2; primary G=2R. Deadlines 300,900,1800s after entry. Thresholds never selected using future outcomes.",
+  "favorable": ["raw: any first-line checkpoint has net>0 by D", "amplitude: any checkpoint has net>=G by D", "safe checkpoint: net>=G AND full prefix MAE>-R by D", "first passage: net reaches G before -R by D on full BBO path, regardless of crossing"],
+  "soft_quality": "For each side, max over first-line cells by D of tanh(max(net,0)/R)*exp(-max(-MAE,0)/R)*exp(-delay/D). Bounded hindsight opportunity-quality diagnostic, NOT a success probability or causal exit policy. Exact max target known only when every included cell matures.",
+  "scale_sets": {"fast5":[1,3,5],"fast6":[1,3,6],"with9":[1,3,6,9],"all":[1,3,5,6,9]},
+  "censoring": "Unknown never means NONE. Positive E witness is known even with other censored cells; direction L-only/S-only/BOTH requires both sides mature. Negative event and exact soft quality require all included cells mature at D or their first crossing.",
+  "loss_contract": "Root-averaged event BCE plus E-positive conditional direction CE {L-only,S-only,BOTH}. Conditional time/survival and normalized net/MAE quantiles are proposed separate heads; they are not claimed trained in this map audit. Head averages must not scale gradients with number of redundant lines. Physical ID weights computed on FIT only; chronology and maturity purging remain necessary.",
+  "scope": "One exposed development week; descriptive map, label distributions/roughness and exact loss-gradient checks. No trained new predictive model or economic policy admission."
+}

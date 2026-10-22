@@ -1,0 +1,41 @@
+{
+  "version": "CROSSING_MAP_TRAINING_PROPOSAL_V1",
+  "status": "PROPOSED_NOT_TRAINED",
+  "evidence": "The exposed 2026-02-02..06 week is development evidence only. This proposal is not an out-of-sample result or policy admission.",
+  "primary_query": {
+    "families": "Fit BB and VWAP as separate matched comparisons before combining them",
+    "scales": [1, 3, 6],
+    "alternative_scales": [1, 3, 5],
+    "distant_context_scale": 9,
+    "deadline_seconds": 300,
+    "gain_multiple_R": 2,
+    "R": "Use the decision-time R already frozen in crossing_map_target_v1.json",
+    "event": "At least one first-line checkpoint in the chosen map has net >= 2R by 300s",
+    "conditional_direction": ["LONG_ONLY", "SHORT_ONLY", "BOTH"],
+    "meaning": "Bounded amplitude opportunity; not an OPEN instruction or a risk-qualified trade"
+  },
+  "cohort_policy": {
+    "initial_BCE_CE": "Use the same fully mature origin cohort for positives and negatives, as in this study's reported distributions and constant-prior diagnostics. Do not mix all early witnessed positives with only fully mature negatives.",
+    "partial_witness": "E=1 can be logically known before all cells mature. Save that fact, but do not automatically admit it into ordinary calibrated BCE training: outcome-dependent inclusion can cause informative-censoring bias.",
+    "complete_case_limit": "Complete-case estimates describe the admitted population. Report coverage, rejected origins and their causal context; maturity selection does not establish unconditional calibration.",
+    "censored_training": "Partial observations require an explicitly specified survival/censoring likelihood and a check of the conditional censoring assumptions. Unsupported gaps are not negative events.",
+    "unknown_direction": "Do not label LONG_ONLY or SHORT_ONLY while the other side remains unresolved. No direction gradient for NONE or unknown direction."
+  },
+  "loss": {
+    "implemented": "Mean over admitted roots of BCE(E) + 1[E=1] CE(direction|E). Both terms share the root denominator; separately averaging CE over positives would change the objective.",
+    "probability": "P(NONE)=1-pE; P(LONG_ONLY/SHORT_ONLY/BOTH)=pE*p(direction|E). This is the same four-state joint likelihood, not a proof of easier prediction.",
+    "proposed_auxiliary_heads": [
+      "Per-line first-crossing time: discrete-time survival with supported observation exposure",
+      "Conditional net/R and full-prefix MAE/R quantiles at the crossing, evaluated on an explicitly defined observed cohort",
+      "Separate 900s and 1800s context queries; do not replace the primary deadline with a union of horizons"
+    ],
+    "gradient_scaling": "Average line heads within each root before combining with the primary loss. Fix and report auxiliary weights using FIT only. Adding a near-duplicate scale must not automatically increase root weight.",
+    "quality": "Discounted max checkpoint quality is an optional hindsight utility target, not a probability. Keep it separate from calibrated event outputs."
+  },
+  "dependence_and_split": {
+    "physical_ids": "Geometry/source identity independent of loss, thresholds and entries",
+    "weights": "Any repetition counts or event weights must be computed inside FIT only. Roots may share several events; record overlap rather than assigning independent-row significance.",
+    "split": "Chronological held-out sessions with maturity-based purging of training labels. Adjacent micro-recrosses remain dependent despite distinct IDs. ID grouping does not justify removing temporal controls or cooldown from a trading policy."
+  },
+  "acceptance": "Compare constant priors and flat four-state versus factorized heads on the same held-out cohorts. Measure calibration, time/net/risk errors, target stability and full gain-before-stop ordering separately. Economic acceptance additionally requires causal entry/exit decisions, delayed executable prices, costs and after-cost account growth; checkpoint quality alone is insufficient."
+}

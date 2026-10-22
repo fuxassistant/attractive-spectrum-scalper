@@ -148,3 +148,9 @@ credentials.json
 !/reports/vwap_bands_week_v1/*.json
 !/reports/vwap_bands_week_v1/*.png
 !/reports/vwap_bands_week_v1/index.html
+!/reports/crossing_map_target_v1/
+/reports/crossing_map_target_v1/*
+!/reports/crossing_map_target_v1/*.md
+!/reports/crossing_map_target_v1/*.json
+!/reports/crossing_map_target_v1/*.png
+!/reports/crossing_map_target_v1/index.html
