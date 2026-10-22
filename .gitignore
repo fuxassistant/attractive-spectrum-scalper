@@ -160,3 +160,8 @@ credentials.json
 !/reports/opportunity_loss_research_v1/*.md
 !/reports/opportunity_loss_research_v1/*.png
 !/reports/opportunity_loss_research_v1/index.html
+!/reports/scientific_pipeline_v1/
+/reports/scientific_pipeline_v1/*
+!/reports/scientific_pipeline_v1/*.json
+!/reports/scientific_pipeline_v1/*.png
+!/reports/scientific_pipeline_v1/index.html

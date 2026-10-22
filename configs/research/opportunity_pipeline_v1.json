@@ -1,0 +1,83 @@
+{
+  "schema": "scientific_opportunity_pipeline_v1",
+  "run_id": "tcn_execution_bce_seed17",
+  "seed": 17,
+  "data": {
+    "dates": ["2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06"],
+    "feature_family": "rich",
+    "sequence_length": 64,
+    "cadence_seconds": 30,
+    "roots_dir": "data/derived/crossing_map_target_v1",
+    "feature_roots_dir": "data/derived/bb_crossing_bank_v1",
+    "market_dir": "data/derived/basket_multimonth_v1",
+    "execution_dir": "data/derived/scientific_pipeline_v1/execution_clock_v2"
+  },
+  "splits": {
+    "train": ["2026-02-02", "2026-02-03"],
+    "validation": ["2026-02-04"],
+    "calibration": ["2026-02-05"],
+    "test": ["2026-02-06"]
+  },
+  "target": {
+    "kind": "execution_profit",
+    "family": "BB",
+    "scales": [1, 3, 6],
+    "gain_multiple": 2.0,
+    "stop_multiple": 1.0,
+    "deadline_seconds": 300,
+    "minimum_net_R": 0.0,
+    "risk_source": "frozen_crossing_roots_causal_R"
+  },
+  "execution": {
+    "fee_roundtrip": 0.30,
+    "latency_ms": 100,
+    "pending_timeout_seconds": 2,
+    "max_quote_gap_seconds": 60
+  },
+  "model": {
+    "architecture": "tcn",
+    "hidden": 32,
+    "layers": 4,
+    "kernel_size": 3,
+    "dropout": 0.05
+  },
+  "loss": {
+    "formulation": "factorized",
+    "event_loss": "bce",
+    "gamma": 0.0
+  },
+  "training": {
+    "device": "auto",
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "max_epochs": 60,
+    "patience": 12,
+    "min_delta": 0.0001,
+    "cpu_threads": 4,
+    "weighting": "uniform_roots"
+  },
+  "policy": {
+    "threshold_candidates": [0.35, 0.5, 0.65, 0.8, 1.01],
+    "selection": "calibration_after_cost_net_else_wait",
+    "minimum_calibration_trades": 20,
+    "one_position": true,
+    "temperature": 1.0
+  },
+  "controls": {
+    "synthetic_count": 768,
+    "synthetic_test_count": 384,
+    "max_epochs": 50,
+    "memorize_count": 64,
+    "memorize_epochs": 250,
+    "shuffle_seed": 1701
+  },
+  "interpretation": {
+    "status": "engineering_demonstration_on_previously_inspected_week",
+    "units": "USD per reference ounce; no contract multiplier or account sizing",
+    "selection": "checkpoint on validation NLL; policy threshold on calibration only; test descriptive once",
+    "context": "64 roots at 30 seconds plus compressed current/previous London summaries; not full two-day microstructure",
+    "rationale": "BCE joint NLL is the proper baseline. Fixed delayed-exit labels match replay. The small TCN tests a roughly 30-minute local path without a large architecture sweep."
+  }
+}
