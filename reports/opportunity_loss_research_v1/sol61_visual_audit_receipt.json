@@ -1,0 +1,10 @@
+{
+  "status": "PASS_ANALYTICAL_VISUAL_AUDIT_NOT_MODEL_OR_POLICY_ADMISSION",
+  "audit_sha256": "4b6508ade433ac23640503c8e63f1c57fe759fcabf69a36621263a557bbbc306",
+  "probes_sha256": "9a236b31f7126f6f09081f36f66f01fd3454c7fecf26880ee20e5ff8c21f225b",
+  "images_reviewed": {
+    "01_loss_gradients.png": "3728ab7e31f44ff518b9c5c8a567b3902f7772db885f7c64137ba7e2596597a8",
+    "02_population_calibration.png": "3c1597336fc2fb5360876717ae774abf3221f3503ebbc6070afbe9768afe904a",
+    "03_side_semantics.png": "f0a7db58ef438bedb2f7e07b4960160d4cd4edfcbf349cca8e9ef76baf7ee5a9"
+  }
+}

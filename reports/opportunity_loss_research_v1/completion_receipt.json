@@ -1,0 +1,27 @@
+{
+  "status": "COMPLETE_THEORY_AND_PROBES_NOT_MODEL_BENCHMARK",
+  "date": "2026-10-22",
+  "base_commit": "b553b4ea001e5400408a2d4c14b94ff37a49d4fb",
+  "source_sha256": {
+    "scripts/opportunity_loss_research.py": "1809da8a59303362f0a5694cd309a4e1252650950797681e1f76b0887ff2d9c4",
+    "contracts/opportunity_loss_research_v1.json": "44d9d7c3b0bb3ec42952f3709ab2bf9cb7c4012dc0e2fedc6f6685afd7ac2ede",
+    "reports/opportunity_loss_research_v1/01_loss_gradients.png": "3728ab7e31f44ff518b9c5c8a567b3902f7772db885f7c64137ba7e2596597a8",
+    "reports/opportunity_loss_research_v1/02_population_calibration.png": "3c1597336fc2fb5360876717ae774abf3221f3503ebbc6070afbe9768afe904a",
+    "reports/opportunity_loss_research_v1/03_side_semantics.png": "f0a7db58ef438bedb2f7e07b4960160d4cd4edfcbf349cca8e9ef76baf7ee5a9",
+    "reports/opportunity_loss_research_v1/index.html": "6d1193254dbf1f8ea064b3da65898d528d241884898581b0927fc91784221238",
+    "reports/opportunity_loss_research_v1/probes.json": "9a236b31f7126f6f09081f36f66f01fd3454c7fecf26880ee20e5ff8c21f225b",
+    "reports/opportunity_loss_research_v1/sol61_visual_audit_receipt.json": "1df2beb90f846c34268030688981b6f096d23e817f43122428d6a8dfcf2fb264",
+    "reports/opportunity_loss_research_v1/SOL61_VISUAL_AUDIT_RU.md": "4b6508ade433ac23640503c8e63f1c57fe759fcabf69a36621263a557bbbc306",
+    "reports/opportunity_loss_research_v1/sources.json": "cdf8459765251f655187016384b81fdf03717ff5201210467a9f60641328ec16"
+  },
+  "checks": {
+    "known_checkpoint_pairs": 195917,
+    "loss_derivatives_checked": 732,
+    "max_gradient_error": 1.0535573302661305e-08,
+    "source_papers": 16,
+    "images_visually_reviewed": 3,
+    "local_links_checked": 15,
+    "previous_crossing_map_sources_and_reports_unchanged": true
+  },
+  "scope": "No learner training, architecture ranking, measured negative transfer, optimal focal parameters or trading admission"
+}
