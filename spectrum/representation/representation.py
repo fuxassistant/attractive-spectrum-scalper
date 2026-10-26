@@ -9,9 +9,9 @@ import json
 import numpy as np
 import pandas as pd
 
-NS = 10**9
-MINUTE = 60 * NS
-TICK = .1
+from spectrum.units import NS, MINUTE, GC_TICK_USD as TICK
+from spectrum.market.calendar import MarketCalendar
+from spectrum.features.contract import reject_future
 RAW_FIELDS = ('add', 'remove', 'linked_fill', 'passive_fill', 'aggressor_fill',
               'ambiguous_remove', 'unlinked_remove', 'refill', 'refill_delay_qseconds',
               'removed_age_qseconds', 'removed_age_known_qty', 'near_add', 'near_remove',
@@ -25,11 +25,8 @@ def anchor(date):
 
 
 def scheduled_open(t_ns):
-    """Regular GC hours; caller admits dates through the explicit calendar."""
-    local = pd.to_datetime(np.asarray(t_ns), utc=True).tz_convert('America/Chicago')
-    hour, day = local.hour, local.dayofweek
-    return np.asarray((day < 5) & (hour != 16) & ~((day == 4) & (hour >= 16)) |
-                      ((day == 6) & (hour >= 17)))
+    """The same GC venue schedule used by finalized data and feature streams."""
+    return ~MarketCalendar().closed(t_ns)
 
 
 def grouped_rolling(values, groups, window, op='sum'):
@@ -305,6 +302,8 @@ class Observation:
 class MarketObservationStore:
     """As-of loader actually exposing both physical time scales and all masks."""
     def __init__(self, fast, context, zones, events, *, symbol, previous_date, date):
+        for data in (fast, context, zones, events):
+            reject_future(data.columns, data)
         self.fast, self.context = fast, context
         self.zones, self.events = zones, events
         self.symbol, self.previous_date, self.date = symbol, previous_date, date
@@ -313,6 +312,7 @@ class MarketObservationStore:
 
     @staticmethod
     def _tensor(frame, columns, origin):
+        reject_future(frame.columns, frame)
         a = frame[columns].to_numpy(float)
         mask = np.isfinite(a) & frame.known.to_numpy()[:, None]
         if 'ledger_known' in frame:

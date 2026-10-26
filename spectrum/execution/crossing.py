@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 from numba import njit
 
-NS = 1_000_000_000
+from spectrum.units import NS
 STATUSES = ('INELIGIBLE', 'EMPTY', 'CENSORED', 'COMPLETE')
 REASONS = ('ORIGIN', 'SESSION', 'RISK', 'ENTRY_TIMEOUT', 'SUPPORT',
            'TAKE', 'STOP', 'TIME', 'EXIT_TIMEOUT', 'COVERAGE')

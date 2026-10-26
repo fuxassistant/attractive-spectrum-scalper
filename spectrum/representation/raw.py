@@ -7,7 +7,7 @@ from collections import defaultdict, deque
 import numpy as np
 from spectrum.core.event_facts import decode_event
 
-NS=10**9
+from spectrum.units import NS
 FIELDS=('add','remove','linked_fill','passive_fill','aggressor_fill','ambiguous_remove',
         'unlinked_remove','refill','refill_delay_qseconds','removed_age_qseconds','removed_age_known_qty',
         'near_add','near_remove','near_fill','near_withdrawal','near_ambiguous','near_refill')

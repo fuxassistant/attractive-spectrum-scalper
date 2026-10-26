@@ -29,7 +29,8 @@ from spectrum.io import save_json
 from spectrum.market.build import build_capture
 from spectrum.core.storage import sha
 from spectrum.core.state import implementation_id
-from spectrum.features.pipeline import compute
+import spectrum.market as market
+from spectrum.market.calendar import MarketCalendar
 
 NS=10**9
 MINUTE=60*NS
@@ -44,9 +45,10 @@ def now():
 
 def code_identity():
     from spectrum.features.pipeline import implementation_identity as feature_identity
-    files=['full_history.py','source.py','ingest.py','build.py','replay.py']
+    files=['source.py','ingest.py','build.py','replay.py']
     return dict(core=implementation_id(),features=feature_identity(),
-                **{f:sha(Path(__file__).with_name(f)) for f in files})
+                **{'full_history.py':sha(Path(__file__))},
+                **{f:sha(Path(market.__file__).with_name(f)) for f in files})
 
 
 def assert_code(config):
@@ -319,14 +321,15 @@ def generate_features(config,entry,capture,output):
         if sha(capture/filename)!=expected:raise ValueError('Market payload hash drift')
     calendar=ObservedCalendar(config['reference']['path'],config['reference']['sha256'])
     from spectrum.features.stream import FeatureStream
-    engine=FeatureStream(FAMILIES,calendar=calendar,source_id=m['source_partition_sha256'])
+    schedule=MarketCalendar()
+    engine=FeatureStream(FAMILIES,calendar=schedule,source_id=m['source_partition_sha256'])
     writer=None;rows=admitted=routing=entry_allowed=reference_open=0;known=Counter()
     source=pq.ParquetFile(capture/'seconds.parquet')
     if source.metadata.num_rows==0:
         if m['seconds_rows']!=0:raise ValueError('Empty seconds payload contradicts market manifest')
         result=dict(status='EXCLUDED',exclusion_reasons=['NO_FINALIZED_SECONDS'],rows=0,features=0,
             families=FAMILIES,admitted_rows=0,routing_admissible_rows=0,entry_allowed_rows=0,reference_open_rows=0,
-            coverage={},selection=entry['selection'],calendar=calendar.contract(),feature_sha256=None,
+            coverage={},selection=entry['selection'],calendar=schedule.contract(),reference_calendar=calendar.contract(),feature_sha256=None,
             market_manifest_sha256=sha(capture/'manifest.json'),elapsed_seconds=time.perf_counter()-started,
             independent_ohlc=dict(checks=0,max_error=0.,status='NOT_APPLICABLE_EMPTY_CAPTURE'),
             evidence=dict(records=m['records'],quotes=m['quotes'],seconds_rows=0,bars=m['bars']),
@@ -336,16 +339,19 @@ def generate_features(config,entry,capture,output):
     try:
         for batch in source.iter_batches(batch_size=32768):
             if psutil.disk_usage(str(output)).free<config['reserve_bytes']:raise RuntimeError('DISK_RESERVE_REACHED_DURING_FEATURES')
-            frame=batch.to_pandas();c=engine.feed(frame);t=frame.t_ns.to_numpy()
+            frame=batch.to_pandas();t=frame.t_ns.to_numpy()
             opened=~calendar.closed(t)
-            usable=frame.valid.to_numpy()&opened&((frame.available_ns-frame.t_ns).to_numpy()<=NS)
+            closed=schedule.closed(t)
+            frame['reference_observed_open']=opened
+            c=engine.feed(frame)
+            usable=frame.valid.to_numpy()&opened&~closed&((frame.available_ns-frame.t_ns).to_numpy()<=NS)
             if entry['selection']['source_condition']!='available':usable[:]=False
             route_ok=(t>=int(entry['selection']['selection_available_ns']))&~np.full(len(t),entry['selection']['context_only'],bool)
             times=pd.to_datetime(t,utc=True)
             ld=times.tz_convert('Europe/London');ny=times.tz_convert('America/New_York')
             allowed=usable&route_ok&(ld.hour>=8)&(ny.hour<17)&(ld.dayofweek<5)
             cols={k:frame[k].to_numpy() for k in ['t_ns','available_ns','epoch']}
-            cols.update(scheduled_closed=~opened,reference_observed_open=opened,admissible=usable,
+            cols.update(scheduled_closed=closed,reference_observed_open=opened,admissible=usable,
                 routing_admissible=route_ok,entry_allowed=allowed,
                 source_day_degraded=np.full(len(t),entry['selection']['source_condition']!='available',bool))
             for name,value in c['values'].items():
@@ -368,8 +374,8 @@ def generate_features(config,entry,capture,output):
     qa=verify_ohlc(capture,int(Path(entry['name']).stem.split('_')[-1]))
     result=dict(status='COMPLETE',rows=rows,features=len(known),families=FAMILIES,admitted_rows=admitted,
         routing_admissible_rows=routing,entry_allowed_rows=entry_allowed,reference_open_rows=reference_open,
-        coverage={k:v/rows for k,v in known.items()},selection=entry['selection'],calendar=calendar.contract(),
-        scheduled_closed_semantics='compatibility alias for missing OHLC reference minute, not an exchange-closure assertion',
+        coverage={k:v/rows for k,v in known.items()},selection=entry['selection'],calendar=schedule.contract(),reference_calendar=calendar.contract(),
+        scheduled_closed_semantics='canon venue schedule; reference_observed_open independently records OHLC coverage',
         feature_sha256=sha(output/'features.parquet'),market_manifest_sha256=sha(capture/'manifest.json'),
         elapsed_seconds=time.perf_counter()-started,independent_ohlc=qa,code_identity=config['code_identity'],pid=os.getpid())
     save_json(output/'manifest.json',result)

@@ -217,7 +217,3 @@ class FinalizedSession:
 
     def segments(self):
         return read_json(self.root/'segments.json')
-
-    def features(self, families=('motion','flow','spectral')):
-        from spectrum.features.pipeline import compute
-        return compute(self.seconds(), families=families)

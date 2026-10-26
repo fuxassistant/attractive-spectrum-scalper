@@ -1,12 +1,14 @@
-"""Reusable formulas extracted from scripts/vwap_week_report.py; see docs/MIGRATION.json."""
+"""First crossing packet of sampled 1 s bands (bid OR ask rule); extracted from scripts/vwap_week_report.py."""
 import numpy as np
 from spectrum.core.schema import NS
 from spectrum.crossings.bank import crossing_rows
+from spectrum.leakage import future_output
 
-def targets(f,name):
+@future_output()
+def future_first_crossing(f,name):
     t=f.t_ns.to_numpy();m=f[name].to_numpy();h=f[name+'_half'].to_numpy()
     support=np.where(np.isfinite(m)&np.isfinite(h)&(h>0),f.segment,-1).astype(np.int64)
-    row,role,*_=crossing_rows(t,f.mid.to_numpy(),m,h,support)
+    row,role,_=crossing_rows(t,f.bid.to_numpy(float),f.ask.to_numpy(float),m,h,support)
     event=np.unique(row);bits=np.zeros(len(f),np.int64)
     np.bitwise_or.at(bits,row,1<<role)
     end=np.r_[np.flatnonzero(support[1:]!=support[:-1])+1,len(f)]

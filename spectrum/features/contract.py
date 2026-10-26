@@ -1,6 +1,12 @@
 """Reusable formulas extracted from spectrum/lab.py; see docs/MIGRATION.json."""
 from dataclasses import dataclass
 import numpy as np
+from spectrum.leakage import check_model_input
+
+
+def reject_future(names, columns=None):
+    """Model input never carries future information: name, type and values are checked (spectrum.leakage)."""
+    check_model_input(names, columns)
 
 
 @dataclass(frozen=True)
@@ -18,6 +24,8 @@ class FeatureBatch:
     units: tuple[str, ...]
 
     def __post_init__(self):
+        reject_future(self.names, self.values)
+        reject_future(self.names, self.known)
         times = np.asarray(self.t_ns)
         available = np.asarray(self.available_ns)
         values = np.asarray(self.values)
@@ -30,6 +38,7 @@ class FeatureBatch:
             raise ValueError("Feature matrix, masks and names must align")
         if known.dtype != bool or not np.isfinite(values).all():
             raise ValueError("Finite storage and explicit boolean masks required")
+        reject_future(self.names, values)
         if len(set(self.names)) != len(self.names) or len(self.units) != len(self.names):
             raise ValueError("Unique feature names and one unit per feature required")
         if np.any(np.diff(times) <= 0) or np.any(available < times):
@@ -40,6 +49,8 @@ class FeatureBatch:
     @classmethod
     def from_columns(cls, t_ns, available_ns, values, known, units):
         names = tuple(values)
+        reject_future(names, values)
+        reject_future(names, known)
         if set(known) != set(names) or set(units) != set(names):
             raise ValueError("Every feature requires a mask and unit")
         return cls(np.asarray(t_ns, dtype=np.int64).copy(),
@@ -57,9 +68,14 @@ def rolling_valid(valid,n):
 
 class Context:
     def __init__(self,frame,calendar):
+        reject_future(frame.columns, frame)
         self.df=frame;self.t=frame.t_ns.to_numpy()
-        self.closed=frame.scheduled_closed.to_numpy(bool) if 'scheduled_closed' in frame else calendar.closed(self.t)
+        self.closed=calendar.closed(self.t)
+        if 'scheduled_closed' in frame and not np.array_equal(frame.scheduled_closed.to_numpy(bool), self.closed):
+            raise ValueError('scheduled_closed disagrees with the selected calendar; regenerate stale data')
         self.supported=frame.valid.to_numpy()&~self.closed
+        if 'reference_observed_open' in frame:
+            self.supported &= frame.reference_observed_open.to_numpy(bool)
         self.admitted=(self.supported&
                        ((frame.available_ns-frame.t_ns).to_numpy()<=10**9))
         continuity=frame.segment_id.to_numpy() if 'segment_id' in frame else frame.epoch.to_numpy()
@@ -70,6 +86,8 @@ class Context:
         self.values={};self.masks={};self.units={}
 
     def add(self,name,values,known,unit):
+        reject_future([name], {name: values})
+        reject_future([name], {name: known})
         if name in self.values:raise ValueError('Duplicate feature '+name)
         v=np.asarray(values,float);mask=np.asarray(known,bool)&np.isfinite(v)&self.admitted
         if v.shape!=self.t.shape or mask.shape!=self.t.shape:raise ValueError('Feature shape')

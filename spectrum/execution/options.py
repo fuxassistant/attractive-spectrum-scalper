@@ -1,6 +1,6 @@
 """Reusable formulas extracted from spectrum/cognition/signatures.py; see docs/MIGRATION.json."""
 from spectrum.core.schema import NS
-TICK_NANO = 100_000_000
+from spectrum.units import GC_TICK_NANO as TICK_NANO
 from .config import PLANS
 MENU_PLANS = tuple(PLANS) + ((80, 40, 1800),)
 SESSION_SLACK_SECONDS = 5

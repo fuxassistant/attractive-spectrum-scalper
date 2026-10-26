@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "attractive-spectrum-scalper"
-version = "0.2.0"
+version = "0.3.0"
 description = "Causal market replay, feature families, representations and crossing banks"
 requires-python = ">=3.11"
 dependencies = ["numpy", "pandas", "pyarrow", "zstandard", "databento-dbn>=0.69,<0.70", "numba>=0.61", "psutil", "tzdata"]

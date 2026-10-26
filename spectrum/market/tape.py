@@ -38,7 +38,11 @@ class TapeReplay:
         if self.current is None:return None
         result=dict(self.current)
         age=until_ns-result['t_ns']
+        # quote_age_ns keeps its historical meaning (fact age, 30 s rule); the two
+        # explicit ages below do not change it. FinalizedReplay.quote_age_ns is
+        # delivery age instead; see canon_v1 legacy_conventions.quote_age.
         result.update(query_ns=int(until_ns),quote_age_ns=int(age),
+                      fact_age_ns=int(age),delivery_age_ns=int(until_ns-result['available_ns']),
                       admissible_at_query=bool(result.get('valid',False) and 0<=age<=30*10**9))
         return result
 

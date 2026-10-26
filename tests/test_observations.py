@@ -22,7 +22,7 @@ from spectrum.representation.representation import DAY_VALUES
 from spectrum.representation.representation import ledger_releases
 from spectrum.representation.zones import zone_and_event_tables
 from spectrum.representation.zones import MECHANISMS
-from spectrum.outcomes.endpoint import endpoint_outcomes
+from spectrum.future.endpoint import future_endpoint_move
 
 
 def record(i, t, action, side='N', price=0, size=0, oid=0, flags=F_LAST):
@@ -199,9 +199,10 @@ def test_vwap_proxy_denominator_uses_its_actual_price_support():
 
 
 def test_diagnostic_deadband_is_exact_on_half_tick_grid():
-    delta, y = endpoint_outcomes([4700., 4700., 4700., 4700.], [4700.2, 4699.8, 4700.25, 4699.75])
-    assert delta.tolist() == [2., -2., 2.5, -2.5]
-    assert y.tolist() == [1, 1, 2, 0]
+    from spectrum.leakage import export_future_values
+    delta, y = future_endpoint_move([4700., 4700., 4700., 4700.], [4700.2, 4699.8, 4700.25, 4699.75])
+    assert export_future_values(delta).tolist() == [2., -2., 2.5, -2.5]
+    assert export_future_values(y).tolist() == [1, 1, 2, 0]
 
 
 def test_loader_does_not_expose_future_zeros_or_truncate_previous_day():

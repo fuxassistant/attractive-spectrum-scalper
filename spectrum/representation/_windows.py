@@ -1,6 +1,7 @@
 """Shared causal-window storage and explicit training-row normalization."""
 import hashlib
 import numpy as np
+from spectrum.features.contract import reject_future
 
 def _ids_sha(ids):
     return hashlib.sha256(np.asarray(ids, dtype="<i8").tobytes()).hexdigest()
@@ -10,8 +11,10 @@ class BaseSequenceStore:
     """In-memory N x F values with lazy family projection and causal windows."""
 
     def __init__(self, frame, raw, feature_names, groups, *, source_receipt=None):
+        reject_future(feature_names, raw)
         self.frame = frame.reset_index(drop=True).copy()
         self.raw = np.asarray(raw)
+        reject_future(feature_names, self.raw)
         self.feature_names = list(feature_names)
         self.groups = {k: list(v) for k, v in groups.items()}
         self.source_receipt = source_receipt or {}

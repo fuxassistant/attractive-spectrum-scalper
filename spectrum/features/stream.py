@@ -32,7 +32,7 @@ class FeatureStream:
                     known={k:v[-n:].copy() for k,v in result.masks.items()},units=dict(result.units))
 
     def checkpoint(self):
-        return seal(dict(contract='FEATURE_STREAM_V2',source_id=self.source_id,families=self.families,plugins=self.plugins,
+        return seal(dict(contract='FEATURE_STREAM_V3',source_id=self.source_id,families=self.families,plugins=self.plugins,
                          plugin_sources=self.plugin_sources,calendar=self.calendar.contract(),
                          formula_sha256=implementation_identity(),last_ns=self.last_ns,
                          adapter_sha256=sha(__file__),calendar_sha256=sha(Path(inspect.getfile(MarketCalendar))),
@@ -48,10 +48,10 @@ class FeatureStream:
     @classmethod
     def restore(cls,state,*,expected_source_id):
         s=unseal(state)
-        if s['contract']!='FEATURE_STREAM_V2' or s['source_id']!=expected_source_id:raise ValueError('Feature source/contract drift')
+        if s['contract']!='FEATURE_STREAM_V3' or s['source_id']!=expected_source_id:raise ValueError('Feature source/contract drift')
         if s['formula_sha256']!=implementation_identity():raise ValueError('Feature formula drift')
         if s['adapter_sha256']!=sha(__file__) or s['calendar_sha256']!=sha(Path(inspect.getfile(MarketCalendar))):raise ValueError('Feature adapter/calendar drift')
-        obj=cls(s['families'],plugins=s['plugins'],calendar=MarketCalendar(**s['calendar']),source_id=expected_source_id)
+        obj=cls(s['families'],plugins=s['plugins'],calendar=MarketCalendar.restore(s['calendar']),source_id=expected_source_id)
         if s['plugin_sources']!=obj.plugin_sources:raise ValueError('Plugin source drift')
         obj.tail=None if s['tail'] is None else pd.DataFrame(s['tail']);obj.last_ns=s['last_ns'];return obj
 

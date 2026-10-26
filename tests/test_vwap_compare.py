@@ -40,13 +40,14 @@ def test_support_breaks_are_not_bridged():
 
 def test_sampled_first_crossing_tie_none_and_censor():
     import pandas as pd
-    from spectrum.outcomes.sampled_crossing import targets
+    from spectrum.future.sampled import future_first_crossing
     n=2005
-    f=pd.DataFrame(dict(t_ns=np.arange(n)*NS,mid=np.r_[np.zeros(10),np.full(n-10,4.)],
+    mid=np.r_[np.zeros(10),np.full(n-10,4.)]
+    f=pd.DataFrame(dict(t_ns=np.arange(n)*NS,bid=mid-.05,ask=mid+.05,
         bb=np.full(n,2.),bb_half=np.ones(n),segment=np.zeros(n,dtype=int)))
-    y,delay,_=targets(f,'bb')
+    y,delay,_=future_first_crossing(f,'bb')
     assert y[0]==7 and delay[0]==10
     assert y[1]==8 and y[-1]==-1
     f.loc[5:,'segment']=1
-    y,delay,_=targets(f,'bb')
+    y,delay,_=future_first_crossing(f,'bb')
     assert y[0]==-1 and np.isnan(delay[0])

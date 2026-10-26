@@ -27,6 +27,10 @@ def main(argv=None):
     replay.add_argument("capture")
     replay.add_argument("--rows", type=int, default=5)
     replay.add_argument("--layer", default="quotes")
+    bank = commands.add_parser("bank", help="Build one crossing bank per day (bid OR ask rule)")
+    bank.add_argument("--days", required=True, help="Folder of <month>/<date>/manifest.json day manifests")
+    bank.add_argument("--output", required=True)
+    bank.add_argument("--workers", type=int, default=4)
     verify = commands.add_parser("verify-market", help="Verify all finalized payload hashes")
     verify.add_argument("capture")
     args = parser.parse_args(argv)
@@ -44,6 +48,9 @@ def main(argv=None):
     elif args.command == "features":
         from .features import generate
         result = generate(args.market, args.output, args.families, args.workers, args.plugin)
+    elif args.command == "bank":
+        from .crossings.build import build_banks
+        result = build_banks(args.days, args.output, args.workers)
     elif args.command == "verify-market":
         from .market.finalized import verify
         result = verify(args.capture)

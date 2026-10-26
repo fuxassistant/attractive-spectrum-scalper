@@ -1,7 +1,7 @@
 """Causal trade-weighted bands and native-bar close controls."""
 import numpy as np
 
-NS=10**9
+from spectrum.units import NS
 
 
 class TradePrefix:
@@ -76,3 +76,30 @@ def statistics(f,name):
         slope_correlation=float(np.corrcoef(slope_b[paired],slope_v[paired])[0,1]) if paired.any() else None,
         line_total_variation_ratio=float(abs(np.diff(other))[contiguous].sum()/abs(np.diff(base))[contiguous].sum()),
         age_seconds_median=quant(f[name+'_age'].to_numpy()[ok],.5),bb_age_seconds_median=quant(f.bb_age.to_numpy()[ok],.5))
+
+
+# Sampled 1 s VWAP bands (BANDS_V1): past seconds only; band questions live in future.bands.
+WINDOWS = (240, 600, 1200, 2800)
+K = 2.
+B_MIN = 2.
+FLOOR = .05
+
+
+def vwap_bands(mid, vol, windows=WINDOWS, k=K):
+    """Causal rolling VWAP and half-width per second for every window; mid in ticks, vol per second."""
+    ok = np.isfinite(mid)
+    ref = mid[ok][0] if ok.any() else 0.                       # numerical anchor only; cancels out
+    x = np.where(ok, mid - ref, 0.)
+    v = np.nan_to_num(np.asarray(vol, float))
+    run_mean = np.cumsum(v) / np.arange(1, len(v) + 1)          # causal floor: mean volume so far
+    w = np.where(ok, v + FLOOR * np.maximum(run_mean, 1e-3), 0.)
+    c0, c1, c2 = (np.r_[0., np.cumsum(a)] for a in (w, w * x, w * x * x))
+    n = len(mid); i = np.arange(n); out = {}
+    for W in windows:
+        lo = np.clip(i + 1 - W, 0, None)
+        s0, s1, s2 = c0[i + 1] - c0[lo], c1[i + 1] - c1[lo], c2[i + 1] - c2[lo]
+        good = (s0 > 0) & (i + 1 - W >= 0)
+        vw = np.where(good, s1 / np.where(good, s0, 1.), np.nan)
+        var = np.where(good, np.maximum(s2 / np.where(good, s0, 1.) - vw ** 2, 0.), np.nan)
+        out[W] = (vw + ref, np.maximum(k * np.sqrt(var), B_MIN))
+    return out

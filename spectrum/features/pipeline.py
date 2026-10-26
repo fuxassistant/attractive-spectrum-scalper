@@ -96,6 +96,9 @@ def implementation_identity():
     files = sorted(root.rglob('*.py'))
     identities = {str(p.relative_to(root)): sha(p) for p in files}
     identities['market/calendar.py'] = sha(Path(inspect.getfile(MarketCalendar)))
+    identities['calendar_contract'] = MarketCalendar().contract()
+    for name in ('leakage.py', 'units.py'):
+        identities[name] = sha(root.parent / name)
     return hashlib.sha256(json.dumps(identities, sort_keys=True).encode()).hexdigest()
 
 

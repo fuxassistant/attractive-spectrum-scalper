@@ -97,7 +97,7 @@ def test_library_has_no_training_or_archive_import_and_core_stays_independent():
             if path.is_relative_to(root/'core'):
                 assert not any(name.startswith('spectrum.') and not name.startswith('spectrum.core') for name in imports), path
             if path.is_relative_to(root/'features') or path.is_relative_to(root/'representation'):
-                assert not any(name.startswith('spectrum.outcomes') for name in imports), path
+                assert not any(name.startswith('spectrum.future') for name in imports), path
 
 
 def test_batch_stream_and_restart_match_for_all_frame_families():
@@ -169,8 +169,9 @@ def test_crossing_bank_roundtrip_and_tamper_are_independent_of_reports(tmp_path)
     assert len(expected)
     root = tmp_path/'bank'
     publish_bank(quotes,root,source_id='test-source')
-    bank, manifest = open_bank(root)
+    bank, tape, manifest = open_bank(root)
     pd.testing.assert_frame_equal(bank,expected)
+    np.testing.assert_array_equal(tape['t'],build_bank(quotes,'test-source')[1]['t'])
     assert manifest['source_id'] == 'test-source'
     with pytest.raises(FileExistsError):
         publish_bank(quotes,root,source_id='test-source')

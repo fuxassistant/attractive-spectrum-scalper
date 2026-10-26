@@ -3,6 +3,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import pytest
+import pyarrow as pa
 import pyarrow.parquet as pq
 
 from spectrum.market.finalized import FinalizedReplay
@@ -136,3 +137,30 @@ def test_multi_group_seek_and_restore(tmp_path,monkeypatch):
     cursor=r.checkpoint()
     assert cursor['group']==1
     assert FinalizedReplay.restore(b.root,cursor).read_batch()['source_ordinal'].to_pylist()==[4]
+
+
+def test_admission_compares_every_publication_with_the_canonical_tape(tmp_path):
+    from spectrum.market.acceptance import compare_canonical
+    b,_=build(tmp_path)
+    columns=['source_ordinal','available_ns','valid','bid_nano','ask_nano','bid_size','ask_size']
+    table=FinalizedReplay(b.root,columns=columns).read_window(0,2**63-1)
+    legacy=tmp_path/'legacy';legacy.mkdir()
+    pq.write_table(table,legacy/'quotes.parquet')
+    result=compare_canonical(b.root,legacy)
+    assert result['status']=='PASS' and result['publications']==len(table) and result['valid_bbo_checked']>0
+    frame=table.to_pandas();frame.loc[frame.valid.idxmax(),'bid_nano']+=100_000_000
+    pq.write_table(pa.Table.from_pandas(frame,schema=table.schema,preserve_index=False),legacy/'quotes.parquet')
+    with pytest.raises(ValueError,match='Canonical BBO mismatch bid_nano'):
+        compare_canonical(b.root,legacy)
+
+
+def test_independent_book_does_not_double_remove_fill_then_cancel():
+    from spectrum.market.acceptance import ReferenceBook
+    from spectrum.core.vendor.glbx_dbn import MBO_DTYPE
+    book=ReferenceBook({5:dict(valid=True,bid_nano=100,ask_nano=110,bid_size=3,ask_size=2)})
+    actions=[(b'R',b'N',0,0,0),(b'A',b'B',1,100,5),(b'A',b'A',2,110,2),
+             (b'F',b'B',1,100,2),(b'C',b'B',1,100,2)]
+    for i,(action,side,oid,price,size) in enumerate(actions,1):
+        row=np.zeros(1,MBO_DTYPE);row['action']=action;row['side']=side;row['order_id']=oid;row['price']=price;row['size']=size
+        book.feed(row[0],i)
+    assert book.checks==1 and not book.errors and book.orders[1][2]==3

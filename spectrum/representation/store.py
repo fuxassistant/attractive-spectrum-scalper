@@ -5,6 +5,7 @@ from datetime import date as CalendarDate
 import pandas as pd
 from spectrum.io import save_json, sha
 from spectrum.representation.representation import MarketObservationStore
+from spectrum.features.contract import reject_future
 
 
 def open_observation_store(root, date):
@@ -41,6 +42,7 @@ def publish_observation_store(root, *, date, previous_date, symbol, fast, contex
     if previous >= current or not symbol or not source_identity:
         raise ValueError('Earlier context date, symbol and explicit source identity required')
     for frame in (fast, context, zones, events):
+        reject_future(frame.columns, frame)
         if 'available_ns' not in frame:
             raise ValueError('Every observation table requires its publication clock')
         if 't_ns' in frame and (frame.available_ns < frame.t_ns).any():

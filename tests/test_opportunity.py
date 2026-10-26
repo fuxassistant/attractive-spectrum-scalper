@@ -1,4 +1,4 @@
-from spectrum.outcomes import opportunity as oy
+from spectrum.future import opportunity as oy
 import numpy as np
 import pytest
 
@@ -39,24 +39,24 @@ def test_grid_is_as_of_boundary_never_later_quote():
 def test_causal_fields_invariant_to_future_mutation():
     q = zigzag(3000)
     t0 = int(1500.3 * NS)
-    a, _ = oy.measure(op.second_grid(*q, 0, 3000 * NS), [t0])
+    a, _ = oy.causal_and_future(op.second_grid(*q, 0, 3000 * NS), [t0])
     mutated = list(q); mutated[1] = q[1].copy(); mutated[2] = q[2].copy()
     later = q[0] > t0
     mutated[1][later] += 50 * TICK; mutated[2][later] += 50 * TICK
-    b, _ = oy.measure(op.second_grid(*mutated, 0, 3000 * NS), [t0])
+    b, _ = oy.causal_and_future(op.second_grid(*mutated, 0, 3000 * NS), [t0])
     for name in op.CAUSAL_NAMES:
         assert np.array_equal(a[name], b[name]), name
 
 
 def test_premium_matches_declared_normal_formula():
-    x, y = oy.measure(op.second_grid(*zigzag(3000), 0, 3000 * NS), [int(1000.2 * NS)])
+    x, y = oy.causal_and_future(op.second_grid(*zigzag(3000), 0, 3000 * NS), [int(1000.2 * NS)])
     assert x['sigma600_known'][0] and x['sigma600_ticks_per_sqrt_s'][0] == pytest.approx(1.)
     assert x['sigma3600_known'][0] == False  # not enough history: masked, not zero evidence
-    assert y['premium_ticks_30'][0] == pytest.approx(np.sqrt(30) * np.sqrt(2 / np.pi))
-    assert y['rv_ticks2_30'][0] == pytest.approx(30.)
-    assert y['gamma_ticks2_30'][0] == pytest.approx(0.)
-    assert y['abs_move_ticks_30'][0] == pytest.approx(0.)  # even number of alternating steps
-    assert y['up_ticks_30'][0] == pytest.approx(1.) or y['down_ticks_30'][0] == pytest.approx(1.)
+    assert y['future_premium_ticks_30'][0] == pytest.approx(np.sqrt(30) * np.sqrt(2 / np.pi))
+    assert y['future_rv_ticks2_30'][0] == pytest.approx(30.)
+    assert y['future_gamma_ticks2_30'][0] == pytest.approx(0.)
+    assert y['future_abs_move_ticks_30'][0] == pytest.approx(0.)  # even number of alternating steps
+    assert y['future_up_ticks_30'][0] == pytest.approx(1.) or y['future_down_ticks_30'][0] == pytest.approx(1.)
 
 
 @pytest.mark.parametrize('defect', ['invalid', 'epoch'])
@@ -67,24 +67,24 @@ def test_unsupported_step_makes_horizon_immature(defect):
         valid = valid.copy(); valid[i] = False
     else:
         epoch = epoch.copy(); epoch[i:] = 2
-    _, y = oy.measure(op.second_grid(t, bid, ask, valid, epoch, 0, 3000 * NS), [int(1000.2 * NS)])
-    assert not y['mature_30'][0] and np.isnan(y['abs_move_ticks_30'][0])
-    assert y['mature_30'][0] == y['mature_120'][0] == False
+    _, y = oy.causal_and_future(op.second_grid(t, bid, ask, valid, epoch, 0, 3000 * NS), [int(1000.2 * NS)])
+    assert not y['future_mature_30'][0] and np.isnan(y['future_abs_move_ticks_30'][0])
+    assert y['future_mature_30'][0] == y['future_mature_120'][0] == False
 
 
 def test_quote_silence_is_supported_and_horizon_past_session_immature():
     t, bid, ask, valid, epoch = zigzag(3000)
     keep = (t < 1005 * NS) | (t > 1015 * NS)
-    _, y = oy.measure(op.second_grid(t[keep], bid[keep], ask[keep], valid[keep], epoch[keep], 0, 3000 * NS),
+    _, y = oy.causal_and_future(op.second_grid(t[keep], bid[keep], ask[keep], valid[keep], epoch[keep], 0, 3000 * NS),
                       [int(1000.2 * NS), int(2900.2 * NS)])
-    assert y['mature_30'][0]
-    assert not y['mature_120'][1]
+    assert y['future_mature_30'][0]
+    assert not y['future_mature_120'][1]
 
 
 def test_origin_outside_grid_rejected():
     g = op.second_grid(*zigzag(10), 0, 10 * NS)
     with pytest.raises(ValueError):
-        oy.measure(g, [10 * NS])
+        oy.causal_and_future(g, [10 * NS])
 
 
 def trend_tape(deadline=10_000):

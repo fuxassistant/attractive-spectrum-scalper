@@ -32,6 +32,7 @@ from spectrum.core.schema import DEPTH
 from spectrum.core.schema import SNAP_SCHEMA
 from spectrum.core.schema import digest
 from spectrum.core.storage import sha
+from spectrum.market.calendar import MarketCalendar
 
 NS = 10**9
 DAY = 86400*NS
@@ -43,8 +44,10 @@ def implementation():
     files = [Path(__file__), Path(__file__).with_name('finalized.py'),
              Path(__file__).parent.parent/'core/vendor/l3.py', Path(__file__).parent.parent/'core/vendor/l3_v2.py',
              Path(__file__).parent.parent/'core/aggregate.py', Path(__file__).parent.parent/'core/event_facts.py',
-             Path(__file__).with_name('source.py'), Path(__file__).with_name('ingest.py')]
-    return {str(p.relative_to(Path(__file__).parent.parent)):sha(p) for p in files}
+             Path(__file__).with_name('source.py'), Path(__file__).with_name('ingest.py'),
+             Path(__file__).with_name('acceptance.py')]
+    return {**{str(p.relative_to(Path(__file__).parent.parent)):sha(p) for p in files},
+            'calendar': MarketCalendar().contract()}
 
 
 def session_bounds(date):
@@ -57,11 +60,7 @@ def session_bounds(date):
 
 def flags_for_times(times, reference_minutes):
     """Schedule convention and reference availability remain independent."""
-    stamps = pd.to_datetime(np.asarray(times, np.int64), utc=True)
-    ny = stamps.tz_convert('America/New_York')
-    dow, hour = ny.dayofweek.to_numpy(), ny.hour.to_numpy()
-    closed = ((dow == 5) | ((dow == 4)&(hour >= 17)) | ((dow == 6)&(hour < 18)) |
-              ((dow < 4)&(hour >= 17)&(hour < 18)))
+    closed = MarketCalendar().closed(times)
     minutes = np.asarray(times, np.int64)//(60*NS)
     idx = np.searchsorted(reference_minutes, minutes)
     if len(reference_minutes):
@@ -500,8 +499,8 @@ def prepare_member(config_path, member_key, output, reserve=RESERVE):
         if src.sha256!=item['sha256']:raise ValueError('Raw source member hash mismatch')
         (temp/'progress.json').unlink(missing_ok=True)
         m=builder.finish(stage['entries'],src.sha256,code)
-        from spectrum.finalized_audit import compare_canonical
-        from spectrum.finalized_audit import independent_prefix
+        from spectrum.market.acceptance import compare_canonical
+        from spectrum.market.acceptance import independent_prefix
         master=read_json(origin/'manifest.json')
         captures=[c for c in master['captures'] if c['entry']['member_key']==member_key and c['status']=='COMPLETE']
         if len(captures)!=1:raise ValueError('Expected one canonical daily capture for admission')

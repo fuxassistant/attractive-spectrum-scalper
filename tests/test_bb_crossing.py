@@ -27,33 +27,41 @@ def test_native_math_and_prefix_causality():
     assert np.all(ss[70:] == -1)
 
 
-def test_touch_plateau_motion_and_reset():
-    t = np.arange(8, dtype=np.int64); p = np.array([9., 10., 10., 11., 10., 9., 11., 9.])
+def test_bid_or_ask_crossing_touch_line_motion_and_reset():
+    t = np.arange(8, dtype=np.int64)
+    bid = np.array([9., 9.5, 9.5, 10.5, 9.5, 8.5, 10.5, 8.5]); ask = bid + .5
     m = np.full(8, 10.); h = np.ones(8)*5; s = np.array([0,0,0,0,0,0,1,1])
-    row, role, direction, cause, _, _ = bb.crossing_rows(t, p, m, h, s)
-    assert row.tolist() == [3,5,7]
-    assert role.tolist() == [1,1,1]
-    assert direction.tolist() == [1,-1,-1]
-    assert cause.tolist() == [0,0,0]
-    row, role, direction, cause, dp, dl = bb.crossing_rows(t[:2], np.array([10.,10.]),
+    row, role, direction = bb.crossing_rows(t, bid, ask, m, h, s)
+    # ask reaches the line at 1, bid passes it at 3, bid back at 4, ask leaves at 5; reset at 6
+    assert row.tolist() == [1,3,4,5,7]
+    assert role.tolist() == [1,1,1,1,1]
+    assert direction.tolist() == [1,1,-1,-1,-1]
+    # a moving line through a still quote is a crossing too
+    row, role, direction = bb.crossing_rows(t[:2], np.array([10.,10.]), np.array([10.2,10.2]),
         np.array([9.,11.]), h[:2], s[:2])
-    assert row.tolist() == [1] and cause.tolist() == [1]
-    assert dp[0] == 0 and dl[0] == 2
+    assert row.tolist() == [1] and direction.tolist() == [-1]
 
 
-def test_query_ids_ties_censor_and_maturity():
+def test_future_crossings_status_maturity_and_economics_apart():
+    from spectrum.future import future_crossings
+    from spectrum.economics import future_crossing_marks
     t = np.array([0,10,20,30,40,50], np.int64)*bb.NS
-    q = dict(t=t, price=np.ones(6)*10, geometries={s:dict(middle=np.ones(6)*10,
-        half=np.ones(6), support=np.array([0,0,0,0,-1,1])) for s in bb.SCALES})
-    bank = pd.DataFrame([dict(ordinal=3,t_ns=t[3],reduced_row=3,support=0,
-        packet_id='same',scale=s,role=r) for s,r in [(1,0),(1,1),(3,2),(6,1),(9,0)]])
-    f = bb.make_targets(bank,q,np.array([5,15,30,41])*bb.NS,60*bb.NS,20)
-    assert f.m1_y.tolist() == [4,3,-1,-1]  # 5+20: mature NONE; 15: tied lower/middle
-    assert f.global_y.tolist() == [13,12,-1,-1]
-    assert f.loc[1,'m1_mask'] == 3
-    g = bb.make_targets(bank,q,np.array([14,16])*bb.NS,60*bb.NS,20)
-    assert g.m1_id.tolist() == ['same/M1','same/M1']
-    assert (g.m1_event_ns > g.t_ns).all()
+    support = np.array([0,0,0,0,-1,1])
+    tape = dict(t=t, bid=np.full(6, 10.), ask=np.full(6, 10.2), support={s: support for s in bb.SCALES})
+    bank = pd.DataFrame([dict(scale=1, role=2, t_ns=t[3], ordinal=3, direction=1, event_id='e',
+        support=0, line=11., bid=11.1, ask=11.3)])
+    f = future_crossings(bank, tape, np.array([5,25,41])*bb.NS, 20*bb.NS, 60*bb.NS)
+    upper = f[(f.scale == 1) & (f.role == 'upper')].set_index('t_ns')
+    assert upper.future_status.tolist() == ['HORIZON', 'CROSSED', 'NOT_READY']
+    assert upper.future_maturity_ns.tolist() == [25*bb.NS, 30*bb.NS, 0]
+    lower = f[(f.scale == 1) & (f.role == 'lower')]
+    assert lower.future_status.tolist() == ['HORIZON', 'SUPPORT_END', 'NOT_READY']
+    assert 'fee' not in ''.join(f.columns) and all(c.startswith('future_') for c in f.columns
+        if c not in ('t_ns', 'scale', 'role', 'origin_bid', 'origin_ask'))
+    m = future_crossing_marks(upper.reset_index(), fee_usd_per_oz=.3)
+    assert m.future_long_usd.tolist()[1] == pytest.approx(11.1 - 10.2 - .3)
+    assert m.future_short_usd.tolist()[1] == pytest.approx(10. - 11.3 - .3)
+    assert np.isnan(m.future_long_usd.tolist()[0])
 
 
 def test_compression_preserves_continuity_and_crossings():
@@ -66,50 +74,61 @@ def test_compression_preserves_continuity_and_crossings():
     mr,hr,sr = bb.native_geometry(t[k],p[k],q.valid[k],q.epoch[k],1)
     np.testing.assert_allclose(m[k],mr,equal_nan=True)
     np.testing.assert_allclose(h[k],hr,equal_nan=True)
-    a = bb.crossing_rows(t,p,m,h,s); b = bb.crossing_rows(t[k],p[k],mr,hr,sr)
+    b_usd, a_usd = q.bid/1e9, q.ask/1e9
+    a = bb.crossing_rows(t,b_usd,a_usd,m,h,s); b = bb.crossing_rows(t[k],b_usd[k],a_usd[k],mr,hr,sr)
     np.testing.assert_array_equal(a[0],k[b[0]])
 
 
-def test_event_weight_and_gradient():
-    w = bb.event_weights(['a','a','a','b'])
-    assert w[:3].sum() == pytest.approx(w[3])
-    z = np.array([[.2,.8,-.1],[.5,-.2,.1]])
-    y = np.array([1,0]); ww = np.array([.4,1.6])
-    def loss(zz):
-        p = np.exp(zz-zz.max(axis=1)[:,None]); p /= p.sum(axis=1)[:,None]
-        return -np.sum(ww*np.log(p[np.arange(2),y]))
-    p = np.exp(z-z.max(axis=1)[:,None]); p /= p.sum(axis=1)[:,None]
-    g = bb.ce_gradient(p,y,ww)
-    for i in range(2):
-        for j in range(3):
-            plus=z.copy(); minus=z.copy(); plus[i,j]+=1e-6; minus[i,j]-=1e-6
-            assert g[i,j] == pytest.approx((loss(plus)-loss(minus))/2e-6,abs=1e-9)
-    with pytest.raises(ValueError): bb.ce_gradient(p,np.array([-1,0]))
-
-
-def test_event_source_identity_excludes_query_and_features():
+def test_source_identity_depends_on_quotes_and_geometry_only():
     meta=dict(date='2026-02-02',symbol='GCJ6',quote_parts=[dict(quote_file=dict(sha256='abc'),start_ns=1,end_ns=2)],
-        files={'execution_valid.npy':dict(sha256='v'),'execution_segment.npy':dict(sha256='e'),'x.npy':dict(sha256='x')})
+        files={'x.npy':dict(sha256='x')})
     a=bb.source_identity(meta)
     meta['files']['x.npy']['sha256']='new-feature-array';meta['origins']='new-stride'
     assert a==bb.source_identity(meta)
     assert a!=bb.source_identity(meta,0)
-    meta['files']['execution_segment.npy']['sha256']='changed-support'
+    meta['quote_parts'][0]['quote_file']['sha256']='changed-quotes'
     assert a!=bb.source_identity(meta)
 
 
-def test_execution_marks_latency_support_and_extrema():
-    t = np.arange(20,dtype=np.int64)*200_000_000
-    bid = (1000e9 + np.arange(20)*100_000_000).astype(np.int64); ask=bid+200_000_000
-    valid=np.ones(20,bool); ep=np.zeros(20,np.int64); k=np.arange(20,dtype=np.int64)
-    breaks=bb.execution_breaks(t,valid,ep); blocks=bb.extremum_blocks(bid,ask,k)
-    ints, vals=bb.trade_profile(t,bid,ask,valid,ep,breaks,k,blocks,np.array([t[0]]),
-        np.array([t[4]]),np.array([4],np.int64),t[-1])
-    assert ints[0,:4].tolist() == [1,5,4,1]
-    assert vals[0,0] == pytest.approx((bid[4]-ask[1])/1e9-.3)
-    assert vals[0,2] == pytest.approx((bid[5]-ask[1])/1e9-.3)
-    assert vals[0,4] == pytest.approx(-.5)
-    valid[3]=False; breaks=bb.execution_breaks(t,valid,ep)
-    ints, vals=bb.trade_profile(t,bid,ask,valid,ep,breaks,k,blocks,np.array([t[0]]),
-        np.array([t[4]]),np.array([4],np.int64),t[-1])
-    assert ints[0,3] == -1 and np.isnan(vals[0,0]) and np.isnan(vals[0,2])
+def test_clusters_keep_flicker_and_mark_visits_and_cooldown():
+    s = bb.NS
+    # middle flickers, upper is crossed, middle again, then a long silence on middle
+    t = np.array([0, 1, 2, 5, 6, 30, 31], np.int64) * s
+    role = np.array([1, 1, 1, 2, 1, 1, 1])
+    ordinal = np.arange(7)
+    support = np.zeros(7, np.int64)
+    silence, visit, opportunity, opener, rank = bb.crossing_clusters(t, role, ordinal, support, 8 * s)
+    assert visit.tolist() == [True, False, False, True, True, False, False]
+    assert silence.tolist() == [-1, s, s, -1, 4 * s, 24 * s, s]
+    assert opportunity.tolist() == [True, False, False, True, True, True, False]
+    assert opener.tolist() == [0, 0, 0, 3, 4, 5, 5]
+    assert rank.tolist() == [0, 1, 2, 0, 0, 0, 1]
+    # a new segment starts fresh; crossings at one publication are not 'between' each other
+    t2 = np.array([0, 0, 1, 2], np.int64) * s
+    silence, visit, opportunity, _, _ = bb.crossing_clusters(
+        t2, np.array([1, 2, 1, 1]), np.array([0, 0, 1, 2]), np.array([0, 0, 0, 1]), 8 * s)
+    assert visit.tolist() == [True, True, False, True]
+    assert silence.tolist() == [-1, -1, s, -1]
+
+
+def test_cluster_markers_are_causal():
+    s = bb.NS
+    t = np.array([0, 1, 2, 5, 6, 30, 31], np.int64) * s
+    role = np.array([1, 1, 1, 2, 1, 1, 1]); ordinal = np.arange(7); support = np.zeros(7, np.int64)
+    full = bb.crossing_clusters(t, role, ordinal, support, 8 * s)
+    for cut in range(1, 7):
+        part = bb.crossing_clusters(t[:cut], role[:cut], ordinal[:cut], support[:cut], 8 * s)
+        for a, b in zip(full, part):
+            assert a[:cut].tolist() == b.tolist()
+
+
+def test_future_crossings_can_ask_for_the_next_opportunity():
+    from spectrum.future import future_crossings
+    t = np.array([0, 10, 11, 12, 30], np.int64) * bb.NS
+    support = np.zeros(5, np.int64)
+    tape = dict(t=t, bid=np.full(5, 10.), ask=np.full(5, 10.2), support={s: support for s in bb.SCALES})
+    bank = pd.DataFrame([dict(scale=1, role=1, t_ns=t[i], ordinal=i, direction=1, event_id=str(i), support=0,
+                              line=10.1, bid=10., ask=10.2, opportunity=i in (1, 4)) for i in (1, 2, 3, 4)])
+    f = future_crossings(bank[bank.opportunity], tape, np.array([10]) * bb.NS + 1, 60 * bb.NS, 90 * bb.NS)
+    middle = f[(f.scale == 1) & (f.role == 'middle')]
+    assert middle.future_cross_ns.tolist() == [30 * bb.NS]

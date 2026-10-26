@@ -1,0 +1,471 @@
+{
+  "version": "SPECTRUM_CANON_V1",
+  "purpose": "Single declared source of input constants: units, clocks, MBO handling, venue hours, trading regimes and cost defaults.",
+  "statuses": {
+    "EVIDENCED": "Published by the venue/authority or measured in project data",
+    "CONVENTION": "Agreed definition; not a market fact",
+    "ASSUMED": "Declared premise; replace when measured",
+    "DEFAULT": "Fallback used only when the measured value is unknown; results must keep a defaulted mask"
+  },
+  "time": {
+    "canonical_zone": "UTC",
+    "display_zone": "UTC+0",
+    "storage": "int64 UTC nanoseconds",
+    "local_schedules": "Wall-clock times in IANA zones, converted per timestamp; daylight saving lives in tzdata, never in constants",
+    "boundaries": "Half-open [open, close)"
+  },
+  "constants": {
+    "ns_per_second": {
+      "value": 1000000000,
+      "unit": "ns/s",
+      "status": "CONVENTION",
+      "source": "SI"
+    },
+    "price_nano_per_usd": {
+      "value": 1000000000,
+      "unit": "nano-USD/USD",
+      "status": "CONVENTION",
+      "source": "core.schema integer price coordinates"
+    },
+    "gc_tick_usd": {
+      "value": 0.1,
+      "unit": "USD/oz",
+      "status": "EVIDENCED",
+      "source": "CME gold futures fact card"
+    },
+    "gc_tick_nano": {
+      "value": 100000000,
+      "unit": "nano-USD/oz",
+      "status": "EVIDENCED",
+      "source": "CME gold futures fact card; core.schema.StreamConfig.tick_nano"
+    },
+    "gc_contract_oz": {
+      "value": 100,
+      "unit": "troy oz/contract",
+      "status": "EVIDENCED",
+      "source": "CME gold futures fact card"
+    },
+    "xauusd_price_step_usd": {
+      "value": 0.01,
+      "unit": "USD/oz",
+      "status": "EVIDENCED",
+      "source": "cTrader xauusd_m1_full.csv price precision"
+    },
+    "fee_roundtrip_usd_per_oz": {
+      "value": 0.3,
+      "unit": "USD/oz per round trip",
+      "status": "ASSUMED",
+      "source": "Baseline commission set by the user on 2026-10-26; used by spectrum.economics and execution configs"
+    },
+    "spread_default_usd_per_oz": {
+      "value": 0.2,
+      "unit": "USD/oz (ask - bid)",
+      "status": "DEFAULT",
+      "source": "Set by the user on 2026-10-26; used only where the spread was not measured"
+    },
+    "latency_ns": {
+      "value": 100000000,
+      "unit": "ns",
+      "status": "DEFAULT",
+      "source": "execution.ExecutionConfig.latency_ns"
+    },
+    "pending_timeout_ns": {
+      "value": 2000000000,
+      "unit": "ns",
+      "status": "DEFAULT",
+      "source": "execution.ExecutionConfig.pending_timeout_ns"
+    },
+    "mbo_snapshot_ns": {
+      "value": 2000000000,
+      "unit": "ns",
+      "status": "CONVENTION",
+      "source": "core.schema.StreamConfig.snapshot_ns"
+    },
+    "max_quote_age_ns": {
+      "value": 30000000000,
+      "unit": "ns",
+      "status": "CONVENTION",
+      "source": "core.schema.StreamConfig.max_quote_age_ns"
+    },
+    "crossing_opportunity_cooldown_ns": {
+      "value": 8000000000,
+      "unit": "ns",
+      "status": "ASSUMED",
+      "source": "Calibrated 2026-10-26 on bb_crossing_bank_v2 (8 days, scales 1 and 9): re-crossings of one line with no other line between show a scale-free hazard (about 0.7/gap); the median mid excursion during the silence first exceeds the round trip cost of 5 ticks (spread 0.2 + fee 0.3 USD/oz) at about 8 s"
+    }
+  },
+  "layers": {
+    "rule": "Measurements and future facts carry no costs. Money enters only in spectrum.economics (and execution rules in spectrum.execution).",
+    "measurement": [
+      "spectrum.core",
+      "spectrum.market",
+      "spectrum.features",
+      "spectrum.representation",
+      "spectrum.crossings"
+    ],
+    "economics": [
+      "spectrum.economics",
+      "spectrum.execution"
+    ],
+    "stored_future_facts": "Nothing future is stored by default; future.future_crossings is computed on demand from a stored bank (events + reduced quote tape)",
+    "status": "CONVENTION",
+    "source": "User decision 2026-10-26",
+    "future": [
+      "spectrum.future"
+    ],
+    "future_rule": "Bands and the crossing bank use only the past: a crossing is a past fact at its own t_ns. Anything seen forward from an origin lives in spectrum.future, and every such function and field is named with 'future'. Future carries four marks (spectrum.leakage): the word 'future' in every name ('futures' is the contract kind, not the word); the FutureFrame/FutureSeries type that survives pandas operations; value fingerprints of every future column and of values derived from it, also as masked zero and float32; and time, future.future_examples being the only join of X and Y (X published by the origin, Y matured after it, optional cutoff). Model input (FeatureBatch, feature Context, SequenceStore, observation store, to_feature_batch) rejects all of them.",
+    "maturity": "future_maturity_ns = time of the crossing, or origin + horizon, or end of the band segment"
+  },
+  "crossing_rule": {
+    "rule": "A band line is crossed at a publication where bid OR ask changes side of it (side = price >= line)",
+    "consequence": "Above-price line: crossed when ask reaches it; below-price line: when bid reaches it; a line moving through a still quote also crosses; a midpoint crossing usually gives two events (ask reaches the line, then bid passes it)",
+    "first_publication": "First publication of a support segment only sets the sides",
+    "band_geometry": "Bands themselves are built from the midpoint",
+    "clusters": "Every crossing stays in the bank, flicker included. Markers per line, past only: line_visit = first crossing since another line of the same scale was crossed (or first of the segment); opportunity = line_visit OR silence on this line since its previous crossing >= crossing_opportunity_cooldown_ns. A cluster is an opportunity and the crossings of the same line after it; crossings at one publication do not count as 'between' each other",
+    "implementation": "spectrum.crossings.bank.crossing_rows and crossing_clusters (geometry QUOTE_NATIVE_BID_OR_ASK_CLUSTER_V3), banks in data/derived/bb_crossing_bank_v3; spectrum.future.bands.future E (band exit)",
+    "status": "CONVENTION",
+    "source": "User decision 2026-10-26"
+  },
+  "mbo": {
+    "dataset": "GLBX.MDP3",
+    "schema": "MBO",
+    "symbol_request": "GC.FUT",
+    "raw_rules": {
+      "file": "data/raw/GLBX-20260805-FTTJQEK3T3.README.md",
+      "sha256": "a4942f609ce15104b5fbd17a3b239a5feed9e43fa4eecc70768931fd584e8fb0"
+    },
+    "rules": [
+      {
+        "rule": "Preserve DBN source order; never concatenate or append to a raw archive",
+        "status": "CONVENTION",
+        "source": "raw_rules"
+      },
+      {
+        "rule": "A book update is published only at the F_LAST of its event group; partial groups are never visible",
+        "status": "CONVENTION",
+        "source": "core.stream.MboStream"
+      },
+      {
+        "rule": "Availability clock is the provider receive time ts_recv; processing wall time is measured separately",
+        "status": "CONVENTION",
+        "source": "foundation_v1.clock"
+      },
+      {
+        "rule": "Prices and clocks stay exact integers (nano-USD, UTC ns) until a declared unit conversion",
+        "status": "CONVENTION",
+        "source": "foundation_v1.publication"
+      },
+      {
+        "rule": "Gaps, resets and epoch changes are never bridged; each starts a new continuity epoch",
+        "status": "CONVENTION",
+        "source": "raw_rules"
+      },
+      {
+        "rule": "Unknown values are stored as zero with a false mask, never as an observed zero",
+        "status": "CONVENTION",
+        "source": "features.contract.FeatureBatch"
+      },
+      {
+        "rule": "Instrument route is fixed before reconstruction without looking at outcomes",
+        "status": "CONVENTION",
+        "source": "foundation_v1.route_selection"
+      }
+    ],
+    "open_questions": [
+      "Front-month roll rule is not yet declared in the canon"
+    ]
+  },
+  "venues": {
+    "gc_globex": {
+      "zone": "America/New_York",
+      "open": "18:00",
+      "close": "17:00",
+      "trading_days": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "meaning": "Trading day D runs from 18:00 on D-1 to 17:00 on D, New York time; 17:00-18:00 is the daily break, Friday 17:00 to Sunday 18:00 the weekend",
+      "holidays": [],
+      "holiday_coverage": "NOT_COVERED",
+      "status": "EVIDENCED",
+      "source": "https://www.cmegroup.com/trading-hours.html; matches market.finalize_market.flags_for_times"
+    },
+    "xauusd_ctrader": {
+      "zone": "America/New_York",
+      "open": "18:00",
+      "close": "17:00",
+      "trading_days": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "meaning": "Broker spot gold follows the same New York schedule: last minute bar 16:59, reopening 18:00",
+      "holidays": [],
+      "holiday_coverage": "NOT_COVERED",
+      "status": "EVIDENCED",
+      "source": "cTrader xauusd_m1_full.csv, 2025-06 to 2026-09: daily 61-minute gap from 16:59 NY, weekend from Friday 16:59 NY to Sunday 18:00 NY across both DST regimes"
+    }
+  },
+  "sessions": {
+    "sydney": {
+      "zone": "Australia/Sydney",
+      "open": "07:00",
+      "close": "16:00",
+      "weekdays": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "status": "CONVENTION",
+      "source": "FX session convention in local time"
+    },
+    "tokyo": {
+      "zone": "Asia/Tokyo",
+      "open": "09:00",
+      "close": "18:00",
+      "weekdays": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "status": "CONVENTION",
+      "source": "FX session convention in local time"
+    },
+    "london": {
+      "zone": "Europe/London",
+      "open": "08:00",
+      "close": "17:00",
+      "weekdays": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "status": "CONVENTION",
+      "source": "FX session convention in local time"
+    },
+    "new_york": {
+      "zone": "America/New_York",
+      "open": "08:00",
+      "close": "17:00",
+      "weekdays": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "status": "CONVENTION",
+      "source": "FX session convention in local time"
+    }
+  },
+  "overlaps": {
+    "sydney_tokyo": [
+      "sydney",
+      "tokyo"
+    ],
+    "tokyo_london": [
+      "tokyo",
+      "london"
+    ],
+    "london_new_york": [
+      "london",
+      "new_york"
+    ]
+  },
+  "anchors": {
+    "lbma_gold_am": {
+      "zone": "Europe/London",
+      "at": "10:30",
+      "weekdays": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "status": "EVIDENCED",
+      "source": "LBMA Gold Price auction schedule"
+    },
+    "lbma_gold_pm": {
+      "zone": "Europe/London",
+      "at": "15:00",
+      "weekdays": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "status": "EVIDENCED",
+      "source": "LBMA Gold Price auction schedule"
+    },
+    "us_data_release": {
+      "zone": "America/New_York",
+      "at": "08:30",
+      "weekdays": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "status": "CONVENTION",
+      "source": "Usual time of BLS/BEA releases; actual release dates are not in the canon"
+    }
+  },
+  "protected_sources": {
+    "rule": "Text of these sources enters identities of published data or checkpoints. Changes require new identities, never silent reuse of old receipts. Only core bytes remain frozen against the archive.",
+    "files": {
+      "spectrum/core/**": "core.state.implementation_id; bytes also match the archive",
+      "spectrum/features/**": "features.pipeline.implementation_identity, FeatureStream checkpoints",
+      "spectrum/market/calendar.py": "features.pipeline.implementation_identity",
+      "spectrum/canon.py": "MarketCalendar.contract, finalized and feature identities",
+      "spectrum/resources/canon_v1.json": "canon.fingerprint, MarketCalendar.contract",
+      "spectrum/leakage.py": "features.pipeline.implementation_identity",
+      "spectrum/market/finalize_market.py": "finalize_market.implementation",
+      "spectrum/market/finalized.py": "finalize_market.implementation",
+      "spectrum/market/acceptance.py": "finalize_market.implementation",
+      "spectrum/market/source.py": "finalize_market.implementation, full_history.code_identity",
+      "spectrum/market/ingest.py": "finalize_market.implementation, full_history.code_identity",
+      "spectrum/market/build.py": "full_history.code_identity",
+      "spectrum/market/replay.py": "full_history.code_identity",
+      "spectrum/crossings/bank.py": "geometry_definition hashes reduce_quotes, native_geometry, crossing_rows",
+      "spectrum/crossings/map.py": "geometry_id hashes vwap_geometry",
+      "spectrum/features/full_history.py": "full_history.code_identity"
+    }
+  },
+  "legacy_conventions": {
+    "closed_hours": [
+      {
+        "where": "market.calendar.MarketCalendar (default of features.pipeline and FeatureStream)",
+        "meaning": "Since library 0.3.0, canon gc_globex with packaged tzdata; the former May-only 21:00-22:00 UTC default is retired",
+        "valid_for": "All dates under the declared venue holiday coverage; full-year minute parity tested",
+        "use": "Default for batch, stream, finalized schedule and representations; supplied scheduled_closed must agree. Regenerate old fixed-UTC features and V2 checkpoints",
+        "status": "EVIDENCED"
+      },
+      {
+        "where": "market.finalize_market.flags_for_times -> scheduled_closed column",
+        "meaning": "New York 17:00-18:00 break and weekend",
+        "valid_for": "All dates; equals canon venue gc_globex minute by minute for 2025-10..2026-09; holidays not covered",
+        "use": "Preferred source of scheduled_closed in finalized data",
+        "status": "EVIDENCED"
+      },
+      {
+        "where": "core.calendar.operational_gate",
+        "meaning": "Chicago 16:00-17:00 break plus 31-minute reserve and capture days",
+        "valid_for": "August 2026 pilot only; raises outside it",
+        "use": "Only for the August 2026 pilot",
+        "status": "CONVENTION"
+      },
+      {
+        "where": "features.full_history ObservedCalendar",
+        "meaning": "A minute is open only if a reference OHLC minute was observed",
+        "valid_for": "Dates covered by its minute index file",
+        "use": "Coverage helper only: reference_observed_open is independent of canonical scheduled_closed; absence also marks feed gaps",
+        "status": "EVIDENCED"
+      },
+      {
+        "where": "representation.representation.scheduled_open",
+        "meaning": "Uses the same MarketCalendar gc_globex schedule as batch, stream and finalized data",
+        "valid_for": "All dates; holidays not covered",
+        "use": "No separate schedule formula",
+        "status": "CONVENTION"
+      }
+    ],
+    "quote_age": [
+      {
+        "where": "market.tape.TapeReplay.advance quote_age_ns",
+        "meaning": "query_ns - t_ns (age of the market fact), admissible if <= 30 s",
+        "use": "Read fact_age_ns / delivery_age_ns for explicit meaning",
+        "status": "CONVENTION"
+      },
+      {
+        "where": "market.finalized.FinalizedReplay.advance quote_age_ns",
+        "meaning": "query_ns - available_ns (time since the row became known); no threshold",
+        "use": "Not comparable with TapeReplay quote_age_ns; fact age is query_ns - t_ns of the returned row",
+        "status": "CONVENTION"
+      },
+      {
+        "where": "market.replay.MarketReplay.query known",
+        "meaning": "query time - last committed accumulator time <= StreamConfig.max_quote_age_ns",
+        "use": "Fact-age rule with the configured bound",
+        "status": "CONVENTION"
+      }
+    ],
+    "unknown": [
+      {
+        "where": "features (FeatureBatch, Context, parquet)",
+        "meaning": "Unknown stored as 0 with a false mask; parquet mask column '<name>__known'",
+        "status": "CONVENTION"
+      },
+      {
+        "where": "core.feature_registry.Registry",
+        "meaning": "Unknown stored as 0 with a false mask; mask column '<name>_known'",
+        "status": "CONVENTION"
+      },
+      {
+        "where": "representation tables",
+        "meaning": "NaN is unknown, 0 is measured",
+        "use": "Cross the boundary with representation.to_feature_batch",
+        "status": "CONVENTION"
+      }
+    ],
+    "units": [
+      {
+        "where": "features.families.queue_state.TICK",
+        "meaning": "100 000 000 nano-USD (gc_tick_nano)",
+        "use": "Not the same TICK as elsewhere",
+        "status": "EVIDENCED"
+      },
+      {
+        "where": "TICK defined in core.schema and features.families.volatility_vwap; imported as units.GC_TICK_USD elsewhere",
+        "meaning": "0.1 USD/oz (gc_tick_usd)",
+        "status": "EVIDENCED"
+      },
+      {
+        "where": "Literal /.1 in features and crossings",
+        "meaning": "Conversion USD/oz -> GC ticks with gc_tick_usd",
+        "use": "Valid for GC only",
+        "status": "EVIDENCED"
+      },
+      {
+        "where": "representation.representation 4000.",
+        "meaning": "Numerical price origin (USD/oz) for trade VWAP moments; not a market level",
+        "status": "CONVENTION"
+      }
+    ],
+    "costs": [
+      {
+        "where": "data/derived crossing targets (bb_crossing_bank_v1, crossing_map_target_v1, crossing_path_target_v6, favorable_series_v1, risk filters, race/volsense, episodes)",
+        "meaning": "Built with the midpoint crossing rule (QUOTE_NATIVE_STRICT_CROSS_V1) and a 0.30 USD/oz fee inside labels",
+        "use": "Old crossing banks moved to data/legacy (bb_crossing_bank_v1, bb_crossing_bank_v1_superseded_id); target sets built on them remain in data/derived as given. Code is in branch codex/archive/research-2026-10-26. Not comparable with bid-OR-ask facts",
+        "status": "EVIDENCED"
+      }
+    ]
+  },
+  "research_windows": {
+    "activity": {
+      "from": {
+        "zone": "Europe/London",
+        "at": "08:00"
+      },
+      "to": {
+        "zone": "America/New_York",
+        "at": "17:00"
+      },
+      "status": "CONVENTION",
+      "source": "market.finalize_market and market.full_history entry window"
+    }
+  }
+}

@@ -9,12 +9,14 @@
 
 | Пакет | Ответственность |
 |---|---|
+| `spectrum.canon` | Канон вводных: единицы, часы UTC, правила MBO, часы площадок, сессии и оверлапы с учётом DST, издержки по умолчанию; у каждого значения единица, статус и источник (`resources/canon_v1.json`) |
 | `spectrum.core` | Единственное исходное ядро L3/MBO, F_LAST, состояние, clocks, поддержка и потоковые метрики |
 | `spectrum.market` | Чтение исходников, подготовка tapes, replay, календарь, quote arrays, общая FIFO-механика |
 | `spectrum.features` | Каталог семейств, формулы, причинное выравнивание, пакетный и потоковый расчёт |
 | `spectrum.representation` | Interaction ledger, fast/M1/context/zones/events, наблюдение as-of, память и lazy sequence windows |
-| `spectrum.crossings` | Фактический банк пересечений, native BB/VWAP, устойчивые адреса геометрии, сохранение и чтение |
-| `spectrum.outcomes` | Будущие метки и запросы к путям: crossing, risk, MFE/MAE, время, favorable, maturity/censoring |
+| `spectrum.crossings` | Фактический банк пересечений (правило bid OR ask), native BB/VWAP, устойчивые адреса геометрии, сохранение и чтение |
+| `spectrum.future` | Всё, что видно только вперёд от точки: `future_*` функции и поля (ближайшее пересечение каждой линии, движение цены). Вход модели отвергает любые поля со словом future |
+| `spectrum.economics` | Экономический слой: комиссия и деньги поверх `future`; факты не меняет |
 | `spectrum.execution` | Исполнение и последствия заданных действий; без обучения и выбора торговой политики |
 | `spectrum.resources` | Версионированные определения, поставляемые вместе с установленным пакетом |
 | `experiments` | Чистое пространство для новых опытов; зависимость направлена из опыта в библиотеку |
@@ -72,14 +74,51 @@ stream.feed_many(records)
 
 # Канонические целочисленные цены и publication-clock; книги здесь не создаются.
 quotes = QuoteColumns.from_frame(finalized_quotes)
-bank, geometry = build_bank(quotes, source_id="verified-source-identity")
+bank, tape = build_bank(quotes, source_id="verified-source-identity")
 publish_bank(quotes, "data/derived/my_crossings", source_id="verified-source-identity")
-saved_bank, receipt = open_bank("data/derived/my_crossings")
+saved_bank, tape, manifest = open_bank("data/derived/my_crossings")
 ```
 
-Банк хранит факты пересечений с ordinal/event ID. Будущий запрос к банку должен
-выполняться отдельно от формирования X. Правила entry/latency, риск, единицы и
-цензурирование задаются явно в `outcomes`/`execution`.
+Линия пересечена, когда bid или ask перешёл на другую её сторону. Банк хранит
+только факты пересечений с ordinal/event ID. Полосы строятся по прошлому, поэтому каждое пересечение — уже состоявшийся
+факт в свой `t_ns`. `future.future_crossings(bank, tape, ...)` из каждой точки
+находит ближайшее будущее пересечение каждой линии или причину цензуры;
+`economics.future_crossing_marks` считает по ним деньги с комиссией из канона.
+Дребезг остаётся в банке, а маркеры отмечают новые возможности:
+`line_visit` — первое пересечение линии после пересечения другой линии того же масштаба;
+`opportunity` — `line_visit` или пауза на этой линии не короче кулдауна из канона (8 с);
+`cluster_event_id`/`cluster_rank` связывают дребезг с его открывающим событием.
+`future_crossings(bank[bank.opportunity], ...)` ищет ближайшую новую возможность.
+
+`spectrum.leakage` отделяет будущие таблицы (`FutureFrame`/`FutureSeries`) и массивы
+(`FutureArray`) от X. Срезы, нормализация, смена dtype и NumPy-операции над
+`FutureArray` сохраняют метку; неявное преобразование через `np.asarray` запрещено.
+Входы X проверяют значения и маски до преобразования типов. Имена `future_*` и
+отпечатки значений служат дополнительными проверками.
+
+`future_examples(x, y)` соединяет X и Y по времени: X опубликован к origin,
+Y созрел после него, `cutoff_ns` ограничивает зрелость обучающих ответов.
+При пустом X возвращаются нулевые значения, ложные маски и `usable=False`.
+Для передачи Y внешней модели или сериализатору используйте
+`export_future_values(y)` из `spectrum.leakage`. Экспорт намеренно снимает тип:
+не возвращайте такой массив в построители X. Произвольные внешние преобразования
+или восстановление обычных таблиц из чисел не сохраняют проверяемое происхождение;
+отпечатки не заменяют проверку причинности источника и формулы.
+Банки по дням: `python -m spectrum bank --days data/derived/basket_multimonth_v1 --output ...`;
+`open_bank` возвращает `(bank, tape, manifest)`.
+
+## Общий календарь
+
+`MarketCalendar()` использует `gc_globex` из канона и поставляемую зависимость
+`tzdata`. Это общий default для batch, stream, finalized schedule и представлений,
+включая зимнее время и переходы DST. Переданный `scheduled_closed` проверяется
+на соответствие выбранному календарю; старые несовместимые данные требуют пересчёта.
+`reference_observed_open` — отдельная маска покрытия источника, не расписание биржи.
+В каноне праздничное покрытие указано отдельно; полный календарь праздников не заявляется.
+
+Checkpoint `FEATURE_STREAM_V3` сохраняет fingerprint канона, его реализации и
+версию `tzdata`. Старые V2 checkpoints требуют пересоздания на исходном потоке.
+Текущие результаты проверки пакета 0.3.0: [VALIDATION.md](docs/VALIDATION.md).
 
 ## Представления для новой модели
 

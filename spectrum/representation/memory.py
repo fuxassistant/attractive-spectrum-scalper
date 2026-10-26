@@ -2,9 +2,9 @@
 import numpy as np
 import pandas as pd
 from spectrum.core.schema import NS
-from .schema import FEATURES
+from spectrum.features.families.signature import FEATURES
 
-MINUTE = 60 * NS
+from spectrum.units import MINUTE
 
 
 VERSION = 'MIXED_MEMORY_V1'
