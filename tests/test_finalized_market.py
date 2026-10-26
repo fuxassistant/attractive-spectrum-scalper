@@ -5,8 +5,14 @@ import pandas as pd
 import pytest
 import pyarrow.parquet as pq
 
-from spectrum.finalized import FinalizedReplay, FinalizedSession, restore_l3, verify
-from spectrum.finalize_market import DayBuilder, Intervals, session_bounds, flags_for_times
+from spectrum.market.finalized import FinalizedReplay
+from spectrum.market.finalized import FinalizedSession
+from spectrum.market.finalized import restore_l3
+from spectrum.market.finalized import verify
+from spectrum.market.finalize_market import DayBuilder
+from spectrum.market.finalize_market import Intervals
+from spectrum.market.finalize_market import session_bounds
+from spectrum.market.finalize_market import flags_for_times
 from spectrum.core.vendor.l3 import MboRecord
 
 
@@ -123,20 +129,10 @@ def test_advance_cursor_restore_age_and_projected_window(tmp_path):
 
 
 def test_multi_group_seek_and_restore(tmp_path,monkeypatch):
-    import spectrum.finalize_market as fm
+    import spectrum.market.finalize_market as fm
     monkeypatch.setattr(fm,'BLOCK',2)
     b,start=build(tmp_path)
     r=FinalizedReplay(b.root);r.seek(start+8_000_000_000)
     cursor=r.checkpoint()
     assert cursor['group']==1
     assert FinalizedReplay.restore(b.root,cursor).read_batch()['source_ordinal'].to_pylist()==[4]
-
-
-def test_existing_experiment_loader_dispatches_finalized(tmp_path,monkeypatch):
-    from spectrum.player_v3.data import Day
-    from spectrum.player_v3.finalized_data import FinalizedDay
-    (tmp_path/'manifest.json').write_text(json.dumps(dict(support_contract='FINALIZED_SEGMENTS_V2')))
-    def load(self,path,verify=False):self.dispatch_verified=verify
-    monkeypatch.setattr(FinalizedDay,'__init__',load)
-    assert Day(tmp_path).dispatch_verified is False
-    assert Day(tmp_path,verify=True).dispatch_verified is True

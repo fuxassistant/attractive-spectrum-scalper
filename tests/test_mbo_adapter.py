@@ -10,10 +10,19 @@ import pyarrow.parquet as pq
 import pytest
 import zstandard as zstd
 
-from spectrum.core.adapter import (BAR_SCHEMA, COUNTERS, DEPTH, NS,
-    QUOTE_SCHEMA, SNAP_SCHEMA, MapAccumulator, build_day, depth_vector)
+from spectrum.core.adapter import BAR_SCHEMA
+from spectrum.core.adapter import COUNTERS
+from spectrum.core.adapter import DEPTH
+from spectrum.core.adapter import NS
+from spectrum.core.adapter import QUOTE_SCHEMA
+from spectrum.core.adapter import SNAP_SCHEMA
+from spectrum.core.adapter import MapAccumulator
+from spectrum.core.adapter import build_day
+from spectrum.core.adapter import depth_vector
 from spectrum.core.vendor.glbx_dbn import MBO_DTYPE
-from spectrum.core.vendor.l3 import F_LAST, F_SNAPSHOT, MboRecord
+from spectrum.core.vendor.l3 import F_LAST
+from spectrum.core.vendor.l3 import F_SNAPSHOT
+from spectrum.core.vendor.l3 import MboRecord
 from spectrum.core.vendor.l3_v2 import L3EventEngineV2
 
 

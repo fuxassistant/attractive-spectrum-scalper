@@ -1,9 +1,13 @@
 import numpy as np
-from spectrum.cognition.crossing_map import vwap_geometry,lookup_line,first_passage,factorized_loss,NS
+from spectrum.crossings.map import vwap_geometry
+from spectrum.crossings.map import lookup_line
+from spectrum.crossings.map import first_passage
+from spectrum.crossings.map import factorized_loss
+from spectrum.crossings.map import NS
 
 
 def test_geometry_identity_does_not_depend_on_loss(monkeypatch):
-    from spectrum.cognition import crossing_map as module
+    import spectrum.crossings.map as module
     parts=[dict(quote_file=dict(sha256='raw'),start_ns=1,end_ns=2)]
     before=module.geometry_id('VWAP',5,parts,'trades')
     monkeypatch.setattr(module,'factorized_loss',lambda *args:999.)

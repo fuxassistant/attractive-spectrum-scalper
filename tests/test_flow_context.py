@@ -2,7 +2,7 @@ from types import SimpleNamespace
 import numpy as np
 import pandas as pd
 import pytest
-from spectrum.cognition import flow_context as f
+import spectrum.features.families.flow_context as f
 
 
 def tape(date='2026-01-06', n=300):
@@ -57,32 +57,3 @@ def test_minute_support_rejects_internal_quote_reset_even_with_good_endpoints():
         decision_t=np.arange(1, 4)*f.MINUTE+5, decision_mid=np.ones(3)*4000)
     d = f.minute_tape(day)
     assert d['valid'].tolist() == [False, False, True]
-
-
-def test_probability_factorization_keeps_empty_and_conditional_path_separate():
-    fill = np.array([0., .4, 1.]); q = np.array([[.2, .6, .2]]*3)
-    p = f.factor_probabilities(fill, q)
-    np.testing.assert_allclose(p.sum(1), 1)
-    assert p[0, 3] == 1 and p[2, 3] == 0
-    assert p[1, 0] == pytest.approx(.08)
-    with pytest.raises(ValueError):
-        f.factor_probabilities(fill, q*.5)
-
-
-def test_conditional_scoring_excludes_empty_without_changing_fill_score():
-    from spectrum.cognition.flow_context_lab import scores, metrics
-    frame = pd.DataFrame(dict(date=['d']*4, category=[0, 1, 3, -1], p_fill=[.8]*4,
-                              c_TAKE=[.25]*4, c_STOP=[.5]*4, c_TIME=[.25]*4, net=[2.1, -1.5, 0., np.nan]))
-    known, filled, ss = scores(frame)
-    assert len(known) == 3 and filled.tolist() == [True, True, False]
-    assert ss['path'][2] == 0 and ss['fill'][2] == pytest.approx(np.log(.2))
-    m = metrics(frame)
-    assert m['n_unknown'] == 1 and m['n_filled'] == 2
-    assert m['path_log_loss'] == pytest.approx(-np.log(.25*.5)/2)
-
-
-def test_single_class_taker_fill_head_is_defined():
-    from spectrum.cognition.flow_context_lab import fit_head, head_probability
-    model = fit_head(np.ones((10, 2)), np.ones(10, int))
-    p = head_probability(model, np.ones((4, 2)), 2)
-    np.testing.assert_equal(p, [[0, 1]]*4)

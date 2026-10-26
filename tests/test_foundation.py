@@ -6,9 +6,12 @@ import pytest
 from spectrum.core import StreamConfig
 from spectrum.core.schema import SNAP_SCHEMA
 from spectrum.core.vendor.l3 import F_LAST
-from spectrum.replay import MarketReplay
-from spectrum.calendar import MarketCalendar
-from spectrum.lab import compute,rolling_valid,FeaturePlugin,register
+from spectrum.market.replay import MarketReplay
+from spectrum.market.calendar import MarketCalendar
+from spectrum.features.pipeline import compute
+from spectrum.features.pipeline import rolling_valid
+from spectrum.features.pipeline import FeaturePlugin
+from spectrum.features.pipeline import register
 from test_mbo_adapter import bootstrap_rows,rec
 
 
@@ -101,7 +104,7 @@ def test_stale_publication_excluded_without_erasing_history():
 
 
 def test_streamed_feature_halo_restart_and_batch_parity():
-    from spectrum.feature_stream import FeatureStream
+    from spectrum.features.stream import FeatureStream
     f=frame(500);f.loc[250,'valid']=False
     whole=compute(f);stream=FeatureStream(source_id='fixture')
     pieces=[]
@@ -116,8 +119,9 @@ def test_streamed_feature_halo_restart_and_batch_parity():
 
 
 def test_feature_checkpoint_detects_calendar_implementation_drift():
-    from spectrum.feature_stream import FeatureStream
-    from spectrum.core.state import seal,unseal
+    from spectrum.features.stream import FeatureStream
+    from spectrum.core.state import seal
+    from spectrum.core.state import unseal
     stream=FeatureStream(source_id='fixture');stream.feed(frame(150))
     saved=unseal(stream.checkpoint());saved['calendar_sha256']='obsolete-implementation'
     with pytest.raises(ValueError,match='calendar drift'):

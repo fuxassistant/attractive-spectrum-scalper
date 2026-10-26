@@ -1,5 +1,6 @@
 import numpy as np
-from spectrum.event_landmarks import detect_bursts, recurrence_labels
+from spectrum.features.families.landmarks import detect_bursts
+from spectrum.features.families.landmarks import recurrence_labels
 
 
 def tape(n=240):

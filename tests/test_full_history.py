@@ -1,12 +1,17 @@
 import numpy as np
 import pandas as pd
 import pytest
-from spectrum.full_history import ObservedCalendar, MINUTE, DAY, london_ns, prefix_score, child_path
+from spectrum.market.full_history import ObservedCalendar
+from spectrum.market.full_history import MINUTE
+from spectrum.market.full_history import DAY
+from spectrum.market.full_history import london_ns
+from spectrum.market.full_history import prefix_score
+from spectrum.market.full_history import child_path
 from spectrum.core.vendor.glbx_dbn import MBO_DTYPE
 
 
 def test_only_explicit_orchestration_migration_is_compatible():
-    from spectrum.full_history import compatible_identity
+    from spectrum.market.full_history import compatible_identity
     old={'full_history.py':'old','lab.py':'fixed','core':'fixed'}
     new={**old,'full_history.py':'new'}
     config={'code_identity':new,'compatible_code_identities':[old]}
@@ -19,9 +24,10 @@ def test_empty_capture_is_excluded_without_inventing_features(tmp_path):
     import json
     import pyarrow as pa
     import pyarrow.parquet as pq
-    from spectrum.full_history import code_identity,generate_features
+    from spectrum.market.full_history import code_identity
+    from spectrum.market.full_history import generate_features
     from spectrum.core.storage import sha
-    from spectrum.ingest import save_json
+    from spectrum.io import save_json
     capture=tmp_path/'market';capture.mkdir()
     pq.write_table(pa.table({'t_ns':pa.array([],type=pa.int64())}),capture/'seconds.parquet')
     ref=tmp_path/'minutes.npy';np.save(ref,np.array([1,2]))
@@ -43,7 +49,7 @@ def test_empty_capture_is_excluded_without_inventing_features(tmp_path):
 
 
 def test_training_catalog_preserves_reasons_and_threshold():
-    from spectrum.full_history import training_assessment
+    from spectrum.market.full_history import training_assessment
     r={'rows':100,'entry':{'selection':{'source_condition':'available','context_only':False}},
        'entry_allowed_rows':70,'reference_open_rows':100,'admitted_rows':80,'independent_ohlc':{'status':'PASS'}}
     assert training_assessment(r)['eligible']

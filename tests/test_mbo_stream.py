@@ -7,14 +7,20 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from spectrum.core.schema import StreamConfig, NS, SNAP_SCHEMA, BAR_SCHEMA
+from spectrum.core.schema import StreamConfig
+from spectrum.core.schema import NS
+from spectrum.core.schema import SNAP_SCHEMA
+from spectrum.core.schema import BAR_SCHEMA
 from spectrum.core.stream import MboStream
 from spectrum.core.features import build_features
 from spectrum.core.feature_stream import FeatureStream
-from spectrum.core.feature_registry import Field, Family
+from spectrum.core.feature_registry import Field
+from spectrum.core.feature_registry import Family
 from spectrum.core.feature_families import default_families
-from spectrum.core.state import seal, unseal
-from spectrum.core.vendor.l3 import F_LAST, F_SNAPSHOT
+from spectrum.core.state import seal
+from spectrum.core.state import unseal
+from spectrum.core.vendor.l3 import F_LAST
+from spectrum.core.vendor.l3 import F_SNAPSHOT
 from test_mbo_adapter import bootstrap_rows, rec, quiet_until
 from test_mbo_features import sample
 

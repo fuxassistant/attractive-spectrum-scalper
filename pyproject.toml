@@ -4,13 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "attractive-spectrum-scalper"
-version = "0.1.0"
+version = "0.2.0"
+description = "Causal market replay, feature families, representations and crossing banks"
 requires-python = ">=3.11"
-dependencies = ["numpy", "pyarrow", "zstandard", "databento-dbn>=0.69,<0.70", "pandas", "matplotlib", "psutil", "tzdata"]
+dependencies = ["numpy", "pandas", "pyarrow", "zstandard", "databento-dbn>=0.69,<0.70", "numba>=0.61", "psutil", "tzdata"]
 
 [project.optional-dependencies]
-player = ["torch>=2.2", "numba>=0.61", "tzdata"]
-cognition = ["torch>=2.2", "numba>=0.61", "scikit-learn>=1.4", "tzdata"]
 dev = ["pytest>=9,<10"]
 
 [project.scripts]
@@ -18,6 +17,10 @@ spectrum = "spectrum.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["spectrum*"]
+
+[tool.setuptools.package-data]
+"spectrum.resources" = ["*.json"]
+"spectrum.core.vendor" = ["*.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import pytest
 from types import SimpleNamespace
-from spectrum.cognition import bb_crossing as bb
+import spectrum.crossings.bank as bb
 
 
 def test_native_math_and_prefix_causality():

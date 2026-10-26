@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
-from scripts.bb_crossing_session import lookup,all_marks
-from spectrum.cognition import bb_crossing as bb
+from spectrum.outcomes.session import lookup,all_marks
+import spectrum.crossings.bank as bb
 
 
 def test_session_lookup_keeps_late_first_cross_but_never_bridges_support():

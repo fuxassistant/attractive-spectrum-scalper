@@ -1,0 +1,1010 @@
+{
+  "archive_branch": "codex/archive/research-2026-10-26",
+  "archive_commit": "59f2fde203ad6129beb7bed58b9bbf87caa634c8",
+  "baseline_tests": 666,
+  "baseline_seconds": 43.53,
+  "modules": [
+    {
+      "source": "spectrum/core/__init__.py",
+      "destination": "spectrum/core/__init__.py",
+      "symbols": null,
+      "source_sha256": "733f3c3439f6e455f1c21dfad463f614b51b9658972f005f90dfab2031ae7f58",
+      "destination_sha256": "733f3c3439f6e455f1c21dfad463f614b51b9658972f005f90dfab2031ae7f58"
+    },
+    {
+      "source": "spectrum/core/adapter.py",
+      "destination": "spectrum/core/adapter.py",
+      "symbols": null,
+      "source_sha256": "d29890d35a871bb831a4ccb64de929faac3e6cfcd473e8a8a91445f64c0085f7",
+      "destination_sha256": "d29890d35a871bb831a4ccb64de929faac3e6cfcd473e8a8a91445f64c0085f7"
+    },
+    {
+      "source": "spectrum/core/aggregate.py",
+      "destination": "spectrum/core/aggregate.py",
+      "symbols": null,
+      "source_sha256": "844fda0b5d66b5307cd28c3562c2b4ca42eacb089577528918433b15d3fa6572",
+      "destination_sha256": "844fda0b5d66b5307cd28c3562c2b4ca42eacb089577528918433b15d3fa6572"
+    },
+    {
+      "source": "spectrum/core/calendar.py",
+      "destination": "spectrum/core/calendar.py",
+      "symbols": null,
+      "source_sha256": "8fdb4da9b85190c059fc57ce4e7881c640f9b515e17b6cf45dbac17396c7531a",
+      "destination_sha256": "8fdb4da9b85190c059fc57ce4e7881c640f9b515e17b6cf45dbac17396c7531a"
+    },
+    {
+      "source": "spectrum/core/event_facts.py",
+      "destination": "spectrum/core/event_facts.py",
+      "symbols": null,
+      "source_sha256": "632b500cb8ed9fea8bb46dd2d642162a9d495b147f88529a7eb35c7f2cb1b78d",
+      "destination_sha256": "632b500cb8ed9fea8bb46dd2d642162a9d495b147f88529a7eb35c7f2cb1b78d"
+    },
+    {
+      "source": "spectrum/core/extensions.py",
+      "destination": "spectrum/core/extensions.py",
+      "symbols": null,
+      "source_sha256": "cf9f017ccf128f83314571164e7b395b409ef77ee822069baffa77471f0583ba",
+      "destination_sha256": "cf9f017ccf128f83314571164e7b395b409ef77ee822069baffa77471f0583ba"
+    },
+    {
+      "source": "spectrum/core/feature_families.py",
+      "destination": "spectrum/core/feature_families.py",
+      "symbols": null,
+      "source_sha256": "67d8a7fcc8b8b097335fb5a561f9264efee5c49435bb41e58c7e966e4bca9ad5",
+      "destination_sha256": "67d8a7fcc8b8b097335fb5a561f9264efee5c49435bb41e58c7e966e4bca9ad5"
+    },
+    {
+      "source": "spectrum/core/feature_registry.py",
+      "destination": "spectrum/core/feature_registry.py",
+      "symbols": null,
+      "source_sha256": "e6efbed4f13155fad045be917d80fcc28220ef1daa34fbe0dffdb9a26af3755e",
+      "destination_sha256": "e6efbed4f13155fad045be917d80fcc28220ef1daa34fbe0dffdb9a26af3755e"
+    },
+    {
+      "source": "spectrum/core/feature_stream.py",
+      "destination": "spectrum/core/feature_stream.py",
+      "symbols": null,
+      "source_sha256": "cba62a28f4be35543321070f969ac6e52ba3b0d9c711c6a54c4b95f7171af470",
+      "destination_sha256": "cba62a28f4be35543321070f969ac6e52ba3b0d9c711c6a54c4b95f7171af470"
+    },
+    {
+      "source": "spectrum/core/features.py",
+      "destination": "spectrum/core/features.py",
+      "symbols": null,
+      "source_sha256": "71c12a09ad8f7ff3858a257a07fa5f7ba4fd315a7c2f34659033d35107d8a817",
+      "destination_sha256": "71c12a09ad8f7ff3858a257a07fa5f7ba4fd315a7c2f34659033d35107d8a817"
+    },
+    {
+      "source": "spectrum/core/join.py",
+      "destination": "spectrum/core/join.py",
+      "symbols": null,
+      "source_sha256": "65cd5a903ddbb667d08601ef5299b7270c7272a4827c65cd712ad86c12e12e7e",
+      "destination_sha256": "65cd5a903ddbb667d08601ef5299b7270c7272a4827c65cd712ad86c12e12e7e"
+    },
+    {
+      "source": "spectrum/core/price_history.py",
+      "destination": "spectrum/core/price_history.py",
+      "symbols": null,
+      "source_sha256": "fcc39bb854d546153b07be13473f07f3879988c8b8a59228634552943055bb49",
+      "destination_sha256": "fcc39bb854d546153b07be13473f07f3879988c8b8a59228634552943055bb49"
+    },
+    {
+      "source": "spectrum/core/schema.py",
+      "destination": "spectrum/core/schema.py",
+      "symbols": null,
+      "source_sha256": "c6676106163091bb316284713688a50b54a15e5418dba7e8ebe5ae1e86ab5b4d",
+      "destination_sha256": "c6676106163091bb316284713688a50b54a15e5418dba7e8ebe5ae1e86ab5b4d"
+    },
+    {
+      "source": "spectrum/core/state.py",
+      "destination": "spectrum/core/state.py",
+      "symbols": null,
+      "source_sha256": "bb246ff31bd7a89e4f28e773c8ec71dfae917c918f3680ec9432b382b667be78",
+      "destination_sha256": "bb246ff31bd7a89e4f28e773c8ec71dfae917c918f3680ec9432b382b667be78"
+    },
+    {
+      "source": "spectrum/core/storage.py",
+      "destination": "spectrum/core/storage.py",
+      "symbols": null,
+      "source_sha256": "8128683b043ff9a9c6e62d211e87be5c1d3d42881eebed545ffd97ca306fd0e9",
+      "destination_sha256": "8128683b043ff9a9c6e62d211e87be5c1d3d42881eebed545ffd97ca306fd0e9"
+    },
+    {
+      "source": "spectrum/core/stream.py",
+      "destination": "spectrum/core/stream.py",
+      "symbols": null,
+      "source_sha256": "87cc88cc945f85e12cdb2d2deb717c6aae1f3972aa9e8443c3af75615f8e4f68",
+      "destination_sha256": "87cc88cc945f85e12cdb2d2deb717c6aae1f3972aa9e8443c3af75615f8e4f68"
+    },
+    {
+      "source": "spectrum/core/vendor/__init__.py",
+      "destination": "spectrum/core/vendor/__init__.py",
+      "symbols": null,
+      "source_sha256": "ca95f262aa61e2606dab754d774a39104e8e9506c4b6f66ba7b3f23c258091dc",
+      "destination_sha256": "ca95f262aa61e2606dab754d774a39104e8e9506c4b6f66ba7b3f23c258091dc"
+    },
+    {
+      "source": "spectrum/core/vendor/glbx_dbn.py",
+      "destination": "spectrum/core/vendor/glbx_dbn.py",
+      "symbols": null,
+      "source_sha256": "cacd2f190b09adc62cd7a4b9272e1f2ffa876deb473c8bf2ccef7138461ac692",
+      "destination_sha256": "cacd2f190b09adc62cd7a4b9272e1f2ffa876deb473c8bf2ccef7138461ac692"
+    },
+    {
+      "source": "spectrum/core/vendor/l3.py",
+      "destination": "spectrum/core/vendor/l3.py",
+      "symbols": null,
+      "source_sha256": "767b69b2aa09f17169fd90e77f8372c0cafdc7f16a53bd200251b1afef9fa2d5",
+      "destination_sha256": "767b69b2aa09f17169fd90e77f8372c0cafdc7f16a53bd200251b1afef9fa2d5"
+    },
+    {
+      "source": "spectrum/core/vendor/l3_v2.py",
+      "destination": "spectrum/core/vendor/l3_v2.py",
+      "symbols": null,
+      "source_sha256": "31695365bfe333fd77e84c9c9f67fd7da9cb4775fd7255536525b04ce9ad4066",
+      "destination_sha256": "31695365bfe333fd77e84c9c9f67fd7da9cb4775fd7255536525b04ce9ad4066"
+    },
+    {
+      "source": "spectrum/source.py",
+      "destination": "spectrum/market/source.py",
+      "symbols": null,
+      "source_sha256": "6c7b276c6e45d5ae4b4bc1fe337e381061956644b7a84f00bb693a729f64f619",
+      "destination_sha256": "cfdf094734d1403451732bd116f8edde790fbea7ea72b0a025ee6645210ba1c7"
+    },
+    {
+      "source": "spectrum/ingest.py",
+      "destination": "spectrum/market/ingest.py",
+      "symbols": null,
+      "source_sha256": "64553b5498e93e9fd8cbf80184517fd26949fa8409607d87999632861c8752c9",
+      "destination_sha256": "8c30a4b914a78e3b6af08d9c67e1490021b04b6694c6ccc74b8dd7b344633cf1"
+    },
+    {
+      "source": "spectrum/build.py",
+      "destination": "spectrum/market/build.py",
+      "symbols": null,
+      "source_sha256": "d30df5d6a28c6d73216b0aae267cb4c7510fb0edd64f40ea9a5d24c8cfd39ec1",
+      "destination_sha256": "230ddd611a539ad8d57824c6ee2a69c003b1597a3b8376440dfa3c61878a44b2"
+    },
+    {
+      "source": "spectrum/calendar.py",
+      "destination": "spectrum/market/calendar.py",
+      "symbols": null,
+      "source_sha256": "8816f2150dfe373d02206d2c508bc7c63db13b6ea102e3898a87710bdb4c11ff",
+      "destination_sha256": "8816f2150dfe373d02206d2c508bc7c63db13b6ea102e3898a87710bdb4c11ff"
+    },
+    {
+      "source": "spectrum/replay.py",
+      "destination": "spectrum/market/replay.py",
+      "symbols": null,
+      "source_sha256": "00971fa10d15e8d1f9cb02830916ea27648890ab9444b91478f9bd181b7f7531",
+      "destination_sha256": "96271f9a3c9ee2de43744521702c9812971290072d5db7141b4215510463f8ef"
+    },
+    {
+      "source": "spectrum/tape.py",
+      "destination": "spectrum/market/tape.py",
+      "symbols": null,
+      "source_sha256": "9102338a670e96b19470d0ef9426d66bf68c8f9f375ed275961a3accb29cec1c",
+      "destination_sha256": "8e00a210a24d5fc087bf450627223b8e151fb42a2c7b857e6a8f6546dfe98b95"
+    },
+    {
+      "source": "spectrum/full_history.py",
+      "destination": "spectrum/market/full_history.py",
+      "symbols": null,
+      "source_sha256": "34d19a39d98415f8ac353c1484f9aa777029a2cd8c7152260d3fdb631a6d4387",
+      "destination_sha256": "1647613dd238724d3df673c92aef08e8645fc15c38ecc23e3fa0edcc40e7c6d0"
+    },
+    {
+      "source": "spectrum/finalized.py",
+      "destination": "spectrum/market/finalized.py",
+      "symbols": null,
+      "source_sha256": "1af090ce849c0b82f5e16a77453244b0bd3c19665a0df9039488694b974f6f67",
+      "destination_sha256": "cf0e3496d1bb22b0f69b7152bb382dc98226c34c9e2fec30054070231e297999"
+    },
+    {
+      "source": "spectrum/finalize_market.py",
+      "destination": "spectrum/market/finalize_market.py",
+      "symbols": null,
+      "source_sha256": "e09a6d6ea6ae4d98a836a0d6f0d1ac12b069c1c5af61121b5cb182dbacf9c186",
+      "destination_sha256": "6f0a35a1d5eed0cba3e24fb9ef4ad51045a46ce0aa8ea3bca2a9ddaafc43a375"
+    },
+    {
+      "source": "spectrum/feature_stream.py",
+      "destination": "spectrum/features/stream.py",
+      "symbols": null,
+      "source_sha256": "965724a13894a5d5881d6bc8ef98bc6e61ae8cce6263beab2ce5c69229f22e9f",
+      "destination_sha256": "3e9fbc53e21a7b741df4a44e517649733aa88ae4ea99696d84b9b14fe786d61a"
+    },
+    {
+      "source": "spectrum/plugins/depth_balance.py",
+      "destination": "spectrum/features/families/depth_balance.py",
+      "symbols": null,
+      "source_sha256": "f57ab9c9f8db4e2cf159fb985211edc74143453f19b90237204ea0440dcdacc0",
+      "destination_sha256": "d88330a92f4ffa9f03674ec2803fb5e10c49edb938981f02a46b77f66e0a549c"
+    },
+    {
+      "source": "spectrum/plugins/volatility_vwap.py",
+      "destination": "spectrum/features/families/volatility_vwap.py",
+      "symbols": null,
+      "source_sha256": "7ff08404dcc8493c11a5119b98a8476074fc77f5a53c95c10d72f81c323b87c9",
+      "destination_sha256": "7dddb006811032ca094e78beaf79e391613de7f25282aeead34f938fc9ecbd11"
+    },
+    {
+      "source": "spectrum/cognition/bb_crossing.py",
+      "destination": "spectrum/crossings/bank.py",
+      "symbols": null,
+      "source_sha256": "41a19c06d70855916ecb2ac6e52f1a11854ecfe32092e8cc31af6040f62d7fef",
+      "destination_sha256": "589467c0b4993062be4a307266f7921f0dcb1742ce38efd46bada196e7f92c4d"
+    },
+    {
+      "source": "spectrum/cognition/crossing_map.py",
+      "destination": "spectrum/crossings/map.py",
+      "symbols": null,
+      "source_sha256": "b4c8aa5f57b424cf4f8ba13cc1bc3e26c324afba67ce9872a2ac9b0d1c5e4487",
+      "destination_sha256": "abf65e32187661adda55b5f5d99eca01ec14a847cbc382747448845247e924ae"
+    },
+    {
+      "source": "spectrum/cognition/vwap_compare.py",
+      "destination": "spectrum/crossings/vwap.py",
+      "symbols": null,
+      "source_sha256": "a10c55e0c30442dcdf50be006a3d079754c834256c85eacc9668258b12e6f83a",
+      "destination_sha256": "a10c55e0c30442dcdf50be006a3d079754c834256c85eacc9668258b12e6f83a"
+    },
+    {
+      "source": "spectrum/cognition/execution.py",
+      "destination": "spectrum/execution/replay.py",
+      "symbols": null,
+      "source_sha256": "a3fb6adac03cc4e14ca68953f05717569058fb03236a175e1e0e4b565f0e2005",
+      "destination_sha256": "8b46b493684fb56f3596bf4ea7ded0b3211af759d190af6c210caf1b5f2c1dbe"
+    },
+    {
+      "source": "spectrum/cognition/queue.py",
+      "destination": "spectrum/market/queue.py",
+      "symbols": null,
+      "source_sha256": "d569680a804a558ad31ea644f6ce649ce8940b9c7f697d8857502947a3366094",
+      "destination_sha256": "5386fdae7e2fc80006ec14399e2f496be930bd50d76ca3ba8493ca0ee7792ffc"
+    },
+    {
+      "source": "spectrum/cognition/race.py",
+      "destination": "spectrum/outcomes/race.py",
+      "symbols": null,
+      "source_sha256": "d20259b629ac29281db70e78c00a5e57e0025660934cc3938b0bd79d1d70d357",
+      "destination_sha256": "f0f22d5d7dc617c4e1efd0be669042ed3fcb8451056e9507f6951ce4e0f92d5f"
+    },
+    {
+      "source": "spectrum/cognition/bands.py",
+      "destination": "spectrum/outcomes/bands.py",
+      "symbols": null,
+      "source_sha256": "4aed39b15d4df49742ad3c0bf0e04d3e15c3457c2524cdbe05b2896895a30b5a",
+      "destination_sha256": "743e12ca15b99a880afa12ea4f3a054ecd5b9c06f70f8694d22761f4ed1fef3b"
+    },
+    {
+      "source": "spectrum/cognition/path_null.py",
+      "destination": "spectrum/outcomes/path_null.py",
+      "symbols": null,
+      "source_sha256": "e47ae7cbd72112db05ad71edaa3c4ec8e443787ed7e94c5ebfc3afe26f5816de",
+      "destination_sha256": "e47ae7cbd72112db05ad71edaa3c4ec8e443787ed7e94c5ebfc3afe26f5816de"
+    },
+    {
+      "source": "spectrum/research/simulation.py",
+      "destination": "spectrum/execution/barriers.py",
+      "symbols": null,
+      "source_sha256": "9c256f5fb50f1169be72e70e635144b651dcdc5e9b5d9e02a0ecfdeff50d3739",
+      "destination_sha256": "9c256f5fb50f1169be72e70e635144b651dcdc5e9b5d9e02a0ecfdeff50d3739"
+    },
+    {
+      "source": "spectrum/research_v2/simulation.py",
+      "destination": "spectrum/execution/crossing.py",
+      "symbols": null,
+      "source_sha256": "87390016c39936915041dc9105860a48f2437a2f9201c2dbc0ab02706c1862f1",
+      "destination_sha256": "87390016c39936915041dc9105860a48f2437a2f9201c2dbc0ab02706c1862f1"
+    },
+    {
+      "source": "spectrum/research_v2/targets.py",
+      "destination": "spectrum/outcomes/crossing.py",
+      "symbols": null,
+      "source_sha256": "500ae32ab3946f1cfa3dfd2c45fde80494e86748835942605c9c6d218ec8cdd1",
+      "destination_sha256": "0b4dcd3c1a05f84ed47ad0af0d5e13a7b7ed398fd50dcc6ab6b84b83a249138a"
+    },
+    {
+      "source": "spectrum/research_v5/targets.py",
+      "destination": "spectrum/outcomes/risk.py",
+      "symbols": null,
+      "source_sha256": "6a9146a3576b67a3c10224f51f4c1610e8231d1b97478a4bca556a836ff4b7b0",
+      "destination_sha256": "6a9146a3576b67a3c10224f51f4c1610e8231d1b97478a4bca556a836ff4b7b0"
+    },
+    {
+      "source": "spectrum/research_v6/targets.py",
+      "destination": "spectrum/outcomes/path.py",
+      "symbols": null,
+      "source_sha256": "052a1ea582f52ff603161d0e77ed3820cebe059c800179b093e614dba406a39c",
+      "destination_sha256": "052a1ea582f52ff603161d0e77ed3820cebe059c800179b093e614dba406a39c"
+    },
+    {
+      "source": "spectrum/research_v6/favorable.py",
+      "destination": "spectrum/outcomes/favorable.py",
+      "symbols": null,
+      "source_sha256": "04216e2e3e27bc31719a0ae482477d462bf56cc3a85d6df08510e45352220795",
+      "destination_sha256": "04216e2e3e27bc31719a0ae482477d462bf56cc3a85d6df08510e45352220795"
+    },
+    {
+      "source": "spectrum/market_repr/raw.py",
+      "destination": "spectrum/representation/raw.py",
+      "symbols": null,
+      "source_sha256": "1829860aa04892f4d627b4501ce2bbd62fb90b9000a76aee4bb1224f26addd60",
+      "destination_sha256": "1829860aa04892f4d627b4501ce2bbd62fb90b9000a76aee4bb1224f26addd60"
+    },
+    {
+      "source": "spectrum/market_repr/representation.py",
+      "destination": "spectrum/representation/representation.py",
+      "symbols": null,
+      "source_sha256": "37ed7b29c0f990ec7ff17bd3d99f48faccba757525970ffdb3287c52bfdc489d",
+      "destination_sha256": "d7fc0d648c982e5246c66ffa4b458f85736807c790018b89739cff777f6af0e6"
+    },
+    {
+      "source": "spectrum/market_repr/store.py",
+      "destination": "spectrum/representation/store.py",
+      "symbols": null,
+      "source_sha256": "88c5dd5256d639b60395cc1b05163e76cdae570bdbba18989e7a8e35c01a5d1c",
+      "destination_sha256": "5bf5fa054dfd00a9eb61ed30ca56238c23bbe5873df026d80d4fc06f8a48dcfe"
+    },
+    {
+      "source": "spectrum/market_repr/zones.py",
+      "destination": "spectrum/representation/zones.py",
+      "symbols": null,
+      "source_sha256": "86dcdffbf2e28338ecb30e20e8b9f954a1f86d1fa4657d492832bff743384125",
+      "destination_sha256": "3d1287d7afaccfcfe2243a837cd51e3d13203a31f90228e4ee36988213a19ddf"
+    },
+    {
+      "source": "spectrum/ingest.py",
+      "destination": "spectrum/io.py",
+      "symbols": [
+        "save_json"
+      ],
+      "source_sha256": "64553b5498e93e9fd8cbf80184517fd26949fa8409607d87999632861c8752c9",
+      "destination_sha256": "0a0ad53ce7e01924de5cbd110066d2729503a2ecc00aa76bee593e3cdb51d0f4"
+    },
+    {
+      "source": "spectrum/lab.py",
+      "destination": "spectrum/features/contract.py",
+      "symbols": [
+        "rolling_valid",
+        "Context",
+        "FeaturePlugin"
+      ],
+      "source_sha256": "d2a2e2d5210bfbf48598f46d212bd04377cbdb92ffbf3c98226f4ec82397c6f4",
+      "destination_sha256": "f07f82564fe334636d9f964c64912f018f4e3e129dbff9920b4036762ebd6c4a"
+    },
+    {
+      "source": "spectrum/lab.py",
+      "destination": "spectrum/features/families/motion.py",
+      "symbols": [
+        "motion"
+      ],
+      "source_sha256": "d2a2e2d5210bfbf48598f46d212bd04377cbdb92ffbf3c98226f4ec82397c6f4",
+      "destination_sha256": "80d937a91ea6fac96ee8fbed7eaef4bf9fdc4a86e5685af8f3cd94a316cd556c"
+    },
+    {
+      "source": "spectrum/lab.py",
+      "destination": "spectrum/features/families/flow.py",
+      "symbols": [
+        "flow"
+      ],
+      "source_sha256": "d2a2e2d5210bfbf48598f46d212bd04377cbdb92ffbf3c98226f4ec82397c6f4",
+      "destination_sha256": "9a86e97b3e499275d45dadb126dee7613a08518f44da6e3bc46d535b9f1040e7"
+    },
+    {
+      "source": "spectrum/lab.py",
+      "destination": "spectrum/features/families/spectral.py",
+      "symbols": [
+        "spectral"
+      ],
+      "source_sha256": "d2a2e2d5210bfbf48598f46d212bd04377cbdb92ffbf3c98226f4ec82397c6f4",
+      "destination_sha256": "dbdcfe79b77516ba047a31ab37d0b4d89be77ee6922ef5a7e87172d7e1422073"
+    },
+    {
+      "source": "spectrum/lab.py",
+      "destination": "spectrum/features/pipeline.py",
+      "symbols": [
+        "register",
+        "load_plugins",
+        "compute",
+        "generate_capture",
+        "generate"
+      ],
+      "source_sha256": "d2a2e2d5210bfbf48598f46d212bd04377cbdb92ffbf3c98226f4ec82397c6f4",
+      "destination_sha256": "a95e7a3a1c9def4d3808fce3bffcd5ded08a7dd6d397e5355c0fc56ff18284e9"
+    },
+    {
+      "source": "spectrum/cognition/opportunity.py",
+      "destination": "spectrum/features/families/opportunity.py",
+      "symbols": [
+        "second_grid",
+        "origin_index",
+        "causal"
+      ],
+      "source_sha256": "8a2b856bda856ed81ee7cc96296c18aeb4f8e651a80bf1adfff5c6619936a4c9",
+      "destination_sha256": "53c3249c5a2fcfdf5c6713916bd66064fd40c36e17dc039bd9e6d57077c46738"
+    },
+    {
+      "source": "spectrum/cognition/opportunity.py",
+      "destination": "spectrum/outcomes/opportunity.py",
+      "symbols": [
+        "future",
+        "measure"
+      ],
+      "source_sha256": "8a2b856bda856ed81ee7cc96296c18aeb4f8e651a80bf1adfff5c6619936a4c9",
+      "destination_sha256": "2247eb77a3434a7531305ab37762bf03b382569870857d4ffdbeb93b66686690"
+    },
+    {
+      "source": "spectrum/cognition/episodes.py",
+      "destination": "spectrum/features/families/episodes.py",
+      "symbols": [
+        "contract",
+        "lag",
+        "measured",
+        "features",
+        "orient"
+      ],
+      "source_sha256": "29a6b5f867dc96ca521eb2814175494c28ed6f996d3139c2238550d4fbc15c4b",
+      "destination_sha256": "039f2f66bf8d70515514b701a3c9c06abb3c5eae07abbfb224c953f4503eaa22"
+    },
+    {
+      "source": "spectrum/cognition/episodes.py",
+      "destination": "spectrum/outcomes/episodes.py",
+      "symbols": [
+        "categories",
+        "episode_weights",
+        "sequential",
+        "block_interval"
+      ],
+      "source_sha256": "29a6b5f867dc96ca521eb2814175494c28ed6f996d3139c2238550d4fbc15c4b",
+      "destination_sha256": "a3134e7051b6e128393f52037a9c7b3e1b76ebdae4265230eb5dfb74f574538e"
+    },
+    {
+      "source": "spectrum/cognition/flow_context.py",
+      "destination": "spectrum/features/families/flow_context.py",
+      "symbols": [
+        "contract",
+        "local_features",
+        "orient",
+        "minute_tape",
+        "trailing_spectra",
+        "context_features"
+      ],
+      "source_sha256": "43b41ec5e901bff03f01ac85a2bcfce60d6ac3df586b48801ef56310f640051a",
+      "destination_sha256": "0f6204853dc711374e8efaea4c89f84eb62d262a595bf43dd4f628007cf3cc10"
+    },
+    {
+      "source": "spectrum/cognition/volsense.py",
+      "destination": "spectrum/features/families/volatility.py",
+      "symbols": [
+        "_cs",
+        "_ws",
+        "_shift",
+        "stft_features",
+        "event_seconds",
+        "features",
+        "day_stats"
+      ],
+      "source_sha256": "ac3110380a5adf9b076f2b30925e7dd17fcaf14dbd861f42c6c57cdc266d11fb",
+      "destination_sha256": "d190fb42ac356440ac7060643c861483d6efb871f787c196855a5105db9fd8e6"
+    },
+    {
+      "source": "spectrum/cognition/volsense.py",
+      "destination": "spectrum/outcomes/volatility.py",
+      "symbols": [
+        "labels",
+        "recent"
+      ],
+      "source_sha256": "ac3110380a5adf9b076f2b30925e7dd17fcaf14dbd861f42c6c57cdc266d11fb",
+      "destination_sha256": "687f7bcf7833425f56ab5c4aa177934ac80cf0a876b96474b919e62b5beb06e8"
+    },
+    {
+      "source": "spectrum/response_lab.py",
+      "destination": "spectrum/features/families/response.py",
+      "symbols": [
+        "ratio",
+        "spectral_features",
+        "window_features"
+      ],
+      "source_sha256": "8a41d29d5ffcbbc76fb1ce669ea3d905d3af356a74675953ef308009baca9a8f",
+      "destination_sha256": "165a0fc101cfdbbabf2da718e319f1ca42c6d20a744cc6cb2bd0b4f50318f1b7"
+    },
+    {
+      "source": "spectrum/event_landmarks.py",
+      "destination": "spectrum/features/families/landmarks.py",
+      "symbols": [
+        "detect_bursts",
+        "recurrence_labels",
+        "spectral_diagnostic"
+      ],
+      "source_sha256": "5452e8c76e2e3d5d1f054da04d0399c2e41d78585d69aaca08b727b2dd064fb5",
+      "destination_sha256": "b33e9cda04e15666c74928e85b398992736450321c4a669cd803f781b31c81d4"
+    },
+    {
+      "source": "spectrum/cognition/representation.py",
+      "destination": "spectrum/features/families/signature.py",
+      "symbols": [
+        "family_columns",
+        "price_family",
+        "flow_family",
+        "micro_family"
+      ],
+      "source_sha256": "6bc7f0aeaf85692cc45674d6741aea5bd3949718463b8362de2145b368c9ab7b",
+      "destination_sha256": "290c18098d11dc2b52149f9538a29d74528d289f0157aa1825ad8fa426ae3113"
+    },
+    {
+      "source": "spectrum/player/data.py",
+      "destination": "spectrum/representation/schema.py",
+      "symbols": [],
+      "source_sha256": "e766788737b0b5d837c43262f639d18989f42d37fcd11cb3ec10888e30b6029c",
+      "destination_sha256": "b08dcae9ffa5425ca5942d129027930f6ab7bdf788960976b0edb30a156ca5c9"
+    },
+    {
+      "source": "spectrum/player_v3/data.py",
+      "destination": "spectrum/representation/memory.py",
+      "symbols": [
+        "bounds",
+        "asof_indices",
+        "minute_values",
+        "observed_previous_date",
+        "_opening",
+        "anchor_values",
+        "encode_events",
+        "support_segment_starts"
+      ],
+      "source_sha256": "8889cb0a957c8253655ea654153534ed415d8dd937287fea792050f7d1a37108",
+      "destination_sha256": "51728a76b04c5e7bd60ca3e223aae5c466ba9f5a9e387e3dbbb3f481322dff9b"
+    },
+    {
+      "source": "spectrum/research_v2/features.py",
+      "destination": "spectrum/features/alignment.py",
+      "symbols": [
+        "transform_kind",
+        "transform_values",
+        "asof_source",
+        "quote_state",
+        "common_segments",
+        "supported_source_at_origin",
+        "geometry_features"
+      ],
+      "source_sha256": "58607fb7f80c488762f4ddbb2cb24636bd4e47ec0af68e4faa66a1d64173c655",
+      "destination_sha256": "728515cb7682c1f009a4047693d888e2e2a1a64cc2371b6bb1be3acfc1f17959"
+    },
+    {
+      "source": "spectrum/research_v3/features.py",
+      "destination": "spectrum/features/continuity.py",
+      "symbols": [
+        "_metadata_proof",
+        "extend_history_metadata"
+      ],
+      "source_sha256": "0f591f8301e87b95e77c7580159ab10c0bbe6a6cde972ee5030f5ca59ac43901",
+      "destination_sha256": "14fa6f64b25f213c8a19c7f97ba59fdc80e2ee58fe44b66175835f23b2ad8a5b"
+    },
+    {
+      "source": "spectrum/cognition/hotpath.py",
+      "destination": "spectrum/features/families/anchored_profile.py",
+      "symbols": [
+        "profile_scan",
+        "window_sum",
+        "features_day"
+      ],
+      "source_sha256": "0c2d71625871afdb1403c186f18f59ea596fe90c935eb52ebac20423c9952675",
+      "destination_sha256": "f496ae9c8b8b769ae334f604b4bce324c9da109c580dbb199b6323be3d79a9c5"
+    },
+    {
+      "source": "spectrum/market_repr/probes.py",
+      "destination": "spectrum/outcomes/endpoint.py",
+      "symbols": [
+        "endpoint_outcomes"
+      ],
+      "source_sha256": "857d5bc652ab2d00e1f6dc7a2f8854cc53270d26d37a5e5897bd97cdb2021255",
+      "destination_sha256": "5f14eb8452004993009a95416549e637f049ee7d1ee325b9caf9768fdadf716d"
+    },
+    {
+      "source": "scripts/bb_crossing_session.py",
+      "destination": "spectrum/outcomes/session.py",
+      "symbols": [
+        "all_marks",
+        "lookup"
+      ],
+      "source_sha256": "b1a13bb0e6ff4156be98159d519cb51e7b70c5448594875ea2a23010baaa077a",
+      "destination_sha256": "f6165d945c5e70370af719b9fdd9d132dbaae4c2d9a6836bbdb0dde639529ab4"
+    },
+    {
+      "source": "scripts/crossing_map_analyze.py",
+      "destination": "spectrum/outcomes/queries.py",
+      "symbols": [
+        "target_frame"
+      ],
+      "source_sha256": "fa4ebf96e9aefd6205c95e775393a665c07f6f7606250f8d90a117538f24975a",
+      "destination_sha256": "bbed242db5b0979f248d1a813a608ab4b5164f8aa8f2c1c98b9eec7204312a69"
+    },
+    {
+      "source": "spectrum/cognition/signatures.py",
+      "destination": "spectrum/features/families/event_context.py",
+      "symbols": [
+        "event_context"
+      ],
+      "source_sha256": "a3862cb86dd18a8223d2a569839c17c5365800414f0c77dd8038bc60aaad8173",
+      "destination_sha256": "93c7a77eb0f99787a481c0262a7f9cdf1ae77a2b48fc71843c9db0a071069ada"
+    },
+    {
+      "source": "spectrum/cognition/signatures.py",
+      "destination": "spectrum/execution/options.py",
+      "symbols": [
+        "branch"
+      ],
+      "source_sha256": "a3862cb86dd18a8223d2a569839c17c5365800414f0c77dd8038bc60aaad8173",
+      "destination_sha256": "e7470debf771e4262aca58e9ea6b740b4ec6e7af463b4aff0c7f5adba6f5b609"
+    },
+    {
+      "source": "spectrum/cognition/dataset.py",
+      "destination": "spectrum/features/families/market_history.py",
+      "symbols": [
+        "market_features"
+      ],
+      "source_sha256": "2d4e3d395fa97ee2cf6cbc2dceb1be60ab36f747d7c44673ca3c477ef313aafb",
+      "destination_sha256": "f7242aefeaca8d1a92038cb4ad8bc7380b3878d1b91dcb377530cda41f951bd3"
+    },
+    {
+      "source": "spectrum/cognition/queue_state.py",
+      "destination": "spectrum/features/families/queue_state.py",
+      "symbols": [
+        "window_flows",
+        "level_sizes"
+      ],
+      "source_sha256": "1baf88d636e6a0c251efede7b45e02d7912ab68429e6d90105e1b890d05f72e4",
+      "destination_sha256": "48139bd05a5c5290935809cfe84f272d7e52a54416f708c6a314c994807549aa"
+    },
+    {
+      "source": "spectrum/player_v3/gym.py",
+      "destination": "tests/reference_execution.py",
+      "symbols": [
+        "advance_survival"
+      ],
+      "source_sha256": "bcdf642d27d7c9e2c99826a01262bac9e0fe3dc91b83fd02b1bc851369210bb0",
+      "destination_sha256": "6ac93cc1bbe7ad1ceb6debb3bf9676e2914ab3894d591fc76276560b914e310d"
+    },
+    {
+      "source": "scripts/vwap_week_report.py",
+      "destination": "spectrum/outcomes/sampled_crossing.py",
+      "symbols": [
+        "targets"
+      ],
+      "source_sha256": "91eab7f6f0b6a19db6066c982438cfc5acfef099291965426c466ef57884de03",
+      "destination_sha256": "d939ddcadbbcdda6ccc0d89bd146b2ba9395a9530a2281046d5ebc4a7b3d9cdd"
+    },
+    {
+      "source": "spectrum/cognition/queue_state.py",
+      "destination": "spectrum/features/families/queue_state.py",
+      "symbols": [
+        "window_flows",
+        "level_sizes"
+      ],
+      "source_sha256": "1baf88d636e6a0c251efede7b45e02d7912ab68429e6d90105e1b890d05f72e4",
+      "destination_sha256": "48139bd05a5c5290935809cfe84f272d7e52a54416f708c6a314c994807549aa"
+    },
+    {
+      "source": "spectrum/research_v2/learning.py",
+      "destination": "spectrum/representation/_windows.py",
+      "symbols": [
+        "FeatureStore",
+        "fit_scaler",
+        "_ids_sha"
+      ],
+      "change": "Target metadata is no longer required by a causal observation loader",
+      "source_sha256": "038ecd83bb45468c426d1312efd6a25264368a63712154405bcc2786a1936ed3",
+      "destination_sha256": "01245baf12cd7e5c3f8dbf837b2c5986fbe58911471f9f6fbcddff369a653af5"
+    },
+    {
+      "source": "spectrum/research_v3/learning.py",
+      "destination": "spectrum/representation/windows.py",
+      "symbols": [
+        "FeatureStore"
+      ],
+      "change": "SequenceStore; restored physical context is the new default; legacy mode remains explicit",
+      "source_sha256": "d2e96bdf220a439996a835a4da7a20ebf373016dfe2ece9a897c5d4ff1f4aaea",
+      "destination_sha256": "9f72191d382e8748356d1b6b4960e1d1bc0777a10d809f34a3a03bede48626d6"
+    },
+    {
+      "source": "spectrum/cognition/scalper.py",
+      "destination": "spectrum/features/families/scalper_context.py",
+      "symbols": [
+        "features"
+      ],
+      "source_sha256": "a9d11d1752748afa020bb8088c37147ec3eacd46740d6d9175feb2621e3279a5",
+      "destination_sha256": "69479f15f5befd7623b8243ca2e61aaec0b2e84f80eae48977d071eeb3989742"
+    },
+    {
+      "source": "spectrum/cognition/scalper_policy.py",
+      "destination": "spectrum/features/families/scalper_context.py",
+      "symbols": [
+        "side_features",
+        "SYMMETRIC",
+        "DIRECTIONAL"
+      ],
+      "source_sha256": "fb511ab0289fe61747a46ef093ba293b6d8bac35d2b78056f6f3f840dfee5105",
+      "destination_sha256": "69479f15f5befd7623b8243ca2e61aaec0b2e84f80eae48977d071eeb3989742"
+    },
+    {
+      "source": "spectrum/market_repr/probes.py",
+      "destination": "spectrum/features/families/observation_summary.py",
+      "symbols": [
+        "query_tables"
+      ],
+      "change": "Causal summary_at accepts explicit origins; future endpoint, fit and metrics stay outside features",
+      "source_sha256": "857d5bc652ab2d00e1f6dc7a2f8854cc53270d26d37a5e5897bd97cdb2021255",
+      "destination_sha256": "14ebaff6cc0c187e4e6585271e62b4cba027d21235943431010a8e89caef6985"
+    }
+  ],
+  "archived_code": [
+    "scripts/analyze_scientific_pipeline.py",
+    "scripts/audit_economics_v4.py",
+    "scripts/audit_economics_v5.py",
+    "scripts/audit_full_history.py",
+    "scripts/audit_learning_v5.py",
+    "scripts/audit_legacy_mbo_slices.py",
+    "scripts/audit_legacy_snapshot_loss.py",
+    "scripts/audit_non_executable_books.py",
+    "scripts/audit_opportunity_v2.py",
+    "scripts/audit_opportunity_v3.py",
+    "scripts/audit_opportunity_v4.py",
+    "scripts/audit_opportunity_v5_data.py",
+    "scripts/audit_player_support_failures.py",
+    "scripts/audit_telegram_labels.py",
+    "scripts/audit_volatility_inventory.py",
+    "scripts/audit_weight_semantics_v3.py",
+    "scripts/bb_crossing_build.py",
+    "scripts/bb_crossing_diagnostics.py",
+    "scripts/bb_crossing_feature_audit.py",
+    "scripts/bb_crossing_finalize.py",
+    "scripts/bb_crossing_learn.py",
+    "scripts/bb_crossing_report.py",
+    "scripts/bb_crossing_session_validate.py",
+    "scripts/bb_crossing_verify.py",
+    "scripts/benchmark_context_memory.py",
+    "scripts/benchmark_features.py",
+    "scripts/build_crossing_path_target_v6.py",
+    "scripts/build_market_repr_raw.py",
+    "scripts/build_market_representation_v1.py",
+    "scripts/check_pipeline_null.py",
+    "scripts/cognition_audit/book_vs_trades.py",
+    "scripts/cognition_audit/feature_alignment.py",
+    "scripts/cognition_audit/fifo_explicit_vs_kernel.py",
+    "scripts/cognition_audit/old_sl_oracle_check.py",
+    "scripts/cognition_audit/path_direct_check.py",
+    "scripts/cognition_audit/pnl_decomposition.py",
+    "scripts/cognition_audit/scalper_live_parity.py",
+    "scripts/cognition_audit/taker_independent.py",
+    "scripts/cognition_audit/tp_fills_old_vs_new.py",
+    "scripts/compare_opportunity_v5.py",
+    "scripts/crossing_map_build.py",
+    "scripts/crossing_map_finalize.py",
+    "scripts/crossing_map_identity_check.py",
+    "scripts/crossing_map_report.py",
+    "scripts/crossing_map_verify.py",
+    "scripts/describe_event_companions.py",
+    "scripts/evaluate_opportunity_v5.py",
+    "scripts/export_event_contract.py",
+    "scripts/extend_may_cluster.py",
+    "scripts/extend_may_roll_stream.py",
+    "scripts/finalize_market_representation_v1.py",
+    "scripts/finalize_opportunity_v3.py",
+    "scripts/finalize_opportunity_v4.py",
+    "scripts/finalize_opportunity_v5.py",
+    "scripts/finalize_series_risk.py",
+    "scripts/flow_context_coverage.py",
+    "scripts/flow_context_execution_audit.py",
+    "scripts/flow_context_report.py",
+    "scripts/flow_context_validate.py",
+    "scripts/generate_ready_features.py",
+    "scripts/hotpath/attempt4_nonlinear.py",
+    "scripts/hotpath/bands_compare.py",
+    "scripts/hotpath/opportunity_sense.py",
+    "scripts/hotpath/race_measures.py",
+    "scripts/hotpath/race_page.py",
+    "scripts/hotpath/race_week.py",
+    "scripts/hotpath/tug_spectrum.py",
+    "scripts/hotpath/volsense_build.py",
+    "scripts/hotpath/volsense_curve.py",
+    "scripts/hotpath/volsense_diag.py",
+    "scripts/hotpath/volsense_train.py",
+    "scripts/inventory_opportunity_v5.py",
+    "scripts/opportunity_episodes_audit.py",
+    "scripts/opportunity_episodes_report.py",
+    "scripts/opportunity_loss_research.py",
+    "scripts/player_replay.py",
+    "scripts/player_report.py",
+    "scripts/player_v2_inspector.py",
+    "scripts/player_v2_scenes.py",
+    "scripts/plot_crossing_case_v2.py",
+    "scripts/plot_factorial_v3.py",
+    "scripts/plot_scientific_pipeline.py",
+    "scripts/plot_weight_semantics_v3.py",
+    "scripts/preflight.py",
+    "scripts/prepare_opportunity_v2.py",
+    "scripts/prepare_opportunity_v3.py",
+    "scripts/prepare_research_execution.py",
+    "scripts/preserve_poi_research_evidence.py",
+    "scripts/probe.py",
+    "scripts/read_poi_research_evidence.py",
+    "scripts/report_crossing_path_target_v6.py",
+    "scripts/report_favorable_series_v1.py",
+    "scripts/report_market_representation_v1.py",
+    "scripts/report_opportunity_v2.py",
+    "scripts/report_opportunity_v3.py",
+    "scripts/report_opportunity_v4.py",
+    "scripts/report_opportunity_v5.py",
+    "scripts/report_scientific_pipeline.py",
+    "scripts/run_favorable_series_v1.py",
+    "scripts/run_opportunity_pipeline.py",
+    "scripts/run_opportunity_v2.py",
+    "scripts/run_opportunity_v3.py",
+    "scripts/run_opportunity_v4.py",
+    "scripts/run_opportunity_v5.py",
+    "scripts/supersede_fixed_risk.py",
+    "scripts/target_loss_audit.py",
+    "scripts/target_loss_report.py",
+    "scripts/target_loss_validate.py",
+    "scripts/telegram_baseline_support.py",
+    "scripts/verify_crossing_path_target_v6.py",
+    "scripts/verify_favorable_series_v1.py",
+    "scripts/verify_foundation.py",
+    "scripts/verify_market_representation_v1.py",
+    "scripts/verify_may_extension.py",
+    "scripts/verify_opportunity_v3.py",
+    "scripts/verify_source.py",
+    "scripts/vwap_week_compare.py",
+    "scripts/vwap_week_finalize.py",
+    "scripts/vwap_week_source.py",
+    "spectrum/__init__.py",
+    "spectrum/__main__.py",
+    "spectrum/audit.py",
+    "spectrum/cli.py",
+    "spectrum/cognition/__init__.py",
+    "spectrum/cognition/audit.py",
+    "spectrum/cognition/episodes_lab.py",
+    "spectrum/cognition/evaluate.py",
+    "spectrum/cognition/flow_context_lab.py",
+    "spectrum/cognition/hotpath_lab.py",
+    "spectrum/cognition/learn.py",
+    "spectrum/cognition/passive.py",
+    "spectrum/cognition/passive_learn.py",
+    "spectrum/cognition/passive_report.py",
+    "spectrum/cognition/path_model.py",
+    "spectrum/cognition/path_report.py",
+    "spectrum/cognition/path_scan.py",
+    "spectrum/cognition/qmodel.py",
+    "spectrum/cognition/report.py",
+    "spectrum/cognition/scalper_live.py",
+    "spectrum/cognition/scalper_live_report.py",
+    "spectrum/cognition/scalper_policy.py",
+    "spectrum/cognition/scalper_report.py",
+    "spectrum/cognition/schema_report.py",
+    "spectrum/cognition/schema_run.py",
+    "spectrum/cognition/schemas.py",
+    "spectrum/cognition/signature_report.py",
+    "spectrum/cognition/target_loss_audit.py",
+    "spectrum/cognition/validation.py",
+    "spectrum/cognition/validation_report.py",
+    "spectrum/data_audit_report.py",
+    "spectrum/data_flag_evidence.py",
+    "spectrum/data_properties_audit.py",
+    "spectrum/data_rate_audit.py",
+    "spectrum/data_semantics_audit.py",
+    "spectrum/data_support_geometry.py",
+    "spectrum/event_view.py",
+    "spectrum/finalized_audit.py",
+    "spectrum/market_repr/__init__.py",
+    "spectrum/player/__init__.py",
+    "spectrum/player/__main__.py",
+    "spectrum/player/contract.py",
+    "spectrum/player/experiment.py",
+    "spectrum/player/gym.py",
+    "spectrum/player/model.py",
+    "spectrum/player_input_audit.py",
+    "spectrum/player_v2/__init__.py",
+    "spectrum/player_v2/__main__.py",
+    "spectrum/player_v2/experiment.py",
+    "spectrum/player_v2/policy.py",
+    "spectrum/player_v3/experiment.py",
+    "spectrum/player_v3/finalized_data.py",
+    "spectrum/player_v3/martingale.py",
+    "spectrum/player_v3/memory_audit.py",
+    "spectrum/player_v3/policy.py",
+    "spectrum/player_v3/posthoc.py",
+    "spectrum/player_v3/report.py",
+    "spectrum/player_v3/survival_report.py",
+    "spectrum/player_v3/survival_run_search.py",
+    "spectrum/playground/__init__.py",
+    "spectrum/playground/audit.py",
+    "spectrum/playground/basket.py",
+    "spectrum/playground/basket_audit.py",
+    "spectrum/playground/basket_report.py",
+    "spectrum/playground/basket_run.py",
+    "spectrum/playground/basket_search.py",
+    "spectrum/playground/data.py",
+    "spectrum/playground/equity_envelope.py",
+    "spectrum/playground/multimonth.py",
+    "spectrum/playground/multimonth_audit.py",
+    "spectrum/playground/multimonth_evaluate.py",
+    "spectrum/playground/multimonth_report.py",
+    "spectrum/playground/runner.py",
+    "spectrum/playground/server.py",
+    "spectrum/plugins/__init__.py",
+    "spectrum/research/__init__.py",
+    "spectrum/research/controls.py",
+    "spectrum/research/data.py",
+    "spectrum/research/losses.py",
+    "spectrum/research/models.py",
+    "spectrum/research/training.py",
+    "spectrum/research_v2/__init__.py",
+    "spectrum/research_v2/evaluation.py",
+    "spectrum/research_v3/__init__.py",
+    "spectrum/research_v4/learning.py",
+    "spectrum/research_v5/__init__.py",
+    "spectrum/research_v5/learning.py",
+    "spectrum/research_v6/__init__.py",
+    "spectrum/response_view.py",
+    "spectrum/volatility_vwap_lab.py"
+  ],
+  "archived_artifacts": {
+    "reports": 336,
+    "research_configs": 8
+  },
+  "core_byte_parity": true,
+  "intentional_api_changes": [
+    "Imports are organized by role; no backwards dependency on archived packages.",
+    "Frame feature checkpoint contract is FEATURE_STREAM_V2 and fingerprints all extracted formulas.",
+    "Anchored profile returns only X; historical future fields remain in archive.",
+    "SequenceStore does not require targets and defaults to physical restored context.",
+    "Full-history materialization requires explicit archives and reference source."
+  ],
+  "real_sample_parity": {
+    "status": "PASS",
+    "core_implementation_id": "1b79f07aa681a5b6b108a09a2c83148ee86d7547a8e89aee405551b22501de66",
+    "source_manifest_sha256": "165c46827a46f11e396f01aeea1b1254084c3aaba058713ccd33239491caa39d",
+    "seconds_sha256": "0f17bfbbb7534c4dd98aac30dbd203e189f67f9c24ad6dcb8095e9a52a289a24",
+    "quote_sha256": "8ffb8f787809e61969c1f9ae0936faaa9801952346a1278a49e40abe939cb3dc",
+    "sampled_seconds": 7200,
+    "features": 295,
+    "values_masks_sha256": "14112192bb55a5adb834ab92bd0d80d1088b1e7ac981e2c8a3e7ce7073260caf",
+    "sampled_quotes": 160,
+    "quotes_sha256": "adccfe336a1bf3f7b4c2b88bd10f3c6f0d0df643dd3ca38bb89d59309f669a6f",
+    "replay_restart": "PASS"
+  },
+  "test_module_renames": {
+    "test_cognition_execution": "test_execution",
+    "test_cognition_queue": "test_queue",
+    "test_cognition_opportunity": "test_opportunity",
+    "test_cognition_episodes": "test_episodes",
+    "test_cognition_volsense": "test_volatility_context",
+    "test_cognition_hotpath": "test_anchored_profile",
+    "test_cognition_race": "test_race_outcomes",
+    "test_cognition_bands": "test_band_outcomes",
+    "test_player_v3_data": "test_memory",
+    "test_research_simulation": "test_barrier_simulation",
+    "test_research_v2_simulation": "test_crossing_simulation",
+    "test_research_v2_features": "test_alignment",
+    "test_research_v2_targets": "test_crossing_targets",
+    "test_research_v3_features": "test_continuity",
+    "test_research_v5_targets": "test_risk_targets",
+    "test_research_v6_targets": "test_path_targets",
+    "test_favorable_series_v1": "test_favorable",
+    "test_market_representation_v1": "test_observations",
+    "test_response_lab": "test_response",
+    "test_lab_processes": "test_feature_processes"
+  },
+  "source_note": "All original files remain in the archive branch, including unextracted parts of partially reused modules.",
+  "library_validation": {
+    "tests_passed": 300,
+    "seconds": 23.2,
+    "families": 38,
+    "wheel": "PASS",
+    "installed_outside_source": "PASS",
+    "training_dependencies_imported": false,
+    "wheel_sha256": "5e4027cfc34a6d2682e3460b7c171a798b2b3303e6c9f3c0dc129e37911a2d70",
+    "local_archive_tracked_files_verified": 754
+  }
+}

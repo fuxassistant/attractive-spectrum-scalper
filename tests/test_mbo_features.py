@@ -2,7 +2,9 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from spectrum.core.features import build_features, NS, MINUTE
+from spectrum.core.features import build_features
+from spectrum.core.features import NS
+from spectrum.core.features import MINUTE
 
 
 def sample(minutes=250):

@@ -1,5 +1,8 @@
 import numpy as np
-from spectrum.cognition.vwap_compare import TradePrefix,weighted_native_closes,support_start,NS
+from spectrum.crossings.vwap import TradePrefix
+from spectrum.crossings.vwap import weighted_native_closes
+from spectrum.crossings.vwap import support_start
+from spectrum.crossings.vwap import NS
 
 
 def test_exact_weighted_population_and_empty():
@@ -37,7 +40,7 @@ def test_support_breaks_are_not_bridged():
 
 def test_sampled_first_crossing_tie_none_and_censor():
     import pandas as pd
-    from scripts.vwap_week_report import targets
+    from spectrum.outcomes.sampled_crossing import targets
     n=2005
     f=pd.DataFrame(dict(t_ns=np.arange(n)*NS,mid=np.r_[np.zeros(10),np.full(n-10,4.)],
         bb=np.full(n,2.),bb_half=np.ones(n),segment=np.zeros(n,dtype=int)))

@@ -1,10 +1,13 @@
 import json
 import numpy as np
 import pytest
-from spectrum.lab import Context
-from spectrum.calendar import MarketCalendar
-from spectrum.plugins.volatility_vwap import compute,trade_moments,PROXY,EXACT
-from spectrum.feature_stream import FeatureStream
+from spectrum.features.pipeline import Context
+from spectrum.market.calendar import MarketCalendar
+from spectrum.features.families.volatility_vwap import compute
+from spectrum.features.families.volatility_vwap import trade_moments
+from spectrum.features.families.volatility_vwap import PROXY
+from spectrum.features.families.volatility_vwap import EXACT
+from spectrum.features.stream import FeatureStream
 from test_foundation import frame
 
 
@@ -71,8 +74,9 @@ def test_sampling_rv_constant_trend_and_unweighted_vs_volume_sigma():
 
 
 def test_stream_halo_checkpoint_and_batch_parity():
-    from spectrum.lab import compute as compute_lab,load_plugins
-    specs=('spectrum.plugins.volatility_vwap:PROXY',);load_plugins(specs)
+    from spectrum.features.pipeline import compute as compute_lab
+    from spectrum.features.pipeline import load_plugins
+    specs=('spectrum.features.families.volatility_vwap:PROXY',);load_plugins(specs)
     f=frame(8000);f.loc[1800,'valid']=False
     whole=compute_lab(f,(PROXY.name,));engine=FeatureStream((PROXY.name,),plugins=specs,source_id='vwap-test')
     pieces=[]
