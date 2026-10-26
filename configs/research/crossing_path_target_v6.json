@@ -1,0 +1,14 @@
+{
+  "version": "CROSSING_PATH_TARGET_V6",
+  "base_config": "configs/research/opportunity_pipeline_v5.json",
+  "output": "data/derived/crossing_path_target_v6",
+  "report": "reports/crossing_path_target_v6",
+  "horizon_seconds": 300.0,
+  "time_unit_seconds": 60.0,
+  "fee": 0.3,
+  "selection": "all 20 frozen V5 sessions, every 5-second origin, all BB 1/3/6 first line crossings",
+  "normalization": "decision-time R_event from frozen V5; no future volatility",
+  "shape": "17 event-relative samples, signed Haar 1+2+4+8; not physical frequencies",
+  "visual_selection": "fixed clock map; deterministic endpoint/time matched contrasting paths; quantile diagnostics",
+  "status": "target semantic study; no model fit, no policy performance claim"
+}

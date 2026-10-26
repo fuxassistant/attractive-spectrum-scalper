@@ -1,0 +1,68 @@
+{
+  "version": "CROSSING_PATH_TARGET_V6",
+  "admission": "TARGET_SEMANTICS_VERIFIED_NO_MODEL_FIT",
+  "baseline": "Frozen V5 target and BCE remain unchanged. V6 is a separate dataset and learning view.",
+  "query": {
+    "geometry": "Exact existing quote-native Bollinger, scales 1/3/6, lower/middle/upper",
+    "selection": "First strict crossing of each line after aligned entry ordinal",
+    "horizon_seconds": 300,
+    "entry": "Frozen V5 first supported quote strictly after decision + 100ms, timeout 2s",
+    "reference_fee_price_units": 0.3,
+    "normalizer_R": "Frozen decision-time R_event; future realized volatility is forbidden",
+    "time_unit_seconds": 60
+  },
+  "equity": {
+    "long": "Q_L(j) = (bid[j] - ask[entry])/1e9 - fee",
+    "short": "Q_S(j) = (bid[entry] - ask[j])/1e9 - fee",
+    "reference": "Pre-entry capital, fee reserved once. Entry equity is already negative.",
+    "units": "Price units per unit exposure, not dollars per GC futures contract",
+    "execution_limit": "Hypothetical immediate BBO liquidation at crossing. No exit latency, market impact, queue fills, stops or portfolio constraints simulated by V6. The path continues after risk breach for factual description."
+  },
+  "outputs": {
+    "hit": "Per line: 1 if observed by H, 0 if fully followed through H without hit, -1 if unavailable. Not a profitability label.",
+    "conditional_profile": "Only for observed hits: net/R, elapsed/60, MAE/R, MFE/R, max drawdown/R, positive/negative equity areas, underwater fraction, first positive/risk times, variation and efficiency",
+    "integrals": "Exact right-continuous, piecewise-constant publication values on [entry,cross). Positive and negative areas are nonnegative price*seconds. Divide by R*60 for area_RT, or R*elapsed for mean exposure. They are not realized cash.",
+    "max_drawdown": "Peak-to-trough drawdown with initial peak at pre-entry zero; includes entry spread and fee",
+    "risk": "First equity <= -R; strict pre-crossing risk flag excludes the crossing publication and includes earlier same-timestamp ordinals",
+    "shape": "17 event-relative right-continuous samples; sample 0 is entry ordinal and 16 crossing ordinal. Signed orthonormal Haar details of samples 1..16. Not physical frequency and not causal input.",
+    "quarter_velocity": "Change in equity over each future interval quarter divided by its physical duration. This excludes the initial cost jump, so net is always retained separately.",
+    "average_velocity": "Net/R divided by elapsed/60, undefined at zero time. Diagnostic only, excluded from learning_view due to near-zero duration instability.",
+    "geometry": "Both strict-anchor dp/dline and full entry-to-cross price/band displacement; moving-line crossing is not evidence of price profit",
+    "sequence": "Stable physical event IDs; ordinal packet rank and time since previous packet per origin. Simultaneous line crossings share a packet. Same timestamp does not merge different quote ordinals."
+  },
+  "masks": {
+    "hit_known": "Ready geometry, aligned entry, finite positive causal R, and either hit observed or support extends strictly past H",
+    "profile_known": "Observed first-line hit within H. Negative results are valid targets.",
+    "velocity_known": "profile_known and elapsed > 0",
+    "shape_known": "profile_known and elapsed > 0; zero-time Haar masked",
+    "censoring": "Eligible incomplete follow-up is censored, never a no-hit class or zero return. Non-ready geometry is separate.",
+    "availability": "Observed profiles become labels at cross_ns/cross_ordinal; complete no-hit at deadline; unknown availability is 0. Same-nanosecond ordering must use stored ordinals."
+  },
+  "learning": {
+    "interface": "spectrum.research_v6.targets.learning_view",
+    "event": "9 separate marginal hit probabilities; BCE is an admissible baseline. No 9-way mutually exclusive softmax.",
+    "profile": "Conditional factual regression; both directions retained with costs. Never reward merely predicting positive values.",
+    "mask_application": "Replace invalid targets with a finite placeholder BEFORE arithmetic; use explicit masks in loss and valid-count denominators. Raw artifacts retain NaN for unobserved outcomes.",
+    "reference_gradient_figure": "At fixed p=0.5 for BCE, and prediction=0/delta=1 for Huber. These are analytical unweighted per-cell gradients, not fitted model gradients or approved loss weights.",
+    "next_experiment": "Compare minimal net/time/MAE heads with addition of mean negative exposure; then signed shape heads. TRAIN-only scaling, frozen chronological blocks, crossing-ID grouped diagnostics, and actual execution replay. Quantile or robust regression candidates need separate validation.",
+    "not_claimed": "Learnability, superior calibrated prediction, improved economic performance, or independent holdout novelty. Existing V5 dates were already explored."
+  },
+  "causal_clock": {
+    "file": "Separate DATE_causal_clock.parquet",
+    "periods_seconds": [60, 180, 360, 86400],
+    "representation": "sin and cos of UTC clock phase; available_ns equals decision time",
+    "limits": "UTC daily clock is not London session phase across DST. Future crossing duration is never cyclical. No clock feature has been fitted in this study."
+  },
+  "deferred": [
+    "Exact trade-volume VWAP bands on this dataset",
+    "Fixed-physical-window trailing STFT and longer past context ablations",
+    "Survival/hazard learning using partially observed censoring intervals",
+    "Training and comparing new target losses with frozen V5",
+    "Automatic utility weighting of time, reward, path shape and risk"
+  ],
+  "reproduce": [
+    ".venv/Scripts/python.exe scripts/build_crossing_path_target_v6.py",
+    ".venv/Scripts/python.exe scripts/report_crossing_path_target_v6.py",
+    ".venv/Scripts/python.exe -m pytest tests/test_research_v6_targets.py -q"
+  ]
+}
