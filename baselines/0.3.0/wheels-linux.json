@@ -1,0 +1,142 @@
+[
+  {
+    "name": "colorama",
+    "version": "0.4.6",
+    "file": "colorama-0.4.6-py2.py3-none-any.whl",
+    "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
+    "bytes": 25335
+  },
+  {
+    "name": "databento-dbn",
+    "version": "0.69.0",
+    "file": "databento_dbn-0.69.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "sha256": "b15691379241c8b40f00c52415c7359e3fea55c104040c59402f8ddb90b8eae4",
+    "bytes": 1514578
+  },
+  {
+    "name": "iniconfig",
+    "version": "2.3.0",
+    "file": "iniconfig-2.3.0-py3-none-any.whl",
+    "sha256": "f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12",
+    "bytes": 7484
+  },
+  {
+    "name": "llvmlite",
+    "version": "0.46.0",
+    "file": "llvmlite-0.46.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+    "sha256": "3535bd2bb6a2d7ae4012681ac228e5132cdb75fefb1bcb24e33f2f3e0c865ed4",
+    "bytes": 56275176
+  },
+  {
+    "name": "numba",
+    "version": "0.64.0",
+    "file": "numba-0.64.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+    "sha256": "f13721011f693ba558b8dd4e4db7f2640462bba1b855bdc804be45bbeb55031a",
+    "bytes": 3804087
+  },
+  {
+    "name": "numpy",
+    "version": "2.2.6",
+    "file": "numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "sha256": "fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249",
+    "bytes": 16527618
+  },
+  {
+    "name": "packaging",
+    "version": "26.3",
+    "file": "packaging-26.3-py3-none-any.whl",
+    "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+    "bytes": 129956
+  },
+  {
+    "name": "pandas",
+    "version": "2.2.3",
+    "file": "pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "sha256": "fffb8ae78d8af97f849404f21411c95062db1496aeb3e56f146f0355c9989319",
+    "bytes": 12739445
+  },
+  {
+    "name": "pip",
+    "version": "25.0.1",
+    "file": "pip-25.0.1-py3-none-any.whl",
+    "sha256": "c46efd13b6aa8279f33f2864459c8ce587ea6a1a59ee20de055868d8f7688f7f",
+    "bytes": 1841526
+  },
+  {
+    "name": "pluggy",
+    "version": "1.6.0",
+    "file": "pluggy-1.6.0-py3-none-any.whl",
+    "sha256": "e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746",
+    "bytes": 20538
+  },
+  {
+    "name": "psutil",
+    "version": "7.0.0",
+    "file": "psutil-7.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "sha256": "4b1388a4f6875d7e2aff5c4ca1cc16c545ed41dd8bb596cefea80111db353a34",
+    "bytes": 277986
+  },
+  {
+    "name": "pyarrow",
+    "version": "20.0.0",
+    "file": "pyarrow-20.0.0-cp312-cp312-manylinux_2_28_x86_64.whl",
+    "sha256": "4250e28a22302ce8692d3a0e8ec9d9dde54ec00d237cff4dfa9c1fbf79e472a8",
+    "bytes": 42295639
+  },
+  {
+    "name": "pygments",
+    "version": "2.21.0",
+    "file": "pygments-2.21.0-py3-none-any.whl",
+    "sha256": "2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9",
+    "bytes": 1250147
+  },
+  {
+    "name": "pytest",
+    "version": "9.0.2",
+    "file": "pytest-9.0.2-py3-none-any.whl",
+    "sha256": "711ffd45bf766d5264d487b917733b453d917afd2b0ad65223959f59089f875b",
+    "bytes": 374801
+  },
+  {
+    "name": "python-dateutil",
+    "version": "2.9.0.post0",
+    "file": "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+    "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427",
+    "bytes": 229892
+  },
+  {
+    "name": "pytz",
+    "version": "2026.3.post1",
+    "file": "pytz-2026.3.post1-py2.py3-none-any.whl",
+    "sha256": "dd95840dd199baea12d9cc096a1d452caa6596a1c1e4b5f3dbd1541855d5e815",
+    "bytes": 508283
+  },
+  {
+    "name": "setuptools",
+    "version": "78.1.0",
+    "file": "setuptools-78.1.0-py3-none-any.whl",
+    "sha256": "3e386e96793c8702ae83d17b853fb93d3e09ef82ec62722e61da5cd22376dcd8",
+    "bytes": 1256108
+  },
+  {
+    "name": "six",
+    "version": "1.17.0",
+    "file": "six-1.17.0-py2.py3-none-any.whl",
+    "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+    "bytes": 11050
+  },
+  {
+    "name": "tzdata",
+    "version": "2026.3",
+    "file": "tzdata-2026.3-py2.py3-none-any.whl",
+    "sha256": "dc096730c87af6cab1b171c9d532be840741ff5d459015e7f6947bd7d7e54931",
+    "bytes": 348168
+  },
+  {
+    "name": "zstandard",
+    "version": "0.25.0",
+    "file": "zstandard-0.25.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+    "sha256": "5a56ba0db2d244117ed744dfa8f6f5b366e14148e00de44723413b2f3938a902",
+    "bytes": 5546993
+  }
+]

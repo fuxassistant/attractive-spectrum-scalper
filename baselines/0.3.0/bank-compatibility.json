@@ -1,0 +1,39 @@
+{
+  "status": "PASS_STORED_CONTRACT_AND_PAYLOADS",
+  "date": "2026-10-27",
+  "dataset": "derived/bb_crossing_bank_v3",
+  "days": 238,
+  "first_day": "2025-10-01",
+  "last_day": "2026-09-01",
+  "totals": {
+    "events": 8956654,
+    "line_visit": 61948,
+    "opportunity": 519825
+  },
+  "storage_version": "CROSSING_BANK_LIBRARY_V4",
+  "geometry": {
+    "version": "QUOTE_NATIVE_BID_OR_ASK_CLUSTER_V3",
+    "scales": [
+      1,
+      3,
+      6,
+      9
+    ],
+    "period": 20,
+    "k": 2,
+    "ddof": 1,
+    "minute_ns": 60000000000,
+    "tolerance_usd": 1e-09,
+    "max_gap_ns": 60000000000,
+    "cooldown_ns": 8000000000,
+    "code": {
+      "reduce_quotes": "370aa872c374cf920029801dae96377f7e0cf90db71e602af3388f1e7727f80f",
+      "native_geometry": "8570e294c1cdf432b45db675f84487dd00728fbbc63e89a2184a7fccbf95d037",
+      "crossing_rows": "d9b595aba71f3a12f7eb10e654cf10086ec40f958ab68ce3922e0eb73f56f0de",
+      "crossing_clusters": "ed827a93d6a0404fc4887e00da3f5e6e687ef6ebefa7e9565112f47a3fd24f83"
+    }
+  },
+  "manifest_sha256": "548766ae131365be4165e4f4a7ded39746e48201d1c057730b600bafe8f7b332",
+  "replay_performed": false,
+  "trading_or_training_admission": false
+}

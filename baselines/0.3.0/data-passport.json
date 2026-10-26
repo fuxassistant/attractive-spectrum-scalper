@@ -1,0 +1,825 @@
+{
+  "version": "BASELINE_DATA_PASSPORT_V1",
+  "baseline": "0.3.0",
+  "date": "2026-10-27",
+  "source_code_commit": "5439815",
+  "data_root": "data",
+  "inventory_scopes": [
+    "derived",
+    "legacy"
+  ],
+  "excluded_scopes": [
+    "raw",
+    "labels",
+    "research"
+  ],
+  "inventory_file": "data-files.jsonl",
+  "inventory_sha256": "0f84cfdbe2e595c5fa0e9d4616da9273f1a47099e6771a0a90ca51c071f136fe",
+  "files": 14824,
+  "bytes": 66793476649,
+  "datasets": [
+    {
+      "path": "derived/basket_multimonth_v1",
+      "status": "BANK_SOURCE_CATALOG",
+      "note": "Day selections and references used by the bank; historical derived views are not current X",
+      "files": 2397,
+      "bytes": 5497985700,
+      "receipts": [
+        {
+          "path": "derived/basket_multimonth_v1/catalog.json",
+          "sha256": "4706a609314e66e28b1d492e511408104725fc3a26add1b1fd407bbbfd3c1a2f",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "1e6974f6ad8d3a502c409ed8a482ed840254fd0ea2f93175018e794eacbbe52b"
+    },
+    {
+      "path": "derived/bb_crossing_bank_v2",
+      "status": "SUPERSEDED_BANK",
+      "note": "Historical geometry/storage; do not open as the current V4 bank",
+      "files": 715,
+      "bytes": 2143098748,
+      "receipts": [
+        {
+          "path": "derived/bb_crossing_bank_v2/manifest.json",
+          "sha256": "00945ec18fb7996fcaad604bcc6bbdbf8855bcd366df880cf25990528d08867c",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "96a93c00592d777881ee3a8007707397230ac381e45e9e0662ca1dd679256649"
+    },
+    {
+      "path": "derived/bb_crossing_bank_v3",
+      "status": "CURRENT_FACT_BANK",
+      "note": "CROSSING_BANK_LIBRARY_V4; current geometry, no learner admission",
+      "files": 715,
+      "bytes": 2228786740,
+      "receipts": [
+        {
+          "path": "derived/bb_crossing_bank_v3/manifest.json",
+          "sha256": "548766ae131365be4165e4f4a7ded39746e48201d1c057730b600bafe8f7b332",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "130d62e58a8e585e4d04fb0616b56bf512b32b3fc1f9cb9424567e20fcab2cc7"
+    },
+    {
+      "path": "derived/cluster_v3",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 1,
+      "bytes": 14537,
+      "receipts": [
+        {
+          "path": "derived/cluster_v3/manifest.json",
+          "sha256": "b40192a46d66d611f701acb33a00edcb816cdc7232dc06194199d5c8a07730ad",
+          "declared_status": "COMPLETE_WITH_QA_WARNING",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "8a2940c6870b41c991fbdef940d41e626fe3d6bf4fe2b75cc970432b6a41d63d"
+    },
+    {
+      "path": "derived/crossing_map_target_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 27,
+      "bytes": 16895236,
+      "receipts": [
+        {
+          "path": "derived/crossing_map_target_v1/manifest.json",
+          "sha256": "bc3d01fd1a97a12f4d86e8311adf0760730e184870ba4fe8200581e31e22a3d2",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "a749d497d981dcb9d6e08d5abfd77673c2369bfb5b5677caefa4bc59ce30a4ed"
+    },
+    {
+      "path": "derived/crossing_map_target_v1_superseded_ids",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 27,
+      "bytes": 16894477,
+      "receipts": [
+        {
+          "path": "derived/crossing_map_target_v1_superseded_ids/manifest.json",
+          "sha256": "8a4b0ff0178bccda7c84e505cf61ab93dea4cb6db838a8c54ddb990b6c5ad2ce",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "d8a1ad2b02dc9c857128f610aac7d20cfe94f5b0e869cad8f4d9324f2773aba2"
+    },
+    {
+      "path": "derived/crossing_path_target_v6",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 61,
+      "bytes": 244859764,
+      "receipts": [
+        {
+          "path": "derived/crossing_path_target_v6/manifest.json",
+          "sha256": "c1ff65a26abfa70349b127f0ac450bb801ec993bf64e550d86685eda7dcf1ef3",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "7432196700bd2ec7e1a749a963e64f56bb5b8f5fd3e1e0a96c6834155c21e6a2"
+    },
+    {
+      "path": "derived/favorable_series_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 31,
+      "bytes": 249948742,
+      "receipts": [],
+      "tree_sha256": "573ae0b2e1563240beabae5c5adb7ba989f83504d5d287e4621b73701ddf089d"
+    },
+    {
+      "path": "derived/features_may_extension_v1",
+      "status": "LEGACY_FEATURES_SAMPLE_CERTIFIED",
+      "note": "Only named samples in feature-equivalence.json are certified; original identities retained",
+      "files": 25,
+      "bytes": 559745150,
+      "receipts": [
+        {
+          "path": "derived/features_may_extension_v1/manifest.json",
+          "sha256": "150d2334348fa588f7c6bd7d5f6481742973ce9be7693de28ffe9a302939f3be",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "39a1bd79d1cf15980fe6c2a8903092bc7c1162bd03763e5a6872d9ca07c3e714"
+    },
+    {
+      "path": "derived/features_may_roll_v1",
+      "status": "LEGACY_FEATURES_SAMPLE_CERTIFIED",
+      "note": "Only named samples in feature-equivalence.json are certified; original identities retained",
+      "files": 13,
+      "bytes": 324682443,
+      "receipts": [
+        {
+          "path": "derived/features_may_roll_v1/manifest.json",
+          "sha256": "7be3fba320495c6d38ad4ebc0959bf8ac4cc5992788021d1c8f6f354fc8d2031",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "aa9b2b1dfb30f3e572400b410c2506339066d59801226ce2101b700628d6daa8"
+    },
+    {
+      "path": "derived/features_v1",
+      "status": "LEGACY_FEATURES_SAMPLE_CERTIFIED",
+      "note": "Only named samples in feature-equivalence.json are certified; original identities retained",
+      "files": 25,
+      "bytes": 812335944,
+      "receipts": [
+        {
+          "path": "derived/features_v1/manifest.json",
+          "sha256": "94cdfbfb80d78b72a57e4acc094b497a4b7072e01fcec81758bf587d08ef9efb",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "57eb8a160a376a9f98861caa065e7bc468ed9fa10534205b5794bb413e531512"
+    },
+    {
+      "path": "derived/features_v2",
+      "status": "LEGACY_FEATURES_SAMPLE_CERTIFIED",
+      "note": "Only named samples in feature-equivalence.json are certified; original identities retained",
+      "files": 49,
+      "bytes": 1372080592,
+      "receipts": [
+        {
+          "path": "derived/features_v2/manifest.json",
+          "sha256": "8d1ce89829182bd40b742705a348a500b29ea07a07db828bc8b4f53a58e6b342",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "71941836cbd0701a2ceb16e3ffe24dc66cf463279b75fcce99f90f34a0dc5d78"
+    },
+    {
+      "path": "derived/finalized_gym_v2",
+      "status": "PARTIAL_OR_PILOT",
+      "note": "Inspect original receipt statuses; not admitted as full-history baseline data",
+      "files": 33,
+      "bytes": 236003018,
+      "receipts": [],
+      "tree_sha256": "ac54fbc12fe9c47fc3f5cad581c69e914b1763fd73afcdc97c7bfa069cd2a2f3"
+    },
+    {
+      "path": "derived/finalized_market_v2",
+      "status": "PARTIAL_OR_PILOT",
+      "note": "Inspect original receipt statuses; not admitted as full-history baseline data",
+      "files": 80,
+      "bytes": 250335736,
+      "receipts": [
+        {
+          "path": "derived/finalized_market_v2/catalog.json",
+          "sha256": "fce915d3e8384a6309ed48c1c0cd302568fb3e96a7e41745d9d72ffef3c629ef",
+          "declared_status": "PARTIAL",
+          "declared_version": "FINALIZED_MARKET_V2"
+        },
+        {
+          "path": "derived/finalized_market_v2/run.json",
+          "sha256": "91e04de98c9fcec97071d40791127b089b5254438537816816064c7034f0070c",
+          "declared_status": "SUPERSEDED_DEVELOPMENT_PILOT",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "d10f8d5bb19248fb65ab94a699e0a71058c41dbae6d6dae500cbc63e9357e051"
+    },
+    {
+      "path": "derived/finalized_market_v2_r2",
+      "status": "PARTIAL_OR_PILOT",
+      "note": "Inspect original receipt statuses; not admitted as full-history baseline data",
+      "files": 82,
+      "bytes": 250340527,
+      "receipts": [
+        {
+          "path": "derived/finalized_market_v2_r2/catalog.json",
+          "sha256": "59a7ca72745e433bf421ab7944bf868e60b8928547309235746b99c60a0281d5",
+          "declared_status": "PARTIAL",
+          "declared_version": "FINALIZED_MARKET_V2"
+        },
+        {
+          "path": "derived/finalized_market_v2_r2/run.json",
+          "sha256": "197b43ea6720fd91d1625631f24d7d4db99f175af39f6965d1215f7e0b01d575",
+          "declared_status": "BLOCKED_DISK_BUDGET",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "6ef732f1eef5aca25978cd79217c4b68e9944383c27b4add63f2915e421177b5"
+    },
+    {
+      "path": "derived/flow_context_v2",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 300,
+      "bytes": 415318927,
+      "receipts": [
+        {
+          "path": "derived/flow_context_v2/manifest.json",
+          "sha256": "0f6c5363823917f53d55e9a8ec77186184dc78aac8f29db6c74f320c240cc1a8",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "ef2e125c3ee3fa5a29cfbf2a2b14f54dbf96b3b891b0c730ff0036e83d31f130"
+    },
+    {
+      "path": "derived/full_mbo_v1",
+      "status": "HISTORICAL_MBO_AND_FEATURES",
+      "note": "291 capture receipts; multi-month features exist but are NOT certified for current code",
+      "files": 2785,
+      "bytes": 35008238518,
+      "receipts": [
+        {
+          "path": "derived/full_mbo_v1/manifest.json",
+          "sha256": "6494441ad65a5cdeb2f3a21fd7ed52e7fd41d61dae48be2eb12cfb71cbfed1a0",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        },
+        {
+          "path": "derived/full_mbo_v1/training_catalog.json",
+          "sha256": "61fda3466db3f6bfc01f62d1d8f62a89681a4764e3593acf6a2ad6f7dec7e382",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "cde48769ac078f4e0ca039a5360823792f7ad6c97df8ee8683f2820d02ee552b"
+    },
+    {
+      "path": "derived/hold_close_pilot",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 9,
+      "bytes": 842075,
+      "receipts": [
+        {
+          "path": "derived/hold_close_pilot/manifest.json",
+          "sha256": "88955f9263d6bb87f95ebf641e2ab9847d5ffcd12c14c92b7959ac701763bcf9",
+          "declared_status": "PILOT",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "d67d4a26e15755f9abeb81d8aec3a419f9ad4a116d32b6755be8be570bd6cf8f"
+    },
+    {
+      "path": "derived/hold_close_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 434,
+      "bytes": 75907125,
+      "receipts": [
+        {
+          "path": "derived/hold_close_v1/manifest.json",
+          "sha256": "839b7c72320b13b868bd1bac4de7e7ef2649a74980d533ed8d69b304d9abe731",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "54f761dd8ad4cda72a675cb4445ecdbb25f57e5bc177163da87953fe5f44b89e"
+    },
+    {
+      "path": "derived/hotpath_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 111,
+      "bytes": 185753158,
+      "receipts": [],
+      "tree_sha256": "3f92f66708aefad29b901958d3b16095b74fb791d8c814806c8f477f3375e078"
+    },
+    {
+      "path": "derived/market_may_extension_v1",
+      "status": "FEATURE_SOURCE_TAPES",
+      "note": "Frozen source tapes for the May feature snapshots",
+      "files": 73,
+      "bytes": 378643845,
+      "receipts": [
+        {
+          "path": "derived/market_may_extension_v1/manifest.json",
+          "sha256": "44908a0773dc9fb3280c66513cacd5fe6ca49f9bf396d32cd538e2c196583c30",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "1eb83e2a1a6868bd7a354fd9b71117f77fac473767ac93b99f5d445d282c8e60"
+    },
+    {
+      "path": "derived/market_may_roll_v1",
+      "status": "FEATURE_SOURCE_TAPES",
+      "note": "Frozen source tapes for the May feature snapshots",
+      "files": 37,
+      "bytes": 171808743,
+      "receipts": [
+        {
+          "path": "derived/market_may_roll_v1/manifest.json",
+          "sha256": "69355b7f5c6a492d5fe3ec80132353d9799649864f3335f2ff3db47ea4824b9d",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "d65159ccd42b307cdc89374f6570b8bbc9719c92fcf929336154e6dddd5591cb"
+    },
+    {
+      "path": "derived/market_representation_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 45,
+      "bytes": 259787944,
+      "receipts": [
+        {
+          "path": "derived/market_representation_v1/manifest.json",
+          "sha256": "8e628d256c2b6242194c021b4e0490a470c00a0c66f5b4ed6d2a50069ac156cc",
+          "declared_status": "COMPLETE",
+          "declared_version": "MARKET_REPRESENTATION_V1"
+        }
+      ],
+      "tree_sha256": "5128b4dd8ddbcfb63210bf3d416a930b79c0a1fc055d7c83ee25d429b695dc5a"
+    },
+    {
+      "path": "derived/market_v1",
+      "status": "FEATURE_SOURCE_TAPES",
+      "note": "Frozen source tapes for the May feature snapshots",
+      "files": 74,
+      "bytes": 542755645,
+      "receipts": [
+        {
+          "path": "derived/market_v1/manifest.json",
+          "sha256": "cd6f82b15d2914a23008901fb509b0ffa190ce758c9b6ab05cdf58cbe61ceae3",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "7a39a0920112e0a3319db8b8c3f45583149448ae7f34275db5d69c8dc0cc43c7"
+    },
+    {
+      "path": "derived/market_v2",
+      "status": "FEATURE_SOURCE_TAPES",
+      "note": "Frozen source tapes for the May feature snapshots",
+      "files": 121,
+      "bytes": 921396148,
+      "receipts": [
+        {
+          "path": "derived/market_v2/manifest.json",
+          "sha256": "a9a442e37cef515160bf6dd34e3d8b4abb7d1b7436de0d12b0cf30692b588e6e",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "5d01c3c63c1e566501dbd28ed7b20065c38f9b26ad14b96467c0bf0abba5c173"
+    },
+    {
+      "path": "derived/opportunity_episodes_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 276,
+      "bytes": 69250989,
+      "receipts": [
+        {
+          "path": "derived/opportunity_episodes_v1/manifest.json",
+          "sha256": "89addd5f68974eaaae40cab81f041ef95f3a3284ed06ff3d73c818f478416aa0",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "a0b24ffe89bb2704270ebb7febc442ecf4093a78ff9e5407254c81ff5b5d49b5"
+    },
+    {
+      "path": "derived/opportunity_signatures_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 435,
+      "bytes": 21781841,
+      "receipts": [
+        {
+          "path": "derived/opportunity_signatures_v1/manifest.json",
+          "sha256": "fd9cadb52625b0ea526a21377827572c1bbb92234c935029f282e011e5387a22",
+          "declared_status": "COMPLETE",
+          "declared_version": "OPPORTUNITY_SIGNATURES_V1"
+        }
+      ],
+      "tree_sha256": "73ee8f2265ccb9f80f6657cd5016349de4c4c393ea950dee79264a0d821da73c"
+    },
+    {
+      "path": "derived/opportunity_signatures_validation_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 175,
+      "bytes": 8835664,
+      "receipts": [
+        {
+          "path": "derived/opportunity_signatures_validation_v1/manifest.json",
+          "sha256": "f1bf30f576b1a8cf066e309447e8a4b1a9de8b77a2e3f9a0ee66f27d379fb3ea",
+          "declared_status": "COMPLETE",
+          "declared_version": "OPPORTUNITY_SIGNATURES_V1"
+        }
+      ],
+      "tree_sha256": "5d0f520b923c34c292c9c28df0fa4fda09b24cab20598b4ffbc277ed73ff48c0"
+    },
+    {
+      "path": "derived/passive_execution_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 218,
+      "bytes": 19984219,
+      "receipts": [
+        {
+          "path": "derived/passive_execution_v1/manifest.json",
+          "sha256": "d4f2d9dd6b3d369aeba2d51a983fda237c6120100e91492565cd098809fe9153",
+          "declared_status": "COMPLETE",
+          "declared_version": "PASSIVE_EXECUTION_V2"
+        }
+      ],
+      "tree_sha256": "1f656a6fc20230967ffc3a1d9b187c70d647add9277133053393959d664a87a9"
+    },
+    {
+      "path": "derived/passive_execution_v5",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 218,
+      "bytes": 19948900,
+      "receipts": [
+        {
+          "path": "derived/passive_execution_v5/manifest.json",
+          "sha256": "d579f8ee4cd43cf5ed94f67ba83614365e384369684e513e6c7b6723c54654bd",
+          "declared_status": "COMPLETE",
+          "declared_version": "PASSIVE_EXECUTION_V3"
+        }
+      ],
+      "tree_sha256": "1d404fe79fc9f818eaaf79544f8e27fec9f333018f2f455d10192af0e6ace25a"
+    },
+    {
+      "path": "derived/passive_execution_validation_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 88,
+      "bytes": 8281612,
+      "receipts": [
+        {
+          "path": "derived/passive_execution_validation_v1/manifest.json",
+          "sha256": "a99598fe3be54a0242351f27af18aea21e95fe8d362bb389b52e6dc67868bfc4",
+          "declared_status": "COMPLETE",
+          "declared_version": "PASSIVE_EXECUTION_V2"
+        }
+      ],
+      "tree_sha256": "e711827f1637a622986a2f53865bebcb2eb09fef63f0110835c5c3c543bd011d"
+    },
+    {
+      "path": "derived/passive_execution_validation_v5",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 88,
+      "bytes": 8240365,
+      "receipts": [
+        {
+          "path": "derived/passive_execution_validation_v5/manifest.json",
+          "sha256": "53c87393b58e2ec9eda0096feaf20baae8829ba22ad164b47251d50cf740c9f1",
+          "declared_status": "COMPLETE",
+          "declared_version": "PASSIVE_EXECUTION_V3"
+        }
+      ],
+      "tree_sha256": "53f050d6473168b41a06546166cd4bfe6788b69992b5d8ccfbd5025d2a2838a0"
+    },
+    {
+      "path": "derived/path_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 326,
+      "bytes": 657294112,
+      "receipts": [
+        {
+          "path": "derived/path_v1/manifest.json",
+          "sha256": "5e62834e8cd296357d0d8c8b867f4f8918e06d950588e2465080fd9c265839fe",
+          "declared_status": "COMPLETE",
+          "declared_version": "PATH_MEASUREMENT_V1"
+        }
+      ],
+      "tree_sha256": "ad79260264c0615f405b502046ddf2a4243f5dd9cedd6f72c0451d7e0ad48ea2"
+    },
+    {
+      "path": "derived/player_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 122,
+      "bytes": 1646988198,
+      "receipts": [],
+      "tree_sha256": "d87b6c217341a1a7caf4c6c57153e3b04d2518bc8f2796562501d31de4990f32"
+    },
+    {
+      "path": "derived/playground_august_1500",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 591,
+      "bytes": 1096447780,
+      "receipts": [
+        {
+          "path": "derived/playground_august_1500/manifest.json",
+          "sha256": "59f1026ef0995795c0f1e3afeac588e1bb4d95f3e9ab9938742e5de8972f3a81",
+          "declared_status": "COMPLETE",
+          "declared_version": "SHARED_CANONICAL_QUOTES_V1"
+        }
+      ],
+      "tree_sha256": "061bb6773228350f3e6dcaf9734369b49e786fe37dca7e73a55a296fe66e00c0"
+    },
+    {
+      "path": "derived/queue_state_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 217,
+      "bytes": 2740557,
+      "receipts": [
+        {
+          "path": "derived/queue_state_v1/manifest.json",
+          "sha256": "6207207f209c51a403fad2ca7e746969a93400a8c3dfd099a2332f67845507ce",
+          "declared_status": "COMPLETE",
+          "declared_version": "QUEUE_STATE_AT_DECISION_V1"
+        }
+      ],
+      "tree_sha256": "83e750e5b8ab3de58a87a7b1d661b0c4cd449022e163b17f0586632b3c4b84fd"
+    },
+    {
+      "path": "derived/queue_state_validation_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 87,
+      "bytes": 1064464,
+      "receipts": [
+        {
+          "path": "derived/queue_state_validation_v1/manifest.json",
+          "sha256": "14f0d5b88052630e6c52767c803bc6f7129c4d06f0ca1933d8dd544e5431b2db",
+          "declared_status": "COMPLETE",
+          "declared_version": "QUEUE_STATE_AT_DECISION_V1"
+        }
+      ],
+      "tree_sha256": "1a4ea5d180da317c113cc1b30a7700619890cefa7fd5702f022b492f306d5843"
+    },
+    {
+      "path": "derived/raw_may_extension_v1",
+      "status": "HISTORICAL_RAW_PARTITIONS",
+      "note": "Preserved partitions, not an independently repeated MBO replay",
+      "files": 13,
+      "bytes": 1555327299,
+      "receipts": [
+        {
+          "path": "derived/raw_may_extension_v1/manifest.json",
+          "sha256": "2e6d874f74fc59e3cd6c68b635b393c0a0fea78db724f1f8cba8e0f154270044",
+          "declared_status": null,
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "7716a90cefa310d9f35e87df86da53312fea93a0c1f6d7e13c37b32be9e858f7"
+    },
+    {
+      "path": "derived/raw_may_roll_v1",
+      "status": "HISTORICAL_RAW_PARTITIONS",
+      "note": "Preserved partitions, not an independently repeated MBO replay",
+      "files": 7,
+      "bytes": 706135051,
+      "receipts": [
+        {
+          "path": "derived/raw_may_roll_v1/manifest.json",
+          "sha256": "2cd3236d4f69f46e83e09f3e0505812791369abae380deee5520483430040bd3",
+          "declared_status": null,
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "0abe31e168f66942e1d6a011e7a9fd0bf7c0066aa971f2fbc30792cd6c81dbd2"
+    },
+    {
+      "path": "derived/raw_v1",
+      "status": "HISTORICAL_RAW_PARTITIONS",
+      "note": "Preserved partitions, not an independently repeated MBO replay",
+      "files": 13,
+      "bytes": 2284641654,
+      "receipts": [
+        {
+          "path": "derived/raw_v1/manifest.json",
+          "sha256": "fe286914c81e361e665a6bd3cf8956079facd707f242c305180aa21e3728c38e",
+          "declared_status": null,
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "13441a4e61edfbdcad3af4945d171dfef8c4328fbe2014baea66f9bb3b695cd4"
+    },
+    {
+      "path": "derived/representation_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 217,
+      "bytes": 20051964,
+      "receipts": [
+        {
+          "path": "derived/representation_v1/manifest.json",
+          "sha256": "e3a2a43b8ce6bfd0fcb718c980f3fac6c6fbf12755f905eb1c585a70b10295cc",
+          "declared_status": "COMPLETE",
+          "declared_version": "CAUSAL_REPRESENTATION_V1"
+        }
+      ],
+      "tree_sha256": "c26416ff10813eaf72bacae9dd42612d1cbff9f17ae3408b3e4dae3a5d7b6af5"
+    },
+    {
+      "path": "derived/representation_validation_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 87,
+      "bytes": 8018951,
+      "receipts": [
+        {
+          "path": "derived/representation_validation_v1/manifest.json",
+          "sha256": "ffb94912a1eee4eeaae966ef731231228639e7552ed4937d1d86c3c3b44ad279",
+          "declared_status": "COMPLETE",
+          "declared_version": "CAUSAL_REPRESENTATION_V1"
+        }
+      ],
+      "tree_sha256": "ac31b13a3f3d7157e25d5ede4c1916ab1907cf4d4037cc14e967f99c67a42526"
+    },
+    {
+      "path": "derived/scalper_mind_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 7,
+      "bytes": 435221574,
+      "receipts": [],
+      "tree_sha256": "05bc082f804f9a99e3ba2aad262a9f58949b9d25c90a074da3016fbce67e77b6"
+    },
+    {
+      "path": "derived/scalper_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 218,
+      "bytes": 1610910878,
+      "receipts": [
+        {
+          "path": "derived/scalper_v1/manifest.json",
+          "sha256": "e666b062a2489db2ac2b9715d657c1d1fe9cd6b2298da6b74b83ceed921656c0",
+          "declared_status": "COMPLETE",
+          "declared_version": "SCALPER_CONTINUOUS_V1"
+        }
+      ],
+      "tree_sha256": "1f8752f3384ed3da06f3d3254c1713a7a710fa3f945985e026a2545b1762cb59"
+    },
+    {
+      "path": "derived/scientific_pipeline_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 73,
+      "bytes": 4344099,
+      "receipts": [],
+      "tree_sha256": "1358b34f6a187183314698868dcd6b33256512c38cc195cdb67dbcdc90f75efc"
+    },
+    {
+      "path": "derived/scientific_pipeline_v2",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 320,
+      "bytes": 754169163,
+      "receipts": [],
+      "tree_sha256": "b3f59edaf4443889eb23551ba74101ff324b6260e57375a6733727a0041a8881"
+    },
+    {
+      "path": "derived/scientific_pipeline_v3",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 345,
+      "bytes": 883208737,
+      "receipts": [],
+      "tree_sha256": "78123d0d46077fd194f28e8266c66d64d7cdb0525c8bb573d3a661b93df1fb19"
+    },
+    {
+      "path": "derived/scientific_pipeline_v4",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 44,
+      "bytes": 166608791,
+      "receipts": [],
+      "tree_sha256": "19aa9a21b1d17569cefaa7894318e0d3179d9f608e01740b47094258adb720f9"
+    },
+    {
+      "path": "derived/scientific_pipeline_v5",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 185,
+      "bytes": 418836931,
+      "receipts": [],
+      "tree_sha256": "13a995d1b9f2b49c4df1d94e4d872aa4b5adfc3c6f3783925f3ba108d609f5a2"
+    },
+    {
+      "path": "derived/target_loss_audit_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 7,
+      "bytes": 139636764,
+      "receipts": [],
+      "tree_sha256": "e2033c110306bb71cae5f6f8a32ad1560efc4e7a44faaf24cf45fb7ff08030f8"
+    },
+    {
+      "path": "derived/telegram_labels_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 246,
+      "bytes": 24748899,
+      "receipts": [],
+      "tree_sha256": "d455c1274154ef063c78c926990cf38f9c407b82f43ad49a6f40992c10fcf5cd"
+    },
+    {
+      "path": "derived/volsense_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 946,
+      "bytes": 1161413691,
+      "receipts": [
+        {
+          "path": "derived/volsense_v1/manifest.json",
+          "sha256": "726d2d8dd8a9bf0e031a18118afdb05248901eccd8e7d377ab8496c6b59291fe",
+          "declared_status": null,
+          "declared_version": "VOLSENSE_V1"
+        }
+      ],
+      "tree_sha256": "81f10dfc1d43d7ed83bfa3232e2b7d007d5edb816a4863c704c570cfce9e5c86"
+    },
+    {
+      "path": "derived/vwap_bands_week_v1",
+      "status": "ARCHIVED_RESEARCH",
+      "note": "Retained for archaeology; no current feature, target, policy or training admission",
+      "files": 11,
+      "bytes": 217278824,
+      "receipts": [],
+      "tree_sha256": "85112c53fcac402f7e0f83bdb6c643b061e8febb06deb824041b79d0b8607329"
+    },
+    {
+      "path": "legacy/bb_crossing_bank_v1",
+      "status": "SUPERSEDED_BANK",
+      "note": "Historical geometry/storage; do not open as the current V4 bank",
+      "files": 852,
+      "bytes": 620545416,
+      "receipts": [
+        {
+          "path": "legacy/bb_crossing_bank_v1/manifest.json",
+          "sha256": "f1a9a6315525254ed578152c4572230b58366c12b24c40f129cc0e474c023adf",
+          "declared_status": "COMPLETE",
+          "declared_version": null
+        }
+      ],
+      "tree_sha256": "4b629178183d73fe1fb966296e55d569dd03f65b51d497ba75b89a9843040393"
+    },
+    {
+      "path": "legacy/bb_crossing_bank_v1_superseded_id",
+      "status": "SUPERSEDED_BANK",
+      "note": "Historical geometry/storage; do not open as the current V4 bank",
+      "files": 122,
+      "bytes": 57059780,
+      "receipts": [],
+      "tree_sha256": "3f1456a1f1585c2d2bbf3bd7cb9083500f9c5d3ef95f08b0d7e895fc75a6ec0d"
+    }
+  ],
+  "verification": "All listed local payload bytes hashed; original raw archives outside scopes not rehashed; no MBO replay",
+  "training_admission": false,
+  "feature_certificate": "feature-equivalence.json"
+}

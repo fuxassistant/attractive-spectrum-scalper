@@ -1,0 +1,142 @@
+[
+  {
+    "name": "colorama",
+    "version": "0.4.6",
+    "file": "colorama-0.4.6-py2.py3-none-any.whl",
+    "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
+    "bytes": 25335
+  },
+  {
+    "name": "databento-dbn",
+    "version": "0.69.0",
+    "file": "databento_dbn-0.69.0-cp312-cp312-win_amd64.whl",
+    "sha256": "bd0f8ca71a61ae1dbaed3ee74e2329c70f285a081f25e04f8575b96fedc0c2e1",
+    "bytes": 1114111
+  },
+  {
+    "name": "iniconfig",
+    "version": "2.3.0",
+    "file": "iniconfig-2.3.0-py3-none-any.whl",
+    "sha256": "f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12",
+    "bytes": 7484
+  },
+  {
+    "name": "llvmlite",
+    "version": "0.46.0",
+    "file": "llvmlite-0.46.0-cp312-cp312-win_amd64.whl",
+    "sha256": "398b39db462c39563a97b912d4f2866cd37cba60537975a09679b28fbbc0fb38",
+    "bytes": 38138940
+  },
+  {
+    "name": "numba",
+    "version": "0.64.0",
+    "file": "numba-0.64.0-cp312-cp312-win_amd64.whl",
+    "sha256": "e63dc94023b47894849b8b106db28ccb98b49d5498b98878fac1a38f83ac007a",
+    "bytes": 2752740
+  },
+  {
+    "name": "numpy",
+    "version": "2.2.6",
+    "file": "numpy-2.2.6-cp312-cp312-win_amd64.whl",
+    "sha256": "c1f9540be57940698ed329904db803cf7a402f3fc200bfe599334c9bd84a40b2",
+    "bytes": 12614190
+  },
+  {
+    "name": "packaging",
+    "version": "26.3",
+    "file": "packaging-26.3-py3-none-any.whl",
+    "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+    "bytes": 129956
+  },
+  {
+    "name": "pandas",
+    "version": "2.2.3",
+    "file": "pandas-2.2.3-cp312-cp312-win_amd64.whl",
+    "sha256": "59ef3764d0fe818125a5097d2ae867ca3fa64df032331b7e0917cf5d7bf66b13",
+    "bytes": 11504248
+  },
+  {
+    "name": "pip",
+    "version": "25.0.1",
+    "file": "pip-25.0.1-py3-none-any.whl",
+    "sha256": "c46efd13b6aa8279f33f2864459c8ce587ea6a1a59ee20de055868d8f7688f7f",
+    "bytes": 1841526
+  },
+  {
+    "name": "pluggy",
+    "version": "1.6.0",
+    "file": "pluggy-1.6.0-py3-none-any.whl",
+    "sha256": "e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746",
+    "bytes": 20538
+  },
+  {
+    "name": "psutil",
+    "version": "7.0.0",
+    "file": "psutil-7.0.0-cp37-abi3-win_amd64.whl",
+    "sha256": "4cf3d4eb1aa9b348dec30105c55cd9b7d4629285735a102beb4441e38db90553",
+    "bytes": 244885
+  },
+  {
+    "name": "pyarrow",
+    "version": "20.0.0",
+    "file": "pyarrow-20.0.0-cp312-cp312-win_amd64.whl",
+    "sha256": "96d6a0a37d9c98be08f5ed6a10831d88d52cac7b13f5287f1e0f625a0de8062b",
+    "bytes": 25660496
+  },
+  {
+    "name": "pygments",
+    "version": "2.21.0",
+    "file": "pygments-2.21.0-py3-none-any.whl",
+    "sha256": "2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9",
+    "bytes": 1250147
+  },
+  {
+    "name": "pytest",
+    "version": "9.0.2",
+    "file": "pytest-9.0.2-py3-none-any.whl",
+    "sha256": "711ffd45bf766d5264d487b917733b453d917afd2b0ad65223959f59089f875b",
+    "bytes": 374801
+  },
+  {
+    "name": "python-dateutil",
+    "version": "2.9.0.post0",
+    "file": "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+    "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427",
+    "bytes": 229892
+  },
+  {
+    "name": "pytz",
+    "version": "2026.3.post1",
+    "file": "pytz-2026.3.post1-py2.py3-none-any.whl",
+    "sha256": "dd95840dd199baea12d9cc096a1d452caa6596a1c1e4b5f3dbd1541855d5e815",
+    "bytes": 508283
+  },
+  {
+    "name": "setuptools",
+    "version": "78.1.0",
+    "file": "setuptools-78.1.0-py3-none-any.whl",
+    "sha256": "3e386e96793c8702ae83d17b853fb93d3e09ef82ec62722e61da5cd22376dcd8",
+    "bytes": 1256108
+  },
+  {
+    "name": "six",
+    "version": "1.17.0",
+    "file": "six-1.17.0-py2.py3-none-any.whl",
+    "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+    "bytes": 11050
+  },
+  {
+    "name": "tzdata",
+    "version": "2026.3",
+    "file": "tzdata-2026.3-py2.py3-none-any.whl",
+    "sha256": "dc096730c87af6cab1b171c9d532be840741ff5d459015e7f6947bd7d7e54931",
+    "bytes": 348168
+  },
+  {
+    "name": "zstandard",
+    "version": "0.25.0",
+    "file": "zstandard-0.25.0-cp312-cp312-win_amd64.whl",
+    "sha256": "ffef5a74088f1e09947aecf91011136665152e0b4b359c42be3373897fb39b01",
+    "bytes": 506276
+  }
+]

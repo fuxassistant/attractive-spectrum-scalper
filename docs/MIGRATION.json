@@ -986,23 +986,6 @@
     "research_configs": 8
   },
   "core_byte_parity": true,
-  "intentional_api_changes": [
-    "Imports are organized by role; no backwards dependency on archived packages.",
-    "Frame feature checkpoint contract is FEATURE_STREAM_V2 and fingerprints all extracted formulas.",
-    "Anchored profile returns only X; historical future fields remain in archive.",
-    "SequenceStore does not require targets and defaults to physical restored context.",
-    "Full-history materialization requires explicit archives and reference source.",
-    "2026-10-26: band crossing rule is bid OR ask (geometry QUOTE_NATIVE_BID_OR_ASK_CROSS_V2, bank store CROSSING_BANK_LIBRARY_V2); midpoint rule, cause classes, packets, make_targets, trade_profile, first_passage, factorized_loss, event weights and CE gradients removed from crossings.",
-    "2026-10-26: outcomes keep only facts without money (nearest_crossings, bands, endpoint, opportunity, sampled_crossing); mixed fee/equity teachers listed in archived_code stay in the archive branch with their data in data/derived.",
-    "2026-10-26: economics package added; crossing_marks reads nearest_crossings and applies the canon fee.",
-    "2026-10-26: market/full_history.py moved to features/full_history.py; FEATURES projection moved from representation/schema.py to features/families/signature.py; FinalizedSession.features removed. No upward layer imports remain.",
-    "2026-10-26: market/acceptance.py restored from archive (compare_canonical, independent_prefix, ReferenceBook) for finalize_market admission.",
-    "2026-10-26: outcomes.bands.future takes bid and ask; band exit E follows the bid OR ask rule (NaN if both lines are reached in one second); O, D, V stay on the mid.",
-    "2026-10-27: spectrum.outcomes renamed spectrum.future; every public function and field there is named future*; nearest_crossings -> future_crossings, endpoint_outcomes -> future_endpoint_move, sampled_crossing.targets -> future.sampled.future_first_crossing, opportunity.measure -> causal_and_future, bands/opportunity keys prefixed future_; economics.crossing_marks -> future_crossing_marks.",
-    "2026-10-27: model input rejects any field containing 'future' (features.contract.reject_future in FeatureBatch, Context.add, SequenceStore, publish_observation_store).",
-    "2026-10-27: crossing store CROSSING_BANK_LIBRARY_V3 keeps events plus reduced quote tape; open_bank returns (bank, tape, manifest); crossings.build and CLI 'bank' build one bank per day; vwap_bands moved to crossings.vwap.",
-    "2026-10-27: data/derived/bb_crossing_bank_v1 and _superseded_id moved to data/legacy; data/derived/bb_crossing_bank_v2 built for 238 days (bid OR ask)."
-  ],
   "real_sample_parity": {
     "status": "PASS",
     "core_implementation_id": "1b79f07aa681a5b6b108a09a2c83148ee86d7547a8e89aee405551b22501de66",
@@ -1050,7 +1033,7 @@
     "local_archive_tracked_files_verified": 754,
     "commit": "6667a99"
   },
-  "mapping_note": "modules contains historical extraction receipts, not current destination hashes. Subsequent changes/renames are recorded in intentional_api_changes and release_0_3_0; current_runtime_sha256 describes library 0.3.0.",
+  "mapping_note": "modules and historical_api_changes record extraction and earlier transitions. current_contracts describes baseline 0.3.0; current_runtime_sha256 binds its unchanged runtime payload.",
   "release_0_3_0": {
     "version": "0.3.0",
     "calendar": "CANON_CALENDAR_V1: canon gc_globex and packaged tzdata; reference coverage is separate",
@@ -1186,7 +1169,84 @@
     "wheel_sha256": "8d4871d97d3f94b3ae41ecbcd0271e4ae7408f23d66a424015b54a71730ac212",
     "installed_outside_source": "PASS",
     "training_dependencies_imported": false,
-    "platform": "Windows / Python 3.11",
+    "platform": "Windows; historical interpreter version not captured (previous Python 3.11 assertion withdrawn)",
     "remote_ci_run": false
+  },
+  "historical_api_changes": [
+    "Imports are organized by role; no backwards dependency on archived packages.",
+    "Frame feature checkpoint contract is FEATURE_STREAM_V2 and fingerprints all extracted formulas.",
+    "Anchored profile returns only X; historical future fields remain in archive.",
+    "SequenceStore does not require targets and defaults to physical restored context.",
+    "Full-history materialization requires explicit archives and reference source.",
+    "2026-10-26: band crossing rule is bid OR ask (geometry QUOTE_NATIVE_BID_OR_ASK_CROSS_V2, bank store CROSSING_BANK_LIBRARY_V2); midpoint rule, cause classes, packets, make_targets, trade_profile, first_passage, factorized_loss, event weights and CE gradients removed from crossings.",
+    "2026-10-26: outcomes keep only facts without money (nearest_crossings, bands, endpoint, opportunity, sampled_crossing); mixed fee/equity teachers listed in archived_code stay in the archive branch with their data in data/derived.",
+    "2026-10-26: economics package added; crossing_marks reads nearest_crossings and applies the canon fee.",
+    "2026-10-26: market/full_history.py moved to features/full_history.py; FEATURES projection moved from representation/schema.py to features/families/signature.py; FinalizedSession.features removed. No upward layer imports remain.",
+    "2026-10-26: market/acceptance.py restored from archive (compare_canonical, independent_prefix, ReferenceBook) for finalize_market admission.",
+    "2026-10-26: outcomes.bands.future takes bid and ask; band exit E follows the bid OR ask rule (NaN if both lines are reached in one second); O, D, V stay on the mid.",
+    "2026-10-27: spectrum.outcomes renamed spectrum.future; every public function and field there is named future*; nearest_crossings -> future_crossings, endpoint_outcomes -> future_endpoint_move, sampled_crossing.targets -> future.sampled.future_first_crossing, opportunity.measure -> causal_and_future, bands/opportunity keys prefixed future_; economics.crossing_marks -> future_crossing_marks.",
+    "2026-10-27: model input rejects any field containing 'future' (features.contract.reject_future in FeatureBatch, Context.add, SequenceStore, publish_observation_store).",
+    "2026-10-27: crossing store CROSSING_BANK_LIBRARY_V3 keeps events plus reduced quote tape; open_bank returns (bank, tape, manifest); crossings.build and CLI 'bank' build one bank per day; vwap_bands moved to crossings.vwap.",
+    "2026-10-27: data/derived/bb_crossing_bank_v1 and _superseded_id moved to data/legacy; data/derived/bb_crossing_bank_v2 built for 238 days (bid OR ask)."
+  ],
+  "current_contracts": {
+    "crossing_store": "CROSSING_BANK_LIBRARY_V4",
+    "crossing_geometry": "QUOTE_NATIVE_BID_OR_ASK_CLUSTER_V3",
+    "materialized_bank": "data/derived/bb_crossing_bank_v3",
+    "markers": [
+      "line_visit",
+      "opportunity",
+      "since_same_line_ns",
+      "cluster_event_id",
+      "cluster_rank"
+    ],
+    "cooldown_ns": 8000000000,
+    "cooldown_status": "assumption from canon; no tuning or economic admission",
+    "future_boundary": [
+      "FutureFrame",
+      "FutureSeries",
+      "FutureArray",
+      "export_future_values"
+    ],
+    "future_layers": "spectrum.future stores factual forward questions; spectrum.economics computes money",
+    "feature_checkpoint": "FEATURE_STREAM_V3",
+    "calendar": "CANON_CALENDAR_V1; shared canon + tzdata; historical core operational_gate remains an August pilot",
+    "empty_x": "Zero values, false known/usable masks, x_available_ns=-1"
+  },
+  "baseline_0_3_0": {
+    "branch": "codex/baseline-0.3.0",
+    "tag": "baseline-0.3.0",
+    "runtime_source_commit": "5439815",
+    "python": "CPython 3.12.14 x86_64",
+    "receipt_directory": "baselines/0.3.0",
+    "data_passport": "baselines/0.3.0/data-passport.json",
+    "feature_equivalence": "baselines/0.3.0/feature-equivalence.json",
+    "validation": "baselines/0.3.0/validation.json",
+    "remote_ci": "NOT_RUN",
+    "training_admission": false,
+    "receipt_sha256": {
+      "baselines\\0.3.0\\validation.json": "0a68b58ff35cadef940832d0d39cddd7737e3564e9627f948366103216fbfb02",
+      "baselines\\0.3.0\\data-passport.json": "cef60f44e0fdf82283e74d64268f916836033c5b13c33dac4d9606dc124333a1",
+      "baselines\\0.3.0\\feature-equivalence.json": "5fa691d593c4d702b689a63be09c26b794b9fabaad3c173601bfe2e79ca6da5c",
+      "baselines\\0.3.0\\bank-compatibility.json": "8812875e6715533f474b660c8204d1d8734a4d38009fb46e139d5dd6e850c6ac"
+    }
+  },
+  "baseline_validation": {
+    "status": "PASS_LOCAL_WINDOWS",
+    "python": "CPython 3.12.14 x86_64",
+    "source_tests": {
+      "passed": 304,
+      "seconds": 64.74
+    },
+    "installed_tests": {
+      "passed": 304,
+      "seconds": 89.6
+    },
+    "governance_tests": {
+      "passed": 14,
+      "seconds": 1.09
+    },
+    "runtime_payload_files": 106,
+    "remote_ci": "NOT_RUN"
   }
 }

@@ -6,6 +6,7 @@
 /.tmp/
 /tmp/
 /.venv/
+/.ci-venv/
 /.claude/
 /.pytest_tmp*/
 __pycache__/
@@ -26,6 +27,7 @@ __pycache__/
 *.dbn
 *.zst
 *.log
+!/baselines/0.3.0/*-tests.log
 *.out
 *.err
 *.prof

@@ -27,16 +27,26 @@ future target, техническая корректность и экономи
 
 ## Установка и проверки
 
+Бейслайн `baseline-0.3.0` закреплён за **CPython 3.12.14 x86_64**.
+Перед созданием среды проверьте `python --version`; Python 3.10/3.11 в этот
+бейслайн не входит. Полное восстановление и границы данных:
+[паспорт бейслайна](docs/BASELINE.md).
+
 ```powershell
 python -m venv .venv
-.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.venv\Scripts\python.exe -m pip install --require-hashes -r requirements/baseline-windows-py312.lock
+.venv\Scripts\python.exe -m pip install --no-deps --no-build-isolation -e .
+.venv\Scripts\python.exe tools/baseline_environment.py --lock requirements/baseline-windows-py312.lock
 .venv\Scripts\python.exe -m pytest -q
+.venv\Scripts\python.exe -m pytest -q checks
 .venv\Scripts\python.exe -m spectrum families
 ```
 
 Библиотеке и её тестам не нужны PyTorch, scikit-learn или исходные рыночные архивы.
-Для реального replay необходимы собственные данные. На Linux/macOS используйте
-`.venv/bin/python`.
+Для реального replay необходимы собственные данные. На Linux x86_64 используйте
+`.venv/bin/python` и `baseline-linux-py312.lock`. macOS и другие архитектуры
+этими lock-файлами не покрываются. CI подготовлен для Windows и Linux;
+удалённый запуск пока не подтверждён.
 
 ## Выбор семейств
 
