@@ -1,0 +1,96 @@
+{
+  "version": "TOPN_FIRST_CROSSING_WEEK_RECEIPT_V1",
+  "date": "2026-10-27",
+  "baseline_tag": "baseline-0.3.0",
+  "branch": "codex/research-topn-crossing-labels",
+  "run_directory": "research_results/topn_crossings/week_20260504_v2",
+  "source_sessions": [
+    "2026-05-04",
+    "2026-05-05",
+    "2026-05-06",
+    "2026-05-07",
+    "2026-05-08"
+  ],
+  "quote_origins": 4382269,
+  "raw_crossings": 210156,
+  "first_crossing_links_verified": 5048031,
+  "public_api_samples": 960,
+  "tests": {
+    "research": 13,
+    "baseline_integrity": 14,
+    "passed": 27
+  },
+  "visual_review": {
+    "model": "gpt-6.1-sol",
+    "pngs_reviewed": 8,
+    "verdict": "PASS_DESCRIPTIVE_ORACLE",
+    "matching_rows_independently_verified": 28847
+  },
+  "recommendation": {
+    "origin_window_minutes": 30,
+    "forward_horizon_minutes": 60,
+    "sensitivity_origin_window_minutes": 60,
+    "scope": "Development design choice; not tested economic edge"
+  },
+  "matching": [
+    {
+      "mode": "time_30m",
+      "top10_retention_mean": 0.9947834735777253,
+      "top32_retention_mean": 0.9918994509765384,
+      "top10_pairwise_overlap_mean": 0.29187370600414075,
+      "top10_entries_with_neighbor_within_1s_mean": 0.5476552795031056,
+      "top10_both_sides_window_fraction": 0.9565217391304348
+    },
+    {
+      "mode": "time_30m_h60",
+      "top10_retention_mean": 0.9948895209250311,
+      "top32_retention_mean": 0.99192266204892,
+      "top10_pairwise_overlap_mean": 0.5100379572118703,
+      "top10_entries_with_neighbor_within_1s_mean": 0.647979641131815,
+      "top10_both_sides_window_fraction": 0.9434782608695652
+    },
+    {
+      "mode": "time_60m",
+      "top10_retention_mean": 0.9959846449532687,
+      "top32_retention_mean": 0.9934208275724982,
+      "top10_pairwise_overlap_mean": 0.3606280193236715,
+      "top10_entries_with_neighbor_within_1s_mean": 0.5930434782608696,
+      "top10_both_sides_window_fraction": 0.9478260869565217
+    },
+    {
+      "mode": "time_60m_h60",
+      "top10_retention_mean": 0.9966322698310656,
+      "top32_retention_mean": 0.9941344275296571,
+      "top10_pairwise_overlap_mean": 0.448695652173913,
+      "top10_entries_with_neighbor_within_1s_mean": 0.6078260869565217,
+      "top10_both_sides_window_fraction": 0.9391304347826087
+    }
+  ],
+  "source_sha256": {
+    "__init__.py": "f04c662ca7178dfcbd41cec5585afe46fac9937f5a18ef9955c2329832dc8c5a",
+    "analyze.py": "bedcc0cf26064ed6f7264a7b2f8e17c7e2fc4e872185f46e1c82be1f7036da77",
+    "config.json": "508be427eb096841ed71e487e0a5c223605a8d80680e9bb77870651ee0c40346",
+    "matching.py": "1e5b57acae89bbdcbdab28a3fa5a785303366a8e792f2271fedfb1b7c0a9c81b",
+    "oracle.py": "f6e7debe87232538ed1af763112c3afa89d1599d7800de11718a4812a9f2fca6",
+    "plot.py": "b0930a132ef90592840abc34aea9f900936167618647d7267e9608eaae22c32c",
+    "README.md": "20aec50e3bfe30a3b0ab1299cd499d055c9cc328ec9822be6e828f10841cf0bd",
+    "run.py": "e0d17cb7fd05e39ffeae75051b2be1a9478a5e3fd5bbf9d1eb34bd2d663e27aa",
+    "test_matching.py": "bb04dd9eb2b9b4104f8b530a0df06530281e7969bac373dc4520f8f2a9f1240f",
+    "test_oracle.py": "7630fc55b9f7c1f4a9154997f0c619f56cf0f5ba2bf44b2f34d6e37ed6839fee"
+  },
+  "artifact_sha256": {
+    "manifest.json": "d441289a3115a6ae73ec1d8e923b63d6f6be8023d901fa3b889ace429e7f89b3",
+    "summary.json": "2229e5baf0d127472b8b7ecb530eab8ba162940e8f54773fd0bd1a83b77f356b",
+    "analysis.json": "0388ce9386cac3c777c46cda9dd4a0a366a720fca2d90b96f51ce779fd839236",
+    "matching/manifest.json": "200d9e735d9b9a686762c3287d8305db8a532cf577e446e7992f242efacd0904",
+    "figures/manifest.json": "95f5ec98525784374266746bc213d28134d68cb5293bd58d2b6f6e3549c89905",
+    "SOL_REVIEW.md": "5ca856c30b4d09b57c686061ae5fed2eb3bd06e7febb1840e1e96d000bdf1366",
+    "REPORT.md": "1da3c988d1bd048eb7ee1b8e0631ec2b12e13f78e188a0bebbccaa752a9ad2ec",
+    "reproduction-check.json": "05f0ee186a653a0b83fdec3c7cab43ff820190dcf7ab873e94e4a7371e165ce0",
+    "validation-tests.log": "9b0caa023a4a3137715ab70f41a1072133f15eb15c36a13219264db7158b2b21"
+  },
+  "runtime_library_modified": false,
+  "training_performed": false,
+  "capital_or_live_admission": false,
+  "remote_push_or_ci": false
+}

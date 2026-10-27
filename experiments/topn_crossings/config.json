@@ -1,0 +1,15 @@
+{
+  "version": "TOPN_FIRST_CROSSING_RESEARCH_V1",
+  "days": ["2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08"],
+  "bank_root": "data/derived/bb_crossing_bank_v3",
+  "window_modes": ["time_30m", "time_60m", "time_30m_shift15", "events_512", "events_2048", "opportunities_128", "time_30m_h60", "time_60m_h60"],
+  "max_rank": 32,
+  "profit_round_decimals": 8,
+  "origins": "every retained quote publication, canonical open, finite positive uncrossed BBO",
+  "exit": "first strictly future raw crossing per scale/role, same support; contained in half-open window by default; _h60 modes allow fixed 60-minute forward horizon per origin",
+  "unique_outcome": "event_id, independent of side",
+  "tie_break": "rounded net descending, earliest origin, earliest exit, scale, role, LONG before SHORT, event_id",
+  "window_maturity": "window end for contained; min(window end+60m, session coverage end) for h60; partial windows marked separately; support-end censoring explicit",
+  "execution": "one reference ounce, BBO marks and canon round-trip fee; no latency/fills/impact",
+  "admission": "DESCRIPTIVE_ORACLE_ONLY; no training, policy, capital or live admission"
+}
