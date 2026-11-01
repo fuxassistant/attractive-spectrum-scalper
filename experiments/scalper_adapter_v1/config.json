@@ -1,0 +1,16 @@
+{
+  "version": "SCALPER_STORIES_ADAPTER_V1",
+  "source_root": "data/derived/feature_week_v2/final_parallel2/stores",
+  "sessions": ["2026-08-24", "2026-08-25"],
+  "scales": [
+    {"name": "fast", "amplitude_ticks": 4, "time_limit_seconds": 15, "update_seconds": 1, "zone_ticks": 5, "departure_ticks": 5, "confirmation_seconds": 1, "flow_seconds": 1},
+    {"name": "middle", "amplitude_ticks": 12, "time_limit_seconds": 60, "update_seconds": 5, "zone_ticks": 10, "departure_ticks": 10, "confirmation_seconds": 3, "flow_seconds": 5},
+    {"name": "slow", "amplitude_ticks": 36, "time_limit_seconds": 300, "update_seconds": 30, "zone_ticks": 30, "departure_ticks": 30, "confirmation_seconds": 5, "flow_seconds": 30}
+  ],
+  "max_quote_age_seconds": 30,
+  "retention": {"current_updates_per_family_scale": 24, "current_completed_stories_per_family_scale": 8, "previous_stories_per_family_scale": 12, "price_nodes_per_session_scale": 12},
+  "similarity": {"context_completed_stories": 2, "neighbors_per_session": 3, "phase_match": true, "exclude_overlapping_context": true, "distance": "equal-weight mean squared ordered descriptor difference; fixed physical normalization; no fitted scaling"},
+  "query_times_utc": ["2026-08-25T07:30:00Z", "2026-08-25T12:00:00Z", "2026-08-25T18:30:00Z"],
+  "output": "research_results/scalper_adapter_v1/verified_v5",
+  "admission": "DESCRIPTIVE_ADAPTER_ONLY; geometry and similarity are hypotheses, not learned market classes, probabilities or trading signals"
+}

@@ -2,4 +2,6 @@
 * text=auto eol=lf
 spectrum/core/** -text
 # Frozen receipt is referenced by byte-level SHA256 in 0.4.1 and local audits.
-docs/EVOLUTION_0_4_0.json -text
+docs/EVOLUTION_0_4_0.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Preserve the receipt-bound historical file, including its terminal blank line.
+experiments/zone_conditional_v1/mbo_features.py whitespace=-blank-at-eof

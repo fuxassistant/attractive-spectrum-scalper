@@ -1,0 +1,18 @@
+{
+  "version": "scalper_view_audit_v1",
+  "source_run": "research_results/zone_episode_lab/verified_v3",
+  "feature_week": "data/derived/feature_week_v2/final_parallel2",
+  "dates": ["2026-08-24", "2026-08-25"],
+  "scope": "Descriptive sensitivity audit on two exposed UTC captures; no future return targets, fitting, policy or new holdout. Context remains each original capture; this does not certify joined two-session price-level memory.",
+  "arrival_window_utc": [7, 20],
+  "variants": [
+    {"name": "base", "bin_ticks": 10, "departure_ticks": 10, "confirmation_seconds": 3, "grid_offset_ticks": 0},
+    {"name": "hold_1s", "bin_ticks": 10, "departure_ticks": 10, "confirmation_seconds": 1, "grid_offset_ticks": 0},
+    {"name": "gate_5ticks", "bin_ticks": 10, "departure_ticks": 5, "confirmation_seconds": 3, "grid_offset_ticks": 0},
+    {"name": "grid_half_shift", "bin_ticks": 10, "departure_ticks": 10, "confirmation_seconds": 3, "grid_offset_ticks": 5}
+  ],
+  "micro_map": {"bin_ticks": 5, "hysteresis_ticks": [2, 3], "max_quote_age_seconds": 30},
+  "max_quote_age_seconds": 30,
+  "atlas": {"count": 12, "selection": "six smallest SHA256(date,zone,episode,clock) first-GATE_START keys per day inside07-20; no outcomes in selection", "seconds_before": 30, "seconds_after": 30},
+  "output": "research_results/scalper_view_audit_v1/verified_v2"
+}

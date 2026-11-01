@@ -1,0 +1,29 @@
+{
+  "version": "STORY_SIMILARITY_COMPONENTS_V2",
+  "adapter_run": "research_results/scalper_adapter_v1/verified_v5",
+  "source_root": "data/derived/feature_week_v2/final_parallel2/stores",
+  "sessions": ["2026-08-24", "2026-08-25"],
+  "query_session": "2026-08-25",
+  "anchor_times_utc": ["07:30:00", "12:00:00", "18:30:00"],
+  "extra_queries": 9,
+  "query_selection": "Nine lowest SHA256(date,time) keys from quarter-hour 07:00..19:45 clocks, excluding anchor times; no future outcomes",
+  "shape_samples": 16,
+  "duration_floor_seconds": 0.25,
+  "direction_floor_amplitudes": 0.5,
+  "mechanism_min_common_fraction": 0.75,
+  "mechanism_min_slot_fraction": 0.60,
+  "acceptance": {"max_score": 0.35, "max_shape_rmse": 0.60, "max_amplitude_rmse": 0.75, "max_mechanism_rmse": 1.0, "max_trajectory_rmse": 0.50},
+  "design_revision": "After visual review of verified_v2, add whole-trajectory continuity and reject opposite salient net directions (0.5A) across the whole story or individual slots. Noon slow mismatch is an exposed regression example, not an unseen validation set.",
+  "methods": [
+    {"name": "legacy", "weights": {}, "total_duration_factor": null, "slot_duration_factor": null, "mechanism_required": false},
+    {"name": "geometry", "weights": {"shape": 0.45, "amplitude": 0.25, "texture": 0.15, "structure": 0.15}, "total_duration_factor": null, "slot_duration_factor": null, "mechanism_required": false},
+    {"name": "rhythm_soft", "weights": {"shape": 0.30, "amplitude": 0.15, "texture": 0.10, "structure": 0.15, "rhythm": 0.30}, "total_duration_factor": null, "slot_duration_factor": null, "mechanism_required": false},
+    {"name": "rhythm_gate", "weights": {"shape": 0.20, "amplitude": 0.10, "texture": 0.05, "structure": 0.10, "rhythm": 0.25, "trajectory": 0.30}, "total_duration_factor": 1.5, "slot_duration_factor": 2.0, "mechanism_required": false, "trajectory_required": true},
+    {"name": "book_gate", "weights": {"shape": 0.15, "amplitude": 0.10, "texture": 0.05, "structure": 0.10, "rhythm": 0.20, "trajectory": 0.20, "mechanism": 0.20}, "total_duration_factor": 1.5, "slot_duration_factor": 2.0, "mechanism_required": true, "trajectory_required": true}
+  ],
+  "sensitivity": {"rhythm_weights": [0.0, 0.15, 0.30, 0.50], "total_duration_factors": [1.25, 1.5, 2.0, null], "book_weights": [0.0, 0.15, 0.30, 0.50]},
+  "neighbors": 3,
+  "direction_operator": "same_direction; side-aware mirror operator tested only on synthetic descriptors",
+  "output": "research_results/story_similarity_v2/verified_v3",
+  "admission": "DESCRIPTIVE_SIMILARITY_ONLY; parameters are preregistered measuring choices, not calibrated market classes or trading thresholds"
+}

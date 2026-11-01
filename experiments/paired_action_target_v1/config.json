@@ -1,0 +1,18 @@
+{
+  "version": "PAIRED_ACTION_TARGET_AUDIT_V1",
+  "parent": "research_results/continuation_lab_v1/verified_v1",
+  "scenario": "base",
+  "utility": "Observed net USD/oz for the fixed common120 action contract; divide by known frozen R only for normalization; recover money with current R.",
+  "empty": "Zero modeled PnL with 2s pending occupancy under inherited explicit no-fill assumption; not a flat-market label.",
+  "censored": "Unknown terminal liability; never zero or NEITHER. Complete-case summaries are conditional on observed outcomes, not a correction for informative missingness.",
+  "pair": "C=(uL+uS)/2, D=(uL-uS)/2. Estimate conditional means c(X),d(X), then qL=c+d,qS=c-d. c+abs(d) is the one-entry expected-value gate versus immediate WAIT=0.",
+  "oracle": "E[max(0,uL,uS)|X] is not max(0,E[uL|X],E[uS|X]); hindsight opportunity is diagnostic only, not an instruction to trade.",
+  "joint_states": ["NEITHER","LONG_ONLY","SHORT_ONLY","BOTH","UNKNOWN"],
+  "joint_state_role": "Realized paired sign taxonomy at zero net threshold. UNKNOWN is an observation mask, not a market class. Near-equal values are a separate diagnostic, not an automatic veto.",
+  "maturity": "COMPLETE at actual exit publication; EMPTY at pending deadline. Pair known only after both mature. All time fields are exact nullable Int64.",
+  "dependence": "Retain original rows and exact same-clock/same-risk weights; use chronological day/week blocks and purge label windows for evaluation. Five exposed days cannot establish uncertainty bands or economic admission.",
+  "audit_only": true,
+  "model_training": false,
+  "execution_changed": false,
+  "new_trade_policy": false
+}

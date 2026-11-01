@@ -1,0 +1,45 @@
+{
+  "version": "SCALPER_MULTIVIEW_PROPOSED_V1",
+  "status": "PROPOSED_NOT_IMPLEMENTED",
+  "principle": "Several causal views of the same market, shared decision clock and one policy. Recognized patterns are supplied together with their measurable evidence and uncertainty.",
+  "branches": {
+    "fast_response": {
+      "scope": "Recent supported path, initial candidate1s/5s/30s scales; exact quote ledger retained for replay",
+      "fields": ["mid_displacement", "path_length", "spread", "bid_ask_depth", "buy_sell_unknown_T", "linked_passive_fill_by_side", "unlinked_remove_by_side", "refill_by_side", "response_per_observed_effort"],
+      "need": "Distinguish selling with price progress, selling without progress, and downward repricing with bid withdrawals. These are observed configurations, not inferred participant intent."
+    },
+    "event_sequence": {
+      "scope": "Ordered updates to current and completed episodes from current and previous eligible same-contract venue session",
+      "fields": ["event_id", "parent_episode_id", "zone_id", "coordinate_version", "observed_start_ns", "available_ns", "sequence_ordinal", "kind", "phase", "side", "price_interval", "elapsed_since_start", "distance_to_boundary", "distance_to_confirmation_gate", "pending_timer_elapsed", "flow_evidence", "known_masks", "source_ids"],
+      "phases": ["OBSERVED_START", "FORMING", "ABORTED", "CONFIRMED", "CENSORED"],
+      "updates": "Append immutable updates; never replace an earlier token with its later completed outcome. Forming is an observable phase, not a calibrated success probability.",
+      "retrieval": "Retain active episodes, recent transitions and per-zone historical summaries with explicit separate budget for previous session. A global last256 tail alone cannot guarantee yesterday survives a busy morning."
+    },
+    "price_memory": {
+      "scope": "Absolute price-addressed, overlapping spatial scales, presented relative to current price only at query time",
+      "fields": ["supported_dwell", "volume_at_price", "independent_visit_definition", "pass_reject_counts", "age_since_visit", "approach_and_exit_side", "current_active_state", "coverage", "uncertainty", "session_id"],
+      "geometry": "Keep baseline grid and one preregistered shifted grid as controls. Any adaptive level uses only past density/response, explicit maturity and frozen coordinate version.",
+      "limits": "A shifted grid changes the object definition. Invariance of counts alone does not prove address stability; different labels alone do not prove an invalid map."
+    },
+    "session_context": {
+      "scope": "Actual venue session and preceding eligible session, same contract; weekend is not a daily reset",
+      "fields": ["current_previous_profile", "H_L_VWAP_POC", "time_of_day", "volatility_activity", "relative_band_geometry", "coverage", "anchor_available_ns"],
+      "limits": "CME_SESSION_STORE_V1 supplies session context on the bounded verified week. Cross-session price-level episode memory is a separate unfinished integration."
+    },
+    "position_state": {
+      "scope": "Separate account branch at the same origin",
+      "fields": ["inventory", "entry_basis", "liquidation_mark", "time_in_position", "remaining_risk", "pending_order", "remaining_horizon"],
+      "limits": "HOLD/CLOSE branches start from the same saved state; no forced action or penalty for WAIT."
+    }
+  },
+  "encoder": "Start with one small shared policy, separate compact encoders per view and availability masks. Event GRU/causal attention should explicitly receive time gaps and parent/zone links. Compare to a parameter-matched aggregate model before architectural expansion.",
+  "training_stages": [
+    "Causal observation/retention/synthetic information tests before market fitting.",
+    "Optional auxiliary transition/response forecasts with separately matured labels; useful descriptive learning is not economic admission.",
+    "Fixed-horizon cash targets on a common decision population with all known action alternatives, following edge diagnostics contract. Known=0 is never loss=0.",
+    "One frozen small exit menu and sequential account only after model sensitivity and target checks."
+  ],
+  "required_ablations": ["continuous_evidence_only", "completed_aggregates", "ordered_events", "ordered_events_plus_forming", "ordered_events_plus_price_map", "previous_session_removed", "order_destroyed_while_preserving_token_content", "time_or_zone_addresses_removed"],
+  "order_control_warning": "Permuting serialized rows while keeping exact event ages and parent ordering leaves recoverable chronology. Define which ordering information is actually removed; do not create future leakage or claim a placebo succeeded when timestamps reveal the answer.",
+  "admission": "First source/clock/known-mask and capability; then incremental forecast information, cash calibration, supported sequential capital and untouched confirmation. No requirement that one token type alone have a significant marginal future mean."
+}
