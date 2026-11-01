@@ -11,6 +11,7 @@
 | `motion` | price | 1s | Context / seconds; `spectrum.features.families.motion:motion` |
 | `flow` | flow | 1s | Context / seconds; `spectrum.features.families.flow:flow` |
 | `spectral` | spectrum | 1s | Context / seconds; `spectrum.features.families.spectral:spectral` |
+| `spectral_activity` | spectrum | 1s | Total T and unknown-side counters; `spectrum.features.families.spectral_activity:activity` |
 | `depth_balance` | liquidity | 1s | Context / seconds; `spectrum.features.families.depth_balance:calculate` |
 | `volatility_vwap_proxy` | volatility_geometry | 1s | Context / midpoint seconds; `spectrum.features.families.volatility_vwap:proxy` |
 | `volatility_vwap_exact` | volatility_geometry | 1s | Context / exact trade moments; `spectrum.features.families.volatility_vwap:exact` |
@@ -43,8 +44,8 @@
 | `representation.context` | representation | two-session prefix | minutes + trades + explicit current/previous date; `spectrum.representation.representation:anchored_context` |
 | `representation.zones` | representation | version availability | fast/context frames + per-price ledger; `spectrum.representation.zones:zone_and_event_tables` |
 
-Секундные `motion`, `flow`, `spectral`, `depth_balance`, `volatility_vwap_proxy`, `volatility_vwap_exact` доступны в общем `compute_batch` и `FeatureStream.feed_batch`. Остальные функции принимают native contract из таблицы.
+Секундные `motion`, `flow`, `spectral`, `spectral_activity`, `depth_balance`, `volatility_vwap_proxy`, `volatility_vwap_exact` доступны в общем `compute_batch` и `FeatureStream.feed_batch`. Остальные функции принимают native contract из таблицы. Наличие функции в каталоге не означает, что она входит в проверенный недельный профиль: в нём семь семейств и 480 каналов с отдельными масками.
 
-Будущие targets и path descriptors находятся в `outcomes`. Функция `spectrum.outcomes.volatility.recent` обрабатывает только уже созревшие outcomes и не регистрируется обычной X-семьёй.
+Будущие targets и path descriptors находятся в `spectrum.future` и отдельных исследовательских опытах. Они не регистрируются обычной X-семьёй. Старый `spectrum.outcomes` относится к архивной структуре; в текущем runtime этого маршрута нет.
 
 Исторические сочетания семейств, схемы весов и выбранные модели сохранены в архивных конфигурациях.

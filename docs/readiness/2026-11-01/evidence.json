@@ -1,0 +1,733 @@
+{
+  "audit_date": "2026-11-01",
+  "status": "INTEGRITY_PASS_WITH_SCOPE_LIMITATIONS",
+  "runtime_version": "0.4.1",
+  "scope": "Bounded technical/descriptive audit; no new generation, learner or policy admission",
+  "base_commit": "b6a6bab60cef8a62855f20a6284e27d8e934d430",
+  "preservation_commits": [
+    "bf299b96c769cb1309f523ab592740acb4333f6e research: preserve causal story tokens, similarity and paired targets",
+    "4fbc33cc35f542b3b23b02aabcb15b278a35d9f4 research: preserve mechanical controls and price-zone episode studies",
+    "e0ae37b8520dbb75fc11a3cb03a2ba9f4e423cfe feat: preserve audited feature week and session runtime 0.4.1"
+  ],
+  "generator": {
+    "path": "tools/audit_representation_readiness.py",
+    "sha256": "bf7b2b1d3faed9d1e99e397d15cb496e5178a38c852797026ce17c679ea75261"
+  },
+  "local_full_audit": {
+    "path": "research_results\\readiness_audit_20261101\\refresh_final\\audit.json",
+    "sha256": "557ce9b4830b4ebe9f80c8e2802c7ef25e0494cb59977ba3736bc2e28c5ee64e"
+  },
+  "comparisons": 844,
+  "mismatches": [],
+  "committed_source_byte_checks": 161,
+  "source_sha256": {
+    "experiments/scalper_adapter_v1/adapter.py": "b74751c64b7ae235a642339fadcbcf3ea5be1170b6492829dad274d312727dd6",
+    "experiments/scalper_adapter_v1/measures.py": "9fb11590085d23449ae71d08cba1a6493238ae4c01e617b987d352549d34079f",
+    "experiments/scalper_adapter_v1/report.py": "b27303400fcfa215463afac9f9f72db49f63804f27709485c7f99661ce68f78e",
+    "experiments/scalper_adapter_v1/run.py": "dd5dccea5e0b1fe7841c7e10464504368a9385e872ae265c66e1e76743f9c5da",
+    "experiments/scalper_adapter_v1/similarity.py": "8460dfb4300c382d7c555111947ca8a9743b1e8c7b38a78a14565e6d2b23dc64",
+    "experiments/scalper_adapter_v1/tokens.py": "e714e6ce0c4ba3a98b2c1319c53a2c8992d2b45ea367e4b32e14b045302c2036",
+    "experiments/scalper_adapter_v1/verify.py": "b609e4c4db81402cca976f203386752f283aa8de05378299e9f67fdf9ea87370",
+    "experiments/scalper_adapter_v1/config.json": "60bff1ce26b6267b0e2ebca765cbf64b6ff53f79ac2b624cb1cf185e12a05a9f",
+    "tests/test_scalper_adapter.py": "cc4eb398180d18f6639ad27a6fe697ede8c9f96fae17e46b15a5d42a6d5388be",
+    "experiments/zone_episode_lab/episodes.py": "b755562043ac2b02bbef3504fad6aa0eebe02df59d631e0dde3eb966e8db0896",
+    "experiments/scalper_view_audit_v1/audit.py": "c82505c2a525e4a49308c7d7d68540088d106f2f98a42a1dd60a4687eca4b188",
+    "experiments/price_level_memory_v1/memory.py": "fbacaf770530ce73656e0eb1130b15b0a2a640a793ef2eaca02b66fc0b857340",
+    "spectrum/representation/session.py": "d9dc716e587af8cdd7b5b9fc4383be9558453fc40db72ce6fcc368be1f475760",
+    "spectrum/representation/session_store.py": "19cef0a243e53d13e8f3452c3097d3612da672ed1e1ec0af103840af6eabd11f",
+    "spectrum/representation/representation.py": "9c1d73c77ab2e5d50082aab6fb710ba264a01e484dee83aacc798fd30e9ab491",
+    "spectrum/market/calendar.py": "54b9a56468be90ddb0c02512b961d8e1e70fd9df1514430fc36cfff26bc93b78",
+    "spectrum/units.py": "04455a82f6c967f7935f27262db149a714e6bb6792c016d7f6839b8aebfb8abf",
+    "spectrum/io.py": "0a0ad53ce7e01924de5cbd110066d2729503a2ecc00aa76bee593e3cdb51d0f4",
+    "experiments/story_similarity_v2/features.py": "f6af1e1579b04e359fb59efaa64475e798f4a46d262d58abc86e10dd3c59fa52",
+    "experiments/story_similarity_v2/metric.py": "e193186fde714e380e5892f141ade978754b4a41bac40e35225d0952ff5da630",
+    "experiments/story_similarity_v2/report.py": "cc82fbcd8993552bb23016384d186355bf7ea343a14624aaa5277e4aaf7692e0",
+    "experiments/story_similarity_v2/run.py": "6e1500ab0b1ea08887a850c62a28959e9cafde4fc6d0664f26fecb7621f10576",
+    "experiments/story_similarity_v2/search.py": "953eca655b30ff717d6a4f455839553543e28ea98b29c1aa7132af216870d9f8",
+    "experiments/story_similarity_v2/config.json": "68ffae16ed438a36358f5d22ec75635f91134a9ad1319c9b3e118ae3cdfdaf88",
+    "tests/test_story_similarity_v2.py": "a7e27df572828b9928e1607df22d75681bf58d780c796af1a1f362f380761ba0",
+    "experiments/story_similarity_v2/age_aligned.py": "9dd6ce0e22b8ea8556bf61800784cf93c7c0968898e9f0a8a2622774d1c53eef",
+    "experiments/story_similarity_v2/diagnose.py": "da1a88ef4ea78a766cdd45cd8b131c579b483d849b4712056f31a98d461ddbc4",
+    "experiments/story_similarity_v2/run_alignment.py": "abdae0fd1fff225090a7c239ad62e46b98049b19b00dee1c10d73d787ab84156",
+    "experiments/story_similarity_v2/verify.py": "a7c9719c0764de1ee815925d8ade7a5ef2c352da079c238370e9dd148116967a",
+    "tests/test_story_prefix_alignment.py": "486870b0e71c1ff6035201c73d5d5ed6cbae7b3408def342ae5dd0d711b0b1d8",
+    "experiments/regime_language_v1/measures.py": "5c5e7d75e4569024b378527b8d27e40aa5530d7303ace8b2809ac4f24a609a1e",
+    "experiments/regime_language_v1/run.py": "2a356ccb395f58b06c7b7bc9620d069ce20a66004702fbbb5a9c254adbd81fe6",
+    "tests/test_regime_language.py": "b8d97f99b6c0974211bd27ba6ce46195f448adc6db263af39a8d2a585cef717d",
+    "experiments/continuation_lab_v1/context.py": "1cb29df41dd01d54b43db9982a8b6cb59d27688fd62642d3cac6eb0bec044b3e",
+    "experiments/continuation_lab_v1/episodes.py": "aafff7d1ceb1d6f0ad3f357dc638b73c3d9fe77d7018b42c5d8ae907a765eb33",
+    "experiments/continuation_lab_v1/run.py": "51419cff63de1b1dc37369add4c925a6593c28ae91c90312373f1fcf89ab7b93",
+    "experiments/continuation_lab_v1/config.json": "bc5ecc5c2b7de5264e0a82d84d1c21555b4d844250bed915dc0cac2d72cb20fc",
+    "tests/test_continuation_phrases.py": "abf462a0d3f278780ecbff68b69e25c962db10074369afe9da0bed2d1c6f587f",
+    "experiments/mechanical_lab/execution.py": "c6a10b3f437124e7e676886aac7a5e2f8cf986644e6cc06d1579e4c1c3905432",
+    "experiments/mechanical_lab/portfolio.py": "b0cec7d232749692aefc8f05e1e3b3695bacd13638e84dd84c0ab55ed154bca9",
+    "experiments/mechanical_lab/data.py": "26d37e0531b7efde0b26bc72ca4fd7624bcf7b2733cac170d3e97e752cfc2f2f",
+    "experiments/paired_action_target_v1/audit.py": "587ece9cafe0ed7b99d52f66f41465c2cf8c1c54b1f83ffc697381dc4850734d",
+    "experiments/paired_action_target_v1/future_description.py": "a015b69a3a4e9451e64fab881b4bc69529a1aa6cba7e3ea0a69984218670c928",
+    "experiments/paired_action_target_v1/targets.py": "27b7e22e047a3bd26a85a41784db7db6eff03fda0a0641f0ef2f1f7292c8dda5",
+    "experiments/paired_action_target_v1/config.json": "ee2140d8eb770bb613059fdadd255b0e2b5a1b1fb0e4915139c3e19905936c18",
+    "tests/test_paired_action_target.py": "0b966c423f6ca447317af887e50af71567a1959545792d6b8c83102662ddee6a",
+    "experiments/zone_episode_lab/candidates.py": "0b5f8917d3d2a213ba9951d0b3c7491f90a8aac0f82e70d9641f3fa5f7019a5e",
+    "experiments/zone_episode_lab/spectral.py": "73286231991e257a27cc29fad3e2eb842d75e4d2a29d06f83874ea99cad44d45",
+    "experiments/zone_episode_lab/game.py": "6646d542b89dd33ca4cad78a941926d88b2e93cff522f83db3fc824f8ac86ad7",
+    "experiments/zone_episode_lab/run.py": "f4a1d941a91adafddfe3fa045395e1a05c8b871021d2b7e33db8fd959f3b3a2e",
+    "experiments/zone_episode_lab/config.json": "ca533bb95fdb034c83b26b5feeb08534ab8e1db477431de1a1e97a5da1ba73d6",
+    "experiments/feature_week_v2/audit.py": "c670022489362c0adfe9cfead5dc9e5615a71dac8eb9d6880601732ba8f0bbdb",
+    "experiments/feature_week_v2/build.py": "b171ed04df950a067019a1db614a72ea493ecd88d0cfe9ab5792f41d1446d4bd",
+    "experiments/feature_week_v2/context_source.py": "4d653bdcbd31db93edf373611c8904f655b3d946b56069669c24d055c43f4095",
+    "experiments/feature_week_v2/plot.py": "4058e8cb3227bc29b074cb8ae8e03891832b26877c43b1bcca32b6a1fbe5da98",
+    "experiments/feature_week_v2/report.py": "39897cab9a574804f36ee19ac3afe1c6b1be675348038aa430b86896fee1f266",
+    "experiments/feature_week_v2/verify_install.py": "ab2bb36afc89face687da9b1e39fd6abf25d53637eedf104b8c5b603f9888a05",
+    "spectrum/canon.py": "c7e8097896bd84fd952b3db9cddae338de9152f0762c16c3bd636d9c2d60e933",
+    "spectrum/cli.py": "00ac34d76244d876651ae34247531724bd5da1c843ca7102115f73a4c0ce01e9",
+    "spectrum/leakage.py": "e6c7a91ad24dce3904ec3d976b3d4256b37f7cb4ea5ebc806ccb0e16fd2b21db",
+    "spectrum/__init__.py": "220c0b9941dcbf95acd17e2b009fe82dcf555a49a3aba5cce34978d4d1406065",
+    "spectrum/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "spectrum/core/adapter.py": "d29890d35a871bb831a4ccb64de929faac3e6cfcd473e8a8a91445f64c0085f7",
+    "spectrum/core/aggregate.py": "844fda0b5d66b5307cd28c3562c2b4ca42eacb089577528918433b15d3fa6572",
+    "spectrum/core/calendar.py": "8fdb4da9b85190c059fc57ce4e7881c640f9b515e17b6cf45dbac17396c7531a",
+    "spectrum/core/event_facts.py": "632b500cb8ed9fea8bb46dd2d642162a9d495b147f88529a7eb35c7f2cb1b78d",
+    "spectrum/core/extensions.py": "cf9f017ccf128f83314571164e7b395b409ef77ee822069baffa77471f0583ba",
+    "spectrum/core/features.py": "71c12a09ad8f7ff3858a257a07fa5f7ba4fd315a7c2f34659033d35107d8a817",
+    "spectrum/core/feature_families.py": "67d8a7fcc8b8b097335fb5a561f9264efee5c49435bb41e58c7e966e4bca9ad5",
+    "spectrum/core/feature_registry.py": "e6efbed4f13155fad045be917d80fcc28220ef1daa34fbe0dffdb9a26af3755e",
+    "spectrum/core/feature_stream.py": "cba62a28f4be35543321070f969ac6e52ba3b0d9c711c6a54c4b95f7171af470",
+    "spectrum/core/join.py": "65cd5a903ddbb667d08601ef5299b7270c7272a4827c65cd712ad86c12e12e7e",
+    "spectrum/core/price_history.py": "fcc39bb854d546153b07be13473f07f3879988c8b8a59228634552943055bb49",
+    "spectrum/core/schema.py": "c6676106163091bb316284713688a50b54a15e5418dba7e8ebe5ae1e86ab5b4d",
+    "spectrum/core/state.py": "bb246ff31bd7a89e4f28e773c8ec71dfae917c918f3680ec9432b382b667be78",
+    "spectrum/core/storage.py": "8128683b043ff9a9c6e62d211e87be5c1d3d42881eebed545ffd97ca306fd0e9",
+    "spectrum/core/stream.py": "87cc88cc945f85e12cdb2d2deb717c6aae1f3972aa9e8443c3af75615f8e4f68",
+    "spectrum/core/__init__.py": "733f3c3439f6e455f1c21dfad463f614b51b9658972f005f90dfab2031ae7f58",
+    "spectrum/crossings/bank.py": "78525668e3d4de76768597a5687567f58179b57167be3b6b14a45c135a36b441",
+    "spectrum/crossings/build.py": "a219e21b91fb71d1cbcf04884f3848f4e11baef3eb420469f5bb72ce64a28723",
+    "spectrum/crossings/map.py": "1772c5ca2f68975869c7f18d7b4038411f34ca847bdd29f3a89b1a71fa6819b7",
+    "spectrum/crossings/store.py": "d133bbb25711674d01acb9da05898fda3a6f8fd441ef776bbeb9622712e23dfa",
+    "spectrum/crossings/vwap.py": "4fb6a5e367821298aab4fcd04912b5ff6ead0baa52b7fae7f391f89473a2a078",
+    "spectrum/crossings/__init__.py": "c712aec11e480b2f6ca448a08a9cd9dad28c59d9ded0f9821ada40d0a12b2165",
+    "spectrum/economics/marks.py": "55e9de815371298ad5ffe08a17dfdbf62dd412dc275f2a83f0025a0db18b8614",
+    "spectrum/economics/__init__.py": "e4aa60ccf9ad5008cb306ca3fdcf5edcb0a908087d4e5cb3999a04d897a55196",
+    "spectrum/execution/barriers.py": "a33bb15173d1f5b5b0ed47631920a2955bb8ed069ad69c0642dbe0f32ef07fbf",
+    "spectrum/execution/config.py": "ac4a57e83de03c8e1174c16c8f7a8c8a4458d69fc77495e2190cb46886c0fca9",
+    "spectrum/execution/crossing.py": "bc8c4493924fbc6ec15ccca310127d24215bbecacd9d086675965ee2e6734b11",
+    "spectrum/execution/options.py": "e9abeef064c4fda012ef58810340ce3bab878a4a177674e77ed1cc57cf85a5da",
+    "spectrum/execution/replay.py": "8b46b493684fb56f3596bf4ea7ded0b3211af759d190af6c210caf1b5f2c1dbe",
+    "spectrum/execution/__init__.py": "c81c574b2ad220a11b14daf9c3ed225201e4f2e693e55526e7a74e4a78a385a9",
+    "spectrum/features/alignment.py": "728515cb7682c1f009a4047693d888e2e2a1a64cc2371b6bb1be3acfc1f17959",
+    "spectrum/features/catalog.py": "24f5dcaf89f90d0351fb1ca9f00c50b5785ced647402318228b75f1034cfd7b8",
+    "spectrum/features/continuity.py": "14fa6f64b25f213c8a19c7f97ba59fdc80e2ee58fe44b66175835f23b2ad8a5b",
+    "spectrum/features/contract.py": "06643c53cdaa8852e5bdf9507070b29792f1ab645b5d75eb54d617b8c5a83339",
+    "spectrum/features/full_history.py": "a50b4c3b93776e07e5bb88550901e3d89e9a177380f4ed611862fd153e99baf4",
+    "spectrum/features/pipeline.py": "b0f77e06ea23a5b30aaca1cdb483430df93508f6e2743e017f4530eed573c3bd",
+    "spectrum/features/stream.py": "9278b81ab31e17b3b64adc927ed13d0063960e8eeeeb4ddda415f7a8db83a0ea",
+    "spectrum/features/__init__.py": "3a2c93fc9528cc4305d1c0d648aedda77b448acf7e1bf179bbac6d88622a25d5",
+    "spectrum/future/bands.py": "80e11715f0ea47f20fa97647c7dd8e4527c461c6a7a57621bcd81877675e116c",
+    "spectrum/future/crossings.py": "59a2f859bebe636c9e1e88d6d2fcbefee3bcaccf0e20732faf0db0ccbe6c8626",
+    "spectrum/future/endpoint.py": "1d14d75853dfde532577894d9ef0eec7440efe0968e4d0d158783deaf726bc2c",
+    "spectrum/future/examples.py": "e13fb8cf9ef6eb5cb7173ca09692760a8f6d1f4dc45b73ed78b57d84a4cad716",
+    "spectrum/future/opportunity.py": "7ed4e3463e85d5766d90278f88fb6f0949a549b0eb484b4b31189cfc5b78ea88",
+    "spectrum/future/sampled.py": "a6648d69f5e5006854660c294b0e1f41a9b18f4ddfb55257a6b731f306865e80",
+    "spectrum/future/__init__.py": "9d9bc885d62a5074ba908f82778c56d700a650f31656e989b6ae69d52fa2a853",
+    "spectrum/market/acceptance.py": "31ea4dc440249cfc4e6ba7509d31bd5490fe3357285a88284793290e1d4225a4",
+    "spectrum/market/build.py": "230ddd611a539ad8d57824c6ee2a69c003b1597a3b8376440dfa3c61878a44b2",
+    "spectrum/market/continuity.py": "f15ebf215aa68bb3d38efbcf009b0d402b476d79fd3943b42b6666fb1fcf22d9",
+    "spectrum/market/finalized.py": "751e8d98cfcca8332a6e21a611dcf3867bd7dbea29207411c754fe47bc4f9f66",
+    "spectrum/market/finalize_market.py": "932165e47de2456391a61bd88c943e96e0debdb4beeb408a09299ef63ad178ef",
+    "spectrum/market/ingest.py": "8c30a4b914a78e3b6af08d9c67e1490021b04b6694c6ccc74b8dd7b344633cf1",
+    "spectrum/market/queue.py": "5386fdae7e2fc80006ec14399e2f496be930bd50d76ca3ba8493ca0ee7792ffc",
+    "spectrum/market/quotes.py": "71118148389e5ae3213e1b02d95c8a505948648b9c290db29fe9c6ca1ae71dfe",
+    "spectrum/market/replay.py": "96271f9a3c9ee2de43744521702c9812971290072d5db7141b4215510463f8ef",
+    "spectrum/market/source.py": "cfdf094734d1403451732bd116f8edde790fbea7ea72b0a025ee6645210ba1c7",
+    "spectrum/market/tape.py": "0452e216e48fdf7102c7252ff8b35bbadecb3e9ea1f12018ffd2f7ad4bfd355b",
+    "spectrum/market/__init__.py": "1ef71e58eb822e6b3d7d99e9fbafd00baa070241feff77bc7b3b697b79513d6d",
+    "spectrum/representation/boundary.py": "ca867ba437c1773f7f87e5319bc9241a34db950b185b6b5f130b138ae19a5ea5",
+    "spectrum/representation/memory.py": "3a8c053fa8c942abeec23c89ea0cebec67c2f4dce4ef198da7f44943c620b0ad",
+    "spectrum/representation/raw.py": "edb97e2eca041bc6e99d6dfe75d5ca0c239994253245b64c79a5362475feaf43",
+    "spectrum/representation/store.py": "f7b4e5110f1337c08beb9a2a034b064313d3ef7fd53693105276210419438d1a",
+    "spectrum/representation/stream.py": "2d121aa80b4b923414d279b1d1520da9c044b433ad13de03a7c213b3911069c0",
+    "spectrum/representation/windows.py": "9f72191d382e8748356d1b6b4960e1d1bc0777a10d809f34a3a03bede48626d6",
+    "spectrum/representation/zones.py": "800f9cb2fce1432db9706c68f9b24c7a73227c527024d482e9e17878779f1919",
+    "spectrum/representation/_windows.py": "2820404f5b75870d4fb7b0566cf2d09de66c334e38f728559017f554984978fe",
+    "spectrum/representation/__init__.py": "63ad7a514e8e63cb43e0f2c64c19864d06f8507e4595c08bf679bb453c1ae00d",
+    "spectrum/resources/canon_v1.json": "f8b841c57bb3cd91235a621cf0a5b8453d0d03b5204ea440b4891c22f8380853",
+    "spectrum/resources/flow_context_v2.json": "0939169445abe388765d584a752c540c6467cce61e027f053beda8a518e57c38",
+    "spectrum/resources/foundation_v1.json": "174e62ae2247f9e535d7a51b556c80fe4b4b8d2373c246ba92014604942102c1",
+    "spectrum/resources/market_representation_v1.json": "17069613a4e33b0dd2809829a802ca80fc2fa7b159896414be5b402a69a5fc19",
+    "spectrum/resources/opportunity_episodes_v1.json": "5887f6a51ae2dac3689265b205b7b2fd7ebc95a21418246f0cce7b21f75b7855",
+    "spectrum/resources/volatility_vwap_v1.json": "44044ceca430dd4b28d7fcd83d14892283281e4e444340c6989efa9d0abaa7b2",
+    "spectrum/resources/__init__.py": "be21b0a2e4e5a8b762cc9fb13a4eee3aa5ef1db0ca34a512d08a7df4811e317d",
+    "spectrum/core/vendor/glbx_dbn.py": "cacd2f190b09adc62cd7a4b9272e1f2ffa876deb473c8bf2ccef7138461ac692",
+    "spectrum/core/vendor/l3.py": "767b69b2aa09f17169fd90e77f8372c0cafdc7f16a53bd200251b1afef9fa2d5",
+    "spectrum/core/vendor/l3_v2.py": "31695365bfe333fd77e84c9c9f67fd7da9cb4775fd7255536525b04ce9ad4066",
+    "spectrum/core/vendor/PROVENANCE.json": "05ae88c5aae825951c0661f2fdeaae0a61d4ded71640b7c141f032635bb39386",
+    "spectrum/core/vendor/SOURCE_PROBE.json": "dd3f648c85023d698a789d4f60580f6e48227de7895aa77df225b31d2ff525f7",
+    "spectrum/core/vendor/__init__.py": "ca95f262aa61e2606dab754d774a39104e8e9506c4b6f66ba7b3f23c258091dc",
+    "spectrum/features/families/anchored_profile.py": "f496ae9c8b8b769ae334f604b4bce324c9da109c580dbb199b6323be3d79a9c5",
+    "spectrum/features/families/depth_balance.py": "d88330a92f4ffa9f03674ec2803fb5e10c49edb938981f02a46b77f66e0a549c",
+    "spectrum/features/families/episodes.py": "039f2f66bf8d70515514b701a3c9c06abb3c5eae07abbfb224c953f4503eaa22",
+    "spectrum/features/families/event_context.py": "93c7a77eb0f99787a481c0262a7f9cdf1ae77a2b48fc71843c9db0a071069ada",
+    "spectrum/features/families/flow.py": "9a86e97b3e499275d45dadb126dee7613a08518f44da6e3bc46d535b9f1040e7",
+    "spectrum/features/families/flow_context.py": "0f6204853dc711374e8efaea4c89f84eb62d262a595bf43dd4f628007cf3cc10",
+    "spectrum/features/families/landmarks.py": "b33e9cda04e15666c74928e85b398992736450321c4a669cd803f781b31c81d4",
+    "spectrum/features/families/market_history.py": "f7242aefeaca8d1a92038cb4ad8bc7380b3878d1b91dcb377530cda41f951bd3",
+    "spectrum/features/families/motion.py": "80d937a91ea6fac96ee8fbed7eaef4bf9fdc4a86e5685af8f3cd94a316cd556c",
+    "spectrum/features/families/observation_summary.py": "14ebaff6cc0c187e4e6585271e62b4cba027d21235943431010a8e89caef6985",
+    "spectrum/features/families/opportunity.py": "53c3249c5a2fcfdf5c6713916bd66064fd40c36e17dc039bd9e6d57077c46738",
+    "spectrum/features/families/queue_state.py": "48139bd05a5c5290935809cfe84f272d7e52a54416f708c6a314c994807549aa",
+    "spectrum/features/families/response.py": "165a0fc101cfdbbabf2da718e319f1ca42c6d20a744cc6cb2bd0b4f50318f1b7",
+    "spectrum/features/families/scalper_context.py": "69479f15f5befd7623b8243ca2e61aaec0b2e84f80eae48977d071eeb3989742",
+    "spectrum/features/families/signature.py": "67f90be9aa90ac4894e1ca3abe95edc5511dc9e31d77eaf24933539c01a272c4",
+    "spectrum/features/families/spectral.py": "dbdcfe79b77516ba047a31ab37d0b4d89be77ee6922ef5a7e87172d7e1422073",
+    "spectrum/features/families/spectral_activity.py": "3af3b96a1fd50ba8911755a52550fc6e303cbf3415ae8e7afdd0562fa425d8d3",
+    "spectrum/features/families/volatility.py": "d190fb42ac356440ac7060643c861483d6efb871f787c196855a5105db9fd8e6",
+    "spectrum/features/families/volatility_vwap.py": "7dddb006811032ca094e78beaf79e391613de7f25282aeead34f938fc9ecbd11",
+    "spectrum/features/families/__init__.py": "9dcfcbd8354acc7382b3ba9aee459ad9f63c9e189ef9181415ab0ce472c7061f"
+  },
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m pytest -q tests checks",
+    "tests": 775,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 126.87,
+    "xml_sha256": "4d58ee1fcc992eb53cc5d7514a6b5cf19efc073fe22511fa7a7266b17fa3835b",
+    "initial_minimal_environment_collection": "FAILED: scikit-learn missing in two research modules; resolved using existing research environment"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.2.3",
+      "pyarrow": "20.0.0",
+      "numba": "0.64.0",
+      "tzdata": "2026.3",
+      "pytest": "9.0.2",
+      "scikit-learn": "1.9.1",
+      "matplotlib": "3.11.1",
+      "scipy": "1.18.1",
+      "joblib": "1.6.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "research_full_hash_lock": false
+  },
+  "feature_week": {
+    "coverage": {
+      "expected_open_seconds": 414000,
+      "present_open_seconds": 414000,
+      "known_price_seconds": 413995,
+      "ledger_known_seconds": 413974,
+      "trade_known_seconds": 413995,
+      "unknown_price_endpoints": [
+        "2026-08-28 14:00:02+00:00",
+        "2026-08-28 14:00:03+00:00",
+        "2026-08-28 14:00:04+00:00",
+        "2026-08-28 14:00:05+00:00",
+        "2026-08-28 14:00:06+00:00"
+      ],
+      "exact_trade_quantity": 841550,
+      "exact_trade_rows": 579530,
+      "missing_endpoints": 0,
+      "utc_handoffs": 6
+    },
+    "lineage_payloads": 110,
+    "parallel": {
+      "status": "PASS",
+      "files": 16,
+      "bitwise_equal": true,
+      "details": [
+        {
+          "date": "2026-08-20",
+          "file": "features.parquet",
+          "sha256": "94dc3c79ea9cd7509c0dad4ea271ace62053e9b8571091e9d820fd534b094f45",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-20",
+          "file": "fast.parquet",
+          "sha256": "96a0c50de981d4de781cfe37a5c54373b69e46954702333d653e26985cd06cb8",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-21",
+          "file": "features.parquet",
+          "sha256": "525212f5711bf5655bbd58feb6a76fdcce8366c551f8c93fcf9f08e173413726",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-21",
+          "file": "fast.parquet",
+          "sha256": "a26d58677e1588a8d58e93c4c752f4832d180a5d8e949ac949c91f9b55a92eb4",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-23",
+          "file": "features.parquet",
+          "sha256": "3ae96a7bae2f05b8d1846264f2687b4fffd66c1100b739df04e30c765240ccb6",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-23",
+          "file": "fast.parquet",
+          "sha256": "d7c3cf75f99acfaac95b43ad4bd077aec322d0e721a7f0a577620b10ab9cbf2f",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-24",
+          "file": "features.parquet",
+          "sha256": "7bd9ac23ba9ef6876b39e6bb6c865d193a29ea312c986e24bb7eb64e466bd955",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-24",
+          "file": "fast.parquet",
+          "sha256": "d464c468774a1242ecbdf6de8acfe0d378e3c75399083f01dcef29985c6c12cf",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-25",
+          "file": "features.parquet",
+          "sha256": "fe262f18f221275e05ce37dc1a7f3989e423b07175dff4bd68788fb3d37367f2",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-25",
+          "file": "fast.parquet",
+          "sha256": "3fb0c1fdda72287e012a0fbe769d3945d5a56d5f5327cfd48c4d0158def27647",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-26",
+          "file": "features.parquet",
+          "sha256": "c93b8a3a213dbe9995812af4ddbb47973be26ce70b49a1fef1bfd9aeceaf6f51",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-26",
+          "file": "fast.parquet",
+          "sha256": "a8ff5cd64466d6eb037e0a8f54031f8c17fdc109c2a973ea7ac7683ceeba4b90",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-27",
+          "file": "features.parquet",
+          "sha256": "7d2c604b634b7513bd8244ac528446aa984152a12c4d2201f90af9a94e9bbdc5",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-27",
+          "file": "fast.parquet",
+          "sha256": "8d1c912fbf4f585e7a4c4c66e31eb081a2c5ba3a0ec43f3f44a5c16a79d78e71",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-28",
+          "file": "features.parquet",
+          "sha256": "cc4d5b29968d1370b0a3fcbb2642c22b0fad67d2c59c7c99b04fb5d5638bef3e",
+          "bitwise_equal": true
+        },
+        {
+          "date": "2026-08-28",
+          "file": "fast.parquet",
+          "sha256": "656b3e4a49fcdeca5497d56f5cd0d68657b537fb1bcef88c45c0a416abe31581",
+          "bitwise_equal": true
+        }
+      ],
+      "serial_day_seconds": 82.5744371000037,
+      "parallel_day_seconds": 52.36913729997468,
+      "speedup": 1.5767767306726976,
+      "full_parallel_seconds": 140.47890539999935,
+      "context_seconds": 88.05717640000512
+    },
+    "formula_refresh": {
+      "2026-08-24": {
+        "date": "2026-08-24",
+        "rows": 86400,
+        "formulas": {
+          "spread_ticks": {
+            "rows": 78957,
+            "max_error": 0.0
+          },
+          "depth_balance_12": {
+            "rows": 78957,
+            "max_error": 0.0
+          },
+          "displacement_1s": {
+            "rows": 78956,
+            "max_error": 0.0
+          },
+          "path_1s": {
+            "rows": 78956,
+            "max_error": 0.0
+          },
+          "displacement_5s": {
+            "rows": 78952,
+            "max_error": 0.0
+          },
+          "path_5s": {
+            "rows": 78952,
+            "max_error": 0.0
+          },
+          "displacement_15s": {
+            "rows": 78942,
+            "max_error": 0.0
+          },
+          "path_15s": {
+            "rows": 78942,
+            "max_error": 0.0
+          },
+          "displacement_30s": {
+            "rows": 78927,
+            "max_error": 0.0
+          },
+          "path_30s": {
+            "rows": 78927,
+            "max_error": 0.0
+          },
+          "displacement_60s": {
+            "rows": 78902,
+            "max_error": 0.0
+          },
+          "path_60s": {
+            "rows": 78902,
+            "max_error": 0.0
+          },
+          "displacement_128s": {
+            "rows": 78837,
+            "max_error": 0.0
+          },
+          "path_128s": {
+            "rows": 78837,
+            "max_error": 0.0
+          },
+          "trade_buy_30s": {
+            "rows": 78927,
+            "max_error": 0.0
+          },
+          "trade_sell_30s": {
+            "rows": 78927,
+            "max_error": 0.0
+          },
+          "trade_unknown_30s": {
+            "rows": 78927,
+            "max_error": 0.0
+          },
+          "activity_30s_unknown_fraction": {
+            "rows": 78741,
+            "max_error": 0.0
+          },
+          "activity_30s_observed_imbalance": {
+            "rows": 78741,
+            "max_error": 0.0
+          },
+          "activity_30s_signed_lower_bound": {
+            "rows": 78741,
+            "max_error": 0.0
+          },
+          "activity_30s_signed_upper_bound": {
+            "rows": 78741,
+            "max_error": 0.0
+          }
+        },
+        "vwap_checks": 120,
+        "vwap_center_error": 1.8189894035458565e-12,
+        "vwap_sigma_ticks_error": 6.435518784542182e-11,
+        "dft_checks": 180,
+        "dft_max_error": 0.0,
+        "price_known": 82800,
+        "admitted": 78957,
+        "latency_ms": {
+          "p50": 64.907377,
+          "p95": 951.4809709500004,
+          "p99": 2209.6279143099796,
+          "max": 10332.468335
+        },
+        "strict_signed128_known": 5134,
+        "total128_known": 78837,
+        "all_features_known": 0,
+        "unchanged_mid": 23161,
+        "unchanged_with_flow": 18699,
+        "cohorts": {
+          "all_480_known": {
+            "rows": 0,
+            "trade_quantity": 0.0
+          },
+          "admitted_without_all": {
+            "rows": 78957,
+            "trade_quantity": 180600.0
+          }
+        }
+      },
+      "2026-08-28": {
+        "date": "2026-08-28",
+        "rows": 75600,
+        "formulas": {
+          "spread_ticks": {
+            "rows": 72400,
+            "max_error": 0.0
+          },
+          "depth_balance_12": {
+            "rows": 72400,
+            "max_error": 0.0
+          },
+          "displacement_1s": {
+            "rows": 72399,
+            "max_error": 0.0
+          },
+          "path_1s": {
+            "rows": 72399,
+            "max_error": 0.0
+          },
+          "displacement_5s": {
+            "rows": 72395,
+            "max_error": 0.0
+          },
+          "path_5s": {
+            "rows": 72395,
+            "max_error": 0.0
+          },
+          "displacement_15s": {
+            "rows": 72385,
+            "max_error": 0.0
+          },
+          "path_15s": {
+            "rows": 72385,
+            "max_error": 0.0
+          },
+          "displacement_30s": {
+            "rows": 72370,
+            "max_error": 0.0
+          },
+          "path_30s": {
+            "rows": 72370,
+            "max_error": 0.0
+          },
+          "displacement_60s": {
+            "rows": 72340,
+            "max_error": 0.0
+          },
+          "path_60s": {
+            "rows": 72340,
+            "max_error": 0.0
+          },
+          "displacement_128s": {
+            "rows": 72272,
+            "max_error": 0.0
+          },
+          "path_128s": {
+            "rows": 72272,
+            "max_error": 0.0
+          },
+          "trade_buy_30s": {
+            "rows": 72370,
+            "max_error": 0.0
+          },
+          "trade_sell_30s": {
+            "rows": 72370,
+            "max_error": 0.0
+          },
+          "trade_unknown_30s": {
+            "rows": 72370,
+            "max_error": 0.0
+          },
+          "activity_30s_unknown_fraction": {
+            "rows": 72189,
+            "max_error": 0.0
+          },
+          "activity_30s_observed_imbalance": {
+            "rows": 72189,
+            "max_error": 0.0
+          },
+          "activity_30s_signed_lower_bound": {
+            "rows": 72189,
+            "max_error": 0.0
+          },
+          "activity_30s_signed_upper_bound": {
+            "rows": 72189,
+            "max_error": 0.0
+          }
+        },
+        "vwap_checks": 120,
+        "vwap_center_error": 1.8189894035458565e-12,
+        "vwap_sigma_ticks_error": 9.151941426921439e-10,
+        "dft_checks": 180,
+        "dft_max_error": 0.0,
+        "price_known": 75595,
+        "admitted": 72400,
+        "latency_ms": {
+          "p50": 62.748774,
+          "p95": 907.6124048000005,
+          "p99": 1919.3292042999994,
+          "max": 7911.553521
+        },
+        "strict_signed128_known": 9228,
+        "total128_known": 72272,
+        "all_features_known": 0,
+        "unchanged_mid": 21679,
+        "unchanged_with_flow": 17879,
+        "cohorts": {
+          "all_480_known": {
+            "rows": 0,
+            "trade_quantity": 0.0
+          },
+          "admitted_without_all": {
+            "rows": 72400,
+            "trade_quantity": 238616.0
+          }
+        }
+      },
+      "minutes": {
+        "independent_bb_checks": 661,
+        "max_error": 2.6709368050603643e-09,
+        "core_representation_pairs": 13833,
+        "core_representation_max_error": 2.8241257652439344e-06,
+        "ddof": 1,
+        "clock": "COMPLETED_NATIVE",
+        "developing_crossing_bank": "Separate clock: 19 completed closes plus current quote; unchanged"
+      },
+      "spectral_controls": {
+        "null": "8192 iid Gaussian windows; aggregate ratio of powers",
+        "white_reference": 0.26842105263157895,
+        "null_relative_power": 1.0016667051286363,
+        "positive_6second_cycle": 3.725145055739601,
+        "interpretation": "Control of band-width/window bias, not a probability, alpha or proof of tradable cycles"
+      }
+    },
+    "historical_admission": "TECHNICAL_READY_WITH_LIMITATIONS"
+  },
+  "catalog_entries": 39,
+  "runs": {
+    "adapter": {
+      "path": "research_results/scalper_adapter_v1/verified_v5",
+      "manifest_sha256": "10ca8e5aa535ee49dd9940cdb5b6ae17d6b7f948ee498158ea4fe6a61f1e8fa5",
+      "recorded_status": "COMPLETE_DESCRIPTIVE_ADAPTER",
+      "checked": 116,
+      "mismatches": 0,
+      "recorded_receipts": {
+        "validation.json": {
+          "sha256": "30201684ee3e068b9b8a9ffb1e00a138a317cf02c48be4c793ffc26af39169f1",
+          "status": "PASS_BOUNDED_ADAPTER_CHECKS"
+        },
+        "summary.json": {
+          "sha256": "7378612b366d5428c97d121269a864acc744b09bd25f37e746840a3de1ef1ad1",
+          "status": "COMPLETE_DESCRIPTIVE_ADAPTER"
+        }
+      }
+    },
+    "similarity": {
+      "path": "research_results/story_similarity_v2/verified_v3",
+      "manifest_sha256": "b1daa59186eb7ddf3bfd7f31d992c01973f14b36a7641926b275d6b614501448",
+      "recorded_status": "COMPLETE_DESCRIPTIVE_SIMILARITY",
+      "checked": 206,
+      "mismatches": 0,
+      "recorded_receipts": {
+        "validation.json": {
+          "sha256": "9c222a7410b2afa1375c4ac0d78220a912ec8567461e4d96b33cf78bbaa05d77",
+          "status": "PASS_BOUNDED_SIMILARITY_CHECKS"
+        },
+        "summary.json": {
+          "sha256": "082d00f1a51b0106fb06ef0bfa59608e53b397f794f9c65e4c4b3ee68b219da3",
+          "status": "COMPLETE_DESCRIPTIVE_SIMILARITY"
+        }
+      }
+    },
+    "age_aligned_similarity": {
+      "path": "research_results/story_similarity_v2/age_aligned_v1",
+      "manifest_sha256": "23780012a37d955e81e4b15a9262c8e97185c67d2575a5e6726e581fbbc5ed02",
+      "recorded_status": "COMPLETE_DESCRIPTIVE_AGE_ALIGNMENT",
+      "checked": 215,
+      "mismatches": 0,
+      "recorded_receipts": {
+        "validation.json": {
+          "sha256": "5218e04006eb92ffa37c49e080d85ded73fcecefc2233b8e00deefa0310b55c4",
+          "status": "PASS_BOUNDED_AGE_ALIGNMENT_CHECKS"
+        },
+        "summary.json": {
+          "sha256": "7ba692d1eb2e92ee1406b483b005ca7b870f0106dd715d21f1aa179bced58b14",
+          "status": "COMPLETE_DESCRIPTIVE_AGE_ALIGNMENT"
+        }
+      }
+    },
+    "regime_description": {
+      "path": "research_results/regime_language_v1/verified_v1",
+      "manifest_sha256": "3fdb282aecef4a1c2741d9cd1c6c1689fd1fc3cea527cb562c3d480c4d8aac7d",
+      "recorded_status": "COMPLETE_DESCRIPTIVE_REGIME_PROBE",
+      "checked": 62,
+      "mismatches": 0,
+      "recorded_receipts": {
+        "validation.json": {
+          "sha256": "ccc28df2f56618300e26ec59cb0e5548be493440212e92b0b3c7528141f27759",
+          "status": "PASS_BOUNDED_REGIME_PROBE_CHECKS"
+        },
+        "summary.json": {
+          "sha256": "ed06f26a5bcb0a00c5062a09977d9c1cdefb2e3a8f6f4e4e66e24b1bb355a29c",
+          "status": "COMPLETE_DESCRIPTIVE_REGIME_PROBE"
+        }
+      }
+    },
+    "continuation_phrases": {
+      "path": "research_results/continuation_lab_v1/verified_v1",
+      "manifest_sha256": "9772402efec7f09d003e9be06000ba1490d657a11afe44a321daec09438349d9",
+      "recorded_status": "COMPLETE",
+      "checked": 69,
+      "mismatches": 0,
+      "recorded_receipts": {
+        "validation.json": {
+          "sha256": "d0ee501ba3adc8c464d67ccba2b242ffeec2c5ac2a05f46ab2c6e3186ad2183c",
+          "status": "PASS"
+        },
+        "summary.json": {
+          "sha256": "ebaaa5d542000953a9c575278303cba8801d026ea52328e1b3b19d0b341901b3",
+          "status": null
+        }
+      }
+    },
+    "paired_targets_not_X": {
+      "path": "research_results/paired_action_target_v1/verified_v1",
+      "manifest_sha256": "70b7415027cb02f60c008fbdc5a35e34a6037bd533785a29a35224a6bd2e67e1",
+      "recorded_status": "COMPLETE",
+      "checked": 38,
+      "mismatches": 0,
+      "recorded_receipts": {
+        "validation.json": {
+          "sha256": "927cd910ae2d1cbe7d2c1623e13a8a4f1deb74f344b2ac5eefa42fd33f8e1d16",
+          "status": "PASS"
+        },
+        "summary.json": {
+          "sha256": "5b724e049e40e1e6c5daf0bf1f1f84a6a0120e381f63e75527b76a48b681fc27",
+          "status": "AUDITED_NOT_TRAINED"
+        }
+      }
+    },
+    "zone_episodes": {
+      "path": "research_results/zone_episode_lab/verified_v3",
+      "manifest_sha256": "a54aeb6c52a5642b8802c8e12cba52c58a70ae4d871f20789a7dd1b2a50fb193",
+      "recorded_status": "COMPLETE_DIAGNOSTIC_ONLY",
+      "checked": 16,
+      "mismatches": 0,
+      "recorded_receipts": {
+        "independent_review.json": {
+          "sha256": "94e7247aac89369a9408c8cb8579a36c415afd69e67cf4e12dbc64c08fc59d28",
+          "status": "PASS_BOUNDED_DIAGNOSTIC_RESEARCH_NO_ECONOMIC_ADMISSION"
+        },
+        "execution_review.json": {
+          "sha256": "0a1c6d83b08184d8d4ae312af52d063745452538a7e93eb9dddf12d5c5fb993a",
+          "status": "COMPLETE_DIAGNOSTIC_ONLY"
+        }
+      }
+    }
+  },
+  "visual_reinspection": [
+    {
+      "path": "data/derived/feature_week_v2/audit/figures/08_model_masks.png",
+      "sha256": "bd116bb4d473400b4fe45571d37444b490c9e4bc9e0062d7ccea8fa84978782a"
+    },
+    {
+      "path": "research_results/story_similarity_v2/age_aligned_v1/focus_noon_slow.png",
+      "sha256": "18db5944f38022daa39a1bbb7c20843695170d6680154562f6b934cd2d283d7c"
+    }
+  ],
+  "full_history_training_admission": false,
+  "predictive_information_proven": false,
+  "economic_admission": false,
+  "live_admission": false
+}

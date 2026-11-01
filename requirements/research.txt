@@ -1,0 +1,5 @@
+# Extra direct dependencies for research tests and scientific reports.
+# Install after the platform-specific baseline lock. This is not a complete
+# transitive/hash lock; the audited environment is recorded in docs/readiness.
+scikit-learn==1.9.1
+matplotlib==3.11.1
