@@ -1,0 +1,43 @@
+{
+  "version": "mechanical_lab_v1",
+  "route": [1, 41271, 22],
+  "symbol": "GCZ6",
+  "research_hours_utc": ["07:00", "20:30"],
+  "splits": {
+    "discovery": ["2026-08-03", "2026-08-14"],
+    "validation": ["2026-08-17", "2026-08-21"],
+    "diagnostic_test": ["2026-08-24", "2026-08-28"],
+    "extension": ["2026-08-31", "2026-09-01"]
+  },
+  "selection": "One fixed-size recipe per signal: discovery >=40 trades and >=6 active days, complete account; rank validation net among discovery-eligible recipes with >=20 validation trades, >=3 active days and complete account. No positive threshold needed to retain a negative diagnostic result. Later splits never select recipe.",
+  "account": {
+    "initial_capital_usd": 100000.0,
+    "contract_oz": 100.0,
+    "max_planned_risk_fraction": 0.02,
+    "daily_loss_fraction": 0.02,
+    "max_drawdown_fraction": 0.10,
+    "max_contracts": 4
+  },
+  "execution": {
+    "fee_roundtrip_per_oz": 0.3,
+    "latency_ms": 100.0,
+    "pending_timeout_seconds": 2.0,
+    "max_quote_gap_seconds": 30.0,
+    "slippage_ticks_per_fill": 0.0
+  },
+  "origin_quality": {"max_spread_per_oz": 1.0, "max_cost_over_atr": 0.75, "max_bar_publication_delay_seconds": 5.0},
+  "coin_seeds": 199,
+  "random_seed": 472901,
+  "candidate_gates": {
+    "min_trades_validation_and_test": 30,
+    "min_active_days_validation_and_test": 4,
+    "positive_validation_and_test": true,
+    "coin_quantile": 0.95,
+    "positive_stress": true,
+    "maximum_drawdown_fraction": 0.10,
+    "zero_unresolved_exposure": true
+  },
+  "economic_admission": "NOT_ESTABLISHED: previously inspected diagnostic week, only five test days and two extension days; new untouched periods required.",
+  "stress": {"latency_ms": 250.0, "slippage_ticks_per_fill": 1.0},
+  "limitations": ["Historical BBO taker quote assumption, no depth/queue/market impact guarantee", "Fixed UTC intraday window, no overnight or session-boundary claims", "Commission is assumed, not measured broker cost", "Separate fresh account per split; unresolved filled position terminates that split", "Capped martingale and anti-martingale are post-selection risk comparisons, never entry-edge selection"]
+}

@@ -1,0 +1,11 @@
+{
+  "version": "edge_diagnostics_project_review_v1",
+  "cost_run": "research_results/edge_diagnostics_v1/cost_audit_v1",
+  "output": "research_results/edge_diagnostics_v1/project_review_v1",
+  "arms": ["base", "memory", "memory_spectrum", "memory_mbo", "all", "past_placebo"],
+  "blocks": ["evaluation", "extension"],
+  "condition": "base",
+  "research_contract": "experiments/edge_diagnostics_v1/RESEARCH_CONTRACT_RU.md",
+  "execution_fix_receipt": "docs/EVOLUTION_0_4_1.json",
+  "scope": "All six frozen model arms, two already-exposed later blocks; fixed-fill accounting only, no learner fit or policy rerun."
+}

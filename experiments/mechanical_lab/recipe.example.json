@@ -1,0 +1,6 @@
+{
+  "entry": {"id": "bb_reentry", "parameters": {}},
+  "veto": {"id": "range_only"},
+  "exit": {"id": "breakeven", "parameters": {"take_r": 2.0, "be_trigger_r": 1.0, "max_hold_seconds": 600.0}},
+  "sizing": "fixed"
+}

@@ -1,0 +1,18 @@
+{
+  "version": "zone_episode_lab_v1",
+  "route": [1, 41271, 22],
+  "symbol": "GCZ6",
+  "splits": {"development": ["2026-08-03", "2026-08-14"], "validation": ["2026-08-17", "2026-08-21"], "exposed_diagnostic": ["2026-08-24", "2026-08-28"], "extension": ["2026-08-31", "2026-09-01"]},
+  "geometry": {"bin_ticks": 10, "departure_ticks": 10, "confirmation_seconds": 3, "max_quote_age_seconds": 30},
+  "zone_quality": {"minimum_completed_visits": 3, "minimum_history_span_seconds": 600, "minimum_dwell_seconds": 90, "maximum_last_visit_age_seconds": 21600},
+  "candidate": {"minimum_distance_per_oz": 1.0, "minimum_distance_r": 1.0, "maximum_distance_r": 3.0, "minimum_risk_per_oz": 1.2, "maximum_risk_per_oz": 6.0, "cooldown_seconds": 300, "maximum_spread_per_oz": 1.0},
+  "execution": {"fee_roundtrip_per_oz": 0.3, "latency_ms": 100.0, "pending_timeout_seconds": 2.0, "max_quote_gap_seconds": 30.0, "slippage_ticks_per_fill": 0.0},
+  "stress": {"latency_ms": 250.0, "slippage_ticks_per_fill": 1.0},
+  "holding_seconds": 300,
+  "parent_comparison": {"deadline_seconds_from_arrival": 900, "inside_target": "frozen zone center, toward-side known at arrival; exact-center arrival WAIT", "outside_target": "same parent episode after confirmed departure, first eligible completed-M1 decision, near zone edge", "never_departed_or_distance_not_reached": "WAIT", "interpretation": "Common parent-contact policy comparison; entry distances and timing differ by design. No equal-payoff treatment-effect claim."},
+  "coin_seeds": 199,
+  "spectral": {"window_seconds": 3600, "sample_seconds": 5, "minimum_arrivals_for_veto": 6, "minimum_peak_concentration": 0.25, "minimum_peak_autocorrelation": 0.15},
+  "selection": "All definitions frozen before the first zone-game run. No winner selection or refitting across dates. This tape was inspected in earlier experiments; no untouched holdout claim.",
+  "admission": {"minimum_trades_each_later_block": 30, "minimum_active_days_each_later_block": 4, "positive_net_each_later_block": true, "beat_coin_95th_percentile": true, "positive_stress": true, "zero_unresolved_positions": true, "untouched_confirmation_available": false},
+  "scope": "Absolute fixed grid defines addresses. Qualified historical zones are a subset; outside means outside the selected target, not outside every grid cell. State, episode outcome, geometry and executable PnL remain separate."
+}
