@@ -1,0 +1,15 @@
+{
+  "version": "two_day_strategy_v1",
+  "atlas": "research_results/hypothesis_atlas_v1/initial_v1",
+  "execution_source": "research_results/zone_episode_lab/verified_v3",
+  "dates": ["2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28"],
+  "initialization": "Existing atlas thresholds and median trade activity use only August 3-14 X. No outcome fitting there. All ten study dates were previously inspected; this is development, not an untouched holdout.",
+  "selection": {"lookback_trading_days": 2, "min_trades_each_day": 3, "score": "minimum of the two stressed daily net USD; both base and stress must be complete, have >=3 executed trades each day and strictly positive net each day; largest score wins, strategy ID breaks ties; otherwise WAIT", "raw_leader": "highest total base net among complete base accounts with >=3 trades each day, even when negative; diagnostic only", "freeze": "choice before next UTC day, no intraday refit", "latest_pair": "last pair is described, with no subsequent day in the ten-day study"},
+  "rules": {"flow_imbalance": 0.25, "max_unknown_trade_fraction": 0.2, "progress_r": 0.25, "stalled_abs_progress_r": 0.1, "aligned_migration_r": 0.25},
+  "execution": {"fee_roundtrip_per_oz": 0.3, "latency_ms": 100.0, "pending_timeout_seconds": 2.0, "max_quote_gap_seconds": 30.0, "slippage_ticks_per_fill": 0.0},
+  "stress": {"latency_ms": 250.0, "slippage_ticks_per_fill": 1.0},
+  "account": {"initial_capital_usd": 100000.0, "contract_oz": 100.0, "max_planned_risk_fraction": 0.02, "daily_loss_fraction": 0.02, "max_drawdown_fraction": 0.1, "max_contracts": 1},
+  "exit_contract": "Reuse exact native BBO 300s-from-entry outcomes. Toward aims at frozen zone edge; away at mirrored equal gross-distance target. Frozen R stop on costed mark. Market entry and exit with latency; no guaranteed barrier fill. Parent deadline column is not part of this experiment.",
+  "controls": {"random_seeds": 99, "acceptance_prior_count": 10, "strata": ["side", "match_distance_bin", "match_phase", "match_vol_bin"], "random_acceptance": "Causal stratum acceptance frequencies from preceding pair, shrunk to its global rate, applied on next day. Same selected strategy direction, random event subset; no future count matching.", "coin": "Same selected offered origins, stable random LONG/SHORT per candidate and seed.", "fixed": "First pair's robust selection frozen for all eight forward days.", "reverse": "Opposite side on same selected offered origins, with original paired target geometry."},
+  "scope": "Finite named expert selection, not learned strategy generation. Intraday place history plus 30s flow and 10min price context. Global route MBO, not order flow located at remembered price. Current cohort requires prior completed visits and outside-zone state. Ten days and overlapping pairs do not establish persistent edge; no broker, margin, queue, impact or live admission."
+}
