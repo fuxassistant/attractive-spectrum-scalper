@@ -5,4 +5,8 @@ from .memory import MemoryView
 from .stream import interaction_stream
 from .windows import SequenceStore, fit_scaler
 from .boundary import to_feature_batch
+from .session import SessionObservation, SessionObservationStore, session_bounds, session_context
+from .session_store import open_session_store, publish_session_store
 __all__ = ['MarketObservationStore', 'Observation', 'make_fast', 'make_minutes', 'anchored_context', 'open_observation_store', 'publish_observation_store', 'MemoryView', 'interaction_stream', 'SequenceStore', 'fit_scaler', 'to_feature_batch']
+__all__ += ['SessionObservation', 'SessionObservationStore', 'session_bounds', 'session_context',
+            'open_session_store', 'publish_session_store']

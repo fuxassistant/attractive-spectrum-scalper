@@ -6,11 +6,13 @@ latency and support requirements as an entry. A support loss is censored rather
 than assigned zero PnL. Prices and PnL are USD per reference ounce.
 """
 from dataclasses import dataclass
+from fractions import Fraction
 import numpy as np
 import pandas as pd
 from numba import njit
 
 from spectrum.units import NS
+VERSION = 'TAKER_BARRIERS_NANODOLLAR_V2'
 STATUSES = ('INELIGIBLE', 'EMPTY', 'CENSORED', 'COMPLETE')
 REASONS = ('ORIGIN', 'SESSION', 'RISK', 'ENTRY_TIMEOUT', 'SUPPORT',
            'TAKE', 'STOP', 'TIME', 'EXIT_TIMEOUT', 'COVERAGE')
@@ -65,9 +67,44 @@ def _net(side, bid, ask, e, j, fee):
     return (bid[e] - ask[j]) / 1e9 - fee
 
 
+def _gross_barriers_nano(risks, config):
+    """Canonicalize each final gross barrier once to the price lattice.
+
+    Float inputs are interpreted by their shortest decimal spellings. Exact
+    rational arithmetic avoids amplifying binary operations such as 12*.1.
+    The final fee +/- multiplier*risk level is rounded to the nearest integer
+    nanodollar, ties to even. This is an explicit <=0.5 nanodollar boundary
+    convention, not a tolerance in subsequent comparisons. Adjacent native
+    nanodollars remain distinct. Invalid risk is excluded by the kernel.
+
+    Saturation preserves predicates for every supported positive int64 quote:
+    its signed gross difference is strictly between the int64 endpoints.
+    """
+    fee = Fraction(str(config.fee_roundtrip))
+    gain = Fraction(str(config.gain_multiple))
+    stop = Fraction(str(config.stop_multiple))
+    lower, upper = np.iinfo(np.int64).min, np.iinfo(np.int64).max
+    take = np.zeros(len(risks), np.int64)
+    loss = np.zeros(len(risks), np.int64)
+    for i, risk in enumerate(risks):
+        if np.isfinite(risk) and risk > 0:
+            value = Fraction(str(float(risk)))
+            take[i] = max(lower, min(upper, round((fee+gain*value)*NS)))
+            loss[i] = max(lower, min(upper, round((fee-stop*value)*NS)))
+    return take, loss
+
+
+def _integer_prices(values):
+    values = np.asarray(values)
+    if values.dtype.kind not in 'iu' or (values.dtype.kind == 'u' and
+            len(values) and values.max() > np.iinfo(np.int64).max):
+        raise ValueError('Prices require signed-int64-compatible integer nanodollars')
+    return values.astype(np.int64, copy=False)
+
+
 @njit(cache=True)
 def _simulate(qt, bid, ask, valid, epoch, coverage, start, session_end,
-              origins, risks, fee, latency, pending, gap, gain, stop, duration):
+              origins, risks, fee, latency, pending, gap, take_nano, stop_nano, duration):
     n = len(origins)
     ints = np.full((2*n, 7), -1, np.int64)  # status, reason, decision, entry, trigger, exit, request_ns
     values = np.full((2*n, 3), np.nan)  # net, MAE, MFE through actual exit
@@ -142,12 +179,13 @@ def _simulate(qt, bid, ask, valid, epoch, coverage, start, session_end,
                 low = min(low, mark)
                 high = max(high, mark)
                 last_scanned = j
-                if mark <= -stop*risks[i]:
+                gross_nano = bid[j]-ask[e] if side == 1 else bid[e]-ask[j]
+                if gross_nano <= stop_nano[i]:
                     trigger = j
                     request_ns = qt[j]
                     reason = 6
                     break
-                if mark >= gain*risks[i]:
+                if gross_nano >= take_nano[i]:
                     trigger = j
                     request_ns = qt[j]
                     reason = 5
@@ -196,6 +234,9 @@ def simulate_tape(q, origins_ns, risk, config):
     admission uses only origin support, finite risk, and the known session clock.
     COMPLETE means observed execution under the stated taker quote assumption.
     No depth/queue/market-impact fill claim is made.
+    TAKE/STOP compare integer gross price differences with final fee-adjusted
+    barriers rounded once to nearest nanodollar (ties to even). The unrounded
+    supplied fee is still used for reported USD PnL. No timing rule changes.
     """
     c = SimulationConfig.from_dict(config)
     t = np.asarray(origins_ns, np.int64)
@@ -205,10 +246,12 @@ def simulate_tape(q, origins_ns, risk, config):
     qt = np.asarray(q.quote_t, np.int64)
     if len(qt) == 0 or np.any(qt[1:] < qt[:-1]):
         raise ValueError('Nonempty monotonically published quote tape required')
-    z, v = _simulate(qt, q.bid, q.ask, q.valid, q.epoch, int(q.coverage_end_ns),
+    bid, ask = _integer_prices(q.bid), _integer_prices(q.ask)
+    take_nano, stop_nano = _gross_barriers_nano(r, c)
+    z, v = _simulate(qt, bid, ask, q.valid, q.epoch, int(q.coverage_end_ns),
         int(q.entry_start_ns), int(q.deadline_ns), t, r, c.fee_roundtrip,
         int(round(c.latency_ms*1e6)), int(round(c.pending_timeout_seconds*NS)),
-        int(round(c.max_quote_gap_seconds*NS)), c.gain_multiple, c.stop_multiple,
+        int(round(c.max_quote_gap_seconds*NS)), take_nano, stop_nano,
         int(round(c.deadline_seconds*NS)))
     out = pd.DataFrame(dict(t_ns=np.repeat(t, 2), side=np.tile([1, -1], len(t)),
         risk_R=np.repeat(r, 2), status=np.asarray(STATUSES)[z[:, 0]],
@@ -243,6 +286,18 @@ def scalar_reference(q, origin_ns, risk, side, config):
     if not np.isfinite(risk) or risk <= 0:
         out['reason'] = 'RISK'
         return out
+    # Independent construction, without the batch helper or its saturated
+    # arrays. Python integer thresholds also support levels beyond int64.
+    fee_value = Fraction(str(c.fee_roundtrip))
+    risk_value = Fraction(str(float(risk)))
+    take_nano = round((fee_value+Fraction(str(c.gain_multiple))*risk_value)*NS)
+    stop_nano = round((fee_value-Fraction(str(c.stop_multiple))*risk_value)*NS)
+    if (np.asarray(q.bid).dtype.kind not in 'iu' or np.asarray(q.ask).dtype.kind not in 'iu'
+            or (np.asarray(q.bid).dtype.kind == 'u' and np.max(q.bid) > np.iinfo(np.int64).max)
+            or (np.asarray(q.ask).dtype.kind == 'u' and np.max(q.ask) > np.iinfo(np.int64).max)):
+        raise ValueError('Prices require signed-int64-compatible integer nanodollars')
+    bid = np.asarray(q.bid, dtype=np.int64)
+    ask = np.asarray(q.ask, dtype=np.int64)
     if d < 0 or not q.valid[d] or q.epoch[d] < 0 or q.bid[d] <= 0 or q.ask[d] <= q.bid[d] or t-qt[d] > gap:
         return out
     e = int(np.searchsorted(qt, t+latency, 'right'))
@@ -272,15 +327,18 @@ def scalar_reference(q, origin_ns, risk, side, config):
         return out
     out['entry_ordinal'] = e
     ix = np.arange(e, end)
-    mark = ((q.bid[ix]-q.ask[e])/1e9-c.fee_roundtrip if side == 1
-            else (q.bid[e]-q.ask[ix])/1e9-c.fee_roundtrip)
-    hits = np.flatnonzero((qt[ix] < due) & ((mark <= -c.stop_multiple*risk)
-                         | (mark >= c.gain_multiple*risk)))
+    gross = (bid[ix]-ask[e] if side == 1 else bid[e]-ask[ix])
+    mark = gross/1e9-c.fee_roundtrip
+    # Python-int comparisons avoid NumPy coercing an out-of-int64 threshold
+    # back to float. This reference favors independence over throughput.
+    stop_hit = np.array([int(value) <= stop_nano for value in gross], bool)
+    take_hit = np.array([int(value) >= take_nano for value in gross], bool)
+    hits = np.flatnonzero((qt[ix] < due) & (stop_hit | take_hit))
     if len(hits):
         h = int(hits[0])
         j = e+h
         request_ns = int(qt[j])
-        reason = 'STOP' if mark[h] <= -c.stop_multiple*risk else 'TAKE'
+        reason = 'STOP' if stop_hit[h] else 'TAKE'
     else:
         if end < len(qt) and qt[end] < due:
             out['reason'] = 'SUPPORT'

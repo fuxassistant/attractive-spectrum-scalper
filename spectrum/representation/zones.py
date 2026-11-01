@@ -13,13 +13,14 @@ from spectrum.representation.representation import anchor
 MECHANISMS = ('EXECUTED_DEPLETION', 'WITHDRAWAL', 'REFILL_UNDER_PRESSURE', 'AGGRESSION_DECAY')
 
 
-def zone_and_event_tables(fast, context, levels, date, symbol):
-    current = anchor(date)
+def zone_and_event_tables(fast, context, levels, date, symbol, *, start_ns=None, end_ns=None):
+    current = anchor(date) if start_ns is None else int(start_ns)
+    end = current + 17 * 3600 * NS if end_ns is None else int(end_ns)
     mature_rows = context[context.previous_recognized_ns > 0]
     if len(mature_rows) == 0: raise ValueError('No matured previous-cycle levels')
     init = mature_rows.iloc[0]
     recognized = int(init.previous_recognized_ns)
-    data = fast[(fast.available_ns >= recognized) & (fast.t_ns < current + 17 * 3600 * NS)].copy()
+    data = fast[(fast.available_ns >= recognized) & (fast.t_ns <= end)].copy()
     events, states = [], []
     for mech in MECHANISMS:
         active = data[mech].to_numpy(bool)
@@ -29,7 +30,7 @@ def zone_and_event_tables(fast, context, levels, date, symbol):
                                t_ns=int(r.t_ns), available_ns=int(r.available_ns), direction=int(np.sign(r.ret30_ticks)),
                                price=float(r.mid), evidence_quantity=float(r.trade_quantity30),
                                source='prefix_30s_descriptor', recognized_ns=int(r.available_ns)))
-    levels = levels[(levels.available_ns >= recognized) & (levels.t_ns < current + 17 * 3600 * NS)]
+    levels = levels[(levels.available_ns >= recognized) & (levels.t_ns <= end)]
     for number, kind in enumerate(('high', 'low', 'vwap', 'poc')):
         price = float(init['previous_' + kind])
         for control in (False, True):

@@ -19,6 +19,27 @@ def read(path):
     return json.loads(path.read_text(encoding='utf8'))
 
 
+def evolution_chain(version):
+    """Follow immutable parent receipts back to the historical 0.3 baseline."""
+    chain = []
+    seen = set()
+    while version != '0.3.0':
+        assert version not in seen
+        seen.add(version)
+        path = ROOT / 'docs' / ('EVOLUTION_'+version.replace('.', '_')+'.json')
+        receipt = read(path)
+        assert receipt['version'] == version
+        if chain:
+            child = chain[-1]
+            assert child['parent_evolution_path'] == path.relative_to(ROOT).as_posix()
+            assert child['parent_evolution_sha256'] == hashlib.sha256(path.read_bytes()).hexdigest()
+            assert child['parent_feature_implementation'] == receipt['current_feature_implementation']
+        chain.append(receipt)
+        version = receipt['parent_version']
+    assert chain[-1]['parent_migration_sha256'] == hashlib.sha256((ROOT/'docs/MIGRATION.json').read_bytes()).hexdigest()
+    return chain
+
+
 @pytest.fixture
 def snapshot(tmp_path):
     data = tmp_path / 'data'
@@ -98,13 +119,20 @@ def test_committed_passport_is_internally_complete():
     assert passport['training_admission'] is False
 
 
-def test_certificate_binds_samples_to_inventory_and_current_code():
+def test_certificate_binds_samples_to_inventory_and_declared_version():
     from spectrum.features.pipeline import implementation_identity
     from spectrum.market.calendar import MarketCalendar
     cert = read(BASE / 'feature-equivalence.json')
     index = {r['path']: r['sha256'] for r in
              map(json.loads, (BASE / 'data-files.jsonl').read_text().splitlines())}
-    assert cert['current_implementation'] == implementation_identity()
+    version=tomllib.loads((ROOT/'pyproject.toml').read_text())['project']['version']
+    if version==cert['baseline']:
+        assert cert['current_implementation'] == implementation_identity()
+    else:
+        chain=evolution_chain(version)
+        assert chain[-1]['parent_version']==cert['baseline']
+        assert chain[-1]['parent_feature_implementation']==cert['current_implementation']
+        assert chain[0]['current_feature_implementation']==implementation_identity()
     assert cert['current_calendar'] == MarketCalendar().contract()
     assert len(cert['samples']) == 8
     assert not cert['full_history_equivalence']
@@ -121,10 +149,41 @@ def test_certificate_binds_samples_to_inventory_and_current_code():
 
 
 def test_runtime_matches_migration_receipt():
-    expected = read(ROOT / 'docs/MIGRATION.json')['current_runtime_sha256']
+    version=tomllib.loads((ROOT/'pyproject.toml').read_text())['project']['version']
+    evolution=evolution_chain(version)[0]
+    expected = evolution['current_runtime_sha256']
     actual = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
               for p in (ROOT / 'spectrum').rglob('*') if p.suffix in ('.py', '.json')}
     assert actual == expected
+
+
+def test_patch_041_binds_parent_and_only_declared_runtime_changes():
+    import spectrum
+    current=read(ROOT/'docs/EVOLUTION_0_4_1.json')
+    parent=read(ROOT/current['parent_evolution_path'])
+    assert current['version'] == spectrum.__version__ == '0.4.1'
+    assert parent['version'] == current['parent_version'] == '0.4.0'
+    project=(ROOT/'pyproject.toml').read_bytes()
+    assert hashlib.sha256(project).hexdigest() == current['current_project_sha256']
+    historical=current['parent_project_snapshot']
+    historical_bytes=historical['utf8_text'].encode('utf-8')
+    assert hashlib.sha256(historical_bytes).hexdigest() == historical['sha256']
+    historical_project=tomllib.loads(historical['utf8_text'])
+    assert historical_project['project']['version'] == '0.4.0'
+    historical_project['project']['version']='0.4.1'
+    assert historical_project == tomllib.loads(project.decode('utf-8'))
+    assert current['current_feature_implementation'] == parent['current_feature_implementation']
+    previous=parent['current_runtime_sha256']
+    actual=current['current_runtime_sha256']
+    assert actual.keys() == previous.keys()
+    changed={name for name in actual if actual[name] != previous[name]}
+    assert changed == {'spectrum/execution/barriers.py', 'spectrum/__init__.py'}
+    assert changed == set(current['changed_runtime_files'])
+    for name in changed:
+        assert current['changed_runtime_files'][name] == {'parent_sha256':previous[name], 'current_sha256':actual[name]}
+    for name, expected in current['preserved_evidence_sha256'].items():
+        assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest() == expected
+    assert not current['training_admission'] and not current['economic_admission']
 
 
 def test_bank_contract_receipt_matches_current_geometry():
@@ -142,8 +201,10 @@ def test_bank_contract_receipt_matches_current_geometry():
 
 def test_validation_binds_frozen_receipts():
     validation = read(BASE / 'validation.json')
+    historical=read(ROOT/'docs/EVOLUTION_0_4_0.json')['historical_evidence']
     for path, digest in validation['evidence_sha256'].items():
-        assert hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == digest
+        evidence=ROOT/historical.get(path,path)
+        assert hashlib.sha256(evidence.read_bytes()).hexdigest() == digest
     assert validation['remote_ci'] == 'NOT_RUN'
     assert validation['runtime_payload_files'] == 106
     assert validation['installed_outside_source'] is True

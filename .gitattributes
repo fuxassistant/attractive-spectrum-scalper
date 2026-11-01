@@ -1,3 +1,5 @@
 # New library text is portable; the original kernel retains exact source bytes.
 * text=auto eol=lf
 spectrum/core/** -text
+# Frozen receipt is referenced by byte-level SHA256 in 0.4.1 and local audits.
+docs/EVOLUTION_0_4_0.json -text

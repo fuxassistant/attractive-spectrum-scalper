@@ -104,5 +104,6 @@ def implementation_identity():
 
 from .families.depth_balance import PLUGIN as _depth
 from .families.volatility_vwap import PROXY as _vwap_proxy, EXACT as _vwap_exact
-for _plugin in (_depth, _vwap_proxy, _vwap_exact):
+from .families.spectral_activity import PLUGIN as _activity
+for _plugin in (_depth, _vwap_proxy, _vwap_exact, _activity):
     register(_plugin)

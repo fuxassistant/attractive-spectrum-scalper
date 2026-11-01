@@ -1,5 +1,6 @@
 import numpy as np
 import pytest
+from decimal import Decimal, ROUND_HALF_EVEN, localcontext
 from spectrum.execution.replay import QuoteTape
 from spectrum.execution.barriers import simulate_tape
 from spectrum.execution.barriers import scalar_reference
@@ -161,3 +162,115 @@ def test_independent_reference_on_irregular_random_path_and_support_boundaries()
     origins = seconds[np.linspace(0, 870, 40, dtype=int)]
     risks = rng.uniform(.4, 3., len(origins))
     compare(q, origins, risks, cfg(latency_ms=170, fee_roundtrip=.27))
+
+
+def exact_barrier_nano(risk, fee, multiple, reason):
+    """Independent Decimal oracle, not the runtime Fraction implementation."""
+    with localcontext() as context:
+        context.prec = 80
+        amount = Decimal(str(float(risk)))*Decimal(str(multiple))
+        level = Decimal(str(fee))+(amount if reason == 'TAKE' else -amount)
+        return int((level*Decimal(10**9)).quantize(Decimal(1), rounding=ROUND_HALF_EVEN))
+
+
+def boundary_tape(side, gross_nano, *, invalid_during_exit=False):
+    """Probe one exact native price, then revert before the five-second timer."""
+    times = np.array([0, 200_000_000, NS, 1_200_000_000, 2*NS,
+                      5_200_000_000, 5_400_000_000], np.int64)
+    entry, spread = 4_000_000_000_000, 200_000_000
+    bid = np.full(len(times), entry-spread if side == 1 else entry, np.int64)
+    ask = bid+spread
+    if side == 1:
+        bid[2:4] = entry+gross_nano
+        ask[2:4] = bid[2:4]+spread
+    else:
+        ask[2:4] = entry-gross_nano
+        bid[2:4] = ask[2:4]-spread
+    valid = np.ones(len(times), bool)
+    if invalid_during_exit:
+        valid[3] = False
+    return QuoteTape(times, bid, ask, valid, np.zeros(len(times), np.int64),
+                     10*NS, 0, 20*NS, 20*NS)
+
+
+@pytest.mark.parametrize('side', [1, -1])
+@pytest.mark.parametrize('reason', ['TAKE', 'STOP'])
+@pytest.mark.parametrize('offset', [-100_000_000, -1, 0, 1, 100_000_000])
+@pytest.mark.parametrize('risk,multiple', [
+    (3.7, 1.), (12*.1, 1.), (3., 3*.1), (.7000000005, 1.)])
+def test_exact_and_adjacent_native_boundaries_match_independent_decimal_oracle(side, reason, offset, risk, multiple):
+    config = dict(deadline_seconds=5., gain_multiple=multiple if reason=='TAKE' else 2.,
+                  stop_multiple=multiple if reason=='STOP' else 1., fee_roundtrip=.3)
+    boundary = exact_barrier_nano(risk, .3, multiple, reason)
+    q = boundary_tape(side, boundary+offset)
+    result = compare(q, [0], [risk], config)
+    row = result.loc[result.side == side].iloc[0]
+    hit = offset >= 0 if reason == 'TAKE' else offset <= 0
+    assert row.status == 'COMPLETE'
+    assert row.reason == (reason if hit else 'TIME')
+    assert row.trigger_ns == (NS if hit else 5_200_000_000)
+    assert row.trigger_ordinal == (2 if hit else -1)
+    assert row.exit_ordinal == (3 if hit else 6)
+    expected_net = (boundary+offset)/NS-.3 if hit else -.5
+    assert row.net == pytest.approx(expected_net, abs=1e-12)
+
+
+@pytest.mark.parametrize('side', [1, -1])
+@pytest.mark.parametrize('reason', ['TAKE', 'STOP'])
+def test_exact_barrier_trigger_does_not_hide_support_loss_during_exit(side, reason):
+    risk = 12*.1
+    config = dict(deadline_seconds=5., gain_multiple=1., fee_roundtrip=.3)
+    q = boundary_tape(side, exact_barrier_nano(risk, .3, 1., reason), invalid_during_exit=True)
+    row = compare(q, [0], [risk], config).loc[lambda x: x.side==side].iloc[0]
+    assert row.status == 'CENSORED' and row.reason == 'SUPPORT'
+    assert row.trigger_ns == NS and row.trigger_ordinal == 2
+    assert row.exit_ordinal == -1 and np.isnan(row.net)
+
+
+@pytest.mark.parametrize('risk', [.7000000005, .7000000015])
+def test_half_nanodollar_boundary_uses_ties_to_even(risk):
+    take = exact_barrier_nano(risk, .3, 1., 'TAKE')
+    assert take == (1_000_000_000 if risk == .7000000005 else 1_000_000_002)
+    q = boundary_tape(1, take)
+    row = compare(q, [0], [risk], dict(deadline_seconds=5., gain_multiple=1.)).iloc[0]
+    assert row.reason == 'TAKE' and row.trigger_ns == NS
+
+
+@pytest.mark.parametrize('risk,fee', [(1e100, .3), (1.2, 1e100)])
+def test_large_finite_barrier_preserves_predicate_without_int64_overflow(risk, fee):
+    q = boundary_tape(1, 0)
+    f = compare(q, [0], [risk], dict(deadline_seconds=5., fee_roundtrip=fee))
+    assert f.reason.eq('TIME' if risk > fee else 'STOP').all()
+
+
+def test_noninteger_native_prices_are_rejected_instead_of_losing_precision():
+    q = boundary_tape(1, 0)
+    broken = QuoteTape(q.quote_t, q.bid.astype(float), q.ask.astype(float), q.valid, q.epoch,
+                       q.coverage_end_ns, q.entry_start_ns, q.entry_cutoff_ns, q.deadline_ns)
+    with pytest.raises(ValueError, match='integer nanodollars'):
+        simulate_tape(broken, np.array([0], np.int64), [1.2], dict(deadline_seconds=5.))
+    with pytest.raises(ValueError, match='integer nanodollars'):
+        scalar_reference(broken, 0, 1.2, 1, dict(deadline_seconds=5.))
+
+
+def test_portable_fixed_barriers_match_mechanical_engine_at_exact_and_adjacent_prices():
+    # Import is restricted to this test: library runtime never imports research.
+    from experiments.mechanical_lab.execution import _kernel
+    for side in (1, -1):
+        for reason in ('TAKE', 'STOP'):
+            for risk in (3.7, 12*.1):
+                for offset in (-100_000_000, -1, 0, 1, 100_000_000):
+                    q = boundary_tape(side, exact_barrier_nano(risk, .3, 1., reason)+offset)
+                    ours = simulate_tape(q, np.array([0], np.int64), [risk],
+                                         dict(deadline_seconds=5., gain_multiple=1.))
+                    ints, values = _kernel(q.quote_t, q.bid, q.ask, q.valid, q.epoch,
+                        q.coverage_end_ns, q.entry_start_ns, q.deadline_ns,
+                        np.array([0], np.int64), np.array([risk]), .3, 0.,
+                        100_000_000, 2*NS, 60*NS, 1., 5*NS, 0, 1., 0., 1.5, 1., .5)
+                    for i, row in enumerate(ours.itertuples()):
+                        assert row.status == ['INELIGIBLE', 'EMPTY', 'CENSORED', 'COMPLETE'][ints[i, 0]]
+                        assert row.reason == ['ORIGIN', 'SESSION', 'RISK', 'ENTRY_TIMEOUT', 'SUPPORT',
+                                              'TAKE', 'STOP', 'TIME', 'EXIT_TIMEOUT', 'COVERAGE'][ints[i, 1]]
+                        assert [row.decision_ordinal, row.entry_ordinal, row.trigger_ordinal,
+                                row.exit_ordinal, row.trigger_ns] == list(ints[i, 2:7])
+                        assert [row.net, row.mae, row.mfe] == pytest.approx(values[i, :3], abs=1e-12)

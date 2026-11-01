@@ -37,6 +37,7 @@ FAMILIES = (
     _family("motion", "price", "spectrum.features.families.motion:motion", "Context / seconds", "1s", "Spread, displacement, path, efficiency and depth"),
     _family("flow", "flow", "spectrum.features.families.flow:flow", "Context / seconds", "1s", "Rolling published MBO counters"),
     _family("spectral", "spectrum", "spectrum.features.families.spectral:spectral", "Context / seconds", "1s", "Multi-window return and flow spectra"),
+    _family("spectral_activity", "spectrum", "spectrum.features.families.spectral_activity:activity", "Context / all T counters plus unknown-side volume", "1s", "Total/observed-signed/unknown activity spectra, exact white reference and side uncertainty bounds"),
     _family("depth_balance", "liquidity", "spectrum.features.families.depth_balance:calculate", "Context / seconds", "1s", "Visible depth balance at twelve ticks"),
     _family("volatility_vwap_proxy", "volatility_geometry", "spectrum.features.families.volatility_vwap:proxy", "Context / midpoint seconds", "1s", "Volume-weighted midpoint proxy, scale and dispersion"),
     _family("volatility_vwap_exact", "volatility_geometry", "spectrum.features.families.volatility_vwap:exact", "Context / exact trade moments", "1s", "Trade-exact weighted geometry; requires trade first/second moments"),
