@@ -1,0 +1,577 @@
+{
+  "status": "COMPLETE_EXPLORATORY_PREDICTION_ONLY",
+  "base_commit": "54dfad9f9cb11874b0948eef154fdc81960540d5",
+  "source_run": "research_results/zone_conditional_v1/verified_v1",
+  "local_run": "research_results/hypothesis_atlas_v1/initial_v1",
+  "source_rows": 10865,
+  "decision_rows": 2456,
+  "split_counts": {
+    "calibration": 557,
+    "evaluation": 557,
+    "extension": 223,
+    "train": 1119
+  },
+  "unknown_history": 0,
+  "unknown_targets": 0,
+  "hypothesis_templates": 5,
+  "examples": 15,
+  "applicability": {
+    "memory_return": 691,
+    "permeable_departure": 315,
+    "failed_escape": 94,
+    "place_migration": 174,
+    "tight_range": 49
+  },
+  "overlapping_hypotheses": 156,
+  "no_hypothesis": 1302,
+  "metrics": [
+    {
+      "block": "calibration",
+      "arm": "geometry",
+      "n": 557,
+      "days": 5,
+      "logloss": 1.0273395326376373,
+      "brier": 0.6239130279730294
+    },
+    {
+      "block": "calibration",
+      "arm": "context",
+      "n": 557,
+      "days": 5,
+      "logloss": 1.0251567806501327,
+      "brier": 0.6243115710963807
+    },
+    {
+      "block": "calibration",
+      "arm": "hypotheses",
+      "n": 557,
+      "days": 5,
+      "logloss": 1.0399776426535094,
+      "brier": 0.6342456113797834
+    },
+    {
+      "block": "calibration",
+      "arm": "hot_global",
+      "n": 557,
+      "days": 5,
+      "logloss": 1.0339243902741584,
+      "brier": 0.6304697922996745
+    },
+    {
+      "block": "calibration",
+      "arm": "hot_families",
+      "n": 557,
+      "days": 5,
+      "logloss": 1.0345740496553435,
+      "brier": 0.6305347516246884
+    },
+    {
+      "block": "evaluation",
+      "arm": "geometry",
+      "n": 557,
+      "days": 5,
+      "logloss": 1.050206165273257,
+      "brier": 0.6369452285459734
+    },
+    {
+      "block": "evaluation",
+      "arm": "context",
+      "n": 557,
+      "days": 5,
+      "logloss": 1.058338667609609,
+      "brier": 0.6408643730913381
+    },
+    {
+      "block": "evaluation",
+      "arm": "hypotheses",
+      "n": 557,
+      "days": 5,
+      "logloss": 1.0764381960741296,
+      "brier": 0.6528183926313414
+    },
+    {
+      "block": "evaluation",
+      "arm": "hot_global",
+      "n": 557,
+      "days": 5,
+      "logloss": 1.0785652317319703,
+      "brier": 0.6555757231322946
+    },
+    {
+      "block": "evaluation",
+      "arm": "hot_families",
+      "n": 557,
+      "days": 5,
+      "logloss": 1.0764925745445415,
+      "brier": 0.6540792292658686
+    },
+    {
+      "block": "extension",
+      "arm": "geometry",
+      "n": 223,
+      "days": 2,
+      "logloss": 1.0710058525859836,
+      "brier": 0.6480352904358204
+    },
+    {
+      "block": "extension",
+      "arm": "context",
+      "n": 223,
+      "days": 2,
+      "logloss": 1.0962684383416892,
+      "brier": 0.6610877647744091
+    },
+    {
+      "block": "extension",
+      "arm": "hypotheses",
+      "n": 223,
+      "days": 2,
+      "logloss": 1.1043335135192942,
+      "brier": 0.665744079874292
+    },
+    {
+      "block": "extension",
+      "arm": "hot_global",
+      "n": 223,
+      "days": 2,
+      "logloss": 1.1049907182195713,
+      "brier": 0.6661400512885168
+    },
+    {
+      "block": "extension",
+      "arm": "hot_families",
+      "n": 223,
+      "days": 2,
+      "logloss": 1.1045415956791471,
+      "brier": 0.6653655793456128
+    }
+  ],
+  "family_results": [
+    {
+      "block": "calibration",
+      "family": "memory_return",
+      "title": "Память удержания",
+      "n": 192,
+      "days": 5,
+      "coverage": 0.34470377019748655,
+      "row_success": 0.3697916666666667,
+      "day_success": 0.36590817098710027,
+      "context_expected": 0.333277338187436,
+      "residual": 0.03263083279966424,
+      "delta_logloss": 0.011267322233771422,
+      "conflict_fraction": 0.20833333333333334
+    },
+    {
+      "block": "calibration",
+      "family": "permeable_departure",
+      "title": "Проходимость и уход",
+      "n": 73,
+      "days": 5,
+      "coverage": 0.1310592459605027,
+      "row_success": 0.4794520547945205,
+      "day_success": 0.5124504442925495,
+      "context_expected": 0.4198510962224022,
+      "residual": 0.0925993480701474,
+      "delta_logloss": 0.01399553807416275,
+      "conflict_fraction": 0.1643835616438356
+    },
+    {
+      "block": "calibration",
+      "family": "failed_escape",
+      "title": "Отмена ухода",
+      "n": 23,
+      "days": 5,
+      "coverage": 0.04129263913824058,
+      "row_success": 0.391304347826087,
+      "day_success": 0.41047619047619044,
+      "context_expected": 0.3280217967711121,
+      "residual": 0.08245439370507839,
+      "delta_logloss": 0.025620127245108325,
+      "conflict_fraction": 0.30434782608695654
+    },
+    {
+      "block": "calibration",
+      "family": "place_migration",
+      "title": "Старое место теряет актуальность",
+      "n": 55,
+      "days": 5,
+      "coverage": 0.09874326750448834,
+      "row_success": 0.509090909090909,
+      "day_success": 0.5274509803921569,
+      "context_expected": 0.44868077037931664,
+      "residual": 0.07877021001284021,
+      "delta_logloss": -0.002164168131790446,
+      "conflict_fraction": 0.8363636363636363
+    },
+    {
+      "block": "calibration",
+      "family": "tight_range",
+      "title": "Тесный диапазон сохраняется",
+      "n": 15,
+      "days": 5,
+      "coverage": 0.026929982046678635,
+      "row_success": 0.26666666666666666,
+      "day_success": 0.27999999999999997,
+      "context_expected": 0.3804569452800307,
+      "residual": -0.10045694528003077,
+      "delta_logloss": 0.03303704024080681,
+      "conflict_fraction": 0.5333333333333333
+    },
+    {
+      "block": "evaluation",
+      "family": "memory_return",
+      "title": "Память удержания",
+      "n": 140,
+      "days": 5,
+      "coverage": 0.2513464991023339,
+      "row_success": 0.4357142857142857,
+      "day_success": 0.4595238095238095,
+      "context_expected": 0.33430421335090454,
+      "residual": 0.1252195961729049,
+      "delta_logloss": 0.03228391098984051,
+      "conflict_fraction": 0.14285714285714285
+    },
+    {
+      "block": "evaluation",
+      "family": "permeable_departure",
+      "title": "Проходимость и уход",
+      "n": 66,
+      "days": 5,
+      "coverage": 0.118491921005386,
+      "row_success": 0.4696969696969697,
+      "day_success": 0.4732167832167832,
+      "context_expected": 0.4240479714102057,
+      "residual": 0.04916881180657748,
+      "delta_logloss": 0.048295323078676185,
+      "conflict_fraction": 0.10606060606060606
+    },
+    {
+      "block": "evaluation",
+      "family": "failed_escape",
+      "title": "Отмена ухода",
+      "n": 24,
+      "days": 5,
+      "coverage": 0.04308797127468582,
+      "row_success": 0.4583333333333333,
+      "day_success": 0.4390476190476191,
+      "context_expected": 0.3142724091399768,
+      "residual": 0.12477520990764226,
+      "delta_logloss": 0.002305359291236557,
+      "conflict_fraction": 0.20833333333333334
+    },
+    {
+      "block": "evaluation",
+      "family": "place_migration",
+      "title": "Старое место теряет актуальность",
+      "n": 31,
+      "days": 5,
+      "coverage": 0.05565529622980251,
+      "row_success": 0.3548387096774194,
+      "day_success": 0.39166666666666666,
+      "context_expected": 0.4254159100725313,
+      "residual": -0.03374924340586458,
+      "delta_logloss": 0.007545417757724077,
+      "conflict_fraction": 0.7096774193548387
+    },
+    {
+      "block": "evaluation",
+      "family": "tight_range",
+      "title": "Тесный диапазон сохраняется",
+      "n": 14,
+      "days": 4,
+      "coverage": 0.025134649910233394,
+      "row_success": 0.21428571428571427,
+      "day_success": 0.23958333333333331,
+      "context_expected": 0.2798034979170295,
+      "residual": -0.040220164583696205,
+      "delta_logloss": -0.023270080559179708,
+      "conflict_fraction": 0.21428571428571427
+    },
+    {
+      "block": "extension",
+      "family": "memory_return",
+      "title": "Память удержания",
+      "n": 16,
+      "days": 2,
+      "coverage": 0.07174887892376682,
+      "row_success": 0.375,
+      "day_success": 0.48717948717948717,
+      "context_expected": 0.3362438785438576,
+      "residual": 0.1509356086356296,
+      "delta_logloss": 0.02266223891358143,
+      "conflict_fraction": 0.25
+    },
+    {
+      "block": "extension",
+      "family": "permeable_departure",
+      "title": "Проходимость и уход",
+      "n": 30,
+      "days": 2,
+      "coverage": 0.13452914798206278,
+      "row_success": 0.5,
+      "day_success": 0.504524886877828,
+      "context_expected": 0.4357309787356121,
+      "residual": 0.06879390814221595,
+      "delta_logloss": -0.030354150222726105,
+      "conflict_fraction": 0.06666666666666667
+    },
+    {
+      "block": "extension",
+      "family": "failed_escape",
+      "title": "Отмена ухода",
+      "n": 14,
+      "days": 2,
+      "coverage": 0.06278026905829596,
+      "row_success": 0.2857142857142857,
+      "day_success": 0.2,
+      "context_expected": 0.3050632276706631,
+      "residual": -0.10506322767066306,
+      "delta_logloss": -0.022414871353263678,
+      "conflict_fraction": 0.0
+    },
+    {
+      "block": "extension",
+      "family": "place_migration",
+      "title": "Старое место теряет актуальность",
+      "n": 6,
+      "days": 2,
+      "coverage": 0.026905829596412557,
+      "row_success": 0.5,
+      "day_success": 0.625,
+      "context_expected": 0.41536560256293165,
+      "residual": 0.20963439743706835,
+      "delta_logloss": 0.007956552701885042,
+      "conflict_fraction": 0.6666666666666666
+    },
+    {
+      "block": "extension",
+      "family": "tight_range",
+      "title": "Тесный диапазон сохраняется",
+      "n": 3,
+      "days": 2,
+      "coverage": 0.013452914798206279,
+      "row_success": 0.6666666666666666,
+      "day_success": 0.75,
+      "context_expected": 0.3215480155385684,
+      "residual": 0.4284519844614316,
+      "delta_logloss": -0.001796570492240579,
+      "conflict_fraction": 0.6666666666666666
+    }
+  ],
+  "contrasts": [
+    {
+      "block": "calibration",
+      "arm": "context",
+      "base": "geometry",
+      "delta": -0.0021827519875045943,
+      "low": -0.013722773118785937,
+      "high": 0.009357269143776747,
+      "days": 5
+    },
+    {
+      "block": "calibration",
+      "arm": "hypotheses",
+      "base": "context",
+      "delta": 0.014820862003376734,
+      "low": 0.004442718141762248,
+      "high": 0.02361156648705833,
+      "days": 5
+    },
+    {
+      "block": "calibration",
+      "arm": "hot_global",
+      "base": "hypotheses",
+      "delta": -0.0060532523793510595,
+      "low": -0.01719977491972551,
+      "high": 0.0022666037230284707,
+      "days": 5
+    },
+    {
+      "block": "calibration",
+      "arm": "hot_families",
+      "base": "hot_global",
+      "delta": 0.0006496593811848416,
+      "low": -0.001148134541784085,
+      "high": 0.002326800530443851,
+      "days": 5
+    },
+    {
+      "block": "evaluation",
+      "arm": "context",
+      "base": "geometry",
+      "delta": 0.008132502336351832,
+      "low": -0.004121283395037478,
+      "high": 0.02356162663436807,
+      "days": 5
+    },
+    {
+      "block": "evaluation",
+      "arm": "hypotheses",
+      "base": "context",
+      "delta": 0.018099528464520766,
+      "low": 0.008865174587494909,
+      "high": 0.025779500326800032,
+      "days": 5
+    },
+    {
+      "block": "evaluation",
+      "arm": "hot_global",
+      "base": "hypotheses",
+      "delta": 0.00212703565784067,
+      "low": -0.010218794047179092,
+      "high": 0.010215473890248105,
+      "days": 5
+    },
+    {
+      "block": "evaluation",
+      "arm": "hot_families",
+      "base": "hot_global",
+      "delta": -0.0020726571874289056,
+      "low": -0.004265387892372896,
+      "high": 0.0011927761391567148,
+      "days": 5
+    },
+    {
+      "block": "extension",
+      "arm": "context",
+      "base": "geometry",
+      "delta": 0.025262585755705724,
+      "low": 0.023986642178821294,
+      "high": 0.026538529332590155,
+      "days": 2
+    },
+    {
+      "block": "extension",
+      "arm": "hypotheses",
+      "base": "context",
+      "delta": 0.008065075177604908,
+      "low": 0.005694977665160028,
+      "high": 0.010435172690049788,
+      "days": 2
+    },
+    {
+      "block": "extension",
+      "arm": "hot_global",
+      "base": "hypotheses",
+      "delta": 0.0006572047002773029,
+      "low": -0.010917718744261062,
+      "high": 0.012232128144815668,
+      "days": 2
+    },
+    {
+      "block": "extension",
+      "arm": "hot_families",
+      "base": "hot_global",
+      "delta": -0.0004491225404242849,
+      "low": -0.0020451150252065453,
+      "high": 0.0011468699443579755,
+      "days": 2
+    }
+  ],
+  "thresholds": {
+    "median_dwell_seconds": 17.973706388,
+    "aborts_per_recent_visit": 5.000000000000001
+  },
+  "tests": {
+    "tests": 59,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "verification": {
+    "status": "PASS",
+    "source_payload_checks": 47,
+    "artifact_checks": 9,
+    "observations": 2456,
+    "saved_model_max_errors": {
+      "geometry": 0.0,
+      "context": 0.0,
+      "hypotheses": 0.0
+    },
+    "independent_delayed_rows": 1337,
+    "independent_delayed_max_errors": {
+      "hot_global": 3.3306690738754696e-16,
+      "hot_families": 3.3306690738754696e-16
+    },
+    "causal_clock_columns": [
+      "target_available_ns",
+      "episode_available_ns",
+      "bar_context_available_ns",
+      "memory_available_ns",
+      "spectrum_available_ns",
+      "past_max_available_ns"
+    ],
+    "examples": 15,
+    "scope": "Numerical integrity, chronology and contracts; not predictive or economic admission"
+  },
+  "visual_review": {
+    "status": "PASS_WITH_RESEARCH_LIMITATIONS",
+    "reviewer": "Primary agent",
+    "examples": 15,
+    "reviewed": [
+      "15 continuation plots on contact sheet",
+      "five representative before mobile plots",
+      "individual before and after plots",
+      "1280px browser layout and reveal control",
+      "360px browser layout, mobile image source and no document overflow"
+    ],
+    "fixes": [
+      "mobile title wrapping",
+      "mobile font size",
+      "risk label background",
+      "probability comparison label"
+    ],
+    "browser": {
+      "desktop_width": 1280,
+      "desktop_document_width": 1265,
+      "mobile_width": 360,
+      "mobile_document_width": 345,
+      "closed_future_panels": 15,
+      "reveal_control": "PASS",
+      "viewport_reset": true
+    },
+    "limitations": [
+      "No independent second reviewer",
+      "Only frozen templates, not a learned generator",
+      "Previously inspected dates",
+      "Intraday visit memory",
+      "No execution or economic test"
+    ],
+    "local_asset_checks": 96,
+    "report_sha256": "fc5d8916cc39ad09dd1054ebbcd71fe49568779fe05bdc62a2b79ff2d7028637",
+    "visual_files": {
+      "browser_desktop.jpg": "2fce200a4b304b426819ec31423f8aaf31c2ac949f8b5a136725b644c2021751",
+      "browser_mobile.jpg": "d28932fd7883e2e5686296bb91e9e7e4ae12db5ff1e30b77c425c17addf6f1b2"
+    }
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "sklearn": "1.9.1",
+    "matplotlib": "3.11.1",
+    "pyarrow": "20.0.0"
+  },
+  "result_sha256": {
+    "manifest.json": "ebed13917b84d6aeaef63ac47be894d5f442dee9ce9afbcc333d07d7876699d4",
+    "summary.json": "d839cba4ef7db9f01d2dc58226aeca6f00c8fff6df9da788f93cf0901a7f4136",
+    "verification.json": "cb72777c0e73ca3b75749185f6595ae8cf38d812f2cda99f0ebc487200f014e3",
+    "tests.xml": "d9fce5f85bc29a28fdf8cbd6f854bd86093440e46c370a8fef952f963a3dce96",
+    "render_receipt.json": "6efc7ba416caa781aedfd68eb4d230c54be611c709290bff7ff050b1bdc50aee",
+    "visual_review.json": "a46986d08ecf30f8bc7cef7e37c2961b8a5063b7562114b9e70801363cfe1d44",
+    "report.html": "fc5d8916cc39ad09dd1054ebbcd71fe49568779fe05bdc62a2b79ff2d7028637"
+  },
+  "source_code_sha256": {
+    "experiments/hypothesis_atlas_v1/config.json": "da3dc6dc957db0134d49d5aff008fe52a1de40e6325353f489822bae8c6758dc",
+    "experiments/hypothesis_atlas_v1/engine.py": "f57c918cb58c16e4cdd96c9d2fc53c01bbd2517bcd537c52b10379bc3004ea30",
+    "experiments/hypothesis_atlas_v1/README.md": "79bb1dbbde28323fc35ebeb9587b2fdaa8cf7ea7b60287017632398eaaaccd8b",
+    "experiments/hypothesis_atlas_v1/report.py": "1c8ea8278c1a7540b424b57463a9e7083486b6fff260f47bbd240b75a0b79e91",
+    "experiments/hypothesis_atlas_v1/run.py": "5c3e3dc746cb9ace419d7f79ec5300694af2767775470c8147ca96758312bc02",
+    "experiments/hypothesis_atlas_v1/verify.py": "e4b8e6602fb077e758c2aab9d60df01aef1636691986cb5cbcbf17ed7dfb9672"
+  },
+  "conclusion": "These templates separate observable situations; neither the feature bundle nor this delayed calibration improved overall prediction in the two later blocks.",
+  "predictive_admission": false,
+  "economic_admission": false,
+  "live_admission": false,
+  "untouched_holdout": false
+}

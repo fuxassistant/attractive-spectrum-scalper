@@ -1,0 +1,14 @@
+{
+  "version": "hypothesis_atlas_v1",
+  "source": "research_results/zone_conditional_v1/verified_v1",
+  "horizon_seconds": 300,
+  "history_seconds": 600,
+  "cohort": "At each existing decision clock select nearest eligible zone, then retain first clock at least 300 seconds after previous retained clock; no target-dependent selection.",
+  "splits": {"train": ["2026-08-03", "2026-08-14"], "calibration": ["2026-08-17", "2026-08-21"], "evaluation": ["2026-08-24", "2026-08-28"], "extension": ["2026-08-31", "2026-09-01"]},
+  "thresholds": {"memory_dwell_quantile": 0.5, "recent_pass_low": 0.375, "recent_pass_high": 0.5, "return_progress_r": 0.25, "migration_away_r": 0.5, "range120_r": 0.75, "net120_abs_r": 0.25},
+  "model": {"C": 0.1, "solver": "lbfgs", "max_iter": 2000, "tol": 1e-8, "seed": 271828},
+  "adaptation": {"half_life_seconds": 7200, "prior_count": 20, "feedback": "All outcomes released no earlier than origin+300s, including early hits. Strictly before next prediction. Unknown outcomes never update class counts.", "combination": "Average active-family observed/expected factors with one global factor; no product of correlated hypotheses."},
+  "examples": {"primary": "Two nearest-to-centroid X-only prototypes per hypothesis from evaluation/extension, different dates when possible; one may overlap another family.", "counterexample": "One additional contradicted case per family, nearest to X-centroid; explicitly outcome-selected for explanation, excluded from claims of prevalence."},
+  "evaluation": {"untouched_holdout": false, "metrics": ["equal-day multiclass log loss", "equal-day Brier", "family coverage and expected-class frequency", "paired day-bootstrap differences"], "primary_contrasts": [["context", "geometry"], ["hypotheses", "context"], ["hot_global", "hypotheses"], ["hot_families", "hot_global"]], "admission": "Exploratory predictive atlas on previously inspected dates. No policy, PnL, full-history or live admission."},
+  "scope": "Fixed five hypothesis templates and X-only thresholds; not a learned hypothesis generator. Existing zone population requires completed visits and excludes inside-zone / first-contact states. Current memory is intraday; no claim of cross-session absolute-place learning. Book evidence is global, not participant intent or target-local defense. No rule or hyperparameter search after observing results."
+}
