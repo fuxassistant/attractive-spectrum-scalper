@@ -1,0 +1,27 @@
+{
+  "version": "loser_walkforward_v2",
+  "additional_start": "2026-06-22",
+  "additional_end": "2026-07-24",
+  "old_atlas": "research_results/hypothesis_atlas_v1/initial_v1",
+  "old_loser": "research_results/loser_lab_v1/initial_v1",
+  "initial_days": 10,
+  "windows": [2, 5, 10],
+  "gates": [0.1, 0.2],
+  "minimum_impulse_r": 0.25,
+  "primary_target": "usd2_300",
+  "targets": [
+    {"id":"usd2_300", "seconds":300, "threshold":"fixed", "usd_per_oz":2.0},
+    {"id":"usd2_120", "seconds":120, "threshold":"fixed", "usd_per_oz":2.0},
+    {"id":"usd3_300", "seconds":300, "threshold":"fixed", "usd_per_oz":3.0},
+    {"id":"scale_min2_300", "seconds":300, "threshold":"max_fixed_risk", "usd_per_oz":2.0}
+  ],
+  "clean_loss_max_favorable_x": 0.25,
+  "model": {"C":0.1, "max_iter":3000, "tol":1e-8, "seed":314159},
+  "guard": {"history_days":5, "minimum_rows":20, "minimum_days":2, "prior_rows":20, "day_se_penalty":1.0, "reset_after_calendar_days":4},
+  "selector": {"history_days":10, "minimum_rows":40, "minimum_active_days":5, "day_se_penalty":1.0, "refit":"weekly Monday or first available date of week"},
+  "bootstrap_seeds": 999,
+  "random_seeds": 199,
+  "risk": {"initial_deposit_usd":10000.0, "contract_oz":100.0, "max_multiplier":4, "depletion_fraction":0.8, "styles":["fixed","after_loss","after_gain"]},
+  "post_cost": {"base":{"fee_per_oz":0.3,"latency_ms":100,"slippage_ticks_per_fill":0},"stress":{"fee_per_oz":0.3,"latency_ms":250,"slippage_ticks_per_fill":1},"pending_seconds":2,"quote_gap_seconds":30},
+  "protocol": "Exploratory replication on 25 added earlier weekdays plus 22 previously inspected days. First ten chronological days initialize; all later fits and weekly selection use mature past labels only. No inherited August-trained flags, no equity/PnL/sizing in selection. Fixed finite comparisons, all reported. July 3 is shortened; July 27-30 omitted from this five-week extension; July 31 missing in canonical source. Contract/day/gap boundaries explicit. Bid is a reference, not an executable long fill."
+}
